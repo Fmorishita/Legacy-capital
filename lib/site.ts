@@ -1,7 +1,10 @@
 export const site = {
   name: "Legacy Capital Real Estate",
   shortName: "Legacy Capital",
-  url: (process.env.NEXT_PUBLIC_SITE_URL || "https://legacy-capital.vercel.app").replace(/\/$/, ""),
+  url: (
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "http://localhost:3000")
+  ).replace(/\/$/, ""),
   city: "Ensenada, Baja California",
   advisor: {
     name: "Fran Morishita",

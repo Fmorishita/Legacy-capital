@@ -60,9 +60,11 @@ export function LeadForm({
   const [errors, setErrors] = useState<{ name?: string; phone?: string; email?: string; form?: string }>({});
   const [status, setStatus] = useState<"idle" | "sending" | "done">("idle");
   const [result, setResult] = useState<Result | null>(null);
+  const [minDate, setMinDate] = useState<string | undefined>(undefined);
 
   useEffect(() => {
     mountedAt.current = Date.now();
+    setMinDate(new Date().toISOString().slice(0, 10));
     if (autoFocus) nameRef.current?.focus({ preventScroll: true });
   }, [autoFocus]);
 
@@ -262,7 +264,7 @@ export function LeadForm({
                   type="date"
                   className="field"
                   value={fecha}
-                  min={new Date().toISOString().slice(0, 10)}
+                  min={minDate}
                   onChange={(e) => setFecha(e.target.value)}
                 />
               </div>

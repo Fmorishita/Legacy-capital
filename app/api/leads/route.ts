@@ -5,13 +5,13 @@ import { z } from "zod";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
+// Recorta en lugar de rechazar: un UTM largo nunca debe tirar un lead
 const optionalText = (max: number) =>
   z
     .string()
     .trim()
-    .max(max)
     .optional()
-    .transform((v) => (v ? v : undefined));
+    .transform((v) => (v ? v.slice(0, max) : undefined));
 
 const leadSchema = z.object({
   nombre: z.string().trim().min(2).max(120),
@@ -19,14 +19,26 @@ const leadSchema = z.object({
     .string()
     .trim()
     .regex(/^\+\d{1,3} ?\d{8,14}$/),
+  // Un correo con errores se descarta, pero el lead (nombre + WhatsApp) se conserva
   email: z
-    .union([z.email().max(160), z.literal("")])
+    .string()
+    .trim()
+    .max(320)
     .optional()
-    .transform((v) => (v ? v : undefined)),
+    .transform((v) => (v && v.length <= 160 && z.email().safeParse(v).success ? v : undefined)),
   interes: z.enum(["2R", "3R", "inversion", "explorando"]).optional(),
   lote: z.number().int().min(1).max(500).optional(),
-  origen: z.string().trim().max(40).default("web"),
-  mensaje: optionalText(1500),
+  origen: z
+    .string()
+    .trim()
+    .default("web")
+    .transform((v) => v.slice(0, 40)),
+  mensaje: z
+    .string()
+    .trim()
+    .max(3000)
+    .optional()
+    .transform((v) => (v ? v.slice(0, 1500) : undefined)),
   modo_visita: z.enum(["presencial", "videollamada"]).optional(),
   fecha_visita: z
     .union([z.string().regex(/^\d{4}-\d{2}-\d{2}$/), z.literal("")])

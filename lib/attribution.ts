@@ -11,13 +11,13 @@ export function captureAttribution() {
     const fromUrl: Attribution = {};
     for (const p of PARAMS) {
       const v = url.searchParams.get(p);
-      if (v) fromUrl[p] = v.slice(0, 300);
+      if (v) fromUrl[p] = v.slice(0, p === "gclid" || p === "fbclid" ? 300 : 150);
     }
     const existing = sessionStorage.getItem(KEY);
     if (existing && Object.keys(fromUrl).length === 0) return;
     const data: Attribution = {
       ...fromUrl,
-      pagina: url.pathname + url.search,
+      pagina: (url.pathname + url.search).slice(0, 500),
       referrer: document.referrer ? document.referrer.slice(0, 500) : undefined,
     };
     sessionStorage.setItem(KEY, JSON.stringify(data));
@@ -31,8 +31,8 @@ export function readAttribution(): Attribution {
   try {
     const raw = sessionStorage.getItem(KEY);
     const data: Attribution = raw ? JSON.parse(raw) : {};
-    return { ...data, pagina: data.pagina || window.location.pathname };
+    return { ...data, pagina: (data.pagina || window.location.pathname).slice(0, 500) };
   } catch {
-    return { pagina: window.location.pathname };
+    return { pagina: window.location.pathname.slice(0, 500) };
   }
 }

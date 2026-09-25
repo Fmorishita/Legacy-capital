@@ -86,7 +86,15 @@ export function Hero({ t, lang, privacyHref }: Props) {
             <button
               type="button"
               className="btn btn-gold"
-              onClick={() => openLead({ kind: "prices", origin: "hero" })}
+              onClick={() => {
+                // En escritorio el formulario ya está al lado: lo enfocamos en vez de abrir otro
+                const input = document.querySelector<HTMLInputElement>("#precios input[autocomplete='name']");
+                if (window.matchMedia("(min-width: 1024px)").matches && input) {
+                  input.focus();
+                } else {
+                  openLead({ kind: "prices", origin: "hero" });
+                }
+              }}
             >
               {t.hero.ctaPrimary}
             </button>
@@ -111,11 +119,13 @@ export function Hero({ t, lang, privacyHref }: Props) {
           id="precios"
         >
           <h2 className="display text-[1.9rem] leading-[1.05]">{t.quickForm.title}</h2>
-          <dl className="mt-5 grid grid-cols-2 divide-x divide-line rounded-xl border border-line">
+          <dl className="mt-5 grid divide-y divide-line rounded-xl border border-line sm:grid-cols-2 sm:divide-x sm:divide-y-0">
             {t.quickForm.priceLine.map((p) => (
-              <div key={p.label} className="px-4 py-3">
-                <dt className="text-xs font-medium uppercase tracking-[0.12em] text-ink-soft">{p.label}</dt>
-                <dd className="mt-1 whitespace-nowrap font-display text-[1.2rem] font-semibold leading-tight xs:text-[1.35rem]">{p.value}</dd>
+              <div key={p.label} className="flex items-baseline justify-between gap-3 px-4 py-3 sm:block">
+                <dt className="whitespace-nowrap text-xs font-medium uppercase tracking-[0.12em] text-ink-soft">{p.label}</dt>
+                <dd className="whitespace-nowrap font-display text-[1.15rem] font-semibold leading-tight xs:text-[1.3rem] sm:mt-1 sm:text-[1.2rem] lg:text-[1.3rem]">
+                  {p.value}
+                </dd>
               </div>
             ))}
           </dl>

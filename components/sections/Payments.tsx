@@ -1,18 +1,21 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { ArrowRight, Info } from "@phosphor-icons/react";
 import type { Dict } from "@/lib/i18n/es";
 import { Reveal } from "@/components/ui/Reveal";
 import { AnimatedNumber } from "@/components/ui/AnimatedNumber";
 import { useLead } from "@/components/lead/LeadProvider";
+import { site } from "@/lib/site";
 
-// Precios y mensualidades publicados en el brochure de septiembre 2026
+// Precios y mensualidades publicados en el brochure de septiembre 2026.
+// La mensualidad del brochure equivale al 10% diferido entre 16 pagos, dentro de un plazo de hasta 19 meses.
 const BASE = {
   "2R": { price: 3_989_325, monthly: 24_933 },
   "3R": { price: 4_360_053, monthly: 27_250 },
 } as const;
+const PAYMENTS = 16;
 
 type Model = keyof typeof BASE;
 type Scheme = "financiado" | "contado";
@@ -20,6 +23,8 @@ type Scheme = "financiado" | "contado";
 export function Payments({ t, models, lang }: { t: Dict["payments"]; models: Dict["models"]["tabs"]; lang: "es" | "en" }) {
   const [model, setModel] = useState<Model>("2R");
   const [scheme, setScheme] = useState<Scheme>("financiado");
+  const [promoActive, setPromoActive] = useState(false);
+  useEffect(() => setPromoActive(Date.now() < new Date(site.promoEndsAt).getTime()), []);
   const { openLead } = useLead();
   const money = useCallback(
     (n: number) => "$" + Math.floor(n + 1e-6).toLocaleString(lang === "en" ? "en-US" : "es-MX"),
@@ -37,7 +42,7 @@ export function Payments({ t, models, lang }: { t: Dict["payments"]; models: Dic
         ]
       : [
           { key: "down", label: `${t.rows.down} (40%)`, pct: 40, amount: final * 0.4 },
-          { key: "deferred", label: `${t.rows.deferred} (40%)`, pct: 40, amount: final * 0.4 },
+          { key: "deferred", label: `${t.rows.deferred19} (40%)`, pct: 40, amount: final * 0.4 },
           { key: "deed", label: `${t.rows.deed} (20%)`, pct: 20, amount: final * 0.2 },
         ];
   const tones = ["bg-gold-500", "bg-gold-300", "bg-navy-800 dark:bg-cream-100/80"];
@@ -133,7 +138,8 @@ export function Payments({ t, models, lang }: { t: Dict["payments"]; models: Dic
                   <AnimatedNumber value={p.amount} format={money} className="font-display text-[1.7rem] font-semibold tabular-nums" />
                   {"monthly" in p && p.monthly ? (
                     <span className="block text-sm text-ink-soft">
-                      {t.rows.monthly}: <AnimatedNumber value={p.monthly} format={money} className="font-semibold text-ink" />
+                      {t.monthlyNote.replace("{n}", String(PAYMENTS))}{" "}
+                      <AnimatedNumber value={p.monthly} format={money} className="font-semibold text-ink" />
                     </span>
                   ) : null}
                 </dd>
@@ -141,10 +147,12 @@ export function Payments({ t, models, lang }: { t: Dict["payments"]; models: Dic
             ))}
           </dl>
 
-          <p className="mt-8 flex gap-2 rounded-xl bg-bg-alt p-4 text-sm leading-relaxed">
-            <Info className="mt-0.5 size-4 shrink-0 text-gold-ink" weight="bold" aria-hidden />
-            {t.promo}
-          </p>
+          {promoActive && (
+            <p className="mt-8 flex gap-2 rounded-xl bg-bg-alt p-4 text-sm leading-relaxed">
+              <Info className="mt-0.5 size-4 shrink-0 text-gold-ink" weight="bold" aria-hidden />
+              {t.promo}
+            </p>
+          )}
 
           <button
             type="button"

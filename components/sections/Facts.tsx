@@ -1,9 +1,9 @@
 import type { Dict } from "@/lib/i18n/es";
 import { Reveal } from "@/components/ui/Reveal";
 
-export function Facts({ t }: { t: Dict["facts"] }) {
+export function Facts({ t, label }: { t: Dict["facts"]; label: string }) {
   return (
-    <section aria-label="Punta Pacífico en cifras" className="border-y border-line bg-bg">
+    <section aria-label={label} className="border-y border-line bg-bg">
       <div className="container-x">
         <dl className="grid grid-cols-2 md:grid-cols-5">
           {t.map((f, i) => (

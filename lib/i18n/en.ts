@@ -17,6 +17,11 @@ export const en: Dict = {
     menu: "Open menu",
     close: "Close",
     home: "Legacy Capital, home",
+    mainNav: "Main",
+    footerNav: "Footer",
+    quickActions: "Quick actions",
+    filters: "Filters",
+    facts: "Punta Pacífico at a glance",
   },
   nav: {
     links: [
@@ -42,7 +47,7 @@ export const en: Dict = {
     title: "The Pacific, from your own roof garden.",
     subtitle:
       "Single-story, ocean-view homes in north Ensenada. Pre-construction pricing from MXN $3.9M.",
-    ctaPrimary: "Get price list",
+    ctaPrimary: "Price list",
     ctaSecondary: "Message on WhatsApp",
     imageAlt: "Punta Pacífico home at sunset with its windows lit",
   },
@@ -96,10 +101,10 @@ export const en: Dict = {
       fallback: "To get the details right away, send us your request on WhatsApp with the button below.",
       whatsapp: "Open WhatsApp now",
       qualifyTitle: "Three quick questions to tailor your proposal",
-      qualifyOptional: "Optional. One tap each.",
+      qualifyOptional: "All optional, one tap each.",
       timeline: "When do you plan to buy?",
       timelines: [
-        { value: "0-3", label: "Within 3 months" },
+        { value: "0-3", label: "In under 3 months" },
         { value: "3-6", label: "3 to 6 months" },
         { value: "6-12", label: "6 to 12 months" },
         { value: "explorando", label: "Just exploring" },
@@ -132,13 +137,13 @@ export const en: Dict = {
     { value: "19 months", label: "to complete your down payment" },
   ],
   project: {
-    title: "Live the way you used to. Only better.",
+    title: "Life the way it used to be. Only better.",
     body: "Punta Pacífico is a private community of 120 single-story homes in El Sauzal, just north of Ensenada. Everything on one floor, with your own roof garden facing the ocean and the mountains.",
     pillars: [
       {
         icon: "house",
         title: "Everything on one level",
-        text: "No stairs in your daily routine. Designed for families and for anyone planning retirement.",
+        text: "Bedrooms, kitchen and living room on a single floor. Designed for families and for anyone planning retirement.",
       },
       {
         icon: "waves",
@@ -147,8 +152,8 @@ export const en: Dict = {
       },
       {
         icon: "trend",
-        title: "The fastest-growing area",
-        text: "North Ensenada holds the city's greatest growth potential.",
+        title: "North Ensenada",
+        text: "The area with the city's greatest growth potential and rising property values.",
       },
     ],
     developer:
@@ -205,10 +210,10 @@ export const en: Dict = {
   },
   included: {
     title: "Delivered move-in ready.",
-    body: "No extra spending to cover the basics. Your home comes with:",
+    body: "No extra spending to equip it. Your home comes with:",
     items: [
       { title: "Equipped kitchen", text: "Granite countertop, range with oven, and range hood.", image: "/img/cooking.jpg" },
-      { title: "Air conditioning throughout", text: "Mini-split units in the bedrooms and the living-dining area.", image: "/img/bedroom-master.jpg" },
+      { title: "AC in bedrooms and living area", text: "Mini-split units in the bedrooms and the living-dining area.", image: "/img/bedroom-master.jpg" },
       { title: "Smart home", text: "Digital lock, lights and air conditioning controlled from your phone.", image: "/img/smart-phone.jpg" },
       { title: "Equipped roof garden", text: "Pergola, bar with sink and grill, and a half bath.", image: "/img/pergola.jpg" },
       { title: "Finished bathrooms", text: "Tempered glass shower enclosures and finishes in place.", image: "/img/bathroom.jpg" },
@@ -271,11 +276,11 @@ export const en: Dict = {
     views: { premium: "Premium ocean view", preferente: "Preferred", estandar: "Garden and mountain" },
     statusLabel: "Status",
     price: "Price",
-    priceCta: "Get current price",
+    priceNote: "Sent when you request it",
     cta: "Request this home",
     soldNote: "This home is sold. Here are similar options.",
     pickPrompt: "Select a home on the site plan",
-    pickHint: "A few available homes with premium views:",
+    pickHint: "A few available homes:",
     listView: "View as list",
     mapView: "View site plan",
     mapAlt: "Punta Pacífico Cluster 1 site plan",
@@ -290,7 +295,7 @@ export const en: Dict = {
         caption: "10% at signing, 10% deferred and 80% at closing (with your own funds or a mortgage).",
       },
       contado: {
-        label: "Deferred cash",
+        label: "Cash, paid over time",
         caption: "40% down, 40% over 19 months and 20% at closing, with a 5% discount.",
       },
     },
@@ -300,12 +305,13 @@ export const en: Dict = {
       finalPrice: "Final price",
       down: "Initial payment",
       monthly: "Monthly payments",
-      deferred: "Deferred over 19 months",
+      deferred: "Deferred",
+      deferred19: "Deferred over 19 months",
       deed: "At closing",
     },
     monthlyNote: "{n} monthly payments of",
     disclaimer:
-      "Estimates based on September 2026 brochure prices (2-bedroom MXN $3,989,325 and 3-bedroom MXN $4,360,053). The term may vary with the closing date. Plan valid only with a signed contract.",
+      "Estimates based on the September 2026 brochure prices and monthly payments (2-bedroom MXN $3,989,325 and 3-bedroom MXN $4,360,053). The deferred portion is paid within a term of up to 19 months; the number of payments may vary with the signing and closing dates. Plan valid only with a signed contract.",
     cta: "Get my payment plan",
     promo: "Plus, reserve in September and get 5% off (first 10 homes).",
   },
@@ -316,13 +322,13 @@ export const en: Dict = {
     stats: [
       { value: 71, suffix: "/100", label: "Ensenada's AirDNA Market Score" },
       { value: 7.5, prefix: "+", suffix: "%", decimals: 1, label: "average daily rate vs. 2025" },
-      { value: 4.5, prefix: "+", suffix: "%", decimals: 1, label: "average annual revenue per property" },
-      { value: 10.9, prefix: "+", suffix: "%", decimals: 1, label: "more active rental listings" },
+      { value: 4.5, prefix: "+", suffix: "%", decimals: 1, label: "average annual revenue vs. 2025" },
+      { value: 10.9, prefix: "+", suffix: "%", decimals: 1, label: "active rental listings in the last year" },
     ],
     reasons: [
       { title: "Year-round tourism", text: "International cruise ships, wine, food and surf." },
-      { title: "Close to California", text: "Less than two hours from San Diego along the scenic coastal highway." },
-      { title: "Pre-construction upside", text: "You buy at pre-construction pricing in the city's fastest-growing area." },
+      { title: "Close to California", text: "Right by the US border, along the scenic Tijuana-Ensenada highway." },
+      { title: "Pre-construction upside", text: "You buy at pre-construction pricing in north Ensenada, the area with the most growth potential." },
     ],
     source: "Source: AirDNA, Ensenada vacation rental market. Past performance does not guarantee future results.",
     imageAlt: "Aerial view of the Ensenada coastline",
@@ -353,10 +359,10 @@ export const en: Dict = {
   trust: {
     title: "Solid backing. Everything in writing.",
     items: [
-      { icon: "building", title: "Proven developer", text: "SISOL: more than 25 years and 30 completed projects in 10 states." },
+      { icon: "building", title: "Proven developer", text: "SISOL: more than 25 years and over 30 completed projects in 10 states." },
       { icon: "bank", title: "Financial backing", text: "Backed by INVEX, a leading Mexican financial institution." },
-      { icon: "contract", title: "Profeco-compliant contract", text: "Purchase-promise contract based on NOM-247-SE-2021, the Mexican consumer standard for home sales." },
-      { icon: "shield", title: "Written warranties", text: "5 years on structure, 3 on waterproofing and 1 on construction." },
+      { icon: "contract", title: "Contract under NOM-247", text: "Purchase-promise contract based on NOM-247-SE-2021, the Mexican consumer standard for home sales." },
+      { icon: "shield", title: "Written warranties", text: "5 years on structure, 3 on waterproofing and 1 on construction defects." },
     ],
     stepsTitle: "How to reserve your home",
     steps: [
@@ -390,7 +396,7 @@ export const en: Dict = {
       },
       {
         q: "What are the payment options?",
-        a: "You can choose 20% down (10% at signing and 10% deferred) with 80% at closing, or the deferred cash plan: 40% down, 40% over 19 months and 20% at closing, with a 5% discount.",
+        a: "You can choose 20% down (10% at signing and 10% deferred) with 80% at closing, or cash paid over time: 40% down, 40% over 19 months and 20% at closing, with a 5% discount.",
       },
       {
         q: "Can I pay the closing balance with a mortgage?",

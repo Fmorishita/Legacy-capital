@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
 import { ArrowRight, HandSwipeRight, ListBullets, MapTrifold } from "@phosphor-icons/react";
@@ -14,11 +14,12 @@ type Filter = "all" | "2R" | "3R" | "premium";
 
 const matches = (l: Lot, f: Filter) => f === "all" || l.model === f || (f === "premium" && l.view === "premium");
 
-export function Availability({ t, lang }: { t: Dict["availability"]; lang: "es" | "en" }) {
+export function Availability({ t, lang, filtersLabel }: { t: Dict["availability"]; lang: "es" | "en"; filtersLabel: string }) {
   const [filter, setFilter] = useState<Filter>("all");
   const [selected, setSelected] = useState<Lot | null>(null);
   const [mode, setMode] = useState<"map" | "list">("map");
   const { openLead } = useLead();
+  const panel = useRef<HTMLElement>(null);
 
   const visibleAvailable = useMemo(
     () => lots.filter((l) => l.status === "disponible" && matches(l, filter)),
@@ -41,6 +42,10 @@ export function Availability({ t, lang }: { t: Dict["availability"]; lang: "es" 
   const pick = (l: Lot) => {
     setSelected(l);
     trackEvent("lot_select", { lot: l.n, model: l.model, status: l.status });
+    // En móvil la ficha queda debajo del plano: la traemos a la vista
+    if (window.matchMedia("(max-width: 1023px)").matches) {
+      requestAnimationFrame(() => panel.current?.scrollIntoView({ behavior: "smooth", block: "center" }));
+    }
   };
 
   const request = (l: Lot) =>
@@ -61,7 +66,7 @@ export function Availability({ t, lang }: { t: Dict["availability"]; lang: "es" 
         </Reveal>
 
         <Reveal delay={0.1} className="mt-10 flex flex-wrap items-center justify-between gap-5 border-b border-line pb-6">
-          <div className="flex flex-wrap gap-2" role="group" aria-label="Filtros">
+          <div className="flex flex-wrap gap-2" role="group" aria-label={filtersLabel}>
             {(Object.keys(t.filters) as Filter[]).map((f) => (
               <button key={f} type="button" className="chip" aria-pressed={filter === f} onClick={() => setFilter(f)}>
                 {t.filters[f]}
@@ -109,7 +114,7 @@ export function Availability({ t, lang }: { t: Dict["availability"]; lang: "es" 
                       aria-pressed={isSel}
                       aria-label={`${t.lot} ${l.n}, ${modelLabel(l.model)}, ${t.legend[l.status]}`}
                       style={{ left: `${l.x}%`, top: `${l.y}%` }}
-                      className="group absolute aspect-square w-[3.1%] -translate-x-1/2 -translate-y-1/2 rounded-full"
+                      className="group absolute aspect-square w-[3.1%] -translate-x-1/2 -translate-y-1/2 rounded-full focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-cream-100"
                     >
                       <span
                         className={`absolute inset-0 rounded-full transition duration-300 ${
@@ -165,7 +170,7 @@ export function Availability({ t, lang }: { t: Dict["availability"]; lang: "es" 
             </ul>
           )}
 
-          <aside aria-live="polite" className="lg:sticky lg:top-28 lg:self-start">
+          <aside ref={panel} aria-live="polite" className="scroll-mb-28 lg:sticky lg:top-28 lg:self-start">
             <AnimatePresence mode="wait" initial={false}>
               {selected ? (
                 <motion.div
@@ -204,16 +209,7 @@ export function Availability({ t, lang }: { t: Dict["availability"]; lang: "es" 
                     ))}
                     <div className="flex justify-between gap-4">
                       <dt className="text-ink-soft">{t.price}</dt>
-                      <dd>
-                        <button
-                          type="button"
-                          onClick={() => request(selected)}
-                          className="font-semibold text-gold-ink underline underline-offset-4 disabled:no-underline disabled:opacity-50"
-                          disabled={selected.status !== "disponible"}
-                        >
-                          {t.priceCta}
-                        </button>
-                      </dd>
+                      <dd className="text-right text-ink-soft">{t.priceNote}</dd>
                     </div>
                   </dl>
                   {selected.status === "disponible" ? (

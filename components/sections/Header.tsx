@@ -36,8 +36,13 @@ export function Header({ t, homeHref }: { t: Pick<Dict, "nav" | "promo" | "a11y"
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    if (open) window.addEventListener("keydown", onKey);
     return () => {
       document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
     };
   }, [open]);
 
@@ -73,7 +78,7 @@ export function Header({ t, homeHref }: { t: Pick<Dict, "nav" | "promo" | "a11y"
             : "border-b border-line bg-bg/88 backdrop-blur-xl"
         }`}
       >
-        <nav className="container-x flex h-[4.5rem] items-center justify-between gap-6" aria-label="Principal">
+        <nav className="container-x flex h-[4.5rem] items-center justify-between gap-6" aria-label={t.a11y.mainNav}>
           <Link href={homeHref} aria-label={t.a11y.home} className="shrink-0">
             <Logo tone={light ? "light" : "auto"} />
           </Link>

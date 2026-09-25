@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  experimental: {
+    // 404 con marca para rutas inexistentes (el sitio tiene dos layouts raíz: es / en)
+    globalNotFound: true,
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     qualities: [60, 75, 85],

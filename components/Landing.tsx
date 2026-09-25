@@ -82,14 +82,14 @@ export function Landing({ t, lang }: { t: Dict; lang: Lang }) {
       <Header t={{ nav: t.nav, promo: t.promo, a11y: t.a11y }} homeHref={homeHref} />
       <main id="contenido">
         <Hero t={{ hero: t.hero, quickForm: t.quickForm, form: t.form }} lang={lang} privacyHref={privacyHref} />
-        <Facts t={t.facts} />
+        <Facts t={t.facts} label={t.a11y.facts} />
         <Project t={t.project} />
         <RoofToggle t={t.roof} />
         <Models t={t.models} />
         <Included t={t.included} />
         <Lifestyle t={t.lifestyle} />
         <Amenities t={t.amenities} />
-        <Availability t={t.availability} lang={lang} />
+        <Availability t={t.availability} lang={lang} filtersLabel={t.a11y.filters} />
         <Payments t={t.payments} models={t.models.tabs} lang={lang} />
         <Invest t={t.invest} lang={lang} />
         <Ensenada t={t.ensenada} />
@@ -98,8 +98,8 @@ export function Landing({ t, lang }: { t: Dict; lang: Lang }) {
         <Faq t={t.faq} />
         <FinalCta t={t.finalCta} form={t.form} whatsappLabel={t.hero.ctaSecondary} lang={lang} privacyHref={privacyHref} />
       </main>
-      <Footer t={t.footer} nav={t.nav} waGeneric={t.form.waGeneric} privacyHref={privacyHref} />
-      <FloatingActions t={t.mobileBar} exit={t.exit} waGeneric={t.form.waGeneric} />
+      <Footer t={t.footer} nav={t.nav} waGeneric={t.form.waGeneric} privacyHref={privacyHref} navLabel={t.a11y.footerNav} />
+      <FloatingActions t={t.mobileBar} exit={t.exit} waGeneric={t.form.waGeneric} label={t.a11y.quickActions} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(t, lang)).replace(/</g, "\\u003c") }} />
     </LeadProvider>
   );

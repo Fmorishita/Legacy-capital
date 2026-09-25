@@ -15,6 +15,11 @@ export const es = {
     menu: "Abrir menú",
     close: "Cerrar",
     home: "Legacy Capital, inicio",
+    mainNav: "Principal",
+    footerNav: "Pie de página",
+    quickActions: "Acciones rápidas",
+    filters: "Filtros",
+    facts: "Punta Pacífico en cifras",
   },
   nav: {
     links: [
@@ -94,10 +99,10 @@ export const es = {
       fallback: "Para recibir la información al instante, envíanos tu solicitud por WhatsApp con el botón de abajo.",
       whatsapp: "Abrir WhatsApp ahora",
       qualifyTitle: "Tres preguntas para preparar tu propuesta",
-      qualifyOptional: "Opcional, un toque cada una.",
+      qualifyOptional: "Son opcionales y se responden con un toque.",
       timeline: "¿Cuándo planeas comprar?",
       timelines: [
-        { value: "0-3", label: "En 3 meses" },
+        { value: "0-3", label: "En menos de 3 meses" },
         { value: "3-6", label: "3 a 6 meses" },
         { value: "6-12", label: "6 a 12 meses" },
         { value: "explorando", label: "Solo explorando" },
@@ -136,7 +141,7 @@ export const es = {
       {
         icon: "house",
         title: "Todo en un nivel",
-        text: "Sin escaleras en tu día a día. Pensada para familias y para quienes planean su retiro.",
+        text: "Recámaras, cocina y sala en una sola planta. Pensada para familias y para quienes planean su retiro.",
       },
       {
         icon: "waves",
@@ -145,8 +150,8 @@ export const es = {
       },
       {
         icon: "trend",
-        title: "La zona que más crece",
-        text: "La zona norte de Ensenada concentra el mayor potencial de crecimiento de la ciudad.",
+        title: "Zona norte de Ensenada",
+        text: "La zona con mayor potencial de crecimiento de la ciudad y una plusvalía en aumento.",
       },
     ],
     developer:
@@ -203,10 +208,10 @@ export const es = {
   },
   included: {
     title: "Se entrega lista para vivir.",
-    body: "Sin gastos extra para amueblar lo básico. Esto ya viene en tu casa:",
+    body: "Sin gastos extra para equiparla. Esto ya viene en tu casa:",
     items: [
       { title: "Cocina equipada", text: "Barra de granito, estufa con horno y campana.", image: "/img/cooking.jpg" },
-      { title: "Clima en toda la casa", text: "Minisplit en recámaras y en sala-comedor.", image: "/img/bedroom-master.jpg" },
+      { title: "Clima en recámaras y sala", text: "Minisplit en recámaras y en sala-comedor.", image: "/img/bedroom-master.jpg" },
       { title: "Casa inteligente", text: "Cerradura digital, luces y aire acondicionado desde tu celular.", image: "/img/smart-phone.jpg" },
       { title: "Roof garden equipado", text: "Pérgola, barra con tarja y asador, y medio baño.", image: "/img/pergola.jpg" },
       { title: "Baños terminados", text: "Cancel de cristal templado y acabados listos.", image: "/img/bathroom.jpg" },
@@ -269,11 +274,11 @@ export const es = {
     views: { premium: "Premium al océano", preferente: "Preferente", estandar: "Jardín y montaña" },
     statusLabel: "Estatus",
     price: "Precio",
-    priceCta: "Consultar precio actualizado",
+    priceNote: "Te lo enviamos al solicitarla",
     cta: "Solicitar esta casa",
     soldNote: "Esta casa ya fue vendida. Te mostramos opciones similares.",
     pickPrompt: "Selecciona una casa en el plano",
-    pickHint: "Algunas casas disponibles con vista premium:",
+    pickHint: "Algunas casas disponibles:",
     listView: "Ver como lista",
     mapView: "Ver plano",
     mapAlt: "Sembrado del Clúster 1 de Punta Pacífico",
@@ -298,12 +303,13 @@ export const es = {
       finalPrice: "Precio final",
       down: "Pago inicial",
       monthly: "Mensualidades",
-      deferred: "Diferido en 19 meses",
+      deferred: "Diferido",
+      deferred19: "Diferido en 19 meses",
       deed: "A la escrituración",
     },
     monthlyNote: "{n} mensualidades de",
     disclaimer:
-      "Montos estimados con precios del brochure de septiembre 2026 (2R $3,989,325 y 3R $4,360,053). El plazo puede variar según la fecha de escrituración. Esquema válido únicamente con firma de contrato.",
+      "Montos estimados con precios y mensualidades del brochure de septiembre 2026 (2R $3,989,325 y 3R $4,360,053). El diferido se cubre dentro de un plazo de hasta 19 meses; el número de mensualidades puede variar según la fecha de firma y de escrituración. Esquema válido únicamente con firma de contrato.",
     cta: "Recibir mi corrida",
     promo: "Además, si apartas en septiembre obtienes 5% de descuento (primeras 10 casas).",
   },
@@ -314,13 +320,13 @@ export const es = {
     stats: [
       { value: 71, suffix: "/100", label: "Market Score de Ensenada en AirDNA" },
       { value: 7.5, prefix: "+", suffix: "%", decimals: 1, label: "tarifa diaria promedio frente a 2025" },
-      { value: 4.5, prefix: "+", suffix: "%", decimals: 1, label: "ingreso anual promedio por propiedad" },
-      { value: 10.9, prefix: "+", suffix: "%", decimals: 1, label: "más propiedades activas en renta" },
+      { value: 4.5, prefix: "+", suffix: "%", decimals: 1, label: "ingreso anual promedio frente a 2025" },
+      { value: 10.9, prefix: "+", suffix: "%", decimals: 1, label: "propiedades activas en renta en el último año" },
     ],
     reasons: [
       { title: "Turismo todo el año", text: "Cruceros internacionales, vino, gastronomía y surf." },
-      { title: "Cerca de California", text: "A menos de dos horas de San Diego por la carretera escénica." },
-      { title: "Plusvalía en preventa", text: "Compras a precio de preventa en la zona que más crece de la ciudad." },
+      { title: "Cerca de California", text: "Junto a la frontera con Estados Unidos, por la carretera escénica Tijuana-Ensenada." },
+      { title: "Plusvalía en preventa", text: "Compras a precio de preventa en la zona norte, la de mayor potencial de crecimiento." },
     ],
     source: "Fuente: AirDNA, mercado de renta vacacional de Ensenada. Rendimientos pasados no garantizan resultados futuros.",
     imageAlt: "Costa de Ensenada vista desde el aire",
@@ -351,10 +357,10 @@ export const es = {
   trust: {
     title: "Compras con respaldo y todo por escrito.",
     items: [
-      { icon: "building", title: "Desarrollador con trayectoria", text: "SISOL: más de 25 años y 30 proyectos concluidos en 10 estados." },
+      { icon: "building", title: "Desarrollador con trayectoria", text: "SISOL: más de 25 años y más de 30 proyectos concluidos en 10 estados." },
       { icon: "bank", title: "Respaldo financiero", text: "Proyecto con el respaldo de INVEX, institución financiera líder en México." },
-      { icon: "contract", title: "Contrato conforme a Profeco", text: "Contrato de promesa de compraventa basado en la NOM-247-SE-2021." },
-      { icon: "shield", title: "Garantías por escrito", text: "5 años en estructura, 3 en impermeabilización y 1 en construcción." },
+      { icon: "contract", title: "Contrato bajo la NOM-247", text: "Contrato de promesa de compraventa basado en la norma de Profeco NOM-247-SE-2021." },
+      { icon: "shield", title: "Garantías por escrito", text: "5 años en estructura, 3 en impermeabilización y 1 en defectos de construcción." },
     ],
     stepsTitle: "Cómo apartar tu casa",
     steps: [

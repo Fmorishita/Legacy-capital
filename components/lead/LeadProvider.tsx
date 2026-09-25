@@ -41,6 +41,8 @@ export function LeadProvider({ t, lang, privacyHref, children }: Props) {
   }, []);
 
   const openLead = useCallback((r: LeadRequest) => {
+    // El aviso de salida nunca reemplaza un modal abierto
+    if (r.origin === "exit-intent" && document.querySelector('[role="dialog"][aria-modal="true"]')) return;
     lastFocus.current = document.activeElement as HTMLElement | null;
     setReq(r);
     trackEvent("lead_open", { origin: r.origin, kind: r.kind });

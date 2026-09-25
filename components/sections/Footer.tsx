@@ -4,7 +4,19 @@ import type { Dict } from "@/lib/i18n/es";
 import { site, waLink } from "@/lib/site";
 import { Logo } from "@/components/ui/Logo";
 
-export function Footer({ t, nav, waGeneric, privacyHref }: { t: Dict["footer"]; nav: Dict["nav"]; waGeneric: string; privacyHref: string }) {
+export function Footer({
+  t,
+  nav,
+  waGeneric,
+  privacyHref,
+  navLabel,
+}: {
+  t: Dict["footer"];
+  nav: Dict["nav"];
+  waGeneric: string;
+  privacyHref: string;
+  navLabel: string;
+}) {
   return (
     <footer className="bg-navy-900 pb-28 text-cream-100 dark:bg-navy-950 lg:pb-12">
       <div className="container-x border-t border-cream-100/15 pt-16">
@@ -32,7 +44,7 @@ export function Footer({ t, nav, waGeneric, privacyHref }: { t: Dict["footer"]; 
               </li>
             </ul>
           </div>
-          <nav aria-label="Pie de página">
+          <nav aria-label={navLabel}>
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cream-100/60">Punta Pacífico</p>
             <ul className="mt-5 grid grid-cols-2 gap-3 text-sm">
               {nav.links.map((l) => (

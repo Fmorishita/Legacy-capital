@@ -15,6 +15,7 @@
   --ink-soft: #4a5670;
   --line: rgb(26 43 76 / 0.14);
   --line-strong: rgb(26 43 76 / 0.28);
+  --field-line: rgb(26 43 76 / 0.55);
   --gold: #c5a564;
   --gold-ink: #7a5e2a;
   --btn: #1a2b4c;
@@ -34,6 +35,7 @@
     --ink-soft: #b9c0ce;
     --line: rgb(245 240 230 / 0.13);
     --line-strong: rgb(245 240 230 / 0.26);
+    --field-line: rgb(245 240 230 / 0.45);
     --gold: #d4b97f;
     --gold-ink: #d4b97f;
     --btn: #d4b97f;
@@ -210,7 +212,7 @@
   .field {
     width: 100%;
     border-radius: 12px;
-    border: 1px solid var(--line-strong);
+    border: 1px solid var(--field-line);
     background: var(--surface);
     color: var(--ink);
     padding: 0.8rem 0.95rem;
@@ -222,7 +224,7 @@
   }
   .field::placeholder {
     color: var(--ink-soft);
-    opacity: 0.8;
+    opacity: 1;
   }
   .field:focus {
     outline: none;
@@ -238,7 +240,7 @@
     align-items: center;
     gap: 0.4rem;
     border-radius: 9999px;
-    border: 1px solid var(--line-strong);
+    border: 1px solid var(--field-line);
     padding: 0.55rem 0.95rem;
     font-size: 0.875rem;
     font-weight: 500;

@@ -8,10 +8,10 @@ import { waLink } from "@/lib/site";
 import { trackEvent } from "@/lib/track";
 import { useLead } from "@/components/lead/LeadProvider";
 
-type Props = { t: Dict["mobileBar"]; exit: Dict["exit"]; waGeneric: string };
+type Props = { t: Dict["mobileBar"]; exit: Dict["exit"]; waGeneric: string; label: string };
 
 /** Barra fija en móvil (WhatsApp, precios, visita), botón de WhatsApp en escritorio y aviso de salida (solo escritorio, una vez por sesión). */
-export function FloatingActions({ t, exit, waGeneric }: Props) {
+export function FloatingActions({ t, exit, waGeneric, label }: Props) {
   const { openLead } = useLead();
   const { scrollY } = useScroll();
   const [show, setShow] = useState(false);
@@ -33,6 +33,9 @@ export function FloatingActions({ t, exit, waGeneric }: Props) {
     const arm = setTimeout(() => (exitArmed.current = true), 15_000);
     const onOut = (e: MouseEvent) => {
       if (!exitArmed.current || e.clientY > 8 || e.relatedTarget) return;
+      try {
+        if (sessionStorage.getItem("lc_exit") === "1") return;
+      } catch {}
       exitArmed.current = false;
       try {
         sessionStorage.setItem("lc_exit", "1");
@@ -53,7 +56,7 @@ export function FloatingActions({ t, exit, waGeneric }: Props) {
         <>
           <motion.nav
             key="bar"
-            aria-label="Acciones rápidas"
+            aria-label={label}
             initial={{ y: 90 }}
             animate={{ y: 0 }}
             exit={{ y: 90 }}

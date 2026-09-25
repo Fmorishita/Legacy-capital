@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { ArrowRight, CheckCircle, CircleNotch, WhatsappLogo } from "@phosphor-icons/react";
 import type { Dict } from "@/lib/i18n/es";
@@ -48,6 +48,7 @@ export function LeadForm({
   const uid = useId();
   const mountedAt = useRef(0);
   const nameRef = useRef<HTMLInputElement>(null);
+  const focusOnMount = useCallback((el: HTMLElement | null) => el?.focus({ preventScroll: true }), []);
   const [name, setName] = useState("");
   const [cc, setCc] = useState(lang === "en" ? "+1" : "+52");
   const [phone, setPhone] = useState("");
@@ -64,9 +65,11 @@ export function LeadForm({
 
   useEffect(() => {
     mountedAt.current = Date.now();
-    setMinDate(new Date().toISOString().slice(0, 10));
+    // Fecha local del visitante (no UTC)
+    setMinDate(new Date().toLocaleDateString("en-CA"));
     if (autoFocus) nameRef.current?.focus({ preventScroll: true });
   }, [autoFocus]);
+
 
   const digits = phone.replace(/\D/g, "");
   const interestLabel = t.interests.find((i) => i.value === interes)?.label;
@@ -118,6 +121,10 @@ export function LeadForm({
       if (!res.ok || !data.ok) throw new Error(data.error || "error");
       setResult({ stored: Boolean(data.stored), id: data.id, token: data.token });
       setStatus("done");
+      try {
+        // Ya dejó sus datos: no mostrar el aviso de salida en esta sesión
+        sessionStorage.setItem("lc_exit", "1");
+      } catch {}
       trackEvent("lead", { origin, interest: interes, lot: defaults?.lote, lang });
     } catch {
       setStatus("idle");
@@ -343,7 +350,10 @@ export function LeadForm({
           <div className="flex items-start gap-3">
             <CheckCircle className="mt-1 size-7 shrink-0 text-gold-ink" weight="duotone" aria-hidden />
             <div>
-              <p className="display text-3xl">{t.success.title.replace("{name}", firstName)}</p>
+              {/* Al montarse (tras la animación de salida del formulario) recibe el foco */}
+              <p ref={focusOnMount} tabIndex={-1} className="display text-3xl outline-none">
+                {t.success.title.replace("{name}", firstName)}
+              </p>
               <p className="mt-2 text-ink-soft">{result?.stored ? t.success.body : t.success.fallback}</p>
             </div>
           </div>
@@ -368,7 +378,7 @@ export function LeadForm({
 
 function Qualify({ t, id, token }: { t: Dict["form"]; id: string; token: string }) {
   const [answers, setAnswers] = useState<{ horizonte_compra?: string; forma_pago?: string; uso?: string }>({});
-  const [state, setState] = useState<"idle" | "sending" | "done">("idle");
+  const [state, setState] = useState<"idle" | "sending" | "done" | "error">("idle");
   const s = t.success;
 
   const groups = [
@@ -381,14 +391,17 @@ function Qualify({ t, id, token }: { t: Dict["form"]; id: string; token: string 
     if (!Object.keys(answers).length) return;
     setState("sending");
     try {
-      await fetch("/api/leads", {
+      const res = await fetch("/api/leads", {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id, token, ...answers }),
       });
-    } finally {
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.ok) throw new Error("qualify");
       setState("done");
       trackEvent("lead_qualified");
+    } catch {
+      setState("error");
     }
   }
 
@@ -420,6 +433,11 @@ function Qualify({ t, id, token }: { t: Dict["form"]; id: string; token: string 
           </div>
         </fieldset>
       ))}
+      {state === "error" && (
+        <p role="alert" className="text-sm text-[#b3261e] dark:text-[#ffb4a9]">
+          {t.errors.generic}
+        </p>
+      )}
       <button
         type="button"
         onClick={send}

@@ -28,6 +28,9 @@ type Props = {
   fields?: { interest?: boolean; email?: boolean; visit?: boolean; message?: boolean };
   privacyHref: string;
   autoFocus?: boolean;
+  /** Mensaje de WhatsApp y texto de éxito propios (p. ej. para el brochure) */
+  waTemplate?: string;
+  successBody?: string;
 };
 
 type Result = { stored: boolean; id?: string; token?: string };
@@ -46,6 +49,8 @@ export function LeadForm({
   fields = { interest: true },
   privacyHref,
   autoFocus,
+  waTemplate,
+  successBody,
 }: Props) {
   const uid = useId();
   const mountedAt = useRef(0);
@@ -77,7 +82,7 @@ export function LeadForm({
   const interestLabel = t.interests.find((i) => i.value === interes)?.label;
   const firstName = name.trim().split(/\s+/)[0] || "";
 
-  const waMessage = t.waMessage
+  const waMessage = (waTemplate ?? t.waMessage)
     .replace("{name}", name.trim() || "-")
     .replace("{interest}", interestLabel ? ` (${interestLabel.toLowerCase()})` : "");
 
@@ -353,7 +358,7 @@ export function LeadForm({
               <p ref={focusOnMount} tabIndex={-1} className="display text-3xl outline-none">
                 {t.success.title.replace("{name}", firstName)}
               </p>
-              <p className="mt-2 text-ink-soft">{result?.stored ? t.success.body : t.success.fallback}</p>
+              <p className="mt-2 text-ink-soft">{result?.stored ? (successBody ?? t.success.body) : t.success.fallback}</p>
             </div>
           </div>
           <a

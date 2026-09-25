@@ -15,9 +15,6 @@ export const site = {
     // Retrato en /public/img/fran-morishita.jpg; en false se muestra el escudo de la marca
     hasPhoto: false,
   },
-  // Testimonio de Gus Marcos (copia comprimida del video publicado en el sitio de Fran)
-  testimonialVideo: "/video/testimonio-gus-marcos.mp4",
-  testimonialPoster: "/video/testimonio-gus-marcos-poster.jpg",
   // Promoción real del brochure (sept. 2026): 5% al apartar, primeras 10 casas
   promoEndsAt: "2026-09-30T23:59:59-07:00",
 } as const;

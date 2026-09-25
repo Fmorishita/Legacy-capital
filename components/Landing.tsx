@@ -85,11 +85,11 @@ export function Landing({ t, lang }: { t: Dict; lang: Lang }) {
         <Hero t={{ hero: t.hero, quickForm: t.quickForm, form: t.form }} lang={lang} privacyHref={privacyHref} />
         <Facts t={t.facts} label={t.a11y.facts} />
         <Personas t={t.personas} label={t.a11y.personas} />
-        <Advisor t={t.advisor} waGeneric={t.form.waGeneric} closeLabel={t.a11y.close} />
+        <Advisor t={t.advisor} waGeneric={t.form.waGeneric} />
         <Project t={t.project} />
         <RoofToggle t={t.roof} />
         <Models t={t.models} />
-        <Included t={t.included} label={t.a11y.slides} />
+        <Included t={t.included} />
         <Lifestyle t={t.lifestyle} />
         <Amenities t={t.amenities} />
         <Invest t={t.invest} lang={lang} />

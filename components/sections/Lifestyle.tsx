@@ -76,29 +76,34 @@ export function Lifestyle({ t }: { t: Dict["lifestyle"] }) {
 
   return (
     <section aria-labelledby="life-title" className="bg-bg-alt py-24 md:py-36">
-      <div className="container-x grid gap-5 lg:grid-cols-12 lg:grid-rows-[minmax(20rem,auto)_19rem_19rem]">
-        <Reveal className="flex flex-col justify-end pb-4 lg:col-span-5 lg:pr-8">
-          <h2 id="life-title" className="display text-[2.6rem] leading-[1.04] md:text-6xl">
-            {t.title}
-          </h2>
-          <p className="mt-5 max-w-[40ch] text-lg leading-relaxed text-ink-soft">{t.body}</p>
-        </Reveal>
-        <Reveal delay={0.08} className="lg:col-span-7">
-          <Tile tile={a} className="h-full" sizes="(min-width: 1024px) 58vw, 100vw" />
-        </Reveal>
-        <Reveal delay={0.05} className="aspect-[4/5] sm:aspect-[3/4] lg:col-span-4 lg:row-span-2 lg:aspect-auto">
-          <ReelVideo label={t.videoLabel} pauseLabel={t.pause} />
-        </Reveal>
-        <Reveal delay={0.1} className="lg:col-span-8">
-          <Tile tile={b} className="h-full" sizes="(min-width: 1024px) 66vw, 100vw" />
-        </Reveal>
-        <div className="grid grid-cols-2 gap-5 lg:col-span-8">
-          <Reveal delay={0.12}>
-            <Tile tile={c} className="h-full" sizes="(min-width: 1024px) 33vw, 50vw" />
+      <div className="container-x grid gap-5 lg:grid-cols-12 lg:gap-6">
+        {/* Primero el video; las fotos acompañan después */}
+        <div className="flex flex-col gap-8 lg:col-span-5">
+          <Reveal>
+            <h2 id="life-title" className="display text-[2.6rem] leading-[1.04] md:text-6xl">
+              {t.title}
+            </h2>
+            <p className="mt-5 max-w-[40ch] text-lg leading-relaxed text-ink-soft">{t.body}</p>
           </Reveal>
-          <Reveal delay={0.16}>
-            <Tile tile={d} className="h-full" sizes="(min-width: 1024px) 33vw, 50vw" />
+          <Reveal delay={0.05} className="aspect-[4/5] lg:aspect-auto lg:flex-1">
+            <ReelVideo label={t.videoLabel} pauseLabel={t.pause} />
           </Reveal>
+        </div>
+        <div className="grid gap-5 lg:col-span-7 lg:grid-rows-[1.25fr_1fr_1fr] lg:gap-6">
+          <Reveal delay={0.08}>
+            <Tile tile={a} className="h-full" sizes="(min-width: 1024px) 58vw, 100vw" />
+          </Reveal>
+          <Reveal delay={0.1}>
+            <Tile tile={b} className="h-full" sizes="(min-width: 1024px) 58vw, 100vw" />
+          </Reveal>
+          <div className="grid grid-cols-2 gap-5 lg:gap-6">
+            <Reveal delay={0.12}>
+              <Tile tile={c} className="h-full" sizes="(min-width: 1024px) 29vw, 50vw" />
+            </Reveal>
+            <Reveal delay={0.16}>
+              <Tile tile={d} className="h-full" sizes="(min-width: 1024px) 29vw, 50vw" />
+            </Reveal>
+          </div>
         </div>
       </div>
     </section>

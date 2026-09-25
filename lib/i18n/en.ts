@@ -23,7 +23,6 @@ export const en: Dict = {
     quickActions: "Quick actions",
     facts: "The pre-sale in numbers",
     personas: "Buyer profiles",
-    slides: "Included features",
   },
   nav: {
     links: [
@@ -148,29 +147,12 @@ export const en: Dict = {
     eyebrow: "Who it's for",
     title: "Every buyer comes with a different reason.",
     body: "Pick your profile. We'll tell you what's holding you back and how we solve it with you.",
+    hint: "Tap your profile to see your case",
     painsLabel: "What's holding you back",
     gainsLabel: "What you'll find here",
     cta: "Get my proposal",
     dialogSubtitle: "We'll send prices, payment plans and the rental return study to your WhatsApp, tailored to you.",
     items: [
-      {
-        id: "ensenada",
-        label: "I live in Ensenada",
-        tags: ["Wealth building", "Live or rent"],
-        image: "/img/bedroom-family.jpg",
-        imageAlt: "Mother and son in the bedroom of their new home",
-        headline: "The Pacific you've always seen, now in your name.",
-        pains: [
-          "You rent, or your home no longer fits your family, and every year everything costs more.",
-          "Your savings lose value in the bank while prices in the city keep going up.",
-          "You've seen pre-sales that never got delivered and don't know who to trust.",
-        ],
-        gains: [
-          "A new single-level home with ocean views and a roof garden, with 19 months to complete your down payment.",
-          "An asset you can rent to US visitors when you're not using it.",
-          "A contract under NOM-247, written warranties and a local advisor with you until delivery.",
-        ],
-      },
       {
         id: "california",
         label: "I live in California",
@@ -229,8 +211,8 @@ export const en: Dict = {
         id: "cdmx",
         label: "I live in Mexico City",
         tags: ["Retreat", "Investment"],
-        image: "/img/whale.jpg",
-        imageAlt: "Humpback whale swimming in the Pacific",
+        image: "/img/sunset-ocean.jpg",
+        imageAlt: "Person walking into the ocean at sunset",
         headline: "From traffic to horizon: your Pacific retreat.",
         pains: [
           "You live in the most congested city in the world and your downtime disappears in traffic.",
@@ -238,7 +220,7 @@ export const en: Dict = {
           "You want to invest by the ocean, but not blindly or because it's trendy.",
         ],
         gains: [
-          "Quiet, open horizons, whales in winter and Valle de Guadalupe 30 minutes away.",
+          "Quiet, open horizons and Valle de Guadalupe 30 minutes from home.",
           "A market with demand from US visitors and more than a million cruise passengers a year in Ensenada.",
           "Clear numbers: we send you the rental return study before you decide.",
         ],
@@ -259,6 +241,24 @@ export const en: Dict = {
           "Ocean breeze, Valle de Guadalupe wine and Baja cuisine minutes from home.",
           "Pre-sale pricing from MXN $3.9M, with 19 months to complete your down payment.",
           "An equipped home, ready to use or rent from day one.",
+        ],
+      },
+      {
+        id: "ensenada",
+        label: "I live in Ensenada",
+        tags: ["Wealth building", "Live or rent"],
+        image: "/img/bedroom-family.jpg",
+        imageAlt: "Mother and son in the bedroom of their new home",
+        headline: "The Pacific you've always seen, now in your name.",
+        pains: [
+          "You rent, or your home no longer fits your family, and every year everything costs more.",
+          "Your savings lose value in the bank while prices in the city keep going up.",
+          "You've seen pre-sales that never got delivered and don't know who to trust.",
+        ],
+        gains: [
+          "A new single-level home with ocean views and a roof garden, with 19 months to complete your down payment.",
+          "An asset you can rent to US visitors when you're not using it.",
+          "A contract under NOM-247, written warranties and a local advisor with you until delivery.",
         ],
       },
     ],
@@ -349,11 +349,6 @@ export const en: Dict = {
       { title: "Finished bathrooms", text: "Tempered glass shower enclosures and finishes in place.", image: "/img/bathroom.jpg" },
       { title: "Bedrooms with closets", text: "Bedroom closets and ceramic tile floors.", image: "/img/bedroom-secondary.jpg" },
     ],
-    prev: "Previous",
-    next: "Next",
-    pause: "Pause",
-    play: "Play",
-    goTo: "Show {title}",
   },
   lifestyle: {
     title: "This is how you live here.",
@@ -434,6 +429,33 @@ export const en: Dict = {
     ],
     formTitle: "Get it on WhatsApp",
     formNote: "Fran sends it as a PDF and answers your questions about the numbers.",
+    switchLabel: "What would you like to get?",
+    options: {
+      study: { label: "Rental return study", caption: "If you plan to rent it out" },
+      brochure: { label: "Full brochure", caption: "If you want it as a second home" },
+    },
+    waMessage:
+      "Hi Fran, I'm {name}. I'm interested in investing in the ocean-view homes in Ensenada. Could you send me the rental return study?",
+    successBody: "Fran Morishita will message you on WhatsApp today with the rental return study.",
+    brochure: {
+      eyebrow: "Full brochure",
+      title: "Every detail of your next home, in one document.",
+      body: "Floor plans, finishes, amenities, location and payment plans. Ideal if you want it as a second home or for your family. We'll send it to your WhatsApp.",
+      docTitle: "Pre-sale brochure",
+      docMeta: "Roof garden homes · Ensenada · 2026",
+      contents: [
+        "Floor plans for the 2- and 3-bedroom models",
+        "Finishes and included features",
+        "Amenities and master plan",
+        "Location and what's nearby",
+        "Pre-sale payment plans",
+      ],
+      formNote: "Fran sends it as a PDF and tells you what the brochure doesn't.",
+      submit: "Send me the brochure",
+      waMessage:
+        "Hi Fran, I'm {name}. I'm interested in the ocean-view homes in Ensenada. Could you send me the full brochure?",
+      successBody: "Fran Morishita will message you on WhatsApp today with the full brochure.",
+    },
     disclaimer:
       "Reference projection using July 2026 market rates on a property value of MXN $4.57M. Figures depend on occupancy, rates, competition and operating costs; they are not a guaranteed return.",
   },
@@ -523,8 +545,6 @@ export const en: Dict = {
       { value: "+10", label: "years in real estate sales" },
       { value: "+MXN $70M", label: "in sales led" },
     ],
-    testimonial: "Gus Marcos, real estate developer in San Pedro Garza García, Nuevo León, on working with Fran (in Spanish).",
-    playTestimonial: "Watch testimonial",
     ctaWhatsapp: "Message on WhatsApp",
     ctaVisit: "Book a visit",
   },

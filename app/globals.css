@@ -292,12 +292,37 @@
   }
 }
 
-/* Barra de progreso del carrusel de equipamiento */
-@keyframes slide-progress {
-  from {
-    width: 0%;
+/* Perfiles de comprador: pulso dorado en secuencia hasta que eligen uno */
+@keyframes persona-pulse {
+  0%,
+  55%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(197 165 100 / 0);
+    border-color: var(--line-strong);
   }
-  to {
-    width: 100%;
+  12% {
+    box-shadow: 0 0 0 4px rgb(197 165 100 / 0.45);
+    border-color: #c5a564;
+  }
+  30% {
+    box-shadow: 0 0 0 10px rgb(197 165 100 / 0);
+  }
+}
+.persona-tab--pulse {
+  animation: persona-pulse 2.8s ease-out infinite;
+}
+@keyframes tap-hint {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(3px) rotate(-8deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .persona-tab--pulse,
+  .animate-\[tap-hint_1\.6s_ease-in-out_infinite\] {
+    animation: none;
   }
 }

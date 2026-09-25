@@ -22,7 +22,6 @@ export const es = {
     quickActions: "Acciones rápidas",
     facts: "La preventa en cifras",
     personas: "Perfiles de comprador",
-    slides: "Equipamiento incluido",
   },
   nav: {
     links: [
@@ -147,29 +146,12 @@ export const es = {
     eyebrow: "Para quién es",
     title: "Cada comprador llega con una razón distinta.",
     body: "Elige tu perfil. Te decimos qué te frena hoy y cómo lo resolvemos contigo.",
+    hint: "Toca tu perfil para ver tu caso",
     painsLabel: "Lo que hoy te frena",
     gainsLabel: "Lo que encuentras aquí",
     cta: "Quiero mi propuesta",
     dialogSubtitle: "Te enviamos por WhatsApp precios, esquemas de pago y el estudio de rentabilidad, pensados para tu caso.",
     items: [
-      {
-        id: "ensenada",
-        label: "Vivo en Ensenada",
-        tags: ["Patrimonio", "Para vivir o rentar"],
-        image: "/img/bedroom-family.jpg",
-        imageAlt: "Madre e hijo en la recámara de su casa nueva",
-        headline: "El Pacífico que siempre has visto, ahora a tu nombre.",
-        pains: [
-          "Rentas o vives en una casa que ya no le queda a tu familia, y cada año todo sube.",
-          "Tu ahorro pierde valor en el banco mientras los precios de la ciudad siguen subiendo.",
-          "Has visto preventas que no se entregan y no sabes en quién confiar.",
-        ],
-        gains: [
-          "Casa nueva de un nivel, con vista al mar y roof garden, y tu enganche en 19 meses.",
-          "Un patrimonio que puedes rentar a turistas de Estados Unidos cuando no lo uses.",
-          "Contrato bajo la NOM-247, garantías por escrito y un asesor local contigo hasta la entrega.",
-        ],
-      },
       {
         id: "california",
         label: "Vivo en California",
@@ -228,8 +210,8 @@ export const es = {
         id: "cdmx",
         label: "Vivo en CDMX",
         tags: ["Refugio", "Inversión"],
-        image: "/img/whale.jpg",
-        imageAlt: "Ballena jorobada nadando en el Pacífico",
+        image: "/img/sunset-ocean.jpg",
+        imageAlt: "Persona caminando hacia el mar al atardecer",
         headline: "Del tráfico al horizonte: tu refugio en el Pacífico.",
         pains: [
           "Vives en la ciudad más congestionada del mundo y tu descanso se va en traslados.",
@@ -237,7 +219,7 @@ export const es = {
           "Quieres invertir en playa, pero no a ciegas ni por moda.",
         ],
         gains: [
-          "Silencio, horizonte, ballenas en invierno y el Valle de Guadalupe a 30 minutos.",
+          "Silencio, horizonte y el Valle de Guadalupe a 30 minutos de tu casa.",
           "Un mercado con demanda de turistas de Estados Unidos y más de un millón de cruceristas al año en Ensenada.",
           "Números claros: te enviamos el estudio de rentabilidad antes de que decidas.",
         ],
@@ -258,6 +240,24 @@ export const es = {
           "Brisa de mar, vino del Valle de Guadalupe y cocina de Baja a minutos de tu casa.",
           "Precio de preventa desde $3.9 MDP, con tu enganche en 19 meses.",
           "Casa equipada, lista para usarla o rentarla desde el primer día.",
+        ],
+      },
+      {
+        id: "ensenada",
+        label: "Vivo en Ensenada",
+        tags: ["Patrimonio", "Para vivir o rentar"],
+        image: "/img/bedroom-family.jpg",
+        imageAlt: "Madre e hijo en la recámara de su casa nueva",
+        headline: "El Pacífico que siempre has visto, ahora a tu nombre.",
+        pains: [
+          "Rentas o vives en una casa que ya no le queda a tu familia, y cada año todo sube.",
+          "Tu ahorro pierde valor en el banco mientras los precios de la ciudad siguen subiendo.",
+          "Has visto preventas que no se entregan y no sabes en quién confiar.",
+        ],
+        gains: [
+          "Casa nueva de un nivel, con vista al mar y roof garden, y tu enganche en 19 meses.",
+          "Un patrimonio que puedes rentar a turistas de Estados Unidos cuando no lo uses.",
+          "Contrato bajo la NOM-247, garantías por escrito y un asesor local contigo hasta la entrega.",
         ],
       },
     ],
@@ -348,11 +348,6 @@ export const es = {
       { title: "Baños terminados", text: "Cancel de cristal templado y acabados listos.", image: "/img/bathroom.jpg" },
       { title: "Recámaras con clóset", text: "Clósets en recámaras y piso de loseta cerámica.", image: "/img/bedroom-secondary.jpg" },
     ],
-    prev: "Anterior",
-    next: "Siguiente",
-    pause: "Pausar",
-    play: "Reproducir",
-    goTo: "Ver {title}",
   },
   lifestyle: {
     title: "Así se vive aquí.",
@@ -413,7 +408,7 @@ export const es = {
   },
   study: {
     eyebrow: "Estudio de rentabilidad",
-    title: "¿Cuánto puede rentar tu casa frente al mar?",
+    title: "¿Cuánto puede rentar tu casa con vista al mar?",
     body: "Analizamos una de estas casas en renta vacacional con tarifas reales del mercado: ocupación por temporada, gastos de operación y rendimiento neto. Te enviamos el estudio completo por WhatsApp.",
     docTitle: "Análisis de rentabilidad",
     docMeta: "Renta vacacional · Ensenada · Julio 2026",
@@ -433,6 +428,33 @@ export const es = {
     ],
     formTitle: "Recíbelo por WhatsApp",
     formNote: "Fran te lo envía en PDF y resuelve tus dudas sobre los números.",
+    switchLabel: "¿Qué quieres recibir?",
+    options: {
+      study: { label: "Estudio de rentabilidad", caption: "Si piensas rentarla" },
+      brochure: { label: "Brochure completo", caption: "Si la quieres como segunda casa" },
+    },
+    waMessage:
+      "Hola Fran, soy {name}. Me interesa invertir en las casas con vista al mar en Ensenada. ¿Me compartes el estudio de rentabilidad?",
+    successBody: "Fran Morishita te escribirá por WhatsApp hoy mismo con el estudio de rentabilidad.",
+    brochure: {
+      eyebrow: "Brochure completo",
+      title: "Todos los detalles de tu próxima casa, en un solo documento.",
+      body: "Planos, acabados, amenidades, ubicación y esquemas de pago. Ideal si la buscas como segunda casa o para tu familia. Te lo enviamos por WhatsApp.",
+      docTitle: "Brochure de preventa",
+      docMeta: "Casas con roof garden · Ensenada · 2026",
+      contents: [
+        "Planos de los modelos de 2 y 3 recámaras",
+        "Acabados y equipamiento incluido",
+        "Amenidades y plan maestro",
+        "Ubicación y qué hay cerca",
+        "Esquemas de pago de preventa",
+      ],
+      formNote: "Fran te lo envía en PDF y te cuenta lo que no viene en el brochure.",
+      submit: "Enviarme el brochure",
+      waMessage:
+        "Hola Fran, soy {name}. Me interesan las casas con vista al mar en Ensenada. ¿Me compartes el brochure completo?",
+      successBody: "Fran Morishita te escribirá por WhatsApp hoy mismo con el brochure completo.",
+    },
     disclaimer:
       "Proyección referencial con tarifas de mercado de julio 2026 sobre un valor de propiedad de $4.57 MDP. Las cifras dependen de ocupación, tarifas, competencia y costos de operación; no representan un rendimiento garantizado.",
   },
@@ -522,8 +544,6 @@ export const es = {
       { value: "+10", label: "años en ventas inmobiliarias" },
       { value: "+$70 MDP", label: "en ventas dirigidas" },
     ],
-    testimonial: "Gus Marcos, desarrollador inmobiliario en San Pedro Garza García, N.L., habla de su trabajo con Fran.",
-    playTestimonial: "Ver testimonio",
     ctaWhatsapp: "Escribir por WhatsApp",
     ctaVisit: "Agendar visita",
   },

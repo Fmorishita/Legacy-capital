@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
-import { ArrowRight, Check, X } from "@phosphor-icons/react";
+import { ArrowRight, Check, HandTap, X } from "@phosphor-icons/react";
 import type { Dict } from "@/lib/i18n/es";
 import type { Perfil } from "@/components/lead/LeadForm";
 import { Reveal } from "@/components/ui/Reveal";
@@ -12,12 +12,15 @@ import { trackEvent } from "@/lib/track";
 
 export function Personas({ t, label }: { t: Dict["personas"]; label: string }) {
   const [active, setActive] = useState(0);
+  // Hasta que la persona elige un perfil, los botones laten en secuencia para invitar a tocarlos
+  const [touched, setTouched] = useState(false);
   const tabs = useRef<(HTMLButtonElement | null)[]>([]);
   const { openLead } = useLead();
   const p = t.items[active];
 
   const select = (i: number, focus = false) => {
     setActive(i);
+    setTouched(true);
     trackEvent("persona_select", { profile: t.items[i].id });
     if (focus) tabs.current[i]?.focus();
     tabs.current[i]?.scrollIntoView({ block: "nearest", inline: "nearest", behavior: "smooth" });
@@ -45,11 +48,15 @@ export function Personas({ t, label }: { t: Dict["personas"]; label: string }) {
         </Reveal>
 
         <Reveal delay={0.08} className="-mx-5 mt-12 md:mx-0">
+          <p className="flex items-center gap-2 px-5 text-sm font-semibold text-gold-ink md:px-0">
+            <HandTap className="size-5 animate-[tap-hint_1.6s_ease-in-out_infinite]" weight="duotone" aria-hidden />
+            {t.hint}
+          </p>
           <div
             role="tablist"
             aria-label={label}
             onKeyDown={onKey}
-            className="no-scrollbar flex gap-2 overflow-x-auto px-5 pb-1 md:flex-wrap md:px-0"
+            className="no-scrollbar mt-4 flex gap-2.5 overflow-x-auto px-5 py-2 md:flex-wrap md:px-0"
           >
             {t.items.map((item, i) => (
               <button
@@ -63,9 +70,15 @@ export function Personas({ t, label }: { t: Dict["personas"]; label: string }) {
                 aria-controls="persona-panel"
                 tabIndex={active === i ? 0 : -1}
                 onClick={() => select(i)}
-                className="chip shrink-0 whitespace-nowrap"
                 data-active={active === i}
+                style={{ animationDelay: `${i * 0.35}s` }}
+                className={`persona-tab group flex shrink-0 items-center gap-2.5 whitespace-nowrap rounded-full border py-1.5 pl-1.5 pr-4 text-[0.95rem] font-medium transition duration-300 hover:-translate-y-0.5 hover:border-gold-500 hover:shadow-lg ${
+                  active === i ? "border-ink bg-ink text-bg shadow-lg" : "border-line-strong bg-surface text-ink"
+                } ${!touched && active !== i ? "persona-tab--pulse" : ""}`}
               >
+                <span className="relative size-9 shrink-0 overflow-hidden rounded-full">
+                  <Image src={item.image} alt="" fill sizes="36px" className="object-cover transition duration-500 group-hover:scale-110" />
+                </span>
                 {item.label}
               </button>
             ))}
@@ -76,9 +89,9 @@ export function Personas({ t, label }: { t: Dict["personas"]; label: string }) {
           id="persona-panel"
           role="tabpanel"
           aria-labelledby={`persona-tab-${p.id}`}
-          className="mt-8 grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:gap-14"
+          className="mt-8 grid items-start gap-8 lg:grid-cols-2 lg:gap-14"
         >
-          <div className="relative aspect-[16/11] overflow-hidden rounded-2xl bg-bg-alt lg:aspect-auto lg:min-h-[34rem]">
+          <div className="relative aspect-[16/11] overflow-hidden rounded-2xl bg-bg-alt lg:aspect-[5/4]">
             <AnimatePresence mode="popLayout" initial={false}>
               <motion.div
                 key={p.id}
@@ -88,7 +101,7 @@ export function Personas({ t, label }: { t: Dict["personas"]; label: string }) {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               >
-                <Image src={p.image} alt={p.imageAlt} fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
+                <Image src={p.image} alt={p.imageAlt} fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover object-[50%_25%]" />
               </motion.div>
             </AnimatePresence>
             <div className="absolute inset-x-0 bottom-0 flex flex-wrap gap-2 bg-gradient-to-t from-navy-950/70 to-transparent p-5 pt-16">
@@ -143,7 +156,7 @@ export function Personas({ t, label }: { t: Dict["personas"]; label: string }) {
                 </div>
               </div>
 
-              <div className="mt-10 border-t border-line pt-8 lg:mt-auto">
+              <div className="mt-10 border-t border-line pt-8">
                 <button
                   type="button"
                   className="btn btn-primary w-full sm:w-auto"

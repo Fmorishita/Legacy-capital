@@ -13,7 +13,7 @@ export const site = {
     phoneDisplay: "+52 646 256 3006",
     phoneHref: "tel:+526462563006",
     // Retrato en /public/img/fran-morishita.jpg; en false se muestra el escudo de la marca
-    hasPhoto: false,
+    hasPhoto: true,
   },
   // Promoción real del brochure (sept. 2026): 5% al apartar, primeras 10 casas
   promoEndsAt: "2026-09-30T23:59:59-07:00",

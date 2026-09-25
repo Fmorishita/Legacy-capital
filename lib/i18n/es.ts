@@ -159,6 +159,8 @@ export const es = {
       {
         id: "california",
         label: "Vivo en California",
+        kicker: "Vivo en",
+        city: "California",
         tags: ["Segunda casa", "Inversión"],
         image: "/img/street-aerial-sunset.jpg",
         imageAlt: "Casas con roof garden frente al mar al atardecer",
@@ -177,6 +179,8 @@ export const es = {
       {
         id: "mexicoamericano",
         label: "Soy mexicoamericano",
+        kicker: "Soy",
+        city: "Mexicoamericano",
         tags: ["Legado", "Segunda casa"],
         image: "/img/couple-retire.jpg",
         imageAlt: "Pareja abrazada frente al mar al atardecer",
@@ -195,6 +199,8 @@ export const es = {
       {
         id: "monterrey",
         label: "Vivo en Monterrey",
+        kicker: "Vivo en",
+        city: "Monterrey",
         tags: ["Segunda casa", "Inversión"],
         image: "/img/facade-dusk.jpg",
         imageAlt: "Fachada con roof garden al atardecer",
@@ -213,6 +219,8 @@ export const es = {
       {
         id: "cdmx",
         label: "Vivo en CDMX",
+        kicker: "Vivo en",
+        city: "CDMX",
         tags: ["Refugio", "Inversión"],
         image: "/img/sunset-ocean.jpg",
         imageAlt: "Persona caminando hacia el mar al atardecer",
@@ -231,6 +239,8 @@ export const es = {
       {
         id: "guadalajara",
         label: "Vivo en Guadalajara",
+        kicker: "Vivo en",
+        city: "Guadalajara",
         tags: ["Segunda casa", "Diversificación"],
         image: "/img/wine-couple.jpg",
         imageAlt: "Pareja brindando con vino entre viñedos",
@@ -249,6 +259,8 @@ export const es = {
       {
         id: "ensenada",
         label: "Vivo en Ensenada",
+        kicker: "Vivo en",
+        city: "Ensenada",
         tags: ["Patrimonio", "Para vivir o rentar"],
         image: "/img/bedroom-family.jpg",
         imageAlt: "Madre e hijo en la recámara de su casa nueva",

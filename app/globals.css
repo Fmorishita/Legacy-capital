@@ -298,10 +298,10 @@
   55%,
   100% {
     box-shadow: 0 0 0 0 rgb(197 165 100 / 0);
-    border-color: var(--line-strong);
+    border-color: transparent;
   }
   12% {
-    box-shadow: 0 0 0 4px rgb(197 165 100 / 0.45);
+    box-shadow: 0 0 0 5px rgb(197 165 100 / 0.45);
     border-color: #c5a564;
   }
   30% {

@@ -160,6 +160,8 @@ export const en: Dict = {
       {
         id: "california",
         label: "I live in California",
+        kicker: "I live in",
+        city: "California",
         tags: ["Second home", "Investment"],
         image: "/img/street-aerial-sunset.jpg",
         imageAlt: "Homes with roof gardens facing the ocean at sunset",
@@ -178,6 +180,8 @@ export const en: Dict = {
       {
         id: "mexicoamericano",
         label: "I'm Mexican-American",
+        kicker: "I'm",
+        city: "Mexican-American",
         tags: ["Legacy", "Second home"],
         image: "/img/couple-retire.jpg",
         imageAlt: "Couple embracing by the ocean at sunset",
@@ -196,6 +200,8 @@ export const en: Dict = {
       {
         id: "monterrey",
         label: "I live in Monterrey",
+        kicker: "I live in",
+        city: "Monterrey",
         tags: ["Second home", "Investment"],
         image: "/img/facade-dusk.jpg",
         imageAlt: "Home facade with a roof garden at sunset",
@@ -214,6 +220,8 @@ export const en: Dict = {
       {
         id: "cdmx",
         label: "I live in Mexico City",
+        kicker: "I live in",
+        city: "Mexico City",
         tags: ["Retreat", "Investment"],
         image: "/img/sunset-ocean.jpg",
         imageAlt: "Person walking into the ocean at sunset",
@@ -232,6 +240,8 @@ export const en: Dict = {
       {
         id: "guadalajara",
         label: "I live in Guadalajara",
+        kicker: "I live in",
+        city: "Guadalajara",
         tags: ["Second home", "Diversification"],
         image: "/img/wine-couple.jpg",
         imageAlt: "Couple toasting with wine among the vineyards",
@@ -250,6 +260,8 @@ export const en: Dict = {
       {
         id: "ensenada",
         label: "I live in Ensenada",
+        kicker: "I live in",
+        city: "Ensenada",
         tags: ["Wealth building", "Live or rent"],
         image: "/img/bedroom-family.jpg",
         imageAlt: "Mother and son in the bedroom of their new home",

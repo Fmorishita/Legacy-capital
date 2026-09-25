@@ -15,6 +15,7 @@ export function Personas({ t, label }: { t: Dict["personas"]; label: string }) {
   // Hasta que la persona elige un perfil, los botones laten en secuencia para invitar a tocarlos
   const [touched, setTouched] = useState(false);
   const tabs = useRef<(HTMLButtonElement | null)[]>([]);
+  const panel = useRef<HTMLDivElement>(null);
   const { openLead } = useLead();
   const p = t.items[active];
 
@@ -23,7 +24,16 @@ export function Personas({ t, label }: { t: Dict["personas"]; label: string }) {
     setTouched(true);
     trackEvent("persona_select", { profile: t.items[i].id });
     if (focus) tabs.current[i]?.focus();
-    tabs.current[i]?.scrollIntoView({ block: "nearest", inline: "nearest", behavior: "smooth" });
+  };
+
+  // En celular el caso queda debajo de la cuadrícula: lo acercamos al tocar un perfil
+  const pick = (i: number) => {
+    select(i);
+    const el = panel.current;
+    if (!el || window.matchMedia("(min-width: 1024px)").matches) return;
+    const top = el.getBoundingClientRect().top + window.scrollY - 96;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top, behavior: reduce ? "auto" : "smooth" });
   };
 
   const onKey = (e: React.KeyboardEvent) => {
@@ -47,16 +57,17 @@ export function Personas({ t, label }: { t: Dict["personas"]; label: string }) {
           <p className="mt-6 max-w-[52ch] text-lg leading-relaxed text-ink-soft">{t.body}</p>
         </Reveal>
 
-        <Reveal delay={0.08} className="-mx-5 mt-12 md:mx-0">
-          <p className="flex items-center gap-2 px-5 text-sm font-semibold text-gold-ink md:px-0">
+        <Reveal delay={0.08} className="mt-12">
+          <p className="flex items-center gap-2 text-sm font-semibold text-gold-ink">
             <HandTap className="size-5 animate-[tap-hint_1.6s_ease-in-out_infinite]" weight="duotone" aria-hidden />
             {t.hint}
           </p>
+          {/* Cuadrícula: todos los perfiles visibles a la vez, también en celular */}
           <div
             role="tablist"
             aria-label={label}
             onKeyDown={onKey}
-            className="no-scrollbar mt-4 flex gap-2.5 overflow-x-auto px-5 py-2 md:flex-wrap md:px-0"
+            className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6"
           >
             {t.items.map((item, i) => (
               <button
@@ -68,24 +79,39 @@ export function Personas({ t, label }: { t: Dict["personas"]; label: string }) {
                 id={`persona-tab-${item.id}`}
                 aria-selected={active === i}
                 aria-controls="persona-panel"
+                aria-label={item.label}
                 tabIndex={active === i ? 0 : -1}
-                onClick={() => select(i)}
+                onClick={() => pick(i)}
                 data-active={active === i}
                 style={{ animationDelay: `${i * 0.35}s` }}
-                className={`persona-tab group flex shrink-0 items-center gap-2.5 whitespace-nowrap rounded-full border py-1.5 pl-1.5 pr-4 text-[0.95rem] font-medium transition duration-300 hover:-translate-y-0.5 hover:border-gold-500 hover:shadow-lg ${
-                  active === i ? "border-ink bg-ink text-bg shadow-lg" : "border-line-strong bg-surface text-ink"
-                } ${!touched && active !== i ? "persona-tab--pulse" : ""}`}
+                className={`persona-tab group relative aspect-[16/11] overflow-hidden rounded-2xl border-2 text-left transition duration-300 hover:-translate-y-0.5 hover:shadow-lg lg:aspect-[4/3] ${
+                  active === i ? "border-gold-500 shadow-lg" : "border-transparent"
+                } ${!touched && active !== i ? "persona-tab--pulse" : ""} ${touched && active !== i ? "opacity-75 hover:opacity-100" : ""}`}
               >
-                <span className="relative size-9 shrink-0 overflow-hidden rounded-full">
-                  <Image src={item.image} alt="" fill sizes="36px" className="object-cover transition duration-500 group-hover:scale-110" />
+                <Image
+                  src={item.image}
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 16vw, (min-width: 640px) 33vw, 50vw"
+                  className="object-cover object-[50%_30%] transition duration-700 group-hover:scale-110"
+                />
+                <span aria-hidden className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/35 to-navy-950/5" />
+                {active === i && (
+                  <span aria-hidden className="absolute right-2 top-2 grid size-6 place-items-center rounded-full bg-gold-500 text-navy-900">
+                    <Check className="size-3.5" weight="bold" />
+                  </span>
+                )}
+                <span aria-hidden className="absolute inset-x-0 bottom-0 p-3">
+                  <span className="block text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-cream-100/75">{item.kicker}</span>
+                  <span className="mt-0.5 block text-[0.95rem] font-semibold leading-tight text-cream-100 sm:text-base">{item.city}</span>
                 </span>
-                {item.label}
               </button>
             ))}
           </div>
         </Reveal>
 
         <div
+          ref={panel}
           id="persona-panel"
           role="tabpanel"
           aria-labelledby={`persona-tab-${p.id}`}

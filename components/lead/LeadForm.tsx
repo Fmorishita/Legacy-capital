@@ -8,11 +8,13 @@ import { readAttribution } from "@/lib/attribution";
 import { trackEvent } from "@/lib/track";
 import { waLink, type Lang } from "@/lib/site";
 
-export type Interest = "2R" | "3R" | "inversion" | "explorando";
+export type Interest = "2R" | "3R" | "inversion" | "segunda_casa" | "vivir" | "explorando";
+
+export type Perfil = "ensenada" | "california" | "mexicoamericano" | "monterrey" | "cdmx" | "guadalajara";
 
 export type LeadDefaults = {
   interes?: Interest;
-  lote?: number;
+  perfil?: Perfil;
   esquema_pago?: "financiado" | "contado";
   modo_visita?: "presencial" | "videollamada";
 };
@@ -75,12 +77,9 @@ export function LeadForm({
   const interestLabel = t.interests.find((i) => i.value === interes)?.label;
   const firstName = name.trim().split(/\s+/)[0] || "";
 
-  const waMessage = (() => {
-    const base = t.waMessage
-      .replace("{name}", name.trim() || "-")
-      .replace("{interest}", interestLabel || "Punta Pacífico");
-    return defaults?.lote ? `${base} (${lang === "en" ? "Home" : "Casa"} ${defaults.lote})` : base;
-  })();
+  const waMessage = t.waMessage
+    .replace("{name}", name.trim() || "-")
+    .replace("{interest}", interestLabel ? ` (${interestLabel.toLowerCase()})` : "");
 
   function validate() {
     const next: typeof errors = {};
@@ -105,7 +104,7 @@ export function LeadForm({
           telefono: `${cc} ${digits}`,
           email: email.trim(),
           interes,
-          lote: defaults?.lote,
+          perfil: defaults?.perfil,
           origen: origin,
           mensaje: mensaje.trim(),
           modo_visita: modo,
@@ -125,7 +124,7 @@ export function LeadForm({
         // Ya dejó sus datos: no mostrar el aviso de salida en esta sesión
         sessionStorage.setItem("lc_exit", "1");
       } catch {}
-      trackEvent("lead", { origin, interest: interes, lot: defaults?.lote, lang });
+      trackEvent("lead", { origin, interest: interes, profile: defaults?.perfil, lang });
     } catch {
       setStatus("idle");
       setErrors({ form: t.errors.generic });

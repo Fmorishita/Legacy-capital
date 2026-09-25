@@ -9,7 +9,7 @@ import { captureAttribution } from "@/lib/attribution";
 import { trackEvent } from "@/lib/track";
 import { LeadForm, type LeadDefaults } from "./LeadForm";
 
-export type LeadKind = "prices" | "visit" | "lot" | "plan" | "model";
+export type LeadKind = "prices" | "visit" | "plan" | "model" | "study" | "floorplan";
 
 export type LeadRequest = LeadDefaults & {
   kind: LeadKind;
@@ -63,20 +63,18 @@ export function LeadProvider({ t, lang, privacyHref, children }: Props) {
   );
 }
 
-function titleFor(req: LeadRequest, t: Props["t"], lang: Lang) {
+function titleFor(req: LeadRequest, t: Props["t"]) {
   if (req.title) return req.title;
   const d = t.dialog;
   switch (req.kind) {
     case "visit":
       return d.visitTitle;
-    case "lot":
-      return d.lotTitle.replace("{lot}", String(req.lote ?? ""));
     case "plan":
       return d.planTitle;
-    case "model": {
-      const label = t.form.interests.find((i) => i.value === req.interes)?.label ?? "";
-      return d.modelTitle.replace("{model}", lang === "en" ? label : label.toLowerCase());
-    }
+    case "study":
+      return d.studyTitle;
+    case "floorplan":
+      return d.floorplanTitle;
     default:
       return d.pricesTitle;
   }
@@ -86,10 +84,12 @@ function submitFor(req: LeadRequest, t: Props["t"]) {
   switch (req.kind) {
     case "visit":
       return t.form.submitVisit;
-    case "lot":
-      return t.form.submitLot;
     case "plan":
       return t.form.submitPlan;
+    case "study":
+      return t.form.submitStudy;
+    case "floorplan":
+      return t.form.submitFloorplan;
     default:
       return t.form.submit;
   }
@@ -174,7 +174,7 @@ function LeadDialog({
         <div className="mb-6 pr-10">
           <img src="/brand/crest-64.png" alt="" width={32} height={32} className="mb-4 h-10 w-auto" />
           <h2 id={titleId} className="display text-[2rem] leading-[1.05]">
-            {titleFor(req, t, lang)}
+            {titleFor(req, t)}
           </h2>
           {!isVisit && <p className="mt-2 text-ink-soft">{req.subtitle ?? t.quickForm.subtitle}</p>}
         </div>
@@ -187,7 +187,7 @@ function LeadDialog({
           privacyHref={privacyHref}
           autoFocus
           fields={{
-            interest: req.kind === "prices" || req.kind === "visit",
+            interest: (req.kind === "prices" || req.kind === "visit") && !req.interes,
             visit: isVisit,
             email: isVisit,
           }}

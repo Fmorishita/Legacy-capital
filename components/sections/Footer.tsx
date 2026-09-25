@@ -45,7 +45,7 @@ export function Footer({
             </ul>
           </div>
           <nav aria-label={navLabel}>
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cream-100/60">Punta Pacífico</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cream-100/60">{t.explore}</p>
             <ul className="mt-5 grid grid-cols-2 gap-3 text-sm">
               {nav.links.map((l) => (
                 <li key={l.href}>

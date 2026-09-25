@@ -291,3 +291,13 @@
     backdrop-filter: none;
   }
 }
+
+/* Barra de progreso del carrusel de equipamiento */
+@keyframes slide-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}

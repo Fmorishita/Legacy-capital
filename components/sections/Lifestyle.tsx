@@ -43,8 +43,8 @@ function ReelVideo({ label, pauseLabel }: { label: string; pauseLabel: string })
       <video
         ref={ref}
         className="absolute inset-0 h-full w-full object-cover"
-        src="/video/punta-pacifico.mp4"
-        poster="/video/punta-pacifico-poster.jpg"
+        src="/video/estilo-de-vida.mp4"
+        poster="/video/estilo-de-vida-poster.jpg"
         muted
         loop
         playsInline

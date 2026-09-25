@@ -10,9 +10,10 @@ import { Models } from "@/components/sections/Models";
 import { Included } from "@/components/sections/Included";
 import { Lifestyle } from "@/components/sections/Lifestyle";
 import { Amenities } from "@/components/sections/Amenities";
-import { Availability } from "@/components/sections/Availability";
 import { Payments } from "@/components/sections/Payments";
 import { Invest } from "@/components/sections/Invest";
+import { StudyMagnet } from "@/components/sections/StudyMagnet";
+import { Personas } from "@/components/sections/Personas";
 import { Ensenada } from "@/components/sections/Ensenada";
 import { Trust } from "@/components/sections/Trust";
 import { Advisor } from "@/components/sections/Advisor";
@@ -31,7 +32,7 @@ function jsonLd(t: Dict, lang: Lang) {
       url,
       image: `${site.url}/brand/crest-512.png`,
       logo: `${site.url}/brand/crest-512.png`,
-      slogan: t.footer.tagline,
+      slogan: "Building wealth for generations",
       telephone: site.advisor.phoneDisplay,
       areaServed: "Ensenada, Baja California, México",
       address: { "@type": "PostalAddress", addressLocality: "Ensenada", addressRegion: "Baja California", addressCountry: "MX" },
@@ -40,7 +41,7 @@ function jsonLd(t: Dict, lang: Lang) {
     {
       "@context": "https://schema.org",
       "@type": "Residence",
-      name: "Punta Pacífico",
+      name: t.meta.title.split(" | ")[0],
       description: t.meta.description,
       url,
       image: [`${site.url}/img/hero-sunset.jpg`, `${site.url}/img/aerial-homes.jpg`, `${site.url}/img/roof-sunset.jpg`],
@@ -51,8 +52,8 @@ function jsonLd(t: Dict, lang: Lang) {
         addressCountry: "MX",
       },
       containsPlace: [
-        { "@type": "SingleFamilyResidence", name: "Punta Pacífico 2R", numberOfRooms: 2, floorSize: { "@type": "QuantitativeValue", value: 178.06, unitCode: "MTK" } },
-        { "@type": "SingleFamilyResidence", name: "Punta Pacífico 3R", numberOfRooms: 3, floorSize: { "@type": "QuantitativeValue", value: 195.19, unitCode: "MTK" } },
+        { "@type": "SingleFamilyResidence", name: t.models.tabs["2R"].label, numberOfRooms: 2, floorSize: { "@type": "QuantitativeValue", value: 178.06, unitCode: "MTK" } },
+        { "@type": "SingleFamilyResidence", name: t.models.tabs["3R"].label, numberOfRooms: 3, floorSize: { "@type": "QuantitativeValue", value: 195.19, unitCode: "MTK" } },
       ],
     },
     {
@@ -83,18 +84,19 @@ export function Landing({ t, lang }: { t: Dict; lang: Lang }) {
       <main id="contenido">
         <Hero t={{ hero: t.hero, quickForm: t.quickForm, form: t.form }} lang={lang} privacyHref={privacyHref} />
         <Facts t={t.facts} label={t.a11y.facts} />
+        <Personas t={t.personas} label={t.a11y.personas} />
+        <Advisor t={t.advisor} waGeneric={t.form.waGeneric} closeLabel={t.a11y.close} />
         <Project t={t.project} />
         <RoofToggle t={t.roof} />
         <Models t={t.models} />
-        <Included t={t.included} />
+        <Included t={t.included} label={t.a11y.slides} />
         <Lifestyle t={t.lifestyle} />
         <Amenities t={t.amenities} />
-        <Availability t={t.availability} lang={lang} filtersLabel={t.a11y.filters} />
-        <Payments t={t.payments} models={t.models.tabs} lang={lang} />
         <Invest t={t.invest} lang={lang} />
-        <Ensenada t={t.ensenada} />
+        <StudyMagnet t={t.study} form={t.form} lang={lang} privacyHref={privacyHref} />
+        <Payments t={t.payments} models={t.models.tabs} lang={lang} />
         <Trust t={t.trust} />
-        <Advisor t={t.advisor} waGeneric={t.form.waGeneric} />
+        <Ensenada t={t.ensenada} />
         <Faq t={t.faq} />
         <FinalCta t={t.finalCta} form={t.form} whatsappLabel={t.hero.ctaSecondary} lang={lang} privacyHref={privacyHref} />
       </main>

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
-import { Check, ArrowRight } from "@phosphor-icons/react";
+import { Check, ArrowRight, LockSimple } from "@phosphor-icons/react";
 import type { Dict } from "@/lib/i18n/es";
 import { Reveal } from "@/components/ui/Reveal";
 import { useLead } from "@/components/lead/LeadProvider";
@@ -79,10 +79,26 @@ export function Models({ t }: { t: Dict["models"] }) {
                   alt={`${view === "render" ? t.renderAlt : t.planAlt} ${m.label}`}
                   fill
                   sizes="(min-width: 1024px) 60vw, 100vw"
-                  className={view === "render" ? "object-cover" : "object-contain p-4 sm:p-8"}
+                  className={view === "render" ? "object-cover" : "scale-105 object-contain p-4 blur-[6px] sm:p-8"}
                 />
               </motion.div>
             </AnimatePresence>
+            {view === "plan" && (
+              // La planta se muestra desenfocada: los planos completos se envían por WhatsApp
+              <div className="absolute inset-0 grid place-items-center bg-surface/35 p-6 text-center">
+                <div className="max-w-xs rounded-2xl border border-line bg-surface/95 p-6 shadow-xl">
+                  <LockSimple className="mx-auto size-6 text-gold-ink" weight="bold" aria-hidden />
+                  <p className="mt-3 font-semibold leading-snug">{t.planLock}</p>
+                  <button
+                    type="button"
+                    className="btn btn-primary mt-4 w-full"
+                    onClick={() => openLead({ kind: "floorplan", interes: model, origin: `planos-${model}` })}
+                  >
+                    {t.planCta}
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
 
           <div className="flex flex-col">
@@ -126,7 +142,9 @@ export function Models({ t }: { t: Dict["models"] }) {
               <button
                 type="button"
                 className="btn btn-primary mt-4 w-full"
-                onClick={() => openLead({ kind: "model", interes: model, origin: `modelo-${model}` })}
+                onClick={() =>
+                  openLead({ kind: "model", interes: model, origin: `modelo-${model}`, title: t.ctaTitle.replace("{model}", m.label) })
+                }
               >
                 {t.cta}
                 <ArrowRight className="size-4" weight="bold" aria-hidden />

@@ -20,7 +20,7 @@ export const privacy: { es: PrivacyDoc; en: PrivacyDoc } = {
       {
         heading: "Responsable",
         paragraphs: [
-          "Legacy Capital Real Estate (“Legacy Capital” o el “Responsable”) es una firma de asesoría y comercialización inmobiliaria con domicilio en Ensenada, Baja California, México, dirigida por Fran Morishita, director general y asesor comercial, quien es también la persona designada para atender los asuntos relacionados con sus datos personales. Punta Pacífico es un desarrollo de SISOL; Legacy Capital participa como comercializador y es responsable de los datos que usted proporciona en este sitio.",
+          "Legacy Capital Real Estate (“Legacy Capital” o el “Responsable”) es una firma de asesoría y comercialización inmobiliaria con domicilio en Ensenada, Baja California, México, dirigida por Fran Morishita, director general y asesor comercial, quien es también la persona designada para atender los asuntos relacionados con sus datos personales. Legacy Capital participa como comercializador de los desarrollos que presenta y es responsable de los datos que usted proporciona en este sitio.",
           "Puede contactarnos por WhatsApp al +52 646 256 3006 o por escrito dirigido al Responsable; le responderemos por el mismo medio.",
         ],
       },
@@ -29,7 +29,7 @@ export const privacy: { es: PrivacyDoc; en: PrivacyDoc } = {
         paragraphs: ["Solo tratamos los datos que usted escribe o selecciona en nuestros formularios y cierta información técnica de su visita:"],
         bullets: [
           "Contacto: nombre, número de WhatsApp o teléfono y, si lo desea, correo electrónico.",
-          "Su solicitud (opcional): interés (2 o 3 recámaras, o inversión), número de lote, modalidad y fecha preferida de visita, y su mensaje.",
+          "Su solicitud (opcional): interés (segunda casa, inversión, vivienda o modelo de 2 o 3 recámaras), perfil de comprador que elija en el sitio (ciudad u origen), modalidad y fecha preferida de visita, y su mensaje.",
           "Preguntas de perfil (opcionales): plazo de compra, forma de pago prevista, uso previsto del inmueble y si usted es asesor inmobiliario.",
           "Información técnica: idioma, parámetros de campaña (UTM), identificadores de clic de anuncios (gclid, fbclid), página de entrada, sitio de procedencia y navegador (user-agent). Su dirección IP se usa de forma transitoria para prevenir abusos y no se guarda en nuestra base de contactos.",
         ],
@@ -46,7 +46,7 @@ export const privacy: { es: PrivacyDoc; en: PrivacyDoc } = {
         paragraphs: ["Usamos sus datos para las siguientes finalidades, necesarias para atender su solicitud:"],
         bullets: [
           "Responder su solicitud y comunicarnos con usted por WhatsApp, teléfono o correo electrónico.",
-          "Enviarle listas de precios, planos, disponibilidad y esquemas de pago de Punta Pacífico.",
+          "Enviarle listas de precios, planos, esquemas de pago y estudios de rentabilidad de los desarrollos que comercializamos.",
           "Agendar y confirmar visitas al desarrollo o videollamadas.",
           "Dar seguimiento a su proceso de compra, hasta el apartado y la formalización de la operación.",
           "Mantener la seguridad del sitio y prevenir envíos abusivos.",
@@ -77,7 +77,7 @@ export const privacy: { es: PrivacyDoc; en: PrivacyDoc } = {
           "No vendemos sus datos ni realizamos transferencias que requieran su consentimiento. Solo los compartiremos en los siguientes casos, que el artículo 36 de la Ley permite sin su consentimiento, y los receptores asumirán las mismas obligaciones que el Responsable:",
         ],
         bullets: [
-          "Con SISOL, desarrollador de Punta Pacífico, y con Etérea Operación y Activos, S.A.P.I. de C.V. (grupo INVEX), promitente vendedora, únicamente si usted decide apartar o comprar una vivienda, para formalizar la operación.",
+          "Con el desarrollador y con la sociedad promitente vendedora del desarrollo que usted elija, únicamente si decide apartar o comprar una vivienda, para formalizar la operación. Le informaremos su denominación antes de realizar la transferencia.",
           "Con la notaría pública que intervenga en la escrituración.",
           "Con autoridades competentes, cuando la ley o un mandato fundado y motivado lo exija.",
         ],
@@ -146,7 +146,7 @@ export const privacy: { es: PrivacyDoc; en: PrivacyDoc } = {
       {
         heading: "Data controller",
         paragraphs: [
-          "Legacy Capital Real Estate (“Legacy Capital” or the “Controller”) is a real estate advisory and brokerage firm located in Ensenada, Baja California, Mexico, led by Fran Morishita, CEO and sales advisor, who is also the person designated to handle matters related to your personal data. Punta Pacífico is a development by SISOL; Legacy Capital acts as sales agent and is the controller of the data you provide on this website.",
+          "Legacy Capital Real Estate (“Legacy Capital” or the “Controller”) is a real estate advisory and brokerage firm located in Ensenada, Baja California, Mexico, led by Fran Morishita, CEO and sales advisor, who is also the person designated to handle matters related to your personal data. Legacy Capital acts as sales agent for the developments it presents and is the controller of the data you provide on this website.",
           "You can contact us via WhatsApp at +52 646 256 3006 or in writing addressed to the Controller; we will reply through the same channel.",
         ],
       },
@@ -155,7 +155,7 @@ export const privacy: { es: PrivacyDoc; en: PrivacyDoc } = {
         paragraphs: ["We only process the data you type or select in our forms and some technical information about your visit:"],
         bullets: [
           "Contact: name, WhatsApp or phone number and, if you wish, email address.",
-          "Your request (optional): interest (2 or 3 bedrooms, or investment), lot number, preferred visit mode and date, and your message.",
+          "Your request (optional): interest (second home, investment, primary residence or a 2- or 3-bedroom model), the buyer profile you choose on the site (city or origin), preferred visit mode and date, and your message.",
           "Profile questions (optional): purchase timeline, intended payment method, intended use of the home and whether you are a real estate agent.",
           "Technical information: language, campaign parameters (UTM), ad click identifiers (gclid, fbclid), landing page, referring site and browser (user-agent). Your IP address is used transiently to prevent abuse and is not stored in our contact database.",
         ],
@@ -172,7 +172,7 @@ export const privacy: { es: PrivacyDoc; en: PrivacyDoc } = {
         paragraphs: ["We use your data for the following purposes, which are necessary to handle your request:"],
         bullets: [
           "Responding to your request and contacting you via WhatsApp, phone or email.",
-          "Sending you Punta Pacífico price lists, floor plans, availability and payment schemes.",
+          "Sending you price lists, floor plans, payment schemes and rental return studies for the developments we market.",
           "Scheduling and confirming site visits or video calls.",
           "Following up on your purchase process, through reservation and closing.",
           "Keeping the website secure and preventing abusive submissions.",
@@ -203,7 +203,7 @@ export const privacy: { es: PrivacyDoc; en: PrivacyDoc } = {
           "We do not sell your data or make transfers that require your consent. We will only share it in the following cases, which Article 36 of the Law allows without your consent, and recipients will assume the same obligations as the Controller:",
         ],
         bullets: [
-          "With SISOL, developer of Punta Pacífico, and with Etérea Operación y Activos, S.A.P.I. de C.V. (INVEX group), the promising seller, only if you decide to reserve or buy a home, to formalize the transaction.",
+          "With the developer and the promising seller of the development you choose, only if you decide to reserve or buy a home, to formalize the transaction. We will tell you their legal names before making the transfer.",
           "With the notary public handling the deed.",
           "With competent authorities, when required by law or by a duly grounded order.",
         ],

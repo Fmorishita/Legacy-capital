@@ -2,22 +2,17 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { motion } from "motion/react";
-import { ArrowRight, Info } from "@phosphor-icons/react";
+import { ArrowRight, Info, LockSimple } from "@phosphor-icons/react";
 import type { Dict } from "@/lib/i18n/es";
 import { Reveal } from "@/components/ui/Reveal";
-import { AnimatedNumber } from "@/components/ui/AnimatedNumber";
 import { useLead } from "@/components/lead/LeadProvider";
 import { site } from "@/lib/site";
 
-// Precios y mensualidades publicados en el brochure de septiembre 2026.
-// La mensualidad del brochure equivale al 10% diferido entre 16 pagos, dentro de un plazo de hasta 19 meses.
-const BASE = {
-  "2R": { price: 3_989_325, monthly: 24_933 },
-  "3R": { price: 4_360_053, monthly: 27_250 },
-} as const;
-const PAYMENTS = 16;
+// Mensualidad del brochure de septiembre 2026 (10% diferido). Es el único monto que se muestra:
+// la corrida completa se envía por WhatsApp para que el prospecto deje sus datos.
+const MONTHLY = { "2R": 24_933, "3R": 27_250 } as const;
 
-type Model = keyof typeof BASE;
+type Model = keyof typeof MONTHLY;
 type Scheme = "financiado" | "contado";
 
 export function Payments({ t, models, lang }: { t: Dict["payments"]; models: Dict["models"]["tabs"]; lang: "es" | "en" }) {
@@ -26,24 +21,19 @@ export function Payments({ t, models, lang }: { t: Dict["payments"]; models: Dic
   const [promoActive, setPromoActive] = useState(false);
   useEffect(() => setPromoActive(Date.now() < new Date(site.promoEndsAt).getTime()), []);
   const { openLead } = useLead();
-  const money = useCallback(
-    (n: number) => "$" + Math.floor(n + 1e-6).toLocaleString(lang === "en" ? "en-US" : "es-MX"),
-    [lang],
-  );
+  const money = useCallback((n: number) => "$" + n.toLocaleString(lang === "en" ? "en-US" : "es-MX"), [lang]);
 
-  const { price, monthly } = BASE[model];
-  const final = scheme === "contado" ? price * 0.95 : price;
   const parts =
     scheme === "financiado"
       ? [
-          { key: "down", label: `${t.rows.down} (10%)`, pct: 10, amount: price * 0.1 },
-          { key: "deferred", label: `${t.rows.deferred} (10%)`, pct: 10, amount: price * 0.1, monthly },
-          { key: "deed", label: `${t.rows.deed} (80%)`, pct: 80, amount: price * 0.8 },
+          { key: "down", label: `${t.rows.down} (10%)`, pct: 10 },
+          { key: "deferred", label: `${t.rows.deferred} (10%)`, pct: 10, monthly: MONTHLY[model] },
+          { key: "deed", label: `${t.rows.deed} (80%)`, pct: 80 },
         ]
       : [
-          { key: "down", label: `${t.rows.down} (40%)`, pct: 40, amount: final * 0.4 },
-          { key: "deferred", label: `${t.rows.deferred19} (40%)`, pct: 40, amount: final * 0.4 },
-          { key: "deed", label: `${t.rows.deed} (20%)`, pct: 20, amount: final * 0.2 },
+          { key: "down", label: `${t.rows.down} (40%)`, pct: 40 },
+          { key: "deferred", label: `${t.rows.deferred19} (40%)`, pct: 40 },
+          { key: "deed", label: `${t.rows.deed} (20%)`, pct: 20 },
         ];
   const tones = ["bg-gold-500", "bg-gold-300", "bg-navy-800 dark:bg-cream-100/80"];
 
@@ -57,14 +47,12 @@ export function Payments({ t, models, lang }: { t: Dict["payments"]; models: Dic
           <p className="mt-6 max-w-[44ch] text-lg leading-relaxed text-ink-soft">{t.body}</p>
 
           <div className="mt-10 grid gap-6">
-            <div>
-              <div className="flex flex-wrap gap-2" role="group" aria-label={lang === "en" ? "Model" : "Modelo"}>
-                {(Object.keys(BASE) as Model[]).map((m) => (
-                  <button key={m} type="button" className="chip" aria-pressed={model === m} onClick={() => setModel(m)}>
-                    {models[m].label}
-                  </button>
-                ))}
-              </div>
+            <div className="flex flex-wrap gap-2" role="group" aria-label={lang === "en" ? "Model" : "Modelo"}>
+              {(Object.keys(MONTHLY) as Model[]).map((m) => (
+                <button key={m} type="button" className="chip" aria-pressed={model === m} onClick={() => setModel(m)}>
+                  {models[m].label}
+                </button>
+              ))}
             </div>
             <div className="grid gap-3" role="radiogroup" aria-label={lang === "en" ? "Payment scheme" : "Esquema de pago"}>
               {(Object.keys(t.schemes) as Scheme[]).map((s) => (
@@ -97,19 +85,18 @@ export function Payments({ t, models, lang }: { t: Dict["payments"]; models: Dic
         <Reveal delay={0.1} className="rounded-2xl border border-line bg-surface p-6 sm:p-10">
           <div className="flex flex-wrap items-end justify-between gap-4 border-b border-line pb-6">
             <div>
-              <p className="text-sm text-ink-soft">{scheme === "contado" ? t.rows.finalPrice : t.rows.price}</p>
-              <AnimatedNumber
-                value={final}
-                format={money}
-                className="display mt-1 block text-[2.8rem] leading-none tabular-nums sm:text-6xl"
-              />
+              <p className="text-sm text-ink-soft">{t.rows.price}</p>
+              <p className="display mt-1 text-[2.6rem] leading-none sm:text-[3.4rem]">{models[model].price}</p>
             </div>
-            {scheme === "contado" && (
-              <p className="text-sm text-ink-soft">
-                <span className="line-through">{money(price)}</span>
-                <span className="ml-2 font-semibold text-gold-ink">
-                  {t.rows.discount} {money(price - final)}
-                </span>
+            {scheme === "contado" ? (
+              <p className="max-w-[18ch] text-sm leading-snug text-ink-soft sm:text-right">
+                <span className="display block text-[2rem] leading-none text-gold-ink">5%</span>
+                {t.discountHook}
+              </p>
+            ) : (
+              <p className="text-sm leading-snug text-ink-soft sm:text-right">
+                {t.monthlyHook}
+                <span className="display block text-[2rem] leading-none text-gold-ink tabular-nums">{money(MONTHLY[model])}</span>
               </p>
             )}
           </div>
@@ -127,41 +114,46 @@ export function Payments({ t, models, lang }: { t: Dict["payments"]; models: Dic
             ))}
           </div>
 
-          <dl className="mt-8 grid gap-6">
+          <dl className="mt-8 grid gap-5">
             {parts.map((p, i) => (
-              <div key={p.key} className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+              <div key={p.key} className="flex items-center justify-between gap-4">
                 <dt className="flex items-center gap-3 text-ink-soft">
                   <span className={`size-2.5 rounded-full ${tones[i]}`} aria-hidden />
                   {p.label}
                 </dt>
-                <dd className="text-right">
-                  <AnimatedNumber value={p.amount} format={money} className="font-display text-[1.7rem] font-semibold tabular-nums" />
-                  {"monthly" in p && p.monthly ? (
-                    <span className="block text-sm text-ink-soft">
-                      {t.monthlyNote.replace("{n}", String(PAYMENTS))}{" "}
-                      <AnimatedNumber value={p.monthly} format={money} className="font-semibold text-ink" />
-                    </span>
-                  ) : null}
+                <dd className="flex items-center gap-2">
+                  <span aria-hidden className="select-none font-display text-[1.1rem] font-semibold blur-[7px] sm:text-[1.5rem]">
+                    $000,000
+                  </span>
+                  <LockSimple className="size-4 text-gold-ink" weight="bold" aria-hidden />
+                  <span className="sr-only">{t.lockTitle}</span>
                 </dd>
               </div>
             ))}
           </dl>
 
+          <div className="mt-8 rounded-xl bg-bg-alt p-5">
+            <p className="flex items-center gap-2 font-semibold">
+              <LockSimple className="size-4 text-gold-ink" weight="bold" aria-hidden />
+              {t.lockTitle}
+            </p>
+            <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{t.lockBody}</p>
+            <button
+              type="button"
+              className="btn btn-primary mt-5 w-full"
+              onClick={() => openLead({ kind: "plan", interes: model, esquema_pago: scheme, origin: `corrida-${scheme}` })}
+            >
+              {t.cta}
+              <ArrowRight className="size-4" weight="bold" aria-hidden />
+            </button>
+          </div>
+
           {promoActive && (
-            <p className="mt-8 flex gap-2 rounded-xl bg-bg-alt p-4 text-sm leading-relaxed">
+            <p className="mt-5 flex gap-2 text-sm leading-relaxed">
               <Info className="mt-0.5 size-4 shrink-0 text-gold-ink" weight="bold" aria-hidden />
               {t.promo}
             </p>
           )}
-
-          <button
-            type="button"
-            className="btn btn-primary mt-6 w-full"
-            onClick={() => openLead({ kind: "plan", interes: model, esquema_pago: scheme, origin: `corrida-${scheme}` })}
-          >
-            {t.cta}
-            <ArrowRight className="size-4" weight="bold" aria-hidden />
-          </button>
           <p className="mt-4 text-xs leading-relaxed text-ink-soft">{t.disclaimer}</p>
         </Reveal>
       </div>

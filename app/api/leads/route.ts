@@ -26,8 +26,8 @@ const leadSchema = z.object({
     .max(320)
     .optional()
     .transform((v) => (v && v.length <= 160 && z.email().safeParse(v).success ? v : undefined)),
-  interes: z.enum(["2R", "3R", "inversion", "explorando"]).optional(),
-  lote: z.number().int().min(1).max(500).optional(),
+  interes: z.enum(["2R", "3R", "inversion", "segunda_casa", "vivir", "explorando"]).optional(),
+  perfil: z.enum(["ensenada", "california", "mexicoamericano", "monterrey", "cdmx", "guadalajara"]).optional(),
   origen: z
     .string()
     .trim()
@@ -65,7 +65,7 @@ const qualifySchema = z.object({
   token: z.uuid(),
   horizonte_compra: z.enum(["0-3", "3-6", "6-12", "explorando"]).optional(),
   forma_pago: z.enum(["contado", "credito", "infonavit", "usd"]).optional(),
-  uso: z.enum(["vivir", "retiro", "renta", "broker"]).optional(),
+  uso: z.enum(["segunda_casa", "renta", "vivir", "retiro", "broker"]).optional(),
 });
 
 // Límite best-effort por instancia: 6 envíos por IP cada 10 minutos

@@ -5,10 +5,11 @@ import Image from "next/image";
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { WhatsappLogo } from "@phosphor-icons/react";
 import type { Dict } from "@/lib/i18n/es";
-import { waLink, type Lang } from "@/lib/site";
+import { site, waLink, type Lang } from "@/lib/site";
 import { trackEvent } from "@/lib/track";
 import { useLead } from "@/components/lead/LeadProvider";
 import { LeadForm } from "@/components/lead/LeadForm";
+import { AdvisorAvatar } from "@/components/sections/Advisor";
 
 type Props = {
   t: Pick<Dict, "hero" | "quickForm" | "form">;
@@ -109,6 +110,13 @@ export function Hero({ t, lang, privacyHref }: Props) {
               {t.hero.ctaSecondary}
             </a>
           </motion.div>
+          <motion.p
+            {...enter(0.75)}
+            className="mt-10 flex items-center gap-3 font-caps text-[0.8rem] font-semibold tracking-[0.14em] text-cream-100/75"
+          >
+            <span aria-hidden className="h-px w-8 bg-gold-400" />
+            {t.hero.tagline}
+          </motion.p>
         </div>
 
         <motion.div
@@ -118,6 +126,14 @@ export function Hero({ t, lang, privacyHref }: Props) {
           className="relative rounded-2xl border border-line bg-surface p-6 text-ink shadow-[0_30px_80px_-30px_rgb(var(--shadow)/0.55)] sm:p-8 lg:ml-auto lg:w-full lg:max-w-[27rem]"
           id="precios"
         >
+          <div className="mb-5 flex items-center gap-3 border-b border-line pb-5">
+            <AdvisorAvatar name={site.advisor.name} className="size-11 shrink-0" />
+            <p className="text-sm leading-tight">
+              <span className="block text-ink-soft">{t.quickForm.advisor}</span>
+              <span className="font-semibold">{site.advisor.name}</span>
+              <span className="text-ink-soft"> · CEO, Legacy Capital</span>
+            </p>
+          </div>
           <h2 className="display text-[1.9rem] leading-[1.05]">{t.quickForm.title}</h2>
           <dl className="mt-5 grid divide-y divide-line rounded-xl border border-line sm:grid-cols-2 sm:divide-x sm:divide-y-0">
             {t.quickForm.priceLine.map((p) => (

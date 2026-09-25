@@ -45,12 +45,12 @@ export const en: Dict = {
   },
   hero: {
     eyebrow: "Private pre-sale · Ensenada, Baja California",
-    title: "The Pacific, from your own roof garden.",
+    title: "The Pacific Ocean, from your own roof garden.",
     subtitle:
       "Ocean-view homes in north Ensenada, for your second home or as a vacation rental. From MXN $3.9M.",
     ctaPrimary: "Price list",
     ctaSecondary: "Message on WhatsApp",
-    imageAlt: "Single-level home at sunset with lit windows",
+    imageAlt: "Roof garden with pergola overlooking the Pacific Ocean at sunset",
     tagline: "Building wealth for generations",
   },
   quickForm: {
@@ -89,6 +89,10 @@ export const en: Dict = {
     submitPlan: "Get my payment plan",
     submitStudy: "Send me the study",
     submitFloorplan: "Get floor plans",
+    next: "Continue",
+    skip: "Skip for now",
+    stepOf: "Step {n} of 2",
+    step2Title: "Thanks, {name}. One last step:",
     sending: "Sending",
     consent: "Legacy Capital Real Estate uses your data to send you the information you request and to follow up. See our",
     privacy: "Privacy notice",
@@ -344,7 +348,7 @@ export const en: Dict = {
     items: [
       { title: "Equipped kitchen", text: "Granite countertop, range with oven, and range hood.", image: "/img/cooking.jpg" },
       { title: "AC in bedrooms and living area", text: "Mini-split units in the bedrooms and the living-dining area.", image: "/img/bedroom-master.jpg" },
-      { title: "Smart home", text: "Digital lock, lights and air conditioning controlled from your phone.", image: "/img/smart-phone.jpg" },
+      { title: "Smart home", text: "Digital lock, lights and air conditioning controlled from your phone.", image: "/img/smart-phone.jpg", position: "50% 78%" },
       { title: "Equipped roof garden", text: "Pergola, bar with sink and grill, and a half bath.", image: "/img/pergola.jpg" },
       { title: "Finished bathrooms", text: "Tempered glass shower enclosures and finishes in place.", image: "/img/bathroom.jpg" },
       { title: "Bedrooms with closets", text: "Bedroom closets and ceramic tile floors.", image: "/img/bedroom-secondary.jpg" },
@@ -356,7 +360,7 @@ export const en: Dict = {
     videoLabel: "Play lifestyle video",
     pause: "Pause video",
     tiles: [
-      { image: "/img/rooftop-dinner.jpg", alt: "Dinner on a roof garden facing the ocean at sunset", caption: "Dinners on your roof garden" },
+      { image: "/img/rooftop-dinner.jpg", position: "50% 15%", alt: "Dinner on a roof garden facing the ocean at sunset", caption: "Dinners on your roof garden" },
       { image: "/img/coast-road.jpg", alt: "Ensenada's coastal highway at sunset", caption: "The coast, minutes away" },
       { image: "/img/patio-night.jpg", alt: "Couple on their patio at night", caption: "Quiet nights on your patio" },
       { image: "/img/living-couple.jpg", alt: "Couple in the living room of their home", caption: "Spaces made for staying" },
@@ -429,11 +433,6 @@ export const en: Dict = {
     ],
     formTitle: "Get it on WhatsApp",
     formNote: "Fran sends it as a PDF and answers your questions about the numbers.",
-    switchLabel: "What would you like to get?",
-    options: {
-      study: { label: "Rental return study", caption: "If you plan to rent it out" },
-      brochure: { label: "Full brochure", caption: "If you want it as a second home" },
-    },
     waMessage:
       "Hi Fran, I'm {name}. I'm interested in investing in the ocean-view homes in Ensenada. Could you send me the rental return study?",
     successBody: "Fran Morishita will message you on WhatsApp today with the rental return study.",

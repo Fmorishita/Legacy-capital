@@ -44,12 +44,12 @@ export const es = {
   },
   hero: {
     eyebrow: "Preventa privada · Ensenada, B.C.",
-    title: "El Pacífico, desde tu propio roof garden.",
+    title: "El mar del Pacífico, desde tu propio roof garden.",
     subtitle:
       "Casas con vista al mar en la zona norte de Ensenada, para tu segunda casa o para rentar. Desde $3.9 MDP.",
     ctaPrimary: "Lista de precios",
     ctaSecondary: "Escribir por WhatsApp",
-    imageAlt: "Casa de un nivel al atardecer con ventanales iluminados",
+    imageAlt: "Roof garden con pérgola frente al mar del Pacífico al atardecer",
     tagline: "Building wealth for generations",
   },
   quickForm: {
@@ -88,6 +88,10 @@ export const es = {
     submitPlan: "Recibir mi corrida",
     submitStudy: "Enviarme el estudio",
     submitFloorplan: "Recibir planos",
+    next: "Continuar",
+    skip: "Omitir por ahora",
+    stepOf: "Paso {n} de 2",
+    step2Title: "Gracias, {name}. Un último paso:",
     sending: "Enviando",
     consent: "Legacy Capital Real Estate usa tus datos para enviarte la información que solicitas y darte seguimiento. Consulta nuestro",
     privacy: "Aviso de privacidad",
@@ -343,7 +347,7 @@ export const es = {
     items: [
       { title: "Cocina equipada", text: "Barra de granito, estufa con horno y campana.", image: "/img/cooking.jpg" },
       { title: "Clima en recámaras y sala", text: "Minisplit en recámaras y en sala-comedor.", image: "/img/bedroom-master.jpg" },
-      { title: "Casa inteligente", text: "Cerradura digital, luces y aire acondicionado desde tu celular.", image: "/img/smart-phone.jpg" },
+      { title: "Casa inteligente", text: "Cerradura digital, luces y aire acondicionado desde tu celular.", image: "/img/smart-phone.jpg", position: "50% 78%" },
       { title: "Roof garden equipado", text: "Pérgola, barra con tarja y asador, y medio baño.", image: "/img/pergola.jpg" },
       { title: "Baños terminados", text: "Cancel de cristal templado y acabados listos.", image: "/img/bathroom.jpg" },
       { title: "Recámaras con clóset", text: "Clósets en recámaras y piso de loseta cerámica.", image: "/img/bedroom-secondary.jpg" },
@@ -355,7 +359,7 @@ export const es = {
     videoLabel: "Reproducir video de estilo de vida",
     pause: "Pausar video",
     tiles: [
-      { image: "/img/rooftop-dinner.jpg", alt: "Cena en roof garden frente al mar al atardecer", caption: "Cenas en tu roof garden" },
+      { image: "/img/rooftop-dinner.jpg", position: "50% 15%", alt: "Cena en roof garden frente al mar al atardecer", caption: "Cenas en tu roof garden" },
       { image: "/img/coast-road.jpg", alt: "Carretera costera de Ensenada al atardecer", caption: "La costa a unos minutos" },
       { image: "/img/patio-night.jpg", alt: "Pareja en el patio de su casa por la noche", caption: "Noches tranquilas en tu patio" },
       { image: "/img/living-couple.jpg", alt: "Pareja en la sala de su casa", caption: "Espacios para quedarse" },
@@ -428,11 +432,6 @@ export const es = {
     ],
     formTitle: "Recíbelo por WhatsApp",
     formNote: "Fran te lo envía en PDF y resuelve tus dudas sobre los números.",
-    switchLabel: "¿Qué quieres recibir?",
-    options: {
-      study: { label: "Estudio de rentabilidad", caption: "Si piensas rentarla" },
-      brochure: { label: "Brochure completo", caption: "Si la quieres como segunda casa" },
-    },
     waMessage:
       "Hola Fran, soy {name}. Me interesa invertir en las casas con vista al mar en Ensenada. ¿Me compartes el estudio de rentabilidad?",
     successBody: "Fran Morishita te escribirá por WhatsApp hoy mismo con el estudio de rentabilidad.",

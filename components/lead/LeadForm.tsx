@@ -66,7 +66,9 @@ export function LeadForm({
   const [mensaje, setMensaje] = useState("");
   const [trap, setTrap] = useState("");
   const [errors, setErrors] = useState<{ name?: string; phone?: string; email?: string; form?: string }>({});
-  const [status, setStatus] = useState<"idle" | "sending" | "done">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "step2" | "saving" | "done">("idle");
+  // Formulario por pasos: primero nombre y WhatsApp (el lead ya queda guardado), luego el detalle
+  const hasStep2 = Boolean(fields.interest || fields.visit || fields.message);
   const [result, setResult] = useState<Result | null>(null);
   const [minDate, setMinDate] = useState<string | undefined>(undefined);
 
@@ -124,7 +126,7 @@ export function LeadForm({
       const data = await res.json().catch(() => ({}));
       if (!res.ok || !data.ok) throw new Error(data.error || "error");
       setResult({ stored: Boolean(data.stored), id: data.id, token: data.token });
-      setStatus("done");
+      setStatus(hasStep2 ? "step2" : "done");
       try {
         // Ya dejó sus datos: no mostrar el aviso de salida en esta sesión
         sessionStorage.setItem("lc_exit", "1");
@@ -136,9 +138,153 @@ export function LeadForm({
     }
   }
 
+  async function onStep2(e: React.FormEvent) {
+    e.preventDefault();
+    if (status === "saving") return;
+    setStatus("saving");
+    if (result?.stored && result.id && result.token) {
+      try {
+        await fetch("/api/leads", {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            id: result.id,
+            token: result.token,
+            interes,
+            modo_visita: modo,
+            fecha_visita: fecha,
+            mensaje: mensaje.trim(),
+          }),
+        });
+      } catch {
+        // El lead ya está guardado desde el paso 1; el detalle también viaja en el mensaje de WhatsApp
+      }
+    }
+    trackEvent("lead_step2", { origin, interest: interes, visit: modo });
+    setStatus("done");
+  }
+
+  const steps = (n: 1 | 2) =>
+    hasStep2 ? (
+      <div className="flex items-center gap-3" aria-hidden={false}>
+        <span className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-soft">
+          {t.stepOf.replace("{n}", String(n))}
+        </span>
+        <span className="flex flex-1 gap-1.5">
+          <span className="h-1 flex-1 rounded-full bg-gold-500" />
+          <span className={`h-1 flex-1 rounded-full transition-colors duration-500 ${n === 2 ? "bg-gold-500" : "bg-line-strong/60"}`} />
+        </span>
+      </div>
+    ) : null;
+
   return (
     <AnimatePresence mode="wait" initial={false}>
-      {status !== "done" ? (
+      {status === "step2" || status === "saving" ? (
+        <motion.form
+          key="step2"
+          onSubmit={onStep2}
+          noValidate
+          initial={{ opacity: 0, x: 16 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -16 }}
+          transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          className="grid gap-4"
+        >
+          {steps(2)}
+          <p ref={focusOnMount} tabIndex={-1} className="display text-2xl leading-tight outline-none">
+            {t.step2Title.replace("{name}", firstName)}
+          </p>
+          {fields.interest && (
+            <fieldset className="grid gap-2">
+              <legend className="mb-2 text-sm font-medium">{t.interest}</legend>
+              <div className="flex flex-wrap gap-2">
+                {t.interests.map((opt) => (
+                  <button
+                    key={opt.value}
+                    type="button"
+                    className="chip"
+                    aria-pressed={interes === opt.value}
+                    onClick={() => setInteres(opt.value as Interest)}
+                  >
+                    {opt.label}
+                  </button>
+                ))}
+              </div>
+            </fieldset>
+          )}
+
+          {fields.visit && (
+            <div className="grid gap-4">
+              <fieldset className="grid gap-2">
+                <legend className="mb-2 text-sm font-medium">{t.visitMode}</legend>
+                <div className="flex flex-wrap gap-2">
+                  {t.visitModes.map((opt) => (
+                    <button
+                      key={opt.value}
+                      type="button"
+                      className="chip"
+                      aria-pressed={modo === opt.value}
+                      onClick={() => setModo(opt.value as LeadDefaults["modo_visita"])}
+                    >
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
+              </fieldset>
+              <div className="grid gap-1.5">
+                <label htmlFor={`${uid}-date`} className="text-sm font-medium">
+                  {t.date}
+                </label>
+                <input
+                  id={`${uid}-date`}
+                  type="date"
+                  className="field"
+                  value={fecha}
+                  min={minDate}
+                  onChange={(e) => setFecha(e.target.value)}
+                />
+              </div>
+            </div>
+          )}
+
+          {fields.message && (
+            <div className="grid gap-1.5">
+              <label htmlFor={`${uid}-msg`} className="text-sm font-medium">
+                {t.message}
+              </label>
+              <textarea
+                id={`${uid}-msg`}
+                className="field min-h-24 resize-y"
+                placeholder={t.messagePh}
+                value={mensaje}
+                maxLength={1500}
+                onChange={(e) => setMensaje(e.target.value)}
+              />
+            </div>
+          )}
+
+          <button type="submit" className="btn btn-primary mt-1 w-full" disabled={status === "saving"}>
+            {status === "saving" ? (
+              <>
+                <CircleNotch className="size-4 animate-spin" weight="bold" aria-hidden />
+                {t.sending}
+              </>
+            ) : (
+              <>
+                {submitLabel}
+                <ArrowRight className="size-4" weight="bold" aria-hidden />
+              </>
+            )}
+          </button>
+          <button
+            type="button"
+            onClick={() => setStatus("done")}
+            className="justify-self-center text-sm text-ink-soft underline underline-offset-4 hover:text-ink"
+          >
+            {t.skip}
+          </button>
+        </motion.form>
+      ) : status !== "done" ? (
         <motion.form
           key="form"
           onSubmit={onSubmit}
@@ -149,6 +295,7 @@ export function LeadForm({
           transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="grid gap-4"
         >
+          {steps(1)}
           <div className="grid gap-1.5">
             <label htmlFor={`${uid}-name`} className="text-sm font-medium">
               {t.name}
@@ -229,75 +376,6 @@ export function LeadForm({
             </div>
           )}
 
-          {fields.interest && (
-            <fieldset className="grid gap-2">
-              <legend className="mb-2 text-sm font-medium">{t.interest}</legend>
-              <div className="flex flex-wrap gap-2">
-                {t.interests.map((opt) => (
-                  <button
-                    key={opt.value}
-                    type="button"
-                    className="chip"
-                    aria-pressed={interes === opt.value}
-                    onClick={() => setInteres(opt.value as Interest)}
-                  >
-                    {opt.label}
-                  </button>
-                ))}
-              </div>
-            </fieldset>
-          )}
-
-          {fields.visit && (
-            <div className="grid gap-4">
-              <fieldset className="grid gap-2">
-                <legend className="mb-2 text-sm font-medium">{t.visitMode}</legend>
-                <div className="flex flex-wrap gap-2">
-                  {t.visitModes.map((opt) => (
-                    <button
-                      key={opt.value}
-                      type="button"
-                      className="chip"
-                      aria-pressed={modo === opt.value}
-                      onClick={() => setModo(opt.value as LeadDefaults["modo_visita"])}
-                    >
-                      {opt.label}
-                    </button>
-                  ))}
-                </div>
-              </fieldset>
-              <div className="grid gap-1.5">
-                <label htmlFor={`${uid}-date`} className="text-sm font-medium">
-                  {t.date}
-                </label>
-                <input
-                  id={`${uid}-date`}
-                  type="date"
-                  className="field"
-                  value={fecha}
-                  min={minDate}
-                  onChange={(e) => setFecha(e.target.value)}
-                />
-              </div>
-            </div>
-          )}
-
-          {fields.message && (
-            <div className="grid gap-1.5">
-              <label htmlFor={`${uid}-msg`} className="text-sm font-medium">
-                {t.message}
-              </label>
-              <textarea
-                id={`${uid}-msg`}
-                className="field min-h-24 resize-y"
-                placeholder={t.messagePh}
-                value={mensaje}
-                maxLength={1500}
-                onChange={(e) => setMensaje(e.target.value)}
-              />
-            </div>
-          )}
-
           {/* Campo trampa para bots: oculto a personas y lectores de pantalla */}
           <div aria-hidden="true" className="absolute left-[-9999px] h-px w-px overflow-hidden">
             <label>
@@ -328,7 +406,7 @@ export function LeadForm({
               </>
             ) : (
               <>
-                {submitLabel}
+                {hasStep2 ? t.next : submitLabel}
                 <ArrowRight className="size-4" weight="bold" aria-hidden />
               </>
             )}
@@ -371,7 +449,7 @@ export function LeadForm({
             <WhatsappLogo className="size-5" weight="fill" aria-hidden />
             {t.success.whatsapp}
           </a>
-          {result?.stored && result.id && result.token && (
+          {!hasStep2 && result?.stored && result.id && result.token && (
             <Qualify t={t} id={result.id} token={result.token} />
           )}
         </motion.div>

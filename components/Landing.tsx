@@ -12,7 +12,7 @@ import { Lifestyle } from "@/components/sections/Lifestyle";
 import { Amenities } from "@/components/sections/Amenities";
 import { Payments } from "@/components/sections/Payments";
 import { Invest } from "@/components/sections/Invest";
-import { StudyMagnet } from "@/components/sections/StudyMagnet";
+import { BrochureMagnet, StudyMagnet } from "@/components/sections/StudyMagnet";
 import { Personas } from "@/components/sections/Personas";
 import { Ensenada } from "@/components/sections/Ensenada";
 import { Trust } from "@/components/sections/Trust";
@@ -44,7 +44,7 @@ function jsonLd(t: Dict, lang: Lang) {
       name: t.meta.title.split(" | ")[0],
       description: t.meta.description,
       url,
-      image: [`${site.url}/img/hero-sunset.jpg`, `${site.url}/img/aerial-homes.jpg`, `${site.url}/img/roof-sunset.jpg`],
+      image: [`${site.url}/img/hero-roof.jpg`, `${site.url}/img/aerial-homes.jpg`, `${site.url}/img/roof-sunset.jpg`],
       address: {
         "@type": "PostalAddress",
         addressLocality: "El Sauzal de Rodríguez, Ensenada",
@@ -92,6 +92,7 @@ export function Landing({ t, lang }: { t: Dict; lang: Lang }) {
         <Included t={t.included} />
         <Lifestyle t={t.lifestyle} />
         <Amenities t={t.amenities} />
+        <BrochureMagnet t={t.study} form={t.form} lang={lang} privacyHref={privacyHref} />
         <Invest t={t.invest} lang={lang} />
         <StudyMagnet t={t.study} form={t.form} lang={lang} privacyHref={privacyHref} />
         <Payments t={t.payments} models={t.models.tabs} lang={lang} />

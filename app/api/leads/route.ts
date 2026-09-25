@@ -66,6 +66,19 @@ const qualifySchema = z.object({
   horizonte_compra: z.enum(["0-3", "3-6", "6-12", "explorando"]).optional(),
   forma_pago: z.enum(["contado", "credito", "infonavit", "usd"]).optional(),
   uso: z.enum(["segunda_casa", "renta", "vivir", "retiro", "broker"]).optional(),
+  // Segundo paso del formulario
+  interes: z.enum(["2R", "3R", "inversion", "segunda_casa", "vivir", "explorando"]).optional(),
+  modo_visita: z.enum(["presencial", "videollamada"]).optional(),
+  fecha_visita: z
+    .union([z.string().regex(/^\d{4}-\d{2}-\d{2}$/), z.literal("")])
+    .optional()
+    .transform((v) => (v ? v : undefined)),
+  mensaje: z
+    .string()
+    .trim()
+    .max(3000)
+    .optional()
+    .transform((v) => (v ? v.slice(0, 1500) : undefined)),
 });
 
 // Límite best-effort por instancia: 6 envíos por IP cada 10 minutos

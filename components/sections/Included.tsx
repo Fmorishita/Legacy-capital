@@ -25,6 +25,7 @@ export function Included({ t }: { t: Dict["included"] }) {
                   alt=""
                   fill
                   sizes="(min-width: 1024px) 30vw, 50vw"
+                  style={{ objectPosition: "position" in item ? item.position : undefined }}
                   className="object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.05]"
                 />
               </div>

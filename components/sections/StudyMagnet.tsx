@@ -1,12 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
-import { AnimatePresence, motion } from "motion/react";
-import { BookOpen, ChartLineUp, Check, FilePdf, LockSimple } from "@phosphor-icons/react";
+import { Check, FilePdf, LockSimple } from "@phosphor-icons/react";
 import type { Dict } from "@/lib/i18n/es";
 import type { Lang } from "@/lib/site";
-import { trackEvent } from "@/lib/track";
 import { Reveal } from "@/components/ui/Reveal";
 import { LeadForm } from "@/components/lead/LeadForm";
 
@@ -16,8 +13,6 @@ type Props = {
   lang: Lang;
   privacyHref: string;
 };
-
-type Kind = "study" | "brochure";
 
 // Valores de relleno: se muestran desenfocados y nunca llegan al lector de pantalla
 const MASKED = ["$000,000", "$000,000", "0.00", "$0,000"];
@@ -93,115 +88,123 @@ function BrochureDoc({ b }: { b: Dict["study"]["brochure"] }) {
   );
 }
 
-/** Lead magnets: estudio de rentabilidad (inversionista) o brochure (segunda casa), entregados por WhatsApp. */
-export function StudyMagnet({ t, form, lang, privacyHref }: Props) {
-  const [kind, setKind] = useState<Kind>("study");
-  const b = t.brochure;
-  const head = kind === "study" ? { eyebrow: t.eyebrow, title: t.title, body: t.body } : b;
-  const options: { key: Kind; Icon: typeof BookOpen }[] = [
-    { key: "study", Icon: ChartLineUp },
-    { key: "brochure", Icon: BookOpen },
-  ];
+type SectionProps = {
+  id: string;
+  eyebrow: string;
+  title: string;
+  body: string;
+  doc: React.ReactNode;
+  aside?: React.ReactNode;
+  formTitle: string;
+  formNote: string;
+  form: React.ReactNode;
+  footnote?: string;
+  className: string;
+};
 
-  const choose = (k: Kind) => {
-    setKind(k);
-    trackEvent("magnet_select", { magnet: k });
-  };
-
+function MagnetSection({ id, eyebrow, title, body, doc, aside, formTitle, formNote, form, footnote, className }: SectionProps) {
   return (
-    <section id="rentabilidad" aria-labelledby="study-title" className="bg-bg-alt py-24 md:py-36">
+    <section id={id} aria-labelledby={`${id}-title`} className={`py-24 md:py-36 ${className}`}>
       <div className="container-x">
-        <Reveal>
-          <p className="text-sm font-semibold text-ink-soft">{t.switchLabel}</p>
-          <div role="radiogroup" aria-label={t.switchLabel} className="mt-4 grid gap-3 sm:max-w-2xl sm:grid-cols-2">
-            {options.map(({ key, Icon }) => (
-              <button
-                key={key}
-                type="button"
-                role="radio"
-                aria-checked={kind === key}
-                onClick={() => choose(key)}
-                className={`flex items-center gap-4 rounded-2xl border p-4 text-left transition duration-300 hover:-translate-y-0.5 ${
-                  kind === key ? "border-ink bg-ink text-bg shadow-lg" : "border-line-strong bg-surface hover:border-gold-500"
-                }`}
-              >
-                <span
-                  className={`grid size-11 shrink-0 place-items-center rounded-full ${
-                    kind === key ? "bg-gold-500 text-navy-900" : "bg-bg-alt text-gold-ink"
-                  }`}
-                >
-                  <Icon className="size-5" weight="duotone" aria-hidden />
-                </span>
-                <span>
-                  <span className="block font-semibold">{t.options[key].label}</span>
-                  <span className={`block text-sm ${kind === key ? "text-bg/75" : "text-ink-soft"}`}>{t.options[key].caption}</span>
-                </span>
-              </button>
-            ))}
-          </div>
+        <Reveal className="max-w-3xl">
+          <p className="eyebrow">{eyebrow}</p>
+          <h2 id={`${id}-title`} className="display mt-4 text-[2.6rem] leading-[1.04] md:text-6xl">
+            {title}
+          </h2>
+          <p className="mt-6 max-w-[56ch] text-lg leading-relaxed text-ink-soft">{body}</p>
         </Reveal>
 
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.div
-            key={kind}
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <div className="mt-14 max-w-3xl">
-              <p className="eyebrow">{head.eyebrow}</p>
-              <h2 id="study-title" className="display mt-4 text-[2.6rem] leading-[1.04] md:text-6xl">
-                {head.title}
-              </h2>
-              <p className="mt-6 max-w-[56ch] text-lg leading-relaxed text-ink-soft">{head.body}</p>
-            </div>
+        <div className="mt-14 grid items-start gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+          <div>
+            <Reveal>
+              <article className="relative rounded-2xl border border-line bg-surface p-6 shadow-[0_40px_90px_-40px_rgb(var(--shadow)/0.55)] sm:p-9 lg:-rotate-[1.2deg]">
+                {doc}
+              </article>
+            </Reveal>
+            {aside}
+          </div>
+          <Reveal delay={0.12} className="rounded-2xl border border-line bg-surface p-6 sm:p-8 lg:sticky lg:top-28">
+            <h3 className="display text-[1.9rem] leading-[1.05]">{formTitle}</h3>
+            <p className="mb-6 mt-2 text-sm leading-relaxed text-ink-soft">{formNote}</p>
+            {form}
+          </Reveal>
+        </div>
 
-            <div className="mt-14 grid items-start gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
-              <div>
-                <article
-                  aria-label={kind === "study" ? t.docTitle : b.docTitle}
-                  className="relative rounded-2xl border border-line bg-surface p-6 shadow-[0_40px_90px_-40px_rgb(var(--shadow)/0.55)] sm:p-9 lg:-rotate-[1.2deg]"
-                >
-                  {kind === "study" ? <StudyDoc t={t} /> : <BrochureDoc b={b} />}
-                </article>
-
-                {kind === "study" && (
-                  <div className="mt-10">
-                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">{t.includesTitle}</p>
-                    <ul className="mt-4 grid gap-3 sm:grid-cols-2 sm:gap-x-8">
-                      {t.includes.map((item) => (
-                        <li key={item} className="flex gap-3 leading-relaxed">
-                          <Check className="mt-1 size-4 shrink-0 text-gold-ink" weight="bold" aria-hidden />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-
-              <div className="rounded-2xl border border-line bg-surface p-6 sm:p-8 lg:sticky lg:top-28">
-                <h3 className="display text-[1.9rem] leading-[1.05]">{t.formTitle}</h3>
-                <p className="mb-6 mt-2 text-sm leading-relaxed text-ink-soft">{kind === "study" ? t.formNote : b.formNote}</p>
-                <LeadForm
-                  t={form}
-                  lang={lang}
-                  origin={kind === "study" ? "estudio-roi" : "brochure"}
-                  submitLabel={kind === "study" ? form.submitStudy : b.submit}
-                  defaults={{ interes: kind === "study" ? "inversion" : "segunda_casa" }}
-                  fields={{ interest: false }}
-                  privacyHref={privacyHref}
-                  waTemplate={kind === "study" ? t.waMessage : b.waMessage}
-                  successBody={kind === "study" ? t.successBody : b.successBody}
-                />
-              </div>
-            </div>
-          </motion.div>
-        </AnimatePresence>
-
-        {kind === "study" && <p className="mt-12 max-w-[90ch] text-xs leading-relaxed text-ink-soft">{t.disclaimer}</p>}
+        {footnote && <p className="mt-12 max-w-[90ch] text-xs leading-relaxed text-ink-soft">{footnote}</p>}
       </div>
     </section>
+  );
+}
+
+/** Lead magnet para quien busca segunda casa: el brochure completo, por WhatsApp. */
+export function BrochureMagnet({ t, form, lang, privacyHref }: Props) {
+  const b = t.brochure;
+  return (
+    <MagnetSection
+      id="brochure"
+      className="bg-bg-alt"
+      eyebrow={b.eyebrow}
+      title={b.title}
+      body={b.body}
+      doc={<BrochureDoc b={b} />}
+      formTitle={t.formTitle}
+      formNote={b.formNote}
+      form={
+        <LeadForm
+          t={form}
+          lang={lang}
+          origin="brochure"
+          submitLabel={b.submit}
+          defaults={{ interes: "segunda_casa" }}
+          fields={{ interest: false }}
+          privacyHref={privacyHref}
+          waTemplate={b.waMessage}
+          successBody={b.successBody}
+        />
+      }
+    />
+  );
+}
+
+/** Lead magnet para inversionistas: el estudio de rentabilidad, por WhatsApp. */
+export function StudyMagnet({ t, form, lang, privacyHref }: Props) {
+  return (
+    <MagnetSection
+      id="rentabilidad"
+      className="bg-bg-alt"
+      eyebrow={t.eyebrow}
+      title={t.title}
+      body={t.body}
+      doc={<StudyDoc t={t} />}
+      aside={
+        <Reveal delay={0.1} className="mt-10">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">{t.includesTitle}</p>
+          <ul className="mt-4 grid gap-3 sm:grid-cols-2 sm:gap-x-8">
+            {t.includes.map((item) => (
+              <li key={item} className="flex gap-3 leading-relaxed">
+                <Check className="mt-1 size-4 shrink-0 text-gold-ink" weight="bold" aria-hidden />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+      }
+      formTitle={t.formTitle}
+      formNote={t.formNote}
+      form={
+        <LeadForm
+          t={form}
+          lang={lang}
+          origin="estudio-roi"
+          submitLabel={form.submitStudy}
+          defaults={{ interes: "inversion" }}
+          fields={{ interest: false }}
+          privacyHref={privacyHref}
+          waTemplate={t.waMessage}
+          successBody={t.successBody}
+        />
+      }
+      footnote={t.disclaimer}
+    />
   );
 }

@@ -46,13 +46,13 @@ export function Hero({ t, lang, privacyHref }: Props) {
             transition={{ duration: 2.8, ease }}
           >
             <Image
-              src="/img/hero-sunset.jpg"
+              src="/img/hero-roof.jpg"
               alt={t.hero.imageAlt}
               fill
               priority
               quality={75}
               sizes="100vw"
-              className="object-cover object-[62%_50%]"
+              className="object-cover object-[35%_48%]"
             />
           </motion.div>
         </motion.div>

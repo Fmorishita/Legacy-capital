@@ -68,7 +68,7 @@ export function Lifestyle({ t }: { t: Dict["lifestyle"] }) {
   const Tile = ({ tile, className, sizes }: { tile: typeof a; className: string; sizes: string }) => (
     <figure className={`flex flex-col ${className}`}>
       <div className="relative min-h-[14rem] flex-1 overflow-hidden rounded-2xl bg-bg-alt">
-        <Image src={tile.image} alt={tile.alt} fill sizes={sizes} className="object-cover" />
+        <Image src={tile.image} alt={tile.alt} fill sizes={sizes} className="object-cover" style={{ objectPosition: "position" in tile ? tile.position : undefined }} />
       </div>
       <figcaption className="mt-3 text-sm text-ink-soft">{tile.caption}</figcaption>
     </figure>

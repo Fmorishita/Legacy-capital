@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
-import { List, X, ArrowRight, Globe } from "@phosphor-icons/react";
+import { List, X, ArrowRight, Globe, UserCircle } from "@phosphor-icons/react";
 import type { Dict } from "@/lib/i18n/es";
 import { site } from "@/lib/site";
 import { Logo } from "@/components/ui/Logo";
@@ -109,6 +109,16 @@ export function Header({ t, homeHref }: { t: Pick<Dict, "nav" | "promo" | "a11y"
               <Globe className="size-4" aria-hidden />
               {t.nav.switchLang.short}
             </Link>
+            <a
+              href={t.nav.advisors.href}
+              aria-label={t.nav.advisors.label}
+              title={t.nav.advisors.label}
+              className={`hidden size-10 place-items-center rounded-full transition lg:grid ${
+                light ? "text-cream-100/60 hover:text-cream-100" : "text-ink-soft/70 hover:text-ink"
+              }`}
+            >
+              <UserCircle className="size-5" aria-hidden />
+            </a>
             <button
               type="button"
               onClick={() => openLead({ kind: "prices", origin: "nav" })}
@@ -173,6 +183,10 @@ export function Header({ t, homeHref }: { t: Pick<Dict, "nav" | "promo" | "a11y"
                 <Globe className="size-4" aria-hidden />
                 {t.nav.switchLang.label}
               </Link>
+              <a href={t.nav.advisors.href} className="mt-3 inline-flex items-center justify-center gap-1.5 text-sm text-ink-soft">
+                <UserCircle className="size-4" aria-hidden />
+                {t.nav.advisors.label}
+              </a>
             </div>
           </motion.div>
         )}

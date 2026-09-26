@@ -34,6 +34,7 @@ export const es = {
     ],
     cta: "Lista de precios",
     switchLang: { label: "English", href: "/en", short: "EN" },
+    advisors: { label: "Acceso asesores", href: "/capacitacion" },
   },
   promo: {
     text: "Aparta en septiembre y obtén 5% de descuento sobre el precio final. Solo las primeras 10 casas.",

@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@source not "./(capacitacion)";
+@source not "../components/cap";
 
 /*
   Legacy Capital, sistema visual.

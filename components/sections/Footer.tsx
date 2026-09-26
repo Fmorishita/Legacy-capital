@@ -64,6 +64,11 @@ export function Footer({
                   {nav.switchLang.label}
                 </Link>
               </li>
+              <li>
+                <a href={nav.advisors.href} className="text-cream-100/60 hover:text-gold-300">
+                  {nav.advisors.label}
+                </a>
+              </li>
             </ul>
           </nav>
         </div>

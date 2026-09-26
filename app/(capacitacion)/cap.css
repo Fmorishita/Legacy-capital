@@ -1,0 +1,222 @@
+@import "tailwindcss" source(none);
+@source "./";
+@source "../../components/cap";
+
+/*
+  Plataforma de capacitación. Solo tema claro: es material de estudio y replica el manual impreso.
+  Paleta del brandbook: Navy #1A2B4C, Gold #C5A564, Cream #F5F0E6.
+*/
+
+@theme {
+  --color-navy: #1a2b4c;
+  --color-navy-2: #243a63;
+  --color-navy-3: #0f1b33;
+  --color-gold: #c5a564;
+  --color-gold-dk: #85662a;
+  --color-gold-lt: #e6d6b0;
+  --color-cream: #f5f0e6;
+  --color-cream-2: #ece4d4;
+  --color-card: #fbf8f2;
+  --color-ink: #3a4660;
+  --color-line: #ddd2be;
+  --color-muted: #646e80;
+  --color-ok: #2f6b4f;
+  --color-ok-bg: #e4efe6;
+  --color-warn: #8a5a12;
+  --color-warn-bg: #f6ead2;
+  --color-bad: #9b2c2c;
+  --color-bad-bg: #f6e1dd;
+
+  --font-serif: var(--font-ebg), "EB Garamond", Georgia, serif;
+  --font-sans: var(--font-mont), "Montserrat", "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 5.5rem;
+  }
+  body {
+    background: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-gold-dk);
+    outline-offset: 2px;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .cap-wrap {
+    width: 100%;
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 640px) {
+    .cap-wrap {
+      padding-inline: 1.5rem;
+    }
+  }
+  .cap-kicker {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-gold-dk);
+  }
+  .cap-title {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    color: var(--color-navy);
+    line-height: 1.1;
+  }
+  .cap-card {
+    background: var(--color-card);
+    border: 1px solid var(--color-line);
+    border-radius: 14px;
+  }
+  .cap-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.75rem;
+    padding: 0.65rem 1.25rem;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
+      transform 0.15s;
+  }
+  .cap-btn:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+  .cap-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+  .cap-btn-primary {
+    background: var(--color-navy);
+    color: var(--color-cream);
+  }
+  .cap-btn-primary:hover:not(:disabled) {
+    background: var(--color-navy-2);
+  }
+  .cap-btn-gold {
+    background: var(--color-gold);
+    color: var(--color-navy-3);
+  }
+  .cap-btn-gold:hover:not(:disabled) {
+    background: #d4b97f;
+  }
+  .cap-btn-ghost {
+    border: 1px solid var(--color-line);
+    color: var(--color-navy);
+    background: transparent;
+  }
+  .cap-btn-ghost:hover:not(:disabled) {
+    border-color: var(--color-gold);
+    background: #fff;
+  }
+  .cap-btn-sm {
+    min-height: 2.25rem;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.8rem;
+  }
+  .cap-label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--color-navy);
+    margin-bottom: 0.35rem;
+  }
+  .cap-input {
+    width: 100%;
+    min-height: 2.9rem;
+    border: 1px solid #c9bda6;
+    border-radius: 10px;
+    background: #fff;
+    padding: 0.65rem 0.85rem;
+    font-size: 1rem;
+    color: var(--color-navy);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .cap-input:focus {
+    outline: none;
+    border-color: var(--color-gold-dk);
+    box-shadow: 0 0 0 3px rgb(197 165 100 / 0.25);
+  }
+  textarea.cap-input {
+    min-height: 8rem;
+    line-height: 1.55;
+    resize: vertical;
+  }
+  .cap-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border-radius: 999px;
+    padding: 0.2rem 0.65rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  .cap-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+  }
+  .cap-table th {
+    text-align: left;
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--color-line);
+    white-space: nowrap;
+  }
+  .cap-table td {
+    padding: 0.7rem 0.75rem;
+    border-bottom: 1px solid var(--color-line);
+    vertical-align: top;
+  }
+}
+
+/* Barra de avance con brillo sutil */
+.cap-progress {
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--color-cream-2);
+  overflow: hidden;
+}
+.cap-progress > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--color-gold-dk), var(--color-gold));
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

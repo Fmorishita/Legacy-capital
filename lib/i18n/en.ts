@@ -35,6 +35,7 @@ export const en: Dict = {
     ],
     cta: "Price list",
     switchLang: { label: "Español", href: "/", short: "ES" },
+    advisors: { label: "Advisor access", href: "/capacitacion" },
   },
   promo: {
     text: "Reserve in September and get 5% off the final price. First 10 homes only.",

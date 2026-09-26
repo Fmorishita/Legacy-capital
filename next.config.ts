@@ -4,7 +4,11 @@ const nextConfig: NextConfig = {
   experimental: {
     // 404 con marca para rutas inexistentes (el sitio tiene dos layouts raíz: es / en)
     globalNotFound: true,
+    // Tareas de la capacitación con archivo adjunto (máx. 4 MB)
+    serverActions: { bodySizeLimit: "5mb" },
   },
+  // Tipografías del certificado PDF
+  outputFileTracingIncludes: { "/capacitacion/certificado/pdf": ["./lib/cap/fonts/*.ttf"] },
   images: {
     formats: ["image/avif", "image/webp"],
     qualities: [60, 75, 85],
@@ -21,6 +25,15 @@ const nextConfig: NextConfig = {
           { key: "X-Frame-Options", value: "SAMEORIGIN" },
           { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
         ],
+      },
+      {
+        // Capacitación privada y verificación de certificados: fuera de buscadores
+        source: "/(capacitacion|certificados)/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+      {
+        source: "/capacitacion",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
       },
       {
         source: "/(img|video|brand)/(.*)",

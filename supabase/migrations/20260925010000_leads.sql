@@ -46,7 +46,7 @@ create table if not exists public.leads (
   edit_token uuid not null default gen_random_uuid()
 );
 
-comment on table public.leads is 'Leads del sitio de Legacy Capital (Punta Pacífico). Escritura solo vía submit_lead / qualify_lead.';
+comment on table public.leads is 'Leads del sitio de Legacy Capital. Escritura solo vía submit_lead / qualify_lead.';
 
 alter table public.leads enable row level security;
 revoke all on public.leads from anon, authenticated;

@@ -4,7 +4,7 @@ Landing de captación de leads de Legacy Capital Real Estate (Ensenada, B.C.) pa
 
 **Estrategia:** el sitio no publica el nombre comercial del desarrollo ni del desarrollador, ni el inventario por lote. Legacy Capital y Fran Morishita son los protagonistas; esa información se comparte por WhatsApp con cada prospecto.
 
-**Stack:** Next.js 16 (App Router) · Tailwind CSS v4 · Motion · Phosphor Icons · Supabase (leads) · Vercel (hosting y analítica).
+**Stack:** Next.js 16 (App Router) · Tailwind CSS v4 · Motion · Phosphor Icons · Supabase (leads y capacitación) · Vercel (hosting y analítica).
 
 ## Captación de leads
 
@@ -18,9 +18,23 @@ Landing de captación de leads de Legacy Capital Real Estate (Ensenada, B.C.) pa
 - Opcional: `LEAD_WEBHOOK_URL` envía cada lead a Make, Zapier, n8n o Slack.
 - Eventos de medición: `lead`, `whatsapp_click`, `lot_select`, etc. (Vercel Analytics, y Meta Pixel / GA4 si se configuran sus IDs). Nunca se envían nombre, teléfono ni correo a los píxeles.
 
+## Capacitación de asesores (`/capacitacion`)
+
+Plataforma privada del Curso de Ventas Inmobiliarias: 14 módulos (0 a 13) más anexos. Se entra desde el enlace discreto "Acceso asesores" del menú y del pie de página. Todas sus rutas llevan `noindex` y exigen sesión, salvo la verificación pública de certificados (`/certificados/[folio]`).
+
+- **Contenido fuera del repositorio.** Este repo es público, así que el manual, las imágenes, las preguntas y la clave de respuestas viven solo en Supabase (esquema `cap`, que la API no expone). Para actualizarlos: descomprimir el paquete de contenido, correr `python3 scripts/cap/preparar.py <carpeta capacitacion> paquete.json [preguntas_borrador.json]` y luego `node scripts/cap/cargar.mjs paquete.json <carpeta capacitacion>/img`. Las preguntas generadas que ya aprobaste o editaste no se sobrescriben.
+- **Cuentas.** Registro con nombre, correo, teléfono y contraseña. El administrador elige en el panel si se entra con código de invitación, con aprobación manual o con cualquiera de los dos. Contraseñas con bcrypt (pgcrypto); la sesión es una cookie httpOnly y la base solo guarda su hash. 8 intentos fallidos bloquean el correo 15 minutos.
+- **Avance.** Los módulos se desbloquean en orden. Cada sección se marca como leída; un módulo se completa con todas sus secciones leídas, su quiz aprobado (80%) y sus tareas enviadas. Los anexos están siempre abiertos y no cuentan.
+- **Quizzes y examen.** Calificación siempre en el servidor. El quiz de cada módulo usa las preguntas del examen final de ese módulo más las generadas que el administrador apruebe (empiezan como borrador). El examen final (Módulo 12) son 40 preguntas en orden aleatorio, 80% para aprobar, 3 intentos (configurable, y el administrador puede dar intentos extra). Al reprobar se ven las preguntas falladas sin la respuesta correcta; al aprobar se revelan, excepto en quizzes de módulo las que también están en el examen final.
+- **Tareas.** Ejercicios escritos, casos prácticos del Módulo 12, lista de 100 y tablero semanal del Módulo 13: texto y/o archivo (PDF, imagen, Word, Excel o texto, máx. 4 MB). El administrador aprueba o pide corrección con comentario.
+- **Certificado.** Se emite al completar los módulos, aprobar el examen y tener todas las tareas aprobadas: PDF con folio único (`LC-AAAA-XXXXXX`) y código QR hacia la página de verificación, que solo muestra nombre, curso, fecha y validez.
+- **Panel** (`/capacitacion/admin`, solo administradores): asesores con avance, calificaciones e intentos; aprobar registros, suspender, restablecer contraseña, dar intentos extra, corregir nombre; códigos de invitación; revisión de tareas; aprobar y editar preguntas; clave de respuestas; exportar CSV.
+- **Seguridad.** Todo pasa por `public.cap_rpc`, que exige `CAP_RPC_SECRET` (solo en el servidor) y resuelve la sesión antes de leer o escribir datos de un asesor. Las respuestas correctas nunca llegan al navegador antes de tiempo.
+- Migraciones: `supabase/migrations/20260926010000_capacitacion.sql` y `20260926020000_capacitacion_admin.sql`. El valor del secreto se guarda en `private.settings` (clave `cap_secret`) y debe coincidir con `CAP_RPC_SECRET`.
+
 ## Variables de entorno
 
-Ver `.env.example`. En Vercel: `NEXT_PUBLIC_SITE_URL`, `NEXT_PUBLIC_SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`, `LEADS_RPC_SECRET`, y opcionales `LEAD_WEBHOOK_URL`, `NEXT_PUBLIC_META_PIXEL_ID`, `NEXT_PUBLIC_GA_ID`, `PERMITIR_INDEXACION` (poner `1` al conectar el dominio definitivo).
+Ver `.env.example`. En Vercel: `NEXT_PUBLIC_SITE_URL`, `NEXT_PUBLIC_SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`, `LEADS_RPC_SECRET`, `CAP_RPC_SECRET`, y opcionales `LEAD_WEBHOOK_URL`, `NEXT_PUBLIC_META_PIXEL_ID`, `NEXT_PUBLIC_GA_ID`, `PERMITIR_INDEXACION` (poner `1` al conectar el dominio definitivo).
 
 ## Contenido
 
@@ -39,4 +53,4 @@ npm run dev
 npm run build && npm start
 ```
 
-Migraciones de base de datos: `supabase/migrations/` (tabla de leads y columna `perfil`).
+Migraciones de base de datos: `supabase/migrations/` (leads y capacitación).

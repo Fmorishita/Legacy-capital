@@ -1,0 +1,45 @@
+// Mensajes para el usuario a partir de los códigos de error del servidor.
+
+const MESSAGES: Record<string, string> = {
+  sin_configurar: "La plataforma no está configurada todavía. Avísale al administrador.",
+  servidor: "Algo falló de nuestro lado. Intenta de nuevo en un momento.",
+  sin_sesion: "Tu sesión expiró. Vuelve a entrar.",
+  prohibido: "No tienes permiso para hacer esto.",
+  nombre_invalido: "Escribe tu nombre completo.",
+  correo_invalido: "Revisa tu correo: parece que tiene un error.",
+  telefono_invalido: "Escribe un teléfono válido, con lada.",
+  password_corta: "La contraseña debe tener al menos 8 caracteres.",
+  password_distinta: "Las contraseñas no coinciden.",
+  correo_registrado: "Ese correo ya tiene cuenta. Entra con tu contraseña.",
+  codigo_invalido: "El código de invitación no es válido, ya se usó o expiró.",
+  codigo_requerido: "Necesitas un código de invitación para registrarte.",
+  demasiados_intentos: "Demasiados intentos fallidos. Espera 15 minutos e intenta de nuevo.",
+  credenciales: "Correo o contraseña incorrectos.",
+  pendiente: "Tu registro está pendiente de aprobación. Te avisaremos cuando tu acceso esté listo.",
+  suspendido: "Tu acceso está suspendido. Contacta al administrador.",
+  sesion_invalida: "No pudimos iniciar tu sesión. Intenta de nuevo.",
+  no_encontrado: "No encontramos lo que buscas.",
+  bloqueado: "Termina el módulo anterior para desbloquear este.",
+  seccion_invalida: "Esa sección no existe.",
+  faltan_secciones: "Marca como leídas todas las secciones antes de presentar el quiz.",
+  ya_aprobado: "Ya aprobaste el examen final.",
+  sin_intentos: "Ya usaste todos tus intentos del examen. Pide al administrador un intento adicional.",
+  sin_preguntas: "Este módulo todavía no tiene quiz.",
+  ya_enviado: "Este intento ya se había enviado.",
+  expirado: "El intento expiró. Empieza uno nuevo.",
+  texto_largo: "Tu texto es demasiado largo (máximo 20,000 caracteres).",
+  ya_aprobada: "Esta tarea ya fue aprobada.",
+  tipo_archivo: "Formato no permitido. Sube PDF, imagen (JPG, PNG, WEBP), Word, Excel o texto.",
+  archivo_grande: "El archivo pesa más de 4 MB. Comprime la imagen o súbelo en PDF.",
+  vacia: "Escribe tu respuesta o adjunta un archivo.",
+  estado_invalido: "Estado no válido.",
+  no_a_ti_mismo: "No puedes cambiar el estado de tu propia cuenta.",
+  valor_invalido: "Valor no válido.",
+  texto_vacio: "La pregunta no puede quedar vacía.",
+  correcta_invalida: "Elige cuál es la respuesta correcta.",
+  opciones_invalidas: "Llena las cuatro opciones.",
+};
+
+export function errorMessage(code: string) {
+  return MESSAGES[code] ?? MESSAGES.servidor;
+}

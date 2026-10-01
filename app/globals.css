@@ -25,6 +25,9 @@
   --btn-hover: #24385f;
   --focus: #7a5e2a;
   --shadow: 26 43 76;
+  /* Entrega inmediata: verde de viñedo */
+  --vine-ink: #44603a;
+  --vine-soft: rgb(111 143 90 / 0.14);
   color-scheme: light;
 }
 
@@ -45,6 +48,8 @@
     --btn-hover: #e3cfa0;
     --focus: #e3cfa0;
     --shadow: 3 8 18;
+    --vine-ink: #b5cf9f;
+    --vine-soft: rgb(147 178 123 / 0.16);
     color-scheme: dark;
   }
 }
@@ -62,6 +67,8 @@
   --color-btn: var(--btn);
   --color-btn-ink: var(--btn-ink);
   --color-btn-hover: var(--btn-hover);
+  --color-vine-ink: var(--vine-ink);
+  --color-vine-soft: var(--vine-soft);
 
   --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
   --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
@@ -79,6 +86,10 @@
   --color-cream-50: #fbf8f2;
   --color-cream-100: #f5f0e6;
   --color-cream-200: #ece4d4;
+  --color-vine-300: #b5cf9f;
+  --color-vine-400: #93b27b;
+  --color-vine-500: #6f8f5a;
+  --color-vine-700: #44603a;
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --breakpoint-xs: 26rem;

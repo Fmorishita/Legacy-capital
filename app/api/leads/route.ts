@@ -5,6 +5,24 @@ import { z } from "zod";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
+// Preventa: 2R/3R; Entrega inmediata: tipo de producto (depa, ph, casa) o modelo
+const INTERESES = [
+  "2R",
+  "3R",
+  "inversion",
+  "segunda_casa",
+  "vivir",
+  "explorando",
+  "depa",
+  "ph",
+  "casa",
+  "palomino",
+  "palomino_ph",
+  "azur",
+  "teide",
+] as const;
+const PROYECTOS = ["preventa", "vinedos", "general"] as const;
+
 // Recorta en lugar de rechazar: un UTM largo nunca debe tirar un lead
 const optionalText = (max: number) =>
   z
@@ -26,8 +44,9 @@ const leadSchema = z.object({
     .max(320)
     .optional()
     .transform((v) => (v && v.length <= 160 && z.email().safeParse(v).success ? v : undefined)),
-  interes: z.enum(["2R", "3R", "inversion", "segunda_casa", "vivir", "explorando"]).optional(),
+  interes: z.enum(INTERESES).optional(),
   perfil: z.enum(["ensenada", "california", "mexicoamericano", "monterrey", "cdmx", "guadalajara"]).optional(),
+  proyecto: z.enum(PROYECTOS).optional(),
   origen: z
     .string()
     .trim()
@@ -67,7 +86,8 @@ const qualifySchema = z.object({
   forma_pago: z.enum(["contado", "credito", "infonavit", "usd"]).optional(),
   uso: z.enum(["segunda_casa", "renta", "vivir", "retiro", "broker"]).optional(),
   // Segundo paso del formulario
-  interes: z.enum(["2R", "3R", "inversion", "segunda_casa", "vivir", "explorando"]).optional(),
+  interes: z.enum(INTERESES).optional(),
+  proyecto: z.enum(PROYECTOS).optional(),
   modo_visita: z.enum(["presencial", "videollamada"]).optional(),
   fecha_visita: z
     .union([z.string().regex(/^\d{4}-\d{2}-\d{2}$/), z.literal("")])

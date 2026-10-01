@@ -1,8 +1,11 @@
 import Link from "next/link";
 import { WhatsappLogo, Phone, MapPin } from "@phosphor-icons/react/dist/ssr";
 import type { Dict } from "@/lib/i18n/es";
+import type { NavCopy } from "@/lib/i18n/types";
+import type { PortfolioCopy } from "@/lib/i18n/portfolio";
 import { site, waLink } from "@/lib/site";
 import { Logo } from "@/components/ui/Logo";
+import { StatusDot } from "@/components/ui/StatusChip";
 
 export function Footer({
   t,
@@ -10,17 +13,19 @@ export function Footer({
   waGeneric,
   privacyHref,
   navLabel,
+  portfolio,
 }: {
   t: Dict["footer"];
-  nav: Dict["nav"];
+  nav: NavCopy;
   waGeneric: string;
   privacyHref: string;
   navLabel: string;
+  portfolio?: PortfolioCopy;
 }) {
   return (
     <footer className="bg-navy-900 pb-28 text-cream-100 dark:bg-navy-950 lg:pb-12">
       <div className="container-x border-t border-cream-100/15 pt-16">
-        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
+        <div className={`grid gap-12 ${portfolio ? "md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]" : "md:grid-cols-[1.4fr_1fr_1fr]"}`}>
           <div>
             <Logo tone="light" />
             <p className="display mt-6 text-2xl italic text-gold-300">{t.tagline}</p>
@@ -44,6 +49,24 @@ export function Footer({
               </li>
             </ul>
           </div>
+          {portfolio && (
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cream-100/60">{portfolio.title}</p>
+              <ul className="mt-5 grid gap-4 text-sm">
+                {portfolio.items.map((p) => (
+                  <li key={p.id}>
+                    <Link href={p.href} className="group block">
+                      <span className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-cream-100/60">
+                        <StatusDot project={p.id} />
+                        {p.status}
+                      </span>
+                      <span className="mt-1 block text-cream-100/85 group-hover:text-gold-300">{p.name}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
           <nav aria-label={navLabel}>
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cream-100/60">{t.explore}</p>
             <ul className="mt-5 grid grid-cols-2 gap-3 text-sm">

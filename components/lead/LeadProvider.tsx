@@ -1,38 +1,29 @@
 "use client";
 
-import { createContext, useCallback, useContext, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { X } from "@phosphor-icons/react";
 import type { Dict } from "@/lib/i18n/es";
 import type { Lang } from "@/lib/site";
 import { captureAttribution } from "@/lib/attribution";
 import { trackEvent } from "@/lib/track";
-import { LeadForm, type LeadDefaults } from "./LeadForm";
+import type { LeadProject } from "@/lib/projects";
+import { LeadForm } from "./LeadForm";
+import { LeadContext, useLead, type LeadKind, type LeadRequest } from "./context";
 
-export type LeadKind = "prices" | "visit" | "plan" | "model" | "study" | "floorplan";
-
-export type LeadRequest = LeadDefaults & {
-  kind: LeadKind;
-  origin: string;
-  title?: string;
-  subtitle?: string;
-};
-
-type Ctx = { openLead: (req: LeadRequest) => void };
-const LeadContext = createContext<Ctx>({ openLead: () => {} });
-
-export function useLead() {
-  return useContext(LeadContext);
-}
+export { useLead };
+export type { LeadKind, LeadRequest };
 
 type Props = {
-  t: Pick<Dict, "form" | "dialog" | "a11y" | "quickForm">;
+  t: { form: Dict["form"]; dialog: Dict["dialog"]; a11y: Dict["a11y"]; quickForm: { subtitle: string } };
   lang: Lang;
   privacyHref: string;
+  /** Proyecto de la página (preventa o entrega inmediata); en la principal se deja vacío */
+  project?: LeadProject;
   children: React.ReactNode;
 };
 
-export function LeadProvider({ t, lang, privacyHref, children }: Props) {
+export function LeadProvider({ t, lang, privacyHref, project, children }: Props) {
   const [req, setReq] = useState<LeadRequest | null>(null);
   const lastFocus = useRef<HTMLElement | null>(null);
 
@@ -45,8 +36,8 @@ export function LeadProvider({ t, lang, privacyHref, children }: Props) {
     if (r.origin === "exit-intent" && document.querySelector('[role="dialog"][aria-modal="true"]')) return;
     lastFocus.current = document.activeElement as HTMLElement | null;
     setReq(r);
-    trackEvent("lead_open", { origin: r.origin, kind: r.kind });
-  }, []);
+    trackEvent("lead_open", { origin: r.origin, kind: r.kind, project: r.proyecto ?? project ?? "general" });
+  }, [project]);
 
   const close = useCallback(() => {
     setReq(null);
@@ -54,7 +45,7 @@ export function LeadProvider({ t, lang, privacyHref, children }: Props) {
   }, []);
 
   return (
-    <LeadContext.Provider value={{ openLead }}>
+    <LeadContext.Provider value={{ openLead, project }}>
       {children}
       <AnimatePresence>
         {req && <LeadDialog key="dialog" req={req} t={t} lang={lang} privacyHref={privacyHref} onClose={close} />}
@@ -190,6 +181,7 @@ function LeadDialog({
             interest: (req.kind === "prices" || req.kind === "visit") && !req.interes,
             visit: isVisit,
             email: isVisit,
+            project: true,
           }}
         />
       </motion.div>

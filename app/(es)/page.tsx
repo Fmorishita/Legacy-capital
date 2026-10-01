@@ -1,9 +1,9 @@
-import { Landing } from "@/components/Landing";
-import { es } from "@/lib/i18n/es";
+import { Home } from "@/components/Home";
+import { home } from "@/lib/i18n/home";
 import { pageMetadata } from "@/lib/metadata";
 
-export const metadata = pageMetadata(es, "/");
+export const metadata = pageMetadata(home.es, "home", "es");
 
 export default function Page() {
-  return <Landing t={es} lang="es" />;
+  return <Home t={home.es} lang="es" />;
 }

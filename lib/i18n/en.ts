@@ -34,7 +34,7 @@ export const en: Dict = {
       { href: "#ensenada", label: "Ensenada" },
     ],
     cta: "Price list",
-    switchLang: { label: "Español", href: "/", short: "ES" },
+    switchLang: { label: "Español", href: "/preventa", short: "ES" },
     advisors: { label: "Advisor access", href: "/capacitacion" },
   },
   promo: {
@@ -70,6 +70,12 @@ export const en: Dict = {
     phonePh: "10 digits",
     email: "Email (optional)",
     emailPh: "you@email.com",
+    project: "What are you interested in?",
+    projects: [
+      { value: "preventa", label: "Ocean-view pre-sale", wa: "the ocean-view homes in pre-sale" },
+      { value: "vinedos", label: "Move-in ready", wa: "the move-in ready condos and homes" },
+      { value: "general", label: "Both", wa: "both the ocean-view pre-sale and the move-in ready condos and homes" },
+    ],
     interest: "What are you looking for?",
     interests: [
       { value: "segunda_casa", label: "Second home" },
@@ -499,6 +505,11 @@ export const en: Dict = {
       "Monthly amount based on September 2026 brochure prices. The deferred portion is paid within up to 19 months; the number of monthly payments may vary with the signing and closing dates. Plan valid only upon signing the contract.",
     cta: "Get my payment plan",
     promo: "Plus, reserve in September and get 5% off (first 10 homes).",
+  },
+  crossSell: {
+    eyebrow: "Want to move in now?",
+    title: "Condos and homes ready to move in, minutes away.",
+    body: "Finished condos, penthouses and homes with a clubhouse and pool, from MXN $3.64M with a mortgage, Infonavit or cash.",
   },
   ensenada: {
     title: "24 hours in Ensenada.",

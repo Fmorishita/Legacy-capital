@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
-import { ArrowRight, CalendarCheck, Sparkle } from "@phosphor-icons/react";
+import { ArrowRight, CalendarCheck, Check, Sparkle } from "@phosphor-icons/react";
 import type { HomeCopy } from "@/lib/i18n/home";
 import type { PortfolioCopy } from "@/lib/i18n/portfolio";
 import type { ProjectId } from "@/lib/projects";
@@ -21,102 +21,120 @@ function recommend(when?: string, pay?: string): Result {
   return pay === "propios" ? "preventa" : "ambos";
 }
 
-/** Comparativo preventa / entrega inmediata con un recomendador de dos preguntas. */
-export function Compare({ t, portfolio }: { t: HomeCopy["compare"]; portfolio: PortfolioCopy }) {
+/**
+ * Los dos caminos lado a lado. En escritorio las filas de ambas tarjetas quedan alineadas (subgrid)
+ * para compararlas de un vistazo; debajo, un recomendador de dos preguntas.
+ */
+export function Paths({ t, portfolio }: { t: HomeCopy["paths"]; portfolio: PortfolioCopy }) {
   const { openLead } = useLead();
   const [when, setWhen] = useState<string>();
   const [pay, setPay] = useState<string>();
   const result = recommend(when, pay);
   const [pre, vin] = portfolio.items;
-  const highlight = (id: ProjectId) => result === id || result === "ambos";
+  const picked = (id: ProjectId) => result === id || result === "ambos";
 
   const answer = (setter: (v: string) => void, value: string, q: string) => {
     setter(value);
     trackEvent("compare_answer", { question: q, answer: value });
   };
 
-  const column = (id: ProjectId) =>
-    `transition-colors duration-500 ${result && highlight(id) ? (id === "vinedos" ? "bg-vine-soft" : "bg-gold-500/10") : ""}`;
-
   return (
-    <section id="compara" aria-labelledby="compare-title" className="bg-bg py-24 md:py-36">
+    <section id="compara" aria-labelledby="paths-title" className="bg-bg-alt py-24 md:py-36">
       <div className="container-x">
         <Reveal className="max-w-3xl">
           <p className="eyebrow">{t.eyebrow}</p>
-          <h2 id="compare-title" className="display mt-4 text-[2.6rem] leading-[1.04] md:text-6xl">
+          <h2 id="paths-title" className="display mt-4 text-[2.6rem] leading-[1.04] md:text-6xl">
             {t.title}
           </h2>
           <p className="mt-6 max-w-[54ch] text-lg leading-relaxed text-ink-soft">{t.body}</p>
         </Reveal>
 
-        {/* Escritorio: tabla de tres columnas */}
-        <Reveal delay={0.1} className="mt-14 hidden overflow-hidden rounded-2xl border border-line bg-surface md:block">
-          <table className="w-full border-collapse text-left">
-            <caption className="sr-only">{t.title}</caption>
-            <thead>
-              <tr>
-                <td className="w-[22%] border-b border-line p-6 align-bottom" />
-                {[pre, vin].map((p) => (
-                  <th key={p.id} scope="col" className={`w-[39%] border-b border-l border-line p-6 align-top ${column(p.id)}`}>
-                    <div className="relative aspect-[16/9] overflow-hidden rounded-xl">
-                      <Image src={p.image} alt="" fill sizes="35vw" className="object-cover" />
-                    </div>
-                    <StatusChip project={p.id} label={p.status} className="mt-5" />
-                    <span className="display mt-3 block text-[1.9rem] leading-tight font-medium">{p.name}</span>
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {t.rows.map((r) => (
-                <tr key={r.label}>
-                  <th scope="row" className="border-b border-line px-6 py-5 align-top text-sm font-semibold text-ink-soft">
-                    {r.label}
-                  </th>
-                  <td className={`border-b border-l border-line px-6 py-5 align-top leading-relaxed ${column("preventa")}`}>{r.preventa}</td>
-                  <td className={`border-b border-l border-line px-6 py-5 align-top leading-relaxed ${column("vinedos")}`}>{r.vinedos}</td>
-                </tr>
-              ))}
-              <tr>
-                <td className="p-6" />
-                {[pre, vin].map((p) => (
-                  <td key={p.id} className={`border-l border-line p-6 ${column(p.id)}`}>
-                    <Link href={p.href} className="btn btn-ghost">
-                      {p.cta}
-                      <ArrowRight className="size-4" weight="bold" aria-hidden />
-                    </Link>
-                  </td>
-                ))}
-              </tr>
-            </tbody>
-          </table>
-        </Reveal>
+        <div id="proyectos" className="mt-14 grid gap-6 lg:grid-cols-2 lg:grid-rows-[repeat(5,auto)] lg:gap-x-8 lg:gap-y-0">
+          {[pre, vin].map((p, i) => {
+            const copy = t.items[p.id];
+            const vine = p.id === "vinedos";
+            return (
+              <Reveal
+                as="article"
+                key={p.id}
+                delay={i * 0.08}
+                amount={0.1}
+                className={`flex flex-col overflow-hidden rounded-2xl border bg-surface transition-[border-color,box-shadow] duration-500 lg:row-span-5 lg:grid lg:grid-rows-subgrid ${
+                  result && picked(p.id)
+                    ? vine
+                      ? "border-vine-500 shadow-[0_0_0_1px_var(--color-vine-500)]"
+                      : "border-gold-500 shadow-[0_0_0_1px_var(--color-gold-500)]"
+                    : "border-line"
+                }`}
+              >
+                <Link href={p.href} tabIndex={-1} aria-hidden className="group relative block aspect-[16/10] overflow-hidden">
+                  <Image
+                    src={p.image}
+                    alt=""
+                    fill
+                    sizes="(min-width: 1024px) 45vw, 100vw"
+                    className="object-cover transition-transform duration-[1.4s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                  />
+                  <span className="absolute inset-0 bg-gradient-to-t from-navy-950/55 via-transparent to-transparent" />
+                  <StatusChip project={p.id} label={p.status} tone="dark" className="absolute left-5 top-5" />
+                </Link>
 
-        {/* Celular: una tarjeta por proyecto */}
-        <div className="mt-12 grid gap-5 md:hidden">
-          {[pre, vin].map((p) => (
-            <Reveal key={p.id} className={`overflow-hidden rounded-2xl border border-line bg-surface ${column(p.id)}`}>
-              <div className="relative aspect-[16/9]">
-                <Image src={p.image} alt="" fill sizes="100vw" className="object-cover" />
-                <StatusChip project={p.id} label={p.status} tone="dark" className="absolute left-4 top-4" />
-              </div>
-              <div className="p-5">
-                <h3 className="display text-[1.9rem] leading-tight">{p.name}</h3>
-                <dl className="mt-4 grid gap-3">
-                  {t.rows.slice(1).map((r) => (
-                    <div key={r.label} className="border-t border-line pt-3">
-                      <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-soft">{r.label}</dt>
-                      <dd className="mt-1 leading-relaxed">{p.id === "preventa" ? r.preventa : r.vinedos}</dd>
+                <div className="px-6 pt-7 sm:px-8">
+                  <p className="text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-ink-soft">{p.place}</p>
+                  <h3 id={`path-${p.id}`} className="display mt-2 text-[2.1rem] leading-[1.05] md:text-[2.5rem]">
+                    {p.name}
+                  </h3>
+                  <p className="mt-3 text-lg leading-relaxed">{copy.promise}</p>
+                </div>
+
+                <div className="px-6 pt-7 sm:px-8">
+                  <p className={`text-xs font-semibold uppercase tracking-[0.16em] ${vine ? "text-vine-ink" : "text-gold-ink"}`}>
+                    {t.fitLabel}
+                  </p>
+                  <ul className="mt-4 grid gap-3">
+                    {copy.fit.map((f) => (
+                      <li key={f} className="flex gap-3 leading-relaxed">
+                        <span
+                          aria-hidden
+                          className={`mt-1 grid size-5 shrink-0 place-items-center rounded-full ${
+                            vine ? "bg-vine-500 text-cream-100" : "bg-gold-500 text-navy-900"
+                          }`}
+                        >
+                          <Check className="size-3" weight="bold" />
+                        </span>
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <dl className="mx-6 mt-8 grid gap-x-6 gap-y-4 border-t border-line pt-6 sm:mx-8 sm:grid-cols-2">
+                  {copy.facts.map((f, j) => (
+                    // En celular basta con "qué es": el resto se resume en la promesa y el precio
+                    <div key={f.label} className={j > 0 ? "hidden sm:block" : undefined}>
+                      <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-soft">{f.label}</dt>
+                      <dd className="mt-1 leading-snug">{f.value}</dd>
                     </div>
                   ))}
                 </dl>
-                <Link href={p.href} className="btn btn-ghost mt-6 w-full">
-                  {p.cta}
-                  <ArrowRight className="size-4" weight="bold" aria-hidden />
-                </Link>
-              </div>
-            </Reveal>
-          ))}
+
+                <div className="mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-line px-6 py-6 sm:px-8">
+                  <p className="text-sm leading-tight text-ink-soft">
+                    <span className="block font-display text-[1.6rem] font-semibold text-ink">{p.price}</span>
+                    {p.priceNote}
+                  </p>
+                  <Link
+                    href={p.href}
+                    onClick={() => trackEvent("project_pick", { project: p.id, origin: "home-caminos" })}
+                    className="btn btn-primary"
+                  >
+                    {p.cta}
+                    <ArrowRight className="size-4" weight="bold" aria-hidden />
+                  </Link>
+                </div>
+              </Reveal>
+            );
+          })}
         </div>
 
         {/* Recomendador */}

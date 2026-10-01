@@ -24,7 +24,7 @@ export function StatusChip({
         : "bg-gold-500/15 text-gold-ink";
   return (
     <span
-      className={`inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-[0.72rem] font-semibold uppercase tracking-[0.14em] ${base} ${className}`}
+      className={`inline-flex items-center gap-2 whitespace-nowrap rounded-full px-3 py-1.5 text-[0.72rem] font-semibold uppercase tracking-[0.14em] ${base} ${className}`}
     >
       <span aria-hidden className="relative flex size-2">
         {vine && <span className="absolute inset-0 animate-ping rounded-full bg-vine-400 opacity-60 motion-reduce:hidden" />}

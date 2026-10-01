@@ -13,8 +13,8 @@ import { FinalCta } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/sections/Footer";
 import { FloatingActions } from "@/components/sections/FloatingActions";
 import { HomeHero } from "@/components/home/HomeHero";
-import { Compare } from "@/components/home/Compare";
-import { Showcase } from "@/components/home/Showcase";
+import { Pains } from "@/components/home/Pains";
+import { Paths } from "@/components/home/Paths";
 
 function jsonLd(t: HomeCopy, lang: Lang) {
   const url = `${site.url}${href("home", lang) === "/" ? "" : href("home", lang)}`;
@@ -51,7 +51,10 @@ function jsonLd(t: HomeCopy, lang: Lang) {
   ];
 }
 
-/** Página principal: el portafolio de Legacy Capital con sus dos proyectos. */
+/**
+ * Página principal: Legacy Capital del lado del cliente. Parte de lo que busca y de sus dudas, explica
+ * los dos caminos (preventa y entrega inmediata) y lleva a la página de cada proyecto.
+ */
 export function Home({ t, lang }: { t: HomeCopy; lang: Lang }) {
   const privacyHref = href("privacy", lang);
   const p = portfolio[lang];
@@ -66,15 +69,22 @@ export function Home({ t, lang }: { t: HomeCopy; lang: Lang }) {
       </a>
       <Header t={{ nav: t.nav, a11y: t.a11y }} homeHref={href("home", lang)} portfolio={p} ctaKind="visit" />
       <main id="contenido">
-        <HomeHero t={t.hero} portfolio={p} />
+        <HomeHero t={t.hero} portfolio={p} waGeneric={t.form.waGeneric} />
         <Facts t={t.facts} label={t.a11y.facts} />
-        <Compare t={t.compare} portfolio={p} />
-        <Showcase t={t.showcase} portfolio={p} />
+        <Pains t={t.pains} />
+        <Paths t={t.paths} portfolio={p} />
         <Advisor t={t.advisor} waGeneric={t.form.waGeneric} />
         <Trust t={t.trust} />
         <Ensenada t={t.ensenada} />
         <Faq t={t.faq} />
-        <FinalCta t={t.finalCta} form={t.form} whatsappLabel={t.advisor.ctaWhatsapp} lang={lang} privacyHref={privacyHref} />
+        <FinalCta
+          t={t.finalCta}
+          form={t.form}
+          whatsappLabel={t.advisor.ctaWhatsapp}
+          lang={lang}
+          privacyHref={privacyHref}
+          image="/img/coast-road.jpg"
+        />
       </main>
       <Footer t={t.footer} nav={t.nav} waGeneric={t.form.waGeneric} privacyHref={privacyHref} navLabel={t.a11y.footerNav} portfolio={p} />
       <FloatingActions t={t.mobileBar} exit={t.exit} waGeneric={t.form.waGeneric} label={t.a11y.quickActions} />

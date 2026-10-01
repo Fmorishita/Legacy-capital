@@ -4,13 +4,13 @@ Sitio de captación de leads de Legacy Capital Real Estate (Ensenada, B.C.) con 
 
 | Ruta (ES / EN) | Página |
 | --- | --- |
-| `/` · `/en` | Portafolio: los dos proyectos, comparativa y recomendador |
+| `/` · `/en` | Portada centrada en el cliente: "¿Qué estás buscando?" lleva a cada proyecto, dudas frecuentes y cómo las resolvemos, los dos caminos lado a lado y recomendador |
 | `/preventa` · `/en/presale` | Preventa con vista al mar |
 | `/vinedos-del-mar` · `/en/vinedos-del-mar` | Viñedos del Mar (departamentos y casas terminados) |
 
 **Estrategia:** la preventa no publica el nombre comercial del desarrollo ni del desarrollador, ni el inventario por lote. Viñedos del Mar sí se nombra, pero no su desarrollador. Legacy Capital y Fran Morishita son los protagonistas; el inventario disponible se comparte por WhatsApp con cada prospecto.
 
-**Código de color:** dorado = preventa, verde viñedo = entrega inmediata (`components/ui/StatusChip.tsx`), en la barra de proyectos, menú, pie de página y tarjetas.
+**Código de color:** dorado = preventa, verde viñedo = entrega inmediata (`components/ui/StatusChip.tsx`), en el menú "Proyectos" del encabezado, el menú móvil, el pie de página y las tarjetas.
 
 **Stack:** Next.js 16 (App Router) · Tailwind CSS v4 · Motion · Phosphor Icons · Supabase (leads y capacitación) · Vercel (hosting y analítica).
 

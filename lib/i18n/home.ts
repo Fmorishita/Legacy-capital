@@ -1,5 +1,5 @@
-// Página principal del portafolio: presenta los dos proyectos de Legacy Capital en El Sauzal y ayuda
-// a elegir entre preventa y entrega inmediata.
+// Página principal: Legacy Capital como asesor del cliente. Parte de sus dudas, presenta los dos
+// caminos (preventa y entrega inmediata) y lleva a la página de cada proyecto.
 
 import { es } from "@/lib/i18n/es";
 import { en } from "@/lib/i18n/en";
@@ -8,17 +8,39 @@ import type { FaqCopy, FinalCtaCopy, NavCopy } from "@/lib/i18n/types";
 import type { Lang } from "@/lib/site";
 
 type Choice = { value: string; label: string };
+export type PainIcon = "compass" | "shield" | "globe" | "tag" | "file" | "handshake";
 
 export type HomeCopy = {
   meta: { title: string; description: string; ogAlt: string };
   nav: NavCopy;
-  hero: { eyebrow: string; title: string; subtitle: string; tagline: string; scroll: string };
+  hero: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    ctaPrimary: string;
+    ctaSecondary: string;
+    tagline: string;
+    imageAlt: string;
+    picker: { advisor: string; title: string; body: string; help: string };
+  };
   facts: { value: string; label: string }[];
-  compare: {
+  pains: {
     eyebrow: string;
     title: string;
     body: string;
-    rows: { label: string; preventa: string; vinedos: string }[];
+    answerLabel: string;
+    items: { icon: PainIcon; concern: string; answer: string }[];
+    cta: string;
+    ctaNote: string;
+    dialogTitle: string;
+    dialogSubtitle: string;
+  };
+  paths: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    fitLabel: string;
+    items: Record<"preventa" | "vinedos", { promise: string; fit: string[]; facts: { label: string; value: string }[] }>;
     quiz: {
       title: string;
       body: string;
@@ -31,7 +53,6 @@ export type HomeCopy = {
       ctaBoth: string;
     };
   };
-  showcase: { eyebrow: string; title: string; body: string; from: string };
   advisor: Dict["advisor"];
   trust: Dict["trust"];
   ensenada: Dict["ensenada"];
@@ -55,8 +76,8 @@ const homeEs: HomeCopy = {
   },
   nav: {
     links: [
-      { href: "#proyectos", label: "Proyectos" },
-      { href: "#compara", label: "Compara" },
+      { href: "#ayuda", label: "Cómo te ayudamos" },
+      { href: "#compara", label: "¿Cuál te conviene?" },
       { href: "#asesor", label: "Asesor" },
       { href: "#ensenada", label: "El Sauzal" },
     ],
@@ -66,56 +87,104 @@ const homeEs: HomeCopy = {
   },
   hero: {
     eyebrow: "Legacy Capital Real Estate · Ensenada, B.C.",
-    title: "Tu lugar en Ensenada, en preventa o listo para estrenar.",
+    title: "Tu casa en Ensenada, con alguien de tu lado.",
     subtitle:
-      "Dos proyectos en El Sauzal, entre el mar y la ruta del vino. Te ayudamos a elegir el que más te conviene, sin costo adicional.",
+      "Te escuchamos, comparamos por ti y te acompañamos hasta la entrega de llaves. En El Sauzal tenemos dos caminos: comprar en preventa o estrenar de inmediato.",
+    ctaPrimary: "Ayúdame a elegir",
+    ctaSecondary: "Escribir por WhatsApp",
     tagline: "Building wealth for generations",
-    scroll: "Compara las dos opciones",
+    imageAlt: "Persona caminando hacia el mar al atardecer en la costa de Ensenada",
+    picker: {
+      advisor: "Te atiende personalmente",
+      title: "¿Qué estás buscando?",
+      body: "Elige un camino y te mostramos modelos, precios y formas de pago.",
+      help: "¿No sabes cuál? Te ayudamos a elegir",
+    },
   },
   facts: [
-    { value: "2", label: "proyectos en El Sauzal, a minutos uno del otro" },
-    { value: "$3.64 MDP", label: "precio de entrada del portafolio" },
-    { value: "6", label: "modelos, del departamento a la casa con roof garden" },
     { value: "$0", label: "de costo adicional por nuestra asesoría" },
+    { value: "2", label: "caminos en El Sauzal: preventa o entrega inmediata" },
     { value: "+10", label: "años de Fran Morishita en ventas inmobiliarias" },
+    { value: "+$70 MDP", label: "en ventas inmobiliarias dirigidas" },
+    { value: "ES · EN", label: "te atendemos en español o inglés" },
   ],
-  compare: {
-    eyebrow: "Compara",
-    title: "¿Preventa o entrega inmediata?",
-    body: "Las dos son buenas decisiones. La diferencia está en cuándo quieres estrenar y en cómo prefieres pagar.",
-    rows: [
+  pains: {
+    eyebrow: "Te entendemos",
+    title: "Comprar casa no debería darte miedo.",
+    body: "Estas son las dudas que más escuchamos antes de comprar en Ensenada. Así las resolvemos contigo.",
+    answerLabel: "Lo que hacemos",
+    items: [
       {
-        label: "Qué es",
-        preventa: "Casas de un nivel con roof garden y vista al mar",
-        vinedos: "Departamentos, penthouses y casas terminados",
-      },
-      { label: "Precio de entrada", preventa: "Desde $3.9 MDP", vinedos: "Desde $3.64 MDP" },
-      {
-        label: "Cuándo estrenas",
-        preventa: "Al terminar la obra: 14 meses por contrato",
-        vinedos: "En cuanto firmas la escritura",
+        icon: "compass",
+        concern: "No sé si me conviene comprar en preventa o algo ya terminado.",
+        answer: "Comparamos las dos opciones con tus números: cuándo quieres estrenar, cuánto tienes de enganche y cómo vas a pagar.",
       },
       {
-        label: "Cómo pagas",
-        preventa: "20% de enganche en 19 meses y 80% a la escritura, con crédito o recursos propios",
-        vinedos: "Crédito bancario, Infonavit o contado",
+        icon: "shield",
+        concern: "Me da miedo que no lo entreguen o que no sea lo que me prometieron.",
+        answer: "Presentamos desarrolladores con trayectoria. En preventa, contrato bajo la NOM-247 y garantías por escrito; en entrega inmediata, recorres tu casa terminada antes de comprar.",
       },
       {
-        label: "Lo que ves al comprar",
-        preventa: "Planos, renders y avance de obra",
-        vinedos: "La casa terminada y la comunidad habitada",
+        icon: "globe",
+        concern: "Vivo lejos y no puedo venir a cada rato.",
+        answer: "Te mostramos todo por videollamada, te enviamos los documentos por WhatsApp y organizamos tu visita para que conozcas todo en un solo viaje.",
       },
       {
-        label: "Su mayor ventaja",
-        preventa: "Precio de preventa y plusvalía durante la obra",
-        vinedos: "Te mudas o rentas desde el primer día",
+        icon: "tag",
+        concern: "No quiero pagar de más.",
+        answer: "Pagas el precio de lista del desarrollador. Nuestra asesoría no se suma a tu precio.",
       },
       {
-        label: "Ideal para",
-        preventa: "Segunda casa, retiro o renta vacacional frente al mar",
-        vinedos: "Vivir ya, usar tu crédito o invertir sin esperar",
+        icon: "file",
+        concern: "El crédito, el notario y los trámites me abruman.",
+        answer: "Te guiamos con crédito bancario, Infonavit, notario y, si eres extranjero, fideicomiso. Todo por escrito, en español o inglés.",
+      },
+      {
+        icon: "handshake",
+        concern: "Los vendedores presionan y luego desaparecen.",
+        answer: "Un solo asesor de principio a fin: Fran te responde el mismo día y sigue contigo después de la entrega.",
       },
     ],
+    cta: "Cuéntanos qué buscas",
+    ctaNote: "Te respondemos hoy por WhatsApp, sin compromiso.",
+    dialogTitle: "Cuéntanos qué buscas",
+    dialogSubtitle: "Fran te escribe hoy por WhatsApp con las opciones que mejor te quedan.",
+  },
+  paths: {
+    eyebrow: "Dos caminos",
+    title: "¿Preventa o entrega inmediata?",
+    body: "Las dos son buenas decisiones. La diferencia está en cuándo quieres estrenar y en cómo prefieres pagar.",
+    fitLabel: "Es para ti si…",
+    items: {
+      preventa: {
+        promise: "Compras hoy a precio de preventa y estrenas al terminar la obra.",
+        fit: [
+          "Buscas segunda casa, retiro o renta vacacional frente al mar",
+          "Prefieres pagar tu enganche en 19 meses",
+          "Quieres la plusvalía de comprar antes de que se termine",
+        ],
+        facts: [
+          { label: "Qué es", value: "Casas de un nivel con roof garden y vista al mar" },
+          { label: "Estrenas", value: "Al terminar la obra: 14 meses por contrato" },
+          { label: "Pagas", value: "20% de enganche en 19 meses y 80% a la escritura" },
+          { label: "Lo que ves al comprar", value: "Planos, renders y avance de obra" },
+        ],
+      },
+      vinedos: {
+        promise: "Compras algo terminado y lo estrenas al escriturar.",
+        fit: [
+          "Quieres mudarte o rentar lo antes posible",
+          "Vas a usar crédito bancario o Infonavit",
+          "Prefieres recorrer tu casa terminada antes de comprar",
+        ],
+        facts: [
+          { label: "Qué es", value: "Departamentos, penthouses y casas en una comunidad con casa club" },
+          { label: "Estrenas", value: "En cuanto firmas la escritura" },
+          { label: "Pagas", value: "Crédito bancario, Infonavit o contado" },
+          { label: "Lo que ves al comprar", value: "La casa terminada y la comunidad habitada" },
+        ],
+      },
+    },
     quiz: {
       title: "¿Cuál te conviene?",
       body: "Dos preguntas y te decimos por dónde empezar.",
@@ -138,12 +207,6 @@ const homeEs: HomeCopy = {
       ctaBoth: "Agendar visita a los dos",
     },
   },
-  showcase: {
-    eyebrow: "Proyectos",
-    title: "Dos proyectos, el mismo cuidado.",
-    body: "Seleccionamos cada proyecto por su ubicación, la calidad de su construcción y su potencial patrimonial.",
-    from: "Desde",
-  },
   advisor: {
     ...es.advisor,
     title: "Hablas directo con quien selecciona cada proyecto.",
@@ -155,7 +218,7 @@ const homeEs: HomeCopy = {
     ],
   },
   trust: {
-    title: "Compras con respaldo y todo por escrito.",
+    title: "Te acompañamos en cada paso.",
     items: [
       {
         icon: "building",
@@ -178,10 +241,10 @@ const homeEs: HomeCopy = {
         text: "De la primera llamada a la entrega de llaves, en español o inglés.",
       },
     ],
-    stepsTitle: "Cómo trabajamos",
+    stepsTitle: "Cómo trabajamos contigo",
     steps: [
       { title: "Conversemos", text: "Nos cuentas qué buscas, para qué y para cuándo." },
-      { title: "Compara", text: "Te enviamos precios, planos y números de los dos proyectos." },
+      { title: "Compara", text: "Te enviamos precios, planos y números de las opciones que te convienen." },
       { title: "Visita", text: "Recorres ambos en una sola visita a El Sauzal, o por videollamada." },
       { title: "Estrena", text: "Apartas, firmas y te acompañamos hasta las llaves." },
     ],
@@ -199,6 +262,10 @@ const homeEs: HomeCopy = {
   faq: {
     title: "Preguntas frecuentes",
     items: [
+      {
+        q: "¿Por qué comprar con un asesor y no directo con el desarrollador?",
+        a: "Pagas el mismo precio de lista y ganas a alguien de tu lado: comparamos opciones, revisamos contigo números y contrato, y te acompañamos con crédito, notario y entrega.",
+      },
       {
         q: "¿Qué proyectos presenta Legacy Capital?",
         a: "Hoy, dos en El Sauzal, zona norte de Ensenada: una preventa de casas de un nivel con roof garden y vista al mar, y Viñedos del Mar, una comunidad terminada con departamentos, penthouses y casas con entrega inmediata.",
@@ -230,10 +297,10 @@ const homeEs: HomeCopy = {
     ],
   },
   finalCta: {
-    title: "Conoce los dos en una sola visita.",
-    body: "Ambos proyectos están en El Sauzal, a minutos uno del otro. Agenda un recorrido con Fran o una videollamada y decide con todo a la vista.",
+    title: "Encontremos tu lugar en Ensenada.",
+    body: "Agenda un recorrido o una videollamada con Fran. Conoces los dos proyectos en una sola visita y decides con todo a la vista, sin presión.",
     formTitle: "Agenda tu visita",
-    imageAlt: "Atardecer sobre el océano Pacífico",
+    imageAlt: "Carretera costera de Ensenada al atardecer",
   },
   form: {
     ...es.form,
@@ -269,8 +336,8 @@ const homeEn: HomeCopy = {
   },
   nav: {
     links: [
-      { href: "#proyectos", label: "Projects" },
-      { href: "#compara", label: "Compare" },
+      { href: "#ayuda", label: "How we help" },
+      { href: "#compara", label: "Which one fits?" },
       { href: "#asesor", label: "Advisor" },
       { href: "#ensenada", label: "El Sauzal" },
     ],
@@ -280,56 +347,104 @@ const homeEn: HomeCopy = {
   },
   hero: {
     eyebrow: "Legacy Capital Real Estate · Ensenada, B.C.",
-    title: "Your place in Ensenada, in pre-sale or ready to move in.",
+    title: "Your home in Ensenada, with someone on your side.",
     subtitle:
-      "Two projects in El Sauzal, between the ocean and the wine route. We help you choose the one that suits you best, at no extra cost.",
+      "We listen, compare for you and stay with you until you get the keys. In El Sauzal there are two ways in: buy in pre-sale or move in right away.",
+    ctaPrimary: "Help me choose",
+    ctaSecondary: "Message on WhatsApp",
     tagline: "Building wealth for generations",
-    scroll: "Compare both options",
+    imageAlt: "Person walking into the ocean at sunset on the Ensenada coast",
+    picker: {
+      advisor: "Personally assisted by",
+      title: "What are you looking for?",
+      body: "Choose a path and we'll show you models, prices and payment options.",
+      help: "Not sure? We'll help you choose",
+    },
   },
   facts: [
-    { value: "2", label: "projects in El Sauzal, minutes from each other" },
-    { value: "$3.64M", label: "MXN entry price across the portfolio" },
-    { value: "6", label: "models, from a condo to a roof garden home" },
     { value: "$0", label: "extra cost for our advisory" },
+    { value: "2", label: "paths in El Sauzal: pre-sale or move-in ready" },
     { value: "+10", label: "years of Fran Morishita in real estate sales" },
+    { value: "$70M+", label: "MXN in real estate sales led" },
+    { value: "EN · ES", label: "we assist you in English or Spanish" },
   ],
-  compare: {
-    eyebrow: "Compare",
-    title: "Pre-sale or move-in ready?",
-    body: "Both are good decisions. The difference is when you want to move in and how you prefer to pay.",
-    rows: [
+  pains: {
+    eyebrow: "We get it",
+    title: "Buying a home shouldn't feel scary.",
+    body: "These are the concerns we hear most before people buy in Ensenada. Here's how we solve them with you.",
+    answerLabel: "What we do",
+    items: [
       {
-        label: "What it is",
-        preventa: "Single-level homes with a roof garden and ocean views",
-        vinedos: "Finished condos, penthouses and homes",
-      },
-      { label: "Entry price", preventa: "From MXN $3.9M", vinedos: "From MXN $3.64M" },
-      {
-        label: "When you move in",
-        preventa: "When construction ends: 14 months by contract",
-        vinedos: "As soon as you sign the deed",
+        icon: "compass",
+        concern: "I don't know whether to buy in pre-sale or something already finished.",
+        answer: "We compare both options with your numbers: when you want to move in, how much you have for a down payment and how you'll pay.",
       },
       {
-        label: "How you pay",
-        preventa: "20% down over 19 months and 80% at closing, with a mortgage or your own funds",
-        vinedos: "Bank mortgage, Infonavit or cash",
+        icon: "shield",
+        concern: "I'm afraid it won't be delivered, or won't be what was promised.",
+        answer: "We present developers with a track record. In pre-sale, a contract under NOM-247 and written warranties; with move-in ready, you tour your finished home before buying.",
       },
       {
-        label: "What you see when buying",
-        preventa: "Floor plans, renderings and construction progress",
-        vinedos: "The finished home and a lived-in community",
+        icon: "globe",
+        concern: "I live far away and can't come often.",
+        answer: "We show you everything by video call, send documents on WhatsApp and plan your visit so you see it all in one trip.",
       },
       {
-        label: "Biggest advantage",
-        preventa: "Pre-sale price and appreciation during construction",
-        vinedos: "Move in or rent from day one",
+        icon: "tag",
+        concern: "I don't want to overpay.",
+        answer: "You pay the developer's list price. Our advisory isn't added to your price.",
       },
       {
-        label: "Ideal for",
-        preventa: "A second home, retirement or ocean-view vacation rental",
-        vinedos: "Living there now, using your mortgage or investing without waiting",
+        icon: "file",
+        concern: "Mortgages, the notary and paperwork overwhelm me.",
+        answer: "We guide you through bank mortgages, Infonavit, the notary and, if you're a foreigner, the bank trust. Everything in writing, in English or Spanish.",
+      },
+      {
+        icon: "handshake",
+        concern: "Salespeople push and then disappear.",
+        answer: "One advisor from start to finish: Fran replies the same day and stays with you after delivery.",
       },
     ],
+    cta: "Tell us what you're looking for",
+    ctaNote: "We'll reply on WhatsApp today, no strings attached.",
+    dialogTitle: "Tell us what you're looking for",
+    dialogSubtitle: "Fran will message you on WhatsApp today with the options that fit you best.",
+  },
+  paths: {
+    eyebrow: "Two paths",
+    title: "Pre-sale or move-in ready?",
+    body: "Both are good decisions. The difference is when you want to move in and how you prefer to pay.",
+    fitLabel: "It's for you if…",
+    items: {
+      preventa: {
+        promise: "Buy today at the pre-sale price and move in when construction ends.",
+        fit: [
+          "You want a second home, retirement or vacation rental by the ocean",
+          "You'd rather pay your down payment over 19 months",
+          "You want the appreciation of buying before it's finished",
+        ],
+        facts: [
+          { label: "What it is", value: "Single-level homes with a roof garden and ocean views" },
+          { label: "Move in", value: "When construction ends: 14 months by contract" },
+          { label: "You pay", value: "20% down over 19 months and 80% at closing" },
+          { label: "What you see when buying", value: "Floor plans, renderings and construction progress" },
+        ],
+      },
+      vinedos: {
+        promise: "Buy something finished and move in at closing.",
+        fit: [
+          "You want to move in or rent as soon as possible",
+          "You'll use a bank mortgage or Infonavit",
+          "You'd rather tour your finished home before buying",
+        ],
+        facts: [
+          { label: "What it is", value: "Condos, penthouses and homes in a community with a clubhouse" },
+          { label: "Move in", value: "As soon as you sign the deed" },
+          { label: "You pay", value: "Bank mortgage, Infonavit or cash" },
+          { label: "What you see when buying", value: "The finished home and a lived-in community" },
+        ],
+      },
+    },
     quiz: {
       title: "Which one suits you?",
       body: "Two questions and we'll tell you where to start.",
@@ -352,12 +467,6 @@ const homeEn: HomeCopy = {
       ctaBoth: "Book a visit to both",
     },
   },
-  showcase: {
-    eyebrow: "Projects",
-    title: "Two projects, the same care.",
-    body: "We select each project for its location, construction quality and long-term value.",
-    from: "From",
-  },
   advisor: {
     ...en.advisor,
     title: "Talk directly with the person who selects every project.",
@@ -369,17 +478,17 @@ const homeEn: HomeCopy = {
     ],
   },
   trust: {
-    title: "Buy with backing and everything in writing.",
+    title: "We're with you every step.",
     items: [
       { icon: "building", title: "Selected projects", text: "Experienced developers and projects we know in person." },
       { icon: "contract", title: "Contract and deed reviewed", text: "We review the contract, notary and, if you're a foreigner, the bank trust with you." },
       { icon: "bank", title: "Clear payments", text: "A written payment plan: deferred down payment in pre-sale, or mortgage, Infonavit and cash for move-in ready." },
       { icon: "shield", title: "Full guidance", text: "From the first call to the keys, in English or Spanish." },
     ],
-    stepsTitle: "How we work",
+    stepsTitle: "How we work with you",
     steps: [
       { title: "Let's talk", text: "Tell us what you're looking for, what for and when." },
-      { title: "Compare", text: "We send prices, floor plans and numbers for both projects." },
+      { title: "Compare", text: "We send prices, floor plans and numbers for the options that fit you." },
       { title: "Visit", text: "Tour both in a single visit to El Sauzal, or by video call." },
       { title: "Move in", text: "Reserve, sign, and we'll be with you until the keys." },
     ],
@@ -397,6 +506,10 @@ const homeEn: HomeCopy = {
   faq: {
     title: "Frequently asked questions",
     items: [
+      {
+        q: "Why buy through an advisor instead of directly from the developer?",
+        a: "You pay the same list price and gain someone on your side: we compare options, review the numbers and contract with you, and guide you through the mortgage, notary and delivery.",
+      },
       {
         q: "Which projects does Legacy Capital offer?",
         a: "Currently two in El Sauzal, Ensenada's north end: a pre-sale of single-level homes with a roof garden and ocean views, and Viñedos del Mar, a finished community of move-in ready condos, penthouses and homes.",
@@ -428,10 +541,10 @@ const homeEn: HomeCopy = {
     ],
   },
   finalCta: {
-    title: "See both in a single visit.",
-    body: "Both projects are in El Sauzal, minutes from each other. Book a tour with Fran or a video call and decide with everything in view.",
+    title: "Let's find your place in Ensenada.",
+    body: "Book a tour or a video call with Fran. See both projects in a single visit and decide with everything in view, no pressure.",
     formTitle: "Book your visit",
-    imageAlt: "Sunset over the Pacific Ocean",
+    imageAlt: "Ensenada's coastal highway at sunset",
   },
   form: {
     ...en.form,

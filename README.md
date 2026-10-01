@@ -1,8 +1,16 @@
 # Legacy Capital Real Estate
 
-Landing de captación de leads de Legacy Capital Real Estate (Ensenada, B.C.) para la preventa de casas con roof garden y vista al mar en El Sauzal. Español en `/`, inglés en `/en`.
+Sitio de captación de leads de Legacy Capital Real Estate (Ensenada, B.C.) con un portafolio de dos proyectos en El Sauzal: una preventa de casas con roof garden y vista al mar, y Viñedos del Mar, con entrega inmediata.
 
-**Estrategia:** el sitio no publica el nombre comercial del desarrollo ni del desarrollador, ni el inventario por lote. Legacy Capital y Fran Morishita son los protagonistas; esa información se comparte por WhatsApp con cada prospecto.
+| Ruta (ES / EN) | Página |
+| --- | --- |
+| `/` · `/en` | Portafolio: los dos proyectos, comparativa y recomendador |
+| `/preventa` · `/en/presale` | Preventa con vista al mar |
+| `/vinedos-del-mar` · `/en/vinedos-del-mar` | Viñedos del Mar (departamentos y casas terminados) |
+
+**Estrategia:** la preventa no publica el nombre comercial del desarrollo ni del desarrollador, ni el inventario por lote. Viñedos del Mar sí se nombra, pero no su desarrollador. Legacy Capital y Fran Morishita son los protagonistas; el inventario disponible se comparte por WhatsApp con cada prospecto.
+
+**Código de color:** dorado = preventa, verde viñedo = entrega inmediata (`components/ui/StatusChip.tsx`), en la barra de proyectos, menú, pie de página y tarjetas.
 
 **Stack:** Next.js 16 (App Router) · Tailwind CSS v4 · Motion · Phosphor Icons · Supabase (leads y capacitación) · Vercel (hosting y analítica).
 
@@ -11,6 +19,7 @@ Landing de captación de leads de Legacy Capital Real Estate (Ensenada, B.C.) pa
 - Formularios: hero, modal global (precios, visita, corrida, modelo, planos, estudio), sección de estudio de rentabilidad, cierre y aviso de salida (solo escritorio).
 - Lead magnet: el estudio de rentabilidad (PDF) **no está en el sitio**. Al dejar sus datos, el prospecto abre WhatsApp con un mensaje listo y Fran le envía el PDF (se recomienda una respuesta rápida con el PDF en WhatsApp Business, o automatizarlo con `LEAD_WEBHOOK_URL`).
 - Perfiles de comprador (Ensenada, California, mexicoamericanos, Monterrey, CDMX, Guadalajara): el perfil elegido se guarda en la columna `perfil` y en `origen` (`perfil-monterrey`, etc.).
+- Cada lead lleva su proyecto en la columna `proyecto` (`preventa`, `vinedos` o `general`): lo pone la página donde se llenó el formulario; en la portada el formulario pregunta "¿Qué te interesa?". En `interes`, Viñedos usa `depa`, `ph`, `casa` o el modelo (`palomino`, `palomino_ph`, `azur`, `teide`).
 - `POST /api/leads` valida con Zod, filtra bots (campo trampa, tiempo mínimo, límite por IP) y guarda vía RPC `public.submit_lead`.
 - `PATCH /api/leads` agrega la calificación opcional (plazo, forma de pago, uso) con el token del alta.
 - La tabla `public.leads` tiene RLS sin políticas: la llave pública no puede leerla. Las funciones exigen `LEADS_RPC_SECRET`, que solo vive en el servidor.
@@ -38,7 +47,8 @@ Ver `.env.example`. En Vercel: `NEXT_PUBLIC_SITE_URL`, `NEXT_PUBLIC_SUPABASE_URL
 
 ## Contenido
 
-- Textos: `lib/i18n/es.ts` y `lib/i18n/en.ts` (misma estructura).
+- Textos de la preventa: `lib/i18n/es.ts` y `lib/i18n/en.ts` (misma estructura). Portada: `lib/i18n/home.ts`. Viñedos del Mar: `lib/i18n/vinedos.ts`. Tarjetas de cada proyecto (precio desde, estatus, foto): `lib/i18n/portfolio.ts`. Rutas: `lib/projects.ts`.
+- Viñedos del Mar: precios de lista y mensualidades de referencia del desarrollador (octubre de 2026), en `lib/i18n/vinedos.ts` y en el JSON-LD de `components/Vinedos.tsx`; actualizarlos cuando cambie la lista. Fotos y videos en `public/img/vdm/` y `public/video/vdm-*`.
 - Perfiles de comprador y estudio de rentabilidad: `personas` y `study` en los diccionarios.
 - Promoción de septiembre y datos de contacto: `lib/site.ts` (la barra promocional se oculta sola al vencer `promoEndsAt`).
 - Aviso de privacidad: `lib/legal/privacy.ts` (revisar con un abogado: razón social y domicilio completos).
@@ -53,4 +63,4 @@ npm run dev
 npm run build && npm start
 ```
 
-Migraciones de base de datos: `supabase/migrations/` (leads y capacitación).
+Migraciones de base de datos: `supabase/migrations/` (leads, proyecto del lead y capacitación).

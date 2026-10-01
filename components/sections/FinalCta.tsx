@@ -14,14 +14,15 @@ type Props = {
   whatsappLabel: string;
   lang: Lang;
   privacyHref: string;
+  image?: string;
 };
 
 /** Bloque navy final (único cambio de tema de la página, transición deliberada hacia el pie). */
-export function FinalCta({ t, form, whatsappLabel, lang, privacyHref }: Props) {
+export function FinalCta({ t, form, whatsappLabel, lang, privacyHref, image = "/img/sunset-ocean.jpg" }: Props) {
   return (
     <section id="visita" aria-labelledby="final-title" className="relative isolate overflow-hidden bg-navy-900 text-cream-100 dark:bg-navy-950">
       <div className="absolute inset-0 -z-10">
-        <Image src="/img/sunset-ocean.jpg" alt={t.imageAlt} fill sizes="100vw" className="object-cover opacity-45" />
+        <Image src={image} alt={t.imageAlt} fill sizes="100vw" className="object-cover opacity-45" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-900 via-navy-900/85 to-navy-900/40 dark:from-navy-950 dark:via-navy-950/85" />
       </div>
       <div className="container-x grid items-center gap-14 py-24 md:py-32 lg:grid-cols-[1fr_27rem] lg:gap-20">
@@ -50,7 +51,7 @@ export function FinalCta({ t, form, whatsappLabel, lang, privacyHref }: Props) {
             origin="visita-final"
             submitLabel={form.submitVisit}
             defaults={{ modo_visita: "presencial" }}
-            fields={{ interest: true, visit: true, email: true, message: true }}
+            fields={{ interest: true, visit: true, email: true, message: true, project: true }}
             privacyHref={privacyHref}
           />
         </Reveal>

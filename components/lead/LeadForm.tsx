@@ -7,14 +7,31 @@ import type { Dict } from "@/lib/i18n/es";
 import { readAttribution } from "@/lib/attribution";
 import { trackEvent } from "@/lib/track";
 import { waLink, type Lang } from "@/lib/site";
+import type { LeadProject } from "@/lib/projects";
+import { useLead } from "./context";
 
-export type Interest = "2R" | "3R" | "inversion" | "segunda_casa" | "vivir" | "explorando";
+export type Interest =
+  | "2R"
+  | "3R"
+  | "inversion"
+  | "segunda_casa"
+  | "vivir"
+  | "explorando"
+  // Viñedos del Mar: tipo de producto y modelo
+  | "depa"
+  | "ph"
+  | "casa"
+  | "palomino"
+  | "palomino_ph"
+  | "azur"
+  | "teide";
 
 export type Perfil = "ensenada" | "california" | "mexicoamericano" | "monterrey" | "cdmx" | "guadalajara";
 
 export type LeadDefaults = {
   interes?: Interest;
   perfil?: Perfil;
+  proyecto?: LeadProject;
   esquema_pago?: "financiado" | "contado";
   modo_visita?: "presencial" | "videollamada";
 };
@@ -25,7 +42,8 @@ type Props = {
   origin: string;
   submitLabel: string;
   defaults?: LeadDefaults;
-  fields?: { interest?: boolean; email?: boolean; visit?: boolean; message?: boolean };
+  /** project: pregunta qué proyecto le interesa (solo en páginas sin proyecto, como la principal) */
+  fields?: { interest?: boolean; email?: boolean; visit?: boolean; message?: boolean; project?: boolean };
   privacyHref: string;
   autoFocus?: boolean;
   /** Mensaje de WhatsApp y texto de éxito propios (p. ej. para el brochure) */
@@ -53,6 +71,7 @@ export function LeadForm({
   successBody,
 }: Props) {
   const uid = useId();
+  const { project: pageProject } = useLead();
   const mountedAt = useRef(0);
   const nameRef = useRef<HTMLInputElement>(null);
   const focusOnMount = useCallback((el: HTMLElement | null) => el?.focus({ preventScroll: true }), []);
@@ -61,6 +80,8 @@ export function LeadForm({
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [interes, setInteres] = useState<Interest | undefined>(defaults?.interes);
+  const [proyecto, setProyecto] = useState<LeadProject | undefined>(defaults?.proyecto ?? pageProject);
+  const askProject = Boolean(fields.project && !defaults?.proyecto && !pageProject);
   const [modo, setModo] = useState<LeadDefaults["modo_visita"]>(defaults?.modo_visita);
   const [fecha, setFecha] = useState("");
   const [mensaje, setMensaje] = useState("");
@@ -84,8 +105,10 @@ export function LeadForm({
   const interestLabel = t.interests.find((i) => i.value === interes)?.label;
   const firstName = name.trim().split(/\s+/)[0] || "";
 
+  const projectPhrase = t.projects.find((p) => p.value === (proyecto ?? "general"))?.wa ?? "";
   const waMessage = (waTemplate ?? t.waMessage)
     .replace("{name}", name.trim() || "-")
+    .replace("{project}", projectPhrase)
     .replace("{interest}", interestLabel ? ` (${interestLabel.toLowerCase()})` : "");
 
   function validate() {
@@ -112,6 +135,7 @@ export function LeadForm({
           email: email.trim(),
           interes,
           perfil: defaults?.perfil,
+          proyecto: proyecto ?? "general",
           origen: origin,
           mensaje: mensaje.trim(),
           modo_visita: modo,
@@ -131,7 +155,7 @@ export function LeadForm({
         // Ya dejó sus datos: no mostrar el aviso de salida en esta sesión
         sessionStorage.setItem("lc_exit", "1");
       } catch {}
-      trackEvent("lead", { origin, interest: interes, profile: defaults?.perfil, lang });
+      trackEvent("lead", { origin, interest: interes, profile: defaults?.perfil, project: proyecto ?? "general", lang });
     } catch {
       setStatus("idle");
       setErrors({ form: t.errors.generic });
@@ -296,6 +320,24 @@ export function LeadForm({
           className="grid gap-4"
         >
           {steps(1)}
+          {askProject && (
+            <fieldset className="grid gap-2">
+              <legend className="mb-2 text-sm font-medium">{t.project}</legend>
+              <div className="flex flex-wrap gap-2">
+                {t.projects.map((opt) => (
+                  <button
+                    key={opt.value}
+                    type="button"
+                    className="chip"
+                    aria-pressed={proyecto === opt.value}
+                    onClick={() => setProyecto(opt.value as LeadProject)}
+                  >
+                    {opt.label}
+                  </button>
+                ))}
+              </div>
+            </fieldset>
+          )}
           <div className="grid gap-1.5">
             <label htmlFor={`${uid}-name`} className="text-sm font-medium">
               {t.name}

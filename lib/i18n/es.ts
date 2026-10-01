@@ -33,7 +33,7 @@ export const es = {
       { href: "#ensenada", label: "Ensenada" },
     ],
     cta: "Lista de precios",
-    switchLang: { label: "English", href: "/en", short: "EN" },
+    switchLang: { label: "English", href: "/en/presale", short: "EN" },
     advisors: { label: "Acceso asesores", href: "/capacitacion" },
   },
   promo: {
@@ -69,6 +69,12 @@ export const es = {
     phonePh: "10 dígitos",
     email: "Correo (opcional)",
     emailPh: "tu@correo.com",
+    project: "¿Qué te interesa?",
+    projects: [
+      { value: "preventa", label: "Preventa con vista al mar", wa: "las casas con vista al mar en preventa" },
+      { value: "vinedos", label: "Viñedos del Mar · entrega inmediata", wa: "Viñedos del Mar (entrega inmediata)" },
+      { value: "general", label: "Los dos", wa: "la preventa con vista al mar y Viñedos del Mar" },
+    ],
     interest: "¿Qué buscas?",
     interests: [
       { value: "segunda_casa", label: "Segunda casa" },
@@ -498,6 +504,11 @@ export const es = {
       "Mensualidad calculada con los precios del brochure de septiembre 2026. El diferido se cubre dentro de un plazo de hasta 19 meses; el número de mensualidades puede variar según la fecha de firma y de escrituración. Esquema válido únicamente con firma de contrato.",
     cta: "Recibir mi corrida",
     promo: "Además, si apartas en septiembre obtienes 5% de descuento (primeras 10 casas).",
+  },
+  crossSell: {
+    eyebrow: "¿Quieres estrenar ya?",
+    title: "Viñedos del Mar: entrega inmediata, a minutos de aquí.",
+    body: "Departamentos, penthouses y casas terminados con casa club y alberca, desde $3.64 MDP con crédito, Infonavit o contado.",
   },
   ensenada: {
     title: "24 horas en Ensenada.",

@@ -1,5 +1,7 @@
 import type { Dict } from "@/lib/i18n/es";
 import { site, type Lang } from "@/lib/site";
+import { href } from "@/lib/projects";
+import { portfolio } from "@/lib/i18n/portfolio";
 import { LeadProvider } from "@/components/lead/LeadProvider";
 import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
@@ -21,9 +23,10 @@ import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/sections/Footer";
 import { FloatingActions } from "@/components/sections/FloatingActions";
+import { CrossSell } from "@/components/sections/CrossSell";
 
 function jsonLd(t: Dict, lang: Lang) {
-  const url = lang === "en" ? `${site.url}/en` : site.url;
+  const url = `${site.url}${href("preventa", lang)}`;
   return [
     {
       "@context": "https://schema.org",
@@ -68,19 +71,26 @@ function jsonLd(t: Dict, lang: Lang) {
   ];
 }
 
+/** Preventa de casas con roof garden y vista al mar en El Sauzal (sin nombre comercial). */
 export function Landing({ t, lang }: { t: Dict; lang: Lang }) {
-  const privacyHref = lang === "en" ? "/en/privacy" : "/aviso-de-privacidad";
-  const homeHref = lang === "en" ? "/en" : "/";
+  const privacyHref = href("privacy", lang);
+  const homeHref = href("home", lang);
+  const p = portfolio[lang];
 
   return (
-    <LeadProvider t={{ form: t.form, dialog: t.dialog, a11y: t.a11y, quickForm: t.quickForm }} lang={lang} privacyHref={privacyHref}>
+    <LeadProvider
+      t={{ form: t.form, dialog: t.dialog, a11y: t.a11y, quickForm: t.quickForm }}
+      lang={lang}
+      privacyHref={privacyHref}
+      project="preventa"
+    >
       <a
         href="#contenido"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[90] focus:rounded-full focus:bg-ink focus:px-5 focus:py-3 focus:text-bg"
       >
         {t.a11y.skip}
       </a>
-      <Header t={{ nav: t.nav, promo: t.promo, a11y: t.a11y }} homeHref={homeHref} />
+      <Header t={{ nav: t.nav, promo: t.promo, a11y: t.a11y }} homeHref={homeHref} portfolio={p} active="preventa" />
       <main id="contenido">
         <Hero t={{ hero: t.hero, quickForm: t.quickForm, form: t.form }} lang={lang} privacyHref={privacyHref} />
         <Facts t={t.facts} label={t.a11y.facts} />
@@ -96,12 +106,13 @@ export function Landing({ t, lang }: { t: Dict; lang: Lang }) {
         <Invest t={t.invest} lang={lang} />
         <StudyMagnet t={t.study} form={t.form} lang={lang} privacyHref={privacyHref} />
         <Payments t={t.payments} models={t.models.tabs} lang={lang} />
+        <CrossSell item={p.items[1]} t={t.crossSell} />
         <Trust t={t.trust} />
         <Ensenada t={t.ensenada} />
         <Faq t={t.faq} />
         <FinalCta t={t.finalCta} form={t.form} whatsappLabel={t.hero.ctaSecondary} lang={lang} privacyHref={privacyHref} />
       </main>
-      <Footer t={t.footer} nav={t.nav} waGeneric={t.form.waGeneric} privacyHref={privacyHref} navLabel={t.a11y.footerNav} />
+      <Footer t={t.footer} nav={t.nav} waGeneric={t.form.waGeneric} privacyHref={privacyHref} navLabel={t.a11y.footerNav} portfolio={p} />
       <FloatingActions t={t.mobileBar} exit={t.exit} waGeneric={t.form.waGeneric} label={t.a11y.quickActions} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(t, lang)).replace(/</g, "\\u003c") }} />
     </LeadProvider>

@@ -4,10 +4,16 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 import { List, X, ArrowRight, Globe, UserCircle } from "@phosphor-icons/react";
+import Image from "next/image";
 import type { Dict } from "@/lib/i18n/es";
+import type { NavCopy } from "@/lib/i18n/types";
+import type { PortfolioCopy } from "@/lib/i18n/portfolio";
+import type { ProjectId } from "@/lib/projects";
 import { site } from "@/lib/site";
 import { Logo } from "@/components/ui/Logo";
-import { useLead } from "@/components/lead/LeadProvider";
+import { StatusChip, StatusDot } from "@/components/ui/StatusChip";
+
+import { useLead, type LeadKind } from "@/components/lead/LeadProvider";
 
 function useCountdown(target: string) {
   const [left, setLeft] = useState<number | null>(null);
@@ -21,13 +27,22 @@ function useCountdown(target: string) {
   return left;
 }
 
-export function Header({ t, homeHref }: { t: Pick<Dict, "nav" | "promo" | "a11y">; homeHref: string }) {
+type Props = {
+  t: { nav: NavCopy; a11y: Dict["a11y"]; promo?: Dict["promo"] };
+  homeHref: string;
+  /** Selector de proyectos (preventa / entrega inmediata) */
+  portfolio?: PortfolioCopy;
+  active?: ProjectId;
+  ctaKind?: LeadKind;
+};
+
+export function Header({ t, homeHref, portfolio, active, ctaKind = "prices" }: Props) {
   const { openLead } = useLead();
   const { scrollY } = useScroll();
   const [solid, setSolid] = useState(false);
   const [open, setOpen] = useState(false);
   const left = useCountdown(site.promoEndsAt);
-  const promoActive = left !== null && left > 0;
+  const promoActive = Boolean(t.promo) && left !== null && left > 0;
 
   useMotionValueEvent(scrollY, "change", (y) => {
     const next = y > 40;
@@ -53,7 +68,35 @@ export function Header({ t, homeHref }: { t: Pick<Dict, "nav" | "promo" | "a11y"
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      {promoActive && (
+      {portfolio && (
+        <nav aria-label={portfolio.switcherLabel} className="bg-navy-950 text-cream-100">
+          <div className="container-x flex h-9 items-stretch gap-1 text-[0.75rem]">
+            <span className="mr-3 hidden items-center font-semibold uppercase tracking-[0.18em] text-cream-100/45 md:flex">
+              {portfolio.title}
+            </span>
+            {portfolio.items.map((p) => {
+              const on = p.id === active;
+              return (
+                <Link
+                  key={p.id}
+                  href={p.href}
+                  aria-current={on ? "page" : undefined}
+                  className={`flex min-w-0 items-center gap-2 px-3 transition-colors first:pl-0 md:first:pl-3 ${
+                    on
+                      ? "text-cream-100 shadow-[inset_0_-2px_0_#c5a564]"
+                      : "text-cream-100/65 hover:text-cream-100"
+                  }`}
+                >
+                  <StatusDot project={p.id} />
+                  <span className="whitespace-nowrap font-semibold">{p.status}</span>
+                  <span className="hidden truncate text-cream-100/55 sm:inline">· {p.name}</span>
+                </Link>
+              );
+            })}
+          </div>
+        </nav>
+      )}
+      {promoActive && t.promo && (
         <button
           type="button"
           onClick={() => openLead({ kind: "prices", origin: "promo-bar" })}
@@ -88,7 +131,7 @@ export function Header({ t, homeHref }: { t: Pick<Dict, "nav" | "promo" | "a11y"
               <li key={l.href}>
                 <a
                   href={l.href}
-                  className={`relative text-[0.92rem] font-medium transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 hover:after:scale-x-100 ${
+                  className={`relative whitespace-nowrap text-[0.92rem] font-medium transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 hover:after:scale-x-100 ${
                     light ? "text-cream-100/90 hover:text-cream-100" : "text-ink-soft hover:text-ink"
                   }`}
                 >
@@ -121,7 +164,7 @@ export function Header({ t, homeHref }: { t: Pick<Dict, "nav" | "promo" | "a11y"
             </a>
             <button
               type="button"
-              onClick={() => openLead({ kind: "prices", origin: "nav" })}
+              onClick={() => openLead({ kind: ctaKind, origin: "nav" })}
               className={`btn hidden px-5 py-3 text-sm md:inline-flex ${light ? "btn-gold" : "btn-primary"}`}
             >
               {t.nav.cta}
@@ -147,8 +190,38 @@ export function Header({ t, homeHref }: { t: Pick<Dict, "nav" | "promo" | "a11y"
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
             className="fixed inset-x-0 bottom-0 top-[4.5rem] overflow-y-auto bg-bg lg:hidden"
-            style={{ top: promoActive ? "calc(4.5rem + 2.1rem)" : "4.5rem" }}
+            style={{ top: `calc(4.5rem${promoActive ? " + 2.1rem" : ""}${portfolio ? " + 2.25rem" : ""})` }}
           >
+            {portfolio && (
+              <div className="container-x grid grid-cols-2 gap-3 pt-6">
+                {portfolio.items.map((p, i) => (
+                  <motion.div
+                    key={p.id}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.05 * i, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                  >
+                    <Link
+                      href={p.href}
+                      onClick={() => setOpen(false)}
+                      aria-current={p.id === active ? "page" : undefined}
+                      className={`group block overflow-hidden rounded-2xl border bg-surface ${
+                        p.id === active ? "border-ink" : "border-line"
+                      }`}
+                    >
+                      <span className="relative block aspect-[4/3] overflow-hidden">
+                        <Image src={p.image} alt="" fill sizes="50vw" className="object-cover" />
+                      </span>
+                      <span className="block p-3">
+                        <StatusChip project={p.id} label={p.status} className="!px-2 !py-1 !text-[0.6rem]" />
+                        <span className="mt-2 block text-sm font-semibold leading-snug">{p.name}</span>
+                        <span className="mt-0.5 block text-xs text-ink-soft">{p.price}</span>
+                      </span>
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+            )}
             <ul className="container-x grid gap-1 py-8">
               {t.nav.links.map((l, i) => (
                 <motion.li
@@ -174,7 +247,7 @@ export function Header({ t, homeHref }: { t: Pick<Dict, "nav" | "promo" | "a11y"
                 className="btn btn-primary w-full"
                 onClick={() => {
                   setOpen(false);
-                  openLead({ kind: "prices", origin: "menu" });
+                  openLead({ kind: ctaKind, origin: "menu" });
                 }}
               >
                 {t.nav.cta}

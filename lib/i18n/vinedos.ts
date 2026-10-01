@@ -1,7 +1,8 @@
-// Viñedos del Mar (El Sauzal, Ensenada): producto terminado con entrega inmediata.
+// Entrega inmediata (El Sauzal, Ensenada): producto terminado. Igual que en la preventa, no se publica
+// el nombre del desarrollo, del desarrollador ni de los modelos.
 // Fuente: sitio oficial del desarrollo y fichas de cada prototipo (consultados en octubre de 2026):
 // modelos, superficies, precios de lista "desde", mensualidades de referencia, amenidades,
-// ubicación (carretera Tecate–Ensenada km 103.5) y tiempos de traslado. No se publica el nombre del
+// ubicación (El Sauzal) y tiempos de traslado. No se publica el nombre del
 // desarrollador: Legacy Capital lo comparte directamente con cada prospecto.
 
 import { es } from "@/lib/i18n/es";
@@ -112,7 +113,7 @@ export type VdmCopy = {
   a11y: Dict["a11y"];
 };
 
-const MAPS = "https://www.google.com/maps/search/?api=1&query=Vi%C3%B1edos+del+Mar%2C+El+Sauzal%2C+Ensenada%2C+B.C.";
+const MAPS = "https://www.google.com/maps/search/?api=1&query=El+Sauzal%2C+Ensenada%2C+B.C.";
 export const vdmMapsUrl = MAPS;
 
 const img = (name: string) => `/img/vdm/${name}.jpg`;
@@ -121,10 +122,10 @@ const img = (name: string) => `/img/vdm/${name}.jpg`;
 
 const vdmEs: VdmCopy = {
   meta: {
-    title: "Viñedos del Mar: departamentos y casas con entrega inmediata en Ensenada | Legacy Capital",
+    title: "Departamentos y casas con entrega inmediata en Ensenada | Legacy Capital",
     description:
-      "Departamentos, penthouses y casas terminados en Viñedos del Mar, El Sauzal, a 10 minutos del Valle de Guadalupe. Desde $3.64 MDP con crédito bancario, Infonavit o contado. Agenda tu recorrido con Legacy Capital.",
-    ogAlt: "Viñedos del Mar: alberca y casa club, entrega inmediata en Ensenada",
+      "Departamentos, penthouses y casas terminados en El Sauzal, a 10 minutos del Valle de Guadalupe. Desde $3.64 MDP con crédito bancario, Infonavit o contado. Agenda tu recorrido con Legacy Capital.",
+    ogAlt: "Alberca y casa club, entrega inmediata en Ensenada",
   },
   nav: {
     links: [
@@ -135,7 +136,7 @@ const vdmEs: VdmCopy = {
       { href: "#asesor", label: "Asesor" },
     ],
     cta: "Ver inventario",
-    switchLang: { label: "English", href: "/en/vinedos-del-mar", short: "EN" },
+    switchLang: { label: "English", href: "/en/move-in-ready", short: "EN" },
     advisors: es.nav.advisors,
   },
   hero: {
@@ -143,10 +144,10 @@ const vdmEs: VdmCopy = {
     place: "El Sauzal, Ensenada",
     title: "Estrena hoy, a las puertas del Valle de Guadalupe.",
     subtitle:
-      "Departamentos, penthouses y casas terminados en Viñedos del Mar, una comunidad con casa club y alberca entre el mar y la ruta del vino. Desde $3.64 MDP.",
+      "Departamentos, penthouses y casas terminados en una comunidad con casa club y alberca entre el mar y la ruta del vino. Desde $3.64 MDP.",
     ctaPrimary: "Ver inventario disponible",
     ctaSecondary: "Escribir por WhatsApp",
-    imageAlt: "Alberca con pérgola y casa club de Viñedos del Mar",
+    imageAlt: "Alberca con pérgola y casa club de la comunidad",
     tagline: "Building wealth for generations",
   },
   quickForm: {
@@ -182,8 +183,8 @@ const vdmEs: VdmCopy = {
       whatsapp: "Recibirlo ahora por WhatsApp",
     },
     waMessage:
-      "Hola Fran, soy {name}. Me interesa Viñedos del Mar en Ensenada{interest}. ¿Me compartes el inventario disponible y los precios?",
-    waGeneric: "Hola Fran, me interesa Viñedos del Mar en Ensenada. ¿Me compartes el inventario disponible y los precios?",
+      "Hola Fran, soy {name}. Me interesan los departamentos y casas con entrega inmediata en Ensenada{interest}. ¿Me compartes el inventario disponible y los precios?",
+    waGeneric: "Hola Fran, me interesan los departamentos y casas con entrega inmediata en Ensenada. ¿Me compartes el inventario disponible y los precios?",
   },
   facts: [
     { value: "4", label: "modelos, del departamento a la casa con roof top" },
@@ -196,7 +197,7 @@ const vdmEs: VdmCopy = {
     eyebrow: "Del departamento a la casa",
     title: "Cuatro modelos terminados. Elige el tuyo.",
     body: "Desde un departamento de 2 recámaras hasta una casa de tres plantas con roof top. Te mostramos las unidades disponibles hoy de cada modelo.",
-    tabsLabel: "Modelos de Viñedos del Mar",
+    tabsLabel: "Modelos disponibles",
     from: "Desde",
     monthly: "Mensualidad de referencia desde",
     viewPhotos: "Fotos",
@@ -211,10 +212,10 @@ const vdmEs: VdmCopy = {
     note: "Precios de lista del desarrollador (octubre de 2026), en MXN, sujetos a cambio y disponibilidad. *Mensualidad de referencia con crédito hipotecario; depende de tu enganche, plazo, tasa y aprobación.",
     items: [
       {
-        id: "palomino",
-        interest: "palomino",
+        id: "depa",
+        interest: "depa",
         type: "Departamento",
-        name: "Palomino",
+        name: "Departamento 2R",
         tagline: "2 recámaras, tres balcones y roof top en el edificio.",
         price: "$3.64 MDP",
         monthly: "$37,434",
@@ -233,20 +234,20 @@ const vdmEs: VdmCopy = {
           "Estacionamiento",
         ],
         images: [
-          { src: img("palomino-1"), alt: "Sala y comedor del departamento Palomino" },
-          { src: img("palomino-2"), alt: "Cocina con barra del departamento Palomino" },
-          { src: img("palomino-3"), alt: "Comedor junto al ventanal del departamento Palomino" },
-          { src: img("palomino-4"), alt: "Recámara principal del departamento Palomino" },
-          { src: img("palomino-5"), alt: "Comedor decorado de un departamento Palomino" },
-          { src: img("palomino-6"), alt: "Recámara decorada de un departamento Palomino" },
+          { src: img("depa-1"), alt: "Sala y comedor del departamento" },
+          { src: img("depa-2"), alt: "Cocina con barra del departamento" },
+          { src: img("depa-3"), alt: "Comedor junto al ventanal del departamento" },
+          { src: img("depa-4"), alt: "Recámara principal del departamento" },
+          { src: img("depa-5"), alt: "Comedor decorado de un departamento" },
+          { src: img("depa-6"), alt: "Recámara decorada de un departamento" },
         ],
-        plan: img("plan-palomino"),
+        plan: img("plan-depa"),
       },
       {
-        id: "palomino-ph",
-        interest: "palomino_ph",
+        id: "ph",
+        interest: "ph",
         type: "Penthouse",
-        name: "Palomino Penthouse",
+        name: "Penthouse 2R",
         tagline: "Más espacio, tres balcones y terraza privada.",
         price: "$4.20 MDP",
         monthly: "$41,178",
@@ -265,7 +266,7 @@ const vdmEs: VdmCopy = {
           "Roof top común con pérgola",
         ],
         images: [
-          { src: img("ph-1"), alt: "Comedor amueblado de un Palomino Penthouse" },
+          { src: img("ph-1"), alt: "Comedor amueblado de un penthouse" },
           { src: img("ph-2"), alt: "Cocina con barra de granito" },
           { src: img("ph-3"), alt: "Sala amueblada con luz natural" },
           { src: img("ph-4"), alt: "Recámara principal amueblada" },
@@ -275,10 +276,10 @@ const vdmEs: VdmCopy = {
         plan: img("plan-ph"),
       },
       {
-        id: "azur",
-        interest: "azur",
+        id: "casa3r",
+        interest: "casa",
         type: "Casa",
-        name: "Azur",
+        name: "Casa 3R",
         tagline: "Dos plantas, patio y recámara principal con balcón.",
         price: "$4.91 MDP",
         monthly: "$51,412",
@@ -299,20 +300,20 @@ const vdmEs: VdmCopy = {
           "Puerta principal de seguridad",
         ],
         images: [
-          { src: img("azur-1"), alt: "Cocina con isla y comedor de la casa Azur" },
-          { src: img("azur-2"), alt: "Sala con muro de cristal hacia el patio en la casa Azur" },
-          { src: img("azur-3"), alt: "Sala amueblada de la casa Azur" },
-          { src: img("azur-4"), alt: "Recámara con balcón y vista en la casa Azur" },
-          { src: img("azur-5"), alt: "Comedor decorado de una casa Azur" },
-          { src: img("azur-6"), alt: "Baño con cancel de cristal en la casa Azur" },
+          { src: img("casa3r-1"), alt: "Cocina con isla y comedor de la casa 3R" },
+          { src: img("casa3r-2"), alt: "Sala con muro de cristal hacia el patio en la casa 3R" },
+          { src: img("casa3r-3"), alt: "Sala amueblada de la casa 3R" },
+          { src: img("casa3r-4"), alt: "Recámara con balcón y vista en la casa 3R" },
+          { src: img("casa3r-5"), alt: "Comedor decorado de una casa 3R" },
+          { src: img("casa3r-6"), alt: "Baño con cancel de cristal en la casa 3R" },
         ],
-        plan: img("plan-azur"),
+        plan: img("plan-casa3r"),
       },
       {
-        id: "teide",
-        interest: "teide",
+        id: "casaroof",
+        interest: "casa",
         type: "Casa con roof top",
-        name: "Teide",
+        name: "Casa Roof Top",
         tagline: "Tres plantas y una terraza en la azotea para cada atardecer.",
         price: "$5.30 MDP",
         monthly: "$54,122",
@@ -333,21 +334,21 @@ const vdmEs: VdmCopy = {
           "Puerta principal de seguridad",
         ],
         images: [
-          { src: img("teide-1"), alt: "Roof top de la casa Teide con terraza, tarja y vista a los cerros" },
-          { src: img("teide-2"), alt: "Comedor y sala de la casa Teide" },
-          { src: img("teide-3"), alt: "Cocina con isla y escalera de la casa Teide" },
-          { src: img("teide-4"), alt: "Recámara con ventanal y vista en la casa Teide" },
-          { src: img("teide-5"), alt: "Cocina con barra y comedor de una casa Teide" },
-          { src: img("teide-6"), alt: "Recámara secundaria de la casa Teide" },
+          { src: img("casaroof-1"), alt: "Roof top de la casa roof top con terraza, tarja y vista a los cerros" },
+          { src: img("casaroof-2"), alt: "Comedor y sala de la casa roof top" },
+          { src: img("casaroof-3"), alt: "Cocina con isla y escalera de la casa roof top" },
+          { src: img("casaroof-4"), alt: "Recámara con ventanal y vista en la casa roof top" },
+          { src: img("casaroof-5"), alt: "Cocina con barra y comedor de una casa roof top" },
+          { src: img("casaroof-6"), alt: "Recámara secundaria de la casa roof top" },
         ],
-        plan: img("plan-teide"),
+        plan: img("plan-casaroof"),
       },
     ],
   },
   immediate: {
     eyebrow: "Entrega inmediata",
     title: "Sin esperar obra: la recorres, la apartas y la estrenas.",
-    body: "Viñedos del Mar ya está construido y habitado. Lo que ves en tu recorrido es lo que compras.",
+    body: "La comunidad ya está construida y habitada. Lo que ves en tu recorrido es lo que compras.",
     pillars: [
       {
         icon: "eye",
@@ -376,7 +377,7 @@ const vdmEs: VdmCopy = {
     tiles: [
       { image: img("pool-drone"), alt: "Alberca de la casa club vista desde el aire", caption: "Alberca de la casa club" },
       { image: img("firepit"), alt: "Fogatero entre muros de piedra junto a la casa club", caption: "Fogatero junto a la casa club" },
-      { image: img("rooftop-terrace"), alt: "Roof top amueblado de una casa Teide", caption: "Roof top del modelo Teide" },
+      { image: img("rooftop-terrace"), alt: "Roof top amueblado de una casa roof top", caption: "Roof top del modelo roof top" },
       { image: img("towers-pool"), alt: "Edificios de departamentos con alberca", caption: "Edificios de departamentos" },
     ],
   },
@@ -394,7 +395,7 @@ const vdmEs: VdmCopy = {
       { icon: "rooftop", label: "Roof top en edificios" },
       { icon: "gate", label: "Acceso controlado" },
     ],
-    imageAlt: "Alberca y casa club de Viñedos del Mar al atardecer",
+    imageAlt: "Alberca y casa club de la comunidad al atardecer",
     note: "Comunidad privada con acceso controlado.",
   },
   audience: {
@@ -436,7 +437,7 @@ const vdmEs: VdmCopy = {
     ],
     nearbyTitle: "A unos minutos",
     nearby: ["Plaza Sauzal", "Hospital", "Escuelas y colegios", "Supermercados", "Gimnasios", "Playa Tres Emes"],
-    address: "Carretera Tecate–Ensenada km 103.5, El Sauzal, Ensenada, B.C.",
+    address: "El Sauzal, Ensenada, B.C.",
     mapCta: "Abrir en Google Maps",
     videoAlt: "Viñedos en el Valle de Guadalupe",
     caption: "El Valle de Guadalupe, a 10 minutos de casa.",
@@ -458,12 +459,12 @@ const vdmEs: VdmCopy = {
   trust: {
     title: "Compras algo que ya existe.",
     items: [
-      { icon: "building", title: "Comunidad terminada y habitada", text: "450 familias ya viven en Viñedos del Mar." },
+      { icon: "building", title: "Comunidad terminada y habitada", text: "450 familias ya viven en la comunidad." },
       { icon: "shield", title: "Desarrollador con trayectoria", text: "Más de 36 años construyendo comunidades residenciales en el noroeste de México." },
       { icon: "contract", title: "Escritura ante notario", text: "Compras con escritura pública: a tu nombre o, si eres extranjero, mediante fideicomiso." },
       { icon: "bank", title: "Crédito bancario e Infonavit", text: "Puedes comprar con crédito hipotecario, Infonavit o de contado." },
     ],
-    stepsTitle: "Cómo comprar en Viñedos del Mar",
+    stepsTitle: "Cómo comprar con entrega inmediata",
     steps: [
       { title: "Elige", text: "Te enviamos el inventario disponible y agendamos tu recorrido, en persona o por videollamada." },
       { title: "Aparta", text: "Reservas la unidad que elegiste." },
@@ -476,7 +477,7 @@ const vdmEs: VdmCopy = {
     items: [
       {
         q: "¿Las casas y departamentos ya están terminados?",
-        a: "Sí. Viñedos del Mar es producto terminado: recorres la unidad que vas a comprar y, una vez cubierto el pago o aprobado tu crédito, firmas la escritura y recibes tus llaves. Te compartimos el inventario disponible al día.",
+        a: "Sí. Es producto terminado: recorres la unidad que vas a comprar y, una vez cubierto el pago o aprobado tu crédito, firmas la escritura y recibes tus llaves. Te compartimos el inventario disponible al día.",
       },
       {
         q: "¿Puedo comprar con Infonavit o con crédito bancario?",
@@ -488,7 +489,7 @@ const vdmEs: VdmCopy = {
       },
       {
         q: "¿Qué diferencia hay entre los modelos?",
-        a: "Palomino es un departamento de 2 recámaras y 73.68 m²; el Palomino Penthouse suma 100.34 m² y terraza privada. Azur es una casa de dos plantas con 3 recámaras, y Teide, una casa de tres plantas con roof top, terraza y barra para asador.",
+        a: "El departamento tiene 2 recámaras y 73.68 m²; el penthouse suma 100.34 m² y terraza privada. La casa 3R es de dos plantas con 3 recámaras, y la casa roof top, de tres plantas con roof top, terraza y barra para asador.",
       },
       {
         q: "¿Qué amenidades tiene?",
@@ -518,9 +519,9 @@ const vdmEs: VdmCopy = {
   },
   finalCta: {
     title: "Visita la casa que vas a estrenar.",
-    body: "Agenda un recorrido por Viñedos del Mar con Fran: ves la unidad terminada, la casa club y la vista. Si quieres, ese mismo día conoces también la preventa con vista al mar, a unos minutos.",
+    body: "Agenda un recorrido con Fran: ves la unidad terminada, la casa club y la vista. Si quieres, ese mismo día conoces también la preventa con vista al mar, a unos minutos.",
     formTitle: "Agenda tu recorrido",
-    imageAlt: "Alberca y casa club de Viñedos del Mar al atardecer",
+    imageAlt: "Alberca y casa club de la comunidad al atardecer",
   },
   mobileBar: { whatsapp: "WhatsApp", prices: "Inventario", visit: "Recorrido" },
   exit: {
@@ -536,17 +537,17 @@ const vdmEs: VdmCopy = {
     floorplanTitle: "Recibe los planos con medidas",
   },
   footer: es.footer,
-  a11y: { ...es.a11y, facts: "Viñedos del Mar en cifras" },
+  a11y: { ...es.a11y, facts: "Entrega inmediata en cifras" },
 };
 
 // ---------------------------------------------------------------- English
 
 const vdmEn: VdmCopy = {
   meta: {
-    title: "Viñedos del Mar: move-in ready condos and homes in Ensenada | Legacy Capital",
+    title: "Move-in ready condos and homes in Ensenada | Legacy Capital",
     description:
-      "Finished condos, penthouses and homes at Viñedos del Mar, El Sauzal, 10 minutes from Valle de Guadalupe. From MXN $3.64M with a mortgage, Infonavit or cash. Book your tour with Legacy Capital.",
-    ogAlt: "Viñedos del Mar: pool and clubhouse, move-in ready in Ensenada",
+      "Finished condos, penthouses and homes in El Sauzal, 10 minutes from Valle de Guadalupe. From MXN $3.64M with a mortgage, Infonavit or cash. Book your tour with Legacy Capital.",
+    ogAlt: "Pool and clubhouse, move-in ready in Ensenada",
   },
   nav: {
     links: [
@@ -557,7 +558,7 @@ const vdmEn: VdmCopy = {
       { href: "#asesor", label: "Advisor" },
     ],
     cta: "See inventory",
-    switchLang: { label: "Español", href: "/vinedos-del-mar", short: "ES" },
+    switchLang: { label: "Español", href: "/entrega-inmediata", short: "ES" },
     advisors: en.nav.advisors,
   },
   hero: {
@@ -565,10 +566,10 @@ const vdmEn: VdmCopy = {
     place: "El Sauzal, Ensenada",
     title: "Move in now, at the gateway to Valle de Guadalupe.",
     subtitle:
-      "Finished condos, penthouses and homes at Viñedos del Mar, a community with a clubhouse and pool between the ocean and the wine route. From MXN $3.64M.",
+      "Finished condos, penthouses and homes in a community with a clubhouse and pool between the ocean and the wine route. From MXN $3.64M.",
     ctaPrimary: "See available inventory",
     ctaSecondary: "Message on WhatsApp",
-    imageAlt: "Pool with pergola and clubhouse at Viñedos del Mar",
+    imageAlt: "Pool with pergola and clubhouse in the community",
     tagline: "Building wealth for generations",
   },
   quickForm: {
@@ -604,8 +605,8 @@ const vdmEn: VdmCopy = {
       whatsapp: "Get it now on WhatsApp",
     },
     waMessage:
-      "Hi Fran, I'm {name}. I'm interested in Viñedos del Mar in Ensenada{interest}. Could you share the available inventory and prices?",
-    waGeneric: "Hi Fran, I'm interested in Viñedos del Mar in Ensenada. Could you share the available inventory and prices?",
+      "Hi Fran, I'm {name}. I'm interested in the move-in ready condos and homes in Ensenada{interest}. Could you share the available inventory and prices?",
+    waGeneric: "Hi Fran, I'm interested in the move-in ready condos and homes in Ensenada. Could you share the available inventory and prices?",
   },
   facts: [
     { value: "4", label: "models, from a condo to a home with a rooftop" },
@@ -618,7 +619,7 @@ const vdmEn: VdmCopy = {
     eyebrow: "From condo to house",
     title: "Four finished models. Choose yours.",
     body: "From a 2-bedroom condo to a three-story home with a rooftop. We'll show you the units available today for each model.",
-    tabsLabel: "Viñedos del Mar models",
+    tabsLabel: "Available models",
     from: "From",
     monthly: "Reference monthly payment from",
     viewPhotos: "Photos",
@@ -633,10 +634,10 @@ const vdmEn: VdmCopy = {
     note: "Developer list prices (October 2026) in Mexican pesos, subject to change and availability. *Reference monthly payment with a mortgage; it depends on your down payment, term, rate and approval.",
     items: [
       {
-        id: "palomino",
-        interest: "palomino",
+        id: "depa",
+        interest: "depa",
         type: "Condo",
-        name: "Palomino",
+        name: "2BR Condo",
         tagline: "2 bedrooms, three balconies and a building rooftop.",
         price: "MXN $3.64M",
         monthly: "MXN $37,434",
@@ -655,20 +656,20 @@ const vdmEn: VdmCopy = {
           "Parking",
         ],
         images: [
-          { src: img("palomino-1"), alt: "Living and dining area of the Palomino condo" },
-          { src: img("palomino-2"), alt: "Kitchen with breakfast bar in the Palomino condo" },
-          { src: img("palomino-3"), alt: "Dining area by the window in the Palomino condo" },
-          { src: img("palomino-4"), alt: "Primary bedroom of the Palomino condo" },
-          { src: img("palomino-5"), alt: "Staged dining room in a Palomino condo" },
-          { src: img("palomino-6"), alt: "Staged bedroom in a Palomino condo" },
+          { src: img("depa-1"), alt: "Living and dining area of the condo" },
+          { src: img("depa-2"), alt: "Kitchen with breakfast bar in the condo" },
+          { src: img("depa-3"), alt: "Dining area by the window in the condo" },
+          { src: img("depa-4"), alt: "Primary bedroom of the condo" },
+          { src: img("depa-5"), alt: "Staged dining room in a condo" },
+          { src: img("depa-6"), alt: "Staged bedroom in a condo" },
         ],
-        plan: img("plan-palomino"),
+        plan: img("plan-depa"),
       },
       {
-        id: "palomino-ph",
-        interest: "palomino_ph",
+        id: "ph",
+        interest: "ph",
         type: "Penthouse",
-        name: "Palomino Penthouse",
+        name: "2BR Penthouse",
         tagline: "More space, three balconies and a private terrace.",
         price: "MXN $4.20M",
         monthly: "MXN $41,178",
@@ -687,7 +688,7 @@ const vdmEn: VdmCopy = {
           "Shared rooftop with pergola",
         ],
         images: [
-          { src: img("ph-1"), alt: "Furnished dining room in a Palomino Penthouse" },
+          { src: img("ph-1"), alt: "Furnished dining room in a penthouse" },
           { src: img("ph-2"), alt: "Kitchen with granite breakfast bar" },
           { src: img("ph-3"), alt: "Furnished living room with natural light" },
           { src: img("ph-4"), alt: "Furnished primary bedroom" },
@@ -697,10 +698,10 @@ const vdmEn: VdmCopy = {
         plan: img("plan-ph"),
       },
       {
-        id: "azur",
-        interest: "azur",
+        id: "casa3r",
+        interest: "casa",
         type: "House",
-        name: "Azur",
+        name: "3BR Home",
         tagline: "Two stories, a patio and a primary bedroom with balcony.",
         price: "MXN $4.91M",
         monthly: "MXN $51,412",
@@ -721,20 +722,20 @@ const vdmEn: VdmCopy = {
           "Security front door",
         ],
         images: [
-          { src: img("azur-1"), alt: "Kitchen with island and dining area in the Azur home" },
-          { src: img("azur-2"), alt: "Living room with glass wall to the patio in the Azur home" },
-          { src: img("azur-3"), alt: "Furnished living room in the Azur home" },
-          { src: img("azur-4"), alt: "Bedroom with balcony and view in the Azur home" },
-          { src: img("azur-5"), alt: "Staged dining room in an Azur home" },
-          { src: img("azur-6"), alt: "Bathroom with glass shower in the Azur home" },
+          { src: img("casa3r-1"), alt: "Kitchen with island and dining area in the 3BR home" },
+          { src: img("casa3r-2"), alt: "Living room with glass wall to the patio in the 3BR home" },
+          { src: img("casa3r-3"), alt: "Furnished living room in the 3BR home" },
+          { src: img("casa3r-4"), alt: "Bedroom with balcony and view in the 3BR home" },
+          { src: img("casa3r-5"), alt: "Staged dining room in an 3BR home" },
+          { src: img("casa3r-6"), alt: "Bathroom with glass shower in the 3BR home" },
         ],
-        plan: img("plan-azur"),
+        plan: img("plan-casa3r"),
       },
       {
-        id: "teide",
-        interest: "teide",
+        id: "casaroof",
+        interest: "casa",
         type: "House with rooftop",
-        name: "Teide",
+        name: "Rooftop Home",
         tagline: "Three stories and a rooftop terrace for every sunset.",
         price: "MXN $5.30M",
         monthly: "MXN $54,122",
@@ -755,21 +756,21 @@ const vdmEn: VdmCopy = {
           "Security front door",
         ],
         images: [
-          { src: img("teide-1"), alt: "Teide rooftop with terrace, sink and hillside views" },
-          { src: img("teide-2"), alt: "Dining and living room of the Teide home" },
-          { src: img("teide-3"), alt: "Kitchen with island and staircase in the Teide home" },
-          { src: img("teide-4"), alt: "Bedroom with large window and view in the Teide home" },
-          { src: img("teide-5"), alt: "Kitchen bar and dining area in a Teide home" },
-          { src: img("teide-6"), alt: "Secondary bedroom of the Teide home" },
+          { src: img("casaroof-1"), alt: "Rooftop with terrace, sink and hillside views" },
+          { src: img("casaroof-2"), alt: "Dining and living room of the rooftop home" },
+          { src: img("casaroof-3"), alt: "Kitchen with island and staircase in the rooftop home" },
+          { src: img("casaroof-4"), alt: "Bedroom with large window and view in the rooftop home" },
+          { src: img("casaroof-5"), alt: "Kitchen bar and dining area in a rooftop home" },
+          { src: img("casaroof-6"), alt: "Secondary bedroom of the rooftop home" },
         ],
-        plan: img("plan-teide"),
+        plan: img("plan-casaroof"),
       },
     ],
   },
   immediate: {
     eyebrow: "Move-in ready",
     title: "No waiting on construction: tour it, reserve it, move in.",
-    body: "Viñedos del Mar is already built and lived in. What you see on your tour is what you buy.",
+    body: "The community is already built and lived in. What you see on your tour is what you buy.",
     pillars: [
       {
         icon: "eye",
@@ -798,7 +799,7 @@ const vdmEn: VdmCopy = {
     tiles: [
       { image: img("pool-drone"), alt: "Clubhouse pool seen from above", caption: "The clubhouse pool" },
       { image: img("firepit"), alt: "Fire pit between stone walls by the clubhouse", caption: "Fire pit by the clubhouse" },
-      { image: img("rooftop-terrace"), alt: "Furnished rooftop of a Teide home", caption: "The Teide rooftop" },
+      { image: img("rooftop-terrace"), alt: "Furnished rooftop of a rooftop home", caption: "The rooftop home's rooftop" },
       { image: img("towers-pool"), alt: "Condo buildings with pool", caption: "Condo buildings" },
     ],
   },
@@ -816,7 +817,7 @@ const vdmEn: VdmCopy = {
       { icon: "rooftop", label: "Building rooftops" },
       { icon: "gate", label: "Controlled access" },
     ],
-    imageAlt: "Pool and clubhouse at Viñedos del Mar at dusk",
+    imageAlt: "Pool and clubhouse in the community at dusk",
     note: "Private community with controlled access.",
   },
   audience: {
@@ -858,7 +859,7 @@ const vdmEn: VdmCopy = {
     ],
     nearbyTitle: "Minutes away",
     nearby: ["Plaza Sauzal", "Hospital", "Schools", "Supermarkets", "Gyms", "Tres Emes beach"],
-    address: "Tecate–Ensenada Highway km 103.5, El Sauzal, Ensenada, B.C.",
+    address: "El Sauzal, Ensenada, B.C.",
     mapCta: "Open in Google Maps",
     videoAlt: "Vineyards in Valle de Guadalupe",
     caption: "Valle de Guadalupe, 10 minutes from home.",
@@ -880,12 +881,12 @@ const vdmEn: VdmCopy = {
   trust: {
     title: "You're buying something that already exists.",
     items: [
-      { icon: "building", title: "Finished, lived-in community", text: "450 families already live at Viñedos del Mar." },
+      { icon: "building", title: "Finished, lived-in community", text: "450 families already live in the community." },
       { icon: "shield", title: "Experienced developer", text: "Over 36 years building residential communities in northwest Mexico." },
       { icon: "contract", title: "Closing before a notary", text: "A public deed in your name or, if you're a foreigner, through a bank trust." },
       { icon: "bank", title: "Mortgage and Infonavit", text: "Buy with a bank mortgage, Infonavit or cash." },
     ],
-    stepsTitle: "How to buy at Viñedos del Mar",
+    stepsTitle: "How to buy move-in ready",
     steps: [
       { title: "Choose", text: "We send the available inventory and schedule your tour, in person or by video call." },
       { title: "Reserve", text: "You reserve the unit you chose." },
@@ -898,7 +899,7 @@ const vdmEn: VdmCopy = {
     items: [
       {
         q: "Are the homes and condos already finished?",
-        a: "Yes. Viñedos del Mar is a finished product: you tour the unit you'll buy and, once the payment is covered or your mortgage is approved, you sign the deed and get your keys. We share the up-to-date available inventory.",
+        a: "Yes. It's a finished product: you tour the unit you'll buy and, once the payment is covered or your mortgage is approved, you sign the deed and get your keys. We share the up-to-date available inventory.",
       },
       {
         q: "Can I buy with Infonavit or a bank mortgage?",
@@ -910,7 +911,7 @@ const vdmEn: VdmCopy = {
       },
       {
         q: "What's the difference between the models?",
-        a: "Palomino is a 2-bedroom, 73.68 m² condo; the Palomino Penthouse offers 100.34 m² and a private terrace. Azur is a two-story, 3-bedroom home, and Teide a three-story home with a rooftop terrace and grill counter.",
+        a: "The condo has 2 bedrooms and 73.68 m²; the penthouse offers 100.34 m² and a private terrace. The 3BR home is two stories with 3 bedrooms, and the rooftop home has three stories with a rooftop terrace and grill counter.",
       },
       {
         q: "What amenities are there?",
@@ -940,9 +941,9 @@ const vdmEn: VdmCopy = {
   },
   finalCta: {
     title: "Tour the home you're about to move into.",
-    body: "Book a tour of Viñedos del Mar with Fran: see the finished unit, the clubhouse and the views. If you'd like, see the ocean-view pre-sale the same day, just minutes away.",
+    body: "Book a tour with Fran: see the finished unit, the clubhouse and the views. If you'd like, see the ocean-view pre-sale the same day, just minutes away.",
     formTitle: "Book your tour",
-    imageAlt: "Pool and clubhouse at Viñedos del Mar at dusk",
+    imageAlt: "Pool and clubhouse in the community at dusk",
   },
   mobileBar: { whatsapp: "WhatsApp", prices: "Inventory", visit: "Tour" },
   exit: {
@@ -958,7 +959,7 @@ const vdmEn: VdmCopy = {
     floorplanTitle: "Get floor plans with measurements",
   },
   footer: en.footer,
-  a11y: { ...en.a11y, facts: "Viñedos del Mar in numbers" },
+  a11y: { ...en.a11y, facts: "Move-in ready in numbers" },
 };
 
 export const vinedos: Record<Lang, VdmCopy> = { es: vdmEs, en: vdmEn };

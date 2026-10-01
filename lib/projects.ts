@@ -1,8 +1,7 @@
 import type { Lang } from "@/lib/site";
 
-// Portafolio de Legacy Capital. La preventa no publica su nombre comercial ni el del desarrollador;
-// Viñedos del Mar se presenta por su nombre (producto terminado que el cliente puede recorrer), sin
-// mencionar al desarrollador.
+// Portafolio de Legacy Capital. Ningún proyecto publica su nombre comercial ni el de su desarrollador:
+// se presentan como "preventa" y "entrega inmediata".
 
 export type ProjectId = "preventa" | "vinedos";
 /** Valor que se guarda en leads.proyecto */
@@ -11,7 +10,7 @@ export type LeadProject = ProjectId | "general";
 export const routes = {
   home: { es: "/", en: "/en" },
   preventa: { es: "/preventa", en: "/en/presale" },
-  vinedos: { es: "/vinedos-del-mar", en: "/en/vinedos-del-mar" },
+  vinedos: { es: "/entrega-inmediata", en: "/en/move-in-ready" },
   privacy: { es: "/aviso-de-privacidad", en: "/en/privacy" },
 } as const;
 

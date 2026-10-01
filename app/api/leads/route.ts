@@ -5,7 +5,7 @@ import { z } from "zod";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-// Preventa: 2R/3R; Viñedos del Mar: tipo de producto (depa, ph, casa) o modelo
+// Preventa: 2R/3R; Entrega inmediata: tipo de producto (depa, ph, casa) o modelo
 const INTERESES = [
   "2R",
   "3R",

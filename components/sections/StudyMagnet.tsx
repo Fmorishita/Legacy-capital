@@ -12,6 +12,8 @@ type Props = {
   form: Dict["form"];
   lang: Lang;
   privacyHref: string;
+  /** Fondo de la sección (en la portada va sobre fondo claro, junto a "Dos caminos") */
+  className?: string;
 };
 
 // Valores de relleno: se muestran desenfocados y nunca llegan al lector de pantalla
@@ -167,11 +169,11 @@ export function BrochureMagnet({ t, form, lang, privacyHref }: Props) {
 }
 
 /** Lead magnet para inversionistas: el estudio de rentabilidad, por WhatsApp. */
-export function StudyMagnet({ t, form, lang, privacyHref }: Props) {
+export function StudyMagnet({ t, form, lang, privacyHref, className = "bg-bg-alt" }: Props) {
   return (
     <MagnetSection
       id="rentabilidad"
-      className="bg-bg-alt"
+      className={className}
       eyebrow={t.eyebrow}
       title={t.title}
       body={t.body}
@@ -197,7 +199,7 @@ export function StudyMagnet({ t, form, lang, privacyHref }: Props) {
           lang={lang}
           origin="estudio-roi"
           submitLabel={form.submitStudy}
-          defaults={{ interes: "inversion" }}
+          defaults={{ interes: "inversion", proyecto: "preventa" }}
           fields={{ interest: false }}
           privacyHref={privacyHref}
           waTemplate={t.waMessage}

@@ -1,14 +1,14 @@
 # Legacy Capital Real Estate
 
-Sitio de captación de leads de Legacy Capital Real Estate (Ensenada, B.C.) con un portafolio de dos proyectos en El Sauzal: una preventa de casas con roof garden y vista al mar, y Viñedos del Mar, con entrega inmediata.
+Sitio de captación de leads de Legacy Capital Real Estate (Ensenada, B.C.) con un portafolio de dos proyectos en El Sauzal: una preventa de casas con roof garden y vista al mar, y departamentos y casas con entrega inmediata.
 
 | Ruta (ES / EN) | Página |
 | --- | --- |
 | `/` · `/en` | Portada centrada en el cliente: "¿Qué estás buscando?" lleva a cada proyecto, dudas frecuentes y cómo las resolvemos, los dos caminos lado a lado y recomendador |
 | `/preventa` · `/en/presale` | Preventa con vista al mar |
-| `/vinedos-del-mar` · `/en/vinedos-del-mar` | Viñedos del Mar (departamentos y casas terminados) |
+| `/entrega-inmediata` · `/en/move-in-ready` | Entrega inmediata (departamentos y casas terminados) |
 
-**Estrategia:** la preventa no publica el nombre comercial del desarrollo ni del desarrollador, ni el inventario por lote. Viñedos del Mar sí se nombra, pero no su desarrollador. Legacy Capital y Fran Morishita son los protagonistas; el inventario disponible se comparte por WhatsApp con cada prospecto.
+**Estrategia:** la preventa no publica el nombre comercial del desarrollo ni del desarrollador, ni el inventario por lote. La entrega inmediata tampoco: ni el desarrollo, ni el desarrollador, ni los nombres comerciales de los modelos (se muestran como Departamento 2R, Penthouse 2R, Casa 3R y Casa Roof Top). Legacy Capital y Fran Morishita son los protagonistas; el inventario disponible se comparte por WhatsApp con cada prospecto.
 
 **Código de color:** dorado = preventa, verde viñedo = entrega inmediata (`components/ui/StatusChip.tsx`), en el menú "Proyectos" del encabezado, el menú móvil, el pie de página y las tarjetas.
 
@@ -47,8 +47,8 @@ Ver `.env.example`. En Vercel: `NEXT_PUBLIC_SITE_URL`, `NEXT_PUBLIC_SUPABASE_URL
 
 ## Contenido
 
-- Textos de la preventa: `lib/i18n/es.ts` y `lib/i18n/en.ts` (misma estructura). Portada: `lib/i18n/home.ts`. Viñedos del Mar: `lib/i18n/vinedos.ts`. Tarjetas de cada proyecto (precio desde, estatus, foto): `lib/i18n/portfolio.ts`. Rutas: `lib/projects.ts`.
-- Viñedos del Mar: precios de lista y mensualidades de referencia del desarrollador (octubre de 2026), en `lib/i18n/vinedos.ts` y en el JSON-LD de `components/Vinedos.tsx`; actualizarlos cuando cambie la lista. Fotos y videos en `public/img/vdm/` y `public/video/vdm-*`.
+- Textos de la preventa: `lib/i18n/es.ts` y `lib/i18n/en.ts` (misma estructura). Portada: `lib/i18n/home.ts`. Entrega inmediata: `lib/i18n/vinedos.ts`. Tarjetas de cada proyecto (precio desde, estatus, foto): `lib/i18n/portfolio.ts`. Rutas: `lib/projects.ts`.
+- Entrega inmediata: precios de lista y mensualidades de referencia del desarrollador (octubre de 2026), en `lib/i18n/vinedos.ts` y en el JSON-LD de `components/Vinedos.tsx`; actualizarlos cuando cambie la lista. Fotos y videos en `public/img/vdm/` y `public/video/vdm-*`.
 - Perfiles de comprador y estudio de rentabilidad: `personas` y `study` en los diccionarios.
 - Promoción de septiembre y datos de contacto: `lib/site.ts` (la barra promocional se oculta sola al vencer `promoEndsAt`).
 - Aviso de privacidad: `lib/legal/privacy.ts` (revisar con un abogado: razón social y domicilio completos).

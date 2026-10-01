@@ -17,7 +17,7 @@ export type Interest =
   | "segunda_casa"
   | "vivir"
   | "explorando"
-  // Viñedos del Mar: tipo de producto y modelo
+  // Entrega inmediata: tipo de producto y modelo
   | "depa"
   | "ph"
   | "casa"

@@ -72,8 +72,8 @@ export const es = {
     project: "¿Qué te interesa?",
     projects: [
       { value: "preventa", label: "Preventa con vista al mar", wa: "las casas con vista al mar en preventa" },
-      { value: "vinedos", label: "Viñedos del Mar · entrega inmediata", wa: "Viñedos del Mar (entrega inmediata)" },
-      { value: "general", label: "Los dos", wa: "la preventa con vista al mar y Viñedos del Mar" },
+      { value: "vinedos", label: "Entrega inmediata", wa: "los departamentos y casas con entrega inmediata" },
+      { value: "general", label: "Los dos", wa: "la preventa con vista al mar y los departamentos y casas con entrega inmediata" },
     ],
     interest: "¿Qué buscas?",
     interests: [
@@ -507,7 +507,7 @@ export const es = {
   },
   crossSell: {
     eyebrow: "¿Quieres estrenar ya?",
-    title: "Viñedos del Mar: entrega inmediata, a minutos de aquí.",
+    title: "Departamentos y casas para estrenar hoy, a minutos de aquí.",
     body: "Departamentos, penthouses y casas terminados con casa club y alberca, desde $3.64 MDP con crédito, Infonavit o contado.",
   },
   ensenada: {

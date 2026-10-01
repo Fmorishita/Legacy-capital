@@ -12,6 +12,7 @@ import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/sections/Footer";
 import { FloatingActions } from "@/components/sections/FloatingActions";
+import { StudyMagnet } from "@/components/sections/StudyMagnet";
 import { HomeHero } from "@/components/home/HomeHero";
 import { Pains } from "@/components/home/Pains";
 import { Paths } from "@/components/home/Paths";
@@ -73,6 +74,7 @@ export function Home({ t, lang }: { t: HomeCopy; lang: Lang }) {
         <Facts t={t.facts} label={t.a11y.facts} />
         <Pains t={t.pains} />
         <Paths t={t.paths} portfolio={p} />
+        <StudyMagnet t={t.study} form={t.form} lang={lang} privacyHref={privacyHref} className="bg-bg" />
         <Advisor t={t.advisor} waGeneric={t.form.waGeneric} />
         <Trust t={t.trust} />
         <Ensenada t={t.ensenada} />

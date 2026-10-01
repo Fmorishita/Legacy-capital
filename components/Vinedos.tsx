@@ -16,7 +16,7 @@ import { VdmHero } from "@/components/vinedos/VdmHero";
 import { VdmModels } from "@/components/vinedos/VdmModels";
 import { VdmAmenities, VdmAudience, VdmImmediate, VdmLocation, VdmTour } from "@/components/vinedos/VdmSections";
 
-const PRICES = { palomino: 3639798, palomino_ph: 4202453, azur: 4910724, teide: 5296500 } as const;
+const PRICES = { depa: 3639798, ph: 4202453, casa3r: 4910724, casaroof: 5296500 } as const;
 
 function jsonLd(t: VdmCopy, lang: Lang) {
   const url = `${site.url}${href("vinedos", lang)}`;
@@ -24,22 +24,19 @@ function jsonLd(t: VdmCopy, lang: Lang) {
     {
       "@context": "https://schema.org",
       "@type": "Residence",
-      name: "Viñedos del Mar",
+      name: t.meta.title.split(" | ")[0],
       description: t.meta.description,
       url,
       image: [`${site.url}/img/vdm/pool-pergola.jpg`, `${site.url}/img/vdm/aerial.jpg`, `${site.url}/img/vdm/rooftop-terrace.jpg`],
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Carretera Tecate–Ensenada km 103.5",
         addressLocality: "El Sauzal, Ensenada",
-        postalCode: "22760",
         addressRegion: "Baja California",
         addressCountry: "MX",
       },
-      geo: { "@type": "GeoCoordinates", latitude: 31.9141, longitude: -116.6912 },
       amenityFeature: t.amenities.items.map((a) => ({ "@type": "LocationFeatureSpecification", name: a.label, value: true })),
       containsPlace: t.models.items.map((m) => ({
-        "@type": m.interest.startsWith("palomino") ? "Apartment" : "SingleFamilyResidence",
+        "@type": m.interest === "casa" ? "SingleFamilyResidence" : "Apartment",
         name: m.name,
         floorSize: { "@type": "QuantitativeValue", value: parseFloat(m.specs[2].value), unitCode: "MTK" },
         numberOfBedrooms: parseInt(m.specs[0].value, 10),
@@ -47,8 +44,8 @@ function jsonLd(t: VdmCopy, lang: Lang) {
       offers: {
         "@type": "AggregateOffer",
         priceCurrency: "MXN",
-        lowPrice: PRICES.palomino,
-        highPrice: PRICES.teide,
+        lowPrice: PRICES.depa,
+        highPrice: PRICES.casaroof,
         offerCount: t.models.items.length,
         availability: "https://schema.org/InStock",
         seller: { "@type": "RealEstateAgent", name: site.name, telephone: site.advisor.phoneDisplay },
@@ -62,7 +59,7 @@ function jsonLd(t: VdmCopy, lang: Lang) {
   ];
 }
 
-/** Viñedos del Mar: producto terminado con entrega inmediata. */
+/** Entrega inmediata: producto terminado (sin nombre del desarrollo). */
 export function Vinedos({ t, lang }: { t: VdmCopy; lang: Lang }) {
   const privacyHref = href("privacy", lang);
   const p = portfolio[lang];

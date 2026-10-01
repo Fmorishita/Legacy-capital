@@ -73,8 +73,8 @@ export const en: Dict = {
     project: "What are you interested in?",
     projects: [
       { value: "preventa", label: "Ocean-view pre-sale", wa: "the ocean-view homes in pre-sale" },
-      { value: "vinedos", label: "Viñedos del Mar · move-in ready", wa: "Viñedos del Mar (move-in ready)" },
-      { value: "general", label: "Both", wa: "both the ocean-view pre-sale and Viñedos del Mar" },
+      { value: "vinedos", label: "Move-in ready", wa: "the move-in ready condos and homes" },
+      { value: "general", label: "Both", wa: "both the ocean-view pre-sale and the move-in ready condos and homes" },
     ],
     interest: "What are you looking for?",
     interests: [
@@ -508,7 +508,7 @@ export const en: Dict = {
   },
   crossSell: {
     eyebrow: "Want to move in now?",
-    title: "Viñedos del Mar: move-in ready, minutes away.",
+    title: "Condos and homes ready to move in, minutes away.",
     body: "Finished condos, penthouses and homes with a clubhouse and pool, from MXN $3.64M with a mortgage, Infonavit or cash.",
   },
   ensenada: {

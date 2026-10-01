@@ -53,6 +53,7 @@ export type HomeCopy = {
       ctaBoth: string;
     };
   };
+  study: Dict["study"];
   advisor: Dict["advisor"];
   trust: Dict["trust"];
   ensenada: Dict["ensenada"];
@@ -71,7 +72,7 @@ const homeEs: HomeCopy = {
   meta: {
     title: "Legacy Capital Real Estate | Casas y departamentos en Ensenada, en preventa o con entrega inmediata",
     description:
-      "Legacy Capital Real Estate te asesora en El Sauzal, Ensenada: casas con roof garden y vista al mar en preventa desde $3.9 MDP, y departamentos y casas con entrega inmediata en Viñedos del Mar desde $3.64 MDP.",
+      "Legacy Capital Real Estate te asesora en El Sauzal, Ensenada: casas con roof garden y vista al mar en preventa desde $3.9 MDP, y departamentos y casas con entrega inmediata desde $3.64 MDP.",
     ogAlt: "Legacy Capital Real Estate: preventa con vista al mar y entrega inmediata en Ensenada",
   },
   nav: {
@@ -200,13 +201,14 @@ const homeEs: HomeCopy = {
       ],
       pending: "Elige una respuesta en cada pregunta.",
       results: {
-        vinedos: "Te conviene Viñedos del Mar: entrega inmediata y puedes usar tu crédito hoy.",
+        vinedos: "Te conviene la entrega inmediata: estrenas ya y puedes usar tu crédito hoy.",
         preventa: "Te conviene la preventa: pagas tu enganche en 19 meses a precio de preventa.",
         ambos: "Las dos te funcionan: la preventa acepta crédito para el pago final. Te mostramos ambas en una sola visita.",
       },
       ctaBoth: "Agendar visita a los dos",
     },
   },
+  study: es.study,
   advisor: {
     ...es.advisor,
     title: "Hablas directo con quien selecciona cada proyecto.",
@@ -268,7 +270,7 @@ const homeEs: HomeCopy = {
       },
       {
         q: "¿Qué proyectos presenta Legacy Capital?",
-        a: "Hoy, dos en El Sauzal, zona norte de Ensenada: una preventa de casas de un nivel con roof garden y vista al mar, y Viñedos del Mar, una comunidad terminada con departamentos, penthouses y casas con entrega inmediata.",
+        a: "Hoy, dos en El Sauzal, zona norte de Ensenada: una preventa de casas de un nivel con roof garden y vista al mar, y una comunidad terminada con departamentos, penthouses y casas con entrega inmediata.",
       },
       {
         q: "¿Qué me conviene más, preventa o entrega inmediata?",
@@ -276,7 +278,7 @@ const homeEs: HomeCopy = {
       },
       {
         q: "¿Puedo usar crédito hipotecario o Infonavit?",
-        a: "En Viñedos del Mar puedes comprar con crédito bancario, Infonavit o de contado. En la preventa, el 80% que se paga a la escritura puede cubrirse con recursos propios o con crédito hipotecario.",
+        a: "En entrega inmediata puedes comprar con crédito bancario, Infonavit o de contado. En la preventa, el 80% que se paga a la escritura puede cubrirse con recursos propios o con crédito hipotecario.",
       },
       {
         q: "¿Puedo visitar los dos proyectos el mismo día?",
@@ -310,7 +312,7 @@ const homeEs: HomeCopy = {
       body: "Fran Morishita te escribirá por WhatsApp hoy mismo con precios y disponibilidad.",
     },
     waMessage: "Hola Fran, soy {name}. Me interesa {project} en Ensenada{interest}. ¿Me compartes precios y disponibilidad?",
-    waGeneric: "Hola Fran, me interesa conocer sus proyectos en Ensenada: la preventa con vista al mar y Viñedos del Mar.",
+    waGeneric: "Hola Fran, me interesa conocer sus proyectos en Ensenada: la preventa con vista al mar y la entrega inmediata.",
   },
   quickForm: {
     ...es.quickForm,
@@ -331,7 +333,7 @@ const homeEn: HomeCopy = {
   meta: {
     title: "Legacy Capital Real Estate | Homes and condos in Ensenada, pre-sale or move-in ready",
     description:
-      "Legacy Capital Real Estate advises you in El Sauzal, Ensenada: ocean-view roof garden homes in pre-sale from MXN $3.9M, and move-in ready condos and homes at Viñedos del Mar from MXN $3.64M.",
+      "Legacy Capital Real Estate advises you in El Sauzal, Ensenada: ocean-view roof garden homes in pre-sale from MXN $3.9M, and move-in ready condos and homes from MXN $3.64M.",
     ogAlt: "Legacy Capital Real Estate: ocean-view pre-sale and move-in ready homes in Ensenada",
   },
   nav: {
@@ -460,13 +462,14 @@ const homeEn: HomeCopy = {
       ],
       pending: "Choose one answer for each question.",
       results: {
-        vinedos: "Viñedos del Mar suits you: move-in ready, and you can use your mortgage today.",
+        vinedos: "Move-in ready suits you: and you can use your mortgage today.",
         preventa: "The pre-sale suits you: pay your down payment over 19 months at the pre-sale price.",
         ambos: "Both work for you: the pre-sale accepts a mortgage for the final payment. We'll show you both in one visit.",
       },
       ctaBoth: "Book a visit to both",
     },
   },
+  study: en.study,
   advisor: {
     ...en.advisor,
     title: "Talk directly with the person who selects every project.",
@@ -512,7 +515,7 @@ const homeEn: HomeCopy = {
       },
       {
         q: "Which projects does Legacy Capital offer?",
-        a: "Currently two in El Sauzal, Ensenada's north end: a pre-sale of single-level homes with a roof garden and ocean views, and Viñedos del Mar, a finished community of move-in ready condos, penthouses and homes.",
+        a: "Currently two in El Sauzal, Ensenada's north end: a pre-sale of single-level homes with a roof garden and ocean views, and a finished community of move-in ready condos, penthouses and homes.",
       },
       {
         q: "Which is better for me, pre-sale or move-in ready?",
@@ -520,7 +523,7 @@ const homeEn: HomeCopy = {
       },
       {
         q: "Can I use a mortgage or Infonavit?",
-        a: "At Viñedos del Mar you can buy with a bank mortgage, Infonavit or cash. In the pre-sale, the 80% paid at closing can be covered with your own funds or a mortgage.",
+        a: "With move-in ready you can buy with a bank mortgage, Infonavit or cash. In the pre-sale, the 80% paid at closing can be covered with your own funds or a mortgage.",
       },
       {
         q: "Can I visit both projects on the same day?",
@@ -554,7 +557,7 @@ const homeEn: HomeCopy = {
       body: "Fran Morishita will message you on WhatsApp today with prices and availability.",
     },
     waMessage: "Hi Fran, I'm {name}. I'm interested in {project} in Ensenada{interest}. Could you share prices and availability?",
-    waGeneric: "Hi Fran, I'd like to learn about your projects in Ensenada: the ocean-view pre-sale and Viñedos del Mar.",
+    waGeneric: "Hi Fran, I'd like to learn about your projects in Ensenada: the ocean-view pre-sale and the move-in ready homes.",
   },
   quickForm: {
     ...en.quickForm,

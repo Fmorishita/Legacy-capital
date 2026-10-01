@@ -1,4 +1,4 @@
-// Formas compartidas por las páginas del portafolio (principal, preventa y Viñedos del Mar).
+// Formas compartidas por las páginas del portafolio (principal, preventa y entrega inmediata).
 
 export type NavCopy = {
   links: { href: string; label: string }[];

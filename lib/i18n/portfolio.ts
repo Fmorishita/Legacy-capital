@@ -1,6 +1,6 @@
 // Portafolio de Legacy Capital: datos compartidos por el menú "Proyectos" del encabezado, el menú móvil,
 // el pie de página, la página principal y las tarjetas cruzadas entre proyectos.
-// La preventa se presenta sin su nombre comercial; Viñedos del Mar, sin el nombre del desarrollador.
+// Ningún proyecto se presenta con su nombre comercial ni el de su desarrollador.
 
 import type { Lang } from "@/lib/site";
 import { routes, type ProjectId } from "@/lib/projects";
@@ -61,16 +61,16 @@ const es: PortfolioCopy = {
     {
       id: "vinedos",
       status: "Entrega inmediata",
-      name: "Viñedos del Mar",
-      short: "Viñedos del Mar",
+      name: "Departamentos y casas listos para estrenar",
+      short: "Listos para estrenar",
       place: "El Sauzal, a 10 min del Valle de Guadalupe",
       summary: "Departamentos, penthouses y casas terminados en una comunidad con casa club y alberca.",
       price: "Desde $3.64 MDP",
       priceNote: "Crédito, Infonavit o contado",
       href: routes.vinedos.es,
       image: "/img/vdm/pool-pergola.jpg",
-      imageAlt: "Alberca con pérgola y casa club de Viñedos del Mar",
-      cta: "Ver Viñedos del Mar",
+      imageAlt: "Alberca con pérgola y casa club de la comunidad",
+      cta: "Ver entrega inmediata",
       goal: "Estrenar ya, con crédito o Infonavit",
       highlights: [
         "Del departamento de 2 recámaras a la casa con roof top",
@@ -111,16 +111,16 @@ const en: PortfolioCopy = {
     {
       id: "vinedos",
       status: "Move-in ready",
-      name: "Viñedos del Mar",
-      short: "Viñedos del Mar",
+      name: "Move-in ready condos and homes",
+      short: "Move-in ready",
       place: "El Sauzal, 10 min from Valle de Guadalupe",
       summary: "Finished condos, penthouses and homes in a community with a clubhouse and pool.",
       price: "From MXN $3.64M",
       priceNote: "Mortgage, Infonavit or cash",
       href: routes.vinedos.en,
       image: "/img/vdm/pool-pergola.jpg",
-      imageAlt: "Pool with pergola and clubhouse at Viñedos del Mar",
-      cta: "See Viñedos del Mar",
+      imageAlt: "Pool with pergola and clubhouse in the community",
+      cta: "See move-in ready",
       goal: "Move in now, with a mortgage or Infonavit",
       highlights: [
         "From a 2-bedroom condo to a home with a rooftop",

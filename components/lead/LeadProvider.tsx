@@ -18,7 +18,7 @@ type Props = {
   t: { form: Dict["form"]; dialog: Dict["dialog"]; a11y: Dict["a11y"]; quickForm: { subtitle: string } };
   lang: Lang;
   privacyHref: string;
-  /** Proyecto de la página (preventa o Viñedos del Mar); en la principal se deja vacío */
+  /** Proyecto de la página (preventa o entrega inmediata); en la principal se deja vacío */
   project?: LeadProject;
   children: React.ReactNode;
 };

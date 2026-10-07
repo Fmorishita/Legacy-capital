@@ -59,3 +59,14 @@ Por qué la voz no dice el precio: "tres millones novecientos ochenta y dos mil 
 - Precio en USD a TC 0.055 (captura de Google/Morningstar del 07/10/2026 7:18 UTC): $3,982,780 × 0.055 = US$219,052.90 → en pantalla "US$219,053*". MXN siempre visible (NOM-247 5.6).
 - Voz: Kokoro `em_alex`, fonetizador es-419 (español latino, seseo), velocidad 1.1. Elegida por transcripción exacta frente a `ef_dora` y `em_santa`.
 - Texto enviado a la voz (escrito como se pronuncia): ver `../voz/texto-voz-reel-es.txt`.
+
+## Cambios v02 (Fran, 2026-10-07)
+
+- Gancho: "¿Tu casa en **Ensenada**, con vista al mar?"; la frase 2 queda "Casas con roof garden, en preventa" (sin repetir Ensenada).
+- Primer plano: video del desarrollador con la cena en el roof (21.0 s). La toma corta del roof a mitad del video se quitó; la pareja dura 3.4 s.
+- Personas nunca cortadas: render 6 encuadrado a la pareja; render 4 completo sobre fondo desenfocado.
+- Sin "Imagen ilustrativa", sin "Amenidades proyectadas" y sin texto legal en el cierre (pedido de Fran). ⚠ NOM-247: van en el texto del anuncio (`copy-anuncio-meta-es.md`). Validar con abogado.
+- "10 % diferido" en voz como "diez por ciento diferido" (más claro).
+- Cierre con "Building wealth for generations" en pantalla y en voz (Kokoro em_alex en inglés); botón con pulso dorado y flecha que rebota.
+- SFX (Pixabay Content License): impactos en gancho, precio y año; whooshes en cortes; pops en tarjetas; riser al cierre; sparkle en logo; ping en botón.
+- Audio masterizado a −14 LUFS (loudnorm sobre el render).

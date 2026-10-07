@@ -54,6 +54,14 @@ Ver `.env.example`. En Vercel: `NEXT_PUBLIC_SITE_URL`, `NEXT_PUBLIC_SUPABASE_URL
 - Aviso de privacidad: `lib/legal/privacy.ts` (revisar con un abogado: razón social y domicilio completos).
 - Retrato del asesor: agregar `public/img/fran-morishita.jpg` y poner `hasPhoto: true` en `lib/site.ts`.
 
+## Estudio de video (`estudio-video/`)
+
+Reels verticales para vender los desarrollos, hechos con [HyperFrames](https://github.com/heygen-com/hyperframes) (HTML → MP4) a partir de renders, texto animado, voz y música. Reglas permanentes en `estudio-video/CLAUDE.md`; estilo de edición medido sobre el video de referencia en `estudio-video/estilo.md`. El video de referencia, los assets del desarrollador, los briefs y los renders no se suben al repo (ver `estudio-video/.gitignore`).
+
+```bash
+cd estudio-video && npm install && npx hyperframes doctor
+```
+
 ## Desarrollo
 
 ```bash

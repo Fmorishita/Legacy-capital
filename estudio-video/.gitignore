@@ -1,0 +1,19 @@
+# El repositorio es público: aquí solo van las reglas, el estilo medido y la estructura.
+node_modules/
+
+# Video de referencia y su análisis (material de terceros)
+referencia/
+analisis/*
+!analisis/cortes.md
+
+# Material del desarrollo y datos comerciales o legales (privados)
+proyectos/*/assets/
+proyectos/*/brief-proyecto.md
+proyectos/*/voz/
+
+# Renders de video
+videos/*/renders/
+renders/
+videos/*/assets/
+videos/*/snapshots/
+videos/*/.hyperframes/

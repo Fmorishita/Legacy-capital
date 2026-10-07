@@ -14,3 +14,6 @@ proyectos/*/voz/
 # Renders de video
 videos/*/renders/
 renders/
+videos/*/assets/
+videos/*/snapshots/
+videos/*/.hyperframes/

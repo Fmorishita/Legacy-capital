@@ -10,6 +10,9 @@ Petición explícita: crear un sistema para editar cualquier elemento de los anu
 - La composición de canvas del editor y el render HyperFrames de referencia son productos distintos. Exportación de navegador en MP4 si MediaRecorder lo soporta, WebM como alternativa; grabación en tiempo real manteniendo visible la pestaña y verificación del archivo resultante.
 - Nueva referencia de edición visual y feedback; el validador la exige desde 1.5.0 manteniendo compatibilidad con paquetes anteriores durante una actualización.
 
+- Entrega a GitHub solicitada: carpeta acotada para Claude con copias de trabajo, preparación automática y fuentes licenciadas. Repositorio público conservado; originales exactos en Drive. Verificados commit remoto y recursos.
+- Editor publicado de forma privada; interacciones verificadas mediante simulación DOM y captura nativa revisada. Exportación MediaRecorder y navegador interactivo quedan sin verificar por falta de herramientas; no se declaran aprobados.
+
 ## 1.4.0 · 2026-11-14
 
 Nueva petición Doctor comercializada por Legacy Capital. Esta revisión se identifica como `V6-Legacy-Capital-Doctor` y no como la prueba histórica `V6-Higgsfield`, que sigue rechazada. La evaluación estética de la nueva pieza está pendiente. Esta entrada se aplica sólo después de terminar y verificar la pieza.

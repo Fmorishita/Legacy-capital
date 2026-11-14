@@ -54,3 +54,14 @@ Consultar soporte real de `MediaRecorder` y del codec: exportar MP4 cuando esté
 Verificar una exportación corta con video y audio y los controles que afectan el montaje; para una entrega final, revisar el archivo completo como exige la skill. Comprobar dimensiones, duración, reproducción, legibilidad, sincronía y ausencia de handles/guías del editor. Una vista previa correcta no prueba por sí sola que el archivo descargado quedó bien.
 
 Guardar y reportar el alcance de pruebas realizado. No presentar un control de interfaz, un brief exportado o un preset propuesto como una generación de medios, una edición ya renderizada o una aprobación estética del usuario.
+
+
+## Materiales en un repositorio de GitHub
+
+Cuando el usuario pida entrega a través de su repositorio, localizarlo y verificar permisos y visibilidad antes de escribir. Añadir una carpeta acotada sin cambiar la aplicación existente. Organizar versiones, fuentes, guiones, subtítulos, tiempos, medios, tipografías, logos y código; añadir `CLAUDE.md` con instrucciones de preparación y una correspondencia entre recursos y escenas. La elección de estilo del usuario puede sustituir la edición anterior; los hechos del proyecto no cambian por imitar una referencia.
+
+No convertir el repositorio público en una biblioteca de música o SFX de stock. Mantener fuentes oficiales, términos, hashes y un script de descarga para el trabajo autorizado. El método de esta entrega incluye copias de imagen JPEG de calidad 92 con dimensiones originales, PNG para transparencia, voces FLAC sin pérdida y mezclas AAC de referencia. Identificar esas optimizaciones; no llamarlas originales exactos. Enlazar los PNG, WAV, stems y MP4 exactos de Drive sin ampliar sus permisos.
+
+Verificar hashes de medios, rutas de montaje, reconstrucción de una imagen y una voz, descarga de fuentes licenciadas y lectura del commit remoto. Los archivos de stock recuperados, la caché y los derivados se excluyen de Git. Los manifiestos históricos conservan los hashes del kit original; un catálogo del repositorio describe sus copias de trabajo.
+
+Entrega verificada del 14/11/2026: editor privado en https://legacy-video-studio-fran.trimjewel4.chatgpt.site y materiales en https://github.com/Fmorishita/Legacy-capital/tree/main/ads-punta-pacifico . La prueba técnica no implica aprobación estética del usuario.

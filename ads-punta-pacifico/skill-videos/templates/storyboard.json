@@ -1,0 +1,93 @@
+{
+  "profile": "salud",
+  "voice_text": "Guion completo y corrido, pendiente de medición real.",
+  "word_timings": [],
+  "shots": [
+    {
+      "id": "salud-01",
+      "voice_anchor": "Doctor, ¿buscas una casa con vista al mar…?",
+      "kind": "hook",
+      "asset": {
+        "path": null,
+        "origin_url": null,
+        "parent_source_id": null,
+        "sha256": null,
+        "person_reference": "doctor-ficticio-consistente",
+        "space": "roof oficial con vista al mar sustentada",
+        "action": "médico y pareja contemplan el mar",
+        "sea_visible": true,
+        "media_type": "image",
+        "animation": {
+          "enabled": false,
+          "reference_media_id": null,
+          "reference_role": null,
+          "model_id": null,
+          "prompt": null,
+          "job_id": null,
+          "generated_duration_seconds": null,
+          "trim_in_seconds": null,
+          "clip_status": "not_requested",
+          "temporal_review": null,
+          "accepted_for_edit": false
+        }
+      },
+      "start": null,
+      "core_end": null,
+      "overlap": null,
+      "duration_including_overlap": null,
+      "editorial_text": "DOCTOR",
+      "caption_position": "elegir después de inspeccionar la imagen",
+      "motion": "elegir según lectura",
+      "sfx_cause": null
+    },
+    {
+      "id": "salud-pay0",
+      "voice_anchor": "diez por ciento de enganche",
+      "kind": "pay0",
+      "asset": {
+        "path": null,
+        "origin_url": null,
+        "parent_source_id": null,
+        "sha256": null,
+        "person_reference": "mismo doctor",
+        "space": "cocina oficial",
+        "action": "confirmar pago en teléfono",
+        "device_orientation_check": "pantalla hacia quien la usa; sin interfaz sobre dorso; bisagra/manos/mirada coherentes",
+        "media_type": "image",
+        "animation": {
+          "enabled": false,
+          "reference_media_id": null,
+          "reference_role": null,
+          "model_id": null,
+          "prompt": null,
+          "job_id": null,
+          "generated_duration_seconds": null,
+          "trim_in_seconds": null,
+          "clip_status": "not_requested",
+          "temporal_review": null,
+          "accepted_for_edit": false
+        }
+      },
+      "start": null,
+      "core_end": null,
+      "overlap": null,
+      "duration_including_overlap": null,
+      "editorial_text": "10% DE ENGANCHE",
+      "caption_position": "cara y teléfono libres",
+      "motion": "cifra y revelado sincronizados a la voz",
+      "sfx_cause": "entrada de cifra o corte, si ayuda"
+    }
+  ],
+  "note": "Ejemplo de estructura, no una plantilla de dos tomas. Crear todas las tomas que requiera el guion medido y no reutilizar la misma imagen de fondo. Amenidades proyectadas después del hook, con ropa adecuada; empresario masculino o pareja según este brief.",
+  "opening_price_display": "Rango aprox. $3.9–$4.8 MDP · 2 y 3 recámaras · MXN",
+  "closing_alignment": "centrado",
+  "portable_handoff_fields": {
+    "relative_asset_path": null,
+    "source_composition_path": null,
+    "actual_visible_text": null,
+    "actual_visible_text_source": "extraer de la composición final y comprobar en fotogramas",
+    "timing_unit": "seconds",
+    "fps": 24,
+    "sha256": null
+  }
+}

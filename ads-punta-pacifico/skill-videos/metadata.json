@@ -26,9 +26,30 @@
     "name": "Legacy Video Studio",
     "source_path": "/workspace/sites/legacy-video-studio",
     "example_project": "V6-Legacy-Capital-Doctor",
-    "publication_status": "pending_final_verification",
+    "publication_status": "deployed_verified",
     "storage": "browser_local_IndexedDB_with_portable_export",
     "original_render_equivalence": "not_claimed",
-    "user_aesthetic_approval": "pending_user_review"
+    "user_aesthetic_approval": "pending_user_review",
+    "url": "https://legacy-video-studio-fran.trimjewel4.chatgpt.site",
+    "source_commit": "895b7d128f81d8a531b8e70dd4178f40ec5a316f",
+    "qa": {
+      "node_dom_interactions": "passed",
+      "data_and_asset_checks": "passed",
+      "native_deployment_screenshot": "reviewed",
+      "interactive_browser_and_media_export": "not_verified_tools_unavailable"
+    }
+  },
+  "repository_delivery": {
+    "url": "https://github.com/Fmorishita/Legacy-capital/tree/main/ads-punta-pacifico",
+    "initial_materials_commit": "0565ad399c3b4f7d37b460caeb603670eef64c6b",
+    "scope": [
+      "Doctor V5",
+      "Empresario V5",
+      "California V5",
+      "Doctor V6 Legacy Capital",
+      "Legacy Video Studio"
+    ],
+    "media": "optimized_working_copies_and_verified_downloads; exact_originals_in_authorized_Drive",
+    "visibility": "existing_public_repository_unchanged"
   }
 }

@@ -1,0 +1,3 @@
+# Reconstruir la estructura V5
+
+Los segundos absolutos son la referencia principal. `core_end` es el corte al plano siguiente; `end` incluye el tiempo que la imagen anterior permanece debajo de la transición. Los índices frame son el primer fotograma visible y el fin exclusivo a24fps. Los títulos se extrajeron del HTMLfinal: `metadata.overlay` puede ser un rótulo de planificación distinto y no debe usarse para reconstruir el texto. La tarjeta de apertura está en una composición global0–3.6s; puede seguir visible cuando empieza la segunda foto. No duplicarla en las tomas individuales. El JSON conserva el código GSAP de cada escena para otro motor, además del código HTMLexacto.

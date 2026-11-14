@@ -1,0 +1,1580 @@
+{
+  "version": "V5",
+  "engine": "HyperFrames0.9.18",
+  "profile": "salud",
+  "duration": 36.875,
+  "fps": 24,
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "draft": false,
+  "shots": [
+    {
+      "id": "salud-01",
+      "voice": "Doctor, ¿buscas una casa con vista al mar",
+      "text": "Doctor, ¿buscas una casa con vista al mar",
+      "overlay": "DOCTOR · VISTA AL MAR",
+      "kind": "hook",
+      "image_semantics": "Mismo médico ficticio, con ropa casual adecuada después de consulta, junto a su pareja en roof oficial. El mar debe verse desde la primera imagen; no fachada que lo oculte.",
+      "candidate_asset": "new:salud_mar_hook",
+      "word_start": 0,
+      "word_end": 8,
+      "start": 0,
+      "end": 2.880458,
+      "shot_id": "salud-01",
+      "description": "Mismo médico ficticio, con ropa casual adecuada después de consulta, junto a su pareja en roof oficial. El mar debe verse desde la primera imagen; no fachada que lo oculte.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "provisional, inspect actual image and animated crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": true,
+      "source_candidate": "new:salud_mar_hook",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sha256": "4e934bea4bcd1e41b433a9776211bb614259489ee83b349c045549d2ce7a550e",
+      "core_end": 2.560458,
+      "duration": 2.880458,
+      "transition_overlap": 0.32,
+      "entry_duration": 0,
+      "has_next": true,
+      "number_local": 0.1,
+      "local": "assets/photos/01-salud-01.png",
+      "transition": "open",
+      "path": "assets/photos/01-salud-01.png"
+    },
+    {
+      "id": "salud-02",
+      "voice": "para bajar el ritmo y compartir en pareja?",
+      "text": "para bajar el ritmo y compartir en pareja?",
+      "overlay": "TIEMPO PARA USTEDES",
+      "kind": "benefit",
+      "image_semantics": "Pareja en sala oficial, relajada; gesto espontáneo y humano.",
+      "candidate_asset": "v3/generated/salud_sala.png",
+      "word_start": 8,
+      "word_end": 16,
+      "start": 2.560458,
+      "end": 5.854291,
+      "shot_id": "salud-02",
+      "description": "Pareja en sala oficial, relajada; gesto espontáneo y humano.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 760,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v3/generated/salud_sala.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sha256": "ae5f5cfbd922f6bb780d4d8be8a813205f993beed05651b3270e85b786fb8042",
+      "core_end": 5.534291,
+      "duration": 3.293833,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "local": "assets/photos/02-salud-02.png",
+      "transition": "match-pan",
+      "path": "assets/photos/02-salud-02.png"
+    },
+    {
+      "id": "salud-03",
+      "voice": "Conoce Punta Pacífico, en Ensenada:",
+      "text": "Conoce Punta Pacífico, en Ensenada:",
+      "overlay": "PUNTA PACÍFICO · ENSENADA",
+      "kind": "place",
+      "image_semantics": "Fachada oficial o perspectiva del proyecto, distinta de las usadas en los otros anuncios.",
+      "candidate_asset": "v3/shared-assets/official-8-Fachadas-PP-V1-05.07.26-FINAL.png",
+      "word_start": 16,
+      "word_end": 21,
+      "start": 5.534291,
+      "end": 8.354291,
+      "shot_id": "salud-03",
+      "description": "Fachada oficial o perspectiva del proyecto, distinta de las usadas en los otros anuncios.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": false,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v3/shared-assets/official-8-Fachadas-PP-V1-05.07.26-FINAL.png",
+      "dimensions": [
+        3840,
+        2957
+      ],
+      "sha256": "0429dd9facc591e05bc3ca5ed04cb0baca1e1bb5b2cc28f9aa367ac11b6ebe2b",
+      "core_end": 8.034291,
+      "duration": 2.8200000000000003,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "local": "assets/photos/03-salud-03.png",
+      "transition": "punch",
+      "path": "assets/photos/03-salud-03.png"
+    },
+    {
+      "id": "salud-04",
+      "voice": "dos o tres recámaras",
+      "text": "dos o tres recámaras",
+      "overlay": "2 Y 3 RECÁMARAS",
+      "kind": "bedrooms",
+      "image_semantics": "Recámara oficial reconocible, no patio ni roof cuando se mencionen recámaras.",
+      "candidate_asset": "v3/shared-assets/official-5-Recamara-1-PP-03.08.26-FINAL.png",
+      "word_start": 21,
+      "word_end": 25,
+      "start": 8.034291,
+      "end": 9.520958,
+      "shot_id": "salud-04",
+      "description": "Recámara oficial reconocible, no patio ni roof cuando se mencionen recámaras.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": false,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v3/shared-assets/official-5-Recamara-1-PP-03.08.26-FINAL.png",
+      "dimensions": [
+        3840,
+        2958
+      ],
+      "sha256": "cb4ab8800751d65d5a8decf96c4ab1c0c5035fa51875e8780ab8e014cd2d221a",
+      "core_end": 9.200958,
+      "duration": 1.4866670000000006,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "local": "assets/photos/04-salud-04.png",
+      "transition": "lift",
+      "path": "assets/photos/04-salud-04.png"
+    },
+    {
+      "id": "salud-05",
+      "voice": "y roof garden.",
+      "text": "y roof garden.",
+      "overlay": "ROOF GARDEN",
+      "kind": "roof",
+      "image_semantics": "Médico y pareja en roof oficial con el mar al fondo; toma diferente del hook.",
+      "candidate_asset": "v2/assets/doctor.png",
+      "word_start": 25,
+      "word_end": 28,
+      "start": 9.200958,
+      "end": 11.080458,
+      "shot_id": "salud-05",
+      "description": "Médico y pareja en roof oficial con el mar al fondo; toma diferente del hook.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v2/assets/doctor.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sha256": "6f23d7f25e55f5b159cdf66f02459b0e95f5bd015ea35c68a8d63ec70f94c6d2",
+      "core_end": 10.760458,
+      "duration": 1.8795000000000002,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "local": "assets/photos/05-salud-05.png",
+      "transition": "match-pan",
+      "path": "assets/photos/05-salud-05.png"
+    },
+    {
+      "id": "salud-06",
+      "voice": "Imagina una pausa en la alberca",
+      "text": "Imagina una pausa en la alberca",
+      "overlay": "UNA PAUSA PARA TI",
+      "kind": "pool",
+      "image_semantics": "Médico y pareja usando la alberca del nuevo preview: traje de baño apropiado y batas o toallas; conservar forma, palmeras, terrazas y pérgolas del render.",
+      "candidate_asset": "new:salud_alberca_v5",
+      "word_start": 28,
+      "word_end": 34,
+      "start": 10.760458,
+      "end": 12.770958,
+      "shot_id": "salud-06",
+      "description": "Médico y pareja usando la alberca del nuevo preview: traje de baño apropiado y batas o toallas; conservar forma, palmeras, terrazas y pérgolas del render.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "provisional, inspect actual image and animated crop",
+      "ai": true,
+      "projected": true,
+      "expected_generation": true,
+      "source_candidate": "new:salud_alberca_v5",
+      "core_end": 12.450958,
+      "duration": 2.0105000000000004,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "sha256": "1a798e935dc884ef45c563bdc869cd0219a683622dd07b613a4506e4c882521e",
+      "local": "assets/photos/06-salud-06.png",
+      "transition": "match-pan",
+      "path": "assets/photos/06-salud-06.png"
+    },
+    {
+      "id": "salud-07",
+      "voice": "y tardes de asador",
+      "text": "y tardes de asador",
+      "overlay": "TARDES PARA COMPARTIR",
+      "kind": "grill",
+      "image_semantics": "Misma pareja en asadores del nuevo preview, hombre con polo o camisa casual y bermudas; mujer con ropa veraniega. Acción real de preparar/componer comida.",
+      "candidate_asset": "new:salud_asadores_v5",
+      "word_start": 34,
+      "word_end": 38,
+      "start": 12.450958,
+      "end": 13.663791,
+      "shot_id": "salud-07",
+      "description": "Misma pareja en asadores del nuevo preview, hombre con polo o camisa casual y bermudas; mujer con ropa veraniega. Acción real de preparar/componer comida.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 480,
+      "caption_position_review": "V5 new amenity native image reviewed: upper pergola/sky band below title, above heads, preserving hands/grill/paddle action.",
+      "ai": true,
+      "projected": true,
+      "expected_generation": true,
+      "source_candidate": "new:salud_asadores_v5",
+      "core_end": 13.343791,
+      "duration": 1.2128329999999998,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "sha256": "7c72bef3152584ef1ba6c83a31d36b7bbc4000bfce5c1f695c296ec2d8afd93d",
+      "local": "assets/photos/07-salud-07.png",
+      "transition": "punch",
+      "path": "assets/photos/07-salud-07.png"
+    },
+    {
+      "id": "salud-08",
+      "voice": "en sus primeras amenidades proyectadas.",
+      "text": "en sus primeras amenidades proyectadas.",
+      "overlay": "PRIMERAS AMENIDADES PROYECTADAS",
+      "kind": "amenity",
+      "image_semantics": "Vista contextual de las primeras amenidades del preview: alberca, pérgolas y área social; sin afirmar obra terminada. Puede ser el único uso del render aéreo compartido.",
+      "candidate_asset": "new:salud_amenidades_contexto",
+      "word_start": 38,
+      "word_end": 43,
+      "start": 13.343791,
+      "end": 16.616166,
+      "shot_id": "salud-08",
+      "description": "Vista contextual de las primeras amenidades del preview: alberca, pérgolas y área social; sin afirmar obra terminada. Puede ser el único uso del render aéreo compartido.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "provisional, inspect actual image and animated crop",
+      "ai": true,
+      "projected": true,
+      "expected_generation": true,
+      "source_candidate": "new:salud_amenidades_contexto",
+      "core_end": 16.296166,
+      "duration": 3.2723750000000003,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "sha256": "9c0927489baf12fc9d59fc8656b0c1655c4d1ba7f6b8c7f9b71eabf534b7ec50",
+      "local": "assets/photos/08-salud-08.png",
+      "transition": "lift",
+      "path": "assets/photos/08-salud-08.png"
+    },
+    {
+      "id": "salud-09",
+      "voice": "Cuida tu liquidez con pagos flexibles:",
+      "text": "Cuida tu liquidez con pagos flexibles:",
+      "overlay": "PAGOS FLEXIBLES",
+      "kind": "planning",
+      "image_semantics": "Pareja revisando documentos y presupuesto con calculadora, sin pantalla absurda; imagen de planeación distinta de las otras etapas.",
+      "candidate_asset": "v4/generated/salud_budget.png",
+      "word_start": 43,
+      "word_end": 49,
+      "start": 16.296166,
+      "end": 18.878083,
+      "shot_id": "salud-09",
+      "description": "Pareja revisando documentos y presupuesto con calculadora, sin pantalla absurda; imagen de planeación distinta de las otras etapas.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 750,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v4/generated/salud_budget.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sha256": "c299fe0ee870cb8fec0cb9ecd44c4f8871e9b15532ebe6b0714abe6af45bc693",
+      "core_end": 18.558083,
+      "duration": 2.5819170000000007,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "local": "assets/photos/09-salud-09.png",
+      "transition": "match-pan",
+      "path": "assets/photos/09-salud-09.png"
+    },
+    {
+      "id": "salud-10",
+      "voice": "diez por ciento de enganche,",
+      "text": "diez por ciento de enganche,",
+      "overlay": "10% DE ENGANCHE",
+      "kind": "pay0",
+      "image_semantics": "Médico confirmando pago conceptual desde smartphone; interfaz abstracta y orientación correcta.",
+      "candidate_asset": "v4/generated/salud_pay0.png",
+      "word_start": 49,
+      "word_end": 54,
+      "start": 18.558083,
+      "end": 20.497125,
+      "shot_id": "salud-10",
+      "description": "Médico confirmando pago conceptual desde smartphone; interfaz abstracta y orientación correcta.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v4/generated/salud_pay0.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sha256": "63b878f7632bbca1d3b0a2214c2dea984b84450e47a4dad6425e464143cead49",
+      "core_end": 20.177125,
+      "duration": 1.9390420000000006,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0,
+      "local": "assets/photos/10-salud-10.png",
+      "transition": "match-pan",
+      "path": "assets/photos/10-salud-10.png"
+    },
+    {
+      "id": "salud-11",
+      "voice": "otro diez por ciento en diecinueve mensualidades",
+      "text": "otro diez por ciento en diecinueve mensualidades",
+      "overlay": "10% EN 19 MENSUALIDADES",
+      "kind": "pay1",
+      "image_semantics": "Corregir la escena de laptop: los personajes ven el frente de pantalla; la cámara ve su carcasa exterior lisa, sin gráficos impresos en la tapa. Calendario/papeles visibles sobre mesa.",
+      "candidate_asset": "new:salud_pay1_corregida",
+      "word_start": 54,
+      "word_end": 61,
+      "start": 20.177125,
+      "end": 22.89,
+      "shot_id": "salud-11",
+      "description": "Corregir la escena de laptop: los personajes ven el frente de pantalla; la cámara ve su carcasa exterior lisa, sin gráficos impresos en la tapa. Calendario/papeles visibles sobre mesa.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "provisional, inspect actual image and animated crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": true,
+      "source_candidate": "new:salud_pay1_corregida",
+      "dimensions": [
+        992,
+        1585
+      ],
+      "sha256": "55e34e62c30513bebcca6ed0c91bb563dfa7c46d13d8a5b37c6e0fc74b0b83d8",
+      "core_end": 22.57,
+      "duration": 2.7128750000000004,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.23812500000000014,
+      "local": "assets/photos/11-salud-11.png",
+      "transition": "punch",
+      "path": "assets/photos/11-salud-11.png"
+    },
+    {
+      "id": "salud-12",
+      "voice": "y ochenta por ciento contra entrega.",
+      "text": "y ochenta por ciento contra entrega.",
+      "overlay": "80% CONTRA ENTREGA",
+      "kind": "pay2",
+      "image_semantics": "Corregir laptop del pago final: pantalla orientada a las personas y tapa exterior lisa hacia cámara; llaves sobre mesa, manos naturales. No entrega actual ni testimonio.",
+      "candidate_asset": "new:salud_pay2_corregida",
+      "word_start": 61,
+      "word_end": 67,
+      "start": 22.57,
+      "end": 25.54475,
+      "shot_id": "salud-12",
+      "description": "Corregir laptop del pago final: pantalla orientada a las personas y tapa exterior lisa hacia cámara; llaves sobre mesa, manos naturales. No entrega actual ni testimonio.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "provisional, inspect actual image and animated crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": true,
+      "source_candidate": "new:salud_pay2_corregida",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sha256": "ce980bb1d25114056e1edf406b1d462627aed46aa6f64a004c4b703b5adf4872",
+      "core_end": 25.22475,
+      "duration": 2.9747500000000002,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.07141599999999926,
+      "local": "assets/photos/12-salud-12.png",
+      "transition": "lift",
+      "path": "assets/photos/12-salud-12.png"
+    },
+    {
+      "id": "salud-13a",
+      "voice": "Plusvalía anual estimada del ocho por ciento:",
+      "text": "Plusvalía anual estimada del ocho por ciento: escenario conservador.",
+      "overlay": "8% ANUAL ESTIMADO",
+      "kind": "value",
+      "image_semantics": "Fachada o vista oficial alternativa del proyecto. La cifra se anima como estimación; no gráfica de rendimiento garantizado.",
+      "candidate_asset": "v3/shared-assets/official-9-Fachadas-PP-V2-05.07.26-FINAL.png",
+      "word_start": 67,
+      "word_end": 76,
+      "start": 25.22475,
+      "end": 28.068583,
+      "shot_id": "salud-13a",
+      "description": "Fachada o vista oficial alternativa del proyecto. La cifra se anima como estimación; no gráfica de rendimiento garantizado.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": false,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v3/shared-assets/official-9-Fachadas-PP-V2-05.07.26-FINAL.png",
+      "parent_id": "salud-13",
+      "split_at_words": "Plusvalía anual estimada del ocho por ciento:",
+      "dimensions": [
+        3840,
+        2957
+      ],
+      "sha256": "812358daff6dc36984df067240af4e6a9bcb0263669aec21d5a2447f6c09ec80",
+      "core_end": 27.748583,
+      "duration": 2.843833,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 1.4762079999999997,
+      "local": "assets/photos/13-salud-13a.png",
+      "transition": "match-pan",
+      "path": "assets/photos/13-salud-13a.png"
+    },
+    {
+      "id": "salud-13b",
+      "voice": "escenario conservador.",
+      "text": "Plusvalía anual estimada del ocho por ciento: escenario conservador.",
+      "overlay": "8% ANUAL ESTIMADO",
+      "kind": "development",
+      "image_semantics": "Fachada o vista oficial alternativa del proyecto. La cifra se anima como estimación; no gráfica de rendimiento garantizado.",
+      "candidate_asset": "v3/shared-assets/official-9-Fachadas-PP-V2-05.07.26-FINAL.png",
+      "word_start": 74,
+      "word_end": 76,
+      "start": 27.748583,
+      "end": 30.1995,
+      "shot_id": "salud-13b",
+      "description": "Misma pareja del médico leyendo en patio privado; toma de apoyo al escenario conservador, sin repetir la cifra ni representar un rendimiento garantizado.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 760,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v3/generated/salud_patio.png",
+      "parent_id": "salud-13",
+      "split_at_words": "escenario conservador.",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sha256": "4da8395af6466bdfb9a5280a3157ab08694f57ac6eeda23ed9c8c2570b3e7638",
+      "core_end": 29.8795,
+      "duration": 2.4509170000000005,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "local": "assets/photos/14-salud-13b.png",
+      "transition": "match-pan",
+      "path": "assets/photos/14-salud-13b.png"
+    },
+    {
+      "id": "salud-14",
+      "voice": "Tu próximo descanso también merece un lugar propio.",
+      "text": "Tu próximo descanso también merece un lugar propio.",
+      "overlay": "UN LUGAR PARA TUS PLANES",
+      "kind": "emotion",
+      "image_semantics": "Pareja del médico planeando su descanso o leyendo en dormitorio, imagen pertinente conservada de V3.",
+      "candidate_asset": "v3/generated/salud_dormitorio.png",
+      "word_start": 76,
+      "word_end": 84,
+      "start": 29.8795,
+      "end": 33.73525,
+      "shot_id": "salud-14",
+      "description": "Pareja del médico planeando su descanso o leyendo en dormitorio, imagen pertinente conservada de V3.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 760,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v3/generated/salud_dormitorio.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sha256": "2e009a15c9ae9497b1385cad5a61dbd120c8638076fd56561b072a8e92bbe5db",
+      "core_end": 33.41525,
+      "duration": 3.8557500000000005,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "local": "assets/photos/15-salud-14.png",
+      "transition": "punch",
+      "path": "assets/photos/15-salud-14.png"
+    },
+    {
+      "id": "salud-15",
+      "voice": "Haz clic en el botón de abajo para más información.",
+      "text": "Haz clic en el botón de abajo para más información.",
+      "overlay": "MÁS INFORMACIÓN",
+      "kind": "cta",
+      "image_semantics": "Roof oficial al atardecer. Logotipo, titular, llamada y flecha centrados en todos los perfiles; fondo diferente del hook y del roof anterior.",
+      "candidate_asset": "assets/sunset.png",
+      "word_start": 84,
+      "word_end": 94,
+      "start": 33.41525,
+      "end": 36.875,
+      "shot_id": "salud-15",
+      "description": "Roof oficial al atardecer. Logotipo, titular, llamada y flecha centrados en todos los perfiles; fondo diferente del hook y del roof anterior.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": false,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "assets/sunset.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "2153651e7e490359f22ebae7fa8e9a65af4c7ce0ad7fecfc8f37b71bf6f91594",
+      "core_end": 36.875,
+      "duration": 3.4597499999999997,
+      "transition_overlap": 0,
+      "entry_duration": 0.32,
+      "has_next": false,
+      "number_local": 0.1,
+      "local": "assets/photos/16-salud-15.png",
+      "transition": "lift",
+      "path": "assets/photos/16-salud-15.png"
+    }
+  ],
+  "captions": [
+    {
+      "text": "Doctor,",
+      "start": 0.12,
+      "end": 0.648583,
+      "words": [
+        {
+          "text": "Doctor,",
+          "start": 0.12,
+          "end": 0.548583
+        }
+      ]
+    },
+    {
+      "text": "¿buscas una casa con",
+      "start": 0.87,
+      "end": 1.880708,
+      "words": [
+        {
+          "text": "¿buscas",
+          "start": 0.87,
+          "end": 1.239041
+        },
+        {
+          "text": "una",
+          "start": 1.250958,
+          "end": 1.405708
+        },
+        {
+          "text": "casa",
+          "start": 1.417625,
+          "end": 1.703333
+        },
+        {
+          "text": "con",
+          "start": 1.71525,
+          "end": 1.893833
+        }
+      ]
+    },
+    {
+      "text": "vista al mar",
+      "start": 1.905708,
+      "end": 2.535458,
+      "words": [
+        {
+          "text": "vista",
+          "start": 1.905708,
+          "end": 2.203333
+        },
+        {
+          "text": "al",
+          "start": 2.21525,
+          "end": 2.3105
+        },
+        {
+          "text": "mar",
+          "start": 2.322375,
+          "end": 2.548583
+        }
+      ]
+    },
+    {
+      "text": "para bajar el ritmo",
+      "start": 2.560458,
+      "end": 3.487833,
+      "words": [
+        {
+          "text": "para",
+          "start": 2.560458,
+          "end": 2.750916
+        },
+        {
+          "text": "bajar",
+          "start": 2.762833,
+          "end": 3.072374
+        },
+        {
+          "text": "el",
+          "start": 3.084291,
+          "end": 3.179541
+        },
+        {
+          "text": "ritmo",
+          "start": 3.191416,
+          "end": 3.500957
+        }
+      ]
+    },
+    {
+      "text": "y compartir en pareja?",
+      "start": 3.512833,
+      "end": 4.815249,
+      "words": [
+        {
+          "text": "y",
+          "start": 3.512833,
+          "end": 3.572374
+        },
+        {
+          "text": "compartir",
+          "start": 3.584291,
+          "end": 4.131916
+        },
+        {
+          "text": "en",
+          "start": 4.143791,
+          "end": 4.239041
+        },
+        {
+          "text": "pareja?",
+          "start": 4.250958,
+          "end": 4.715249
+        }
+      ]
+    },
+    {
+      "text": "Conoce Punta Pacífico, en",
+      "start": 5.534291,
+      "end": 7.175958,
+      "words": [
+        {
+          "text": "Conoce",
+          "start": 5.534291,
+          "end": 5.927166
+        },
+        {
+          "text": "Punta",
+          "start": 5.939041,
+          "end": 6.236666
+        },
+        {
+          "text": "Pacífico,",
+          "start": 6.248583,
+          "end": 6.843833
+        },
+        {
+          "text": "en",
+          "start": 7.058083,
+          "end": 7.189041
+        }
+      ]
+    },
+    {
+      "text": "Ensenada:",
+      "start": 7.200958,
+      "end": 7.836665999999999,
+      "words": [
+        {
+          "text": "Ensenada:",
+          "start": 7.200958,
+          "end": 7.736666
+        }
+      ]
+    },
+    {
+      "text": "dos o tres recámaras",
+      "start": 8.034291,
+      "end": 9.175958,
+      "words": [
+        {
+          "text": "dos",
+          "start": 8.034291,
+          "end": 8.236666
+        },
+        {
+          "text": "o",
+          "start": 8.248583,
+          "end": 8.308124
+        },
+        {
+          "text": "tres",
+          "start": 8.32,
+          "end": 8.593791
+        },
+        {
+          "text": "recámaras",
+          "start": 8.605708,
+          "end": 9.189041
+        }
+      ]
+    },
+    {
+      "text": "y roof garden.",
+      "start": 9.200958,
+      "end": 10.039041,
+      "words": [
+        {
+          "text": "y",
+          "start": 9.200958,
+          "end": 9.272374
+        },
+        {
+          "text": "roof",
+          "start": 9.284291,
+          "end": 9.510499
+        },
+        {
+          "text": "garden.",
+          "start": 9.522375,
+          "end": 9.939041
+        }
+      ]
+    },
+    {
+      "text": "Imagina una pausa en",
+      "start": 10.760458,
+      "end": 11.937833,
+      "words": [
+        {
+          "text": "Imagina",
+          "start": 10.760458,
+          "end": 11.284249
+        },
+        {
+          "text": "una",
+          "start": 11.296166,
+          "end": 11.510457
+        },
+        {
+          "text": "pausa",
+          "start": 11.522375,
+          "end": 11.867625
+        },
+        {
+          "text": "en",
+          "start": 11.8795,
+          "end": 11.950916
+        }
+      ]
+    },
+    {
+      "text": "la alberca",
+      "start": 11.962833,
+      "end": 12.425958,
+      "words": [
+        {
+          "text": "la",
+          "start": 11.962833,
+          "end": 12.034249
+        },
+        {
+          "text": "alberca",
+          "start": 12.046166,
+          "end": 12.439041
+        }
+      ]
+    },
+    {
+      "text": "y tardes de asador",
+      "start": 12.450958,
+      "end": 13.318791,
+      "words": [
+        {
+          "text": "y",
+          "start": 12.450958,
+          "end": 12.522374
+        },
+        {
+          "text": "tardes",
+          "start": 12.534291,
+          "end": 12.903332
+        },
+        {
+          "text": "de",
+          "start": 12.91525,
+          "end": 12.974791
+        },
+        {
+          "text": "asador",
+          "start": 12.986666,
+          "end": 13.331916
+        }
+      ]
+    },
+    {
+      "text": "en sus primeras",
+      "start": 13.343791,
+      "end": 14.068791,
+      "words": [
+        {
+          "text": "en",
+          "start": 13.343791,
+          "end": 13.415207
+        },
+        {
+          "text": "sus",
+          "start": 13.427125,
+          "end": 13.617583
+        },
+        {
+          "text": "primeras",
+          "start": 13.6295,
+          "end": 14.081875
+        }
+      ]
+    },
+    {
+      "text": "amenidades proyectadas.",
+      "start": 14.093791,
+      "end": 15.57475,
+      "words": [
+        {
+          "text": "amenidades",
+          "start": 14.093791,
+          "end": 14.665207
+        },
+        {
+          "text": "proyectadas.",
+          "start": 14.677125,
+          "end": 15.47475
+        }
+      ]
+    },
+    {
+      "text": "Cuida tu liquidez con",
+      "start": 16.296166,
+      "end": 17.318791,
+      "words": [
+        {
+          "text": "Cuida",
+          "start": 16.296166,
+          "end": 16.569957
+        },
+        {
+          "text": "tu",
+          "start": 16.581916,
+          "end": 16.677166
+        },
+        {
+          "text": "liquidez",
+          "start": 16.689041,
+          "end": 17.129499
+        },
+        {
+          "text": "con",
+          "start": 17.141416,
+          "end": 17.331874
+        }
+      ]
+    },
+    {
+      "text": "pagos flexibles:",
+      "start": 17.343791,
+      "end": 18.396208,
+      "words": [
+        {
+          "text": "pagos",
+          "start": 17.343791,
+          "end": 17.653332
+        },
+        {
+          "text": "flexibles:",
+          "start": 17.66525,
+          "end": 18.296208
+        }
+      ]
+    },
+    {
+      "text": "diez por ciento de",
+      "start": 18.558083,
+      "end": 19.3545,
+      "words": [
+        {
+          "text": "diez",
+          "start": 18.558083,
+          "end": 18.784291
+        },
+        {
+          "text": "por",
+          "start": 18.796166,
+          "end": 18.950916
+        },
+        {
+          "text": "ciento",
+          "start": 18.962833,
+          "end": 19.260458
+        },
+        {
+          "text": "de",
+          "start": 19.272375,
+          "end": 19.367625
+        }
+      ]
+    },
+    {
+      "text": "enganche,",
+      "start": 19.3795,
+      "end": 19.9795,
+      "words": [
+        {
+          "text": "enganche,",
+          "start": 19.3795,
+          "end": 19.8795
+        }
+      ]
+    },
+    {
+      "text": "otro diez por ciento",
+      "start": 20.177125,
+      "end": 21.152125,
+      "words": [
+        {
+          "text": "otro",
+          "start": 20.177125,
+          "end": 20.403333
+        },
+        {
+          "text": "diez",
+          "start": 20.41525,
+          "end": 20.66525
+        },
+        {
+          "text": "por",
+          "start": 20.677125,
+          "end": 20.843791
+        },
+        {
+          "text": "ciento",
+          "start": 20.855708,
+          "end": 21.165249
+        }
+      ]
+    },
+    {
+      "text": "en diecinueve",
+      "start": 21.177125,
+      "end": 21.759291,
+      "words": [
+        {
+          "text": "en",
+          "start": 21.177125,
+          "end": 21.248541
+        },
+        {
+          "text": "diecinueve",
+          "start": 21.260458,
+          "end": 21.772374
+        }
+      ]
+    },
+    {
+      "text": "mensualidades",
+      "start": 21.784291,
+      "end": 22.545,
+      "words": [
+        {
+          "text": "mensualidades",
+          "start": 21.784291,
+          "end": 22.558082
+        }
+      ]
+    },
+    {
+      "text": "y ochenta por ciento",
+      "start": 22.57,
+      "end": 23.592625,
+      "words": [
+        {
+          "text": "y",
+          "start": 22.57,
+          "end": 22.629541
+        },
+        {
+          "text": "ochenta",
+          "start": 22.641416,
+          "end": 23.058082
+        },
+        {
+          "text": "por",
+          "start": 23.07,
+          "end": 23.248583
+        },
+        {
+          "text": "ciento",
+          "start": 23.260458,
+          "end": 23.605708
+        }
+      ]
+    },
+    {
+      "text": "contra entrega.",
+      "start": 23.617625,
+      "end": 24.503332,
+      "words": [
+        {
+          "text": "contra",
+          "start": 23.617625,
+          "end": 23.879541
+        },
+        {
+          "text": "entrega.",
+          "start": 23.891416,
+          "end": 24.403332
+        }
+      ]
+    },
+    {
+      "text": "Plusvalía anual estimada",
+      "start": 25.22475,
+      "end": 26.473583,
+      "words": [
+        {
+          "text": "Plusvalía",
+          "start": 25.22475,
+          "end": 25.748541
+        },
+        {
+          "text": "anual",
+          "start": 25.760458,
+          "end": 26.022374
+        },
+        {
+          "text": "estimada",
+          "start": 26.034291,
+          "end": 26.486666
+        }
+      ]
+    },
+    {
+      "text": "del ocho por ciento:",
+      "start": 26.498583,
+      "end": 27.610458,
+      "words": [
+        {
+          "text": "del",
+          "start": 26.498583,
+          "end": 26.689041
+        },
+        {
+          "text": "ocho",
+          "start": 26.700958,
+          "end": 26.915249
+        },
+        {
+          "text": "por",
+          "start": 26.927125,
+          "end": 27.093791
+        },
+        {
+          "text": "ciento:",
+          "start": 27.105708,
+          "end": 27.510458
+        }
+      ]
+    },
+    {
+      "text": "escenario conservador.",
+      "start": 27.748583,
+      "end": 29.158124,
+      "words": [
+        {
+          "text": "escenario",
+          "start": 27.748583,
+          "end": 28.319999
+        },
+        {
+          "text": "conservador.",
+          "start": 28.331916,
+          "end": 29.058124
+        }
+      ]
+    },
+    {
+      "text": "Tu próximo descanso",
+      "start": 29.8795,
+      "end": 30.94975,
+      "words": [
+        {
+          "text": "Tu",
+          "start": 29.8795,
+          "end": 29.998541
+        },
+        {
+          "text": "próximo",
+          "start": 30.010458,
+          "end": 30.427124
+        },
+        {
+          "text": "descanso",
+          "start": 30.439041,
+          "end": 30.962832
+        }
+      ]
+    },
+    {
+      "text": "también merece un lugar",
+      "start": 30.97475,
+      "end": 32.128333000000005,
+      "words": [
+        {
+          "text": "también",
+          "start": 30.97475,
+          "end": 31.343791
+        },
+        {
+          "text": "merece",
+          "start": 31.355708,
+          "end": 31.712833
+        },
+        {
+          "text": "un",
+          "start": 31.72475,
+          "end": 31.82
+        },
+        {
+          "text": "lugar",
+          "start": 31.831916,
+          "end": 32.141457
+        }
+      ]
+    },
+    {
+      "text": "propio.",
+      "start": 32.153333,
+      "end": 32.693791000000004,
+      "words": [
+        {
+          "text": "propio.",
+          "start": 32.153333,
+          "end": 32.593791
+        }
+      ]
+    },
+    {
+      "text": "Haz clic en el",
+      "start": 33.41525,
+      "end": 34.116416,
+      "words": [
+        {
+          "text": "Haz",
+          "start": 33.41525,
+          "end": 33.617625
+        },
+        {
+          "text": "clic",
+          "start": 33.6295,
+          "end": 33.903291
+        },
+        {
+          "text": "en",
+          "start": 33.91525,
+          "end": 34.022375
+        },
+        {
+          "text": "el",
+          "start": 34.034291,
+          "end": 34.129541
+        }
+      ]
+    },
+    {
+      "text": "botón de abajo para",
+      "start": 34.141416,
+      "end": 35.068791000000004,
+      "words": [
+        {
+          "text": "botón",
+          "start": 34.141416,
+          "end": 34.427124
+        },
+        {
+          "text": "de",
+          "start": 34.439041,
+          "end": 34.498582
+        },
+        {
+          "text": "abajo",
+          "start": 34.510458,
+          "end": 34.867583
+        },
+        {
+          "text": "para",
+          "start": 34.8795,
+          "end": 35.081875
+        }
+      ]
+    },
+    {
+      "text": "más información.",
+      "start": 35.093791,
+      "end": 36.134291000000005,
+      "words": [
+        {
+          "text": "más",
+          "start": 35.093791,
+          "end": 35.319999
+        },
+        {
+          "text": "información.",
+          "start": 35.331916,
+          "end": 36.034291
+        }
+      ]
+    }
+  ],
+  "price": {
+    "label": "Rango aprox.",
+    "from_mdp": 3.9,
+    "to_mdp": 4.8,
+    "currency": "MXN",
+    "bedrooms": [
+      2,
+      3
+    ],
+    "visible": [
+      0,
+      3.6
+    ],
+    "source": "última instrucción del usuario"
+  },
+  "payments": "10% enganche +10%en19mensualidades+80%contraentrega",
+  "annual_appreciation": {
+    "percent": 8,
+    "qualifier": "estimada; escenario conservador",
+    "classification": "client supplied estimate"
+  },
+  "cta_alignment": "center_x540",
+  "motion_cues": [
+    {
+      "id": "salud-price-rule",
+      "type": "price_underline",
+      "picture_landing_at": 0.4,
+      "peak_at": 0.4416666666666667,
+      "cause": "raya de apertura que termina de crecer",
+      "recommended": true
+    },
+    {
+      "id": "salud-sea-emphasis",
+      "type": "sea_emphasis",
+      "picture_landing_at": 2.422375,
+      "peak_at": 2.4640416666666667,
+      "cause": "énfasis de vista al mar en la palabra hablada",
+      "recommended": true
+    },
+    {
+      "id": "salud-02-cut",
+      "shot_id": "salud-02",
+      "type": "transition",
+      "picture_landing_at": 2.560458,
+      "peak_at": 2.6021246666666666,
+      "cause": "match-pan",
+      "recommended": false
+    },
+    {
+      "id": "salud-03-cut",
+      "shot_id": "salud-03",
+      "type": "transition",
+      "picture_landing_at": 5.534291,
+      "peak_at": 5.575957666666667,
+      "cause": "punch",
+      "recommended": false
+    },
+    {
+      "id": "salud-03-landing",
+      "shot_id": "salud-03",
+      "type": "text_landing",
+      "kind": "place",
+      "picture_landing_at": 5.934291,
+      "peak_at": 5.975958,
+      "cause": "PUNTA PACÍFICO · ENSENADA",
+      "recommended": true
+    },
+    {
+      "id": "salud-04-cut",
+      "shot_id": "salud-04",
+      "type": "transition",
+      "picture_landing_at": 8.034291,
+      "peak_at": 8.075957666666666,
+      "cause": "lift",
+      "recommended": false
+    },
+    {
+      "id": "salud-04-landing",
+      "shot_id": "salud-04",
+      "type": "text_landing",
+      "kind": "bedrooms",
+      "picture_landing_at": 8.434291,
+      "peak_at": 8.475958,
+      "cause": "2 Y 3 RECÁMARAS",
+      "recommended": true
+    },
+    {
+      "id": "salud-05-cut",
+      "shot_id": "salud-05",
+      "type": "transition",
+      "picture_landing_at": 9.200958,
+      "peak_at": 9.242624666666666,
+      "cause": "match-pan",
+      "recommended": false
+    },
+    {
+      "id": "salud-05-landing",
+      "shot_id": "salud-05",
+      "type": "text_landing",
+      "kind": "roof",
+      "picture_landing_at": 9.600958,
+      "peak_at": 9.642625,
+      "cause": "ROOF GARDEN",
+      "recommended": true
+    },
+    {
+      "id": "salud-06-cut",
+      "shot_id": "salud-06",
+      "type": "transition",
+      "picture_landing_at": 10.760458,
+      "peak_at": 10.802124666666666,
+      "cause": "match-pan",
+      "recommended": false
+    },
+    {
+      "id": "salud-06-landing",
+      "shot_id": "salud-06",
+      "type": "text_landing",
+      "kind": "pool",
+      "picture_landing_at": 11.160458,
+      "peak_at": 11.202125,
+      "cause": "UNA PAUSA PARA TI",
+      "recommended": true
+    },
+    {
+      "id": "salud-07-cut",
+      "shot_id": "salud-07",
+      "type": "transition",
+      "picture_landing_at": 12.450958,
+      "peak_at": 12.492624666666666,
+      "cause": "punch",
+      "recommended": false
+    },
+    {
+      "id": "salud-07-landing",
+      "shot_id": "salud-07",
+      "type": "text_landing",
+      "kind": "grill",
+      "picture_landing_at": 12.850958,
+      "peak_at": 12.892625,
+      "cause": "TARDES PARA COMPARTIR",
+      "recommended": true
+    },
+    {
+      "id": "salud-08-cut",
+      "shot_id": "salud-08",
+      "type": "transition",
+      "picture_landing_at": 13.343791,
+      "peak_at": 13.385457666666666,
+      "cause": "lift",
+      "recommended": false
+    },
+    {
+      "id": "salud-08-landing",
+      "shot_id": "salud-08",
+      "type": "text_landing",
+      "kind": "amenity",
+      "picture_landing_at": 13.743791,
+      "peak_at": 13.785458,
+      "cause": "PRIMERAS AMENIDADES PROYECTADAS",
+      "recommended": true
+    },
+    {
+      "id": "salud-09-cut",
+      "shot_id": "salud-09",
+      "type": "transition",
+      "picture_landing_at": 16.296166,
+      "peak_at": 16.337832666666667,
+      "cause": "match-pan",
+      "recommended": false
+    },
+    {
+      "id": "salud-10-cut",
+      "shot_id": "salud-10",
+      "type": "transition",
+      "picture_landing_at": 18.558083,
+      "peak_at": 18.599749666666668,
+      "cause": "match-pan",
+      "recommended": false
+    },
+    {
+      "id": "salud-10-landing",
+      "shot_id": "salud-10",
+      "type": "number_landing",
+      "kind": "pay0",
+      "picture_landing_at": 18.778083,
+      "peak_at": 18.81975,
+      "cause": "10% DE ENGANCHE",
+      "recommended": true
+    },
+    {
+      "id": "salud-11-cut",
+      "shot_id": "salud-11",
+      "type": "transition",
+      "picture_landing_at": 20.177125,
+      "peak_at": 20.218791666666668,
+      "cause": "punch",
+      "recommended": false
+    },
+    {
+      "id": "salud-11-landing",
+      "shot_id": "salud-11",
+      "type": "number_landing",
+      "kind": "pay1",
+      "picture_landing_at": 20.63525,
+      "peak_at": 20.676917,
+      "cause": "10% EN 19 MENSUALIDADES",
+      "recommended": true
+    },
+    {
+      "id": "salud-12-cut",
+      "shot_id": "salud-12",
+      "type": "transition",
+      "picture_landing_at": 22.57,
+      "peak_at": 22.611666666666668,
+      "cause": "lift",
+      "recommended": false
+    },
+    {
+      "id": "salud-12-landing",
+      "shot_id": "salud-12",
+      "type": "number_landing",
+      "kind": "pay2",
+      "picture_landing_at": 22.861416,
+      "peak_at": 22.903083,
+      "cause": "80% CONTRA ENTREGA",
+      "recommended": true
+    },
+    {
+      "id": "salud-13a-cut",
+      "shot_id": "salud-13a",
+      "type": "transition",
+      "picture_landing_at": 25.22475,
+      "peak_at": 25.266416666666668,
+      "cause": "match-pan",
+      "recommended": false
+    },
+    {
+      "id": "salud-13a-landing",
+      "shot_id": "salud-13a",
+      "type": "number_landing",
+      "kind": "value",
+      "picture_landing_at": 26.920958,
+      "peak_at": 26.962625,
+      "cause": "8% ANUAL ESTIMADO",
+      "recommended": true
+    },
+    {
+      "id": "salud-13b-cut",
+      "shot_id": "salud-13b",
+      "type": "transition",
+      "picture_landing_at": 27.748583,
+      "peak_at": 27.790249666666668,
+      "cause": "match-pan",
+      "recommended": false
+    },
+    {
+      "id": "salud-14-cut",
+      "shot_id": "salud-14",
+      "type": "transition",
+      "picture_landing_at": 29.8795,
+      "peak_at": 29.921166666666668,
+      "cause": "punch",
+      "recommended": false
+    },
+    {
+      "id": "salud-15-cut",
+      "shot_id": "salud-15",
+      "type": "transition",
+      "picture_landing_at": 33.41525,
+      "peak_at": 33.456916666666665,
+      "cause": "lift",
+      "recommended": false
+    },
+    {
+      "id": "salud-15-landing",
+      "shot_id": "salud-15",
+      "type": "cta_landing",
+      "kind": "cta",
+      "picture_landing_at": 33.89525,
+      "peak_at": 33.936917,
+      "cause": "MÁS INFORMACIÓN",
+      "recommended": true
+    }
+  ],
+  "audio_source": "assets/audio/master_mix.wav"
+}

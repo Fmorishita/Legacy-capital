@@ -1,0 +1,1626 @@
+{
+  "version": "V5",
+  "engine": "HyperFrames0.9.18",
+  "profile": "california",
+  "duration": 41.541666666666664,
+  "fps": 24,
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "draft": false,
+  "shots": [
+    {
+      "id": "california-01",
+      "voice": "Si vives en California y buscas vista al mar,",
+      "text": "Si vives en California y buscas vista al mar,",
+      "overlay": "CALIFORNIA · VISTA AL MAR",
+      "kind": "hook",
+      "image_semantics": "Misma familia ficticia de V4 en roof oficial con el mar visible desde primer fotograma. Ropa casual de viaje/reunión, sin maletas que oculten el horizonte.",
+      "candidate_asset": "new:california_mar_hook",
+      "word_start": 0,
+      "word_end": 9,
+      "start": 0,
+      "end": 3.274,
+      "shot_id": "california-01",
+      "description": "Misma familia ficticia de V4 en roof oficial con el mar visible desde primer fotograma. Ropa casual de viaje/reunión, sin maletas que oculten el horizonte.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "provisional, inspect actual image and animated crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": true,
+      "source_candidate": "new:california_mar_hook",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sha256": "163efc4fa0b9b797234a354bf0b3eed674703c070aa65f1cff05944cae0510bf",
+      "core_end": 2.954,
+      "duration": 3.274,
+      "transition_overlap": 0.32,
+      "entry_duration": 0,
+      "has_next": true,
+      "number_local": 0.1,
+      "local": "assets/photos/01-california-01.png",
+      "transition": "open",
+      "path": "assets/photos/01-california-01.png"
+    },
+    {
+      "id": "california-02",
+      "voice": "conoce Punta Pacífico, en Ensenada.",
+      "text": "conoce Punta Pacífico, en Ensenada.",
+      "overlay": "UN LUGAR PARA VOLVER",
+      "kind": "place",
+      "image_semantics": "Familia llegando a casa oficial con maletas, manteniendo el tono familiar de V4. No usar otro hook genérico.",
+      "candidate_asset": "v2/assets/california.png",
+      "word_start": 9,
+      "word_end": 14,
+      "start": 2.954,
+      "end": 6.576708,
+      "shot_id": "california-02",
+      "description": "Familia llegando a casa oficial con maletas, manteniendo el tono familiar de V4. No usar otro hook genérico.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 760,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v2/assets/california.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sha256": "ebead78c6342148a34a4993cdf6279bc41c6d576476e6d1ce454e914a7b6c92d",
+      "core_end": 6.256708,
+      "duration": 3.622708,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "local": "assets/photos/02-california-02.png",
+      "transition": "match-pan",
+      "path": "assets/photos/02-california-02.png"
+    },
+    {
+      "id": "california-03",
+      "voice": "Dos o tres recámaras",
+      "text": "Dos o tres recámaras",
+      "overlay": "2 Y 3 RECÁMARAS",
+      "kind": "bedrooms",
+      "image_semantics": "Recámara oficial o familia desempacando, sin repetir las habitaciones asignadas a Salud/Empresarios.",
+      "candidate_asset": "v3/generated/familia_dormitorio.png",
+      "word_start": 14,
+      "word_end": 18,
+      "start": 6.256708,
+      "end": 7.879875,
+      "shot_id": "california-03",
+      "description": "Recámara oficial o familia desempacando, sin repetir las habitaciones asignadas a Salud/Empresarios.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 760,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v3/generated/familia_dormitorio.png",
+      "dimensions": [
+        992,
+        1586
+      ],
+      "sha256": "5cdaf11629b197d1c0d60c0066e8f7a1519857ae4fe102debfc7bcd9331059ff",
+      "core_end": 7.559875,
+      "duration": 1.6231670000000005,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "local": "assets/photos/03-california-03.png",
+      "transition": "lift",
+      "path": "assets/photos/03-california-03.png"
+    },
+    {
+      "id": "california-04",
+      "voice": "y roof garden para volver con tu familia.",
+      "text": "y roof garden para volver con tu familia.",
+      "overlay": "UN ROOF PARA TU GENTE",
+      "kind": "roof",
+      "image_semantics": "Comida familiar en roof oficial. El mar y roof deben reconocerse; no confundir patio con azotea.",
+      "candidate_asset": "v3/generated/familia_roof.png",
+      "word_start": 18,
+      "word_end": 26,
+      "start": 7.559875,
+      "end": 10.966916,
+      "shot_id": "california-04",
+      "description": "Comida familiar en roof oficial. El mar y roof deben reconocerse; no confundir patio con azotea.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v3/generated/familia_roof.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sha256": "c79225fcaae304e438f133d92cbb2a0872e7da22251b24f538e93498dfcfda98",
+      "core_end": 10.646916,
+      "duration": 3.4070409999999995,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "local": "assets/photos/04-california-04.png",
+      "transition": "punch",
+      "path": "assets/photos/04-california-04.png"
+    },
+    {
+      "id": "california-05",
+      "voice": "Imagina tardes de alberca,",
+      "text": "Imagina tardes de alberca,",
+      "overlay": "TARDES EN FAMILIA",
+      "kind": "pool",
+      "image_semantics": "Padres y familia usando la alberca del nuevo preview, ropa de baño apropiada y situación familiar natural; conservar arquitectura y forma de piscina.",
+      "candidate_asset": "new:california_alberca_v5",
+      "word_start": 26,
+      "word_end": 30,
+      "start": 10.646916,
+      "end": 12.801416,
+      "shot_id": "california-05",
+      "description": "Padres y familia usando la alberca del nuevo preview, ropa de baño apropiada y situación familiar natural; conservar arquitectura y forma de piscina.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "provisional, inspect actual image and animated crop",
+      "ai": true,
+      "projected": true,
+      "expected_generation": true,
+      "source_candidate": "new:california_alberca_v5",
+      "core_end": 12.481416,
+      "duration": 2.1545000000000005,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "sha256": "6ce5cd09b4d81734e4fe5e4a6bf9bd152183862507cd0fdd6b155cc0bdfd5f74",
+      "local": "assets/photos/05-california-05.png",
+      "transition": "match-pan",
+      "path": "assets/photos/05-california-05.png"
+    },
+    {
+      "id": "california-06",
+      "voice": "asadores en familia",
+      "text": "asadores en familia",
+      "overlay": "MÁS MOMENTOS JUNTOS",
+      "kind": "grill",
+      "image_semantics": "Padres y familia preparando comida junto a los asadores del preview. Ropa casual veraniega; acción y manos naturales.",
+      "candidate_asset": "new:california_asadores_v5",
+      "word_start": 30,
+      "word_end": 33,
+      "start": 12.481416,
+      "end": 14.003333,
+      "shot_id": "california-06",
+      "description": "Padres y familia preparando comida junto a los asadores del preview. Ropa casual veraniega; acción y manos naturales.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 480,
+      "caption_position_review": "V5 new amenity native image reviewed: upper pergola/sky band below title, above heads, preserving hands/grill/paddle action.",
+      "ai": true,
+      "projected": true,
+      "expected_generation": true,
+      "source_candidate": "new:california_asadores_v5",
+      "core_end": 13.683333,
+      "duration": 1.5219170000000002,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "sha256": "363800d5d2b5972c8b2188df449fbcb8fcac0fc2289eccbe161fb91474007e69",
+      "local": "assets/photos/06-california-06.png",
+      "transition": "match-pan",
+      "path": "assets/photos/06-california-06.png"
+    },
+    {
+      "id": "california-07",
+      "voice": "y reuniones en el salón de usos múltiples al aire libre:",
+      "text": "y reuniones en el salón de usos múltiples al aire libre:",
+      "overlay": "REUNIONES AL AIRE LIBRE",
+      "kind": "salon",
+      "image_semantics": "Familia reunida en el salón/pabellón de pérgolas del preview, abierto al aire libre y no salón cerrado inventado. Mesa de convivencia, ropa casual.",
+      "candidate_asset": "new:california_salon_v5",
+      "word_start": 33,
+      "word_end": 44,
+      "start": 13.683333,
+      "end": 17.49525,
+      "shot_id": "california-07",
+      "description": "Familia reunida en el salón/pabellón de pérgolas del preview, abierto al aire libre y no salón cerrado inventado. Mesa de convivencia, ropa casual.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "provisional, inspect actual image and animated crop",
+      "ai": true,
+      "projected": true,
+      "expected_generation": true,
+      "source_candidate": "new:california_salon_v5",
+      "core_end": 17.17525,
+      "duration": 3.8119169999999993,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "sha256": "a5f6f712b0eb9c465e1b09f3ed8343161794889baa26f16ad21e40afb0a35614",
+      "local": "assets/photos/07-california-07.png",
+      "transition": "lift",
+      "path": "assets/photos/07-california-07.png"
+    },
+    {
+      "id": "california-08",
+      "voice": "primeras amenidades proyectadas.",
+      "text": "primeras amenidades proyectadas.",
+      "overlay": "PRIMERAS AMENIDADES PROYECTADAS",
+      "kind": "amenity",
+      "image_semantics": "Vista contextual diferente del área social con familia caminando entre pérgolas o hacia piscina. Usar otra imagen si la frase anterior supera4s.",
+      "candidate_asset": "new:california_amenidades_contexto",
+      "word_start": 44,
+      "word_end": 47,
+      "start": 17.17525,
+      "end": 20.341916,
+      "shot_id": "california-08",
+      "description": "Vista contextual diferente del área social con familia caminando entre pérgolas o hacia piscina. Usar otra imagen si la frase anterior supera4s.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "provisional, inspect actual image and animated crop",
+      "ai": true,
+      "projected": true,
+      "expected_generation": true,
+      "source_candidate": "new:california_amenidades_contexto",
+      "core_end": 20.021916,
+      "duration": 3.166666000000003,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "sha256": "9b8e10ebbed8eed1bace635f2e9ae6cd17930f41d0a291031ec9cf9b68752708",
+      "local": "assets/photos/08-california-08.png",
+      "transition": "punch",
+      "path": "assets/photos/08-california-08.png"
+    },
+    {
+      "id": "california-09",
+      "voice": "Cuida tu liquidez con pagos flexibles:",
+      "text": "Cuida tu liquidez con pagos flexibles:",
+      "overlay": "PAGOS FLEXIBLES",
+      "kind": "planning",
+      "image_semantics": "Padres revisando presupuesto con calculadora y libreta en patio oficial, imagen V4 que ya tiene sentido y no presenta laptop absurda.",
+      "candidate_asset": "v4/generated/california_budget.png",
+      "word_start": 47,
+      "word_end": 53,
+      "start": 20.021916,
+      "end": 22.771041,
+      "shot_id": "california-09",
+      "description": "Padres revisando presupuesto con calculadora y libreta en patio oficial, imagen V4 que ya tiene sentido y no presenta laptop absurda.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1000,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v4/generated/california_budget.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sha256": "964e68a19cf0e5d19fa6f20938f091807a0a98b56d0de1c06040bd19a50b3989",
+      "core_end": 22.451041,
+      "duration": 2.7491249999999994,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "local": "assets/photos/09-california-09.png",
+      "transition": "match-pan",
+      "path": "assets/photos/09-california-09.png"
+    },
+    {
+      "id": "california-10",
+      "voice": "diez por ciento de enganche,",
+      "text": "diez por ciento de enganche,",
+      "overlay": "10% DE ENGANCHE",
+      "kind": "pay0",
+      "image_semantics": "Padres confirman pago desde teléfono en sala; conservar escena adecuada V4.",
+      "candidate_asset": "v4/generated/california_pay0.png",
+      "word_start": 53,
+      "word_end": 58,
+      "start": 22.451041,
+      "end": 24.479041,
+      "shot_id": "california-10",
+      "description": "Padres confirman pago desde teléfono en sala; conservar escena adecuada V4.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1200,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v4/generated/california_pay0.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sha256": "2553a8ca8ea6452117fb37e4b8ae1012248409fcc6831ec143f692fe9e945402",
+      "core_end": 24.159041,
+      "duration": 2.0279999999999987,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0,
+      "local": "assets/photos/10-california-10.png",
+      "transition": "match-pan",
+      "path": "assets/photos/10-california-10.png"
+    },
+    {
+      "id": "california-11",
+      "voice": "diez por ciento en diecinueve mensualidades",
+      "text": "diez por ciento en diecinueve mensualidades",
+      "overlay": "10% EN 19 MENSUALIDADES",
+      "kind": "pay1",
+      "image_semantics": "Padres revisan calendario/laptop. Asegurar que cualquier pantalla esté orientada a sus usuarios y que la tapa exterior no tenga una gráfica imposible.",
+      "candidate_asset": "v4/generated/california_pay1.png",
+      "word_start": 58,
+      "word_end": 64,
+      "start": 24.159041,
+      "end": 26.718416,
+      "shot_id": "california-11",
+      "description": "Padres revisan calendario/laptop. Asegurar que cualquier pantalla esté orientada a sus usuarios y que la tapa exterior no tenga una gráfica imposible.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v4/generated/california_pay1.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sha256": "43593e13f9010a331f447ae30e4f9938c6a8b6c2640515a7c2dda7f73ae5b9bf",
+      "core_end": 26.398416,
+      "duration": 2.559375000000003,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0,
+      "local": "assets/photos/11-california-11.png",
+      "transition": "lift",
+      "path": "assets/photos/11-california-11.png"
+    },
+    {
+      "id": "california-12",
+      "voice": "y ochenta por ciento contra entrega.",
+      "text": "y ochenta por ciento contra entrega.",
+      "overlay": "80% CONTRA ENTREGA",
+      "kind": "pay2",
+      "image_semantics": "Planeación del pago final en patio con laptop/llaves, manteniendo escena V4 si orientación correcta.",
+      "candidate_asset": "v4/generated/california_pay2.png",
+      "word_start": 64,
+      "word_end": 70,
+      "start": 26.398416,
+      "end": 29.527125,
+      "shot_id": "california-12",
+      "description": "Planeación del pago final en patio con laptop/llaves, manteniendo escena V4 si orientación correcta.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v4/generated/california_pay2.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sha256": "8f8f2ea5220c79a78e2186375c354643f2e6a178e014d5e9dd1ccc2d518ccc37",
+      "core_end": 29.207125,
+      "duration": 3.1287090000000006,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.06325000000000003,
+      "local": "assets/photos/12-california-12.png",
+      "transition": "punch",
+      "path": "assets/photos/12-california-12.png"
+    },
+    {
+      "id": "california-13",
+      "voice": "Plusvalía estimada del ocho por ciento anual,",
+      "text": "Plusvalía estimada del ocho por ciento anual,",
+      "overlay": "8% ANUAL ESTIMADO",
+      "kind": "value",
+      "image_semantics": "Fachada nocturna oficial distinta de otras tomas. Mostrar estimación, no rendimiento comprobado.",
+      "candidate_asset": "v3/shared-assets/facade-night.png",
+      "word_start": 70,
+      "word_end": 77,
+      "start": 29.207125,
+      "end": 32.158708,
+      "shot_id": "california-13",
+      "description": "Fachada nocturna oficial distinta de otras tomas. Mostrar estimación, no rendimiento comprobado.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": false,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v3/shared-assets/facade-night.png",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "sha256": "5b51b4d732c8567e16bfc77ef7ec1c313bc0940181b618b3dd31425745e22782",
+      "core_end": 31.838708,
+      "duration": 2.951582999999996,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 1.2651659999999971,
+      "local": "assets/photos/13-california-13.png",
+      "transition": "match-pan",
+      "path": "assets/photos/13-california-13.png"
+    },
+    {
+      "id": "california-14",
+      "voice": "en un escenario conservador.",
+      "text": "en un escenario conservador.",
+      "overlay": "ESCENARIO CONSERVADOR",
+      "kind": "value",
+      "image_semantics": "Familia compartiendo en patio propio: imagen existente distinta del roof y de las amenidades.",
+      "candidate_asset": "v3/shared-assets/patio-night.png",
+      "word_start": 77,
+      "word_end": 81,
+      "start": 31.838708,
+      "end": 34.676416,
+      "shot_id": "california-14",
+      "description": "Familia compartiendo en patio propio: imagen existente distinta del roof y de las amenidades.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "provisional, inspect actual image and animated crop",
+      "ai": false,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v3/shared-assets/patio-night.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "e7340cf415eb836d8bbbc2b7f4f07c0e6fd497ed5cd7f08e025f419c67dc2eb0",
+      "core_end": 34.356416,
+      "duration": 2.837708000000003,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "local": "assets/photos/14-california-14.png",
+      "transition": "match-pan",
+      "path": "assets/photos/14-california-14.png"
+    },
+    {
+      "id": "california-15",
+      "voice": "Y que cada visita sea tiempo para los tuyos.",
+      "text": "Y que cada visita sea tiempo para los tuyos.",
+      "overlay": "MÁS TIEMPO CON LOS TUYOS",
+      "kind": "emotion",
+      "image_semantics": "Familia compartiendo en patio propio, imagen V3 conservada que el usuario aprobó en el tono general de California.",
+      "candidate_asset": "v3/generated/familia_patio.png",
+      "word_start": 81,
+      "word_end": 90,
+      "start": 34.356416,
+      "end": 38.168333,
+      "shot_id": "california-15",
+      "description": "Familia compartiendo en patio propio, imagen V3 conservada que el usuario aprobó en el tono general de California.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 760,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v3/generated/familia_patio.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sha256": "12e334c7a93abd2a10ca23d765c0c7df7778af119feafe3c16be16b8036f2bc6",
+      "core_end": 37.848333,
+      "duration": 3.811916999999994,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "local": "assets/photos/15-california-15.png",
+      "transition": "lift",
+      "path": "assets/photos/15-california-15.png"
+    },
+    {
+      "id": "california-16",
+      "voice": "Haz clic en el botón de abajo para más información.",
+      "text": "Haz clic en el botón de abajo para más información.",
+      "overlay": "MÁS INFORMACIÓN",
+      "kind": "cta",
+      "image_semantics": "Roof oficial alternativo. Mantener tono general V4, pero centrar logo, titular, línea CTA y flecha.",
+      "candidate_asset": "v3/shared-assets/official-10-Roof-PP-V1-05.07.26-FINAL.png",
+      "word_start": 90,
+      "word_end": 100,
+      "start": 37.848333,
+      "end": 41.541666666666664,
+      "shot_id": "california-16",
+      "description": "Roof oficial alternativo. Mantener tono general V4, pero centrar logo, titular, línea CTA y flecha.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": false,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v3/shared-assets/official-10-Roof-PP-V1-05.07.26-FINAL.png",
+      "dimensions": [
+        3806,
+        2932
+      ],
+      "sha256": "277e4e4faccd8d3a7abdcdc5f2b71355785ec99c8893a9ca32fc5301b1e10b5d",
+      "core_end": 41.541666666666664,
+      "duration": 3.6933336666666676,
+      "transition_overlap": 0,
+      "entry_duration": 0.32,
+      "has_next": false,
+      "number_local": 0.1,
+      "local": "assets/photos/16-california-16.png",
+      "transition": "punch",
+      "path": "assets/photos/16-california-16.png"
+    }
+  ],
+  "captions": [
+    {
+      "text": "Si vives en California",
+      "start": 0.12,
+      "end": 1.448708,
+      "words": [
+        {
+          "text": "Si",
+          "start": 0.12,
+          "end": 0.34775
+        },
+        {
+          "text": "vives",
+          "start": 0.360375,
+          "end": 0.701958
+        },
+        {
+          "text": "en",
+          "start": 0.714625,
+          "end": 0.803208
+        },
+        {
+          "text": "California",
+          "start": 0.815833,
+          "end": 1.461083
+        }
+      ]
+    },
+    {
+      "text": "y buscas vista al",
+      "start": 1.473708,
+      "end": 2.397625,
+      "words": [
+        {
+          "text": "y",
+          "start": 1.473708,
+          "end": 1.549624
+        },
+        {
+          "text": "buscas",
+          "start": 1.562291,
+          "end": 1.992457
+        },
+        {
+          "text": "vista",
+          "start": 2.005083,
+          "end": 2.296083
+        },
+        {
+          "text": "al",
+          "start": 2.30875,
+          "end": 2.409958
+        }
+      ]
+    },
+    {
+      "text": "mar,",
+      "start": 2.422625,
+      "end": 2.802625,
+      "words": [
+        {
+          "text": "mar,",
+          "start": 2.422625,
+          "end": 2.688333
+        }
+      ]
+    },
+    {
+      "text": "conoce Punta Pacífico, en",
+      "start": 2.954,
+      "end": 4.70025,
+      "words": [
+        {
+          "text": "conoce",
+          "start": 2.954,
+          "end": 3.3715
+        },
+        {
+          "text": "Punta",
+          "start": 3.384166,
+          "end": 3.713124
+        },
+        {
+          "text": "Pacífico,",
+          "start": 3.72575,
+          "end": 4.383625
+        },
+        {
+          "text": "en",
+          "start": 4.573416,
+          "end": 4.712582
+        }
+      ]
+    },
+    {
+      "text": "Ensenada.",
+      "start": 4.72525,
+      "end": 5.483124999999999,
+      "words": [
+        {
+          "text": "Ensenada.",
+          "start": 4.72525,
+          "end": 5.383125
+        }
+      ]
+    },
+    {
+      "text": "Dos o tres recámaras",
+      "start": 6.256708,
+      "end": 7.5348749999999995,
+      "words": [
+        {
+          "text": "Dos",
+          "start": 6.256708,
+          "end": 6.547708
+        },
+        {
+          "text": "o",
+          "start": 6.560375,
+          "end": 6.623625
+        },
+        {
+          "text": "tres",
+          "start": 6.636291,
+          "end": 6.927291
+        },
+        {
+          "text": "recámaras",
+          "start": 6.939916,
+          "end": 7.547207
+        }
+      ]
+    },
+    {
+      "text": "y roof garden para",
+      "start": 7.559875,
+      "end": 8.458458,
+      "words": [
+        {
+          "text": "y",
+          "start": 7.559875,
+          "end": 7.635791
+        },
+        {
+          "text": "roof",
+          "start": 7.648416,
+          "end": 7.876166
+        },
+        {
+          "text": "garden",
+          "start": 7.888791,
+          "end": 8.255707
+        },
+        {
+          "text": "para",
+          "start": 8.268375,
+          "end": 8.470791
+        }
+      ]
+    },
+    {
+      "text": "volver con tu familia.",
+      "start": 8.483458,
+      "end": 9.873916,
+      "words": [
+        {
+          "text": "volver",
+          "start": 8.483458,
+          "end": 8.888333
+        },
+        {
+          "text": "con",
+          "start": 8.900958,
+          "end": 9.078083
+        },
+        {
+          "text": "tu",
+          "start": 9.09075,
+          "end": 9.204625
+        },
+        {
+          "text": "familia.",
+          "start": 9.21725,
+          "end": 9.773916
+        }
+      ]
+    },
+    {
+      "text": "Imagina tardes de",
+      "start": 10.646916,
+      "end": 11.709958,
+      "words": [
+        {
+          "text": "Imagina",
+          "start": 10.646916,
+          "end": 11.216249
+        },
+        {
+          "text": "tardes",
+          "start": 11.228875,
+          "end": 11.646375
+        },
+        {
+          "text": "de",
+          "start": 11.659041,
+          "end": 11.722291
+        }
+      ]
+    },
+    {
+      "text": "alberca,",
+      "start": 11.734958,
+      "end": 12.303082999999999,
+      "words": [
+        {
+          "text": "alberca,",
+          "start": 11.734958,
+          "end": 12.203083
+        }
+      ]
+    },
+    {
+      "text": "asadores en familia",
+      "start": 12.481416,
+      "end": 13.658332999999999,
+      "words": [
+        {
+          "text": "asadores",
+          "start": 12.481416,
+          "end": 13.076041
+        },
+        {
+          "text": "en",
+          "start": 13.088708,
+          "end": 13.202583
+        },
+        {
+          "text": "familia",
+          "start": 13.215208,
+          "end": 13.670666
+        }
+      ]
+    },
+    {
+      "text": "y reuniones en el",
+      "start": 13.683333,
+      "end": 14.594583,
+      "words": [
+        {
+          "text": "y",
+          "start": 13.683333,
+          "end": 13.759249
+        },
+        {
+          "text": "reuniones",
+          "start": 13.771916,
+          "end": 14.379207
+        },
+        {
+          "text": "en",
+          "start": 14.391833,
+          "end": 14.493041
+        },
+        {
+          "text": "el",
+          "start": 14.505708,
+          "end": 14.606916
+        }
+      ]
+    },
+    {
+      "text": "salón de usos múltiples",
+      "start": 14.619583,
+      "end": 16.049541,
+      "words": [
+        {
+          "text": "salón",
+          "start": 14.619583,
+          "end": 14.961166
+        },
+        {
+          "text": "de",
+          "start": 14.973833,
+          "end": 15.087708
+        },
+        {
+          "text": "usos",
+          "start": 15.100333,
+          "end": 15.492541
+        },
+        {
+          "text": "múltiples",
+          "start": 15.505208,
+          "end": 16.061874
+        }
+      ]
+    },
+    {
+      "text": "al aire libre:",
+      "start": 16.074541,
+      "end": 16.984249000000002,
+      "words": [
+        {
+          "text": "al",
+          "start": 16.074541,
+          "end": 16.226374
+        },
+        {
+          "text": "aire",
+          "start": 16.239,
+          "end": 16.492041
+        },
+        {
+          "text": "libre:",
+          "start": 16.504708,
+          "end": 16.884249
+        }
+      ]
+    },
+    {
+      "text": "primeras amenidades",
+      "start": 17.17525,
+      "end": 18.27625,
+      "words": [
+        {
+          "text": "primeras",
+          "start": 17.17525,
+          "end": 17.643375
+        },
+        {
+          "text": "amenidades",
+          "start": 17.656,
+          "end": 18.288583
+        }
+      ]
+    },
+    {
+      "text": "proyectadas.",
+      "start": 18.30125,
+      "end": 19.248916,
+      "words": [
+        {
+          "text": "proyectadas.",
+          "start": 18.30125,
+          "end": 19.148916
+        }
+      ]
+    },
+    {
+      "text": "Cuida tu liquidez con",
+      "start": 20.021916,
+      "end": 21.122916,
+      "words": [
+        {
+          "text": "Cuida",
+          "start": 20.021916,
+          "end": 20.312916
+        },
+        {
+          "text": "tu",
+          "start": 20.325541,
+          "end": 20.426749
+        },
+        {
+          "text": "liquidez",
+          "start": 20.439416,
+          "end": 20.920166
+        },
+        {
+          "text": "con",
+          "start": 20.932833,
+          "end": 21.135249
+        }
+      ]
+    },
+    {
+      "text": "pagos flexibles:",
+      "start": 21.147916,
+      "end": 22.272707,
+      "words": [
+        {
+          "text": "pagos",
+          "start": 21.147916,
+          "end": 21.489499
+        },
+        {
+          "text": "flexibles:",
+          "start": 21.502166,
+          "end": 22.172707
+        }
+      ]
+    },
+    {
+      "text": "diez por ciento de",
+      "start": 22.451041,
+      "end": 23.311666000000002,
+      "words": [
+        {
+          "text": "diez",
+          "start": 22.451041,
+          "end": 22.691416
+        },
+        {
+          "text": "por",
+          "start": 22.704083,
+          "end": 22.868541
+        },
+        {
+          "text": "ciento",
+          "start": 22.881208,
+          "end": 23.210166
+        },
+        {
+          "text": "de",
+          "start": 23.222833,
+          "end": 23.324041
+        }
+      ]
+    },
+    {
+      "text": "enganche,",
+      "start": 23.336666,
+      "end": 23.930082000000002,
+      "words": [
+        {
+          "text": "enganche,",
+          "start": 23.336666,
+          "end": 23.830082
+        }
+      ]
+    },
+    {
+      "text": "diez por ciento en",
+      "start": 24.159041,
+      "end": 25.007041,
+      "words": [
+        {
+          "text": "diez",
+          "start": 24.159041,
+          "end": 24.399416
+        },
+        {
+          "text": "por",
+          "start": 24.412083,
+          "end": 24.589208
+        },
+        {
+          "text": "ciento",
+          "start": 24.601875,
+          "end": 24.930833
+        },
+        {
+          "text": "en",
+          "start": 24.943458,
+          "end": 25.019374
+        }
+      ]
+    },
+    {
+      "text": "diecinueve mensualidades",
+      "start": 25.032041,
+      "end": 26.373416000000002,
+      "words": [
+        {
+          "text": "diecinueve",
+          "start": 25.032041,
+          "end": 25.576082
+        },
+        {
+          "text": "mensualidades",
+          "start": 25.588708,
+          "end": 26.385791
+        }
+      ]
+    },
+    {
+      "text": "y ochenta por ciento",
+      "start": 26.398416,
+      "end": 27.474125,
+      "words": [
+        {
+          "text": "y",
+          "start": 26.398416,
+          "end": 26.449041
+        },
+        {
+          "text": "ochenta",
+          "start": 26.461666,
+          "end": 26.904499
+        },
+        {
+          "text": "por",
+          "start": 26.917166,
+          "end": 27.106957
+        },
+        {
+          "text": "ciento",
+          "start": 27.119583,
+          "end": 27.486499
+        }
+      ]
+    },
+    {
+      "text": "contra entrega.",
+      "start": 27.499125,
+      "end": 28.434166,
+      "words": [
+        {
+          "text": "contra",
+          "start": 27.499125,
+          "end": 27.777458
+        },
+        {
+          "text": "entrega.",
+          "start": 27.790125,
+          "end": 28.334166
+        }
+      ]
+    },
+    {
+      "text": "Plusvalía estimada del",
+      "start": 29.207125,
+      "end": 30.447291,
+      "words": [
+        {
+          "text": "Plusvalía",
+          "start": 29.207125,
+          "end": 29.751166
+        },
+        {
+          "text": "estimada",
+          "start": 29.763791,
+          "end": 30.244541
+        },
+        {
+          "text": "del",
+          "start": 30.25725,
+          "end": 30.459666
+        }
+      ]
+    },
+    {
+      "text": "ocho por ciento anual,",
+      "start": 30.472291,
+      "end": 31.672999,
+      "words": [
+        {
+          "text": "ocho",
+          "start": 30.472291,
+          "end": 30.700041
+        },
+        {
+          "text": "por",
+          "start": 30.712708,
+          "end": 30.889833
+        },
+        {
+          "text": "ciento",
+          "start": 30.902458,
+          "end": 31.218749
+        },
+        {
+          "text": "anual,",
+          "start": 31.231416,
+          "end": 31.572999
+        }
+      ]
+    },
+    {
+      "text": "en un escenario",
+      "start": 31.838708,
+      "end": 32.661375,
+      "words": [
+        {
+          "text": "en",
+          "start": 31.838708,
+          "end": 31.952583
+        },
+        {
+          "text": "un",
+          "start": 31.965208,
+          "end": 32.091708
+        },
+        {
+          "text": "escenario",
+          "start": 32.104416,
+          "end": 32.673749
+        }
+      ]
+    },
+    {
+      "text": "conservador.",
+      "start": 32.686375,
+      "end": 33.583458,
+      "words": [
+        {
+          "text": "conservador.",
+          "start": 32.686375,
+          "end": 33.483458
+        }
+      ]
+    },
+    {
+      "text": "Y que cada visita",
+      "start": 34.356416,
+      "end": 35.343583,
+      "words": [
+        {
+          "text": "Y",
+          "start": 34.356416,
+          "end": 34.495582
+        },
+        {
+          "text": "que",
+          "start": 34.50825,
+          "end": 34.647416
+        },
+        {
+          "text": "cada",
+          "start": 34.660083,
+          "end": 34.913124
+        },
+        {
+          "text": "visita",
+          "start": 34.92575,
+          "end": 35.355916
+        }
+      ]
+    },
+    {
+      "text": "sea tiempo para los",
+      "start": 35.368583,
+      "end": 36.431625000000004,
+      "words": [
+        {
+          "text": "sea",
+          "start": 35.368583,
+          "end": 35.634291
+        },
+        {
+          "text": "tiempo",
+          "start": 35.646916,
+          "end": 36.026457
+        },
+        {
+          "text": "para",
+          "start": 36.039125,
+          "end": 36.241541
+        },
+        {
+          "text": "los",
+          "start": 36.254208,
+          "end": 36.443999
+        }
+      ]
+    },
+    {
+      "text": "tuyos.",
+      "start": 36.456625,
+      "end": 37.075333,
+      "words": [
+        {
+          "text": "tuyos.",
+          "start": 36.456625,
+          "end": 36.975333
+        }
+      ]
+    },
+    {
+      "text": "Haz clic en el",
+      "start": 37.848333,
+      "end": 38.595083,
+      "words": [
+        {
+          "text": "Haz",
+          "start": 37.848333,
+          "end": 38.063416
+        },
+        {
+          "text": "clic",
+          "start": 38.076041,
+          "end": 38.367041
+        },
+        {
+          "text": "en",
+          "start": 38.379708,
+          "end": 38.493583
+        },
+        {
+          "text": "el",
+          "start": 38.506208,
+          "end": 38.607416
+        }
+      ]
+    },
+    {
+      "text": "botón de abajo para",
+      "start": 38.620083,
+      "end": 39.60725,
+      "words": [
+        {
+          "text": "botón",
+          "start": 38.620083,
+          "end": 38.923708
+        },
+        {
+          "text": "de",
+          "start": 38.936375,
+          "end": 38.999625
+        },
+        {
+          "text": "abajo",
+          "start": 39.012291,
+          "end": 39.391832
+        },
+        {
+          "text": "para",
+          "start": 39.4045,
+          "end": 39.619583
+        }
+      ]
+    },
+    {
+      "text": "más información.",
+      "start": 39.63225,
+      "end": 40.731708000000005,
+      "words": [
+        {
+          "text": "más",
+          "start": 39.63225,
+          "end": 39.872625
+        },
+        {
+          "text": "información.",
+          "start": 39.88525,
+          "end": 40.631708
+        }
+      ]
+    }
+  ],
+  "price": {
+    "label": "Rango aprox.",
+    "from_mdp": 3.9,
+    "to_mdp": 4.8,
+    "currency": "MXN",
+    "bedrooms": [
+      2,
+      3
+    ],
+    "visible": [
+      0,
+      3.6
+    ],
+    "source": "última instrucción del usuario"
+  },
+  "payments": "10% enganche +10%en19mensualidades+80%contraentrega",
+  "annual_appreciation": {
+    "percent": 8,
+    "qualifier": "estimada; escenario conservador",
+    "classification": "client supplied estimate"
+  },
+  "cta_alignment": "center_x540",
+  "motion_cues": [
+    {
+      "id": "california-price-rule",
+      "type": "price_underline",
+      "picture_landing_at": 0.4,
+      "peak_at": 0.4416666666666667,
+      "cause": "raya de apertura que termina de crecer",
+      "recommended": true
+    },
+    {
+      "id": "california-sea-emphasis",
+      "type": "sea_emphasis",
+      "picture_landing_at": 2.522625,
+      "peak_at": 2.5642916666666666,
+      "cause": "énfasis de vista al mar en la palabra hablada",
+      "recommended": true
+    },
+    {
+      "id": "california-02-cut",
+      "shot_id": "california-02",
+      "type": "transition",
+      "picture_landing_at": 2.954,
+      "peak_at": 2.9956666666666667,
+      "cause": "match-pan",
+      "recommended": false
+    },
+    {
+      "id": "california-03-cut",
+      "shot_id": "california-03",
+      "type": "transition",
+      "picture_landing_at": 6.256708,
+      "peak_at": 6.298374666666667,
+      "cause": "lift",
+      "recommended": false
+    },
+    {
+      "id": "california-03-landing",
+      "shot_id": "california-03",
+      "type": "text_landing",
+      "kind": "bedrooms",
+      "picture_landing_at": 6.656708,
+      "peak_at": 6.698375,
+      "cause": "2 Y 3 RECÁMARAS",
+      "recommended": true
+    },
+    {
+      "id": "california-04-cut",
+      "shot_id": "california-04",
+      "type": "transition",
+      "picture_landing_at": 7.559875,
+      "peak_at": 7.601541666666667,
+      "cause": "punch",
+      "recommended": false
+    },
+    {
+      "id": "california-04-landing",
+      "shot_id": "california-04",
+      "type": "text_landing",
+      "kind": "roof",
+      "picture_landing_at": 7.959875,
+      "peak_at": 8.001542,
+      "cause": "UN ROOF PARA TU GENTE",
+      "recommended": true
+    },
+    {
+      "id": "california-05-cut",
+      "shot_id": "california-05",
+      "type": "transition",
+      "picture_landing_at": 10.646916,
+      "peak_at": 10.688582666666665,
+      "cause": "match-pan",
+      "recommended": false
+    },
+    {
+      "id": "california-05-landing",
+      "shot_id": "california-05",
+      "type": "text_landing",
+      "kind": "pool",
+      "picture_landing_at": 11.046916,
+      "peak_at": 11.088583,
+      "cause": "TARDES EN FAMILIA",
+      "recommended": true
+    },
+    {
+      "id": "california-06-cut",
+      "shot_id": "california-06",
+      "type": "transition",
+      "picture_landing_at": 12.481416,
+      "peak_at": 12.523082666666665,
+      "cause": "match-pan",
+      "recommended": false
+    },
+    {
+      "id": "california-06-landing",
+      "shot_id": "california-06",
+      "type": "text_landing",
+      "kind": "grill",
+      "picture_landing_at": 12.881416,
+      "peak_at": 12.923083,
+      "cause": "MÁS MOMENTOS JUNTOS",
+      "recommended": true
+    },
+    {
+      "id": "california-07-cut",
+      "shot_id": "california-07",
+      "type": "transition",
+      "picture_landing_at": 13.683333,
+      "peak_at": 13.724999666666665,
+      "cause": "lift",
+      "recommended": false
+    },
+    {
+      "id": "california-07-landing",
+      "shot_id": "california-07",
+      "type": "text_landing",
+      "kind": "salon",
+      "picture_landing_at": 14.083333,
+      "peak_at": 14.125,
+      "cause": "REUNIONES AL AIRE LIBRE",
+      "recommended": true
+    },
+    {
+      "id": "california-08-cut",
+      "shot_id": "california-08",
+      "type": "transition",
+      "picture_landing_at": 17.17525,
+      "peak_at": 17.216916666666666,
+      "cause": "punch",
+      "recommended": false
+    },
+    {
+      "id": "california-08-landing",
+      "shot_id": "california-08",
+      "type": "text_landing",
+      "kind": "amenity",
+      "picture_landing_at": 17.57525,
+      "peak_at": 17.616917,
+      "cause": "PRIMERAS AMENIDADES PROYECTADAS",
+      "recommended": true
+    },
+    {
+      "id": "california-09-cut",
+      "shot_id": "california-09",
+      "type": "transition",
+      "picture_landing_at": 20.021916,
+      "peak_at": 20.06358266666667,
+      "cause": "match-pan",
+      "recommended": false
+    },
+    {
+      "id": "california-10-cut",
+      "shot_id": "california-10",
+      "type": "transition",
+      "picture_landing_at": 22.451041,
+      "peak_at": 22.492707666666668,
+      "cause": "match-pan",
+      "recommended": false
+    },
+    {
+      "id": "california-10-landing",
+      "shot_id": "california-10",
+      "type": "number_landing",
+      "kind": "pay0",
+      "picture_landing_at": 22.671041,
+      "peak_at": 22.712708,
+      "cause": "10% DE ENGANCHE",
+      "recommended": true
+    },
+    {
+      "id": "california-11-cut",
+      "shot_id": "california-11",
+      "type": "transition",
+      "picture_landing_at": 24.159041,
+      "peak_at": 24.200707666666666,
+      "cause": "lift",
+      "recommended": false
+    },
+    {
+      "id": "california-11-landing",
+      "shot_id": "california-11",
+      "type": "number_landing",
+      "kind": "pay1",
+      "picture_landing_at": 24.379041,
+      "peak_at": 24.420708,
+      "cause": "10% EN 19 MENSUALIDADES",
+      "recommended": true
+    },
+    {
+      "id": "california-12-cut",
+      "shot_id": "california-12",
+      "type": "transition",
+      "picture_landing_at": 26.398416,
+      "peak_at": 26.44008266666667,
+      "cause": "punch",
+      "recommended": false
+    },
+    {
+      "id": "california-12-landing",
+      "shot_id": "california-12",
+      "type": "number_landing",
+      "kind": "pay2",
+      "picture_landing_at": 26.681666,
+      "peak_at": 26.723333,
+      "cause": "80% CONTRA ENTREGA",
+      "recommended": true
+    },
+    {
+      "id": "california-13-cut",
+      "shot_id": "california-13",
+      "type": "transition",
+      "picture_landing_at": 29.207125,
+      "peak_at": 29.24879166666667,
+      "cause": "match-pan",
+      "recommended": false
+    },
+    {
+      "id": "california-13-landing",
+      "shot_id": "california-13",
+      "type": "number_landing",
+      "kind": "value",
+      "picture_landing_at": 30.692291,
+      "peak_at": 30.733958,
+      "cause": "8% ANUAL ESTIMADO",
+      "recommended": true
+    },
+    {
+      "id": "california-14-cut",
+      "shot_id": "california-14",
+      "type": "transition",
+      "picture_landing_at": 31.838708,
+      "peak_at": 31.88037466666667,
+      "cause": "match-pan",
+      "recommended": false
+    },
+    {
+      "id": "california-14-landing",
+      "shot_id": "california-14",
+      "type": "number_landing",
+      "kind": "value",
+      "picture_landing_at": 32.158708,
+      "peak_at": 32.200375,
+      "cause": "ESCENARIO CONSERVADOR",
+      "recommended": true
+    },
+    {
+      "id": "california-15-cut",
+      "shot_id": "california-15",
+      "type": "transition",
+      "picture_landing_at": 34.356416,
+      "peak_at": 34.39808266666667,
+      "cause": "lift",
+      "recommended": false
+    },
+    {
+      "id": "california-16-cut",
+      "shot_id": "california-16",
+      "type": "transition",
+      "picture_landing_at": 37.848333,
+      "peak_at": 37.88999966666666,
+      "cause": "punch",
+      "recommended": false
+    },
+    {
+      "id": "california-16-landing",
+      "shot_id": "california-16",
+      "type": "cta_landing",
+      "kind": "cta",
+      "picture_landing_at": 38.328333,
+      "peak_at": 38.37,
+      "cause": "MÁS INFORMACIÓN",
+      "recommended": true
+    }
+  ],
+  "audio_source": "assets/audio/master_mix.wav"
+}

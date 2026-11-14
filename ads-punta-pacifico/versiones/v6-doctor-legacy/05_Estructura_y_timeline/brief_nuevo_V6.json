@@ -1,0 +1,53 @@
+{
+  "version": "V6-Legacy-Capital-Doctor",
+  "date": "2026-11-14",
+  "source_script": "procedencia/Guion_V6 (1).md",
+  "scope": "Nuevo anuncio y kit Doctor; conservar V5 y V6 Higgsfield histórica separados",
+  "brand_visible": "Legacy Capital",
+  "project_name_visible": false,
+  "palette": {
+    "navy": "#1A2B4C",
+    "gold": "#C5A564",
+    "cream": "#F5F0E6"
+  },
+  "commercial": {
+    "price_range_mxn_millions": [
+      3.9,
+      4.9
+    ],
+    "price_scope": "Rango aproximado aportado por el cliente; casas de 2 y 3 recámaras",
+    "bedrooms": [
+      2,
+      3
+    ],
+    "living_levels": 1,
+    "private_roof": true,
+    "deposit_percent": 10,
+    "construction_total_percent": 10,
+    "monthly_installments": 20,
+    "delivery_percent": 80,
+    "delivery_text": "a mediados de 2028",
+    "promotion": "Aparta este mes: equipamiento en cocina, recámaras, baños y roof; ahorro de hasta $450,000 MXN",
+    "source_authority": "Guion nuevo del cliente; sustituye 19 mensualidades y rango V5",
+    "context_conflicts_not_used": [
+      "Gráfica de plusvalía adjunta usa diciembre de 2028; se mantiene mediados de 2028 del guion nuevo",
+      "No se representan montos exactos derivados de un mínimo redondeado"
+    ]
+  },
+  "visual_requirements": [
+    "Doctor reconocible en uniforme en la primera toma y vista al mar",
+    "Un solo tragaluz por roof",
+    "Pickleball con caras reales y miradas dirigidas a pelota/acción",
+    "Teléfonos y laptops con pantallas orientadas físicamente a su usuario",
+    "Vestuario acorde a cada uso",
+    "Cada fondo una sola vez en esta pieza",
+    "Máximo cuatro segundos de visibilidad por toma incluido solapamiento",
+    "Texto y logo de cierre centrados"
+  ],
+  "copy_adjustment": "Conservar beneficios del guion y hablar de potencial de plusvalía e ingresos por rentas, sin prometer retornos",
+  "voice": "Narración española MX continua; duración real decide cortes",
+  "drive": {
+    "ads_v6_id": "1o6xqs0VSAWA0pJpEHpRCOJF3i26thF_U",
+    "kit_doctor_v6_id": "1YexjMgwYteGijO3XoE6CrRNx3EZ3t7rJ"
+  }
+}

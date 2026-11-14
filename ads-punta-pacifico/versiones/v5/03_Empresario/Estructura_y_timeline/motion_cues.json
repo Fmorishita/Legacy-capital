@@ -1,0 +1,282 @@
+[
+  {
+    "id": "empresarios-price-rule",
+    "type": "price_underline",
+    "picture_landing_at": 0.4,
+    "peak_at": 0.4416666666666667,
+    "cause": "raya de apertura que termina de crecer",
+    "recommended": true
+  },
+  {
+    "id": "empresarios-sea-emphasis",
+    "type": "sea_emphasis",
+    "picture_landing_at": 3.047667,
+    "peak_at": 3.0893336666666666,
+    "cause": "énfasis de vista al mar en la palabra hablada",
+    "recommended": true
+  },
+  {
+    "id": "empresarios-02-cut",
+    "shot_id": "empresarios-02",
+    "type": "transition",
+    "picture_landing_at": 3.17825,
+    "peak_at": 3.2199166666666663,
+    "cause": "punch",
+    "recommended": false
+  },
+  {
+    "id": "empresarios-03-cut",
+    "shot_id": "empresarios-03",
+    "type": "transition",
+    "picture_landing_at": 6.125834,
+    "peak_at": 6.167500666666667,
+    "cause": "match-pan",
+    "recommended": false
+  },
+  {
+    "id": "empresarios-03-landing",
+    "shot_id": "empresarios-03",
+    "type": "text_landing",
+    "kind": "place",
+    "picture_landing_at": 6.525834,
+    "peak_at": 6.567501,
+    "cause": "PUNTA PACÍFICO · ENSENADA",
+    "recommended": true
+  },
+  {
+    "id": "empresarios-04-cut",
+    "shot_id": "empresarios-04",
+    "type": "transition",
+    "picture_landing_at": 8.237459,
+    "peak_at": 8.279125666666665,
+    "cause": "lift",
+    "recommended": false
+  },
+  {
+    "id": "empresarios-04-landing",
+    "shot_id": "empresarios-04",
+    "type": "text_landing",
+    "kind": "bedrooms",
+    "picture_landing_at": 8.637459,
+    "peak_at": 8.679126,
+    "cause": "2 Y 3 RECÁMARAS",
+    "recommended": true
+  },
+  {
+    "id": "empresarios-05-cut",
+    "shot_id": "empresarios-05",
+    "type": "transition",
+    "picture_landing_at": 9.475334,
+    "peak_at": 9.517000666666666,
+    "cause": "match-pan",
+    "recommended": false
+  },
+  {
+    "id": "empresarios-05-landing",
+    "shot_id": "empresarios-05",
+    "type": "text_landing",
+    "kind": "roof",
+    "picture_landing_at": 9.875334,
+    "peak_at": 9.917001,
+    "cause": "DISFRUTA TU ROOF",
+    "recommended": true
+  },
+  {
+    "id": "empresarios-06-cut",
+    "shot_id": "empresarios-06",
+    "type": "transition",
+    "picture_landing_at": 11.125834,
+    "peak_at": 11.167500666666665,
+    "cause": "punch",
+    "recommended": false
+  },
+  {
+    "id": "empresarios-06-landing",
+    "shot_id": "empresarios-06",
+    "type": "text_landing",
+    "kind": "pickleball",
+    "picture_landing_at": 11.525834,
+    "peak_at": 11.567501,
+    "cause": "TU PAUSA ACTIVA",
+    "recommended": true
+  },
+  {
+    "id": "empresarios-07-cut",
+    "shot_id": "empresarios-07",
+    "type": "transition",
+    "picture_landing_at": 12.557875,
+    "peak_at": 12.599541666666665,
+    "cause": "match-pan",
+    "recommended": false
+  },
+  {
+    "id": "empresarios-07-landing",
+    "shot_id": "empresarios-07",
+    "type": "text_landing",
+    "kind": "grill",
+    "picture_landing_at": 12.957875,
+    "peak_at": 12.999542,
+    "cause": "COMPARTE FUERA DEL NEGOCIO",
+    "recommended": true
+  },
+  {
+    "id": "empresarios-08-cut",
+    "shot_id": "empresarios-08",
+    "type": "transition",
+    "picture_landing_at": 14.463209,
+    "peak_at": 14.504875666666667,
+    "cause": "lift",
+    "recommended": false
+  },
+  {
+    "id": "empresarios-08-landing",
+    "shot_id": "empresarios-08",
+    "type": "text_landing",
+    "kind": "amenity",
+    "picture_landing_at": 14.863209,
+    "peak_at": 14.904876,
+    "cause": "PRIMERAS AMENIDADES PROYECTADAS",
+    "recommended": true
+  },
+  {
+    "id": "empresarios-09-cut",
+    "shot_id": "empresarios-09",
+    "type": "transition",
+    "picture_landing_at": 17.57,
+    "peak_at": 17.611666666666668,
+    "cause": "match-pan",
+    "recommended": false
+  },
+  {
+    "id": "empresarios-10-cut",
+    "shot_id": "empresarios-10",
+    "type": "transition",
+    "picture_landing_at": 20.179209,
+    "peak_at": 20.220875666666668,
+    "cause": "punch",
+    "recommended": false
+  },
+  {
+    "id": "empresarios-10-landing",
+    "shot_id": "empresarios-10",
+    "type": "number_landing",
+    "kind": "pay0",
+    "picture_landing_at": 20.399209,
+    "peak_at": 20.440876,
+    "cause": "10% DE ENGANCHE",
+    "recommended": true
+  },
+  {
+    "id": "empresarios-11-cut",
+    "shot_id": "empresarios-11",
+    "type": "transition",
+    "picture_landing_at": 21.769042,
+    "peak_at": 21.810708666666667,
+    "cause": "match-pan",
+    "recommended": false
+  },
+  {
+    "id": "empresarios-11-landing",
+    "shot_id": "empresarios-11",
+    "type": "number_landing",
+    "kind": "pay1",
+    "picture_landing_at": 21.989042,
+    "peak_at": 22.030709,
+    "cause": "10% EN 19 MENSUALIDADES",
+    "recommended": true
+  },
+  {
+    "id": "empresarios-12-cut",
+    "shot_id": "empresarios-12",
+    "type": "transition",
+    "picture_landing_at": 24.24475,
+    "peak_at": 24.286416666666668,
+    "cause": "lift",
+    "recommended": false
+  },
+  {
+    "id": "empresarios-12-landing",
+    "shot_id": "empresarios-12",
+    "type": "number_landing",
+    "kind": "pay2",
+    "picture_landing_at": 24.574,
+    "peak_at": 24.615667,
+    "cause": "80% CONTRA ENTREGA",
+    "recommended": true
+  },
+  {
+    "id": "empresarios-13-cut",
+    "shot_id": "empresarios-13",
+    "type": "transition",
+    "picture_landing_at": 26.854,
+    "peak_at": 26.895666666666667,
+    "cause": "match-pan",
+    "recommended": false
+  },
+  {
+    "id": "empresarios-13-landing",
+    "shot_id": "empresarios-13",
+    "type": "number_landing",
+    "kind": "value",
+    "picture_landing_at": 27.174,
+    "peak_at": 27.215667,
+    "cause": "PLUSVALÍA ESTIMADA",
+    "recommended": true
+  },
+  {
+    "id": "empresarios-14-cut",
+    "shot_id": "empresarios-14",
+    "type": "transition",
+    "picture_landing_at": 29.159792,
+    "peak_at": 29.201458666666667,
+    "cause": "punch",
+    "recommended": false
+  },
+  {
+    "id": "empresarios-14-landing",
+    "shot_id": "empresarios-14",
+    "type": "number_landing",
+    "kind": "value",
+    "picture_landing_at": 29.379792,
+    "peak_at": 29.421459,
+    "cause": "8% ANUAL ESTIMADO",
+    "recommended": true
+  },
+  {
+    "id": "empresarios-15a-cut",
+    "shot_id": "empresarios-15a",
+    "type": "transition",
+    "picture_landing_at": 31.708334,
+    "peak_at": 31.75000066666667,
+    "cause": "match-pan",
+    "recommended": false
+  },
+  {
+    "id": "empresarios-15b-cut",
+    "shot_id": "empresarios-15b",
+    "type": "transition",
+    "picture_landing_at": 32.921959,
+    "peak_at": 32.963625666666665,
+    "cause": "lift",
+    "recommended": false
+  },
+  {
+    "id": "empresarios-16-cut",
+    "shot_id": "empresarios-16",
+    "type": "transition",
+    "picture_landing_at": 35.943792,
+    "peak_at": 35.985458666666666,
+    "cause": "match-pan",
+    "recommended": false
+  },
+  {
+    "id": "empresarios-16-landing",
+    "shot_id": "empresarios-16",
+    "type": "cta_landing",
+    "kind": "cta",
+    "picture_landing_at": 36.423792,
+    "peak_at": 36.465459,
+    "cause": "MÁS INFORMACIÓN",
+    "recommended": true
+  }
+]

@@ -1,0 +1,394 @@
+{
+  "path_base": "kit_root",
+  "project": "06_Proyecto_HyperFrames",
+  "version": "V6-Legacy-Capital",
+  "source_zip": "00_Guia_IA/Estructura_codigo_Doctor_V6_Legacy.zip",
+  "runtime_assets": [
+    {
+      "source": "03_Imagenes_en_orden/01-legacy-doctor-01.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/01-legacy-doctor-01.png",
+      "sha256": "f5b106bb251b44db40fa2edb9520a311bd57b07db0838f94e599c88061c9d33b",
+      "bytes": 2275981
+    },
+    {
+      "source": "03_Imagenes_en_orden/02-legacy-doctor-02.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/02-legacy-doctor-02.png",
+      "sha256": "ae5f5cfbd922f6bb780d4d8be8a813205f993beed05651b3270e85b786fb8042",
+      "bytes": 2199102
+    },
+    {
+      "source": "03_Imagenes_en_orden/03-legacy-doctor-03.jpeg",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/03-legacy-doctor-03.jpeg",
+      "sha256": "bffcfdca35e20efa862084f01c73103930e4b25a3610a5bc29e9a85ca63bb731",
+      "bytes": 204343
+    },
+    {
+      "source": "03_Imagenes_en_orden/04-legacy-doctor-04.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/04-legacy-doctor-04.png",
+      "sha256": "61d1aa2e662e81607ae3adebec4493bd31e889a4ba3aaa106a414ffe35a4453b",
+      "bytes": 26838436
+    },
+    {
+      "source": "03_Imagenes_en_orden/05-legacy-doctor-05.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/05-legacy-doctor-05.png",
+      "sha256": "cb4ab8800751d65d5a8decf96c4ab1c0c5035fa51875e8780ab8e014cd2d221a",
+      "bytes": 23758530
+    },
+    {
+      "source": "03_Imagenes_en_orden/06-legacy-doctor-06.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/06-legacy-doctor-06.png",
+      "sha256": "0429dd9facc591e05bc3ca5ed04cb0baca1e1bb5b2cc28f9aa367ac11b6ebe2b",
+      "bytes": 23589235
+    },
+    {
+      "source": "03_Imagenes_en_orden/07-legacy-doctor-07.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/07-legacy-doctor-07.png",
+      "sha256": "347ce2d6fb695029e8ad4b22717e8a66a7aa884027f70cd9ef9461b6929f2d65",
+      "bytes": 2329541
+    },
+    {
+      "source": "03_Imagenes_en_orden/08-legacy-doctor-08.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/08-legacy-doctor-08.png",
+      "sha256": "1a798e935dc884ef45c563bdc869cd0219a683622dd07b613a4506e4c882521e",
+      "bytes": 2681907
+    },
+    {
+      "source": "03_Imagenes_en_orden/09-legacy-doctor-09.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/09-legacy-doctor-09.png",
+      "sha256": "5617c36cdfe69df9c7f7a761b58f519475fb8a8961025bff75a0c053753c29a3",
+      "bytes": 2340520
+    },
+    {
+      "source": "03_Imagenes_en_orden/10-legacy-doctor-10.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/10-legacy-doctor-10.png",
+      "sha256": "7c72bef3152584ef1ba6c83a31d36b7bbc4000bfce5c1f695c296ec2d8afd93d",
+      "bytes": 2591766
+    },
+    {
+      "source": "03_Imagenes_en_orden/11-legacy-doctor-11.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/11-legacy-doctor-11.png",
+      "sha256": "72f77d1517ed2c1c42f4f6c9b52e81367c5ca7667ca5aacfadf36a002d8c5e53",
+      "bytes": 2520878
+    },
+    {
+      "source": "03_Imagenes_en_orden/12-legacy-doctor-12.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/12-legacy-doctor-12.png",
+      "sha256": "ebbdd355d0160d79f91339b0cca6a18bd7e259929191a5c28d3d686957f4d497",
+      "bytes": 2195000
+    },
+    {
+      "source": "03_Imagenes_en_orden/13-legacy-doctor-13.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/13-legacy-doctor-13.png",
+      "sha256": "c299fe0ee870cb8fec0cb9ecd44c4f8871e9b15532ebe6b0714abe6af45bc693",
+      "bytes": 2475525
+    },
+    {
+      "source": "03_Imagenes_en_orden/14-legacy-doctor-14.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/14-legacy-doctor-14.png",
+      "sha256": "63b878f7632bbca1d3b0a2214c2dea984b84450e47a4dad6425e464143cead49",
+      "bytes": 2195341
+    },
+    {
+      "source": "03_Imagenes_en_orden/15-legacy-doctor-15.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/15-legacy-doctor-15.png",
+      "sha256": "55e34e62c30513bebcca6ed0c91bb563dfa7c46d13d8a5b37c6e0fc74b0b83d8",
+      "bytes": 2119527
+    },
+    {
+      "source": "03_Imagenes_en_orden/16-legacy-doctor-16.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/16-legacy-doctor-16.png",
+      "sha256": "ce980bb1d25114056e1edf406b1d462627aed46aa6f64a004c4b703b5adf4872",
+      "bytes": 2117926
+    },
+    {
+      "source": "03_Imagenes_en_orden/17-legacy-doctor-17.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/17-legacy-doctor-17.png",
+      "sha256": "812358daff6dc36984df067240af4e6a9bcb0263669aec21d5a2447f6c09ec80",
+      "bytes": 23742809
+    },
+    {
+      "source": "03_Imagenes_en_orden/18-legacy-doctor-18.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/18-legacy-doctor-18.png",
+      "sha256": "5b51b4d732c8567e16bfc77ef7ec1c313bc0940181b618b3dd31425745e22782",
+      "bytes": 2591391
+    },
+    {
+      "source": "03_Imagenes_en_orden/19-legacy-doctor-19.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/19-legacy-doctor-19.png",
+      "sha256": "78d5dbad66c731c009b35b6d6fc863f56b7c6f46bdb954c945168bfb54b966be",
+      "bytes": 2713378
+    },
+    {
+      "source": "03_Imagenes_en_orden/20-legacy-doctor-20.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/20-legacy-doctor-20.png",
+      "sha256": "68145225db012f3130340ac44df7de264f76914349f51219990acd6d63f5c04d",
+      "bytes": 2286664
+    },
+    {
+      "source": "03_Imagenes_en_orden/21-legacy-doctor-21.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/21-legacy-doctor-21.png",
+      "sha256": "803b66f859477dd031f43355b994eacd209b19d313b0a78f440ce8c2950677fe",
+      "bytes": 2627003
+    },
+    {
+      "source": "03_Imagenes_en_orden/22-legacy-doctor-22.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/22-legacy-doctor-22.png",
+      "sha256": "bce8817577b6200b013b45827a2c727cbaa2b6f21af1555711f092747efde0bd",
+      "bytes": 24258909
+    },
+    {
+      "source": "03_Imagenes_en_orden/23-legacy-doctor-23.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/23-legacy-doctor-23.png",
+      "sha256": "8447a2dc3adbf18b24f025b35dd4f5d342225f2c7b25d374e8877ea1cd27401c",
+      "bytes": 25438851
+    },
+    {
+      "source": "03_Imagenes_en_orden/24-legacy-doctor-24.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/24-legacy-doctor-24.png",
+      "sha256": "047df52ce579ff3d5fa708c678c194ea4695f90b1c37218e303ea9ad39b74717",
+      "bytes": 23921644
+    },
+    {
+      "source": "03_Imagenes_en_orden/25-legacy-doctor-25.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/25-legacy-doctor-25.png",
+      "sha256": "29cf533a6ace2fd811f8f18c00bd5428442d4e3a302f263d98bb09d3897f9405",
+      "bytes": 2467147
+    },
+    {
+      "source": "03_Imagenes_en_orden/26-legacy-doctor-26.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/26-legacy-doctor-26.png",
+      "sha256": "2baac8e22f27ec21077b8dbb9ca00fac328e9f32f8113cd1fe5e7a6d86b6a61c",
+      "bytes": 26814760
+    },
+    {
+      "source": "03_Imagenes_en_orden/27-legacy-doctor-27.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/27-legacy-doctor-27.png",
+      "sha256": "2e009a15c9ae9497b1385cad5a61dbd120c8638076fd56561b072a8e92bbe5db",
+      "bytes": 2213263
+    },
+    {
+      "source": "03_Imagenes_en_orden/28-legacy-doctor-28.png",
+      "destination": "06_Proyecto_HyperFrames/assets/photos/28-legacy-doctor-28.png",
+      "sha256": "4da8395af6466bdfb9a5280a3157ab08694f57ac6eeda23ed9c8c2570b3e7638",
+      "bytes": 2881819
+    },
+    {
+      "source": "04_Audio/doctor_v6_mix.wav",
+      "destination": "06_Proyecto_HyperFrames/assets/audio/master_mix.wav",
+      "sha256": "876a7f8e58e5773e01d6c5d320aeb99f78e8d832c62d259ef420d8a1603c910d",
+      "bytes": 12296078
+    },
+    {
+      "source": "01_Marca_y_tipografias/Marca_runtime/legacy-logo.jpg",
+      "destination": "06_Proyecto_HyperFrames/assets/brand/legacy-logo.jpg",
+      "sha256": "3cdc0002b29d66c8f98049a8eea4a02780b491afc01e62ba56f89b3521fc319c",
+      "bytes": 1853646
+    },
+    {
+      "source": "01_Marca_y_tipografias/Tipografias/body.ttf",
+      "destination": "06_Proyecto_HyperFrames/assets/fonts/body.ttf",
+      "sha256": "aa3b0ef53db12e3d45094030cac0e69d384e44cc5978643dd4390041cad546e2",
+      "bytes": 221328
+    },
+    {
+      "source": "01_Marca_y_tipografias/Tipografias/bold.ttf",
+      "destination": "06_Proyecto_HyperFrames/assets/fonts/bold.ttf",
+      "sha256": "0fcbdb5cbeea00ae532352c7c94a7d288ebc911ba85f4d595012032dcab64ba8",
+      "bytes": 222584
+    },
+    {
+      "source": "01_Marca_y_tipografias/Tipografias/display.ttf",
+      "destination": "06_Proyecto_HyperFrames/assets/fonts/display.ttf",
+      "sha256": "a859a438018739aee16c306586d91a453c208ee500c827d9e9aa063155c8a6e8",
+      "bytes": 264372
+    },
+    {
+      "source": "01_Marca_y_tipografias/Librerias/gsap.min.js",
+      "destination": "06_Proyecto_HyperFrames/assets/gsap.min.js",
+      "sha256": "92bb9a96476f983d212a2bc4f54c889039c1696dd4461d40a736860938570fbb",
+      "bytes": 72927
+    }
+  ],
+  "project_code": [
+    {
+      "path": "06_Proyecto_HyperFrames/REVIEW.md",
+      "sha256": "40bd9d5a69d863ff1342a406c8f2a2573dc500a881ce52fa9bc822232b6402db",
+      "bytes": 2473
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/SPEC.md",
+      "sha256": "67ac9db89ad4b5b29962d01e9cb2a9809f6356536e58ef2493e42077e16a9f72",
+      "bytes": 733
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-captions.html",
+      "sha256": "670ca4bab87c1f49c2336a3d0a8cfb614e192cc400b48366fe6399be4a39aef6",
+      "bytes": 75383
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-01.html",
+      "sha256": "ec10dcf858a0c17b82af135a6a07d70209b8b1700073fbc6c3a1c4fbda3a7a9e",
+      "bytes": 4957
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-02.html",
+      "sha256": "e532de86f7878271a6415fcbfc5d03664ecc72188e38ea9d5e066265b4944e7e",
+      "bytes": 5097
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-03.html",
+      "sha256": "b6d6cb063d0d0137f78c1ef2831d1c5271166a46926e4bbeba76d61351459879",
+      "bytes": 5922
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-04.html",
+      "sha256": "e072d1ed52809b0987abd5098f982d328c8e2f8b9bd426d1256252c12bb6c400",
+      "bytes": 5830
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-05.html",
+      "sha256": "e14e0526b78ab1588c979a8b167d727ca5d47b7d4e411851a39366f74dcda857",
+      "bytes": 5951
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-06.html",
+      "sha256": "eca89d4351e57f7c7bbfb69ba31c2de16e969b780f760494a09881b68ab0c249",
+      "bytes": 5868
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-07.html",
+      "sha256": "d0ea98fc11795939674ea6f2bf8f7beba4d183ebbcc95eb8d68762ce9f8539c4",
+      "bytes": 5841
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-08.html",
+      "sha256": "85031ffaafbebef64afea2314589aac92628c6792c8edea2650ea8fb3097045b",
+      "bytes": 5692
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-09.html",
+      "sha256": "9ffcc26ddae8fc03bee912369fbcbd37038fdee887d906b22a7201a747eafeaf",
+      "bytes": 5763
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-10.html",
+      "sha256": "844d8dff2c78fe5eb46a5a05fd0cc3cc3fabd6818ca3da4634461824ceaafc35",
+      "bytes": 5097
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-11.html",
+      "sha256": "644568d0a06701ee8c23c18d8a0fc9de7f41dbb3c3d3a69b8514d2943bc08f4e",
+      "bytes": 5096
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-12.html",
+      "sha256": "ed7fb46cd5ce82ee88ce29f49075c9ed1065f0cc72a9858d2924758b476cdad4",
+      "bytes": 5059
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-13.html",
+      "sha256": "d4dcf5579e7ae569e83cdbe9cb82c5213c9590fdb7a9f7e1f497bc1ed0440dc7",
+      "bytes": 5901
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-14.html",
+      "sha256": "dc4c95e0edbcbcae11ff749842cd9d74b97bb40ff86874c33c0d5073b78597fc",
+      "bytes": 6170
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-15.html",
+      "sha256": "ea265ac1c9513f0d0efa8ee359e89926639ab4af870f7c98bb38eb3981b96af2",
+      "bytes": 6186
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-16.html",
+      "sha256": "5b63c9f56e588e8c0597f732534e824a0254d7ab4092b599f70de91592d8c869",
+      "bytes": 6135
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-17.html",
+      "sha256": "df00b76a6dfb2afe65dacdaf14d87dd62fe107efb6bc86a26d2f65474d4b05a1",
+      "bytes": 5606
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-18.html",
+      "sha256": "5833e2b25de17aeb9fe16eebc7520d510c950f1cc524d7d82f0000657f3c31f0",
+      "bytes": 6738
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-19.html",
+      "sha256": "8264f70621570817daff1bdf04a9013166dde34cb0aa3e5cdb7d9f8147d724ac",
+      "bytes": 5849
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-20.html",
+      "sha256": "b5a7d7de506832afa3d1477a25dc594f8e47033a1c70401d02bd39f8db7ee1c7",
+      "bytes": 6719
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-21.html",
+      "sha256": "c15b64da2cf84a67f62b311bde22c4416a1efa43f256cd70f9736b6727ffd3cb",
+      "bytes": 6310
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-22.html",
+      "sha256": "22012aaf74d3da1c831a728f065d53bb2797d504c245d6b19bc2d7dd62420562",
+      "bytes": 5999
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-23.html",
+      "sha256": "2b6f8f2d3e693c0380c63593bbfa8bef65e159ec7a50d5601a2ed0e4bc89847a",
+      "bytes": 5096
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-24.html",
+      "sha256": "48704e845f8b73391a5916fc6ff64cc3a8b75c279ed3390b8fc9969adb028194",
+      "bytes": 5059
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-25.html",
+      "sha256": "cd59cda5b545e53d231e96f98bcef6b13ddb5c2511ba1e6338e5443b99995791",
+      "bytes": 5830
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-26.html",
+      "sha256": "e2cfab0115daba345ba97de8a1f93f57570bd5c688094bd24d1d18aa06329479",
+      "bytes": 5721
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-27.html",
+      "sha256": "80289ecd3f75dffaf18ba70f5902e4ef28d45a63f6115bd432fdd951363a1782",
+      "bytes": 6258
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-doctor-28.html",
+      "sha256": "1f5faa5acefb5a542d950262c7681a61e5e9c6297546ad22c05fb53993ece4d9",
+      "bytes": 6127
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/compositions/legacy-opening.html",
+      "sha256": "63b22781a461b559b9bc800d65bd0cf74b42d56ad3dc372e087c115d5a55cb4b",
+      "bytes": 5165
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/hyperframes.json",
+      "sha256": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50",
+      "bytes": 318
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/index.html",
+      "sha256": "97e260563c0b2fdd92232834ae17c9c004ffd3c77505fcffec5aa2235b671f28",
+      "bytes": 9655
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/metadata.json",
+      "sha256": "3b08548438525b34f66f7dba569b5f8ad16a4e8e92a060c122b18ac3be7857da",
+      "bytes": 74693
+    },
+    {
+      "path": "06_Proyecto_HyperFrames/package.json",
+      "sha256": "7ca5ce36192401fec540473d893dc4ddb5b7879182cad1086c0cb568b3796b6c",
+      "bytes": 356
+    }
+  ]
+}

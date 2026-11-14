@@ -1,0 +1,20 @@
+{
+  "palette": {
+    "navy": "#1A2B4C",
+    "gold": "#C5A564",
+    "cream": "#F5F0E6"
+  },
+  "font_aliases": {
+    "LegacyDisplay": "Tipografias/display.ttf",
+    "LegacyBody": "Tipografias/body.ttf",
+    "LegacyBold": "Tipografias/bold.ttf"
+  },
+  "resolution": [
+    1080,
+    1920
+  ],
+  "logo_alignment": "center_x540",
+  "motion_source": "../06_Proyecto_HyperFrames/compositions/",
+  "new_vector_or_3d_assets": "Inline SVG de tendencia conceptual e iconos; sin activos 3D externos",
+  "opening_gold_readability_tint": "#E2C98F"
+}

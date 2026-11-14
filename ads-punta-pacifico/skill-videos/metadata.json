@@ -1,0 +1,34 @@
+{
+  "name": "videos-punta-pacifico",
+  "version": "1.5.0",
+  "created": "2026-11-06",
+  "updated": "2026-11-14",
+  "language": "es",
+  "baseline_delivery": "V4",
+  "baseline_aesthetic_approval": "approved_in_general_with_refinements",
+  "maintenance_authorization": "Actualizar al aplicar cambios importantes y reutilizables solicitados por el usuario; sincronizar instalada y descargable.",
+  "installation_scope": "local_agent_environment",
+  "cloud_library_registration": "not_performed",
+  "current_work_version": "V6-Legacy-Capital-Doctor",
+  "current_work_status": "rendered_verified_pending_user_review",
+  "V5_aesthetic_approval": "pending_user_review",
+  "preferred_editing_base": "V5",
+  "current_brand_visible": "Legacy Capital",
+  "internal_source_identity": "Punta Pacífico",
+  "active_profile_versions": {
+    "salud": "V6-Legacy-Capital-Doctor",
+    "empresarios": "V5",
+    "california": "V5"
+  },
+  "V6_Higgsfield_aesthetic_approval": "rejected_by_user_2026-11-14",
+  "V6_Legacy_Capital_Doctor_aesthetic_approval": "pending_user_review",
+  "visual_editor": {
+    "name": "Legacy Video Studio",
+    "source_path": "/workspace/sites/legacy-video-studio",
+    "example_project": "V6-Legacy-Capital-Doctor",
+    "publication_status": "pending_final_verification",
+    "storage": "browser_local_IndexedDB_with_portable_export",
+    "original_render_equivalence": "not_claimed",
+    "user_aesthetic_approval": "pending_user_review"
+  }
+}

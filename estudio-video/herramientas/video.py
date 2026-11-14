@@ -714,7 +714,12 @@ def cmd_proxy(d, archivo=None):
     correr(["ffmpeg", "-y", "-v", "error", "-i", archivo, "-vf", "scale=540:960:flags=lanczos", "-c:v", "libx264", "-crf", "27",
             "-preset", "medium", "-g", "15", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "96k", "-movflags", "+faststart", out])
     mb = os.path.getsize(out) / 1e6
-    print(f"Proxy de revisión: {os.path.relpath(out, v['_dir'])} ({mb:.1f} MB)" + ("  ⚠ más de 15 MB" if mb > 15 else ""))
+    print(f"Proxy de revisión: {os.path.relpath(out, v['_dir'])} ({mb:.1f} MB)")
+    if mb > 14:  # el Artifact acepta hasta 15 MB por archivo: se sube en partes (campo `partes`)
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from bajar import partir
+        print("Más de 14 MB: súbelo en estas partes y guarda sus ids en orden en `partes` (con proxy: null):")
+        partir(out)
     return out
 
 

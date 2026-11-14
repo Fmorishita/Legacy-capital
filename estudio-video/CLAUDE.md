@@ -106,7 +106,10 @@ videos/<id>/index.html        generado (no se edita a mano)
 
 Comandos (`herramientas/video.py`, desde `estudio-video/`): `construir`, `ficha`, `segmentos`, `render --calidad draft|high --nota "…"`, `audio`, `proxy`, `sala`, `versiones`. El render corta el video en segmentos (un corte por escena, salvo donde una capa lo cruza), guarda cada segmento por huella de contenido en `renders/segmentos/` y **solo vuelve a renderizar los segmentos cuya escena cambió**; el audio se mezcla aparte (−14 LUFS, ≤ −1 dBTP) y se une sin recomprimir. Verificado: el ensamblado coincide cuadro por cuadro con un render completo.
 
-**Sala de Revisión** (artifact privado): https://claude.ai/artifact/MzgAK6KomUfQ16VjrJbTS3 — base de datos con colecciones `videos` (ficha + `proxy` = id del MP4 de revisión), `notas` (video, frame, tc, escena, categoria, elemento, texto, estado, respuesta) y `referencias` (nombre, asset, que_me_gusta, estado, resumen, estilo).
+**Sala de Revisión** (artifact privado): https://claude.ai/artifact/MzgAK6KomUfQ16VjrJbTS3 — base de datos con colecciones `videos` (ficha o `null` si es un video ajeno; el video es `proxy` = un asset, o `partes` = ids en orden de pedazos de 19 MB que la página vuelve a unir, o `enlace` de Drive por bajar), `notas` (video, frame, tc, escena, categoria, elemento, texto, estado, respuesta) y `referencias` (nombre, asset o partes o enlace, que_me_gusta, estado, resumen, estilo). Espacio: 1 GB de assets. La página muestra una miniatura por segundo, onda de audio y zoom; todo lo calcula el navegador.
+
+### Al recibir "baja el video <nombre>" (video agregado con enlace de Drive)
+`bajar.py drive` → `video.py proxy`-equivalente (`ffmpeg` 540×960) o el archivo tal cual si pesa poco → súbelo (en partes si pasa de 14 MB) → `videos/<id>`: `partes` o `proxy`, `estado: "listo"`.
 
 ### Al recibir "revisa las notas de <video>"
 1. Lee solo las notas pendientes: `ArtifactData query` en `notas` con `where video == <id>` y `estado == pendiente`.
@@ -116,7 +119,7 @@ Comandos (`herramientas/video.py`, desde `estudio-video/`): `construir`, `ficha`
 5. Cambios de voz: regenera solo la frase afectada; si su duración cambia más de ±8 %, avisa porque se recorren las escenas siguientes (más segmentos).
 
 ### Al recibir "analiza la referencia <nombre>"
-1. Descarga el asset (`Artifact read` con `path` = id del asset; se guarda en disco, no pasa por el contexto).
+1. Trae el video sin pasarlo por el contexto: `asset` → `Artifact read` con `path` = id; `partes` → un `Artifact read` por id y `python3 herramientas/bajar.py unir salida.mp4 <partes…>`; `enlace` → `python3 herramientas/bajar.py drive <enlace> salida.mp4`.
 2. `python3 herramientas/referencia.py <archivo> <nombre> [--recorte w:h:x:y] [--umbral 0.2] [--transcribir]` → `referencias/<nombre>/` (no se sube: material de terceros).
 3. Mira solo `informe.md` y las hojas de contacto; escribe `estilos/<nombre>.md` con la estructura de `estilo.md` (y lo que dijo el usuario que le gusta). Del video no se copia contenido.
 4. Actualiza la referencia en la Sala: `estado: "analizada"`, `resumen` (5–8 líneas), `estilo: "estilos/<nombre>.md"`.
@@ -126,7 +129,7 @@ Comandos (`herramientas/video.py`, desde `estudio-video/`): `construir`, `ficha`
 Copia la estructura de `videos/punta-pacifico-doctor-es/` (video.json, estilos.css, escenas/, compositions/) y escribe el video como datos desde el inicio. `construir` + `npx hyperframes check` antes de enseñar nada.
 
 ### Material que no está en el repo
-`assets/`, `renders/` y la voz son privados (gitignored) y el contenedor se borra entre sesiones. Antes de renderizar hay que restaurarlos (kit de Drive, o que el usuario los suba a la Sala). Un archivo grande de Drive no se baja con el conector (pasa por el contexto): pide que lo suba a la Sala (≤ 20 MB) o que lo comparta de otra forma.
+`assets/`, `renders/` y la voz son privados (gitignored) y el contenedor se borra entre sesiones. Antes de renderizar hay que restaurarlos. El conector de Drive guarda en disco pero solo hasta 10 MB; para más, `herramientas/bajar.py drive` (el archivo debe estar compartido como "Cualquier persona con el enlace"), o que el usuario lo suba a la Sala (cualquier tamaño, en partes). Un proxy de más de 14 MB se sube con `Artifact` en partes (`video.py proxy` las genera) y se guarda en `partes` con `proxy: null`. GitHub no sirve para videos: el repo es público y limita a 100 MB.
 
 ## Entregables por video
 

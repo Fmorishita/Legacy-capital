@@ -17,3 +17,9 @@ renders/
 videos/*/assets/
 videos/*/snapshots/
 videos/*/.hyperframes/
+
+# Análisis de videos de referencia (material de terceros); el estilo resultante va en estilos/
+referencias/
+# Ventanas temporales del render por segmentos
+videos/*/_ventana-*.html
+__pycache__/

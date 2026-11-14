@@ -1,0 +1,2085 @@
+{
+ "id": "punta-pacifico-doctor-es",
+ "titulo": "Doctor V6 — Legacy Capital",
+ "version": "v6",
+ "fps": 30,
+ "duracion": 68.6,
+ "frames": 2058,
+ "ancho": 1080,
+ "alto": 1920,
+ "estilo": "Estilo V5 del kit: titulares arriba a la izquierda (l1 blanco, l2 dorado, regla dorada) y subtítulos de 3 palabras con la palabra hablada en dorado",
+ "guion": "Doctor o médico, ¿buscas una casa con vista al mar para disfrutar en pareja o invertir?\nConoce este nuevo proyecto residencial, en El Sauzal, justo en la entrada a Ensenada, desde tres punto nueve hasta cuatro punto nueve millones de pesos: casas de un nivel, de dos o tres recámaras, con ruf gárden privado, y la mejor vista al mar.\nImagina una pausa en la alberca, juegos con tus amigos en la cancha de píkol bol, tardes de asador, o cenas con tus seres queridos en las amenidades y ruf de tu nueva casa.\nCuida tu liquidez con pagos flexibles: diez por ciento de enganche, diez por ciento en veinte mensualidades, y ochenta por ciento contra entrega, a mediados del dos mil veintiocho.\nGenera plusvalía anual, más flujos mensuales con renta de estancia corta. Vive la experiencia de contar con una esmart jom, y controlar las luces, minisplit y cerradura digital desde tu celular.\nSi apartas tu casa este mes, llévate la cocina, cuartos, baños y ruf con equipamiento incluido, ahorrando hasta cuatrocientos cincuenta mil pesos.\nHaz clic en el botón de abajo para más información, y un asesor de Légasi Cápital te atenderá.",
+ "voz": {
+  "archivo": "assets/voz.wav",
+  "motor": "Kokoro local, voz em_alex (es-419). Pausa de 2 s insertada en 9.745 s",
+  "volumen": 0.9
+ },
+ "musica": {
+  "archivo": "assets/musica.mp3",
+  "titulo": "I Can Hear Your Heartbeat (kit, Audio/Musica_fuente)",
+  "volumen": 0.14,
+  "desde": 8
+ },
+ "segmentos": [
+  {
+   "n": 1,
+   "f0": 0,
+   "f1": 79,
+   "escenas": [
+    "s01"
+   ]
+  },
+  {
+   "n": 2,
+   "f0": 79,
+   "f1": 225,
+   "escenas": [
+    "s02",
+    "s03"
+   ]
+  },
+  {
+   "n": 3,
+   "f0": 225,
+   "f1": 292,
+   "escenas": [
+    "map"
+   ]
+  },
+  {
+   "n": 4,
+   "f0": 292,
+   "f1": 352,
+   "escenas": [
+    "serv"
+   ]
+  },
+  {
+   "n": 5,
+   "f0": 352,
+   "f1": 438,
+   "escenas": [
+    "s13"
+   ]
+  },
+  {
+   "n": 6,
+   "f0": 438,
+   "f1": 531,
+   "escenas": [
+    "s04"
+   ]
+  },
+  {
+   "n": 7,
+   "f0": 531,
+   "f1": 638,
+   "escenas": [
+    "s05"
+   ]
+  },
+  {
+   "n": 8,
+   "f0": 638,
+   "f1": 690,
+   "escenas": [
+    "s06"
+   ]
+  },
+  {
+   "n": 9,
+   "f0": 690,
+   "f1": 770,
+   "escenas": [
+    "pk"
+   ]
+  },
+  {
+   "n": 10,
+   "f0": 770,
+   "f1": 801,
+   "escenas": [
+    "s07"
+   ]
+  },
+  {
+   "n": 11,
+   "f0": 801,
+   "f1": 852,
+   "escenas": [
+    "s14"
+   ]
+  },
+  {
+   "n": 12,
+   "f0": 852,
+   "f1": 942,
+   "escenas": [
+    "s08"
+   ]
+  },
+  {
+   "n": 13,
+   "f0": 942,
+   "f1": 1038,
+   "escenas": [
+    "s09"
+   ]
+  },
+  {
+   "n": 14,
+   "f0": 1038,
+   "f1": 1247,
+   "escenas": [
+    "bridge"
+   ]
+  },
+  {
+   "n": 15,
+   "f0": 1247,
+   "f1": 1380,
+   "escenas": [
+    "chart"
+   ]
+  },
+  {
+   "n": 16,
+   "f0": 1380,
+   "f1": 1482,
+   "escenas": [
+    "s10"
+   ]
+  },
+  {
+   "n": 17,
+   "f0": 1482,
+   "f1": 1595,
+   "escenas": [
+    "s11"
+   ]
+  },
+  {
+   "n": 18,
+   "f0": 1595,
+   "f1": 1658,
+   "escenas": [
+    "s12"
+   ]
+  },
+  {
+   "n": 19,
+   "f0": 1658,
+   "f1": 1764,
+   "escenas": [
+    "s15"
+   ]
+  },
+  {
+   "n": 20,
+   "f0": 1764,
+   "f1": 2058,
+   "escenas": [
+    "promo",
+    "end"
+   ]
+  }
+ ],
+ "escenas": [
+  {
+   "id": "s01",
+   "tipo": "foto",
+   "inicio": 0.0,
+   "fin": 2.633,
+   "duracion": 2.633,
+   "frame_inicio": 0,
+   "frame_fin": 78,
+   "segmento": 1,
+   "imagen": "assets/img/01.jpg",
+   "encuadre": "50% 50%",
+   "movimiento": "empuje",
+   "filtro": null,
+   "voz": "Doctor o médico, buscas una casa con vista al mar",
+   "subtitulos": [
+    {
+     "texto": "Doctor o médico,",
+     "inicio": 0.0,
+     "fin": 0.881
+    },
+    {
+     "texto": "buscas una casa",
+     "inicio": 0.881,
+     "fin": 1.745
+    },
+    {
+     "texto": "con vista al",
+     "inicio": 1.745,
+     "fin": 2.41
+    },
+    {
+     "texto": "mar",
+     "inicio": 2.41,
+     "fin": 2.609
+    }
+   ],
+   "subtitulos_y": 1120,
+   "textos": [
+    {
+     "texto": "DOCTOR · MÉDICO",
+     "donde": "#s01-hl .l1"
+    },
+    {
+     "texto": "VISTA AL MAR",
+     "donde": "#s01-hl .l2"
+    }
+   ],
+   "animaciones": [
+    {
+     "t": 0.0,
+     "elemento": "#s01 .kb",
+     "que": "Ken Burns: empuje lento de 104 % a 109.793 %"
+    },
+    {
+     "t": 0.08,
+     "elemento": "#s01-hl",
+     "que": "titular entra desde la izquierda (l1, l2 +0.12 s, regla +0.22 s)"
+    }
+   ],
+   "sfx": [
+    {
+     "id": "imp0",
+     "archivo": "quick-zoom-impact-772.mp3",
+     "inicio": 0.05,
+     "volumen": 0.3
+    }
+   ],
+   "capas": [],
+   "archivos": [],
+   "nota": ""
+  },
+  {
+   "id": "s02",
+   "tipo": "foto",
+   "inicio": 2.633,
+   "fin": 5.267,
+   "duracion": 2.633,
+   "frame_inicio": 79,
+   "frame_fin": 157,
+   "segmento": 2,
+   "imagen": "assets/img/02.jpg",
+   "encuadre": "50% 50%",
+   "movimiento": "paneo",
+   "filtro": null,
+   "voz": "para disfrutar en pareja o invertir.",
+   "subtitulos": [
+    {
+     "texto": "para disfrutar en",
+     "inicio": 2.609,
+     "fin": 3.606
+    },
+    {
+     "texto": "pareja o invertir.",
+     "inicio": 3.606,
+     "fin": 5.24
+    }
+   ],
+   "subtitulos_y": 760,
+   "textos": [
+    {
+     "texto": "PARA DISFRUTAR",
+     "donde": "#s02-hl .l1"
+    },
+    {
+     "texto": "O INVERTIR",
+     "donde": "#s02-hl .l2"
+    }
+   ],
+   "animaciones": [
+    {
+     "t": 2.633,
+     "elemento": "#s02 .kb",
+     "que": "Ken Burns: paneo lateral −2 % → +2 % a 110 %"
+    },
+    {
+     "t": 2.713,
+     "elemento": "#s02-hl",
+     "que": "titular entra desde la izquierda (l1, l2 +0.12 s, regla +0.22 s)"
+    }
+   ],
+   "sfx": [
+    {
+     "id": "sfx0",
+     "archivo": "fast-small-sweep-166.mp3",
+     "inicio": 2.39,
+     "volumen": 0.22
+    }
+   ],
+   "capas": [
+    "leak-a (Light leak: gancho → producto)"
+   ],
+   "archivos": [],
+   "nota": ""
+  },
+  {
+   "id": "s03",
+   "tipo": "foto",
+   "inicio": 5.267,
+   "fin": 7.5,
+   "duracion": 2.233,
+   "frame_inicio": 158,
+   "frame_fin": 224,
+   "segmento": 2,
+   "imagen": "assets/img/03.jpg",
+   "encuadre": "42% 50%",
+   "movimiento": "empuje",
+   "filtro": null,
+   "voz": "Conoce este nuevo proyecto residencial,",
+   "subtitulos": [
+    {
+     "texto": "Conoce este nuevo",
+     "inicio": 5.243,
+     "fin": 6.233
+    },
+    {
+     "texto": "proyecto residencial,",
+     "inicio": 6.233,
+     "fin": 7.49
+    }
+   ],
+   "subtitulos_y": 1120,
+   "textos": [
+    {
+     "texto": "NUEVO PROYECTO",
+     "donde": "#s03-hl .l1"
+    },
+    {
+     "texto": "RESIDENCIAL",
+     "donde": "#s03-hl .l2"
+    },
+    {
+     "texto": "ENSENADA · PREVENTA",
+     "donde": "#s03-hl .sm"
+    }
+   ],
+   "animaciones": [
+    {
+     "t": 5.267,
+     "elemento": "#s03 .kb",
+     "que": "Ken Burns: empuje lento de 104 % a 108.913 %"
+    },
+    {
+     "t": 5.347,
+     "elemento": "#s03-hl",
+     "que": "titular entra desde la izquierda (l1, l2 +0.12 s, regla +0.22 s)"
+    }
+   ],
+   "sfx": [
+    {
+     "id": "sfx1",
+     "archivo": "short-transition-sweep-175.mp3",
+     "inicio": 5.02,
+     "volumen": 0.22
+    }
+   ],
+   "capas": [
+    "leak-a (Light leak: gancho → producto)"
+   ],
+   "archivos": [],
+   "nota": ""
+  },
+  {
+   "id": "map",
+   "tipo": "grafico",
+   "inicio": 7.5,
+   "fin": 9.733,
+   "duracion": 2.233,
+   "frame_inicio": 225,
+   "frame_fin": 291,
+   "segmento": 3,
+   "imagen": null,
+   "encuadre": null,
+   "movimiento": null,
+   "filtro": null,
+   "voz": "en El Sauzal, justo en la entrada a Ensenada,",
+   "subtitulos": [],
+   "subtitulos_y": null,
+   "textos": [
+    {
+     "texto": "Conectividad regional",
+     "donde": ".gt"
+    },
+    {
+     "texto": "[imagen] assets/mg/mapa-regional.png",
+     "donde": "#map-img"
+    },
+    {
+     "texto": "Valle de Guadalupe 30 min",
+     "donde": "#mp1"
+    },
+    {
+     "texto": "Tijuana 1 h 10 min",
+     "donde": "#mp2"
+    }
+   ],
+   "animaciones": [
+    {
+     "t": null,
+     "elemento": "",
+     "que": "Mapa regional: se revela en círculo desde el proyecto, pulso en el punto y tiempos"
+    },
+    {
+     "t": 7.51,
+     "elemento": "#map .gt",
+     "que": "sube y aparece"
+    },
+    {
+     "t": 7.61,
+     "elemento": "#map-wrap",
+     "que": "anima revelado en 1 s"
+    },
+    {
+     "t": 7.61,
+     "elemento": "#map-img",
+     "que": "anima escala en 2.1 s"
+    },
+    {
+     "t": null,
+     "elemento": "#map-ring",
+     "que": "anima escala, opacidad en 0.7 s"
+    },
+    {
+     "t": 8.56,
+     "elemento": "#mp1",
+     "que": "aparece con rebote"
+    },
+    {
+     "t": 8.86,
+     "elemento": "#mp2",
+     "que": "aparece con rebote"
+    }
+   ],
+   "sfx": [
+    {
+     "id": "sfx2",
+     "archivo": "cinematic-whoosh-fast-1492.mp3",
+     "inicio": 7.27,
+     "volumen": 0.3
+    }
+   ],
+   "capas": [],
+   "archivos": [
+    "escenas/map.html",
+    "escenas/map.js"
+   ],
+   "nota": "Infografía 'Conectividad regional' del kit rehecha como gráfico animado"
+  },
+  {
+   "id": "serv",
+   "tipo": "grafico",
+   "inicio": 9.733,
+   "fin": 11.733,
+   "duracion": 2.0,
+   "frame_inicio": 292,
+   "frame_fin": 351,
+   "segmento": 4,
+   "imagen": null,
+   "encuadre": null,
+   "movimiento": null,
+   "filtro": null,
+   "voz": "(pausa de 2 s, sin voz)",
+   "subtitulos": [],
+   "subtitulos_y": null,
+   "textos": [
+    {
+     "texto": "Servicios alrededor",
+     "donde": ".gt"
+    },
+    {
+     "texto": "[imagen] assets/mg/mapa-local.png",
+     "donde": "img"
+    },
+    {
+     "texto": "Hospitales 7 min",
+     "donde": ".pill"
+    },
+    {
+     "texto": "UABC / CICESE 3–4 min",
+     "donde": ".pill"
+    },
+    {
+     "texto": "CETYS 5 min",
+     "donde": ".pill"
+    },
+    {
+     "texto": "Soriana 3 min",
+     "donde": ".pill"
+    },
+    {
+     "texto": "Punta Morro 2 min",
+     "donde": ".pill"
+    },
+    {
+     "texto": "Hotel Coral 4–5 min",
+     "donde": ".pill"
+    },
+    {
+     "texto": "Tiempos aproximados desde el proyecto",
+     "donde": ".gs"
+    }
+   ],
+   "animaciones": [
+    {
+     "t": null,
+     "elemento": "",
+     "que": "Servicios: mapa local y seis pastillas en cascada"
+    },
+    {
+     "t": 9.753,
+     "elemento": "#serv .gt",
+     "que": "sube y aparece"
+    },
+    {
+     "t": 9.813,
+     "elemento": "#serv-wrap",
+     "que": "anima opacidad, escala en 0.4 s"
+    },
+    {
+     "t": 10.113,
+     "elemento": ".sv",
+     "que": "anima opacidad, posición en 0.28 s"
+    }
+   ],
+   "sfx": [
+    {
+     "id": "sfx3",
+     "archivo": "cinematic-whoosh-fast-1492.mp3",
+     "inicio": 9.5,
+     "volumen": 0.3
+    }
+   ],
+   "capas": [],
+   "archivos": [
+    "escenas/serv.html",
+    "escenas/serv.js"
+   ],
+   "nota": "Infografía 'Services Map' del kit rehecha como gráfico animado"
+  },
+  {
+   "id": "s13",
+   "tipo": "foto",
+   "inicio": 11.733,
+   "fin": 14.6,
+   "duracion": 2.867,
+   "frame_inicio": 352,
+   "frame_fin": 437,
+   "segmento": 5,
+   "imagen": "assets/img/13.jpg",
+   "encuadre": "60% 50%",
+   "movimiento": "paneo",
+   "filtro": null,
+   "voz": "desde tres punto nueve hasta cuatro punto nueve millones de pesos:",
+   "subtitulos": [],
+   "subtitulos_y": null,
+   "textos": [
+    {
+     "texto": "DESDE",
+     "donde": "#price-box .a"
+    },
+    {
+     "texto": "$3.9 – $4.9",
+     "donde": "#price-box .b"
+    },
+    {
+     "texto": "MILLONES DE PESOS",
+     "donde": "#price-box .c"
+    },
+    {
+     "texto": "CASAS DE 2 Y 3 RECÁMARAS · MXN",
+     "donde": "#price-box .d"
+    }
+   ],
+   "animaciones": [
+    {
+     "t": 11.733,
+     "elemento": "#s13 .kb",
+     "que": "Ken Burns: paneo lateral −2 % → +2 % a 110 %"
+    },
+    {
+     "t": null,
+     "elemento": "",
+     "que": "Precio: cada línea sube al decirse"
+    },
+    {
+     "t": 11.763,
+     "elemento": "#price-box .a",
+     "que": "sube y aparece"
+    },
+    {
+     "t": 12.053,
+     "elemento": "#price-box .b",
+     "que": "sube y aparece"
+    },
+    {
+     "t": 13.103,
+     "elemento": "#price-box .c",
+     "que": "sube y aparece"
+    },
+    {
+     "t": 13.903,
+     "elemento": "#price-box .d",
+     "que": "sube y aparece"
+    }
+   ],
+   "sfx": [
+    {
+     "id": "sfx4",
+     "archivo": "fast-small-sweep-166.mp3",
+     "inicio": 11.51,
+     "volumen": 0.22
+    },
+    {
+     "id": "imp1",
+     "archivo": "quick-zoom-impact-772.mp3",
+     "inicio": 11.8,
+     "volumen": 0.3
+    }
+   ],
+   "capas": [],
+   "archivos": [
+    "escenas/s13.html",
+    "escenas/s13.js"
+   ],
+   "nota": ""
+  },
+  {
+   "id": "s04",
+   "tipo": "foto",
+   "inicio": 14.6,
+   "fin": 17.7,
+   "duracion": 3.1,
+   "frame_inicio": 438,
+   "frame_fin": 530,
+   "segmento": 6,
+   "imagen": "assets/img/04.jpg",
+   "encuadre": "50% 50%",
+   "movimiento": "empuje",
+   "filtro": null,
+   "voz": "casas de un nivel de dos o tres recámaras",
+   "subtitulos": [
+    {
+     "texto": "casas de un",
+     "inicio": 14.594,
+     "fin": 15.437
+    },
+    {
+     "texto": "nivel de dos",
+     "inicio": 15.437,
+     "fin": 16.375
+    },
+    {
+     "texto": "o tres recámaras",
+     "inicio": 16.375,
+     "fin": 17.687
+    }
+   ],
+   "subtitulos_y": 1120,
+   "textos": [
+    {
+     "texto": "1 NIVEL",
+     "donde": "#s04-hl .l1"
+    },
+    {
+     "texto": "2 O 3 RECÁMARAS",
+     "donde": "#s04-hl .l2"
+    }
+   ],
+   "animaciones": [
+    {
+     "t": 14.6,
+     "elemento": "#s04 .kb",
+     "que": "Ken Burns: empuje lento de 104 % a 110.82 %"
+    },
+    {
+     "t": 14.68,
+     "elemento": "#s04-hl",
+     "que": "titular entra desde la izquierda (l1, l2 +0.12 s, regla +0.22 s)"
+    }
+   ],
+   "sfx": [
+    {
+     "id": "sfx5",
+     "archivo": "short-transition-sweep-175.mp3",
+     "inicio": 14.38,
+     "volumen": 0.22
+    }
+   ],
+   "capas": [],
+   "archivos": [],
+   "nota": ""
+  },
+  {
+   "id": "s05",
+   "tipo": "foto",
+   "inicio": 17.7,
+   "fin": 21.267,
+   "duracion": 3.567,
+   "frame_inicio": 531,
+   "frame_fin": 637,
+   "segmento": 7,
+   "imagen": "assets/img/05.jpg",
+   "encuadre": "50% 50%",
+   "movimiento": "paneo",
+   "filtro": null,
+   "voz": "con roof garden privado, y la mejor vista al mar.",
+   "subtitulos": [
+    {
+     "texto": "con roof garden",
+     "inicio": 17.687,
+     "fin": 18.786
+    },
+    {
+     "texto": "privado,",
+     "inicio": 18.786,
+     "fin": 19.302
+    },
+    {
+     "texto": "y la mejor",
+     "inicio": 19.302,
+     "fin": 19.892
+    },
+    {
+     "texto": "vista al mar.",
+     "inicio": 19.892,
+     "fin": 21.26
+    }
+   ],
+   "subtitulos_y": 1120,
+   "textos": [
+    {
+     "texto": "ROOF GARDEN",
+     "donde": "#s05-hl .l1"
+    },
+    {
+     "texto": "PRIVADO",
+     "donde": "#s05-hl .l2"
+    }
+   ],
+   "animaciones": [
+    {
+     "t": 17.7,
+     "elemento": "#s05 .kb",
+     "que": "Ken Burns: paneo lateral −2 % → +2 % a 110 %"
+    },
+    {
+     "t": 17.78,
+     "elemento": "#s05-hl",
+     "que": "titular entra desde la izquierda (l1, l2 +0.12 s, regla +0.22 s)"
+    }
+   ],
+   "sfx": [
+    {
+     "id": "sfx6",
+     "archivo": "fast-small-sweep-166.mp3",
+     "inicio": 17.47,
+     "volumen": 0.22
+    }
+   ],
+   "capas": [],
+   "archivos": [],
+   "nota": ""
+  },
+  {
+   "id": "s06",
+   "tipo": "foto",
+   "inicio": 21.267,
+   "fin": 23.0,
+   "duracion": 1.733,
+   "frame_inicio": 638,
+   "frame_fin": 689,
+   "segmento": 8,
+   "imagen": "assets/img/06.jpg",
+   "encuadre": "50% 50%",
+   "movimiento": "empuje",
+   "filtro": null,
+   "voz": "Imagina una pausa en la alberca,",
+   "subtitulos": [
+    {
+     "texto": "Imagina una pausa",
+     "inicio": 21.261,
+     "fin": 22.23
+    },
+    {
+     "texto": "en la alberca,",
+     "inicio": 22.23,
+     "fin": 23.0
+    }
+   ],
+   "subtitulos_y": 1120,
+   "textos": [
+    {
+     "texto": "TU PAUSA",
+     "donde": "#s06-hl .l1"
+    },
+    {
+     "texto": "EN LA ALBERCA",
+     "donde": "#s06-hl .l2"
+    }
+   ],
+   "animaciones": [
+    {
+     "t": 21.267,
+     "elemento": "#s06 .kb",
+     "que": "Ken Burns: empuje lento de 104 % a 107.813 %"
+    },
+    {
+     "t": 21.347,
+     "elemento": "#s06-hl",
+     "que": "titular entra desde la izquierda (l1, l2 +0.12 s, regla +0.22 s)"
+    }
+   ],
+   "sfx": [
+    {
+     "id": "sfx7",
+     "archivo": "short-transition-sweep-175.mp3",
+     "inicio": 21.04,
+     "volumen": 0.22
+    }
+   ],
+   "capas": [],
+   "archivos": [],
+   "nota": ""
+  },
+  {
+   "id": "pk",
+   "tipo": "grafico",
+   "inicio": 23.0,
+   "fin": 25.667,
+   "duracion": 2.667,
+   "frame_inicio": 690,
+   "frame_fin": 769,
+   "segmento": 9,
+   "imagen": null,
+   "encuadre": null,
+   "movimiento": null,
+   "filtro": null,
+   "voz": "juegos con tus amigos en la cancha de pickleball,",
+   "subtitulos": [
+    {
+     "texto": "juegos con tus",
+     "inicio": 23.005,
+     "fin": 23.78
+    },
+    {
+     "texto": "amigos en la",
+     "inicio": 23.78,
+     "fin": 24.426
+    },
+    {
+     "texto": "cancha de pickleball,",
+     "inicio": 24.426,
+     "fin": 25.65
+    }
+   ],
+   "subtitulos_y": 1160,
+   "textos": [
+    {
+     "texto": "Cancha de pickleball",
+     "donde": ".gt"
+    }
+   ],
+   "animaciones": [
+    {
+     "t": null,
+     "elemento": "",
+     "que": "Pickleball: se dibujan las líneas de la cancha, aparece la red y la pelota cruza dos veces"
+    },
+    {
+     "t": 23.02,
+     "elemento": "#pk .gt",
+     "que": "sube y aparece"
+    },
+    {
+     "t": 23.05,
+     "elemento": ".pkl",
+     "que": "anima trazo de línea en 0.4 s"
+    },
+    {
+     "t": 23.3,
+     "elemento": "#pk-net",
+     "que": "anima opacidad en 0.2 s"
+    },
+    {
+     "t": 23.5,
+     "elemento": "#pk-ball",
+     "que": "cambia opacidad"
+    },
+    {
+     "t": 23.5,
+     "elemento": "#pk-ball",
+     "que": "anima posición, escala en 0.6 s"
+    },
+    {
+     "t": 23.5,
+     "elemento": "#pk-ball",
+     "que": "anima posición en 0.3 s"
+    },
+    {
+     "t": 23.8,
+     "elemento": "#pk-ball",
+     "que": "anima posición en 0.29 s"
+    },
+    {
+     "t": 24.1,
+     "elemento": "#pk-ball",
+     "que": "anima posición, escala en 0.7 s"
+    },
+    {
+     "t": 24.1,
+     "elemento": "#pk-ball",
+     "que": "anima posición en 0.29 s"
+    },
+    {
+     "t": 24.4,
+     "elemento": "#pk-ball",
+     "que": "anima posición en 0.39 s"
+    }
+   ],
+   "sfx": [
+    {
+     "id": "sfx8",
+     "archivo": "cinematic-whoosh-fast-1492.mp3",
+     "inicio": 22.78,
+     "volumen": 0.3
+    }
+   ],
+   "capas": [],
+   "archivos": [
+    "escenas/pk.html",
+    "escenas/pk.js"
+   ],
+   "nota": "No hay imagen de pickleball del Doctor: cancha animada"
+  },
+  {
+   "id": "s07",
+   "tipo": "foto",
+   "inicio": 25.667,
+   "fin": 26.7,
+   "duracion": 1.033,
+   "frame_inicio": 770,
+   "frame_fin": 800,
+   "segmento": 10,
+   "imagen": "assets/img/07.jpg",
+   "encuadre": "50% 50%",
+   "movimiento": "paneo",
+   "filtro": null,
+   "voz": "tardes de asador",
+   "subtitulos": [
+    {
+     "texto": "tardes de asador",
+     "inicio": 25.653,
+     "fin": 26.612
+    }
+   ],
+   "subtitulos_y": 640,
+   "textos": [
+    {
+     "texto": "TARDES",
+     "donde": "#s07-hl .l1"
+    },
+    {
+     "texto": "DE ASADOR",
+     "donde": "#s07-hl .l2"
+    }
+   ],
+   "animaciones": [
+    {
+     "t": 25.667,
+     "elemento": "#s07 .kb",
+     "que": "Ken Burns: paneo lateral −2 % → +2 % a 110 %"
+    },
+    {
+     "t": 25.747,
+     "elemento": "#s07-hl",
+     "que": "titular entra desde la izquierda (l1, l2 +0.12 s, regla +0.22 s)"
+    }
+   ],
+   "sfx": [
+    {
+     "id": "sfx9",
+     "archivo": "short-transition-sweep-175.mp3",
+     "inicio": 25.43,
+     "volumen": 0.22
+    }
+   ],
+   "capas": [],
+   "archivos": [],
+   "nota": ""
+  },
+  {
+   "id": "s14",
+   "tipo": "foto",
+   "inicio": 26.7,
+   "fin": 28.4,
+   "duracion": 1.7,
+   "frame_inicio": 801,
+   "frame_fin": 851,
+   "segmento": 11,
+   "imagen": "assets/img/14.jpg",
+   "encuadre": "50% 50%",
+   "movimiento": "empuje",
+   "filtro": null,
+   "voz": "o cenas con tus seres queridos",
+   "subtitulos": [
+    {
+     "texto": "o cenas con",
+     "inicio": 26.612,
+     "fin": 27.254
+    },
+    {
+     "texto": "tus seres queridos",
+     "inicio": 27.254,
+     "fin": 28.395
+    }
+   ],
+   "subtitulos_y": 760,
+   "textos": [
+    {
+     "texto": "CENAS CON",
+     "donde": "#s14-hl .l1"
+    },
+    {
+     "texto": "TUS SERES QUERIDOS",
+     "donde": "#s14-hl .l2"
+    }
+   ],
+   "animaciones": [
+    {
+     "t": 26.7,
+     "elemento": "#s14 .kb",
+     "que": "Ken Burns: empuje lento de 104 % a 107.74 %"
+    },
+    {
+     "t": 26.78,
+     "elemento": "#s14-hl",
+     "que": "titular entra desde la izquierda (l1, l2 +0.12 s, regla +0.22 s)"
+    }
+   ],
+   "sfx": [
+    {
+     "id": "sfx10",
+     "archivo": "fast-small-sweep-166.mp3",
+     "inicio": 26.46,
+     "volumen": 0.22
+    }
+   ],
+   "capas": [],
+   "archivos": [],
+   "nota": ""
+  },
+  {
+   "id": "s08",
+   "tipo": "foto",
+   "inicio": 28.4,
+   "fin": 31.4,
+   "duracion": 3.0,
+   "frame_inicio": 852,
+   "frame_fin": 941,
+   "segmento": 12,
+   "imagen": "assets/img/08.jpg",
+   "encuadre": "50% 50%",
+   "movimiento": "paneo",
+   "filtro": null,
+   "voz": "en las amenidades y roof de tu nueva casa.",
+   "subtitulos": [
+    {
+     "texto": "en las amenidades",
+     "inicio": 28.395,
+     "fin": 29.465
+    },
+    {
+     "texto": "y roof de",
+     "inicio": 29.465,
+     "fin": 29.965
+    },
+    {
+     "texto": "tu nueva casa.",
+     "inicio": 29.965,
+     "fin": 31.375
+    }
+   ],
+   "subtitulos_y": 1120,
+   "textos": [
+    {
+     "texto": "AMENIDADES",
+     "donde": "#s08-hl .l1"
+    },
+    {
+     "texto": "Y ROOF",
+     "donde": "#s08-hl .l2"
+    }
+   ],
+   "animaciones": [
+    {
+     "t": 28.4,
+     "elemento": "#s08 .kb",
+     "que": "Ken Burns: paneo lateral −2 % → +2 % a 110 %"
+    },
+    {
+     "t": 28.48,
+     "elemento": "#s08-hl",
+     "que": "titular entra desde la izquierda (l1, l2 +0.12 s, regla +0.22 s)"
+    }
+   ],
+   "sfx": [
+    {
+     "id": "sfx11",
+     "archivo": "short-transition-sweep-175.mp3",
+     "inicio": 28.18,
+     "volumen": 0.22
+    }
+   ],
+   "capas": [],
+   "archivos": [],
+   "nota": ""
+  },
+  {
+   "id": "s09",
+   "tipo": "foto",
+   "inicio": 31.4,
+   "fin": 34.6,
+   "duracion": 3.2,
+   "frame_inicio": 942,
+   "frame_fin": 1037,
+   "segmento": 13,
+   "imagen": "assets/img/09.jpg",
+   "encuadre": "50% 50%",
+   "movimiento": "empuje",
+   "filtro": null,
+   "voz": "Cuida tu liquidez con pagos flexibles,",
+   "subtitulos": [
+    {
+     "texto": "Cuida tu liquidez",
+     "inicio": 31.375,
+     "fin": 32.845
+    },
+    {
+     "texto": "con pagos flexibles,",
+     "inicio": 32.845,
+     "fin": 34.6
+    }
+   ],
+   "subtitulos_y": 750,
+   "textos": [
+    {
+     "texto": "PAGOS",
+     "donde": "#s09-hl .l1"
+    },
+    {
+     "texto": "FLEXIBLES",
+     "donde": "#s09-hl .l2"
+    }
+   ],
+   "animaciones": [
+    {
+     "t": 31.4,
+     "elemento": "#s09 .kb",
+     "que": "Ken Burns: empuje lento de 104 % a 111.04 %"
+    },
+    {
+     "t": 31.48,
+     "elemento": "#s09-hl",
+     "que": "titular entra desde la izquierda (l1, l2 +0.12 s, regla +0.22 s)"
+    }
+   ],
+   "sfx": [
+    {
+     "id": "sfx12",
+     "archivo": "fast-small-sweep-166.mp3",
+     "inicio": 31.16,
+     "volumen": 0.22
+    }
+   ],
+   "capas": [],
+   "archivos": [],
+   "nota": ""
+  },
+  {
+   "id": "bridge",
+   "tipo": "grafico",
+   "inicio": 34.6,
+   "fin": 41.567,
+   "duracion": 6.967,
+   "frame_inicio": 1038,
+   "frame_fin": 1246,
+   "segmento": 14,
+   "imagen": null,
+   "encuadre": null,
+   "movimiento": null,
+   "filtro": null,
+   "voz": "diez por ciento de enganche, diez por ciento en veinte mensualidades, y ochenta por ciento contra entrega, a mediados del dos mil veintiocho.",
+   "subtitulos": [],
+   "subtitulos_y": null,
+   "textos": [
+    {
+     "texto": "Pagos flexibles",
+     "donde": ".gt"
+    },
+    {
+     "texto": "10%",
+     "donde": "#br-l"
+    },
+    {
+     "texto": "a la firma",
+     "donde": "#br-l"
+    },
+    {
+     "texto": "10%",
+     "donde": "#br-m"
+    },
+    {
+     "texto": "diferido",
+     "donde": "#br-m"
+    },
+    {
+     "texto": "20 mensualidades",
+     "donde": "#br-m"
+    },
+    {
+     "texto": "80%",
+     "donde": "#br-r"
+    },
+    {
+     "texto": "contra entrega",
+     "donde": "#br-r"
+    },
+    {
+     "texto": "10% Enganche $398,278 – $489,048",
+     "donde": "#bc1"
+    },
+    {
+     "texto": "10% 20 pagos de $19,914 – $24,452",
+     "donde": "#bc2"
+    },
+    {
+     "texto": "80% Entrega $3,186,224 – $3,912,384",
+     "donde": "#bc3"
+    },
+    {
+     "texto": "MXN · rango de la lista · entrega a mediados de 2028",
+     "donde": "#br-note"
+    }
+   ],
+   "animaciones": [
+    {
+     "t": null,
+     "elemento": "",
+     "que": "Puente financiero: 10 % firma → puente de 20 mensualidades → 80 % contra entrega; tarjeta con montos en cada paso"
+    },
+    {
+     "t": 34.62,
+     "elemento": "#bridge .gt",
+     "que": "sube y aparece"
+    },
+    {
+     "t": 34.64,
+     "elemento": "#br-l",
+     "que": "anima opacidad, posición en 0.35 s"
+    },
+    {
+     "t": null,
+     "elemento": "#bc1",
+     "que": "aparece con rebote"
+    },
+    {
+     "t": 36.0,
+     "elemento": "#br-m",
+     "que": "anima opacidad en 0.2 s"
+    },
+    {
+     "t": 36.0,
+     "elemento": "#br-deck",
+     "que": "anima ancho en 0.5 s"
+    },
+    {
+     "t": 36.1,
+     "elemento": "#br-cable",
+     "que": "anima trazo de línea en 0.6 s"
+    },
+    {
+     "t": 36.3,
+     "elemento": "#br-h line",
+     "que": "anima opacidad en 0.15 s"
+    },
+    {
+     "t": 36.5,
+     "elemento": "#bc2",
+     "que": "aparece con rebote"
+    },
+    {
+     "t": 38.05,
+     "elemento": "#br-r",
+     "que": "anima opacidad, posición en 0.35 s"
+    },
+    {
+     "t": 38.35,
+     "elemento": "#bc3",
+     "que": "aparece con rebote"
+    },
+    {
+     "t": 39.55,
+     "elemento": "#br-note",
+     "que": "anima opacidad en 0.3 s"
+    }
+   ],
+   "sfx": [
+    {
+     "id": "sfx13",
+     "archivo": "cinematic-whoosh-fast-1492.mp3",
+     "inicio": 34.38,
+     "volumen": 0.3
+    },
+    {
+     "id": "imp2",
+     "archivo": "quick-zoom-impact-772.mp3",
+     "inicio": 36.66,
+     "volumen": 0.3
+    },
+    {
+     "id": "imp3",
+     "archivo": "quick-zoom-impact-772.mp3",
+     "inicio": 38.03,
+     "volumen": 0.3
+    },
+    {
+     "id": "imp4",
+     "archivo": "quick-zoom-impact-772.mp3",
+     "inicio": 40.09,
+     "volumen": 0.3
+    }
+   ],
+   "capas": [],
+   "archivos": [
+    "escenas/bridge.html",
+    "escenas/bridge.js"
+   ],
+   "nota": ""
+  },
+  {
+   "id": "chart",
+   "tipo": "grafico",
+   "inicio": 41.567,
+   "fin": 46.0,
+   "duracion": 4.433,
+   "frame_inicio": 1247,
+   "frame_fin": 1379,
+   "segmento": 15,
+   "imagen": null,
+   "encuadre": null,
+   "movimiento": null,
+   "filtro": null,
+   "voz": "Genera plusvalía anual, más flujos mensuales con renta de estancia corta.",
+   "subtitulos": [],
+   "subtitulos_y": null,
+   "textos": [
+    {
+     "texto": "Plusvalía proyectada",
+     "donde": ".gt"
+    },
+    {
+     "texto": "Valor estimado del inmueble · millones de MXN",
+     "donde": ".gs"
+    },
+    {
+     "texto": "4 M",
+     "donde": "text"
+    },
+    {
+     "texto": "7 M",
+     "donde": "text"
+    },
+    {
+     "texto": "10 M",
+     "donde": "text"
+    },
+    {
+     "texto": "2026",
+     "donde": "text"
+    },
+    {
+     "texto": "Dic 2028",
+     "donde": "text"
+    },
+    {
+     "texto": "2031",
+     "donde": "text"
+    },
+    {
+     "texto": "2034",
+     "donde": "text"
+    },
+    {
+     "texto": "$4.57 M",
+     "donde": "text"
+    },
+    {
+     "texto": "$5.57 M",
+     "donde": "text"
+    },
+    {
+     "texto": "$5.37 M",
+     "donde": "text"
+    },
+    {
+     "texto": "$7.36 M",
+     "donde": "text"
+    },
+    {
+     "texto": "$6.72 M",
+     "donde": "text"
+    },
+    {
+     "texto": "$9.80 M",
+     "donde": "text"
+    },
+    {
+     "texto": "$8.46 M",
+     "donde": "text"
+    },
+    {
+     "texto": "Conservador 8 % anual",
+     "donde": "#lg1"
+    },
+    {
+     "texto": "Optimista 10 % anual",
+     "donde": "#lg2"
+    },
+    {
+     "texto": "Supuestos de apreciación compuesta sobre $4,570,545 MXN. Proyección, no flujo de rentas.",
+     "donde": ".gs"
+    }
+   ],
+   "animaciones": [
+    {
+     "t": null,
+     "elemento": "",
+     "que": "Plusvalía: se trazan las dos curvas (conservador 8 % y optimista 10 %) y aparecen los valores por año"
+    },
+    {
+     "t": 41.587,
+     "elemento": "#chart .gt",
+     "que": "sube y aparece"
+    },
+    {
+     "t": 42.017,
+     "elemento": "#ln-c",
+     "que": "anima trazo de línea en 2 s"
+    },
+    {
+     "t": 42.167,
+     "elemento": "#ln-o",
+     "que": "anima trazo de línea en 2 s"
+    },
+    {
+     "t": 42.067,
+     "elemento": ".cp",
+     "que": "anima opacidad en 0.25 s"
+    },
+    {
+     "t": 42.017,
+     "elemento": "#lg1",
+     "que": "aparece con rebote"
+    },
+    {
+     "t": 42.317,
+     "elemento": "#lg2",
+     "que": "aparece con rebote"
+    }
+   ],
+   "sfx": [
+    {
+     "id": "sfx14",
+     "archivo": "cinematic-whoosh-fast-1492.mp3",
+     "inicio": 41.33,
+     "volumen": 0.3
+    }
+   ],
+   "capas": [],
+   "archivos": [
+    "escenas/chart.html",
+    "escenas/chart.js"
+   ],
+   "nota": ""
+  },
+  {
+   "id": "s10",
+   "tipo": "foto",
+   "inicio": 46.0,
+   "fin": 49.4,
+   "duracion": 3.4,
+   "frame_inicio": 1380,
+   "frame_fin": 1481,
+   "segmento": 16,
+   "imagen": "assets/img/10.jpg",
+   "encuadre": "50% 50%",
+   "movimiento": "paneo",
+   "filtro": null,
+   "voz": "Vive la experiencia de contar con una smart home y controlar",
+   "subtitulos": [
+    {
+     "texto": "Vive la experiencia",
+     "inicio": 46.013,
+     "fin": 47.166
+    },
+    {
+     "texto": "de contar con",
+     "inicio": 47.166,
+     "fin": 47.911
+    },
+    {
+     "texto": "una smart home",
+     "inicio": 47.911,
+     "fin": 48.725
+    },
+    {
+     "texto": "y controlar",
+     "inicio": 48.725,
+     "fin": 49.4
+    }
+   ],
+   "subtitulos_y": 1120,
+   "textos": [
+    {
+     "texto": "SMART",
+     "donde": "#s10-hl .l1"
+    },
+    {
+     "texto": "HOME",
+     "donde": "#s10-hl .l2"
+    }
+   ],
+   "animaciones": [
+    {
+     "t": 46.0,
+     "elemento": "#s10 .kb",
+     "que": "Ken Burns: paneo lateral −2 % → +2 % a 110 %"
+    },
+    {
+     "t": 46.08,
+     "elemento": "#s10-hl",
+     "que": "titular entra desde la izquierda (l1, l2 +0.12 s, regla +0.22 s)"
+    }
+   ],
+   "sfx": [
+    {
+     "id": "sfx15",
+     "archivo": "short-transition-sweep-175.mp3",
+     "inicio": 45.78,
+     "volumen": 0.22
+    }
+   ],
+   "capas": [],
+   "archivos": [],
+   "nota": ""
+  },
+  {
+   "id": "s11",
+   "tipo": "foto",
+   "inicio": 49.4,
+   "fin": 53.167,
+   "duracion": 3.767,
+   "frame_inicio": 1482,
+   "frame_fin": 1594,
+   "segmento": 17,
+   "imagen": "assets/img/11.jpg",
+   "encuadre": "50% 50%",
+   "movimiento": "empuje",
+   "filtro": null,
+   "voz": "las luces, minisplit y cerradura digital desde tu celular.",
+   "subtitulos": [
+    {
+     "texto": "las luces,",
+     "inicio": 49.403,
+     "fin": 50.013
+    },
+    {
+     "texto": "minisplit y cerradura",
+     "inicio": 50.013,
+     "fin": 51.218
+    },
+    {
+     "texto": "digital desde tu",
+     "inicio": 51.218,
+     "fin": 52.106
+    },
+    {
+     "texto": "celular.",
+     "inicio": 52.106,
+     "fin": 53.138
+    }
+   ],
+   "subtitulos_y": 1120,
+   "textos": [
+    {
+     "texto": "● Luces",
+     "donde": "#ch1"
+    },
+    {
+     "texto": "● Minisplit",
+     "donde": "#ch2"
+    },
+    {
+     "texto": "● Cerradura digital",
+     "donde": "#ch3"
+    }
+   ],
+   "animaciones": [
+    {
+     "t": 49.4,
+     "elemento": "#s11 .kb",
+     "que": "Ken Burns: empuje lento de 104 % a 112.287 %"
+    },
+    {
+     "t": null,
+     "elemento": "",
+     "que": "Smart home: aparecen las tres funciones al decirse"
+    },
+    {
+     "t": 49.42,
+     "elemento": "#ch1",
+     "que": "aparece con rebote"
+    },
+    {
+     "t": 50.03,
+     "elemento": "#ch2",
+     "que": "aparece con rebote"
+    },
+    {
+     "t": 50.66,
+     "elemento": "#ch3",
+     "que": "aparece con rebote"
+    }
+   ],
+   "sfx": [
+    {
+     "id": "sfx16",
+     "archivo": "fast-small-sweep-166.mp3",
+     "inicio": 49.18,
+     "volumen": 0.22
+    }
+   ],
+   "capas": [],
+   "archivos": [
+    "escenas/s11.html",
+    "escenas/s11.js"
+   ],
+   "nota": ""
+  },
+  {
+   "id": "s12",
+   "tipo": "foto",
+   "inicio": 53.167,
+   "fin": 55.267,
+   "duracion": 2.1,
+   "frame_inicio": 1595,
+   "frame_fin": 1657,
+   "segmento": 18,
+   "imagen": "assets/img/12.jpg",
+   "encuadre": "50% 50%",
+   "movimiento": "paneo",
+   "filtro": null,
+   "voz": "Si apartas tu casa este mes, llévate",
+   "subtitulos": [
+    {
+     "texto": "Si apartas tu",
+     "inicio": 53.138,
+     "fin": 53.907
+    },
+    {
+     "texto": "casa este mes,",
+     "inicio": 53.907,
+     "fin": 54.745
+    },
+    {
+     "texto": "llévate",
+     "inicio": 54.745,
+     "fin": 55.234
+    }
+   ],
+   "subtitulos_y": 1120,
+   "textos": [
+    {
+     "texto": "APARTA",
+     "donde": "#s12-hl .l1"
+    },
+    {
+     "texto": "ESTE MES",
+     "donde": "#s12-hl .l2"
+    }
+   ],
+   "animaciones": [
+    {
+     "t": 53.167,
+     "elemento": "#s12 .kb",
+     "que": "Ken Burns: paneo lateral −2 % → +2 % a 110 %"
+    },
+    {
+     "t": 53.247,
+     "elemento": "#s12-hl",
+     "que": "titular entra desde la izquierda (l1, l2 +0.12 s, regla +0.22 s)"
+    }
+   ],
+   "sfx": [
+    {
+     "id": "sfx17",
+     "archivo": "short-transition-sweep-175.mp3",
+     "inicio": 52.92,
+     "volumen": 0.22
+    }
+   ],
+   "capas": [],
+   "archivos": [],
+   "nota": ""
+  },
+  {
+   "id": "s15",
+   "tipo": "foto",
+   "inicio": 55.267,
+   "fin": 58.8,
+   "duracion": 3.533,
+   "frame_inicio": 1658,
+   "frame_fin": 1763,
+   "segmento": 19,
+   "imagen": "assets/img/15.jpg",
+   "encuadre": "50% 50%",
+   "movimiento": "empuje",
+   "filtro": null,
+   "voz": "la cocina, cuartos, baños y roof con equipamiento incluido,",
+   "subtitulos": [
+    {
+     "texto": "la cocina,",
+     "inicio": 55.234,
+     "fin": 55.863
+    },
+    {
+     "texto": "cuartos,",
+     "inicio": 55.863,
+     "fin": 56.422
+    },
+    {
+     "texto": "baños y roof",
+     "inicio": 56.422,
+     "fin": 57.121
+    },
+    {
+     "texto": "con equipamiento",
+     "inicio": 57.121,
+     "fin": 58.169
+    },
+    {
+     "texto": "incluido,",
+     "inicio": 58.169,
+     "fin": 58.8
+    }
+   ],
+   "subtitulos_y": 760,
+   "textos": [
+    {
+     "texto": "EQUIPAMIENTO",
+     "donde": "#s15-hl .l1"
+    },
+    {
+     "texto": "INCLUIDO",
+     "donde": "#s15-hl .l2"
+    },
+    {
+     "texto": "✓ Cocina",
+     "donde": "#li0"
+    },
+    {
+     "texto": "✓ Cuartos",
+     "donde": "#li1"
+    },
+    {
+     "texto": "✓ Baños",
+     "donde": "#li2"
+    },
+    {
+     "texto": "✓ Roof",
+     "donde": "#li3"
+    }
+   ],
+   "animaciones": [
+    {
+     "t": 55.267,
+     "elemento": "#s15 .kb",
+     "que": "Ken Burns: empuje lento de 104 % a 111.773 %"
+    },
+    {
+     "t": 55.347,
+     "elemento": "#s15-hl",
+     "que": "titular entra desde la izquierda (l1, l2 +0.12 s, regla +0.22 s)"
+    },
+    {
+     "t": null,
+     "elemento": "",
+     "que": "Equipamiento: una palomita por concepto"
+    },
+    {
+     "t": null,
+     "elemento": "#li",
+     "que": "sube y aparece"
+    }
+   ],
+   "sfx": [
+    {
+     "id": "sfx18",
+     "archivo": "fast-small-sweep-166.mp3",
+     "inicio": 55.03,
+     "volumen": 0.22
+    }
+   ],
+   "capas": [],
+   "archivos": [
+    "escenas/s15.html",
+    "escenas/s15.js"
+   ],
+   "nota": ""
+  },
+  {
+   "id": "promo",
+   "tipo": "libre",
+   "inicio": 58.8,
+   "fin": 61.7,
+   "duracion": 2.9,
+   "frame_inicio": 1764,
+   "frame_fin": 1850,
+   "segmento": 20,
+   "imagen": null,
+   "encuadre": null,
+   "movimiento": null,
+   "filtro": null,
+   "voz": "ahorrando hasta cuatrocientos cincuenta mil pesos.",
+   "subtitulos": [],
+   "subtitulos_y": null,
+   "textos": [
+    {
+     "texto": "AHORRA HASTA",
+     "donde": ".a"
+    },
+    {
+     "texto": "$450,000",
+     "donde": "#promo-n"
+    },
+    {
+     "texto": "MXN EN EQUIPAMIENTO INCLUIDO",
+     "donde": ".c"
+    },
+    {
+     "texto": "Al apartar tu casa este mes",
+     "donde": ".d"
+    }
+   ],
+   "animaciones": [
+    {
+     "t": null,
+     "elemento": "",
+     "que": "Promoción: la cifra entra grande y desenfocada y se asienta"
+    },
+    {
+     "t": 58.82,
+     "elemento": "#promo .a",
+     "que": "sube y aparece"
+    },
+    {
+     "t": 59.0,
+     "elemento": "#promo-n",
+     "que": "anima opacidad, escala, desenfoque en 0.35 s"
+    },
+    {
+     "t": 59.6,
+     "elemento": "#promo .c",
+     "que": "sube y aparece"
+    },
+    {
+     "t": 60.0,
+     "elemento": "#promo .d",
+     "que": "sube y aparece"
+    }
+   ],
+   "sfx": [
+    {
+     "id": "sfx19",
+     "archivo": "cinematic-whoosh-fast-1492.mp3",
+     "inicio": 58.58,
+     "volumen": 0.3
+    },
+    {
+     "id": "imp5",
+     "archivo": "quick-zoom-impact-772.mp3",
+     "inicio": 59.0,
+     "volumen": 0.3
+    }
+   ],
+   "capas": [
+    "leak-b (Light leak: promo → cierre)"
+   ],
+   "archivos": [
+    "escenas/promo.html",
+    "escenas/promo.js"
+   ],
+   "nota": ""
+  },
+  {
+   "id": "end",
+   "tipo": "foto",
+   "inicio": 61.7,
+   "fin": 68.6,
+   "duracion": 6.9,
+   "frame_inicio": 1851,
+   "frame_fin": 2057,
+   "segmento": 20,
+   "imagen": "assets/img/16.jpg",
+   "encuadre": null,
+   "movimiento": "ninguno",
+   "filtro": "blur(10px)",
+   "voz": "Haz clic en el botón de abajo para más información y un asesor de Legacy Capital te atenderá.",
+   "subtitulos": [
+    {
+     "texto": "Haz clic en",
+     "inicio": 61.673,
+     "fin": 62.296
+    },
+    {
+     "texto": "el botón de",
+     "inicio": 62.296,
+     "fin": 62.919
+    },
+    {
+     "texto": "abajo para más",
+     "inicio": 62.919,
+     "fin": 63.749
+    },
+    {
+     "texto": "información y un",
+     "inicio": 63.749,
+     "fin": 64.718
+    },
+    {
+     "texto": "asesor de Legacy",
+     "inicio": 64.718,
+     "fin": 65.687
+    },
+    {
+     "texto": "Capital te atenderá.",
+     "inicio": 65.687,
+     "fin": 67.1
+    }
+   ],
+   "subtitulos_y": 1215,
+   "textos": [
+    {
+     "texto": "[imagen] assets/crest.png",
+     "donde": "#end-crest"
+    },
+    {
+     "texto": "LEGACY CAPITAL",
+     "donde": "#end-brand"
+    },
+    {
+     "texto": "REAL ESTATE",
+     "donde": "#end-re"
+    },
+    {
+     "texto": "MÁS INFORMACIÓN",
+     "donde": "#end-mas"
+    },
+    {
+     "texto": "Haz clic en el botón de abajo ↓",
+     "donde": "#end-cta"
+    },
+    {
+     "texto": "WhatsApp +52 646 256 3006",
+     "donde": "#end-wa"
+    }
+   ],
+   "animaciones": [
+    {
+     "t": 61.7,
+     "elemento": "#end .kb",
+     "que": "sin movimiento automático (lo define su JS)"
+    },
+    {
+     "t": null,
+     "elemento": "",
+     "que": "Cierre: fondo desenfocado con empuje lento, escudo entra grande y desenfocado, botón con pulso y flecha"
+    },
+    {
+     "t": 61.7,
+     "elemento": "#end .kb",
+     "que": "anima escala en 6.93 s"
+    },
+    {
+     "t": 61.83,
+     "elemento": "#end-crest",
+     "que": "anima opacidad, escala, desenfoque en 0.45 s"
+    },
+    {
+     "t": 62.13,
+     "elemento": "#end-brand",
+     "que": "anima opacidad en 0.3 s"
+    },
+    {
+     "t": 62.28,
+     "elemento": "#end-re",
+     "que": "anima opacidad en 0.3 s"
+    },
+    {
+     "t": 62.63,
+     "elemento": "#end-mas",
+     "que": "sube y aparece"
+    },
+    {
+     "t": 63.03,
+     "elemento": "#end-cta",
+     "que": "anima opacidad, escala en 0.35 s"
+    },
+    {
+     "t": 63.53,
+     "elemento": "#end-wa",
+     "que": "anima opacidad en 0.3 s"
+    },
+    {
+     "t": 63.53,
+     "elemento": "#end-cta",
+     "que": "anima escala, pulso en 0.39 s ×12"
+    },
+    {
+     "t": 63.53,
+     "elemento": "#end-arrow",
+     "que": "anima posición en 0.39 s ×12"
+    }
+   ],
+   "sfx": [
+    {
+     "id": "sfx20",
+     "archivo": "cinematic-whoosh-fast-1492.mp3",
+     "inicio": 61.45,
+     "volumen": 0.3
+    },
+    {
+     "id": "imp6",
+     "archivo": "quick-zoom-impact-772.mp3",
+     "inicio": 63.0,
+     "volumen": 0.3
+    }
+   ],
+   "capas": [
+    "leak-b (Light leak: promo → cierre)"
+   ],
+   "archivos": [
+    "escenas/end.html",
+    "escenas/end.js"
+   ],
+   "nota": ""
+  }
+ ]
+}

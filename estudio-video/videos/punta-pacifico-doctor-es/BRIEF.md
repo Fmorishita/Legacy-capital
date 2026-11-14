@@ -14,7 +14,7 @@ length: 68.6s
 
 Anuncio "Doctor" V6 para Legacy Capital, con el guion V6 de Fran (kit de Drive "Anuncios V5", carpeta `02_Doctor`). Usa las 16 imágenes del kit con el estilo V5 (titulares arriba a la izquierda y subtítulos con palabra dorada) y las cuatro infografías de la carpeta "motion graphics" rehechas como gráficos animados. Cierra con el logo de Legacy Capital.
 
-`index.html` se genera con `build.py` a partir de los tiempos por palabra de la voz.
+El video está descrito como datos en `video.json` (+ `palabras.json`, `estilos.css`, `escenas/`). `index.html`, `FICHA.md` y `ficha.json` se generan con `herramientas/video.py`; no se editan a mano. El `build.py` original quedó reemplazado (sus escenas y tiempos están en `video.json`; los cortes ahora caen exactos en la rejilla de 30 fps).
 
 ## Fuentes
 
@@ -39,3 +39,5 @@ Todos los datos salen del guion V6 y de las infografías de Fran (14/11/2026).
 - Plusvalía y renta: va como proyección con supuestos; validar con abogado.
 - "La mejor vista al mar" es superlativo. Las amenidades ya no se dicen "proyectadas".
 - Pickleball: no hay imagen del Doctor; se usa una cancha animada.
+
+- Assets del V6 (imágenes en JPG, voz Kokoro y `palabras` originales) no están en el repo ni en el kit de Drive: la voz se puede regenerar gratis con Kokoro local.

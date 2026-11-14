@@ -91,6 +91,43 @@ Cuando te corrija algo y apruebe el resultado:
 - Render: borrador `--quality draft`; final `--quality high --fps 30 --output renders/<nombre>-vNN.mp4`. Nunca renderices el final sin mi aprobación.
 - QA de cada render: ffprobe (1080x1920, 30 fps, duración esperada, pista de audio), loudness integrada y pico, hoja de contacto de 12 fotogramas revisada por ti (área útil, ortografía, cifras = brief, leyendas presentes), sincronía voz-subtítulo en 3 puntos (desfase ≤ 2 frames).
 
+## Sistema de ficha, revisión y cambios (ahorro de tokens)
+
+Cada video vive como **datos**, no como un HTML a mano:
+
+```
+videos/<id>/video.json        escenas (tiempos, imagen, encuadre, movimiento, titular, subtítulos, voz), capas, voz, música, SFX
+videos/<id>/palabras.json     palabras de la voz con tiempos [texto, inicio, fin] → subtítulos
+videos/<id>/estilos.css       estilo visual del video
+videos/<id>/escenas/<id>.html|.js   lo particular de una escena (gráficos, cifras). JS con tiempos RELATIVOS a la escena
+videos/<id>/FICHA.md, ficha.json    desglose generado (no se edita a mano)
+videos/<id>/index.html        generado (no se edita a mano)
+```
+
+Comandos (`herramientas/video.py`, desde `estudio-video/`): `construir`, `ficha`, `segmentos`, `render --calidad draft|high --nota "…"`, `audio`, `proxy`, `sala`, `versiones`. El render corta el video en segmentos (un corte por escena, salvo donde una capa lo cruza), guarda cada segmento por huella de contenido en `renders/segmentos/` y **solo vuelve a renderizar los segmentos cuya escena cambió**; el audio se mezcla aparte (−14 LUFS, ≤ −1 dBTP) y se une sin recomprimir. Verificado: el ensamblado coincide cuadro por cuadro con un render completo.
+
+**Sala de Revisión** (artifact privado): https://claude.ai/artifact/MzgAK6KomUfQ16VjrJbTS3 — base de datos con colecciones `videos` (ficha + `proxy` = id del MP4 de revisión), `notas` (video, frame, tc, escena, categoria, elemento, texto, estado, respuesta) y `referencias` (nombre, asset, que_me_gusta, estado, resumen, estilo).
+
+### Al recibir "revisa las notas de <video>"
+1. Lee solo las notas pendientes: `ArtifactData query` en `notas` con `where video == <id>` y `estado == pendiente`.
+2. Por cada nota, abre solo lo que toca: el campo en `video.json` o el archivo `escenas/<escena>.*` (la nota trae escena y elemento). **No leas `index.html`, `ficha.json` ni el video completo.** Para ver un cuadro concreto, extrae ese frame con ffmpeg (una imagen, no hojas enteras).
+3. `ficha` → `segmentos` (confirma que solo cambian los esperados) → `render --nota "notas …"` → `proxy` → sube el proxy como asset del artifact (`Artifact` publish con `asset: true`) y actualiza `videos/<id>` (`proxy`, `render`, ficha con `sala`).
+4. Marca cada nota: `estado: "aplicada"` (o `"pregunta"` si necesitas decisión), `respuesta` breve y `render_aplicado: "rNN"`.
+5. Cambios de voz: regenera solo la frase afectada; si su duración cambia más de ±8 %, avisa porque se recorren las escenas siguientes (más segmentos).
+
+### Al recibir "analiza la referencia <nombre>"
+1. Descarga el asset (`Artifact read` con `path` = id del asset; se guarda en disco, no pasa por el contexto).
+2. `python3 herramientas/referencia.py <archivo> <nombre> [--recorte w:h:x:y] [--umbral 0.2] [--transcribir]` → `referencias/<nombre>/` (no se sube: material de terceros).
+3. Mira solo `informe.md` y las hojas de contacto; escribe `estilos/<nombre>.md` con la estructura de `estilo.md` (y lo que dijo el usuario que le gusta). Del video no se copia contenido.
+4. Actualiza la referencia en la Sala: `estado: "analizada"`, `resumen` (5–8 líneas), `estilo: "estilos/<nombre>.md"`.
+5. En videos nuevos, el brief indica qué estilo usar (`estilo.md` por defecto o `estilos/<nombre>.md`).
+
+### Video nuevo
+Copia la estructura de `videos/punta-pacifico-doctor-es/` (video.json, estilos.css, escenas/, compositions/) y escribe el video como datos desde el inicio. `construir` + `npx hyperframes check` antes de enseñar nada.
+
+### Material que no está en el repo
+`assets/`, `renders/` y la voz son privados (gitignored) y el contenedor se borra entre sesiones. Antes de renderizar hay que restaurarlos (kit de Drive, o que el usuario los suba a la Sala). Un archivo grande de Drive no se baja con el conector (pasa por el contexto): pide que lo suba a la Sala (≤ 20 MB) o que lo comparta de otra forma.
+
 ## Entregables por video
 
 - `videos/<slug>-<formato>-<idioma>/renders/<nombre>-vNN.mp4`

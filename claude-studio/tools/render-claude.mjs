@@ -20,7 +20,7 @@ const opt = (k, d) => { const i = args.indexOf('--' + k); return i >= 0 ? args[i
 const [projPath, outPath] = args.filter((a, i) => !a.startsWith('--') && !(i > 0 && args[i - 1].startsWith('--')));
 if (!projPath || !outPath) { console.log('Uso: node tools/render-claude.mjs <proyecto.json> <salida.mp4> [--crf 17]'); process.exit(1); }
 const here = path.dirname(new URL(import.meta.url).pathname);
-const dist = path.resolve(opt('dist', path.join(here, '..', 'dist')));
+const dist = path.resolve(opt('dist', path.join(here, '..', 'build', 'dist')));
 const crf = opt('crf', '17');
 let project = JSON.parse(fs.readFileSync(projPath, 'utf8'));
 if (project.format === 'legacy-video-studio') project = project.project;

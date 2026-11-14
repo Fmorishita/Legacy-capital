@@ -81,8 +81,6 @@ export async function exportVideo(engine, options = {}) {
 }
 
 export function downloadBlob(blob, filename) {
-  // Dentro de Claude las descargas pasan por la capacidad «downloads» (un enlace <a download> no funciona ahí).
-  if (globalThis.__legacyDownloads) return globalThis.__legacyDownloads.save({filename, data: blob}).catch(e => { if (e?.code !== 'declined') throw new Error('No se pudo descargar: ' + (e?.message || e?.code)); });
   const url = URL.createObjectURL(blob), link = document.createElement('a');link.href = url;link.download = filename;
   document.body.appendChild(link);link.click();link.remove();setTimeout(() => URL.revokeObjectURL(url), 60_000);
 }

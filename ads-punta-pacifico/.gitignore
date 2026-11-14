@@ -224,4 +224,3 @@ __pycache__/
 /editor/worker/static-files.mjs
 /editor/dist/server/
 /editor/bootstrap-manifest.json
-/editor/dist/claude-page.html

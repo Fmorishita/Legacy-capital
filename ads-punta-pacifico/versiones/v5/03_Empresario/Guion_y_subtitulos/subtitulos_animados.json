@@ -1,0 +1,1064 @@
+{
+  "profile": "empresarios",
+  "canvas": [
+    1080,
+    1920
+  ],
+  "time_base": "seconds",
+  "groups": [
+    {
+      "text": "Empresario,",
+      "start": 0.12,
+      "end": 0.8510829999999999,
+      "words": [
+        {
+          "text": "Empresario,",
+          "start": 0.12,
+          "end": 0.751083
+        }
+      ],
+      "id": "empresarios-captions-g00",
+      "shot_id": "empresarios-01",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "imagina tu próxima casa",
+      "start": 1.066584,
+      "end": 2.340167,
+      "words": [
+        {
+          "text": "imagina",
+          "start": 1.066584,
+          "end": 1.491334
+        },
+        {
+          "text": "tu",
+          "start": 1.5035,
+          "end": 1.624875
+        },
+        {
+          "text": "próxima",
+          "start": 1.637,
+          "end": 2.049625
+        },
+        {
+          "text": "casa",
+          "start": 2.06175,
+          "end": 2.353
+        }
+      ],
+      "id": "empresarios-captions-g01",
+      "shot_id": "empresarios-01",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 64.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "con vista al mar",
+      "start": 2.365167,
+      "end": 3.15325,
+      "words": [
+        {
+          "text": "con",
+          "start": 2.365167,
+          "end": 2.547208
+        },
+        {
+          "text": "vista",
+          "start": 2.559334,
+          "end": 2.826334
+        },
+        {
+          "text": "al",
+          "start": 2.838459,
+          "end": 2.935542
+        },
+        {
+          "text": "mar",
+          "start": 2.947667,
+          "end": 3.166125
+        }
+      ],
+      "id": "empresarios-captions-g02",
+      "shot_id": "empresarios-01",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "y una compra flexible,",
+      "start": 3.17825,
+      "end": 4.346208,
+      "words": [
+        {
+          "text": "y",
+          "start": 3.17825,
+          "end": 3.238916
+        },
+        {
+          "text": "una",
+          "start": 3.251084,
+          "end": 3.421
+        },
+        {
+          "text": "compra",
+          "start": 3.433125,
+          "end": 3.724375
+        },
+        {
+          "text": "flexible,",
+          "start": 3.7365,
+          "end": 4.246208
+        }
+      ],
+      "id": "empresarios-captions-g03",
+      "shot_id": "empresarios-02",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "por etapas.",
+      "start": 4.501084,
+      "end": 5.37775,
+      "words": [
+        {
+          "text": "por",
+          "start": 4.501084,
+          "end": 4.646709
+        },
+        {
+          "text": "etapas.",
+          "start": 4.658834,
+          "end": 5.27775
+        }
+      ],
+      "id": "empresarios-captions-g04",
+      "shot_id": "empresarios-02",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "Punta Pacífico, en",
+      "start": 6.125834,
+      "end": 7.338709,
+      "words": [
+        {
+          "text": "Punta",
+          "start": 6.125834,
+          "end": 6.380709
+        },
+        {
+          "text": "Pacífico,",
+          "start": 6.392834,
+          "end": 6.999625
+        },
+        {
+          "text": "en",
+          "start": 7.218042,
+          "end": 7.351542
+        }
+      ],
+      "id": "empresarios-captions-g05",
+      "shot_id": "empresarios-03",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "Ensenada:",
+      "start": 7.363709,
+      "end": 7.9977089999999995,
+      "words": [
+        {
+          "text": "Ensenada:",
+          "start": 7.363709,
+          "end": 7.897709
+        }
+      ],
+      "id": "empresarios-captions-g06",
+      "shot_id": "empresarios-03",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "dos o tres recámaras",
+      "start": 8.237459,
+      "end": 9.450334,
+      "words": [
+        {
+          "text": "dos",
+          "start": 8.237459,
+          "end": 8.516584
+        },
+        {
+          "text": "o",
+          "start": 8.52875,
+          "end": 8.589416
+        },
+        {
+          "text": "tres",
+          "start": 8.601542,
+          "end": 8.856417
+        },
+        {
+          "text": "recámaras",
+          "start": 8.868542,
+          "end": 9.463208
+        }
+      ],
+      "id": "empresarios-captions-g07",
+      "shot_id": "empresarios-04",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "y roof garden.",
+      "start": 9.475334,
+      "end": 10.376332999999999,
+      "words": [
+        {
+          "text": "y",
+          "start": 9.475334,
+          "end": 9.536
+        },
+        {
+          "text": "roof",
+          "start": 9.548167,
+          "end": 9.766625
+        },
+        {
+          "text": "garden.",
+          "start": 9.77875,
+          "end": 10.276333
+        }
+      ],
+      "id": "empresarios-captions-g08",
+      "shot_id": "empresarios-05",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "Desconéctate con",
+      "start": 11.125834,
+      "end": 11.998875,
+      "words": [
+        {
+          "text": "Desconéctate",
+          "start": 11.125834,
+          "end": 11.841834
+        },
+        {
+          "text": "con",
+          "start": 11.854,
+          "end": 12.01175
+        }
+      ],
+      "id": "empresarios-captions-g09",
+      "shot_id": "empresarios-06",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 480.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "pickleball",
+      "start": 12.023875,
+      "end": 12.532874999999999,
+      "words": [
+        {
+          "text": "pickleball",
+          "start": 12.023875,
+          "end": 12.545708
+        }
+      ],
+      "id": "empresarios-captions-g10",
+      "shot_id": "empresarios-06",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 480.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "y comparte una tarde",
+      "start": 12.557875,
+      "end": 13.6615,
+      "words": [
+        {
+          "text": "y",
+          "start": 12.557875,
+          "end": 12.618541
+        },
+        {
+          "text": "comparte",
+          "start": 12.630667,
+          "end": 13.140375
+        },
+        {
+          "text": "una",
+          "start": 13.152542,
+          "end": 13.358833
+        },
+        {
+          "text": "tarde",
+          "start": 13.370959,
+          "end": 13.674375
+        }
+      ],
+      "id": "empresarios-captions-g11",
+      "shot_id": "empresarios-07",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "de asador,",
+      "start": 13.6865,
+      "end": 14.259792,
+      "words": [
+        {
+          "text": "de",
+          "start": 13.6865,
+          "end": 13.771458
+        },
+        {
+          "text": "asador,",
+          "start": 13.783584,
+          "end": 14.159792
+        }
+      ],
+      "id": "empresarios-captions-g12",
+      "shot_id": "empresarios-07",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "entre las primeras",
+      "start": 14.463209,
+      "end": 15.214917,
+      "words": [
+        {
+          "text": "entre",
+          "start": 14.463209,
+          "end": 14.64525
+        },
+        {
+          "text": "las",
+          "start": 14.657375,
+          "end": 14.815125
+        },
+        {
+          "text": "primeras",
+          "start": 14.827292,
+          "end": 15.227792
+        }
+      ],
+      "id": "empresarios-captions-g13",
+      "shot_id": "empresarios-08",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "amenidades proyectadas.",
+      "start": 15.239917,
+      "end": 16.820459000000003,
+      "words": [
+        {
+          "text": "amenidades",
+          "start": 15.239917,
+          "end": 15.858833
+        },
+        {
+          "text": "proyectadas.",
+          "start": 15.870959,
+          "end": 16.720459
+        }
+      ],
+      "id": "empresarios-captions-g14",
+      "shot_id": "empresarios-08",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 62.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "Planea el desembolso para",
+      "start": 17.57,
+      "end": 18.819292,
+      "words": [
+        {
+          "text": "Planea",
+          "start": 17.57,
+          "end": 17.946208
+        },
+        {
+          "text": "el",
+          "start": 17.958334,
+          "end": 18.031167
+        },
+        {
+          "text": "desembolso",
+          "start": 18.043292,
+          "end": 18.637958
+        },
+        {
+          "text": "para",
+          "start": 18.650084,
+          "end": 18.832125
+        }
+      ],
+      "id": "empresarios-captions-g15",
+      "shot_id": "empresarios-09",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 59.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "cuidar tu liquidez:",
+      "start": 18.844292,
+      "end": 19.975834000000003,
+      "words": [
+        {
+          "text": "cuidar",
+          "start": 18.844292,
+          "end": 19.2205
+        },
+        {
+          "text": "tu",
+          "start": 19.232625,
+          "end": 19.317583
+        },
+        {
+          "text": "liquidez:",
+          "start": 19.329709,
+          "end": 19.875834
+        }
+      ],
+      "id": "empresarios-captions-g16",
+      "shot_id": "empresarios-09",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "diez por ciento de",
+      "start": 20.179209,
+      "end": 20.979459000000002,
+      "words": [
+        {
+          "text": "diez",
+          "start": 20.179209,
+          "end": 20.421917
+        },
+        {
+          "text": "por",
+          "start": 20.434084,
+          "end": 20.579709
+        },
+        {
+          "text": "ciento",
+          "start": 20.591834,
+          "end": 20.89525
+        },
+        {
+          "text": "de",
+          "start": 20.907375,
+          "end": 20.992333
+        }
+      ],
+      "id": "empresarios-captions-g17",
+      "shot_id": "empresarios-10",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "enganche,",
+      "start": 21.004459,
+      "end": 21.541334000000003,
+      "words": [
+        {
+          "text": "enganche,",
+          "start": 21.004459,
+          "end": 21.441334
+        }
+      ],
+      "id": "empresarios-captions-g18",
+      "shot_id": "empresarios-10",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "diez por ciento en",
+      "start": 21.769042,
+      "end": 22.557125000000003,
+      "words": [
+        {
+          "text": "diez",
+          "start": 21.769042,
+          "end": 22.01175
+        },
+        {
+          "text": "por",
+          "start": 22.023875,
+          "end": 22.1695
+        },
+        {
+          "text": "ciento",
+          "start": 22.181667,
+          "end": 22.485083
+        },
+        {
+          "text": "en",
+          "start": 22.497167,
+          "end": 22.57
+        }
+      ],
+      "id": "empresarios-captions-g19",
+      "shot_id": "empresarios-11",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "diecinueve mensualidades,",
+      "start": 22.582125,
+      "end": 24.114208,
+      "words": [
+        {
+          "text": "diecinueve",
+          "start": 22.582125,
+          "end": 23.140375
+        },
+        {
+          "text": "mensualidades,",
+          "start": 23.152542,
+          "end": 24.014208
+        }
+      ],
+      "id": "empresarios-captions-g20",
+      "shot_id": "empresarios-11",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 58.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "y ochenta por ciento",
+      "start": 24.24475,
+      "end": 25.263459,
+      "words": [
+        {
+          "text": "y",
+          "start": 24.24475,
+          "end": 24.341833
+        },
+        {
+          "text": "ochenta",
+          "start": 24.354,
+          "end": 24.766625
+        },
+        {
+          "text": "por",
+          "start": 24.77875,
+          "end": 24.948666
+        },
+        {
+          "text": "ciento",
+          "start": 24.960792,
+          "end": 25.276333
+        }
+      ],
+      "id": "empresarios-captions-g21",
+      "shot_id": "empresarios-12",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "contra entrega.",
+      "start": 25.288459,
+      "end": 26.116625000000003,
+      "words": [
+        {
+          "text": "contra",
+          "start": 25.288459,
+          "end": 25.543334
+        },
+        {
+          "text": "entrega.",
+          "start": 25.555459,
+          "end": 26.016625
+        }
+      ],
+      "id": "empresarios-captions-g22",
+      "shot_id": "empresarios-12",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "Proyección conservadora",
+      "start": 26.854,
+      "end": 28.066834,
+      "words": [
+        {
+          "text": "Proyección",
+          "start": 26.854,
+          "end": 27.388
+        },
+        {
+          "text": "conservadora",
+          "start": 27.400084,
+          "end": 28.079709
+        }
+      ],
+      "id": "empresarios-captions-g23",
+      "shot_id": "empresarios-13",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 63.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "de plusvalía:",
+      "start": 28.091834,
+      "end": 28.932125000000003,
+      "words": [
+        {
+          "text": "de",
+          "start": 28.091834,
+          "end": 28.213209
+        },
+        {
+          "text": "plusvalía:",
+          "start": 28.225334,
+          "end": 28.832125
+        }
+      ],
+      "id": "empresarios-captions-g24",
+      "shot_id": "empresarios-13",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "ocho por ciento anual",
+      "start": 29.159792,
+      "end": 30.263459,
+      "words": [
+        {
+          "text": "ocho",
+          "start": 29.159792,
+          "end": 29.4025
+        },
+        {
+          "text": "por",
+          "start": 29.414667,
+          "end": 29.596708
+        },
+        {
+          "text": "ciento",
+          "start": 29.608834,
+          "end": 29.9365
+        },
+        {
+          "text": "anual",
+          "start": 29.948625,
+          "end": 30.276291
+        }
+      ],
+      "id": "empresarios-captions-g25",
+      "shot_id": "empresarios-14",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "estimado.",
+      "start": 30.288459,
+      "end": 30.971,
+      "words": [
+        {
+          "text": "estimado.",
+          "start": 30.288459,
+          "end": 30.871
+        }
+      ],
+      "id": "empresarios-captions-g26",
+      "shot_id": "empresarios-14",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "Haz espacio en tus",
+      "start": 31.708334,
+      "end": 32.52075,
+      "words": [
+        {
+          "text": "Haz",
+          "start": 31.708334,
+          "end": 31.866084
+        },
+        {
+          "text": "espacio",
+          "start": 31.87825,
+          "end": 32.290875
+        },
+        {
+          "text": "en",
+          "start": 32.303,
+          "end": 32.363666
+        },
+        {
+          "text": "tus",
+          "start": 32.375834,
+          "end": 32.533584
+        }
+      ],
+      "id": "empresarios-captions-g27",
+      "shot_id": "empresarios-15a",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "planes",
+      "start": 32.54575,
+      "end": 32.896959,
+      "words": [
+        {
+          "text": "planes",
+          "start": 32.54575,
+          "end": 32.909833
+        }
+      ],
+      "id": "empresarios-captions-g28",
+      "shot_id": "empresarios-15a",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "para disfrutar también",
+      "start": 32.921959,
+      "end": 34.001334,
+      "words": [
+        {
+          "text": "para",
+          "start": 32.921959,
+          "end": 33.043334
+        },
+        {
+          "text": "disfrutar",
+          "start": 33.055459,
+          "end": 33.625834
+        },
+        {
+          "text": "también",
+          "start": 33.637959,
+          "end": 34.014167
+        }
+      ],
+      "id": "empresarios-captions-g29",
+      "shot_id": "empresarios-15b",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "fuera de tu negocio.",
+      "start": 34.026334,
+      "end": 35.194292000000004,
+      "words": [
+        {
+          "text": "fuera",
+          "start": 34.026334,
+          "end": 34.281209
+        },
+        {
+          "text": "de",
+          "start": 34.293292,
+          "end": 34.426792
+        },
+        {
+          "text": "tu",
+          "start": 34.438917,
+          "end": 34.548125
+        },
+        {
+          "text": "negocio.",
+          "start": 34.560292,
+          "end": 35.094292
+        }
+      ],
+      "id": "empresarios-captions-g30",
+      "shot_id": "empresarios-15b",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "Haz clic en el",
+      "start": 35.943792,
+      "end": 36.58625,
+      "words": [
+        {
+          "text": "Haz",
+          "start": 35.943792,
+          "end": 36.125833
+        },
+        {
+          "text": "clic",
+          "start": 36.137959,
+          "end": 36.392834
+        },
+        {
+          "text": "en",
+          "start": 36.404959,
+          "end": 36.489917
+        },
+        {
+          "text": "el",
+          "start": 36.502042,
+          "end": 36.599125
+        }
+      ],
+      "id": "empresarios-captions-g31",
+      "shot_id": "empresarios-16",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "botón de abajo para",
+      "start": 36.61125,
+      "end": 37.557125,
+      "words": [
+        {
+          "text": "botón",
+          "start": 36.61125,
+          "end": 36.926791
+        },
+        {
+          "text": "de",
+          "start": 36.938917,
+          "end": 36.987458
+        },
+        {
+          "text": "abajo",
+          "start": 36.999625,
+          "end": 37.351583
+        },
+        {
+          "text": "para",
+          "start": 37.363709,
+          "end": 37.57
+        }
+      ],
+      "id": "empresarios-captions-g32",
+      "shot_id": "empresarios-16",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    },
+    {
+      "text": "más información.",
+      "start": 37.582125,
+      "end": 38.628750000000004,
+      "words": [
+        {
+          "text": "más",
+          "start": 37.582125,
+          "end": 37.837
+        },
+        {
+          "text": "información.",
+          "start": 37.849125,
+          "end": 38.52875
+        }
+      ],
+      "id": "empresarios-captions-g33",
+      "shot_id": "empresarios-16",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#E5BC76"
+    }
+  ],
+  "source": "../Proyecto_HyperFrames/compositions/empresarios-captions.html"
+}

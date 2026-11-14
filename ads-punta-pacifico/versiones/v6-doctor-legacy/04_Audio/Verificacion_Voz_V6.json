@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "duration": 64.04166666666667,
+  "sample_count": 3074000,
+  "fps": 24,
+  "frames": 1537,
+  "word_count": 172,
+  "coverage": "All spoken tokens match input text one to one after normalization",
+  "first_word": {
+    "text": "Doctor,",
+    "start": 0.12,
+    "end": 0.556875
+  },
+  "last_word": {
+    "text": "atenderá.",
+    "start": 62.606417,
+    "end": 63.188958
+  },
+  "continuous": true,
+  "retimed": false,
+  "wav_codec": "pcm_s16le",
+  "sample_rate": 48000,
+  "channels": 2,
+  "full_decode": true,
+  "human_listening_review": false,
+  "sha256": "babe4acdb724ff5d734fc94b8c0bd1966f1b0e78a727dc90baf656fbea693594"
+}

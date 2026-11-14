@@ -1,0 +1,34 @@
+
+@font-face{font-family:PPCondensed;src:url('assets/fonts/display.ttf');font-weight:700}
+@font-face{font-family:PPText;src:url('assets/fonts/text.ttf');font-weight:600}
+@font-face{font-family:PPBold;src:url('assets/fonts/bold.ttf');font-weight:800}
+*{box-sizing:border-box;margin:0}
+#root{position:absolute;inset:0;overflow:hidden;isolation:isolate;--accent:#E5BC76;color:#fff;font-family:PPBold,sans-serif}
+.window{position:absolute;inset:0;overflow:hidden}
+.camera{position:absolute;inset:-64px;transform-origin:50% 46%}
+.photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.readability{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,16,25,.69),rgba(0,16,25,.34) 29%,transparent 45%,transparent 55%,rgba(0,16,25,.25) 72%,rgba(0,16,25,.18));pointer-events:none}
+.hero{position:absolute;left:108px;top:224px;width:840px;z-index:3;text-shadow:0 3px 12px rgba(0,0,0,.65)}
+.hero-inner{display:block;transform-origin:0 50%}
+.hero-line{display:block;overflow:hidden;padding-bottom:9px;margin-bottom:-9px}
+.hero-word{display:inline-block}
+.hero-text{font-family:PPCondensed,sans-serif;font-weight:700;font-size:99px;line-height:1.03;letter-spacing:-.7px;max-width:840px}
+.hero-accent{color:var(--accent)}
+.hero-rule{display:block;width:120px;height:8px;background:var(--accent);margin-top:20px;transform-origin:left center}
+.support{display:block;font-family:PPText,sans-serif;font-size:33px;line-height:1.18;margin-top:20px}
+.pay-value{font-family:PPCondensed,sans-serif;font-size:226px;letter-spacing:-8px;line-height:.96;color:var(--accent)}
+.pay-label{font-family:PPCondensed,sans-serif;font-size:63px;letter-spacing:-.5px;line-height:1.02;margin-top:12px}
+.pay-number-window{overflow:hidden;display:block;padding:12px 0}
+.pay-rule{width:300px;height:7px;background:var(--accent);margin-top:23px;transform-origin:left center}
+.pay-stages{display:flex;gap:8px;width:800px;height:15px;margin-top:24px}
+.pay-segment{display:block;height:15px;background:rgba(255,255,255,.38);transform-origin:left center}
+.pay-segment:nth-child(1),.pay-segment:nth-child(2){width:10%}
+.pay-segment:nth-child(3){width:80%}
+.pay-segment.active{background:var(--accent)}
+.value-note{font-family:PPText,sans-serif;font-size:30px;line-height:1.2;margin-top:22px;color:white}
+.close-logo{position:absolute;left:407.5px;top:210px;width:265px;height:auto;object-fit:contain}
+.close-cta{position:absolute;left:108px;top:424px;width:864px;text-align:center;font-family:PPCondensed,sans-serif;font-size:103px;line-height:.99;letter-spacing:-1px;text-shadow:0 3px 12px rgba(0,0,0,.65)}
+.close-action{display:flex;flex-direction:column;gap:14px;align-items:center;justify-content:center;font-family:PPText,sans-serif;font-size:34px;letter-spacing:0;margin-top:26px;color:var(--accent)}
+.arrow{display:inline-block;width:28px;height:45px;vertical-align:middle}
+.arrow svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:4}
+.hero{text-align:center}.hero-rule,.pay-rule{margin-left:auto;margin-right:auto}.hero-text{letter-spacing:-1.5px}.pay-value{font-size:238px}.pay-stages{margin-left:auto;margin-right:auto}.pay-rule{display:none}

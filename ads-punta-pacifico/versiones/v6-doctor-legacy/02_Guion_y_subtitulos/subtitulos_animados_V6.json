@@ -1,0 +1,1570 @@
+[
+  {
+    "id": "caption-000",
+    "text": "Doctor,",
+    "start": 0.12,
+    "end": 0.736875,
+    "words": [
+      {
+        "text": "Doctor,",
+        "start": 0.12,
+        "end": 0.556875
+      }
+    ],
+    "shot_id": "legacy-doctor-01",
+    "top": 1160,
+    "css_final": "top:1160px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-001",
+    "text": "¿buscas una casa con",
+    "start": 0.884584,
+    "end": 1.916125,
+    "words": [
+      {
+        "text": "¿buscas",
+        "start": 0.884584,
+        "end": 1.248667
+      },
+      {
+        "text": "una",
+        "start": 1.260792,
+        "end": 1.418542
+      },
+      {
+        "text": "casa",
+        "start": 1.430667,
+        "end": 1.721917
+      },
+      {
+        "text": "con",
+        "start": 1.734084,
+        "end": 1.916125
+      }
+    ],
+    "shot_id": "legacy-doctor-01",
+    "top": 1160,
+    "css_final": "top:1160px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-002",
+    "text": "vista al mar",
+    "start": 1.92825,
+    "end": 2.583583,
+    "words": [
+      {
+        "text": "vista",
+        "start": 1.92825,
+        "end": 2.231666
+      },
+      {
+        "text": "al",
+        "start": 2.243792,
+        "end": 2.340875
+      },
+      {
+        "text": "mar",
+        "start": 2.353,
+        "end": 2.583583
+      }
+    ],
+    "shot_id": "legacy-doctor-01",
+    "top": 1160,
+    "css_final": "top:1160px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-003",
+    "text": "para disfrutar en pareja",
+    "start": 2.59575,
+    "end": 3.845709,
+    "words": [
+      {
+        "text": "para",
+        "start": 2.59575,
+        "end": 2.777791
+      },
+      {
+        "text": "disfrutar",
+        "start": 2.789917,
+        "end": 3.2875
+      },
+      {
+        "text": "en",
+        "start": 3.299625,
+        "end": 3.396708
+      },
+      {
+        "text": "pareja",
+        "start": 3.408834,
+        "end": 3.845709
+      }
+    ],
+    "shot_id": "legacy-doctor-02",
+    "top": 760,
+    "css_final": "top:760px;font-size:66px",
+    "font_size_px": 66.0
+  },
+  {
+    "id": "caption-004",
+    "text": "o invertir?",
+    "start": 3.857875,
+    "end": 4.7296249999999995,
+    "words": [
+      {
+        "text": "o",
+        "start": 3.857875,
+        "end": 3.954958
+      },
+      {
+        "text": "invertir?",
+        "start": 3.967084,
+        "end": 4.549625
+      }
+    ],
+    "shot_id": "legacy-doctor-02",
+    "top": 760,
+    "css_final": "top:760px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-005",
+    "text": "En El Sauzal, a",
+    "start": 5.385542,
+    "end": 6.417083,
+    "words": [
+      {
+        "text": "En",
+        "start": 5.385542,
+        "end": 5.555458
+      },
+      {
+        "text": "El",
+        "start": 5.567584,
+        "end": 5.676792
+      },
+      {
+        "text": "Sauzal,",
+        "start": 5.688917,
+        "end": 6.150083
+      },
+      {
+        "text": "a",
+        "start": 6.368542,
+        "end": 6.417083
+      }
+    ],
+    "shot_id": "legacy-doctor-03",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-006",
+    "text": "la entrada de Ensenada,",
+    "start": 6.429209,
+    "end": 7.786417,
+    "words": [
+      {
+        "text": "la",
+        "start": 6.429209,
+        "end": 6.538417
+      },
+      {
+        "text": "entrada",
+        "start": 6.550584,
+        "end": 6.951084
+      },
+      {
+        "text": "de",
+        "start": 6.963209,
+        "end": 7.060292
+      },
+      {
+        "text": "Ensenada,",
+        "start": 7.072417,
+        "end": 7.606417
+      }
+    ],
+    "shot_id": "legacy-doctor-03",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:66px",
+    "font_size_px": 66.0
+  },
+  {
+    "id": "caption-007",
+    "text": "descubre casas de un",
+    "start": 7.921959,
+    "end": 8.9535,
+    "words": [
+      {
+        "text": "descubre",
+        "start": 7.921959,
+        "end": 8.371
+      },
+      {
+        "text": "casas",
+        "start": 8.383125,
+        "end": 8.735083
+      },
+      {
+        "text": "de",
+        "start": 8.747167,
+        "end": 8.832125
+      },
+      {
+        "text": "un",
+        "start": 8.844292,
+        "end": 8.9535
+      }
+    ],
+    "shot_id": "legacy-doctor-04",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-008",
+    "text": "nivel,",
+    "start": 8.965625,
+    "end": 9.485415999999999,
+    "words": [
+      {
+        "text": "nivel,",
+        "start": 8.965625,
+        "end": 9.305416
+      }
+    ],
+    "shot_id": "legacy-doctor-04",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-009",
+    "text": "de dos o tres",
+    "start": 9.572417,
+    "end": 10.276292,
+    "words": [
+      {
+        "text": "de",
+        "start": 9.572417,
+        "end": 9.64525
+      },
+      {
+        "text": "dos",
+        "start": 9.657375,
+        "end": 9.91225
+      },
+      {
+        "text": "o",
+        "start": 9.924375,
+        "end": 9.985041
+      },
+      {
+        "text": "tres",
+        "start": 9.997167,
+        "end": 10.276292
+      }
+    ],
+    "shot_id": "legacy-doctor-05",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-010",
+    "text": "recámaras,",
+    "start": 10.288459,
+    "end": 11.07525,
+    "words": [
+      {
+        "text": "recámaras,",
+        "start": 10.288459,
+        "end": 10.89525
+      }
+    ],
+    "shot_id": "legacy-doctor-05",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-011",
+    "text": "desde tres punto nueve",
+    "start": 11.174375,
+    "end": 12.363709,
+    "words": [
+      {
+        "text": "desde",
+        "start": 11.174375,
+        "end": 11.4535
+      },
+      {
+        "text": "tres",
+        "start": 11.465625,
+        "end": 11.756875
+      },
+      {
+        "text": "punto",
+        "start": 11.769042,
+        "end": 12.084583
+      },
+      {
+        "text": "nueve",
+        "start": 12.096709,
+        "end": 12.363709
+      }
+    ],
+    "shot_id": "legacy-doctor-06",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:67px",
+    "font_size_px": 67.0
+  },
+  {
+    "id": "caption-012",
+    "text": "hasta cuatro punto nueve",
+    "start": 12.375834,
+    "end": 13.540875,
+    "words": [
+      {
+        "text": "hasta",
+        "start": 12.375834,
+        "end": 12.582125
+      },
+      {
+        "text": "cuatro",
+        "start": 12.594292,
+        "end": 12.921958
+      },
+      {
+        "text": "punto",
+        "start": 12.934084,
+        "end": 13.26175
+      },
+      {
+        "text": "nueve",
+        "start": 13.273875,
+        "end": 13.540875
+      }
+    ],
+    "shot_id": "legacy-doctor-06",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:61px",
+    "font_size_px": 61.0
+  },
+  {
+    "id": "caption-013",
+    "text": "millones de pesos,",
+    "start": 13.553,
+    "end": 14.740291,
+    "words": [
+      {
+        "text": "millones",
+        "start": 13.553,
+        "end": 14.002041
+      },
+      {
+        "text": "de",
+        "start": 14.014167,
+        "end": 14.099125
+      },
+      {
+        "text": "pesos,",
+        "start": 14.11125,
+        "end": 14.560291
+      }
+    ],
+    "shot_id": "legacy-doctor-06",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-014",
+    "text": "con roof garden privado",
+    "start": 14.766625,
+    "end": 15.955917,
+    "words": [
+      {
+        "text": "con",
+        "start": 14.766625,
+        "end": 14.960791
+      },
+      {
+        "text": "roof",
+        "start": 14.972917,
+        "end": 15.179208
+      },
+      {
+        "text": "garden",
+        "start": 15.191375,
+        "end": 15.506916
+      },
+      {
+        "text": "privado",
+        "start": 15.519042,
+        "end": 15.955917
+      }
+    ],
+    "shot_id": "legacy-doctor-07",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:66px",
+    "font_size_px": 66.0
+  },
+  {
+    "id": "caption-015",
+    "text": "y vista al mar.",
+    "start": 15.968042,
+    "end": 17.034,
+    "words": [
+      {
+        "text": "y",
+        "start": 15.968042,
+        "end": 16.028708
+      },
+      {
+        "text": "vista",
+        "start": 16.040875,
+        "end": 16.380666
+      },
+      {
+        "text": "al",
+        "start": 16.392834,
+        "end": 16.489917
+      },
+      {
+        "text": "mar.",
+        "start": 16.502042,
+        "end": 16.854
+      }
+    ],
+    "shot_id": "legacy-doctor-07",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-016",
+    "text": "Imagina una pausa en",
+    "start": 17.691375,
+    "end": 18.904958,
+    "words": [
+      {
+        "text": "Imagina",
+        "start": 17.691375,
+        "end": 18.2375
+      },
+      {
+        "text": "una",
+        "start": 18.249625,
+        "end": 18.455916
+      },
+      {
+        "text": "pausa",
+        "start": 18.468042,
+        "end": 18.82
+      },
+      {
+        "text": "en",
+        "start": 18.832125,
+        "end": 18.904958
+      }
+    ],
+    "shot_id": "legacy-doctor-08",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-017",
+    "text": "la alberca,",
+    "start": 18.917084,
+    "end": 19.655333,
+    "words": [
+      {
+        "text": "la",
+        "start": 18.917084,
+        "end": 18.989917
+      },
+      {
+        "text": "alberca,",
+        "start": 19.002042,
+        "end": 19.475333
+      }
+    ],
+    "shot_id": "legacy-doctor-08",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-018",
+    "text": "pickleball con tus",
+    "start": 19.754459,
+    "end": 20.652541,
+    "words": [
+      {
+        "text": "pickleball",
+        "start": 19.754459,
+        "end": 20.288459
+      },
+      {
+        "text": "con",
+        "start": 20.300584,
+        "end": 20.458334
+      },
+      {
+        "text": "tus",
+        "start": 20.4705,
+        "end": 20.652541
+      }
+    ],
+    "shot_id": "legacy-doctor-09",
+    "top": 650,
+    "css_final": "top:650px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-019",
+    "text": "amigos,",
+    "start": 20.664667,
+    "end": 21.293708,
+    "words": [
+      {
+        "text": "amigos,",
+        "start": 20.664667,
+        "end": 21.113708
+      }
+    ],
+    "shot_id": "legacy-doctor-09",
+    "top": 650,
+    "css_final": "top:650px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-020",
+    "text": "tardes de asador y",
+    "start": 21.392834,
+    "end": 22.242333,
+    "words": [
+      {
+        "text": "tardes",
+        "start": 21.392834,
+        "end": 21.744792
+      },
+      {
+        "text": "de",
+        "start": 21.756875,
+        "end": 21.817541
+      },
+      {
+        "text": "asador",
+        "start": 21.829709,
+        "end": 22.181667
+      },
+      {
+        "text": "y",
+        "start": 22.193792,
+        "end": 22.242333
+      }
+    ],
+    "shot_id": "legacy-doctor-10",
+    "top": 480,
+    "css_final": "top:480px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-021",
+    "text": "cenas con tus seres",
+    "start": 22.254459,
+    "end": 23.26175,
+    "words": [
+      {
+        "text": "cenas",
+        "start": 22.254459,
+        "end": 22.618542
+      },
+      {
+        "text": "con",
+        "start": 22.630667,
+        "end": 22.800583
+      },
+      {
+        "text": "tus",
+        "start": 22.812709,
+        "end": 22.958334
+      },
+      {
+        "text": "seres",
+        "start": 22.9705,
+        "end": 23.26175
+      }
+    ],
+    "shot_id": "legacy-doctor-11",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-022",
+    "text": "queridos en las",
+    "start": 23.273875,
+    "end": 23.97775,
+    "words": [
+      {
+        "text": "queridos",
+        "start": 23.273875,
+        "end": 23.722916
+      },
+      {
+        "text": "en",
+        "start": 23.735042,
+        "end": 23.82
+      },
+      {
+        "text": "las",
+        "start": 23.832125,
+        "end": 23.97775
+      }
+    ],
+    "shot_id": "legacy-doctor-11",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-023",
+    "text": "amenidades",
+    "start": 23.989917,
+    "end": 24.621,
+    "words": [
+      {
+        "text": "amenidades",
+        "start": 23.989917,
+        "end": 24.621
+      }
+    ],
+    "shot_id": "legacy-doctor-11",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-024",
+    "text": "o en tu roof.",
+    "start": 24.633125,
+    "end": 25.456291,
+    "words": [
+      {
+        "text": "o",
+        "start": 24.633125,
+        "end": 24.705958
+      },
+      {
+        "text": "en",
+        "start": 24.718042,
+        "end": 24.815125
+      },
+      {
+        "text": "tu",
+        "start": 24.827292,
+        "end": 24.9365
+      },
+      {
+        "text": "roof.",
+        "start": 24.948625,
+        "end": 25.276291
+      }
+    ],
+    "shot_id": "legacy-doctor-12",
+    "top": 520,
+    "css_final": "top:520px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-025",
+    "text": "Cuida tu liquidez con",
+    "start": 26.125834,
+    "end": 27.193791,
+    "words": [
+      {
+        "text": "Cuida",
+        "start": 26.125834,
+        "end": 26.404959
+      },
+      {
+        "text": "tu",
+        "start": 26.417084,
+        "end": 26.514167
+      },
+      {
+        "text": "liquidez",
+        "start": 26.526334,
+        "end": 26.9875
+      },
+      {
+        "text": "con",
+        "start": 26.999625,
+        "end": 27.193791
+      }
+    ],
+    "shot_id": "legacy-doctor-13",
+    "top": 640,
+    "css_final": "top:640px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-026",
+    "text": "pagos flexibles:",
+    "start": 27.205917,
+    "end": 28.368958,
+    "words": [
+      {
+        "text": "pagos",
+        "start": 27.205917,
+        "end": 27.533583
+      },
+      {
+        "text": "flexibles:",
+        "start": 27.54575,
+        "end": 28.188958
+      }
+    ],
+    "shot_id": "legacy-doctor-13",
+    "top": 640,
+    "css_final": "top:640px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-027",
+    "text": "diez por ciento de",
+    "start": 28.455917,
+    "end": 29.293292,
+    "words": [
+      {
+        "text": "diez",
+        "start": 28.455917,
+        "end": 28.6865
+      },
+      {
+        "text": "por",
+        "start": 28.698625,
+        "end": 28.856375
+      },
+      {
+        "text": "ciento",
+        "start": 28.868542,
+        "end": 29.184083
+      },
+      {
+        "text": "de",
+        "start": 29.196209,
+        "end": 29.293292
+      }
+    ],
+    "shot_id": "legacy-doctor-14",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-028",
+    "text": "enganche,",
+    "start": 29.305459,
+    "end": 29.946625,
+    "words": [
+      {
+        "text": "enganche,",
+        "start": 29.305459,
+        "end": 29.766625
+      }
+    ],
+    "shot_id": "legacy-doctor-14",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-029",
+    "text": "diez por ciento",
+    "start": 30.07,
+    "end": 30.810291,
+    "words": [
+      {
+        "text": "diez",
+        "start": 30.07,
+        "end": 30.300583
+      },
+      {
+        "text": "por",
+        "start": 30.312709,
+        "end": 30.482625
+      },
+      {
+        "text": "ciento",
+        "start": 30.49475,
+        "end": 30.810291
+      }
+    ],
+    "shot_id": "legacy-doctor-15",
+    "top": 545,
+    "css_final": "top:545px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-030",
+    "text": "distribuido en veinte",
+    "start": 30.822417,
+    "end": 31.866125,
+    "words": [
+      {
+        "text": "distribuido",
+        "start": 30.822417,
+        "end": 31.441333
+      },
+      {
+        "text": "en",
+        "start": 31.4535,
+        "end": 31.562708
+      },
+      {
+        "text": "veinte",
+        "start": 31.574875,
+        "end": 31.866125
+      }
+    ],
+    "shot_id": "legacy-doctor-15",
+    "top": 545,
+    "css_final": "top:545px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-031",
+    "text": "mensualidades y",
+    "start": 31.87825,
+    "end": 32.7035,
+    "words": [
+      {
+        "text": "mensualidades",
+        "start": 31.87825,
+        "end": 32.642833
+      },
+      {
+        "text": "y",
+        "start": 32.654959,
+        "end": 32.7035
+      }
+    ],
+    "shot_id": "legacy-doctor-15",
+    "top": 545,
+    "css_final": "top:545px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-032",
+    "text": "ochenta por ciento contra",
+    "start": 32.715625,
+    "end": 33.941375,
+    "words": [
+      {
+        "text": "ochenta",
+        "start": 32.715625,
+        "end": 33.12825
+      },
+      {
+        "text": "por",
+        "start": 33.140375,
+        "end": 33.322416
+      },
+      {
+        "text": "ciento",
+        "start": 33.334584,
+        "end": 33.66225
+      },
+      {
+        "text": "contra",
+        "start": 33.674375,
+        "end": 33.941375
+      }
+    ],
+    "shot_id": "legacy-doctor-16",
+    "top": 970,
+    "css_final": "top:970px;font-size:61px",
+    "font_size_px": 61.0
+  },
+  {
+    "id": "caption-033",
+    "text": "entrega,",
+    "start": 33.9535,
+    "end": 34.582541,
+    "words": [
+      {
+        "text": "entrega,",
+        "start": 33.9535,
+        "end": 34.402541
+      }
+    ],
+    "shot_id": "legacy-doctor-16",
+    "top": 970,
+    "css_final": "top:970px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-034",
+    "text": "a mediados de dos",
+    "start": 34.64525,
+    "end": 35.567541,
+    "words": [
+      {
+        "text": "a",
+        "start": 34.64525,
+        "end": 34.742333
+      },
+      {
+        "text": "mediados",
+        "start": 34.754459,
+        "end": 35.252042
+      },
+      {
+        "text": "de",
+        "start": 35.264167,
+        "end": 35.349125
+      },
+      {
+        "text": "dos",
+        "start": 35.36125,
+        "end": 35.567541
+      }
+    ],
+    "shot_id": "legacy-doctor-17",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-035",
+    "text": "mil veintiocho.",
+    "start": 35.579709,
+    "end": 36.548541,
+    "words": [
+      {
+        "text": "mil",
+        "start": 35.579709,
+        "end": 35.737459
+      },
+      {
+        "text": "veintiocho.",
+        "start": 35.749625,
+        "end": 36.368541
+      }
+    ],
+    "shot_id": "legacy-doctor-17",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-036",
+    "text": "Explora su potencial de",
+    "start": 37.205917,
+    "end": 38.480208,
+    "words": [
+      {
+        "text": "Explora",
+        "start": 37.205917,
+        "end": 37.7035
+      },
+      {
+        "text": "su",
+        "start": 37.715625,
+        "end": 37.849125
+      },
+      {
+        "text": "potencial",
+        "start": 37.86125,
+        "end": 38.383083
+      },
+      {
+        "text": "de",
+        "start": 38.39525,
+        "end": 38.480208
+      }
+    ],
+    "shot_id": "legacy-doctor-18",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-037",
+    "text": "plusvalía y de",
+    "start": 38.492334,
+    "end": 39.24475,
+    "words": [
+      {
+        "text": "plusvalía",
+        "start": 38.492334,
+        "end": 39.062709
+      },
+      {
+        "text": "y",
+        "start": 39.074875,
+        "end": 39.135541
+      },
+      {
+        "text": "de",
+        "start": 39.147667,
+        "end": 39.24475
+      }
+    ],
+    "shot_id": "legacy-doctor-18",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-038",
+    "text": "ingresos por rentas de",
+    "start": 39.256917,
+    "end": 40.409833,
+    "words": [
+      {
+        "text": "ingresos",
+        "start": 39.256917,
+        "end": 39.77875
+      },
+      {
+        "text": "por",
+        "start": 39.790875,
+        "end": 39.948625
+      },
+      {
+        "text": "rentas",
+        "start": 39.960792,
+        "end": 40.31275
+      },
+      {
+        "text": "de",
+        "start": 40.324875,
+        "end": 40.409833
+      }
+    ],
+    "shot_id": "legacy-doctor-19",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-039",
+    "text": "estancia corta.",
+    "start": 40.421959,
+    "end": 41.512125,
+    "words": [
+      {
+        "text": "estancia",
+        "start": 40.421959,
+        "end": 40.89525
+      },
+      {
+        "text": "corta.",
+        "start": 40.907375,
+        "end": 41.332125
+      }
+    ],
+    "shot_id": "legacy-doctor-19",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-040",
+    "text": "Disfruta una smart home:",
+    "start": 42.1695,
+    "end": 43.672334,
+    "words": [
+      {
+        "text": "Disfruta",
+        "start": 42.1695,
+        "end": 42.7035
+      },
+      {
+        "text": "una",
+        "start": 42.715625,
+        "end": 42.909791
+      },
+      {
+        "text": "smart",
+        "start": 42.921959,
+        "end": 43.213209
+      },
+      {
+        "text": "home:",
+        "start": 43.225334,
+        "end": 43.492334
+      }
+    ],
+    "shot_id": "legacy-doctor-20",
+    "top": 700,
+    "css_final": "top:700px;font-size:61px",
+    "font_size_px": 61.0
+  },
+  {
+    "id": "caption-041",
+    "text": "controla luces, minisplit",
+    "start": 43.735042,
+    "end": 45.458375,
+    "words": [
+      {
+        "text": "controla",
+        "start": 43.735042,
+        "end": 44.220458
+      },
+      {
+        "text": "luces,",
+        "start": 44.232625,
+        "end": 44.681666
+      },
+      {
+        "text": "minisplit",
+        "start": 44.91225,
+        "end": 45.458375
+      }
+    ],
+    "shot_id": "legacy-doctor-20",
+    "top": 700,
+    "css_final": "top:700px;font-size:65px",
+    "font_size_px": 65.0
+  },
+  {
+    "id": "caption-042",
+    "text": "y",
+    "start": 45.4705,
+    "end": 45.519041,
+    "words": [
+      {
+        "text": "y",
+        "start": 45.4705,
+        "end": 45.519041
+      }
+    ],
+    "shot_id": "legacy-doctor-20",
+    "top": 700,
+    "css_final": "top:700px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-043",
+    "text": "cerradura digital desde",
+    "start": 45.531167,
+    "end": 46.817584,
+    "words": [
+      {
+        "text": "cerradura",
+        "start": 45.531167,
+        "end": 46.004458
+      },
+      {
+        "text": "digital",
+        "start": 46.016625,
+        "end": 46.526333
+      },
+      {
+        "text": "desde",
+        "start": 46.538459,
+        "end": 46.817584
+      }
+    ],
+    "shot_id": "legacy-doctor-21",
+    "top": 530,
+    "css_final": "top:530px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-044",
+    "text": "tu celular.",
+    "start": 46.829709,
+    "end": 47.677167,
+    "words": [
+      {
+        "text": "tu",
+        "start": 46.829709,
+        "end": 46.926792
+      },
+      {
+        "text": "celular.",
+        "start": 46.938917,
+        "end": 47.497167
+      }
+    ],
+    "shot_id": "legacy-doctor-21",
+    "top": 530,
+    "css_final": "top:530px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-045",
+    "text": "Aparta este mes y",
+    "start": 48.334584,
+    "end": 49.390375,
+    "words": [
+      {
+        "text": "Aparta",
+        "start": 48.334584,
+        "end": 48.832167
+      },
+      {
+        "text": "este",
+        "start": 48.844292,
+        "end": 49.06275
+      },
+      {
+        "text": "mes",
+        "start": 49.074875,
+        "end": 49.317583
+      },
+      {
+        "text": "y",
+        "start": 49.329709,
+        "end": 49.390375
+      }
+    ],
+    "shot_id": "legacy-doctor-22",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-046",
+    "text": "recibe cocina,",
+    "start": 49.402542,
+    "end": 50.456291,
+    "words": [
+      {
+        "text": "recibe",
+        "start": 49.402542,
+        "end": 49.790875
+      },
+      {
+        "text": "cocina,",
+        "start": 49.803,
+        "end": 50.276291
+      }
+    ],
+    "shot_id": "legacy-doctor-22",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-047",
+    "text": "recámaras,",
+    "start": 50.543292,
+    "end": 51.378625,
+    "words": [
+      {
+        "text": "recámaras,",
+        "start": 50.543292,
+        "end": 51.198625
+      }
+    ],
+    "shot_id": "legacy-doctor-23",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-048",
+    "text": "baños y",
+    "start": 51.465625,
+    "end": 51.926791,
+    "words": [
+      {
+        "text": "baños",
+        "start": 51.465625,
+        "end": 51.853958
+      },
+      {
+        "text": "y",
+        "start": 51.866125,
+        "end": 51.926791
+      }
+    ],
+    "shot_id": "legacy-doctor-24",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-049",
+    "text": "roof con equipamiento",
+    "start": 51.938917,
+    "end": 52.946208,
+    "words": [
+      {
+        "text": "roof",
+        "start": 51.938917,
+        "end": 52.1695
+      },
+      {
+        "text": "con",
+        "start": 52.181667,
+        "end": 52.327292
+      },
+      {
+        "text": "equipamiento",
+        "start": 52.339417,
+        "end": 52.946208
+      }
+    ],
+    "shot_id": "legacy-doctor-25",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-050",
+    "text": "incluido,",
+    "start": 52.958334,
+    "end": 53.648042,
+    "words": [
+      {
+        "text": "incluido,",
+        "start": 52.958334,
+        "end": 53.468042
+      }
+    ],
+    "shot_id": "legacy-doctor-25",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-051",
+    "text": "con un ahorro de",
+    "start": 53.722917,
+    "end": 54.487458,
+    "words": [
+      {
+        "text": "con",
+        "start": 53.722917,
+        "end": 53.892833
+      },
+      {
+        "text": "un",
+        "start": 53.904959,
+        "end": 54.026334
+      },
+      {
+        "text": "ahorro",
+        "start": 54.038459,
+        "end": 54.37825
+      },
+      {
+        "text": "de",
+        "start": 54.390375,
+        "end": 54.487458
+      }
+    ],
+    "shot_id": "legacy-doctor-26",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-052",
+    "text": "hasta cuatrocientos",
+    "start": 54.499625,
+    "end": 55.373375,
+    "words": [
+      {
+        "text": "hasta",
+        "start": 54.499625,
+        "end": 54.705916
+      },
+      {
+        "text": "cuatrocientos",
+        "start": 54.718042,
+        "end": 55.373375
+      }
+    ],
+    "shot_id": "legacy-doctor-26",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-053",
+    "text": "cincuenta mil pesos.",
+    "start": 55.385542,
+    "end": 56.779167,
+    "words": [
+      {
+        "text": "cincuenta",
+        "start": 55.385542,
+        "end": 55.822417
+      },
+      {
+        "text": "mil",
+        "start": 55.834584,
+        "end": 56.053042
+      },
+      {
+        "text": "pesos.",
+        "start": 56.065167,
+        "end": 56.599167
+      }
+    ],
+    "shot_id": "legacy-doctor-26",
+    "top": 1235,
+    "css_final": "top:1235px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-054",
+    "text": "Haz clic en el",
+    "start": 57.4365,
+    "end": 58.164667,
+    "words": [
+      {
+        "text": "Haz",
+        "start": 57.4365,
+        "end": 57.642791
+      },
+      {
+        "text": "clic",
+        "start": 57.654959,
+        "end": 57.934084
+      },
+      {
+        "text": "en",
+        "start": 57.946209,
+        "end": 58.055417
+      },
+      {
+        "text": "el",
+        "start": 58.067584,
+        "end": 58.164667
+      }
+    ],
+    "shot_id": "legacy-doctor-27",
+    "top": 900,
+    "css_final": "top:900px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-055",
+    "text": "botón de abajo para",
+    "start": 58.176792,
+    "end": 59.1355,
+    "words": [
+      {
+        "text": "botón",
+        "start": 58.176792,
+        "end": 58.468042
+      },
+      {
+        "text": "de",
+        "start": 58.480209,
+        "end": 58.540875
+      },
+      {
+        "text": "abajo",
+        "start": 58.553,
+        "end": 58.917083
+      },
+      {
+        "text": "para",
+        "start": 58.929209,
+        "end": 59.1355
+      }
+    ],
+    "shot_id": "legacy-doctor-27",
+    "top": 900,
+    "css_final": "top:900px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-056",
+    "text": "más información.",
+    "start": 59.147667,
+    "end": 60.286375,
+    "words": [
+      {
+        "text": "más",
+        "start": 59.147667,
+        "end": 59.37825
+      },
+      {
+        "text": "información.",
+        "start": 59.390375,
+        "end": 60.106375
+      }
+    ],
+    "shot_id": "legacy-doctor-27",
+    "top": 900,
+    "css_final": "top:900px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-057",
+    "text": "Un asesor de Legacy",
+    "start": 60.943792,
+    "end": 62.048167,
+    "words": [
+      {
+        "text": "Un",
+        "start": 60.943792,
+        "end": 61.089417
+      },
+      {
+        "text": "asesor",
+        "start": 61.101542,
+        "end": 61.514167
+      },
+      {
+        "text": "de",
+        "start": 61.526334,
+        "end": 61.611292
+      },
+      {
+        "text": "Legacy",
+        "start": 61.623417,
+        "end": 62.048167
+      }
+    ],
+    "shot_id": "legacy-doctor-28",
+    "top": 900,
+    "css_final": "top:900px;font-size:68px",
+    "font_size_px": 68.0
+  },
+  {
+    "id": "caption-058",
+    "text": "Capital te atenderá.",
+    "start": 62.060292,
+    "end": 63.368958,
+    "words": [
+      {
+        "text": "Capital",
+        "start": 62.060292,
+        "end": 62.509333
+      },
+      {
+        "text": "te",
+        "start": 62.521459,
+        "end": 62.594292
+      },
+      {
+        "text": "atenderá.",
+        "start": 62.606417,
+        "end": 63.188958
+      }
+    ],
+    "shot_id": "legacy-doctor-28",
+    "top": 900,
+    "css_final": "top:900px;font-size:68px",
+    "font_size_px": 68.0
+  }
+]

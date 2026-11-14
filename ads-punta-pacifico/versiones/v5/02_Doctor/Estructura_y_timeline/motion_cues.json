@@ -1,0 +1,263 @@
+[
+  {
+    "id": "salud-price-rule",
+    "type": "price_underline",
+    "picture_landing_at": 0.4,
+    "peak_at": 0.4416666666666667,
+    "cause": "raya de apertura que termina de crecer",
+    "recommended": true
+  },
+  {
+    "id": "salud-sea-emphasis",
+    "type": "sea_emphasis",
+    "picture_landing_at": 2.422375,
+    "peak_at": 2.4640416666666667,
+    "cause": "énfasis de vista al mar en la palabra hablada",
+    "recommended": true
+  },
+  {
+    "id": "salud-02-cut",
+    "shot_id": "salud-02",
+    "type": "transition",
+    "picture_landing_at": 2.560458,
+    "peak_at": 2.6021246666666666,
+    "cause": "match-pan",
+    "recommended": false
+  },
+  {
+    "id": "salud-03-cut",
+    "shot_id": "salud-03",
+    "type": "transition",
+    "picture_landing_at": 5.534291,
+    "peak_at": 5.575957666666667,
+    "cause": "punch",
+    "recommended": false
+  },
+  {
+    "id": "salud-03-landing",
+    "shot_id": "salud-03",
+    "type": "text_landing",
+    "kind": "place",
+    "picture_landing_at": 5.934291,
+    "peak_at": 5.975958,
+    "cause": "PUNTA PACÍFICO · ENSENADA",
+    "recommended": true
+  },
+  {
+    "id": "salud-04-cut",
+    "shot_id": "salud-04",
+    "type": "transition",
+    "picture_landing_at": 8.034291,
+    "peak_at": 8.075957666666666,
+    "cause": "lift",
+    "recommended": false
+  },
+  {
+    "id": "salud-04-landing",
+    "shot_id": "salud-04",
+    "type": "text_landing",
+    "kind": "bedrooms",
+    "picture_landing_at": 8.434291,
+    "peak_at": 8.475958,
+    "cause": "2 Y 3 RECÁMARAS",
+    "recommended": true
+  },
+  {
+    "id": "salud-05-cut",
+    "shot_id": "salud-05",
+    "type": "transition",
+    "picture_landing_at": 9.200958,
+    "peak_at": 9.242624666666666,
+    "cause": "match-pan",
+    "recommended": false
+  },
+  {
+    "id": "salud-05-landing",
+    "shot_id": "salud-05",
+    "type": "text_landing",
+    "kind": "roof",
+    "picture_landing_at": 9.600958,
+    "peak_at": 9.642625,
+    "cause": "ROOF GARDEN",
+    "recommended": true
+  },
+  {
+    "id": "salud-06-cut",
+    "shot_id": "salud-06",
+    "type": "transition",
+    "picture_landing_at": 10.760458,
+    "peak_at": 10.802124666666666,
+    "cause": "match-pan",
+    "recommended": false
+  },
+  {
+    "id": "salud-06-landing",
+    "shot_id": "salud-06",
+    "type": "text_landing",
+    "kind": "pool",
+    "picture_landing_at": 11.160458,
+    "peak_at": 11.202125,
+    "cause": "UNA PAUSA PARA TI",
+    "recommended": true
+  },
+  {
+    "id": "salud-07-cut",
+    "shot_id": "salud-07",
+    "type": "transition",
+    "picture_landing_at": 12.450958,
+    "peak_at": 12.492624666666666,
+    "cause": "punch",
+    "recommended": false
+  },
+  {
+    "id": "salud-07-landing",
+    "shot_id": "salud-07",
+    "type": "text_landing",
+    "kind": "grill",
+    "picture_landing_at": 12.850958,
+    "peak_at": 12.892625,
+    "cause": "TARDES PARA COMPARTIR",
+    "recommended": true
+  },
+  {
+    "id": "salud-08-cut",
+    "shot_id": "salud-08",
+    "type": "transition",
+    "picture_landing_at": 13.343791,
+    "peak_at": 13.385457666666666,
+    "cause": "lift",
+    "recommended": false
+  },
+  {
+    "id": "salud-08-landing",
+    "shot_id": "salud-08",
+    "type": "text_landing",
+    "kind": "amenity",
+    "picture_landing_at": 13.743791,
+    "peak_at": 13.785458,
+    "cause": "PRIMERAS AMENIDADES PROYECTADAS",
+    "recommended": true
+  },
+  {
+    "id": "salud-09-cut",
+    "shot_id": "salud-09",
+    "type": "transition",
+    "picture_landing_at": 16.296166,
+    "peak_at": 16.337832666666667,
+    "cause": "match-pan",
+    "recommended": false
+  },
+  {
+    "id": "salud-10-cut",
+    "shot_id": "salud-10",
+    "type": "transition",
+    "picture_landing_at": 18.558083,
+    "peak_at": 18.599749666666668,
+    "cause": "match-pan",
+    "recommended": false
+  },
+  {
+    "id": "salud-10-landing",
+    "shot_id": "salud-10",
+    "type": "number_landing",
+    "kind": "pay0",
+    "picture_landing_at": 18.778083,
+    "peak_at": 18.81975,
+    "cause": "10% DE ENGANCHE",
+    "recommended": true
+  },
+  {
+    "id": "salud-11-cut",
+    "shot_id": "salud-11",
+    "type": "transition",
+    "picture_landing_at": 20.177125,
+    "peak_at": 20.218791666666668,
+    "cause": "punch",
+    "recommended": false
+  },
+  {
+    "id": "salud-11-landing",
+    "shot_id": "salud-11",
+    "type": "number_landing",
+    "kind": "pay1",
+    "picture_landing_at": 20.63525,
+    "peak_at": 20.676917,
+    "cause": "10% EN 19 MENSUALIDADES",
+    "recommended": true
+  },
+  {
+    "id": "salud-12-cut",
+    "shot_id": "salud-12",
+    "type": "transition",
+    "picture_landing_at": 22.57,
+    "peak_at": 22.611666666666668,
+    "cause": "lift",
+    "recommended": false
+  },
+  {
+    "id": "salud-12-landing",
+    "shot_id": "salud-12",
+    "type": "number_landing",
+    "kind": "pay2",
+    "picture_landing_at": 22.861416,
+    "peak_at": 22.903083,
+    "cause": "80% CONTRA ENTREGA",
+    "recommended": true
+  },
+  {
+    "id": "salud-13a-cut",
+    "shot_id": "salud-13a",
+    "type": "transition",
+    "picture_landing_at": 25.22475,
+    "peak_at": 25.266416666666668,
+    "cause": "match-pan",
+    "recommended": false
+  },
+  {
+    "id": "salud-13a-landing",
+    "shot_id": "salud-13a",
+    "type": "number_landing",
+    "kind": "value",
+    "picture_landing_at": 26.920958,
+    "peak_at": 26.962625,
+    "cause": "8% ANUAL ESTIMADO",
+    "recommended": true
+  },
+  {
+    "id": "salud-13b-cut",
+    "shot_id": "salud-13b",
+    "type": "transition",
+    "picture_landing_at": 27.748583,
+    "peak_at": 27.790249666666668,
+    "cause": "match-pan",
+    "recommended": false
+  },
+  {
+    "id": "salud-14-cut",
+    "shot_id": "salud-14",
+    "type": "transition",
+    "picture_landing_at": 29.8795,
+    "peak_at": 29.921166666666668,
+    "cause": "punch",
+    "recommended": false
+  },
+  {
+    "id": "salud-15-cut",
+    "shot_id": "salud-15",
+    "type": "transition",
+    "picture_landing_at": 33.41525,
+    "peak_at": 33.456916666666665,
+    "cause": "lift",
+    "recommended": false
+  },
+  {
+    "id": "salud-15-landing",
+    "shot_id": "salud-15",
+    "type": "cta_landing",
+    "kind": "cta",
+    "picture_landing_at": 33.89525,
+    "peak_at": 33.936917,
+    "cause": "MÁS INFORMACIÓN",
+    "recommended": true
+  }
+]

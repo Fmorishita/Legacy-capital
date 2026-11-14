@@ -1,0 +1,1025 @@
+{
+  "profile": "salud",
+  "canvas": [
+    1080,
+    1920
+  ],
+  "time_base": "seconds",
+  "groups": [
+    {
+      "text": "Doctor,",
+      "start": 0.12,
+      "end": 0.648583,
+      "words": [
+        {
+          "text": "Doctor,",
+          "start": 0.12,
+          "end": 0.548583
+        }
+      ],
+      "id": "salud-captions-g00",
+      "shot_id": "salud-01",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "¿buscas una casa con",
+      "start": 0.87,
+      "end": 1.880708,
+      "words": [
+        {
+          "text": "¿buscas",
+          "start": 0.87,
+          "end": 1.239041
+        },
+        {
+          "text": "una",
+          "start": 1.250958,
+          "end": 1.405708
+        },
+        {
+          "text": "casa",
+          "start": 1.417625,
+          "end": 1.703333
+        },
+        {
+          "text": "con",
+          "start": 1.71525,
+          "end": 1.893833
+        }
+      ],
+      "id": "salud-captions-g01",
+      "shot_id": "salud-01",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "vista al mar",
+      "start": 1.905708,
+      "end": 2.535458,
+      "words": [
+        {
+          "text": "vista",
+          "start": 1.905708,
+          "end": 2.203333
+        },
+        {
+          "text": "al",
+          "start": 2.21525,
+          "end": 2.3105
+        },
+        {
+          "text": "mar",
+          "start": 2.322375,
+          "end": 2.548583
+        }
+      ],
+      "id": "salud-captions-g02",
+      "shot_id": "salud-01",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "para bajar el ritmo",
+      "start": 2.560458,
+      "end": 3.487833,
+      "words": [
+        {
+          "text": "para",
+          "start": 2.560458,
+          "end": 2.750916
+        },
+        {
+          "text": "bajar",
+          "start": 2.762833,
+          "end": 3.072374
+        },
+        {
+          "text": "el",
+          "start": 3.084291,
+          "end": 3.179541
+        },
+        {
+          "text": "ritmo",
+          "start": 3.191416,
+          "end": 3.500957
+        }
+      ],
+      "id": "salud-captions-g03",
+      "shot_id": "salud-02",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 760.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "y compartir en pareja?",
+      "start": 3.512833,
+      "end": 4.815249,
+      "words": [
+        {
+          "text": "y",
+          "start": 3.512833,
+          "end": 3.572374
+        },
+        {
+          "text": "compartir",
+          "start": 3.584291,
+          "end": 4.131916
+        },
+        {
+          "text": "en",
+          "start": 4.143791,
+          "end": 4.239041
+        },
+        {
+          "text": "pareja?",
+          "start": 4.250958,
+          "end": 4.715249
+        }
+      ],
+      "id": "salud-captions-g04",
+      "shot_id": "salud-02",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 760.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "Conoce Punta Pacífico, en",
+      "start": 5.534291,
+      "end": 7.175958,
+      "words": [
+        {
+          "text": "Conoce",
+          "start": 5.534291,
+          "end": 5.927166
+        },
+        {
+          "text": "Punta",
+          "start": 5.939041,
+          "end": 6.236666
+        },
+        {
+          "text": "Pacífico,",
+          "start": 6.248583,
+          "end": 6.843833
+        },
+        {
+          "text": "en",
+          "start": 7.058083,
+          "end": 7.189041
+        }
+      ],
+      "id": "salud-captions-g05",
+      "shot_id": "salud-03",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 62.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "Ensenada:",
+      "start": 7.200958,
+      "end": 7.836665999999999,
+      "words": [
+        {
+          "text": "Ensenada:",
+          "start": 7.200958,
+          "end": 7.736666
+        }
+      ],
+      "id": "salud-captions-g06",
+      "shot_id": "salud-03",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "dos o tres recámaras",
+      "start": 8.034291,
+      "end": 9.175958,
+      "words": [
+        {
+          "text": "dos",
+          "start": 8.034291,
+          "end": 8.236666
+        },
+        {
+          "text": "o",
+          "start": 8.248583,
+          "end": 8.308124
+        },
+        {
+          "text": "tres",
+          "start": 8.32,
+          "end": 8.593791
+        },
+        {
+          "text": "recámaras",
+          "start": 8.605708,
+          "end": 9.189041
+        }
+      ],
+      "id": "salud-captions-g07",
+      "shot_id": "salud-04",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "y roof garden.",
+      "start": 9.200958,
+      "end": 10.039041,
+      "words": [
+        {
+          "text": "y",
+          "start": 9.200958,
+          "end": 9.272374
+        },
+        {
+          "text": "roof",
+          "start": 9.284291,
+          "end": 9.510499
+        },
+        {
+          "text": "garden.",
+          "start": 9.522375,
+          "end": 9.939041
+        }
+      ],
+      "id": "salud-captions-g08",
+      "shot_id": "salud-05",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "Imagina una pausa en",
+      "start": 10.760458,
+      "end": 11.937833,
+      "words": [
+        {
+          "text": "Imagina",
+          "start": 10.760458,
+          "end": 11.284249
+        },
+        {
+          "text": "una",
+          "start": 11.296166,
+          "end": 11.510457
+        },
+        {
+          "text": "pausa",
+          "start": 11.522375,
+          "end": 11.867625
+        },
+        {
+          "text": "en",
+          "start": 11.8795,
+          "end": 11.950916
+        }
+      ],
+      "id": "salud-captions-g09",
+      "shot_id": "salud-06",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "la alberca",
+      "start": 11.962833,
+      "end": 12.425958,
+      "words": [
+        {
+          "text": "la",
+          "start": 11.962833,
+          "end": 12.034249
+        },
+        {
+          "text": "alberca",
+          "start": 12.046166,
+          "end": 12.439041
+        }
+      ],
+      "id": "salud-captions-g10",
+      "shot_id": "salud-06",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "y tardes de asador",
+      "start": 12.450958,
+      "end": 13.318791,
+      "words": [
+        {
+          "text": "y",
+          "start": 12.450958,
+          "end": 12.522374
+        },
+        {
+          "text": "tardes",
+          "start": 12.534291,
+          "end": 12.903332
+        },
+        {
+          "text": "de",
+          "start": 12.91525,
+          "end": 12.974791
+        },
+        {
+          "text": "asador",
+          "start": 12.986666,
+          "end": 13.331916
+        }
+      ],
+      "id": "salud-captions-g11",
+      "shot_id": "salud-07",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 480.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "en sus primeras",
+      "start": 13.343791,
+      "end": 14.068791,
+      "words": [
+        {
+          "text": "en",
+          "start": 13.343791,
+          "end": 13.415207
+        },
+        {
+          "text": "sus",
+          "start": 13.427125,
+          "end": 13.617583
+        },
+        {
+          "text": "primeras",
+          "start": 13.6295,
+          "end": 14.081875
+        }
+      ],
+      "id": "salud-captions-g12",
+      "shot_id": "salud-08",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "amenidades proyectadas.",
+      "start": 14.093791,
+      "end": 15.57475,
+      "words": [
+        {
+          "text": "amenidades",
+          "start": 14.093791,
+          "end": 14.665207
+        },
+        {
+          "text": "proyectadas.",
+          "start": 14.677125,
+          "end": 15.47475
+        }
+      ],
+      "id": "salud-captions-g13",
+      "shot_id": "salud-08",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 62.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "Cuida tu liquidez con",
+      "start": 16.296166,
+      "end": 17.318791,
+      "words": [
+        {
+          "text": "Cuida",
+          "start": 16.296166,
+          "end": 16.569957
+        },
+        {
+          "text": "tu",
+          "start": 16.581916,
+          "end": 16.677166
+        },
+        {
+          "text": "liquidez",
+          "start": 16.689041,
+          "end": 17.129499
+        },
+        {
+          "text": "con",
+          "start": 17.141416,
+          "end": 17.331874
+        }
+      ],
+      "id": "salud-captions-g14",
+      "shot_id": "salud-09",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 750.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "pagos flexibles:",
+      "start": 17.343791,
+      "end": 18.396208,
+      "words": [
+        {
+          "text": "pagos",
+          "start": 17.343791,
+          "end": 17.653332
+        },
+        {
+          "text": "flexibles:",
+          "start": 17.66525,
+          "end": 18.296208
+        }
+      ],
+      "id": "salud-captions-g15",
+      "shot_id": "salud-09",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 750.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "diez por ciento de",
+      "start": 18.558083,
+      "end": 19.3545,
+      "words": [
+        {
+          "text": "diez",
+          "start": 18.558083,
+          "end": 18.784291
+        },
+        {
+          "text": "por",
+          "start": 18.796166,
+          "end": 18.950916
+        },
+        {
+          "text": "ciento",
+          "start": 18.962833,
+          "end": 19.260458
+        },
+        {
+          "text": "de",
+          "start": 19.272375,
+          "end": 19.367625
+        }
+      ],
+      "id": "salud-captions-g16",
+      "shot_id": "salud-10",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "enganche,",
+      "start": 19.3795,
+      "end": 19.9795,
+      "words": [
+        {
+          "text": "enganche,",
+          "start": 19.3795,
+          "end": 19.8795
+        }
+      ],
+      "id": "salud-captions-g17",
+      "shot_id": "salud-10",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "otro diez por ciento",
+      "start": 20.177125,
+      "end": 21.152125,
+      "words": [
+        {
+          "text": "otro",
+          "start": 20.177125,
+          "end": 20.403333
+        },
+        {
+          "text": "diez",
+          "start": 20.41525,
+          "end": 20.66525
+        },
+        {
+          "text": "por",
+          "start": 20.677125,
+          "end": 20.843791
+        },
+        {
+          "text": "ciento",
+          "start": 20.855708,
+          "end": 21.165249
+        }
+      ],
+      "id": "salud-captions-g18",
+      "shot_id": "salud-11",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "en diecinueve",
+      "start": 21.177125,
+      "end": 21.759291,
+      "words": [
+        {
+          "text": "en",
+          "start": 21.177125,
+          "end": 21.248541
+        },
+        {
+          "text": "diecinueve",
+          "start": 21.260458,
+          "end": 21.772374
+        }
+      ],
+      "id": "salud-captions-g19",
+      "shot_id": "salud-11",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "mensualidades",
+      "start": 21.784291,
+      "end": 22.545,
+      "words": [
+        {
+          "text": "mensualidades",
+          "start": 21.784291,
+          "end": 22.558082
+        }
+      ],
+      "id": "salud-captions-g20",
+      "shot_id": "salud-11",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "y ochenta por ciento",
+      "start": 22.57,
+      "end": 23.592625,
+      "words": [
+        {
+          "text": "y",
+          "start": 22.57,
+          "end": 22.629541
+        },
+        {
+          "text": "ochenta",
+          "start": 22.641416,
+          "end": 23.058082
+        },
+        {
+          "text": "por",
+          "start": 23.07,
+          "end": 23.248583
+        },
+        {
+          "text": "ciento",
+          "start": 23.260458,
+          "end": 23.605708
+        }
+      ],
+      "id": "salud-captions-g21",
+      "shot_id": "salud-12",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "contra entrega.",
+      "start": 23.617625,
+      "end": 24.503332,
+      "words": [
+        {
+          "text": "contra",
+          "start": 23.617625,
+          "end": 23.879541
+        },
+        {
+          "text": "entrega.",
+          "start": 23.891416,
+          "end": 24.403332
+        }
+      ],
+      "id": "salud-captions-g22",
+      "shot_id": "salud-12",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "Plusvalía anual estimada",
+      "start": 25.22475,
+      "end": 26.473583,
+      "words": [
+        {
+          "text": "Plusvalía",
+          "start": 25.22475,
+          "end": 25.748541
+        },
+        {
+          "text": "anual",
+          "start": 25.760458,
+          "end": 26.022374
+        },
+        {
+          "text": "estimada",
+          "start": 26.034291,
+          "end": 26.486666
+        }
+      ],
+      "id": "salud-captions-g23",
+      "shot_id": "salud-13a",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 63.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "del ocho por ciento:",
+      "start": 26.498583,
+      "end": 27.610458,
+      "words": [
+        {
+          "text": "del",
+          "start": 26.498583,
+          "end": 26.689041
+        },
+        {
+          "text": "ocho",
+          "start": 26.700958,
+          "end": 26.915249
+        },
+        {
+          "text": "por",
+          "start": 26.927125,
+          "end": 27.093791
+        },
+        {
+          "text": "ciento:",
+          "start": 27.105708,
+          "end": 27.510458
+        }
+      ],
+      "id": "salud-captions-g24",
+      "shot_id": "salud-13a",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "escenario conservador.",
+      "start": 27.748583,
+      "end": 29.158124,
+      "words": [
+        {
+          "text": "escenario",
+          "start": 27.748583,
+          "end": 28.319999
+        },
+        {
+          "text": "conservador.",
+          "start": 28.331916,
+          "end": 29.058124
+        }
+      ],
+      "id": "salud-captions-g25",
+      "shot_id": "salud-13b",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 760.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "Tu próximo descanso",
+      "start": 29.8795,
+      "end": 30.94975,
+      "words": [
+        {
+          "text": "Tu",
+          "start": 29.8795,
+          "end": 29.998541
+        },
+        {
+          "text": "próximo",
+          "start": 30.010458,
+          "end": 30.427124
+        },
+        {
+          "text": "descanso",
+          "start": 30.439041,
+          "end": 30.962832
+        }
+      ],
+      "id": "salud-captions-g26",
+      "shot_id": "salud-14",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 760.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "también merece un lugar",
+      "start": 30.97475,
+      "end": 32.128333000000005,
+      "words": [
+        {
+          "text": "también",
+          "start": 30.97475,
+          "end": 31.343791
+        },
+        {
+          "text": "merece",
+          "start": 31.355708,
+          "end": 31.712833
+        },
+        {
+          "text": "un",
+          "start": 31.72475,
+          "end": 31.82
+        },
+        {
+          "text": "lugar",
+          "start": 31.831916,
+          "end": 32.141457
+        }
+      ],
+      "id": "salud-captions-g27",
+      "shot_id": "salud-14",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 760.0,
+      "font_size_px": 63.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "propio.",
+      "start": 32.153333,
+      "end": 32.693791000000004,
+      "words": [
+        {
+          "text": "propio.",
+          "start": 32.153333,
+          "end": 32.593791
+        }
+      ],
+      "id": "salud-captions-g28",
+      "shot_id": "salud-14",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 760.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "Haz clic en el",
+      "start": 33.41525,
+      "end": 34.116416,
+      "words": [
+        {
+          "text": "Haz",
+          "start": 33.41525,
+          "end": 33.617625
+        },
+        {
+          "text": "clic",
+          "start": 33.6295,
+          "end": 33.903291
+        },
+        {
+          "text": "en",
+          "start": 33.91525,
+          "end": 34.022375
+        },
+        {
+          "text": "el",
+          "start": 34.034291,
+          "end": 34.129541
+        }
+      ],
+      "id": "salud-captions-g29",
+      "shot_id": "salud-15",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "botón de abajo para",
+      "start": 34.141416,
+      "end": 35.068791000000004,
+      "words": [
+        {
+          "text": "botón",
+          "start": 34.141416,
+          "end": 34.427124
+        },
+        {
+          "text": "de",
+          "start": 34.439041,
+          "end": 34.498582
+        },
+        {
+          "text": "abajo",
+          "start": 34.510458,
+          "end": 34.867583
+        },
+        {
+          "text": "para",
+          "start": 34.8795,
+          "end": 35.081875
+        }
+      ],
+      "id": "salud-captions-g30",
+      "shot_id": "salud-15",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    },
+    {
+      "text": "más información.",
+      "start": 35.093791,
+      "end": 36.134291000000005,
+      "words": [
+        {
+          "text": "más",
+          "start": 35.093791,
+          "end": 35.319999
+        },
+        {
+          "text": "información.",
+          "start": 35.331916,
+          "end": 36.034291
+        }
+      ],
+      "id": "salud-captions-g31",
+      "shot_id": "salud-15",
+      "x": 108,
+      "width": 864,
+      "height": 160,
+      "top": 1120.0,
+      "font_size_px": 66.0,
+      "font_alias": "PPBold",
+      "text_align": "center",
+      "accent_color": "#FFD086"
+    }
+  ],
+  "source": "../Proyecto_HyperFrames/compositions/salud-captions.html"
+}

@@ -1,0 +1,5 @@
+# Doctor o médico · guión V6
+
+Doctor o médico, ¿buscas una casa con vista al mar para disfrutar en pareja o invertir? Conoce este nuevo proyecto residencial, en el sauzal justo en la entrada a Ensenada, desde \$3.9 hasta \$4.9 millones de pesos: casas de 1 nivel de 2 o 3 recámaras con roof garden privado, y la mejor vista al mar. Imagina una pausa en la alberca, juegos con tus amigos en la cancha de pickleball, tardes de asador o cenas con tus seres queridos en las amenidades y roof de tu nueva casa. Cuida tu liquidez con pagos flexibles: 10% de enganche, 10% en 20 mensualidades y 80% contra entrega a mediados del 2028\. Genera plusvalía anual más flujos mensuales con renta de estancia corta, vive la experiencia de contar con una smart-home y controlar las luces, minisplit y cerradura digital desde tu celular. si apartas tu casa este mes llevate la cocina, cuartos, baños y roof con equipamiento incluido ahorrando hasta \$450mil pesos. Haz clic en el botón de abajo para más información y un asesor de legacy capital te atenderá.
+
+(La voz continua determina los cortes; no alargar tomas ni acelerar frases para ajustarlas a otra plantilla).

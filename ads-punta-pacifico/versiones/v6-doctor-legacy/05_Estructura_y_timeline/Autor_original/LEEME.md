@@ -1,0 +1,1 @@
+Estos archivos conservan el autor y configuración originales. Algunas rutas pertenecen al entorno de producción; para restaurar la entrega exacta usa00_Guia_IA/scripts/preparar_proyecto.py. El proyecto final portable se edita en06_Proyecto_HyperFrames.

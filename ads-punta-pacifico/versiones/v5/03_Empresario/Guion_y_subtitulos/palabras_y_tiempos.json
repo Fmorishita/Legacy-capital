@@ -1,0 +1,487 @@
+{
+  "profile": "empresarios",
+  "time_base": "seconds from advertisement start, including aligned narration offset",
+  "duration": 39.416666666666664,
+  "words": [
+    {
+      "text": "Empresario,",
+      "start": 0.12,
+      "end": 0.751083
+    },
+    {
+      "text": "imagina",
+      "start": 1.066584,
+      "end": 1.491334
+    },
+    {
+      "text": "tu",
+      "start": 1.5035,
+      "end": 1.624875
+    },
+    {
+      "text": "próxima",
+      "start": 1.637,
+      "end": 2.049625
+    },
+    {
+      "text": "casa",
+      "start": 2.06175,
+      "end": 2.353
+    },
+    {
+      "text": "con",
+      "start": 2.365167,
+      "end": 2.547208
+    },
+    {
+      "text": "vista",
+      "start": 2.559334,
+      "end": 2.826334
+    },
+    {
+      "text": "al",
+      "start": 2.838459,
+      "end": 2.935542
+    },
+    {
+      "text": "mar",
+      "start": 2.947667,
+      "end": 3.166125
+    },
+    {
+      "text": "y",
+      "start": 3.17825,
+      "end": 3.238916
+    },
+    {
+      "text": "una",
+      "start": 3.251084,
+      "end": 3.421
+    },
+    {
+      "text": "compra",
+      "start": 3.433125,
+      "end": 3.724375
+    },
+    {
+      "text": "flexible,",
+      "start": 3.7365,
+      "end": 4.246208
+    },
+    {
+      "text": "por",
+      "start": 4.501084,
+      "end": 4.646709
+    },
+    {
+      "text": "etapas.",
+      "start": 4.658834,
+      "end": 5.27775
+    },
+    {
+      "text": "Punta",
+      "start": 6.125834,
+      "end": 6.380709
+    },
+    {
+      "text": "Pacífico,",
+      "start": 6.392834,
+      "end": 6.999625
+    },
+    {
+      "text": "en",
+      "start": 7.218042,
+      "end": 7.351542
+    },
+    {
+      "text": "Ensenada:",
+      "start": 7.363709,
+      "end": 7.897709
+    },
+    {
+      "text": "dos",
+      "start": 8.237459,
+      "end": 8.516584
+    },
+    {
+      "text": "o",
+      "start": 8.52875,
+      "end": 8.589416
+    },
+    {
+      "text": "tres",
+      "start": 8.601542,
+      "end": 8.856417
+    },
+    {
+      "text": "recámaras",
+      "start": 8.868542,
+      "end": 9.463208
+    },
+    {
+      "text": "y",
+      "start": 9.475334,
+      "end": 9.536
+    },
+    {
+      "text": "roof",
+      "start": 9.548167,
+      "end": 9.766625
+    },
+    {
+      "text": "garden.",
+      "start": 9.77875,
+      "end": 10.276333
+    },
+    {
+      "text": "Desconéctate",
+      "start": 11.125834,
+      "end": 11.841834
+    },
+    {
+      "text": "con",
+      "start": 11.854,
+      "end": 12.01175
+    },
+    {
+      "text": "pickleball",
+      "start": 12.023875,
+      "end": 12.545708
+    },
+    {
+      "text": "y",
+      "start": 12.557875,
+      "end": 12.618541
+    },
+    {
+      "text": "comparte",
+      "start": 12.630667,
+      "end": 13.140375
+    },
+    {
+      "text": "una",
+      "start": 13.152542,
+      "end": 13.358833
+    },
+    {
+      "text": "tarde",
+      "start": 13.370959,
+      "end": 13.674375
+    },
+    {
+      "text": "de",
+      "start": 13.6865,
+      "end": 13.771458
+    },
+    {
+      "text": "asador,",
+      "start": 13.783584,
+      "end": 14.159792
+    },
+    {
+      "text": "entre",
+      "start": 14.463209,
+      "end": 14.64525
+    },
+    {
+      "text": "las",
+      "start": 14.657375,
+      "end": 14.815125
+    },
+    {
+      "text": "primeras",
+      "start": 14.827292,
+      "end": 15.227792
+    },
+    {
+      "text": "amenidades",
+      "start": 15.239917,
+      "end": 15.858833
+    },
+    {
+      "text": "proyectadas.",
+      "start": 15.870959,
+      "end": 16.720459
+    },
+    {
+      "text": "Planea",
+      "start": 17.57,
+      "end": 17.946208
+    },
+    {
+      "text": "el",
+      "start": 17.958334,
+      "end": 18.031167
+    },
+    {
+      "text": "desembolso",
+      "start": 18.043292,
+      "end": 18.637958
+    },
+    {
+      "text": "para",
+      "start": 18.650084,
+      "end": 18.832125
+    },
+    {
+      "text": "cuidar",
+      "start": 18.844292,
+      "end": 19.2205
+    },
+    {
+      "text": "tu",
+      "start": 19.232625,
+      "end": 19.317583
+    },
+    {
+      "text": "liquidez:",
+      "start": 19.329709,
+      "end": 19.875834
+    },
+    {
+      "text": "diez",
+      "start": 20.179209,
+      "end": 20.421917
+    },
+    {
+      "text": "por",
+      "start": 20.434084,
+      "end": 20.579709
+    },
+    {
+      "text": "ciento",
+      "start": 20.591834,
+      "end": 20.89525
+    },
+    {
+      "text": "de",
+      "start": 20.907375,
+      "end": 20.992333
+    },
+    {
+      "text": "enganche,",
+      "start": 21.004459,
+      "end": 21.441334
+    },
+    {
+      "text": "diez",
+      "start": 21.769042,
+      "end": 22.01175
+    },
+    {
+      "text": "por",
+      "start": 22.023875,
+      "end": 22.1695
+    },
+    {
+      "text": "ciento",
+      "start": 22.181667,
+      "end": 22.485083
+    },
+    {
+      "text": "en",
+      "start": 22.497167,
+      "end": 22.57
+    },
+    {
+      "text": "diecinueve",
+      "start": 22.582125,
+      "end": 23.140375
+    },
+    {
+      "text": "mensualidades,",
+      "start": 23.152542,
+      "end": 24.014208
+    },
+    {
+      "text": "y",
+      "start": 24.24475,
+      "end": 24.341833
+    },
+    {
+      "text": "ochenta",
+      "start": 24.354,
+      "end": 24.766625
+    },
+    {
+      "text": "por",
+      "start": 24.77875,
+      "end": 24.948666
+    },
+    {
+      "text": "ciento",
+      "start": 24.960792,
+      "end": 25.276333
+    },
+    {
+      "text": "contra",
+      "start": 25.288459,
+      "end": 25.543334
+    },
+    {
+      "text": "entrega.",
+      "start": 25.555459,
+      "end": 26.016625
+    },
+    {
+      "text": "Proyección",
+      "start": 26.854,
+      "end": 27.388
+    },
+    {
+      "text": "conservadora",
+      "start": 27.400084,
+      "end": 28.079709
+    },
+    {
+      "text": "de",
+      "start": 28.091834,
+      "end": 28.213209
+    },
+    {
+      "text": "plusvalía:",
+      "start": 28.225334,
+      "end": 28.832125
+    },
+    {
+      "text": "ocho",
+      "start": 29.159792,
+      "end": 29.4025
+    },
+    {
+      "text": "por",
+      "start": 29.414667,
+      "end": 29.596708
+    },
+    {
+      "text": "ciento",
+      "start": 29.608834,
+      "end": 29.9365
+    },
+    {
+      "text": "anual",
+      "start": 29.948625,
+      "end": 30.276291
+    },
+    {
+      "text": "estimado.",
+      "start": 30.288459,
+      "end": 30.871
+    },
+    {
+      "text": "Haz",
+      "start": 31.708334,
+      "end": 31.866084
+    },
+    {
+      "text": "espacio",
+      "start": 31.87825,
+      "end": 32.290875
+    },
+    {
+      "text": "en",
+      "start": 32.303,
+      "end": 32.363666
+    },
+    {
+      "text": "tus",
+      "start": 32.375834,
+      "end": 32.533584
+    },
+    {
+      "text": "planes",
+      "start": 32.54575,
+      "end": 32.909833
+    },
+    {
+      "text": "para",
+      "start": 32.921959,
+      "end": 33.043334
+    },
+    {
+      "text": "disfrutar",
+      "start": 33.055459,
+      "end": 33.625834
+    },
+    {
+      "text": "también",
+      "start": 33.637959,
+      "end": 34.014167
+    },
+    {
+      "text": "fuera",
+      "start": 34.026334,
+      "end": 34.281209
+    },
+    {
+      "text": "de",
+      "start": 34.293292,
+      "end": 34.426792
+    },
+    {
+      "text": "tu",
+      "start": 34.438917,
+      "end": 34.548125
+    },
+    {
+      "text": "negocio.",
+      "start": 34.560292,
+      "end": 35.094292
+    },
+    {
+      "text": "Haz",
+      "start": 35.943792,
+      "end": 36.125833
+    },
+    {
+      "text": "clic",
+      "start": 36.137959,
+      "end": 36.392834
+    },
+    {
+      "text": "en",
+      "start": 36.404959,
+      "end": 36.489917
+    },
+    {
+      "text": "el",
+      "start": 36.502042,
+      "end": 36.599125
+    },
+    {
+      "text": "botón",
+      "start": 36.61125,
+      "end": 36.926791
+    },
+    {
+      "text": "de",
+      "start": 36.938917,
+      "end": 36.987458
+    },
+    {
+      "text": "abajo",
+      "start": 36.999625,
+      "end": 37.351583
+    },
+    {
+      "text": "para",
+      "start": 37.363709,
+      "end": 37.57
+    },
+    {
+      "text": "más",
+      "start": 37.582125,
+      "end": 37.837
+    },
+    {
+      "text": "información.",
+      "start": 37.849125,
+      "end": 38.52875
+    }
+  ],
+  "voice_config": {
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+3%",
+    "pitch": "+0Hz"
+  }
+}

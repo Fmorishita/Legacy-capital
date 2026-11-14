@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "method": "Fresh classified media + small source ZIP; no pre-existing runtime project",
+  "runtime_files_compared": 70,
+  "all_hashes_identical": true,
+  "network_calls": 0,
+  "render_calls": 0,
+  "paid_calls": 0,
+  "restorer_output": {
+    "restored": true,
+    "runtime_assets": 34,
+    "project_code_files": 36,
+    "project": "06_Proyecto_HyperFrames",
+    "paid_calls": 0
+  }
+}

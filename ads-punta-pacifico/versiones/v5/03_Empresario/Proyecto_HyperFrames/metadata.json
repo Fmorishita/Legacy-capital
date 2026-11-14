@@ -1,0 +1,1643 @@
+{
+  "version": "V5",
+  "engine": "HyperFrames0.9.18",
+  "profile": "empresarios",
+  "duration": 39.416666666666664,
+  "fps": 24,
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "draft": false,
+  "shots": [
+    {
+      "id": "empresarios-01",
+      "voice": "Empresario, imagina tu próxima casa con vista al mar",
+      "text": "Empresario, imagina tu próxima casa con vista al mar",
+      "overlay": "EMPRESARIO · VISTA AL MAR",
+      "kind": "hook",
+      "image_semantics": "Protagonista MASCULINO de perfil empresario, solo o con esposa, en roof oficial y mar claramente visible. Ropa casual de buena calidad; nueva identidad ficticia consistente en todo el anuncio.",
+      "candidate_asset": "new:empresarios_mar_hook",
+      "word_start": 0,
+      "word_end": 9,
+      "start": 0,
+      "end": 3.4982499999999996,
+      "shot_id": "empresarios-01",
+      "description": "Protagonista MASCULINO de perfil empresario, solo o con esposa, en roof oficial y mar claramente visible. Ropa casual de buena calidad; nueva identidad ficticia consistente en todo el anuncio.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "provisional, inspect actual image and animated crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": true,
+      "source_candidate": "new:empresarios_mar_hook",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sha256": "bd957ba4af0631f9f9082b8c582203b5da3a5468365058b2ffe18a8a6f168e9e",
+      "core_end": 3.17825,
+      "duration": 3.4982499999999996,
+      "transition_overlap": 0.32,
+      "entry_duration": 0,
+      "has_next": true,
+      "number_local": 0.1,
+      "local": "assets/photos/01-empresarios-01.png",
+      "transition": "open",
+      "path": "assets/photos/01-empresarios-01.png"
+    },
+    {
+      "id": "empresarios-02",
+      "voice": "y una compra flexible, por etapas.",
+      "text": "y una compra flexible, por etapas.",
+      "overlay": "COMPRA POR ETAPAS",
+      "kind": "planning",
+      "image_semantics": "Mismo empresario masculino con su esposa revisando planes de compra; imagen nueva con presupuesto o documentos, sin mujer sola presentada como empresario.",
+      "candidate_asset": "new:empresarios_plan_v5",
+      "word_start": 9,
+      "word_end": 15,
+      "start": 3.17825,
+      "end": 6.4458340000000005,
+      "shot_id": "empresarios-02",
+      "description": "Mismo empresario masculino con su esposa revisando planes de compra; imagen nueva con presupuesto o documentos, sin mujer sola presentada como empresario.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "provisional, inspect actual image and animated crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": true,
+      "source_candidate": "new:empresarios_plan_v5",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "sha256": "da963ead1c028ff0c9a4644cd8d2cb80d0542ef88fe8b249d67a3095a7302a78",
+      "core_end": 6.125834,
+      "duration": 3.2675840000000007,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "local": "assets/photos/02-empresarios-02.png",
+      "transition": "punch",
+      "path": "assets/photos/02-empresarios-02.png"
+    },
+    {
+      "id": "empresarios-03",
+      "voice": "Punta Pacífico, en Ensenada:",
+      "text": "Punta Pacífico, en Ensenada:",
+      "overlay": "PUNTA PACÍFICO · ENSENADA",
+      "kind": "place",
+      "image_semantics": "Render oficial alternativo del proyecto con contexto costero; no repetir fachada de Salud.",
+      "candidate_asset": "v3/shared-assets/official-11-Fachadas-PP-V3-05.07.26-FINAL.png",
+      "word_start": 15,
+      "word_end": 19,
+      "start": 6.125834,
+      "end": 8.557459,
+      "shot_id": "empresarios-03",
+      "description": "Render oficial alternativo del proyecto con contexto costero; no repetir fachada de Salud.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": false,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v3/shared-assets/official-11-Fachadas-PP-V3-05.07.26-FINAL.png",
+      "dimensions": [
+        3840,
+        2957
+      ],
+      "sha256": "61d1aa2e662e81607ae3adebec4493bd31e889a4ba3aaa106a414ffe35a4453b",
+      "core_end": 8.237459,
+      "duration": 2.4316249999999995,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "local": "assets/photos/03-empresarios-03.png",
+      "transition": "match-pan",
+      "path": "assets/photos/03-empresarios-03.png"
+    },
+    {
+      "id": "empresarios-04",
+      "voice": "dos o tres recámaras",
+      "text": "dos o tres recámaras",
+      "overlay": "2 Y 3 RECÁMARAS",
+      "kind": "bedrooms",
+      "image_semantics": "Recámara oficial distinta a las usadas en Salud y California.",
+      "candidate_asset": "v3/shared-assets/official-4-Recamara-2-PP-03.08.26-FINAL.png",
+      "word_start": 19,
+      "word_end": 23,
+      "start": 8.237459,
+      "end": 9.795334,
+      "shot_id": "empresarios-04",
+      "description": "Recámara oficial distinta a las usadas en Salud y California.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": false,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v3/shared-assets/official-4-Recamara-2-PP-03.08.26-FINAL.png",
+      "dimensions": [
+        3840,
+        2958
+      ],
+      "sha256": "8447a2dc3adbf18b24f025b35dd4f5d342225f2c7b25d374e8877ea1cd27401c",
+      "core_end": 9.475334,
+      "duration": 1.557875000000001,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "local": "assets/photos/04-empresarios-04.png",
+      "transition": "lift",
+      "path": "assets/photos/04-empresarios-04.png"
+    },
+    {
+      "id": "empresarios-05",
+      "voice": "y roof garden.",
+      "text": "y roof garden.",
+      "overlay": "DISFRUTA TU ROOF",
+      "kind": "roof",
+      "image_semantics": "Mismo empresario y esposa, o empresario solo, disfrutando roof oficial. Nada de la antigua empresaria sola.",
+      "candidate_asset": "new:empresarios_roof_v5",
+      "word_start": 23,
+      "word_end": 26,
+      "start": 9.475334,
+      "end": 11.445834,
+      "shot_id": "empresarios-05",
+      "description": "Mismo empresario y esposa, o empresario solo, disfrutando roof oficial. Nada de la antigua empresaria sola.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "provisional, inspect actual image and animated crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": true,
+      "source_candidate": "new:empresarios_roof_v5",
+      "core_end": 11.125834,
+      "duration": 1.9704999999999995,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "sha256": "6739f0d5be088e4b035876f0f1c9740469a97c04f10755b0f970a62083ebf1ba",
+      "local": "assets/photos/05-empresarios-05.png",
+      "transition": "match-pan",
+      "path": "assets/photos/05-empresarios-05.png"
+    },
+    {
+      "id": "empresarios-06",
+      "voice": "Desconéctate con pickleball",
+      "text": "Desconéctate con pickleball",
+      "overlay": "TU PAUSA ACTIVA",
+      "kind": "pickleball",
+      "image_semantics": "Empresario masculino usando la cancha azul del preview con esposa o amigo. Ropa deportiva de pickleball, tenis y pala; cancha/red/lineas correctas.",
+      "candidate_asset": "new:empresarios_pickleball_v5",
+      "word_start": 26,
+      "word_end": 29,
+      "start": 11.125834,
+      "end": 12.877875,
+      "shot_id": "empresarios-06",
+      "description": "Empresario masculino usando la cancha azul del preview con esposa o amigo. Ropa deportiva de pickleball, tenis y pala; cancha/red/lineas correctas.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 480,
+      "caption_position_review": "V5 new amenity native image reviewed: upper pergola/sky band below title, above heads, preserving hands/grill/paddle action.",
+      "ai": true,
+      "projected": true,
+      "expected_generation": true,
+      "source_candidate": "new:empresarios_pickleball_v5",
+      "core_end": 12.557875,
+      "duration": 1.7520410000000002,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "sha256": "f35e1716adeffe2706c7a2c97fda6fdece221a8251b7b57b791085b63e5f7621",
+      "local": "assets/photos/06-empresarios-06.png",
+      "transition": "punch",
+      "path": "assets/photos/06-empresarios-06.png"
+    },
+    {
+      "id": "empresarios-07",
+      "voice": "y comparte una tarde de asador,",
+      "text": "y comparte una tarde de asador,",
+      "overlay": "COMPARTE FUERA DEL NEGOCIO",
+      "kind": "grill",
+      "image_semantics": "Empresario y esposa preparando una comida en asadores del preview, ropa casual veraniega, sin traje de oficina durante parrillada.",
+      "candidate_asset": "new:empresarios_asadores_v5",
+      "word_start": 29,
+      "word_end": 35,
+      "start": 12.557875,
+      "end": 14.783209000000001,
+      "shot_id": "empresarios-07",
+      "description": "Empresario y esposa preparando una comida en asadores del preview, ropa casual veraniega, sin traje de oficina durante parrillada.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "provisional, inspect actual image and animated crop",
+      "ai": true,
+      "projected": true,
+      "expected_generation": true,
+      "source_candidate": "new:empresarios_asadores_v5",
+      "core_end": 14.463209,
+      "duration": 2.225334000000002,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "sha256": "16494c4980f87d7717b087b56e280a98c685dd51e8d8c4f918ba7d38705ebb33",
+      "local": "assets/photos/07-empresarios-07.png",
+      "transition": "match-pan",
+      "path": "assets/photos/07-empresarios-07.png"
+    },
+    {
+      "id": "empresarios-08",
+      "voice": "entre las primeras amenidades proyectadas.",
+      "text": "entre las primeras amenidades proyectadas.",
+      "overlay": "PRIMERAS AMENIDADES PROYECTADAS",
+      "kind": "amenity",
+      "image_semantics": "Empresario y esposa recorriendo área social de pérgolas/clubhouse al aire libre del preview, ángulo nuevo.",
+      "candidate_asset": "new:empresarios_amenidades_contexto",
+      "word_start": 35,
+      "word_end": 40,
+      "start": 14.463209,
+      "end": 17.89,
+      "shot_id": "empresarios-08",
+      "description": "Empresario y esposa recorriendo área social de pérgolas/clubhouse al aire libre del preview, ángulo nuevo.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "provisional, inspect actual image and animated crop",
+      "ai": true,
+      "projected": true,
+      "expected_generation": true,
+      "source_candidate": "new:empresarios_amenidades_contexto",
+      "core_end": 17.57,
+      "duration": 3.4267909999999997,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "sha256": "2489d85412d2ead29ee8491e1123f6f0cb45cfc1b6504787c2b8bd43d1407f0c",
+      "local": "assets/photos/08-empresarios-08.png",
+      "transition": "lift",
+      "path": "assets/photos/08-empresarios-08.png"
+    },
+    {
+      "id": "empresarios-09",
+      "voice": "Planea el desembolso para cuidar tu liquidez:",
+      "text": "Planea el desembolso para cuidar tu liquidez:",
+      "overlay": "PLANEA TU LIQUIDEZ",
+      "kind": "planning",
+      "image_semantics": "Detalle de manos masculinas con libreta, calculadora y documentos; o nueva toma del empresario planeando. No reciclar manos de empresaria de V4.",
+      "candidate_asset": "new:empresarios_budget_v5",
+      "word_start": 40,
+      "word_end": 47,
+      "start": 17.57,
+      "end": 20.499209,
+      "shot_id": "empresarios-09",
+      "description": "Detalle de manos masculinas con libreta, calculadora y documentos; o nueva toma del empresario planeando. No reciclar manos de empresaria de V4.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "provisional, inspect actual image and animated crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": true,
+      "source_candidate": "new:empresarios_budget_v5",
+      "core_end": 20.179209,
+      "duration": 2.929209,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "sha256": "45e9b0016527cf22c08a0ed51dfec2943148e309008aaf1d6074c81bea9e8aee",
+      "local": "assets/photos/09-empresarios-09.png",
+      "transition": "match-pan",
+      "path": "assets/photos/09-empresarios-09.png"
+    },
+    {
+      "id": "empresarios-10",
+      "voice": "diez por ciento de enganche,",
+      "text": "diez por ciento de enganche,",
+      "overlay": "10% DE ENGANCHE",
+      "kind": "pay0",
+      "image_semantics": "Empresario masculino confirmando pago en smartphone en cocina oficial. Ropa coherente con el resto de su perfil.",
+      "candidate_asset": "new:empresarios_pay0_v5",
+      "word_start": 47,
+      "word_end": 52,
+      "start": 20.179209,
+      "end": 22.089042,
+      "shot_id": "empresarios-10",
+      "description": "Empresario masculino confirmando pago en smartphone en cocina oficial. Ropa coherente con el resto de su perfil.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "provisional, inspect actual image and animated crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": true,
+      "source_candidate": "new:empresarios_pay0_v5",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sha256": "65afe8c99e50893ec95445bcce6aed5c43c679d97e93c0acda1a5ee829e45258",
+      "core_end": 21.769042,
+      "duration": 1.909832999999999,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0,
+      "local": "assets/photos/10-empresarios-10.png",
+      "transition": "punch",
+      "hero_top": 168,
+      "compact_pay": true,
+      "path": "assets/photos/10-empresarios-10.png"
+    },
+    {
+      "id": "empresarios-11",
+      "voice": "diez por ciento en diecinueve mensualidades,",
+      "text": "diez por ciento en diecinueve mensualidades,",
+      "overlay": "10% EN 19 MENSUALIDADES",
+      "kind": "pay1",
+      "image_semantics": "Empresario masculino y esposa revisan calendario y laptop; carcasa exterior lisa hacia la cámara, pantalla hacia sus usuarios, no gráficas sobre la tapa.",
+      "candidate_asset": "new:empresarios_pay1_v5",
+      "word_start": 52,
+      "word_end": 58,
+      "start": 21.769042,
+      "end": 24.56475,
+      "shot_id": "empresarios-11",
+      "description": "Empresario masculino y esposa revisan calendario y laptop; carcasa exterior lisa hacia la cámara, pantalla hacia sus usuarios, no gráficas sobre la tapa.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "provisional, inspect actual image and animated crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": true,
+      "source_candidate": "new:empresarios_pay1_v5",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "sha256": "0425551a6def40efabac98d65d1a8c4e9dc3d187fd545759ad304d4e51dbaad2",
+      "hero_top": 168,
+      "compact_pay": true,
+      "core_end": 24.24475,
+      "duration": 2.795708000000001,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0,
+      "local": "assets/photos/11-empresarios-11.png",
+      "transition": "match-pan",
+      "path": "assets/photos/11-empresarios-11.png"
+    },
+    {
+      "id": "empresarios-12",
+      "voice": "y ochenta por ciento contra entrega.",
+      "text": "y ochenta por ciento contra entrega.",
+      "overlay": "80% CONTRA ENTREGA",
+      "kind": "pay2",
+      "image_semantics": "Empresario y esposa completan planeación del pago final con laptop bien orientada y llaves sobre mesa. Conceptual, sin entrega actual.",
+      "candidate_asset": "new:empresarios_pay2_v5",
+      "word_start": 58,
+      "word_end": 64,
+      "start": 24.24475,
+      "end": 27.174,
+      "shot_id": "empresarios-12",
+      "description": "Empresario y esposa completan planeación del pago final con laptop bien orientada y llaves sobre mesa. Conceptual, sin entrega actual.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "provisional, inspect actual image and animated crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": true,
+      "source_candidate": "new:empresarios_pay2_v5",
+      "core_end": 26.854,
+      "duration": 2.9292499999999997,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1092499999999994,
+      "sha256": "f2b7c015d622dba304a2da1db499096ebcb23c7ce1cf2d3dcc060d425bb88d5c",
+      "local": "assets/photos/12-empresarios-12.png",
+      "transition": "lift",
+      "path": "assets/photos/12-empresarios-12.png"
+    },
+    {
+      "id": "empresarios-13",
+      "voice": "Proyección conservadora de plusvalía:",
+      "text": "Proyección conservadora de plusvalía:",
+      "overlay": "PLUSVALÍA ESTIMADA",
+      "kind": "value",
+      "image_semantics": "Fachada oficial al atardecer, distinta de la presentación del proyecto.",
+      "candidate_asset": "assets/front.png",
+      "word_start": 64,
+      "word_end": 68,
+      "start": 26.854,
+      "end": 29.479792,
+      "shot_id": "empresarios-13",
+      "description": "Fachada oficial al atardecer, distinta de la presentación del proyecto.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": false,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "assets/front.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "8b2a07e99566bb28f508ca7c2709ea91121d3e95de22c530f4c532c872c7e552",
+      "core_end": 29.159792,
+      "duration": 2.6257920000000006,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "local": "assets/photos/13-empresarios-13.png",
+      "transition": "match-pan",
+      "path": "assets/photos/13-empresarios-13.png"
+    },
+    {
+      "id": "empresarios-14",
+      "voice": "ocho por ciento anual estimado.",
+      "text": "ocho por ciento anual estimado.",
+      "overlay": "8% ANUAL ESTIMADO",
+      "kind": "value",
+      "image_semantics": "Empresario en un espacio del proyecto, disfrutando la futura compra; imagen nueva distinta de las otras tomas. No gráfica de beneficio garantizado.",
+      "candidate_asset": "assets/roof.png",
+      "word_start": 68,
+      "word_end": 73,
+      "start": 29.159792,
+      "end": 32.028334,
+      "shot_id": "empresarios-14",
+      "description": "Empresario en un espacio del proyecto, disfrutando la futura compra; imagen nueva distinta de las otras tomas. No gráfica de beneficio garantizado.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "provisional, inspect actual image and animated crop",
+      "ai": false,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "assets/roof.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "8c6e7da59d855589c7b3e80ddaf5e1dcdb9f050459540357544321bb60be2812",
+      "core_end": 31.708334,
+      "duration": 2.8685420000000015,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0,
+      "local": "assets/photos/14-empresarios-14.png",
+      "transition": "punch",
+      "path": "assets/photos/14-empresarios-14.png"
+    },
+    {
+      "id": "empresarios-15a",
+      "voice": "Haz espacio en tus planes",
+      "text": "Haz espacio en tus planes para disfrutar también fuera de tu negocio.",
+      "overlay": "DISFRUTA LO QUE CONSTRUYES",
+      "kind": "emotion",
+      "image_semantics": "Empresario y esposa en casa, en sala o roof, en una pausa real sin laptop. Ropa casual adecuada, misma identidad masculina.",
+      "candidate_asset": "new:empresarios_lifestyle_v5",
+      "word_start": 73,
+      "word_end": 85,
+      "start": 31.708334,
+      "end": 33.241959,
+      "shot_id": "empresarios-15a",
+      "description": "Comedor oficial sin protagonista; espacio propio como puente hacia los planes de disfrute. Diferente de la sala del cierre.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "provisional, inspect actual image and animated crop",
+      "ai": false,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v3/shared-assets/official-7-Sala-Comedor-2-PP-02.08.26-FINAL.png",
+      "parent_id": "empresarios-15",
+      "split_at_words": "Haz espacio en tus planes",
+      "dimensions": [
+        3840,
+        2957
+      ],
+      "sha256": "b6ce98fa11f4f37aee8e8baa7ddab661b664e8079da1afa68cd521422e68e14d",
+      "core_end": 32.921959,
+      "duration": 1.5336250000000007,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "local": "assets/photos/15-empresarios-15a.png",
+      "transition": "match-pan",
+      "path": "assets/photos/15-empresarios-15a.png"
+    },
+    {
+      "id": "empresarios-15b",
+      "voice": "para disfrutar también fuera de tu negocio.",
+      "text": "Haz espacio en tus planes para disfrutar también fuera de tu negocio.",
+      "overlay": "DISFRUTA LO QUE CONSTRUYES",
+      "kind": "emotion",
+      "image_semantics": "Empresario y esposa en casa, en sala o roof, en una pausa real sin laptop. Ropa casual adecuada, misma identidad masculina.",
+      "candidate_asset": "new:empresarios_lifestyle_v5",
+      "word_start": 78,
+      "word_end": 85,
+      "start": 32.921959,
+      "end": 36.263792,
+      "shot_id": "empresarios-15b",
+      "description": "Empresario y esposa en casa, en sala o roof, en una pausa real sin laptop. Ropa casual adecuada, misma identidad masculina.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "provisional, inspect actual image and animated crop",
+      "ai": true,
+      "projected": false,
+      "expected_generation": true,
+      "source_candidate": "new:empresarios_lifestyle_v5",
+      "parent_id": "empresarios-15",
+      "split_at_words": "para disfrutar también fuera de tu negocio.",
+      "core_end": 35.943792,
+      "duration": 3.341833000000001,
+      "transition_overlap": 0.32,
+      "entry_duration": 0.32,
+      "has_next": true,
+      "number_local": 0.1,
+      "sha256": "ba5d9e3dd44902ee6941a1f45820a0d2e30afffce81e4655eed7b59d0454f4ba",
+      "local": "assets/photos/16-empresarios-15b.png",
+      "transition": "lift",
+      "path": "assets/photos/16-empresarios-15b.png"
+    },
+    {
+      "id": "empresarios-16",
+      "voice": "Haz clic en el botón de abajo para más información.",
+      "text": "Haz clic en el botón de abajo para más información.",
+      "overlay": "MÁS INFORMACIÓN",
+      "kind": "cta",
+      "image_semantics": "Sala oficial sin el personaje femenino anterior. Logo, titular y CTA centrados; azul/dorado profesional, sin verde claro ni pistacho.",
+      "candidate_asset": "v3/shared-assets/official-1-Sala-Comedor-1-PP-03.08.26-FINAL.png",
+      "word_start": 85,
+      "word_end": 95,
+      "start": 35.943792,
+      "end": 39.416666666666664,
+      "shot_id": "empresarios-16",
+      "description": "Sala oficial sin el personaje femenino anterior. Logo, titular y CTA centrados; azul/dorado profesional, sin verde claro ni pistacho.",
+      "focus": "50% 50%",
+      "object_position": "50% 50%",
+      "caption_top": 1120,
+      "caption_position_review": "inherited V4, recheck V5 crop",
+      "ai": false,
+      "projected": false,
+      "expected_generation": false,
+      "source_candidate": "v3/shared-assets/official-1-Sala-Comedor-1-PP-03.08.26-FINAL.png",
+      "dimensions": [
+        3840,
+        2957
+      ],
+      "sha256": "2baac8e22f27ec21077b8dbb9ca00fac328e9f32f8113cd1fe5e7a6d86b6a61c",
+      "core_end": 39.416666666666664,
+      "duration": 3.4728746666666623,
+      "transition_overlap": 0,
+      "entry_duration": 0.32,
+      "has_next": false,
+      "number_local": 0.1,
+      "local": "assets/photos/17-empresarios-16.png",
+      "transition": "match-pan",
+      "path": "assets/photos/17-empresarios-16.png"
+    }
+  ],
+  "captions": [
+    {
+      "text": "Empresario,",
+      "start": 0.12,
+      "end": 0.8510829999999999,
+      "words": [
+        {
+          "text": "Empresario,",
+          "start": 0.12,
+          "end": 0.751083
+        }
+      ]
+    },
+    {
+      "text": "imagina tu próxima casa",
+      "start": 1.066584,
+      "end": 2.340167,
+      "words": [
+        {
+          "text": "imagina",
+          "start": 1.066584,
+          "end": 1.491334
+        },
+        {
+          "text": "tu",
+          "start": 1.5035,
+          "end": 1.624875
+        },
+        {
+          "text": "próxima",
+          "start": 1.637,
+          "end": 2.049625
+        },
+        {
+          "text": "casa",
+          "start": 2.06175,
+          "end": 2.353
+        }
+      ]
+    },
+    {
+      "text": "con vista al mar",
+      "start": 2.365167,
+      "end": 3.15325,
+      "words": [
+        {
+          "text": "con",
+          "start": 2.365167,
+          "end": 2.547208
+        },
+        {
+          "text": "vista",
+          "start": 2.559334,
+          "end": 2.826334
+        },
+        {
+          "text": "al",
+          "start": 2.838459,
+          "end": 2.935542
+        },
+        {
+          "text": "mar",
+          "start": 2.947667,
+          "end": 3.166125
+        }
+      ]
+    },
+    {
+      "text": "y una compra flexible,",
+      "start": 3.17825,
+      "end": 4.346208,
+      "words": [
+        {
+          "text": "y",
+          "start": 3.17825,
+          "end": 3.238916
+        },
+        {
+          "text": "una",
+          "start": 3.251084,
+          "end": 3.421
+        },
+        {
+          "text": "compra",
+          "start": 3.433125,
+          "end": 3.724375
+        },
+        {
+          "text": "flexible,",
+          "start": 3.7365,
+          "end": 4.246208
+        }
+      ]
+    },
+    {
+      "text": "por etapas.",
+      "start": 4.501084,
+      "end": 5.37775,
+      "words": [
+        {
+          "text": "por",
+          "start": 4.501084,
+          "end": 4.646709
+        },
+        {
+          "text": "etapas.",
+          "start": 4.658834,
+          "end": 5.27775
+        }
+      ]
+    },
+    {
+      "text": "Punta Pacífico, en",
+      "start": 6.125834,
+      "end": 7.338709,
+      "words": [
+        {
+          "text": "Punta",
+          "start": 6.125834,
+          "end": 6.380709
+        },
+        {
+          "text": "Pacífico,",
+          "start": 6.392834,
+          "end": 6.999625
+        },
+        {
+          "text": "en",
+          "start": 7.218042,
+          "end": 7.351542
+        }
+      ]
+    },
+    {
+      "text": "Ensenada:",
+      "start": 7.363709,
+      "end": 7.9977089999999995,
+      "words": [
+        {
+          "text": "Ensenada:",
+          "start": 7.363709,
+          "end": 7.897709
+        }
+      ]
+    },
+    {
+      "text": "dos o tres recámaras",
+      "start": 8.237459,
+      "end": 9.450334,
+      "words": [
+        {
+          "text": "dos",
+          "start": 8.237459,
+          "end": 8.516584
+        },
+        {
+          "text": "o",
+          "start": 8.52875,
+          "end": 8.589416
+        },
+        {
+          "text": "tres",
+          "start": 8.601542,
+          "end": 8.856417
+        },
+        {
+          "text": "recámaras",
+          "start": 8.868542,
+          "end": 9.463208
+        }
+      ]
+    },
+    {
+      "text": "y roof garden.",
+      "start": 9.475334,
+      "end": 10.376332999999999,
+      "words": [
+        {
+          "text": "y",
+          "start": 9.475334,
+          "end": 9.536
+        },
+        {
+          "text": "roof",
+          "start": 9.548167,
+          "end": 9.766625
+        },
+        {
+          "text": "garden.",
+          "start": 9.77875,
+          "end": 10.276333
+        }
+      ]
+    },
+    {
+      "text": "Desconéctate con",
+      "start": 11.125834,
+      "end": 11.998875,
+      "words": [
+        {
+          "text": "Desconéctate",
+          "start": 11.125834,
+          "end": 11.841834
+        },
+        {
+          "text": "con",
+          "start": 11.854,
+          "end": 12.01175
+        }
+      ]
+    },
+    {
+      "text": "pickleball",
+      "start": 12.023875,
+      "end": 12.532874999999999,
+      "words": [
+        {
+          "text": "pickleball",
+          "start": 12.023875,
+          "end": 12.545708
+        }
+      ]
+    },
+    {
+      "text": "y comparte una tarde",
+      "start": 12.557875,
+      "end": 13.6615,
+      "words": [
+        {
+          "text": "y",
+          "start": 12.557875,
+          "end": 12.618541
+        },
+        {
+          "text": "comparte",
+          "start": 12.630667,
+          "end": 13.140375
+        },
+        {
+          "text": "una",
+          "start": 13.152542,
+          "end": 13.358833
+        },
+        {
+          "text": "tarde",
+          "start": 13.370959,
+          "end": 13.674375
+        }
+      ]
+    },
+    {
+      "text": "de asador,",
+      "start": 13.6865,
+      "end": 14.259792,
+      "words": [
+        {
+          "text": "de",
+          "start": 13.6865,
+          "end": 13.771458
+        },
+        {
+          "text": "asador,",
+          "start": 13.783584,
+          "end": 14.159792
+        }
+      ]
+    },
+    {
+      "text": "entre las primeras",
+      "start": 14.463209,
+      "end": 15.214917,
+      "words": [
+        {
+          "text": "entre",
+          "start": 14.463209,
+          "end": 14.64525
+        },
+        {
+          "text": "las",
+          "start": 14.657375,
+          "end": 14.815125
+        },
+        {
+          "text": "primeras",
+          "start": 14.827292,
+          "end": 15.227792
+        }
+      ]
+    },
+    {
+      "text": "amenidades proyectadas.",
+      "start": 15.239917,
+      "end": 16.820459000000003,
+      "words": [
+        {
+          "text": "amenidades",
+          "start": 15.239917,
+          "end": 15.858833
+        },
+        {
+          "text": "proyectadas.",
+          "start": 15.870959,
+          "end": 16.720459
+        }
+      ]
+    },
+    {
+      "text": "Planea el desembolso para",
+      "start": 17.57,
+      "end": 18.819292,
+      "words": [
+        {
+          "text": "Planea",
+          "start": 17.57,
+          "end": 17.946208
+        },
+        {
+          "text": "el",
+          "start": 17.958334,
+          "end": 18.031167
+        },
+        {
+          "text": "desembolso",
+          "start": 18.043292,
+          "end": 18.637958
+        },
+        {
+          "text": "para",
+          "start": 18.650084,
+          "end": 18.832125
+        }
+      ]
+    },
+    {
+      "text": "cuidar tu liquidez:",
+      "start": 18.844292,
+      "end": 19.975834000000003,
+      "words": [
+        {
+          "text": "cuidar",
+          "start": 18.844292,
+          "end": 19.2205
+        },
+        {
+          "text": "tu",
+          "start": 19.232625,
+          "end": 19.317583
+        },
+        {
+          "text": "liquidez:",
+          "start": 19.329709,
+          "end": 19.875834
+        }
+      ]
+    },
+    {
+      "text": "diez por ciento de",
+      "start": 20.179209,
+      "end": 20.979459000000002,
+      "words": [
+        {
+          "text": "diez",
+          "start": 20.179209,
+          "end": 20.421917
+        },
+        {
+          "text": "por",
+          "start": 20.434084,
+          "end": 20.579709
+        },
+        {
+          "text": "ciento",
+          "start": 20.591834,
+          "end": 20.89525
+        },
+        {
+          "text": "de",
+          "start": 20.907375,
+          "end": 20.992333
+        }
+      ]
+    },
+    {
+      "text": "enganche,",
+      "start": 21.004459,
+      "end": 21.541334000000003,
+      "words": [
+        {
+          "text": "enganche,",
+          "start": 21.004459,
+          "end": 21.441334
+        }
+      ]
+    },
+    {
+      "text": "diez por ciento en",
+      "start": 21.769042,
+      "end": 22.557125000000003,
+      "words": [
+        {
+          "text": "diez",
+          "start": 21.769042,
+          "end": 22.01175
+        },
+        {
+          "text": "por",
+          "start": 22.023875,
+          "end": 22.1695
+        },
+        {
+          "text": "ciento",
+          "start": 22.181667,
+          "end": 22.485083
+        },
+        {
+          "text": "en",
+          "start": 22.497167,
+          "end": 22.57
+        }
+      ]
+    },
+    {
+      "text": "diecinueve mensualidades,",
+      "start": 22.582125,
+      "end": 24.114208,
+      "words": [
+        {
+          "text": "diecinueve",
+          "start": 22.582125,
+          "end": 23.140375
+        },
+        {
+          "text": "mensualidades,",
+          "start": 23.152542,
+          "end": 24.014208
+        }
+      ]
+    },
+    {
+      "text": "y ochenta por ciento",
+      "start": 24.24475,
+      "end": 25.263459,
+      "words": [
+        {
+          "text": "y",
+          "start": 24.24475,
+          "end": 24.341833
+        },
+        {
+          "text": "ochenta",
+          "start": 24.354,
+          "end": 24.766625
+        },
+        {
+          "text": "por",
+          "start": 24.77875,
+          "end": 24.948666
+        },
+        {
+          "text": "ciento",
+          "start": 24.960792,
+          "end": 25.276333
+        }
+      ]
+    },
+    {
+      "text": "contra entrega.",
+      "start": 25.288459,
+      "end": 26.116625000000003,
+      "words": [
+        {
+          "text": "contra",
+          "start": 25.288459,
+          "end": 25.543334
+        },
+        {
+          "text": "entrega.",
+          "start": 25.555459,
+          "end": 26.016625
+        }
+      ]
+    },
+    {
+      "text": "Proyección conservadora",
+      "start": 26.854,
+      "end": 28.066834,
+      "words": [
+        {
+          "text": "Proyección",
+          "start": 26.854,
+          "end": 27.388
+        },
+        {
+          "text": "conservadora",
+          "start": 27.400084,
+          "end": 28.079709
+        }
+      ]
+    },
+    {
+      "text": "de plusvalía:",
+      "start": 28.091834,
+      "end": 28.932125000000003,
+      "words": [
+        {
+          "text": "de",
+          "start": 28.091834,
+          "end": 28.213209
+        },
+        {
+          "text": "plusvalía:",
+          "start": 28.225334,
+          "end": 28.832125
+        }
+      ]
+    },
+    {
+      "text": "ocho por ciento anual",
+      "start": 29.159792,
+      "end": 30.263459,
+      "words": [
+        {
+          "text": "ocho",
+          "start": 29.159792,
+          "end": 29.4025
+        },
+        {
+          "text": "por",
+          "start": 29.414667,
+          "end": 29.596708
+        },
+        {
+          "text": "ciento",
+          "start": 29.608834,
+          "end": 29.9365
+        },
+        {
+          "text": "anual",
+          "start": 29.948625,
+          "end": 30.276291
+        }
+      ]
+    },
+    {
+      "text": "estimado.",
+      "start": 30.288459,
+      "end": 30.971,
+      "words": [
+        {
+          "text": "estimado.",
+          "start": 30.288459,
+          "end": 30.871
+        }
+      ]
+    },
+    {
+      "text": "Haz espacio en tus",
+      "start": 31.708334,
+      "end": 32.52075,
+      "words": [
+        {
+          "text": "Haz",
+          "start": 31.708334,
+          "end": 31.866084
+        },
+        {
+          "text": "espacio",
+          "start": 31.87825,
+          "end": 32.290875
+        },
+        {
+          "text": "en",
+          "start": 32.303,
+          "end": 32.363666
+        },
+        {
+          "text": "tus",
+          "start": 32.375834,
+          "end": 32.533584
+        }
+      ]
+    },
+    {
+      "text": "planes",
+      "start": 32.54575,
+      "end": 32.896959,
+      "words": [
+        {
+          "text": "planes",
+          "start": 32.54575,
+          "end": 32.909833
+        }
+      ]
+    },
+    {
+      "text": "para disfrutar también",
+      "start": 32.921959,
+      "end": 34.001334,
+      "words": [
+        {
+          "text": "para",
+          "start": 32.921959,
+          "end": 33.043334
+        },
+        {
+          "text": "disfrutar",
+          "start": 33.055459,
+          "end": 33.625834
+        },
+        {
+          "text": "también",
+          "start": 33.637959,
+          "end": 34.014167
+        }
+      ]
+    },
+    {
+      "text": "fuera de tu negocio.",
+      "start": 34.026334,
+      "end": 35.194292000000004,
+      "words": [
+        {
+          "text": "fuera",
+          "start": 34.026334,
+          "end": 34.281209
+        },
+        {
+          "text": "de",
+          "start": 34.293292,
+          "end": 34.426792
+        },
+        {
+          "text": "tu",
+          "start": 34.438917,
+          "end": 34.548125
+        },
+        {
+          "text": "negocio.",
+          "start": 34.560292,
+          "end": 35.094292
+        }
+      ]
+    },
+    {
+      "text": "Haz clic en el",
+      "start": 35.943792,
+      "end": 36.58625,
+      "words": [
+        {
+          "text": "Haz",
+          "start": 35.943792,
+          "end": 36.125833
+        },
+        {
+          "text": "clic",
+          "start": 36.137959,
+          "end": 36.392834
+        },
+        {
+          "text": "en",
+          "start": 36.404959,
+          "end": 36.489917
+        },
+        {
+          "text": "el",
+          "start": 36.502042,
+          "end": 36.599125
+        }
+      ]
+    },
+    {
+      "text": "botón de abajo para",
+      "start": 36.61125,
+      "end": 37.557125,
+      "words": [
+        {
+          "text": "botón",
+          "start": 36.61125,
+          "end": 36.926791
+        },
+        {
+          "text": "de",
+          "start": 36.938917,
+          "end": 36.987458
+        },
+        {
+          "text": "abajo",
+          "start": 36.999625,
+          "end": 37.351583
+        },
+        {
+          "text": "para",
+          "start": 37.363709,
+          "end": 37.57
+        }
+      ]
+    },
+    {
+      "text": "más información.",
+      "start": 37.582125,
+      "end": 38.628750000000004,
+      "words": [
+        {
+          "text": "más",
+          "start": 37.582125,
+          "end": 37.837
+        },
+        {
+          "text": "información.",
+          "start": 37.849125,
+          "end": 38.52875
+        }
+      ]
+    }
+  ],
+  "price": {
+    "label": "Rango aprox.",
+    "from_mdp": 3.9,
+    "to_mdp": 4.8,
+    "currency": "MXN",
+    "bedrooms": [
+      2,
+      3
+    ],
+    "visible": [
+      0,
+      3.6
+    ],
+    "source": "última instrucción del usuario"
+  },
+  "payments": "10% enganche +10%en19mensualidades+80%contraentrega",
+  "annual_appreciation": {
+    "percent": 8,
+    "qualifier": "estimada; escenario conservador",
+    "classification": "client supplied estimate"
+  },
+  "cta_alignment": "center_x540",
+  "motion_cues": [
+    {
+      "id": "empresarios-price-rule",
+      "type": "price_underline",
+      "picture_landing_at": 0.4,
+      "peak_at": 0.4416666666666667,
+      "cause": "raya de apertura que termina de crecer",
+      "recommended": true
+    },
+    {
+      "id": "empresarios-sea-emphasis",
+      "type": "sea_emphasis",
+      "picture_landing_at": 3.047667,
+      "peak_at": 3.0893336666666666,
+      "cause": "énfasis de vista al mar en la palabra hablada",
+      "recommended": true
+    },
+    {
+      "id": "empresarios-02-cut",
+      "shot_id": "empresarios-02",
+      "type": "transition",
+      "picture_landing_at": 3.17825,
+      "peak_at": 3.2199166666666663,
+      "cause": "punch",
+      "recommended": false
+    },
+    {
+      "id": "empresarios-03-cut",
+      "shot_id": "empresarios-03",
+      "type": "transition",
+      "picture_landing_at": 6.125834,
+      "peak_at": 6.167500666666667,
+      "cause": "match-pan",
+      "recommended": false
+    },
+    {
+      "id": "empresarios-03-landing",
+      "shot_id": "empresarios-03",
+      "type": "text_landing",
+      "kind": "place",
+      "picture_landing_at": 6.525834,
+      "peak_at": 6.567501,
+      "cause": "PUNTA PACÍFICO · ENSENADA",
+      "recommended": true
+    },
+    {
+      "id": "empresarios-04-cut",
+      "shot_id": "empresarios-04",
+      "type": "transition",
+      "picture_landing_at": 8.237459,
+      "peak_at": 8.279125666666665,
+      "cause": "lift",
+      "recommended": false
+    },
+    {
+      "id": "empresarios-04-landing",
+      "shot_id": "empresarios-04",
+      "type": "text_landing",
+      "kind": "bedrooms",
+      "picture_landing_at": 8.637459,
+      "peak_at": 8.679126,
+      "cause": "2 Y 3 RECÁMARAS",
+      "recommended": true
+    },
+    {
+      "id": "empresarios-05-cut",
+      "shot_id": "empresarios-05",
+      "type": "transition",
+      "picture_landing_at": 9.475334,
+      "peak_at": 9.517000666666666,
+      "cause": "match-pan",
+      "recommended": false
+    },
+    {
+      "id": "empresarios-05-landing",
+      "shot_id": "empresarios-05",
+      "type": "text_landing",
+      "kind": "roof",
+      "picture_landing_at": 9.875334,
+      "peak_at": 9.917001,
+      "cause": "DISFRUTA TU ROOF",
+      "recommended": true
+    },
+    {
+      "id": "empresarios-06-cut",
+      "shot_id": "empresarios-06",
+      "type": "transition",
+      "picture_landing_at": 11.125834,
+      "peak_at": 11.167500666666665,
+      "cause": "punch",
+      "recommended": false
+    },
+    {
+      "id": "empresarios-06-landing",
+      "shot_id": "empresarios-06",
+      "type": "text_landing",
+      "kind": "pickleball",
+      "picture_landing_at": 11.525834,
+      "peak_at": 11.567501,
+      "cause": "TU PAUSA ACTIVA",
+      "recommended": true
+    },
+    {
+      "id": "empresarios-07-cut",
+      "shot_id": "empresarios-07",
+      "type": "transition",
+      "picture_landing_at": 12.557875,
+      "peak_at": 12.599541666666665,
+      "cause": "match-pan",
+      "recommended": false
+    },
+    {
+      "id": "empresarios-07-landing",
+      "shot_id": "empresarios-07",
+      "type": "text_landing",
+      "kind": "grill",
+      "picture_landing_at": 12.957875,
+      "peak_at": 12.999542,
+      "cause": "COMPARTE FUERA DEL NEGOCIO",
+      "recommended": true
+    },
+    {
+      "id": "empresarios-08-cut",
+      "shot_id": "empresarios-08",
+      "type": "transition",
+      "picture_landing_at": 14.463209,
+      "peak_at": 14.504875666666667,
+      "cause": "lift",
+      "recommended": false
+    },
+    {
+      "id": "empresarios-08-landing",
+      "shot_id": "empresarios-08",
+      "type": "text_landing",
+      "kind": "amenity",
+      "picture_landing_at": 14.863209,
+      "peak_at": 14.904876,
+      "cause": "PRIMERAS AMENIDADES PROYECTADAS",
+      "recommended": true
+    },
+    {
+      "id": "empresarios-09-cut",
+      "shot_id": "empresarios-09",
+      "type": "transition",
+      "picture_landing_at": 17.57,
+      "peak_at": 17.611666666666668,
+      "cause": "match-pan",
+      "recommended": false
+    },
+    {
+      "id": "empresarios-10-cut",
+      "shot_id": "empresarios-10",
+      "type": "transition",
+      "picture_landing_at": 20.179209,
+      "peak_at": 20.220875666666668,
+      "cause": "punch",
+      "recommended": false
+    },
+    {
+      "id": "empresarios-10-landing",
+      "shot_id": "empresarios-10",
+      "type": "number_landing",
+      "kind": "pay0",
+      "picture_landing_at": 20.399209,
+      "peak_at": 20.440876,
+      "cause": "10% DE ENGANCHE",
+      "recommended": true
+    },
+    {
+      "id": "empresarios-11-cut",
+      "shot_id": "empresarios-11",
+      "type": "transition",
+      "picture_landing_at": 21.769042,
+      "peak_at": 21.810708666666667,
+      "cause": "match-pan",
+      "recommended": false
+    },
+    {
+      "id": "empresarios-11-landing",
+      "shot_id": "empresarios-11",
+      "type": "number_landing",
+      "kind": "pay1",
+      "picture_landing_at": 21.989042,
+      "peak_at": 22.030709,
+      "cause": "10% EN 19 MENSUALIDADES",
+      "recommended": true
+    },
+    {
+      "id": "empresarios-12-cut",
+      "shot_id": "empresarios-12",
+      "type": "transition",
+      "picture_landing_at": 24.24475,
+      "peak_at": 24.286416666666668,
+      "cause": "lift",
+      "recommended": false
+    },
+    {
+      "id": "empresarios-12-landing",
+      "shot_id": "empresarios-12",
+      "type": "number_landing",
+      "kind": "pay2",
+      "picture_landing_at": 24.574,
+      "peak_at": 24.615667,
+      "cause": "80% CONTRA ENTREGA",
+      "recommended": true
+    },
+    {
+      "id": "empresarios-13-cut",
+      "shot_id": "empresarios-13",
+      "type": "transition",
+      "picture_landing_at": 26.854,
+      "peak_at": 26.895666666666667,
+      "cause": "match-pan",
+      "recommended": false
+    },
+    {
+      "id": "empresarios-13-landing",
+      "shot_id": "empresarios-13",
+      "type": "number_landing",
+      "kind": "value",
+      "picture_landing_at": 27.174,
+      "peak_at": 27.215667,
+      "cause": "PLUSVALÍA ESTIMADA",
+      "recommended": true
+    },
+    {
+      "id": "empresarios-14-cut",
+      "shot_id": "empresarios-14",
+      "type": "transition",
+      "picture_landing_at": 29.159792,
+      "peak_at": 29.201458666666667,
+      "cause": "punch",
+      "recommended": false
+    },
+    {
+      "id": "empresarios-14-landing",
+      "shot_id": "empresarios-14",
+      "type": "number_landing",
+      "kind": "value",
+      "picture_landing_at": 29.379792,
+      "peak_at": 29.421459,
+      "cause": "8% ANUAL ESTIMADO",
+      "recommended": true
+    },
+    {
+      "id": "empresarios-15a-cut",
+      "shot_id": "empresarios-15a",
+      "type": "transition",
+      "picture_landing_at": 31.708334,
+      "peak_at": 31.75000066666667,
+      "cause": "match-pan",
+      "recommended": false
+    },
+    {
+      "id": "empresarios-15b-cut",
+      "shot_id": "empresarios-15b",
+      "type": "transition",
+      "picture_landing_at": 32.921959,
+      "peak_at": 32.963625666666665,
+      "cause": "lift",
+      "recommended": false
+    },
+    {
+      "id": "empresarios-16-cut",
+      "shot_id": "empresarios-16",
+      "type": "transition",
+      "picture_landing_at": 35.943792,
+      "peak_at": 35.985458666666666,
+      "cause": "match-pan",
+      "recommended": false
+    },
+    {
+      "id": "empresarios-16-landing",
+      "shot_id": "empresarios-16",
+      "type": "cta_landing",
+      "kind": "cta",
+      "picture_landing_at": 36.423792,
+      "peak_at": 36.465459,
+      "cause": "MÁS INFORMACIÓN",
+      "recommended": true
+    }
+  ],
+  "audio_source": "assets/audio/master_mix.wav"
+}

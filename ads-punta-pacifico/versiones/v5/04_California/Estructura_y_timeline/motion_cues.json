@@ -1,0 +1,273 @@
+[
+  {
+    "id": "california-price-rule",
+    "type": "price_underline",
+    "picture_landing_at": 0.4,
+    "peak_at": 0.4416666666666667,
+    "cause": "raya de apertura que termina de crecer",
+    "recommended": true
+  },
+  {
+    "id": "california-sea-emphasis",
+    "type": "sea_emphasis",
+    "picture_landing_at": 2.522625,
+    "peak_at": 2.5642916666666666,
+    "cause": "énfasis de vista al mar en la palabra hablada",
+    "recommended": true
+  },
+  {
+    "id": "california-02-cut",
+    "shot_id": "california-02",
+    "type": "transition",
+    "picture_landing_at": 2.954,
+    "peak_at": 2.9956666666666667,
+    "cause": "match-pan",
+    "recommended": false
+  },
+  {
+    "id": "california-03-cut",
+    "shot_id": "california-03",
+    "type": "transition",
+    "picture_landing_at": 6.256708,
+    "peak_at": 6.298374666666667,
+    "cause": "lift",
+    "recommended": false
+  },
+  {
+    "id": "california-03-landing",
+    "shot_id": "california-03",
+    "type": "text_landing",
+    "kind": "bedrooms",
+    "picture_landing_at": 6.656708,
+    "peak_at": 6.698375,
+    "cause": "2 Y 3 RECÁMARAS",
+    "recommended": true
+  },
+  {
+    "id": "california-04-cut",
+    "shot_id": "california-04",
+    "type": "transition",
+    "picture_landing_at": 7.559875,
+    "peak_at": 7.601541666666667,
+    "cause": "punch",
+    "recommended": false
+  },
+  {
+    "id": "california-04-landing",
+    "shot_id": "california-04",
+    "type": "text_landing",
+    "kind": "roof",
+    "picture_landing_at": 7.959875,
+    "peak_at": 8.001542,
+    "cause": "UN ROOF PARA TU GENTE",
+    "recommended": true
+  },
+  {
+    "id": "california-05-cut",
+    "shot_id": "california-05",
+    "type": "transition",
+    "picture_landing_at": 10.646916,
+    "peak_at": 10.688582666666665,
+    "cause": "match-pan",
+    "recommended": false
+  },
+  {
+    "id": "california-05-landing",
+    "shot_id": "california-05",
+    "type": "text_landing",
+    "kind": "pool",
+    "picture_landing_at": 11.046916,
+    "peak_at": 11.088583,
+    "cause": "TARDES EN FAMILIA",
+    "recommended": true
+  },
+  {
+    "id": "california-06-cut",
+    "shot_id": "california-06",
+    "type": "transition",
+    "picture_landing_at": 12.481416,
+    "peak_at": 12.523082666666665,
+    "cause": "match-pan",
+    "recommended": false
+  },
+  {
+    "id": "california-06-landing",
+    "shot_id": "california-06",
+    "type": "text_landing",
+    "kind": "grill",
+    "picture_landing_at": 12.881416,
+    "peak_at": 12.923083,
+    "cause": "MÁS MOMENTOS JUNTOS",
+    "recommended": true
+  },
+  {
+    "id": "california-07-cut",
+    "shot_id": "california-07",
+    "type": "transition",
+    "picture_landing_at": 13.683333,
+    "peak_at": 13.724999666666665,
+    "cause": "lift",
+    "recommended": false
+  },
+  {
+    "id": "california-07-landing",
+    "shot_id": "california-07",
+    "type": "text_landing",
+    "kind": "salon",
+    "picture_landing_at": 14.083333,
+    "peak_at": 14.125,
+    "cause": "REUNIONES AL AIRE LIBRE",
+    "recommended": true
+  },
+  {
+    "id": "california-08-cut",
+    "shot_id": "california-08",
+    "type": "transition",
+    "picture_landing_at": 17.17525,
+    "peak_at": 17.216916666666666,
+    "cause": "punch",
+    "recommended": false
+  },
+  {
+    "id": "california-08-landing",
+    "shot_id": "california-08",
+    "type": "text_landing",
+    "kind": "amenity",
+    "picture_landing_at": 17.57525,
+    "peak_at": 17.616917,
+    "cause": "PRIMERAS AMENIDADES PROYECTADAS",
+    "recommended": true
+  },
+  {
+    "id": "california-09-cut",
+    "shot_id": "california-09",
+    "type": "transition",
+    "picture_landing_at": 20.021916,
+    "peak_at": 20.06358266666667,
+    "cause": "match-pan",
+    "recommended": false
+  },
+  {
+    "id": "california-10-cut",
+    "shot_id": "california-10",
+    "type": "transition",
+    "picture_landing_at": 22.451041,
+    "peak_at": 22.492707666666668,
+    "cause": "match-pan",
+    "recommended": false
+  },
+  {
+    "id": "california-10-landing",
+    "shot_id": "california-10",
+    "type": "number_landing",
+    "kind": "pay0",
+    "picture_landing_at": 22.671041,
+    "peak_at": 22.712708,
+    "cause": "10% DE ENGANCHE",
+    "recommended": true
+  },
+  {
+    "id": "california-11-cut",
+    "shot_id": "california-11",
+    "type": "transition",
+    "picture_landing_at": 24.159041,
+    "peak_at": 24.200707666666666,
+    "cause": "lift",
+    "recommended": false
+  },
+  {
+    "id": "california-11-landing",
+    "shot_id": "california-11",
+    "type": "number_landing",
+    "kind": "pay1",
+    "picture_landing_at": 24.379041,
+    "peak_at": 24.420708,
+    "cause": "10% EN 19 MENSUALIDADES",
+    "recommended": true
+  },
+  {
+    "id": "california-12-cut",
+    "shot_id": "california-12",
+    "type": "transition",
+    "picture_landing_at": 26.398416,
+    "peak_at": 26.44008266666667,
+    "cause": "punch",
+    "recommended": false
+  },
+  {
+    "id": "california-12-landing",
+    "shot_id": "california-12",
+    "type": "number_landing",
+    "kind": "pay2",
+    "picture_landing_at": 26.681666,
+    "peak_at": 26.723333,
+    "cause": "80% CONTRA ENTREGA",
+    "recommended": true
+  },
+  {
+    "id": "california-13-cut",
+    "shot_id": "california-13",
+    "type": "transition",
+    "picture_landing_at": 29.207125,
+    "peak_at": 29.24879166666667,
+    "cause": "match-pan",
+    "recommended": false
+  },
+  {
+    "id": "california-13-landing",
+    "shot_id": "california-13",
+    "type": "number_landing",
+    "kind": "value",
+    "picture_landing_at": 30.692291,
+    "peak_at": 30.733958,
+    "cause": "8% ANUAL ESTIMADO",
+    "recommended": true
+  },
+  {
+    "id": "california-14-cut",
+    "shot_id": "california-14",
+    "type": "transition",
+    "picture_landing_at": 31.838708,
+    "peak_at": 31.88037466666667,
+    "cause": "match-pan",
+    "recommended": false
+  },
+  {
+    "id": "california-14-landing",
+    "shot_id": "california-14",
+    "type": "number_landing",
+    "kind": "value",
+    "picture_landing_at": 32.158708,
+    "peak_at": 32.200375,
+    "cause": "ESCENARIO CONSERVADOR",
+    "recommended": true
+  },
+  {
+    "id": "california-15-cut",
+    "shot_id": "california-15",
+    "type": "transition",
+    "picture_landing_at": 34.356416,
+    "peak_at": 34.39808266666667,
+    "cause": "lift",
+    "recommended": false
+  },
+  {
+    "id": "california-16-cut",
+    "shot_id": "california-16",
+    "type": "transition",
+    "picture_landing_at": 37.848333,
+    "peak_at": 37.88999966666666,
+    "cause": "punch",
+    "recommended": false
+  },
+  {
+    "id": "california-16-landing",
+    "shot_id": "california-16",
+    "type": "cta_landing",
+    "kind": "cta",
+    "picture_landing_at": 38.328333,
+    "peak_at": 38.37,
+    "cause": "MÁS INFORMACIÓN",
+    "recommended": true
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "network_used": false,
+  "generation_used": false,
+  "fresh_extraction_without_old_runtime_project": true,
+  "test_storage": "input and output media hardlinks only inside owned disposable test folder; normal user script copies files independently",
+  "profiles": [
+    {
+      "profile": "salud",
+      "asset_count": 22,
+      "composition_files": 18,
+      "html_and_runtime_assets_match_final_V5": true,
+      "source_zip_extracted_into_fresh_folder": true
+    },
+    {
+      "profile": "empresarios",
+      "asset_count": 23,
+      "composition_files": 19,
+      "html_and_runtime_assets_match_final_V5": true,
+      "source_zip_extracted_into_fresh_folder": true
+    },
+    {
+      "profile": "california",
+      "asset_count": 22,
+      "composition_files": 18,
+      "html_and_runtime_assets_match_final_V5": true,
+      "source_zip_extracted_into_fresh_folder": true
+    }
+  ],
+  "V5_unchanged": true
+}

@@ -1,0 +1,62 @@
+{
+  "perfil": "empresario",
+  "duration": 39.416666666666664,
+  "sample_rate": 48000,
+  "channels": 2,
+  "recipe": "Cortes, ducking, foco de pagos, transitorios y ganancias documentados de V5",
+  "reference_exact_mix": "Audio/mezcla_final_V5.wav",
+  "bit_exact_claim": false,
+  "limitation": "La voz alineada PCM16 tiene cuantización respecto a la voz flotante del máster original; FFmpeg también puede variar por versión.",
+  "levels_reconstructed": {
+    "input_i": "-15.00",
+    "input_tp": "-1.22",
+    "input_lra": "2.20",
+    "input_thresh": "-25.09",
+    "output_i": "-14.83",
+    "output_tp": "-1.26",
+    "output_lra": "1.80",
+    "output_thresh": "-24.91",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.17"
+  },
+  "levels_reference_v5": {
+    "input_i": "-15.00",
+    "input_tp": "-1.22",
+    "input_lra": "2.20",
+    "input_thresh": "-25.09",
+    "output_i": "-14.83",
+    "output_tp": "-1.26",
+    "output_lra": "1.80",
+    "output_thresh": "-24.91",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.17"
+  },
+  "files": {
+    "musica_editada.wav": {
+      "bytes": 15136058,
+      "sha256": "b06ed7fc479289f9671ffd9de72f0aef5e843c8df743e94e5f7bf9a26f20d82a"
+    },
+    "efectos.wav": {
+      "bytes": 15136058,
+      "sha256": "5f58560acef958d7ceab2ba678f3c67e12199941f72f385c31e99df0a09b3406"
+    },
+    "premaster.wav": {
+      "bytes": 15136058,
+      "sha256": "602deaaad7f29359a494456a529cfb00ae0cc22926afc2c946ae00e6b546d67a"
+    },
+    "mezcla_reconstruida.wav": {
+      "bytes": 7568078,
+      "sha256": "71489d5346cd5d19684d7894490cabbeb4712ec2073cb563de788b3f09a4a5ae"
+    }
+  },
+  "waveform_comparison_to_supplied_exact_v5_mix": {
+    "same_sample_count": true,
+    "sample_frames": 1892000,
+    "sample_rate": 48000,
+    "channels": 2,
+    "correlation": 0.9999999912990767,
+    "rms_error": 2.724429371057284e-05,
+    "maximum_absolute_sample_difference": 6.103515625e-05,
+    "bit_exact": false
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "ok": true,
+  "duration": 64.04166666666667,
+  "files": {
+    "doctor_v6_voice.wav": {
+      "duration": 64.041667,
+      "bytes": 12296044,
+      "sha256": "babe4acdb724ff5d734fc94b8c0bd1966f1b0e78a727dc90baf656fbea693594",
+      "full_decode": true
+    },
+    "doctor_v6_music_edit.wav": {
+      "duration": 64.041667,
+      "bytes": 12296044,
+      "sha256": "0b89ad17e9a5533f2aef9e3fba77faaa216c4d6fa7d27c64e7ed78410c783db6",
+      "full_decode": true
+    },
+    "doctor_v6_effects.wav": {
+      "duration": 64.041667,
+      "bytes": 12296044,
+      "sha256": "9a5c401541c2d7bf1007133bddf98bf0f1c55674783f6a7acf0807029bb4ea30",
+      "full_decode": true
+    },
+    "doctor_v6_mix.wav": {
+      "duration": 64.041667,
+      "bytes": 12296078,
+      "sha256": "876a7f8e58e5773e01d6c5d320aeb99f78e8d832c62d259ef420d8a1603c910d",
+      "full_decode": true
+    }
+  },
+  "sfx_event_count": 28,
+  "distinct_sfx_sources": 6,
+  "sfx_peak_to_picture_error": "under1microsecondafterJSONrounding",
+  "loudness": {
+    "integrated_lufs": -14.98,
+    "true_peak_dbtp": -1.18,
+    "lra": 1.7
+  },
+  "voice_retimed": false,
+  "continuous_voice": true,
+  "human_listening_review": false,
+  "audio_speech_words": 172,
+  "timeline_sha256_at_master": "0a49a3dadcc5477e421fac3ffe4897b5312ef180ac3505e18c33f5e997d33d00"
+}

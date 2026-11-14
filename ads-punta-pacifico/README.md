@@ -57,3 +57,7 @@ El editor privado incluye una sección principal para escribir cambios y adjunta
 Las solicitudes y recursos enviados a IA se guardan en el Site privado. Los borradores manuales siguen en el navegador. Un servidor HTTP estático local permite la edición manual, pero la ejecución conectada se usa en el Site privado o requiere desplegar el Worker con su bucket privado y capacidad MCP. No cambies ese backend a una audiencia pública sin añadir aislamiento por usuario.
 
 El código del backend está en `editor/worker/index.mjs`; `editor/tools/build-worker.py` genera el paquete. Para construir fuera del entorno original, instala esbuild en el proyecto (`npm install --no-save esbuild`). `editor/.openai/hosting.example.json` muestra las declaraciones, con un ID que debes sustituir por el de tu Site; no contiene credenciales. Los snapshots, comentarios y uploads privados de las solicitudes no se suben a este repositorio.
+
+## Edición desde el teléfono
+
+«Cambios con IA» es la pantalla principal móvil. «Ver anuncio» y «Herramientas» despliegan sólo lo necesario. «Hablar» permite grabar, revisar y enviar indicaciones reales de voz con tu ChatGPT actual; el dictado en vivo depende del navegador. El audio se guarda como instrucción privada y nunca como pista del anuncio. Las notas y comentarios privados no forman parte de este repositorio.

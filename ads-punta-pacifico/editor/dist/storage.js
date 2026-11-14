@@ -25,7 +25,7 @@ function storageError(error) {
 }
 function serializable(project) {
   const result = clone(project);
-  for (const asset of [...(result.assets || []), ...(result.references || [])]) {
+  for (const asset of [...(result.assets || []), ...(result.references || []), ...(result.aiVoiceDrafts || [])]) {
     // Object URLs are temporary and never belong in saved project records.
     if (typeof asset.url === 'string' && asset.url.startsWith('blob:')) {
       asset.blobId ||= asset.id;
@@ -58,7 +58,7 @@ export function validateProject(input) {
   if (maxEnd > 21600) throw new Error('La duración máxima del proyecto es de seis horas.');
   if (project.captions && (!Array.isArray(project.captions) || project.captions.length > 20000)) throw new Error('La lista de subtítulos no es válida.');
   if (project.audioTracks && (!Array.isArray(project.audioTracks) || project.audioTracks.length > 5000)) throw new Error('La lista de pistas de audio no es válida.');
-  for (const asset of [...project.assets, ...(project.references || [])]) {
+  for (const asset of [...project.assets, ...(project.references || []), ...(project.aiVoiceDrafts || [])]) {
     for (const property of ['url', 'thumbnail', 'embeddedDataUrl']) {
       const url = asset[property];
       if (typeof url === 'string' && /^(javascript|vbscript|file):/i.test(url.trim())) throw new Error('El proyecto contiene una dirección de archivo no admitida.');
@@ -179,7 +179,7 @@ export class ProjectStore {
   async hydrate(project) {
     const result = clone(project);
     const missing = [];
-    for (const asset of [...(result.assets || []), ...(result.references || [])]) {
+    for (const asset of [...(result.assets || []), ...(result.references || []), ...(result.aiVoiceDrafts || [])]) {
       if (!asset.blobId) continue;
       const blob = await this.getBlob(asset.blobId);
       if (!blob) { missing.push(asset.id || asset.blobId); asset.missing = true; continue; }
@@ -195,7 +195,7 @@ export class ProjectStore {
     validateProject(project);
     const result = serializable(project);
     if (embedUploads) {
-      for (const asset of [...(result.assets || []), ...(result.references || [])]) {
+      for (const asset of [...(result.assets || []), ...(result.references || []), ...(result.aiVoiceDrafts || [])]) {
         if (!asset.blobId) continue;
         const blob = await this.getBlob(asset.blobId);
         if (!blob) throw new Error(`Falta el archivo «${asset.name || asset.id}». Vuelve a subirlo antes de descargar una copia portable.`);
@@ -210,7 +210,7 @@ export class ProjectStore {
     catch { throw new Error('El archivo no es un JSON válido.'); }
     const validated = validateProject(input);
     const project = clone(validated);
-    for (const asset of [...(project.assets || []), ...(project.references || [])]) {
+    for (const asset of [...(project.assets || []), ...(project.references || []), ...(project.aiVoiceDrafts || [])]) {
       if (!asset.embeddedDataUrl) continue;
       const blob = dataURLToBlob(asset.embeddedDataUrl);
       asset.blobId ||= asset.id || uid();

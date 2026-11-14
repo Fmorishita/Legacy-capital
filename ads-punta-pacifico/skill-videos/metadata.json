@@ -1,6 +1,6 @@
 {
   "name": "videos-punta-pacifico",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "created": "2026-11-06",
   "updated": "2026-11-14",
   "language": "es",
@@ -31,7 +31,7 @@
     "original_render_equivalence": "not_claimed",
     "user_aesthetic_approval": "pending_user_review",
     "url": "https://legacy-video-studio-fran.trimjewel4.chatgpt.site",
-    "source_commit": "a6e93c472531750dfbdfe5302467829070d0ed15",
+    "source_commit": "5a9e2f4d2b04feb11d0a05d5d5a9eae87729bd80",
     "qa": {
       "node_dom_interactions": "passed",
       "data_and_asset_checks": "passed",
@@ -39,18 +39,27 @@
       "interactive_browser_and_media_export": "not_verified_tools_unavailable",
       "native_mcp_connection": "passed",
       "new_real_voice_and_private_result": "passed",
-      "simulated_auto_integration": "passed"
+      "simulated_auto_integration": "passed",
+      "mobile_dom_and_voice_adapters": "passed",
+      "physical_phone_microphone": "not_verified",
+      "native_audio_input": "not_supported_in_current_session",
+      "free_local_voice_transcription": "passed_real_private_MP3_exact_text_match"
     },
     "ai_workflow": "ChatGPT MCP request → real generation → uploaded assets → validated project result → automatic integration",
     "ai_mode": "existing_ChatGPT_account_no_paid_AI_API",
     "ai_request_storage": "private_Site_R2",
     "manual_draft_storage": "browser_IndexedDB",
     "chatGPT_message_submission_required": true,
-    "mcp_tool_count": 10,
+    "mcp_tool_count": 11,
     "mcp_connection_verified": true,
     "live_voice_generation_upload_and_result_verified": true,
     "qa_request_isolated_from_working_ad": true,
-    "ai_plugin_id": "plugin_asdk_app_sites_e17500d2b35c8191acf2a508fdfbf1d2"
+    "ai_plugin_id": "plugin_asdk_app_sites_e17500d2b35c8191acf2a508fdfbf1d2",
+    "mobile_workflow": "AI instructions first; preview/scenes/timeline/inspector on demand",
+    "voice_instructions": "real MediaRecorder notes; optional browser dictation; private request attachments",
+    "mcp_server_tool_count": 11,
+    "native_connector_cached_tool_count": 10,
+    "voice_instruction_fallback": "Whisper.cpp base-q5_1 local CPU; no audio transcription API"
   },
   "repository_delivery": {
     "url": "https://github.com/Fmorishita/Legacy-capital/tree/main/ads-punta-pacifico",

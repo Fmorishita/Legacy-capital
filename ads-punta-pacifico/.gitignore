@@ -224,3 +224,8 @@ __pycache__/
 /editor/worker/static-files.mjs
 /editor/dist/server/
 /editor/bootstrap-manifest.json
+
+# Private voice instructions and downloaded speech models
+**/voice-notes/
+**/.whisper-cache/
+**/ggml-*.bin

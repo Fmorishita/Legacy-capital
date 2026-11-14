@@ -29,6 +29,13 @@ const badAudio=structuredClone(project);badAudio.audioTracks[0].duration=project
 const unsafe=structuredClone(project);unsafe.assets[0].url='javascript:alert(1)';assert.throws(()=>validateResult(unsafe,project),/no admitida/);
 const csrf=await request('/api/ai/requests',{...payload,idempotencyKey:'csrf'},'POST',{Origin:'https://evil.test'});assert.equal(csrf.status,400);
 const discovered=await request('/mcp',{jsonrpc:'2.0',id:2,method:'server/discover'});assert.deepEqual(discovered.data.result.supportedVersions,['2026-07-28']);
-const listed=await request('/mcp',{jsonrpc:'2.0',id:3,method:'tools/list'});assert.equal(listed.data.result.tools.length,10);
-console.log(JSON.stringify({ok:true,requestId:id,tests:['idempotent request','exclusive claim','project read','binary chunks','SHA verification','integrated scene result','new voice required for new script','invalid URL rejected','cross-origin write rejected','MCP discovery and tools'],toolCount:10,real_model_generation:false}));
+const listed=await request('/mcp',{jsonrpc:'2.0',id:3,method:'tools/list'});assert.equal(listed.data.result.tools.length,11);
+// Real audio bytes remain a request attachment, separate from the video project.
+await bucket.put('media/voice-qa',new Uint8Array(256),{httpMetadata:{contentType:'audio/webm'}});
+const voiced=await request('/api/ai/requests',{...payload,instructions:'',idempotencyKey:'qa-voice-only',voiceNotes:[{id:'voice-qa',url:'/api/media/voice-qa',name:'Cambios.webm',duration:3}]});assert.equal(voiced.status,201);assert.equal(voiced.data.request.voiceNoteCount,1);
+const voiceDetail=await mcp('legacy_get_ai_request',{request_id:voiced.data.request.id,include_project:true});assert.equal(voiceDetail.voiceNotes[0].purpose,'editing_instructions');assert.equal(voiceDetail.project.audioTracks.some(t=>t.assetId==='voice-qa'),false);
+const listened=await mcp('legacy_get_voice_note',{request_id:voiced.data.request.id,note_id:'voice-qa'});assert.equal(listened.content[1].type,'audio');assert.equal(listened.content[1].mimeType,'audio/webm');assert.equal(Buffer.from(listened.content[1].data,'base64').length,256);
+await assert.rejects(()=>mcp('legacy_get_voice_note',{request_id:id,note_id:'voice-qa'}),/No se encontró/);
+const invalidNote=await request('/api/ai/requests',{...payload,idempotencyKey:'bad-note',voiceNotes:[{id:'voice-qa',url:'https://other.test/audio.mp3'}]});assert.equal(invalidNote.status,400);
+console.log(JSON.stringify({ok:true,requestId:id,tests:['idempotent request','exclusive claim','project read','binary chunks','SHA verification','integrated scene result','new voice required for new script','invalid URL rejected','cross-origin write rejected','MCP discovery and tools','voice-only request','scoped private audio retrieval','external note rejected'],toolCount:11,real_model_generation:false}));
 export {Bucket,worker};

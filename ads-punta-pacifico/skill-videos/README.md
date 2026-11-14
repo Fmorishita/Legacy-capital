@@ -1,6 +1,8 @@
-# Videos Punta Pacífico · Skill 1.6.0
+# Videos Punta Pacífico · Skill 1.7.0
 
 Esta carpeta contiene la skill completa. Empieza por SKILL.md; las referencias desarrollan investigación, guion, imágenes, audio, HyperFrames, animación solicitada con presupuesto, QA, kits portables para otras IA, editor visual con feedback y mantenimiento.
+
+La versión 1.7.0 añade una vista móvil centrada en Cambios con IA, herramientas desplegables y grabación de indicaciones por voz para revisarlas y enviarlas con el ChatGPT actual. El dictado depende del navegador; el audio se conserva como instrucción privada. No añade una API de IA de pago.
 
 La versión 1.6.0 incorpora Legacy Video Studio, solicitado para editar escenas, guion, medios, audio, subtítulos, motion graphics, comentarios con tiempo y referencias de estilo, usando Doctor V6 como ejemplo. Distingue la recomposición editable del MP4 original, registra la voz pendiente cuando cambia el guion y conserva versiones portables con sus medios. El guardado local en el navegador no es sincronización automática con Drive o con el agente.
 

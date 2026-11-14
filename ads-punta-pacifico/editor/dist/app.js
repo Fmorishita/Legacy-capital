@@ -1,5 +1,6 @@
 import * as UI from './ui.js';
 import {mountAI,projectRevision} from './ai.js';
+import {mountMobileWorkbench} from './mobile.js';
 import {StudioEngine} from './engine.js';
 import {exportVideo,availableVideoFormats,downloadBlob,exportFrame} from './exporter.js';
 import {ProjectStore,blobToDataURL,validateProject} from './storage.js';
@@ -259,11 +260,11 @@ async function boot(){
  aiPanel=mountAI({getProject:()=>project,getSelectedSceneId:()=>selectedSceneId,store,openTab:tab,notify:UI.toast,async applyResult(next,meta){
   if((project.aiAppliedRequestIds||[]).includes(meta.requestId))return UI.toast('Esta versión de IA ya está incorporada.','info');
   const current=project;await store.saveVersion(current,'Antes de incorporar cambios con IA');
-  const result=structuredClone(next);const concurrent=meta.baseRevision?await projectRevision(current)!==meta.baseRevision:meta.baseUpdatedAt&&current.updatedAt&&meta.baseUpdatedAt!==current.updatedAt;
+  const result=structuredClone(next);result.aiInstructionDraft=current.aiInstructionDraft||'';result.aiVoiceDrafts=current.aiVoiceDrafts||[];const concurrent=meta.baseRevision?await projectRevision(current)!==meta.baseRevision:meta.baseUpdatedAt&&current.updatedAt&&meta.baseUpdatedAt!==current.updatedAt;
   result.aiSourceProjectId=current.aiSourceProjectId||current.id;result.aiAppliedRequestIds=[...new Set([...(current.aiAppliedRequestIds||[]),...(result.aiAppliedRequestIds||[]),meta.requestId])];
   if(concurrent){result.id='project-'+crypto.randomUUID();result.title+=' · Versión IA';}
   await loadProject(result);UI.toast(concurrent?'Guardé tus cambios manuales y abrí la versión de IA como un proyecto separado.':(meta.summary||'Cambios de IA incorporados al video.'),'success',8000);
  }});
- window.legacyStudio.ai=aiPanel;
+ window.legacyStudio.ai=aiPanel;window.legacyStudio.mobile=mountMobileWorkbench({openAI:aiPanel.open,openTab:tab});
 }
 boot().catch(e=>{$('stageLoading').textContent='No se pudo abrir el proyecto. Recarga la página para intentarlo de nuevo.';fail(e);});

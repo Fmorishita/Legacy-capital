@@ -1,5 +1,14 @@
 # Historial
 
+## 1.7.0 — 2026-11-14
+
+- Petición: editar desde el celular con foco en comentarios/cambios con IA; ocultar escenas, inspector y timeline hasta abrirlos; indicar cambios con voz grabada.
+- Vista móvil con botones de anuncio y herramientas, retorno a los comentarios sin perder el borrador, campos legibles y objetivos táctiles. La interfaz de escritorio conserva sus controles.
+- Grabación real mediante MediaRecorder, revisión, cancelación, adjuntos y dictado cuando el navegador lo soporta. Si no hay dictado, se conserva la nota de voz privada para escucharla desde ChatGPT. No se mezcla en el anuncio ni se publica en GitHub.
+- Respaldo gratuito de transcripción local con Whisper.cpp para sesiones que no admiten audio; prueba real con coincidencia de texto, sin enviar la grabación a una API.
+- Herramienta MCP adicional para recuperar audio por solicitud y helper que descarga las notas. El resultado automático incorpora sólo la última versión completada para evitar volver a una anterior al abrir otro dispositivo.
+- QA de navegación móvil, persistencia y envío de notas mediante simulación DOM; permisos, cancelación y fallback con adaptadores de micrófono. La prueba física de iPhone/Android queda pendiente; no se afirma aprobada.
+
 ## 1.6.0 — 2026-11-14
 
 - Petición: hacer visibles los cambios con IA y ejecutar los comentarios de imagen, guion/voz, audio y edición sin sustituciones manuales. El usuario eligió su ChatGPT actual, sin configurar una API de pago.

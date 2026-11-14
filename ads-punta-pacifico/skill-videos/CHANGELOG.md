@@ -1,5 +1,12 @@
 # Historial
 
+## 1.6.0 — 2026-11-14
+
+- Petición: hacer visibles los cambios con IA y ejecutar los comentarios de imagen, guion/voz, audio y edición sin sustituciones manuales. El usuario eligió su ChatGPT actual, sin configurar una API de pago.
+- Antes: feedback y JSON para continuación manual. Ahora: sección principal, solicitud privada con snapshot, herramientas MCP de lectura/reclamación/subida/resultado y devolución automática al editor. El usuario envía el mensaje preparado en ChatGPT.
+- Nueva voz real comprobada en una solicitud de QA aislada, junto con carga binaria, SHA256, subtítulos y devolución del proyecto. No se alteró el anuncio de trabajo ni se usaron APIs de IA de pago.
+- Guardado anterior, protección ante cambios concurrentes, estados honestos y rechazo de guion nuevo sin locución/subtítulos correspondientes. La interfaz publicada se revisó mediante captura nativa; no se afirma aprobación estética ni prueba de todos los modelos de generación.
+
 ## 1.5.0 · 2026-11-14
 
 Petición explícita: crear un sistema para editar cualquier elemento de los anuncios, añadir comentarios a escenas concretas y subir referencias de estilo, usando Doctor V6 como ejemplo. Se construye Legacy Video Studio con proyecto editable independiente; esta petición no aprueba estéticamente Doctor V6 ni cambia el rechazo de V6-Higgsfield. La publicación del editor y sus verificaciones finales se registran fuera del paquete hasta observar resultados nativos.

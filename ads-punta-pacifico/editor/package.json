@@ -1,9 +1,11 @@
 {
   "name": "legacy-video-studio",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "check": "node tools/check.mjs"
+    "check": "node tools/check.mjs",
+    "build": "python tools/build-worker.py",
+    "check:ai": "node tools/qa-worker.mjs"
   }
 }

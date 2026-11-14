@@ -1,4 +1,5 @@
 import * as UI from './ui.js';
+import {mountAI,projectRevision} from './ai.js';
 import {StudioEngine} from './engine.js';
 import {exportVideo,availableVideoFormats,downloadBlob,exportFrame} from './exporter.js';
 import {ProjectStore,blobToDataURL,validateProject} from './storage.js';
@@ -9,6 +10,7 @@ const $=id=>document.getElementById(id), esc=UI.escapeHTML;
 const store=new ProjectStore();
 let project,original,engine,selectedSceneId,selectedLayerId,selectedTrackId,selectedCaptionId;
 let undo=[],redo=[],saveTimer,mediaFilter='all',commentFilter='all',activeTab='scenes',snap=true,exporting=false;
+let aiPanel=null;
 let latestAnalysis=null,latestReferenceId=null,dragScene=null,saveGeneration=0;
 const scene=()=>project.scenes.find(s=>s.id===selectedSceneId)||project.scenes[0];
 const track=()=>project.audioTracks.find(t=>t.id===selectedTrackId);
@@ -57,7 +59,7 @@ function renderUI(inspector=true){
  const colors=project.brand?.colors||{};for(const[k,id]of [['navy','brandNavy'],['gold','brandGold'],['cream','brandCream']])$(id).value=colors[k]||'#1A2B4C';
  $('brandLogoSelect').innerHTML=project.assets.filter(a=>a.type==='image').map(a=>`<option value="${esc(a.id)}" ${a.id===project.brand.logoAssetId?'selected':''}>${esc(a.name)}</option>`).join('');
  $('masterVolume').value=project.masterVolume??1;$('masterVolumeValue').value=`${Math.round((project.masterVolume??1)*100)}%`;$('versionBadge').textContent=project.version||'Borrador';$('assetStatus').textContent=`${project.scenes.length} escenas · ${project.assets.length} archivos`;
- $('undoBtn').disabled=!undo.length;$('redoBtn').disabled=!redo.length;updateTime(engine?.currentTime||0);UI.mountIcons();
+ aiPanel?.refreshContext();$('undoBtn').disabled=!undo.length;$('redoBtn').disabled=!redo.length;updateTime(engine?.currentTime||0);UI.mountIcons();
 }
 function updateTime(time){UI.updatePlayhead(time,+$('timelineZoom').value);$('commentAnchorLabel').textContent=`${M.sceneAt(project,time)?.title||'Escena'} · ${UI.formatTime(time,true)}`;}
 async function loadProject(next,{save=true}={}){
@@ -254,5 +256,14 @@ async function boot(){
  await loadProject(saved||M.clone(original),{save:!saved});
  if(!localStorage.getItem('legacy-studio-intro')){localStorage.setItem('legacy-studio-intro','1');setTimeout(()=>UI.toast('Doctor V6 listo. Selecciona una escena para empezar; la guía está en el menú del proyecto.','info',8500),700);}
  window.legacyStudio={get project(){return project;},get engine(){return engine;},store,selectScene,mutate,downloadProject};
+ aiPanel=mountAI({getProject:()=>project,getSelectedSceneId:()=>selectedSceneId,store,openTab:tab,notify:UI.toast,async applyResult(next,meta){
+  if((project.aiAppliedRequestIds||[]).includes(meta.requestId))return UI.toast('Esta versión de IA ya está incorporada.','info');
+  const current=project;await store.saveVersion(current,'Antes de incorporar cambios con IA');
+  const result=structuredClone(next);const concurrent=meta.baseRevision?await projectRevision(current)!==meta.baseRevision:meta.baseUpdatedAt&&current.updatedAt&&meta.baseUpdatedAt!==current.updatedAt;
+  result.aiSourceProjectId=current.aiSourceProjectId||current.id;result.aiAppliedRequestIds=[...new Set([...(current.aiAppliedRequestIds||[]),...(result.aiAppliedRequestIds||[]),meta.requestId])];
+  if(concurrent){result.id='project-'+crypto.randomUUID();result.title+=' · Versión IA';}
+  await loadProject(result);UI.toast(concurrent?'Guardé tus cambios manuales y abrí la versión de IA como un proyecto separado.':(meta.summary||'Cambios de IA incorporados al video.'),'success',8000);
+ }});
+ window.legacyStudio.ai=aiPanel;
 }
 boot().catch(e=>{$('stageLoading').textContent='No se pudo abrir el proyecto. Recarga la página para intentarlo de nuevo.';fail(e);});

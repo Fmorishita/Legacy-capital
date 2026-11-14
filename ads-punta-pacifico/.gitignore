@@ -220,3 +220,7 @@ __pycache__/
 /editor/dist/assets/audio/i-can-hear-your-heartbeat-1000.mp3
 /editor/dist/assets/audio/quick-zoom-impact-772.mp3
 /editor/dist/assets/audio/short-transition-sweep-175.mp3
+
+/editor/worker/static-files.mjs
+/editor/dist/server/
+/editor/bootstrap-manifest.json

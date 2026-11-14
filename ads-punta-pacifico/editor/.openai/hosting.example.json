@@ -1,0 +1,7 @@
+{
+  "project_id": "COPY_YOUR_SITE_PROJECT_ID",
+  "r2": "BUCKET",
+  "capabilities": [
+    "mcp"
+  ]
+}

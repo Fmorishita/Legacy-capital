@@ -35,3 +35,14 @@ En los roofs debe verse **un tragaluz**. Mantener arquitectura, geometría y mat
 Cambiar texto no cambia una grabación de voz existente. Si reescribes guion, genera o solicita una locución nueva dentro del encargo autorizado y vuelve a alinear palabras/subtítulos. Si cambias el orden o la duración, comprueba la correspondencia semántica entre voz y toma. No aceleres una locución para forzar una plantilla.
 
 Guarda outputs en una carpeta nueva y verifica reproducción, audio, cortes y fotogramas del MP4 final. Para exportar la composición original usa la versión instalada o fijada de HyperFrames indicada por sus fuentes (0.9.18); para Canvas, MP4 depende de MediaRecorder y WebM es la alternativa. Conserva licencias y no prometas aprobación estética que el usuario no haya dado.
+
+
+## Ejecutar solicitudes de «Cambios con IA»
+
+La app personal Legacy Video Studio está conectada a ChatGPT. Usa las herramientas MCP disponibles: `legacy_get_ai_request`, `legacy_claim_ai_request`, `legacy_get_project`, `legacy_get_scene_image`, `legacy_update_ai_request`, las tres herramientas de subida y `legacy_submit_ai_result`. Recibe el ID de solicitud del mensaje del usuario. No edites un proyecto distinto ni publiques sus comentarios o snapshots privados en GitHub.
+
+Ejecuta los comentarios, no entregues sólo un plan. Una foto solicitada debe generarse y asignarse al `mediaId` de la escena; si cambia la narración, genera una locución continua real, mide palabras y duración, realinea las escenas y los subtítulos y recorta/reubica música/SFX. Sube los recursos reales antes de devolver la versión completa. No marques completed una operación que no hiciste. Si falta un modelo o cuota, informa con needs_input y conserva el trabajo. Este modo usa las herramientas de la cuenta actual de ChatGPT; no contrates una API ni gastes créditos de otro proveedor sin autorización específica.
+
+El helper `editor/tools/chatgpt-edit-bridge.py` permite producir voz con Edge TTS gratuito, leer solicitudes y subir archivos. Las herramientas MCP reciben los recursos por fragmentos base64. Si el ejecutor necesita acceso de servicio, obtén el acceso ya existente del mismo Site mediante Sites y pásalo sólo por memoria/stdin al helper; no lo muestres, guardes ni envíes a otros dominios. El helper llama a las rutas privadas del editor; el endpoint MCP reservado se utiliza mediante la conexión autenticada de ChatGPT.
+
+La devolución se incorpora sola cuando el usuario vuelve a la pestaña del editor. Conserva la versión previa y registra qué comentarios se resolvieron; los cambios manuales concurrentes deben quedar guardados y la versión de IA se abre separada.

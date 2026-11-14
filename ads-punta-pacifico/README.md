@@ -48,3 +48,12 @@ Los kits completos y los PNG, WAV, stems y MP4 exactos permanecen en Drive, con 
 - MP4 Doctor V6: https://drive.google.com/file/d/1PiQDnFxi_WBwPmQFj0KtZYy1QDKbFpfZ/view
 
 La edición con las copias optimizadas conserva estructura y tiempos; no se afirma equivalencia binaria con los originales. Para una salida que requiera los originales exactos, usa sus enlaces y el conector de Drive de la misma cuenta.
+
+
+## Cambios con IA, sin API de pago
+
+El editor privado incluye una sección principal para escribir cambios y adjuntar los comentarios pendientes de las escenas. «Aplicar cambios con ChatGPT» guarda la solicitud y abre ChatGPT con el mensaje que el usuario envía. La app personal Legacy Video Studio ya está conectada a ChatGPT mediante MCP. El asistente crea los recursos con sus herramientas, los sube y devuelve una versión completa; el editor la incorpora automáticamente y conserva la anterior. No es una generación desatendida cuando no hay un asistente ejecutando la solicitud.
+
+Las solicitudes y recursos enviados a IA se guardan en el Site privado. Los borradores manuales siguen en el navegador. Un servidor HTTP estático local permite la edición manual, pero la ejecución conectada se usa en el Site privado o requiere desplegar el Worker con su bucket privado y capacidad MCP. No cambies ese backend a una audiencia pública sin añadir aislamiento por usuario.
+
+El código del backend está en `editor/worker/index.mjs`; `editor/tools/build-worker.py` genera el paquete. Para construir fuera del entorno original, instala esbuild en el proyecto (`npm install --no-save esbuild`). `editor/.openai/hosting.example.json` muestra las declaraciones, con un ID que debes sustituir por el de tu Site; no contiene credenciales. Los snapshots, comentarios y uploads privados de las solicitudes no se suben a este repositorio.

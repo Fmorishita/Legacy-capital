@@ -1,5 +1,6 @@
 import * as UI from './ui.js';
 import {mountAI,projectRevision} from './ai.js';
+import {conectarNube,CloudStore,mountClaude} from './claude-cloud.js';
 import {StudioEngine} from './engine.js';
 import {exportVideo,availableVideoFormats,downloadBlob,exportFrame} from './exporter.js';
 import {ProjectStore,blobToDataURL,validateProject} from './storage.js';
@@ -7,7 +8,8 @@ import {analyzeReference,applyReferenceStyle,createEditingBrief} from './referen
 import * as M from './model.js';
 
 const $=id=>document.getElementById(id), esc=UI.escapeHTML;
-const store=new ProjectStore();
+let store=new ProjectStore();let nube=null;
+const textoGuardado=()=>store.modo==='nube'?'Guardado en la nube · todos tus dispositivos':'Guardado en este navegador';
 let project,original,engine,selectedSceneId,selectedLayerId,selectedTrackId,selectedCaptionId;
 let undo=[],redo=[],saveTimer,mediaFilter='all',commentFilter='all',activeTab='scenes',snap=true,exporting=false;
 let aiPanel=null;
@@ -24,7 +26,7 @@ function tab(name){activeTab=name;UI.setActiveTab(name);}
 function status(text,saved=false){$('saveStatus').innerHTML=`<i></i>${esc(text)}`;$('saveStatus').classList.toggle('unsaved',!saved);}
 function scheduleSave(){
  clearTimeout(saveTimer);status('Guardando…');const n=++saveGeneration;
- saveTimer=setTimeout(async()=>{try{await store.save(project);if(n===saveGeneration)status('Guardado en este navegador',true);}catch(e){status('Descarga una copia');fail(e);}},650);
+ saveTimer=setTimeout(async()=>{try{await store.save(project);if(n===saveGeneration)status(textoGuardado(),true);}catch(e){status('Descarga una copia');fail(e);}},650);
 }
 function checkpoint(){undo.push(M.clone(project));if(undo.length>40)undo.shift();redo=[];}
 function markTiming(){project.voiceStale=true;project.timingChanged=true;}
@@ -66,7 +68,8 @@ async function loadProject(next,{save=true}={}){
  validateProject(next);engine?.dispose();project=next;project.audioTracks||=[];project.captions||=[];project.comments||=[];project.references||=[];project.overlays||=[];for(const t of project.audioTracks)if(t.kind==='sfx'&&!t.sceneId)t.sceneId=M.sceneAt(project,t.start).id;project.subtitleStyle||={enabled:true};project.brand||={name:'Mi marca',colors:{navy:'#1A2B4C',gold:'#C5A564',cream:'#F5F0E6'}};
  selectedSceneId=project.scenes[0].id;selectedLayerId=null;selectedTrackId=project.audioTracks[0]?.id;undo=[];redo=[];
  $('stageLoading').hidden=false;engine=new StudioEngine(project,$('previewCanvas'),{onTime:updateTime,onPlayState:playing=>{$('playBtn').innerHTML=UI.icon(playing?'pause':'play');$('playBtn').setAttribute('aria-label',playing?'Pausar':'Reproducir');},onError:fail});
- renderUI();await engine.ready();$('stageLoading').hidden=true;localStorage.setItem('legacy-active-project',project.id);if(save)scheduleSave();else status('Guardado en este navegador',true);
+ renderUI();await engine.ready();$('stageLoading').hidden=true;localStorage.setItem('legacy-active-project',project.id);if(save)scheduleSave();else status(textoGuardado(),true);
+ $('projectStateLabel')&&($('projectStateLabel').textContent=store.modo==='nube'?'Edición privada · Guardado en la nube':'Edición privada · Guardado en este navegador');
  $('canvasShell').style.aspectRatio=`${project.width}/${project.height}`;
  if(project.missingAssets?.length)UI.toast('Hay archivos subidos que faltan en este navegador. Importa una copia portable o vuelve a subirlos.','error',10000);
 }
@@ -213,7 +216,7 @@ function wire(){
  on('downloadProjectBtn','click',downloadProject);on('importProjectBtn','click',()=>$('projectImport').click());
  on('projectImport','change',async e=>{if(e.target.files[0]){const incoming=await store.importProject(await e.target.files[0].text());await loadProject(incoming);UI.toast('Proyecto abierto con sus archivos.');}e.target.value='';});
  on('duplicateProjectBtn','click',async()=>{await store.save(project);const copy=M.clone(project);copy.id=M.uid('project');copy.title+=' · Copia';copy.version='Nueva versión';await loadProject(copy);UI.toast('Copia independiente creada.');});
- on('saveVersionBtn','click',async()=>{await store.save(project);const v=await store.saveVersion(project,`${project.title} · ${new Date().toLocaleString('es-MX')}`);UI.toast('Versión guardada en el historial de este navegador.');});
+ on('saveVersionBtn','click',async()=>{await store.save(project);const v=await store.saveVersion(project,`${project.title} · ${new Date().toLocaleString('es-MX')}`);UI.toast(store.modo==='nube'?'Versión guardada en el historial (nube).':'Versión guardada en el historial de este navegador.');});
  on('versionHistoryBtn','click',showVersions);
  on('resetProjectBtn','click',async()=>{await store.saveVersion(project,'Antes de volver al original');const fresh=M.clone(original);fresh.id=M.uid('project');fresh.title='Doctor V6 · Nueva edición';await loadProject(fresh);UI.toast('Nueva copia del V6 original. La anterior permanece guardada.');});
  on('helpBtn','click',showHelp);on('helpStatusBtn','click',showHelp);on('shortcutsBtn','click',()=>UI.openDialog('<h2>Atajos de teclado</h2><p><kbd>Espacio</kbd> Reproducir o pausar</p><p><kbd>← / →</kbd> Retroceder o avanzar un fotograma</p><p><kbd>Ctrl / ⌘ + Z</kbd> Deshacer</p><p><kbd>Ctrl / ⌘ + Shift + Z</kbd> Rehacer</p><p><kbd>Ctrl / ⌘ + S</kbd> Guardar versión</p>'));
@@ -247,16 +250,17 @@ async function analyzeSelectedReference(){
  }finally{$('analyzeReferenceBtn').disabled=false;}
 }
 async function showVersions(){
- const versions=await store.listVersions(project.id),projects=await store.listProjects();UI.openDialog(`<h2>Versiones y proyectos guardados</h2><p>Disponibles en este navegador. Descarga una copia portable para conservarlos fuera de este dispositivo.</p><h3>Versiones de este proyecto</h3>${versions.map(v=>`<button class="history-card" data-restore-version="${esc(v.id)}"><strong>${esc(v.label)}</strong><small>${esc(new Date(v.createdAt).toLocaleString('es-MX'))}</small></button>`).join('')||'<p>Aún no guardaste una versión.</p>'}<h3>Otros proyectos</h3>${projects.map(p=>`<button class="history-card" data-open-project="${esc(p.id)}"><strong>${esc(p.title)}</strong><small>${esc(p.version||'Borrador')}</small></button>`).join('')}`);
+ const versions=await store.listVersions(project.id),projects=await store.listProjects();UI.openDialog(`<h2>Versiones y proyectos guardados</h2><p>${store.modo==='nube'?'Guardados en la nube: los ves desde cualquier dispositivo.':'Disponibles en este navegador. Descarga una copia portable para conservarlos fuera de este dispositivo.'}</p><h3>Versiones de este proyecto</h3>${versions.map(v=>`<button class="history-card" data-restore-version="${esc(v.id)}"><strong>${esc(v.label)}</strong><small>${esc(new Date(v.createdAt).toLocaleString('es-MX'))}</small></button>`).join('')||'<p>Aún no guardaste una versión.</p>'}<h3>Otros proyectos</h3>${projects.map(p=>`<button class="history-card" data-open-project="${esc(p.id)}"><strong>${esc(p.title)}</strong><small>${esc(p.version||'Borrador')}</small></button>`).join('')}`);
  for(const b of document.querySelectorAll('[data-restore-version]'))b.onclick=run(async()=>{await store.saveVersion(project,'Antes de restaurar');await loadProject(await store.restoreVersion(project.id,b.dataset.restoreVersion));UI.closeDialog();UI.toast('Versión restaurada.');});
  for(const b of document.querySelectorAll('[data-open-project]'))b.onclick=run(async()=>{await store.save(project);await loadProject(await store.load(b.dataset.openProject));UI.closeDialog();});
 }
 async function boot(){
+ try{nube=await conectarNube();if(nube)store=new CloudStore(nube);}catch(e){console.warn(e);}
  original=await(await fetch('doctor-v6.json')).json();wire();let saved=null;try{const id=localStorage.getItem('legacy-active-project')||original.id;saved=await store.load(id);}catch(e){fail(e);}
  await loadProject(saved||M.clone(original),{save:!saved});
  if(!localStorage.getItem('legacy-studio-intro')){localStorage.setItem('legacy-studio-intro','1');setTimeout(()=>UI.toast('Doctor V6 listo. Selecciona una escena para empezar; la guía está en el menú del proyecto.','info',8500),700);}
  window.legacyStudio={get project(){return project;},get engine(){return engine;},store,selectScene,mutate,downloadProject};
- aiPanel=mountAI({getProject:()=>project,getSelectedSceneId:()=>selectedSceneId,store,openTab:tab,notify:UI.toast,async applyResult(next,meta){
+ aiPanel=(nube?(h=>mountClaude(h,nube)):mountAI)({getProject:()=>project,getSelectedSceneId:()=>selectedSceneId,store,openTab:tab,notify:UI.toast,revision:projectRevision,getTime:()=>engine?.currentTime||0,async applyResult(next,meta){
   if((project.aiAppliedRequestIds||[]).includes(meta.requestId))return UI.toast('Esta versión de IA ya está incorporada.','info');
   const current=project;await store.saveVersion(current,'Antes de incorporar cambios con IA');
   const result=structuredClone(next);const concurrent=meta.baseRevision?await projectRevision(current)!==meta.baseRevision:meta.baseUpdatedAt&&current.updatedAt&&meta.baseUpdatedAt!==current.updatedAt;

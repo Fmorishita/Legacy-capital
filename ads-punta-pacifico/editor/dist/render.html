@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Render Legacy Studio</title>
+<link rel="stylesheet" href="styles.css"></head>
+<body style="margin:0;background:#000">
+<canvas id="c" width="1080" height="1920"></canvas>
+<script type="module">
+// Página de render sin interfaz: usa el MISMO motor del editor para dibujar cuadros exactos.
+import {StudioEngine} from './engine.js';
+let engine = null;
+window.renderer = {
+  async cargar(project) {
+    const c = document.getElementById('c'); c.width = project.width || 1080; c.height = project.height || 1920;
+    const errores = [];
+    engine = new StudioEngine(project, c, {onError: e => errores.push(String(e && e.message || e))});
+    await engine.ready();
+    return {duracion: engine.duration(), errores};
+  },
+  cuadro(t, calidad = 0.95) { engine.render(t); return document.getElementById('c').toDataURL('image/jpeg', calidad); },
+  // Mezcla de audio con el mismo código de reproducción del editor, en un contexto sin conexión.
+  async audio(sr = 48000) {
+    const dur = engine.duration(), extra = 0.025;
+    const ctx = new OfflineAudioContext(2, Math.ceil((dur + extra + 0.2) * sr), sr);
+    engine.audioContext = ctx; engine.audioBus = ctx.createGain();
+    engine.compressor = ctx.createDynamicsCompressor();
+    const k = engine.compressor; k.threshold.value = -3; k.knee.value = 4; k.ratio.value = 12; k.attack.value = .003; k.release.value = .18;
+    engine.audioBus.connect(k); k.connect(ctx.destination); engine.audioBus.gain.value = 1;
+    for (const t of engine.project.audioTracks || []) {
+      if (t.muted) continue;
+      const a = engine.resolveAsset(t.assetId); if (!a || engine.audioBuffers.has(a.url)) continue;
+      const r = engine.assets.get(a.id) || await engine.loadAsset(a); if (!r?.bytes) continue;
+      engine.audioBuffers.set(a.url, await ctx.decodeAudioData(r.bytes.slice(0)));
+    }
+    engine.scheduleAudio(0);
+    const buf = await ctx.startRendering();
+    const ini = Math.round(extra * sr), n = Math.round(dur * sr);
+    const L = buf.getChannelData(0).subarray(ini, ini + n), R = buf.getChannelData(1).subarray(ini, ini + n);
+    const pcm = new Int16Array(n * 2);
+    for (let i = 0; i < n; i++) { pcm[2 * i] = Math.max(-1, Math.min(1, L[i] || 0)) * 32767; pcm[2 * i + 1] = Math.max(-1, Math.min(1, R[i] || 0)) * 32767; }
+    let s = ''; const u8 = new Uint8Array(pcm.buffer);
+    for (let i = 0; i < u8.length; i += 0x8000) s += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000));
+    return btoa(s);
+  }
+};
+window.rendererListo = true;
+</script></body></html>

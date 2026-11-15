@@ -13,10 +13,10 @@ DUR=74.2
 # id, ini, fin, img, origin, s0, s1, x0, x1, titular(l1,l2,sm), leyenda
 SC=[
 ('s01',0,2.9,'doc','50% 0%',1.07,1.14,0,0,None,1),
-('s02',2.9,4.3,'v02','50% 60%',1.04,1.12,0,0,('DISFRUTAR','EN PAREJA',''),1),
+('s02',2.9,4.3,'clip:patio-pareja','50% 60%',1.04,1.12,0,0,('DISFRUTAR','EN PAREJA',''),1),
 ('s03',4.3,6.25,'celebra','50% 40%',1.04,1.12,0,0,('INVERTIR Y CRECER','TU PATRIMONIO',''),1),
 ('s04',11.0,12.05,'v04','50% 50%',1.1,1.16,-2,2,None,1),
-('s05',12.05,14.3,'v18','50% 60%',1.06,1.14,0,0,None,1),
+('s05',12.05,14.3,'clip:fachada','50% 60%',1.06,1.14,0,0,None,1),
 ('s06',14.3,16.75,'v27','50% 50%',1.04,1.12,0,0,('1 NIVEL','2 O 3 RECÁMARAS',''),1),
 ('s07',16.75,18.25,'k05','40% 40%',1.42,1.5,0,0,('ROOF GARDEN','PRIVADO',''),1),
 ('s08',18.25,19.95,'v07','0% 45%',1.15,1.22,0,0,('VISTA','AL MAR',''),1),
@@ -28,7 +28,7 @@ SC=[
 ('s14',29.45,31.4,'v13','50% 50%',1.1,1.1,2,-2,('CUIDA TU','LIQUIDEZ',''),1),
 ('s15',42.1,44.85,'v19','50% 50%',1.04,1.12,0,0,None,1),
 ('s16',50.85,53.8,'v20','50% 50%',1.04,1.12,0,0,('SMART','HOME',''),1),
-('s17',53.8,55.65,'v14','50% 50%',1.1,1.1,-2,2,None,1),
+('s17',53.8,55.65,'clip:celular','50% 50%',1.1,1.1,-2,2,None,1),
 ('s18',55.65,58.2,'v21','50% 50%',1.04,1.12,0,0,None,1),
 ('s19',58.2,59.85,'v16','50% 50%',1.04,1.12,0,0,('APARTA','ESTE MES',''),1),
 ('s20',59.85,60.9,'v22','45% 50%',1.1,1.18,0,0,('COCINA','EQUIPADA',''),1),
@@ -36,10 +36,10 @@ SC=[
 ('s22',61.45,61.95,'v24','50% 50%',1.1,1.16,0,0,('BAÑOS',' ',''),1),
 ('s23',61.95,63.85,'roofeq','50% 50%',1.04,1.12,0,0,('ROOF','EQUIPADO',''),1),
 ]
-CAPTOP={'s02':880,'s06':860,'s07':900,'s13':880,'s16':1165}
+CAPTOP={'s02':930,'s06':860,'s07':900,'s13':880,'s16':1165}
 HLTOP={'s14':700}
 ONE={'s11'}
-MG=[('mg2',6.25,4.75),('mg4',31.4,7.9),('mg3',39.3,2.8),('mg5',44.85,6.0)]
+MG=[('mg4',31.4,7.9),('mg3',39.3,2.8),('mg5',44.85,6.0)]
 PROMO=(63.85,67.45); END=(67.45,DUR)
 H=[];A=H.append
 A('''<!doctype html>
@@ -72,6 +72,15 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#071D29}
 .pr .c{font-family:"PPBold";font-size:46px;line-height:1.3}
 .chip{position:absolute;left:90px;height:90px;border-radius:999px;background:rgba(7,29,41,.85);border:3px solid #FFD086;display:flex;align-items:center;padding:0 38px;font-family:"PPBold";font-size:46px}
 .chip span{color:#FFD086;margin-right:18px}
+#srv .srv-sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,29,41,.82) 0%,rgba(7,29,41,.55) 26%,rgba(7,29,41,0) 36%,rgba(7,29,41,.15) 60%,rgba(7,29,41,.4) 100%)}
+#srv-eb{position:absolute;left:65px;top:282px;font-family:"PPBold";font-size:28px;letter-spacing:.14em;color:#FFD086;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+#srv-t{position:absolute;left:65px;top:326px;font-family:"PPCondensed";font-size:84px;line-height:1.1;text-shadow:0 3px 12px rgba(0,0,0,.55)}#srv-t span{color:#FFD086}
+#srv-r{position:absolute;left:65px;top:524px;width:160px;height:8px;border-radius:4px;background:#FFD086}
+.sc{position:absolute;width:495px;height:112px;border-radius:24px;border:4px solid #E3B869;background:rgba(255,251,243,.96);display:flex;align-items:center;padding:0 12px;box-shadow:0 10px 24px rgba(0,0,0,.35);color:#132B6B}
+.sc img{width:78px;height:78px;border-radius:50%;flex:none}.sc .bar2{width:5px;height:78px;background:#C99A2E;margin:0 12px;flex:none;border-radius:3px}
+.sc .tx{display:flex;flex-direction:column;align-items:flex-start;gap:3px}
+.sc .nm{font-family:"PPBold";font-size:25px;line-height:1.08}.sc .pl{padding:0 16px 2px;border-radius:999px;background:#8A620C;color:#fff;font-family:"PPBold";font-size:24px;line-height:1.3;white-space:nowrap}
+.sc .nm.sm{font-size:20px;white-space:nowrap}
 /* rentas */
 #rent{position:absolute;left:65px;right:65px;top:285px;height:470px;border-radius:34px;background:rgba(7,29,41,.86);border:3px solid #FFD086;box-shadow:0 18px 50px rgba(0,0,0,.45)}
 #rent .t{position:absolute;left:44px;top:22px;font-family:"PPCondensed";font-size:56px;line-height:1.1;color:#FFD086}
@@ -106,7 +115,11 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#071D29}
 <div id="root" data-composition-id="main" data-start="0" data-duration="%DUR%" data-width="1080" data-height="1920">
 '''.replace('%DUR%',str(DUR)))
 for sid,a,b,img,org,s0,s1,x0,x1,hl,lg in SC:
-    A(f'<div id="{sid}" class="clip bg" data-start="{a}" data-duration="{round(b-a,3)}" data-track-index="0"><div class="kb" data-layout-allow-overflow><img src="assets/img/{img}.jpg" alt="" /></div><div class="shade"></div>')
+    if img.startswith('clip:'):
+        A(f'<video id="{sid}-v" class="clip mgv" src="assets/clips/{img[5:]}.mp4" data-start="{a}" data-duration="{round(b-a,3)}" data-track-index="1" muted playsinline></video>')
+        A(f'<div id="{sid}" class="clip bg" data-start="{a}" data-duration="{round(b-a,3)}" data-track-index="2"><div class="shade"></div>')
+    else:
+        A(f'<div id="{sid}" class="clip bg" data-start="{a}" data-duration="{round(b-a,3)}" data-track-index="0"><div class="kb" data-layout-allow-overflow><img src="assets/img/{img}.jpg" alt="" /></div><div class="shade"></div>')
     if hl and sid in ONE: A(f'<div class="hl one" id="{sid}-hl"><div class="l1">{hl[0]}</div><div class="l2">{hl[1]}</div></div>')
     elif hl: A(f'<div class="hl" id="{sid}-hl" style="top:{HLTOP.get(sid,290)}px"><div class="l1">{hl[0]}</div><div class="l2">{hl[1]}</div><div class="rule"></div></div>')
     if sid=='s01': A('<div id="hook"><div class="a">DOCTOR O MÉDICO,</div><div class="b">¿BUSCAS COMPRAR CASA CON VISTA AL MAR?</div><div class="rule"></div></div>')
@@ -122,6 +135,14 @@ for sid,a,b,img,org,s0,s1,x0,x1,hl,lg in SC:
     if sid=='s17': A('<div class="chip" id="ch1" style="top:290px"><span>●</span>Luces</div><div class="chip" id="ch2" style="top:290px;left:370px"><span>●</span>Minisplit</div>')
     if sid=='s18': A('<div class="chip" id="ch3" style="top:285px"><span>●</span>Cerradura digital</div><div class="chip" id="ch4" style="top:390px"><span>●</span>Desde tu celular</div>')
     A('</div>')
+A('<video id="srv-v1" class="clip mgv" src="assets/clips/aereo-terreno.mp4" data-start="6.25" data-duration="2.35" data-track-index="1" muted playsinline></video>')
+A('<video id="srv-v2" class="clip mgv" src="assets/clips/aereo-marina.mp4" data-start="8.6" data-duration="2.4" data-track-index="1" muted playsinline></video>')
+A('<div id="srv" class="clip" data-start="6.25" data-duration="4.75" data-track-index="2"><div class="srv-sh"></div><div id="srv-eb">EL SAUZAL · ENTRADA DE ENSENADA</div><div id="srv-t">SERVICIOS Y PUNTOS<br><span>DE INTERÉS ALREDEDOR</span></div><div id="srv-r"></div>')
+SRV=[('Punta Morro /<br>restaurante y hotel','aprox. 2 min',1),('Hotel Coral &amp; Marina','aprox. 4–5 min',5),('Soriana /<br>autoservicio','aprox. 3 min',2),('OXXO y tiendas<br>de conveniencia','aprox. 4 min',6),('CETYS<br>Universidad','aprox. 5 min',3),('UABC / CICESE','aprox. 3–4 min',7),('Hospitales y<br>servicios médicos','aprox. 7 min',4),None]
+for k,c in enumerate(SRV):
+    inner=(f'<div class="nm">{c[0]}</div><div class="pl">{c[1]}</div>' if c else '<div class="nm sm">A menos de</div><div class="pl">800 metros</div><div class="nm sm">de la carretera de Ensenada</div>')
+    A(f'<div class="sc" id="sc{k}" style="left:{40+(k%2)*505}px;top:{770+(k//2)*120}px"><img src="assets/ico/ico{c[2] if c else 8}.png" alt="" /><div class="bar2"></div><div class="tx">{inner}</div></div>')
+A('</div>')
 for k,a,d in MG:
     A(f'<video id="{k}" class="clip mgv" src="assets/mg/{k}.mp4" data-start="{a}" data-duration="{d}" data-track-index="1" data-has-audio="true" data-volume="0.42" playsinline></video>')
 pa,pb=PROMO
@@ -150,6 +171,7 @@ ev=[]
 for i,c in enumerate(cuts):
     if c in mgst or c in (PROMO[0],END[0]): continue
     k=rot[i%len(rot)]; ev.append((k,max(0,c-(0.3 if k in('wu','wl') else 0.15)),0.2))
+ev+=[('wu',6.0,0.25),('ss',8.45,0.2)]+[(['pop','ph','thud','pop','ph','tk','pop','ph'][i],6.95+i*0.27,0.4) for i in range(8)]+[('shim',9.55,0.2)]
 ev+=[('boom',0.05,0.3),('thud',11.3,0.4),('boom',12.33,0.3),
      ('tk',42.3,0.35),('coin',42.6,0.22),('tk',42.9,0.35),('coin',43.2,0.22),('tk',43.5,0.35),('coin',43.8,0.22),('cha',44.2,0.25),
      ('pop',53.9,0.4),('ph',54.4,0.4),('pop',55.75,0.4),('ph',56.25,0.4),
@@ -180,7 +202,7 @@ const pop=(s,t,o)=>tl.fromTo(s,{opacity:0,scale:0.5},Object.assign({opacity:1,sc
 const up=(s,t,o)=>tl.fromTo(s,{opacity:0,y:40},Object.assign({opacity:1,y:0,duration:0.28,ease:"power3.out"},o||{}),t);''')
 for sid,a,b,img,org,s0,s1,x0,x1,hl,lg in SC:
     d=round(b-a,3)
-    A(f'tl.fromTo("#{sid} .kb",{{scale:{s0},xPercent:{x0},transformOrigin:"{org}"}},{{scale:{s1},xPercent:{x1},duration:{d},ease:"none"}},{a});')
+    if not img.startswith('clip:'): A(f'tl.fromTo("#{sid} .kb",{{scale:{s0},xPercent:{x0},transformOrigin:"{org}"}},{{scale:{s1},xPercent:{x1},duration:{d},ease:"none"}},{a});')
     if hl:
         A(f'tl.fromTo("#{sid}-hl .l1",{{opacity:0,x:-50}},{{opacity:1,x:0,duration:0.22,ease:"power3.out"}},{round(a+0.05,3)});tl.fromTo("#{sid}-hl .l2",{{opacity:0,x:-50}},{{opacity:1,x:0,duration:0.22,ease:"power3.out"}},{round(a+0.14,3)});')
         if sid not in ONE: A(f'tl.fromTo("#{sid}-hl .rule",{{scaleX:0,transformOrigin:"0 50%"}},{{scaleX:1,duration:0.25,ease:"power2.out"}},{round(a+0.22,3)});')
@@ -193,6 +215,10 @@ A('const PTS='+json.dumps(pts)+';')
 A('''// hook
 tl.fromTo("#hook .a",{opacity:0,scale:1.3,filter:"blur(12px)"},{opacity:1,scale:1,filter:"blur(0px)",duration:0.35,ease:"power4.out",transformOrigin:"0 50%"},0.05);
 tl.fromTo("#hook .b",{opacity:0,y:40},{opacity:1,y:0,duration:0.3,ease:"power3.out"},0.95);tl.fromTo("#hook .rule",{scaleX:0,transformOrigin:"0 50%"},{scaleX:1,duration:0.3},1.2);
+// servicios sobre el video render
+tl.fromTo("#srv-eb",{opacity:0,x:-40},{opacity:1,x:0,duration:0.22,ease:"power3.out"},6.3);tl.fromTo("#srv-t",{opacity:0,x:-50},{opacity:1,x:0,duration:0.25,ease:"power3.out"},6.4);tl.fromTo("#srv-r",{scaleX:0,transformOrigin:"0 50%"},{scaleX:1,duration:0.25},6.6);
+[0,1,2,3,4,5,6,7].forEach(i=>{const t=6.95+i*0.27;tl.fromTo("#sc"+i,{opacity:0,y:60,scale:0.8},{opacity:1,y:0,scale:1,duration:0.26,ease:"back.out(2)"},t);tl.fromTo("#sc"+i+" .pl",{scale:0.3},{scale:1,duration:0.24,ease:"back.out(3)"},t+0.1);});
+tl.to(".sc",{borderColor:"#FFD086",duration:0.2,yoyo:true,repeat:1,stagger:0.04},9.6);
 // precios
 tl.fromTo("#pr1 .a",{opacity:0,x:-40},{opacity:1,x:0,duration:0.2},11.02);tl.fromTo("#pr1 .b",{opacity:0,scale:1.6},{opacity:1,scale:1,duration:0.25,ease:"power4.out",transformOrigin:"0 50%"},11.3);up("#pr1 .c",11.5);
 tl.fromTo("#pr2 .a",{opacity:0,x:-40},{opacity:1,x:0,duration:0.2},12.07);tl.fromTo("#pr2 .b",{opacity:0,scale:1.6},{opacity:1,scale:1,duration:0.25,ease:"power4.out",transformOrigin:"0 50%"},12.35);up("#pr2 .c",13.0);

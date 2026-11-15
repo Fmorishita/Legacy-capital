@@ -23,7 +23,7 @@ const up=(s,t,o)=>tl.fromTo(s,{opacity:0,y:40},Object.assign({opacity:1,y:0,dura
 const pop=(s,t)=>tl.fromTo(s,{opacity:0,scale:0.3},{opacity:1,scale:1,duration:0.26,ease:"back.out(3)"},t);
 const fade=(s,t)=>tl.fromTo(s,{opacity:0},{opacity:1,duration:0.25,ease:"none"},t);
 '''
-SF={'imp':('quick-zoom-impact-772',1.25),'air':('air-zoom-vacuum-2608',1.3),'who':('cinematic-whoosh-fast-1492',1.38),'sw':('fast-small-sweep-166',0.8),'st':('short-transition-sweep-175',0.65),'fw':('fast-whoosh-1490',1.8)}
+SF={'imp':('quick-zoom-impact-772',1.25),'air':('air-zoom-vacuum-2608',1.3),'who':('cinematic-whoosh-fast-1492',1.38),'sw':('fast-small-sweep-166',0.8),'st':('short-transition-sweep-175',0.65),'fw':('fast-whoosh-1490',1.8),'wu':('syn-whoosh-up',0.6),'wd':('syn-whoosh-down',0.62),'ss':('syn-swish',0.31),'wl':('syn-whoosh-low',0.83),'pop':('syn-pop',0.2),'ph':('syn-pop-hi',0.18),'tk':('syn-tick',0.1),'coin':('syn-coin',0.73),'cha':('syn-chaching',1.14),'shim':('syn-shimmer',0.94),'rise':('syn-riser',1.04),'boom':('syn-boom',0.94),'thud':('syn-thud',0.33)}
 def page(n,dur,css,body,js,sfx):
     au=''
     for i,(k,t,v) in enumerate(sfx):
@@ -63,25 +63,26 @@ tl.to("#mapw",{scale:0.655,transformOrigin:"50% 0%",duration:0.32,ease:"power3.i
 fade("#note",3.7);tl.fromTo(".tm",{boxShadow:"0 0 0 0 rgba(255,208,134,.7)"},{boxShadow:"0 0 0 12px rgba(255,208,134,0)",duration:0.5,stagger:0.06},3.9);'''
 sfx=[('imp',0.0,0.5),('who',0.4,0.45),('air',1.7,0.35)]+[('st',2.05+i*0.3,0.45) for i in range(5)]+[('sw',3.65,0.4)]
 page(1,5,css,b,js,sfx)
-# ---------- MG2
+# ---------- MG2 (v3: mapa fijo y lugares grandes)
 cards=[('Punta Morro /<br>restaurante y hotel','aprox. 2 min'),('Soriana /<br>autoservicio','aprox. 3 min'),('CETYS<br>Universidad','aprox. 5 min'),('Hospitales y<br>servicios médicos','aprox. 7 min'),('Hotel Coral &amp; Marina','aprox. 4–5 min'),('OXXO y tiendas<br>de conveniencia','aprox. 4 min'),('UABC / CICESE','aprox. 3–4 min'),None]
 b=HEAD('Servicios y puntos de<br>interés alrededor','Vida diaria, educación, salud y conveniencia a pocos minutos del desarrollo.')
-b+='<div id="mapw" class="abs" data-layout-allow-overflow style="left:195px;top:510px;width:690px;height:771px;border-radius:34px;overflow:hidden;box-shadow:0 14px 40px rgba(14,42,74,.3)"><img id="mapi" src="assets/mapa.png" style="width:100%;height:100%;display:block" alt="" /></div>'
+b+='<div id="mapw" class="abs" data-layout-allow-overflow style="left:40px;top:515px;width:470px;height:525px;border-radius:30px;overflow:hidden;box-shadow:0 14px 40px rgba(14,42,74,.3)"><img id="mapi" src="assets/mapa.png" style="width:100%;height:100%;display:block" alt="" /></div>'
 order=[0,4,1,5,2,6,3,7]
 for k,ci in enumerate(order):
-    col=k%2;rw=k//2;c=cards[ci]
-    inner=(f'<div class="nm">{c[0]}</div><div class="pl">{c[1]}</div>' if c else '<div class="nm sm">A menos de</div><div class="pl big">800 metros</div><div class="nm sm">de la carretera de Ensenada</div>')
-    b+=f'<div class="card abs" id="c{k}" style="left:{40+col*505}px;top:{958+rw*88}px"><img src="assets/ico{ci+1}.png" alt="" /><div class="bar"></div><div class="tx">{inner}</div></div>'
-css='''.card{width:495px;height:82px;border-radius:22px;border:3px solid #E3B869;background:#FFFBF3;display:flex;align-items:center;padding:0 10px;box-shadow:0 6px 14px rgba(14,42,74,.14)}
-.card img{width:62px;height:62px;border-radius:50%;flex:none}.card .bar{width:4px;height:60px;background:#C99A2E;margin:0 12px;flex:none}
-.card .tx{display:flex;flex-wrap:wrap;align-items:center;gap:0 12px}
-.card .nm{font-family:"PPBold";font-size:21px;line-height:1.05;color:#132B6B}.card .pl{padding:0 14px 2px;border-radius:999px;background:#8A620C;color:#fff;font-size:20px;line-height:1.3;white-space:nowrap}
-.card .pl.big{font-family:"PPBold";font-size:21px}.card .nm.sm{font-size:17px;white-space:nowrap}'''
-js='''tl.fromTo("#mapw",{opacity:0,scale:0.5},{opacity:1,scale:1,duration:0.4,ease:"back.out(1.6)"},0.4);tl.fromTo("#mapi",{scale:1.3},{scale:1,duration:1.3,ease:"power2.out"},0.4);
-tl.to("#mapw",{scale:0.555,transformOrigin:"50% 0%",duration:0.32,ease:"power3.inOut"},1.75);
-[0,1,2,3,4,5,6,7].forEach(i=>{tl.fromTo("#c"+i,{opacity:0,y:50,scale:0.8},{opacity:1,y:0,scale:1,duration:0.24,ease:"back.out(2)"},2.0+i*0.2);pop("#c"+i+" .pl",2.1+i*0.2);});
-tl.fromTo(".card",{borderColor:"#E3B869"},{borderColor:"#C99A2E",duration:0.25,yoyo:true,repeat:1,stagger:0.04},3.85);'''
-sfx=[('imp',0.0,0.5),('who',0.35,0.45),('air',1.6,0.35)]+[('st',1.96+i*0.2,0.4) for i in range(8)]+[('sw',3.8,0.35)]
+    c=cards[ci]
+    inner=(f'<div class="nm">{c[0]}</div><div class="pl">{c[1]}</div>' if c else '<div class="nm sm">A menos de</div><div class="pl">800 metros</div><div class="nm sm">de la carretera de Ensenada</div>')
+    if k<4: pos=f'left:530px;top:{515+k*133.7:.0f}px;width:510px;height:124px'
+    else: pos=f'left:{40+((k-4)%2)*505}px;top:{1056+((k-4)//2)*128}px;width:495px;height:118px'
+    b+=f'<div class="card abs" id="c{k}" style="{pos}"><img src="assets/ico{ci+1}.png" alt="" /><div class="bar"></div><div class="tx">{inner}</div></div>'
+css='''.card{border-radius:26px;border:4px solid #E3B869;background:#FFFBF3;display:flex;align-items:center;padding:0 14px;box-shadow:0 8px 18px rgba(14,42,74,.16)}
+.card img{width:84px;height:84px;border-radius:50%;flex:none}.card .bar{width:5px;height:84px;background:#C99A2E;margin:0 14px;flex:none;border-radius:3px}
+.card .tx{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.card .nm{font-family:"PPBold";font-size:27px;line-height:1.08;color:#132B6B}.card .pl{padding:1px 18px 3px;border-radius:999px;background:#8A620C;color:#fff;font-family:"PPBold";font-size:25px;line-height:1.3;white-space:nowrap}
+.card .nm.sm{font-size:21px;white-space:nowrap}'''
+js='''tl.fromTo("#mapw",{opacity:0,scale:0.5},{opacity:1,scale:1,duration:0.4,ease:"back.out(1.6)"},0.4);tl.fromTo("#mapi",{scale:1.28},{scale:1,duration:4.4,ease:"power2.out"},0.4);
+[0,1,2,3,4,5,6,7].forEach(i=>{const t=0.95+i*0.27;tl.fromTo("#c"+i,i<4?{opacity:0,x:160,scale:0.85}:{opacity:0,y:70,scale:0.85},{opacity:1,x:0,y:0,scale:1,duration:0.26,ease:"back.out(2)"},t);pop("#c"+i+" .pl",t+0.12);});
+tl.fromTo(".card",{borderColor:"#E3B869"},{borderColor:"#C99A2E",duration:0.25,yoyo:true,repeat:1,stagger:0.04},3.6);'''
+sfx=[('imp',0.0,0.5),('wu',0.3,0.5)]+[(['pop','ph','thud','pop','ph','tk','pop','ph'][i],0.95+i*0.27,0.5) for i in range(8)]+[('shim',3.55,0.3)]
 page(2,5,css,b,js,sfx)
 # ---------- MG3
 X=[150,400,650,900]; yv=lambda v: 400-(v-4.0)*58
@@ -125,7 +126,7 @@ tl.fromTo(cv,{v:4.57},{v:9.80,duration:TD,ease:"none",onUpdate:()=>{document.get
 tl.to("#cnt",{scale:1.08,duration:0.12,yoyo:true,repeat:1},T0+TD);
 up("#pn",2.25);fade("#p0",2.3);up("#p1",2.4);up("#p2",2.55);fade("#f1",2.75);fade("#f2",2.85);
 tl.to("#p1 div:nth-child(2),#p2 div:nth-child(2)",{scale:1.1,duration:0.15,yoyo:true,repeat:1,transformOrigin:"0 50%"},3.3);'''
-sfx=[('imp',0.0,0.5),('sw',0.28,0.4),('fw',0.45,0.45)]+[('st',0.5+1.7*f,0.4) for f in (0.32,0.65)]+[('imp',2.2,0.45),('who',2.22,0.3),('st',2.4,0.35),('st',2.55,0.35),('sw',3.28,0.3)]
+sfx=[('imp',0.0,0.5),('wd',0.28,0.45),('rise',0.5,0.3),('pop',0.5+1.7*0.32,0.5),('ph',0.5+1.7*0.65,0.5),('coin',2.18,0.4),('wl',2.2,0.3),('thud',2.4,0.5),('thud',2.55,0.5),('shim',3.25,0.3)]
 page(3,4.2,'',b,js,sfx)
 # ---------- MG4
 b=HEAD('El Puente Financiero:<br>Apalancamiento Inteligente','')
@@ -153,7 +154,7 @@ rep=[('},1.1);tl.to("#cab"','},1.6);tl.to("#cab"'),('},1.15);\ntl.fromTo("#hg','
 ('ease:"power1.inOut"},3.4);','ease:"power1.inOut"},5.2);'),('ease:"power1.inOut"},3.55);','ease:"power1.inOut"},5.4);tl.to("#gr",{scale:1.06,transformOrigin:"50% 50%",duration:0.18,yoyo:true,repeat:1,ease:"power1.inOut"},6.75);')]
 for a_,b_ in rep:
     assert a_ in js4s,a_; js4s=js4s.replace(a_,b_)
-sfx4=[('imp',0.0,0.5),('fw',0.35,0.35),('imp',0.72,0.5),('who',1.55,0.45),('st',2.0,0.45),('st',2.41,0.45),('air',3.7,0.35),('imp',4.12,0.6),('sw',5.2,0.35),('imp',6.72,0.4)]
+sfx4=[('wd',0.3,0.45),('boom',0.72,0.5),('wu',1.55,0.5),('pop',2.0,0.5),('ph',2.45,0.5),('rise',3.2,0.3),('boom',4.14,0.6),('ss',5.2,0.4),('coin',6.72,0.35)]
 page('4s',7.9,'',b,js4s,sfx4)
 # ---------- MG5 rendimiento esperado
 b=HEAD('Rendimiento esperado<br>en 2 años','Escenario conservador · plusvalía + rentas a corto plazo')
@@ -178,6 +179,6 @@ tl.fromTo("#flash",{opacity:0.35},{opacity:0,duration:0.3,immediateRender:false}
 tl.fromTo("#k1",{opacity:0,x:-160},{opacity:1,x:0,duration:0.28,ease:"back.out(1.8)"},2.9);pop("#kp",3.15);tl.fromTo("#k2",{opacity:0,x:160},{opacity:1,x:0,duration:0.28,ease:"back.out(1.8)"},3.3);
 pop("#badge",3.8);fade("#f5",4.2);
 tl.to("#pct",{color:"#A47611",duration:0.3,yoyo:true,repeat:3,ease:"sine.inOut"},4.4);'''
-sfx5=[('imp',0.0,0.5),('who',0.3,0.4),('fw',0.6,0.4),('imp',2.48,0.6),('st',2.88,0.4),('sw',3.13,0.35),('st',3.28,0.4),('imp',3.78,0.4)]
+sfx5=[('imp',0.0,0.45),('wu',0.3,0.45),('rise',1.45,0.35),('cha',2.48,0.5),('boom',2.5,0.35),('wd',2.88,0.4),('pop',3.15,0.5),('ss',3.28,0.4),('ph',3.8,0.5),('shim',4.4,0.25)]
 page(5,6.0,css5,b,js5,sfx5)
 print('ok')

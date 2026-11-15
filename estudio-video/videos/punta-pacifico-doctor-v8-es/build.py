@@ -12,17 +12,17 @@ for i in range(len(words)-1): words[i][2]=min(words[i][2],words[i+1][1])
 DUR=74.2
 # id, ini, fin, img, origin, s0, s1, x0, x1, titular(l1,l2,sm), leyenda
 SC=[
-('s01',0,2.9,'doc','50% 30%',1.0,1.08,0,0,None,1),
-('s02',2.9,4.3,'v07','15% 20%',1.22,1.3,0,0,('DISFRUTAR','EN PAREJA',''),1),
+('s01',0,2.9,'doc','50% 0%',1.07,1.14,0,0,None,1),
+('s02',2.9,4.3,'v02','50% 60%',1.04,1.12,0,0,('DISFRUTAR','EN PAREJA',''),1),
 ('s03',4.3,6.25,'celebra','50% 40%',1.04,1.12,0,0,('INVERTIR Y CRECER','TU PATRIMONIO',''),1),
 ('s04',11.0,12.05,'v04','50% 50%',1.1,1.16,-2,2,None,1),
 ('s05',12.05,14.3,'v18','50% 60%',1.06,1.14,0,0,None,1),
 ('s06',14.3,16.75,'v27','50% 50%',1.04,1.12,0,0,('1 NIVEL','2 O 3 RECÁMARAS',''),1),
-('s07',16.75,18.25,'v25','90% 20%',1.2,1.28,0,0,('ROOF GARDEN','PRIVADO',''),1),
-('s08',18.25,19.95,'k16','50% 0%',1.5,1.58,0,0,('VISTA','AL MAR',''),1),
+('s07',16.75,18.25,'k05','40% 40%',1.42,1.5,0,0,('ROOF GARDEN','PRIVADO',''),1),
+('s08',18.25,19.95,'v07','0% 45%',1.15,1.22,0,0,('VISTA','AL MAR',''),1),
 ('s09',19.95,21.6,'v08','50% 50%',1.04,1.12,0,0,('TU PAUSA','EN LA ALBERCA',''),1),
 ('s10',21.6,24.25,'v09','50% 50%',1.1,1.1,-2,2,('PICKLEBALL','CON AMIGOS',''),1),
-('s11',24.25,25.15,'asador','40% 50%',1.04,1.12,0,0,('TARDES','DE ASADOR',''),1),
+('s11',24.25,25.15,'asador','40% 50%',1.04,1.12,0,0,None,1),
 ('s12',25.15,27.98,'v11','50% 50%',1.04,1.12,0,0,('CENAS EN','LAS AMENIDADES',''),1),
 ('s13',27.98,29.45,'roofcena','50% 50%',1.04,1.12,0,0,('O EN TU','ROOF PRIVADO',''),1),
 ('s14',29.45,31.4,'v13','50% 50%',1.1,1.1,2,-2,('CUIDA TU','LIQUIDEZ',''),1),
@@ -34,8 +34,11 @@ SC=[
 ('s20',59.85,60.9,'v22','45% 50%',1.1,1.18,0,0,('COCINA','EQUIPADA',''),1),
 ('s21',60.9,61.45,'v23','50% 50%',1.1,1.16,0,0,('CUARTOS',' ',''),1),
 ('s22',61.45,61.95,'v24','50% 50%',1.1,1.16,0,0,('BAÑOS',' ',''),1),
-('s23',61.95,63.85,'k05','50% 0%',1.75,1.83,0,0,('ROOF','EQUIPADO',''),1),
+('s23',61.95,63.85,'roofeq','50% 50%',1.04,1.12,0,0,('ROOF','EQUIPADO',''),1),
 ]
+CAPTOP={'s02':880,'s06':860,'s07':900,'s13':880,'s16':1165}
+HLTOP={'s14':700}
+ONE={'s11'}
 MG=[('mg2',6.25,4.75),('mg4',31.4,7.9),('mg3',39.3,2.8),('mg5',44.85,6.0)]
 PROMO=(63.85,67.45); END=(67.45,DUR)
 H=[];A=H.append
@@ -56,25 +59,24 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#071D29}
 .bg{overflow:hidden}.bg .kb{position:absolute;inset:0}.bg img{width:100%;height:100%;object-fit:cover;display:block}
 .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,29,41,.78) 0%,rgba(7,29,41,.45) 24%,rgba(7,29,41,.08) 38%,rgba(7,29,41,0) 50%,rgba(7,29,41,.35) 100%)}
 .hl{position:absolute;left:90px;top:290px;font-family:"PPCondensed",sans-serif;font-size:96px;line-height:1.16;letter-spacing:.01em;text-shadow:0 3px 10px rgba(0,0,0,.45)}
-.hl .l2{color:#FFD086}.hl .rule{width:150px;height:8px;background:#FFD086;margin-top:18px;border-radius:4px}
-.leg{position:absolute;left:65px;top:1200px;font-size:22px;letter-spacing:.06em;color:#fff;background:rgba(7,29,41,.7);border-radius:999px;padding:4px 16px}
+.hl .l2{color:#FFD086}.hl.one{top:285px;font-size:80px;display:flex;gap:20px;white-space:nowrap}.hl .rule{width:150px;height:8px;background:#FFD086;margin-top:18px;border-radius:4px}
 .cap{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;padding:4px 28px 8px;border-radius:20px;background:rgba(7,29,41,.5);text-align:center;font-family:"PPBold",sans-serif;font-size:60px;line-height:1.15;text-shadow:0 3px 8px rgba(0,0,0,.65)}
 .cap .w{color:#fff}
-#hook{position:absolute;left:80px;right:80px;top:300px;font-family:"PPCondensed";text-shadow:0 4px 14px rgba(0,0,0,.55)}
-#hook .a{font-size:110px;line-height:1.05;letter-spacing:.01em}
-#hook .b{font-size:84px;line-height:1.08;color:#FFD086;margin-top:12px}
-#hook .rule{width:170px;height:9px;border-radius:5px;background:#FFD086;margin-top:22px}
+#hook{position:absolute;left:80px;right:80px;top:285px;font-family:"PPCondensed";text-shadow:0 4px 14px rgba(0,0,0,.55)}
+#hook .a{font-size:100px;line-height:1.05;letter-spacing:.01em}
+#hook .b{font-size:68px;line-height:1.08;color:#FFD086;margin-top:10px}
+#hook .rule{width:170px;height:8px;border-radius:5px;background:#FFD086;margin-top:14px}
 .pr{position:absolute;left:90px;top:300px;text-shadow:0 4px 12px rgba(0,0,0,.55)}
 .pr .a{font-family:"PPCondensed";font-size:64px;line-height:1.2;color:#FFD086;letter-spacing:.08em}
 .pr .b{font-family:"PPCondensed";font-size:240px;line-height:1.3}
 .pr .c{font-family:"PPBold";font-size:46px;line-height:1.3}
-.chip{position:absolute;left:90px;height:100px;border-radius:999px;background:rgba(7,29,41,.85);border:3px solid #FFD086;display:flex;align-items:center;padding:0 38px;font-family:"PPBold";font-size:46px}
+.chip{position:absolute;left:90px;height:90px;border-radius:999px;background:rgba(7,29,41,.85);border:3px solid #FFD086;display:flex;align-items:center;padding:0 38px;font-family:"PPBold";font-size:46px}
 .chip span{color:#FFD086;margin-right:18px}
 /* rentas */
-#rent{position:absolute;left:65px;right:65px;top:290px;height:560px;border-radius:34px;background:rgba(7,29,41,.86);border:3px solid #FFD086;box-shadow:0 18px 50px rgba(0,0,0,.45)}
-#rent .t{position:absolute;left:44px;top:34px;font-family:"PPCondensed";font-size:64px;line-height:1.1;color:#FFD086}
-#rent .s{position:absolute;left:44px;top:112px;font-size:30px}
-.bar{position:absolute;bottom:60px;width:96px;border-radius:14px 14px 4px 4px;background:linear-gradient(180deg,#FFD086,#C99A2E)}
+#rent{position:absolute;left:65px;right:65px;top:285px;height:470px;border-radius:34px;background:rgba(7,29,41,.86);border:3px solid #FFD086;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+#rent .t{position:absolute;left:44px;top:22px;font-family:"PPCondensed";font-size:56px;line-height:1.1;color:#FFD086}
+#rent .s{position:absolute;left:44px;top:92px;font-size:28px}
+.bar{position:absolute;bottom:36px;width:96px;border-radius:14px 14px 4px 4px;background:linear-gradient(180deg,#FFD086,#C99A2E)}
 .coin{position:absolute;width:74px;height:74px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#FFF1C9,#E7B54A 55%,#A47611);border:4px solid #FFE7A8;color:#6B4A08;font-family:"PPBold";font-size:44px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(0,0,0,.35)}
 #rent-arrow{position:absolute;left:0;top:0}
 .plus{position:absolute;font-family:"PPBold";font-size:44px;color:#FFD086;text-shadow:0 3px 8px rgba(0,0,0,.6)}
@@ -105,23 +107,23 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#071D29}
 '''.replace('%DUR%',str(DUR)))
 for sid,a,b,img,org,s0,s1,x0,x1,hl,lg in SC:
     A(f'<div id="{sid}" class="clip bg" data-start="{a}" data-duration="{round(b-a,3)}" data-track-index="0"><div class="kb" data-layout-allow-overflow><img src="assets/img/{img}.jpg" alt="" /></div><div class="shade"></div>')
-    if hl: A(f'<div class="hl" id="{sid}-hl"><div class="l1">{hl[0]}</div><div class="l2">{hl[1]}</div><div class="rule"></div></div>')
+    if hl and sid in ONE: A(f'<div class="hl one" id="{sid}-hl"><div class="l1">{hl[0]}</div><div class="l2">{hl[1]}</div></div>')
+    elif hl: A(f'<div class="hl" id="{sid}-hl" style="top:{HLTOP.get(sid,290)}px"><div class="l1">{hl[0]}</div><div class="l2">{hl[1]}</div><div class="rule"></div></div>')
     if sid=='s01': A('<div id="hook"><div class="a">DOCTOR O MÉDICO,</div><div class="b">¿BUSCAS COMPRAR CASA CON VISTA AL MAR?</div><div class="rule"></div></div>')
     if sid=='s04': A('<div class="pr" id="pr1"><div class="a">DESDE</div><div class="b">$3.9</div><div class="c">MILLONES DE PESOS</div></div>')
     if sid=='s05': A('<div class="pr" id="pr2"><div class="a">HASTA</div><div class="b">$4.9</div><div class="c">MILLONES DE PESOS · MXN</div></div>')
     if sid=='s15':
         A('<div id="rent"><div class="t">INGRESOS POR RENTA</div><div class="s">Estancia corta · mes a mes</div>')
-        for i,h in enumerate([90,130,165,205,250,300]):
-            A(f'<div class="bar" id="rb{i}" style="left:{60+i*150}px;height:{h}px"></div><div class="coin" id="rc{i}" style="left:{71+i*150}px;top:{560-60-h-90}px">$</div>')
-        A('<svg id="rent-arrow" width="950" height="560" viewBox="0 0 950 560"><path id="ra" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1" d="M90,420 L240,380 L390,350 L540,300 L690,250 L860,150" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><polygon id="rah" points="860,150 822,152 846,182" fill="#fff" opacity="0"/></svg></div>')
-        for i,(x,y) in enumerate([(150,930),(760,900),(420,1000),(880,1010)]):
+        for i,h in enumerate([70,105,140,175,215,255]):
+            A(f'<div class="bar" id="rb{i}" style="left:{60+i*150}px;height:{h}px"></div><div class="coin" id="rc{i}" style="left:{71+i*150}px;top:{470-36-h-84}px">$</div>')
+        A('<svg id="rent-arrow" width="950" height="470" viewBox="0 0 950 470"><path id="ra" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1" d="M90,380 L240,345 L390,310 L540,270 L690,225 L860,150" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><polygon id="rah" points="860,150 822,152 846,182" fill="#fff" opacity="0"/></svg></div>')
+        for i,(x,y) in enumerate([(480,800),(610,870),(480,940),(610,1010)]):
             A(f'<div class="plus" id="pl{i}" style="left:{x}px;top:{y}px">+$</div>')
-    if sid=='s17': A('<div class="chip" id="ch1" style="top:300px"><span>●</span>Luces</div><div class="chip" id="ch2" style="top:420px"><span>●</span>Minisplit</div>')
-    if sid=='s18': A('<div class="chip" id="ch3" style="top:300px"><span>●</span>Cerradura digital</div><div class="chip" id="ch4" style="top:420px"><span>●</span>Desde tu celular</div>')
-    if lg: A('<div class="leg">Imagen ilustrativa</div>')
+    if sid=='s17': A('<div class="chip" id="ch1" style="top:290px"><span>●</span>Luces</div><div class="chip" id="ch2" style="top:290px;left:370px"><span>●</span>Minisplit</div>')
+    if sid=='s18': A('<div class="chip" id="ch3" style="top:285px"><span>●</span>Cerradura digital</div><div class="chip" id="ch4" style="top:390px"><span>●</span>Desde tu celular</div>')
     A('</div>')
 for k,a,d in MG:
-    A(f'<video id="{k}" class="clip mgv" src="assets/mg/{k}.mp4" data-start="{a}" data-duration="{d}" data-track-index="1" data-has-audio="true" data-volume="0.75" playsinline></video>')
+    A(f'<video id="{k}" class="clip mgv" src="assets/mg/{k}.mp4" data-start="{a}" data-duration="{d}" data-track-index="1" data-has-audio="true" data-volume="0.42" playsinline></video>')
 pa,pb=PROMO
 A(f'<div id="promo" class="clip" data-start="{pa}" data-duration="{round(pb-pa,3)}" data-track-index="0"><div id="rays"></div><div id="pz" data-layout-allow-overflow>')
 import math,random
@@ -136,19 +138,22 @@ A(f'''<div id="end" class="clip" data-start="{ea}" data-duration="{round(eb-ea,3
 <div id="captions" class="clip" data-start="0" data-duration="{DUR}" data-track-index="5"></div>
 <div id="leak-a" class="clip" data-composition-id="leak-a" data-composition-src="compositions/organic-light-leak-overlay.html" data-start="5.9" data-duration="1" data-width="1080" data-height="1920" data-track-index="6"></div>
 <div id="leak-b" class="clip" data-composition-id="leak-b" data-composition-src="compositions/organic-light-leak-overlay.html" data-start="67.0" data-duration="1" data-width="1080" data-height="1920" data-track-index="6"></div>
-<audio id="voz" src="assets/voz.wav" data-start="0" data-duration="73.06" data-track-index="8" data-volume="0.95"></audio>
-<audio id="musica" src="assets/musica.mp3" data-start="0" data-duration="{DUR}" data-media-start="8" data-track-index="9" data-volume="0.13" data-automation='{{"version":1,"lanes":[{{"target":"volume","points":[{{"t":0,"v":1}},{{"t":72.8,"v":1}},{{"t":{DUR},"v":0}}]}}]}}'></audio>
+<audio id="voz" src="assets/voz.wav" data-start="0" data-duration="73.06" data-track-index="8" data-volume="1"></audio>
+<audio id="musica" src="assets/musica.mp3" data-start="0" data-duration="{DUR}" data-media-start="8" data-track-index="9" data-volume="1" data-automation='{{"version":1,"lanes":[{{"target":"volume","points":[{{"t":0,"v":0.08}},{{"t":72.8,"v":0.08}},{{"t":{DUR},"v":0}}]}}]}}'></audio>
 ''')
-SFX={'sw':('fast-small-sweep-166',0.8),'st':('short-transition-sweep-175',0.65),'who':('cinematic-whoosh-fast-1492',1.38),'fw':('fast-whoosh-1490',1.8),'imp':('quick-zoom-impact-772',1.25),'air':('air-zoom-vacuum-2608',1.3)}
+SFX={'sw':('fast-small-sweep-166',0.8),'st':('short-transition-sweep-175',0.65),'who':('cinematic-whoosh-fast-1492',1.38),'fw':('fast-whoosh-1490',1.8),'imp':('quick-zoom-impact-772',1.25),'air':('air-zoom-vacuum-2608',1.3),
+ 'wu':('syn-whoosh-up',0.6),'wd':('syn-whoosh-down',0.62),'ss':('syn-swish',0.31),'wl':('syn-whoosh-low',0.83),'pop':('syn-pop',0.2),'ph':('syn-pop-hi',0.18),'tk':('syn-tick',0.1),'coin':('syn-coin',0.73),'cha':('syn-chaching',1.14),'shim':('syn-shimmer',0.94),'rise':('syn-riser',1.04),'boom':('syn-boom',0.94),'thud':('syn-thud',0.33)}
 mgst=set(a for _,a,_ in MG)
 cuts=sorted(set([a for _,a,*_ in SC if a>0]+[PROMO[0],END[0]]))
+rot=['wu','ss','wd','sw','wl','ss','st','wu','wd','ss']
 ev=[]
 for i,c in enumerate(cuts):
-    if c in mgst: continue
-    ev.append(('sw' if i%2 else 'st',max(0,c-0.2),0.22))
-ev+=[('imp',0.05,0.32),('imp',11.0,0.3),('imp',12.05,0.3),('st',42.3,0.2),('st',42.6,0.2),('st',42.9,0.2),('st',43.2,0.2),('st',43.5,0.2),('st',43.8,0.2),('imp',44.2,0.25),
-     ('st',53.95,0.2),('st',54.45,0.2),('st',55.8,0.2),('st',56.3,0.2),
-     ('air',63.6,0.45),('fw',63.85,0.3),('imp',64.75,0.6),('imp',65.9,0.4),('who',67.35,0.35),('imp',67.9,0.3)]
+    if c in mgst or c in (PROMO[0],END[0]): continue
+    k=rot[i%len(rot)]; ev.append((k,max(0,c-(0.3 if k in('wu','wl') else 0.15)),0.2))
+ev+=[('boom',0.05,0.3),('thud',11.3,0.4),('boom',12.33,0.3),
+     ('tk',42.3,0.35),('coin',42.6,0.22),('tk',42.9,0.35),('coin',43.2,0.22),('tk',43.5,0.35),('coin',43.8,0.22),('cha',44.2,0.25),
+     ('pop',53.9,0.4),('ph',54.4,0.4),('pop',55.75,0.4),('ph',56.25,0.4),
+     ('rise',63.72,0.35),('boom',64.76,0.55),('cha',64.78,0.35),('shim',65.15,0.22),('shim',66.3,0.18),('wl',67.2,0.25),('thud',67.6,0.35),('pop',68.7,0.35)]
 for i,(k,t,v) in enumerate(ev):
     f,d=SFX[k]
     A(f'<audio id="sfx{i}" src="assets/sfx/{f}.mp3" data-start="{round(t,3)}" data-duration="{d}" data-track-index="{10+i%9}" data-volume="{v}"></audio>')
@@ -160,10 +165,10 @@ for sid,a,b,*_ in SC:
     for w in words:
         if not (a-0.06<=w[1]<b-0.06): continue
         if cur and (len(cur)>=4 or len(' '.join(x[0] for x in cur))+len(w[0])>21 or cur[-1][0][-1] in ',.:;?'):
-            groups.append((cur,b)); cur=[]
+            groups.append((cur,b,sid)); cur=[]
         cur.append(w)
-    if cur: groups.append((cur,b))
-G=[{'top':1085,'end':min(b,g[-1][2]+0.5),'w':g} for g,b in groups]
+    if cur: groups.append((cur,b,sid))
+CT=dict(CAPTOP); G=[{'top':CT.get(sid,1085),'end':min(b,g[-1][2]+0.5),'w':g} for g,b,sid in groups]
 A('const CAPS='+json.dumps(G,ensure_ascii=False)+';')
 A('''const host=document.getElementById("captions");
 CAPS.forEach((g,gi)=>{const line=document.createElement("div");line.className="cap";line.id="cap-"+gi;line.style.top=g.top+"px";line.style.opacity="0";
@@ -177,8 +182,8 @@ for sid,a,b,img,org,s0,s1,x0,x1,hl,lg in SC:
     d=round(b-a,3)
     A(f'tl.fromTo("#{sid} .kb",{{scale:{s0},xPercent:{x0},transformOrigin:"{org}"}},{{scale:{s1},xPercent:{x1},duration:{d},ease:"none"}},{a});')
     if hl:
-        A(f'tl.fromTo("#{sid}-hl .l1",{{opacity:0,x:-50}},{{opacity:1,x:0,duration:0.22,ease:"power3.out"}},{round(a+0.05,3)});tl.fromTo("#{sid}-hl .l2",{{opacity:0,x:-50}},{{opacity:1,x:0,duration:0.22,ease:"power3.out"}},{round(a+0.14,3)});tl.fromTo("#{sid}-hl .rule",{{scaleX:0,transformOrigin:"0 50%"}},{{scaleX:1,duration:0.25,ease:"power2.out"}},{round(a+0.22,3)});')
-    A(f'tl.fromTo("#{sid} .leg",{{opacity:0}},{{opacity:1,duration:0.2}},{round(a+0.1,3)});')
+        A(f'tl.fromTo("#{sid}-hl .l1",{{opacity:0,x:-50}},{{opacity:1,x:0,duration:0.22,ease:"power3.out"}},{round(a+0.05,3)});tl.fromTo("#{sid}-hl .l2",{{opacity:0,x:-50}},{{opacity:1,x:0,duration:0.22,ease:"power3.out"}},{round(a+0.14,3)});')
+        if sid not in ONE: A(f'tl.fromTo("#{sid}-hl .rule",{{scaleX:0,transformOrigin:"0 50%"}},{{scaleX:1,duration:0.25,ease:"power2.out"}},{round(a+0.22,3)});')
 # partículas promo (deterministas)
 pts=[]
 for i in range(28):

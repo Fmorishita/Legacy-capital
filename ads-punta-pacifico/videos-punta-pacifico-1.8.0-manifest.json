@@ -1,0 +1,117 @@
+{
+  "ok": true,
+  "name": "videos-punta-pacifico",
+  "version": "1.8.0",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 12983,
+      "sha256": "2f366415f36e1048444ba334cd102a985d95824930c15ea5ba76f798712c0f55"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4633,
+      "sha256": "e32424214c590d3d20d363151edba549356135832f9e37f8def829f1475a0848"
+    },
+    {
+      "path": "SKILL.md",
+      "bytes": 20254,
+      "sha256": "6c9051bc2c15c446aeee0eca42dc60cc91ae0f9de3cc5150fe8427aae7cb0ab0"
+    },
+    {
+      "path": "VERSION",
+      "bytes": 6,
+      "sha256": "3eb1ef94b5890ca727158b106142685c8733b0ace5bcb4cf3f0ac14f9f0643f4"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "bytes": 374,
+      "sha256": "35b43db710f6ca3ce54b323c6f2692fd70ad1114799e9005d0e3a2c086dc5a4d"
+    },
+    {
+      "path": "metadata.json",
+      "bytes": 4863,
+      "sha256": "9858eb29d9498a1f97dd46909bd714431499fffe6adcee24602c7b294ff246ea"
+    },
+    {
+      "path": "references/contexto-punta-pacifico.md",
+      "bytes": 13029,
+      "sha256": "a7f7511b87c4ac4e1bac12953cd9be27c3e1d4ff1c12a1cebc168fc585559905"
+    },
+    {
+      "path": "references/editor-visual-y-feedback.md",
+      "bytes": 21514,
+      "sha256": "7a8da29bc52fb8609d9da0273a4c31e5b8b3efe8fd27ac2639c7e28000f51430"
+    },
+    {
+      "path": "references/entrega-portable-ia.md",
+      "bytes": 10933,
+      "sha256": "02d1e0ba6bb4ff72cd566772bfd7355ec5f973de95981ac28823b4be63321478"
+    },
+    {
+      "path": "references/guion-imagen-audio.md",
+      "bytes": 12585,
+      "sha256": "5594f58d1a65337b9ab95a8d08a109bb56ea7ff2eedf391b010d92fc458cb6d5"
+    },
+    {
+      "path": "references/higgsfield-y-presupuesto.md",
+      "bytes": 10164,
+      "sha256": "1bfec6c7e4741bf8a76311eba9490f36f11f5f12062cb314e72974bb5b97dacc"
+    },
+    {
+      "path": "references/hyperframes-y-entrega.md",
+      "bytes": 7118,
+      "sha256": "80778ab13fa7b4789ddedf07e3407e66b510b793ab9828cc4b464b901c8bbf79"
+    },
+    {
+      "path": "references/mantenimiento.md",
+      "bytes": 4506,
+      "sha256": "3da493b5f4ed12d8c9f740b23c0c901008d22fecbf06798c1be4294829d3900c"
+    },
+    {
+      "path": "references/marca-version-y-qa-visual.md",
+      "bytes": 3788,
+      "sha256": "039c091e6562859db99d19e3531998696a75b5c8714464fe207c52541e853ade"
+    },
+    {
+      "path": "references/qa-y-lecciones.md",
+      "bytes": 13034,
+      "sha256": "2a6683e2ad8a8e744cb8a6268a74c98046c26b6de4dd4fc2e9622417e6aa46a2"
+    },
+    {
+      "path": "scripts/export.py",
+      "bytes": 2118,
+      "sha256": "55620cdfcc7d17dfddfd5a4444a0c02be882813c029683809e5fbf6172cd8f13"
+    },
+    {
+      "path": "scripts/install.py",
+      "bytes": 4722,
+      "sha256": "0f0b25657d3e56c0887ec7b1589b7ad8b7265b3545a05a54e2ff5920bc469a6c"
+    },
+    {
+      "path": "scripts/validate.py",
+      "bytes": 4139,
+      "sha256": "9d952a6cd9196a8cdc1c9feeae1f8c3513b15a23c99c6fc0afcbd690aae94628"
+    },
+    {
+      "path": "templates/decision.md",
+      "bytes": 670,
+      "sha256": "0161ac58b59994cab0cbb9aa78746d050558f8c21092908183c4f33713dbdaac"
+    },
+    {
+      "path": "templates/proyecto.json",
+      "bytes": 7259,
+      "sha256": "d408061927060a58d2b7a5c25c78f28f773099744c4a423dda9ed050d566f016"
+    },
+    {
+      "path": "templates/storyboard.json",
+      "bytes": 3279,
+      "sha256": "a8a7bc5867d91caccea3be796e4c6ca7aa9f419349170a13cb5a4183d9eb844e"
+    }
+  ],
+  "skill_sha256": "6c9051bc2c15c446aeee0eca42dc60cc91ae0f9de3cc5150fe8427aae7cb0ab0",
+  "archive": "videos-punta-pacifico-1.8.0.zip",
+  "latest": "videos-punta-pacifico-latest.zip",
+  "archive_bytes": 73106,
+  "archive_sha256": "542937e029d19f9508eb7a630b9858c2838abee6d20170d5153be329b968bc86"
+}

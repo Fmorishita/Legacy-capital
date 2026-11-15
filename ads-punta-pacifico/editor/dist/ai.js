@@ -3,7 +3,7 @@ import {mountVoiceInput} from './voice-input.js';
 const $=id=>document.getElementById(id);
 const stateLabels={queued:'Lista para ChatGPT',planning:'Revisando tus comentarios',generating:'Creando recursos',voice:'Preparando voz y subtítulos',applying:'Integrando los cambios',completed:'Cambios listos',needs_input:'Necesita un detalle',failed:'No se pudo terminar',cancelled:'Cancelada'};
 export async function projectRevision(project){
- const transient=new Set(['updatedAt','aiDraftRequestKey','aiInstructionDraft','aiVoiceDrafts','aiAppliedRequestIds','missingAssets','lastChange','version']);
+ const transient=new Set(['updatedAt','cloudRevision','cloudContentRevision','cloudSavedAt','aiDraftRequestKey','aiInstructionDraft','aiVoiceDrafts','aiAppliedRequestIds','missingAssets','lastChange','version']);
  const clean=value=>Array.isArray(value)?value.map(clean):value&&typeof value==='object'?Object.fromEntries(Object.keys(value).sort().filter(k=>!transient.has(k)&&!(value.blobId&&['url','thumbnail'].includes(k))).map(k=>[k,clean(value[k])])):value;
  const bytes=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(JSON.stringify(clean(project))));return [...new Uint8Array(bytes)].map(n=>n.toString(16).padStart(2,'0')).join('');
 }
@@ -45,13 +45,13 @@ export function mountAI(hooks){
  top.onclick=open;$('stageAIBtn').onclick=open;
  document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>document.body.classList.toggle('ai-mode',b.dataset.tab==='ai')));
  function refreshContext(){
-  const p=hooks.getProject();if(lastProjectId!==p.id){lastProjectId=p.id;requests=[];textarea.value=p.aiInstructionDraft||'';voice.refresh();if($('aiRequests'))renderRequests();}const s=p.scenes.find(s=>s.id===hooks.getSelectedSceneId())||p.scenes[0],a=p.assets.find(a=>a.id===s.mediaId),open=p.comments?.filter(c=>!c.resolved)||[];
+  const p=hooks.getProject();textarea.placeholder=/doctor|médic|medic/i.test(p.title)?'Ej. En la escena 1 cambia la imagen del doctor. Ajusta el gancho y vuelve a generar la voz.':'Ej. Cambia la primera escena, reescribe el gancho y genera una voz más natural. Usa el estilo del video de referencia.';if(lastProjectId!==p.id){lastProjectId=p.id;requests=[];textarea.value=p.aiInstructionDraft||'';voice.refresh();if($('aiRequests'))renderRequests();}const s=p.scenes.find(s=>s.id===hooks.getSelectedSceneId())||p.scenes[0],a=p.assets.find(a=>a.id===s.mediaId),open=p.comments?.filter(c=>!c.resolved)||[];
   $('aiContext').innerHTML=`${a?.type==='image'?`<img src="${esc(a.thumbnail||a.url)}" alt="">`:'<span>▶</span>'}<div><strong>${esc(s.title)}</strong><small>${formatTime(s.start,true)} · ${s.duration.toFixed(1)} s <button class="text-btn" id="aiUseScene">Usar esta escena</button></small></div>`;
   $('aiUseScene').onclick=()=>$('aiScope').value='scene';$('aiOpenCommentCount').textContent=open.length;
   $('aiReferenceSummary').textContent=p.references?.length?`${p.references.length} referencia(s) disponibles para la solicitud.`:'Puedes subir videos o imágenes en Referencias antes de pedir el cambio.';
  }
  const examples={image:'Genera una nueva imagen para esta escena, con el mismo doctor usando el espacio que describe la narración. Conserva la arquitectura, la vista al mar y un solo tragaluz en el roof. Sustituye la imagen e intégrala en el video.',voice:'Reescribe el gancho para hablarle directamente al doctor. Regenera la voz completa con fluidez natural, ajusta los tiempos de las escenas y vuelve a sincronizar todos los subtítulos.',edit:'Dale más energía a la edición: mejora la música, sincroniza los efectos de sonido con los textos y usa transiciones B-roll con intención. Conserva el guion, los datos comerciales y la arquitectura.'};
- panel.querySelectorAll('[data-ai-example]').forEach(b=>b.onclick=()=>{textarea.value=examples[b.dataset.aiExample];textarea.dispatchEvent(new Event('input',{bubbles:true}));textarea.focus();});
+ panel.querySelectorAll('[data-ai-example]').forEach(b=>b.onclick=()=>{const doctor=/doctor|médic|medic/i.test(hooks.getProject().title);const generic={image:'Genera una nueva imagen para esta escena que corresponda a la narración. Conserva la identidad de los personajes y el entorno del proyecto; sustituye la imagen e intégrala en el montaje.',voice:'Reescribe el gancho para hablarle directamente al público de este proyecto. Regenera una voz completa y natural, realinea las escenas y sincroniza todos los subtítulos.'};textarea.value=(!doctor&&generic[b.dataset.aiExample])||examples[b.dataset.aiExample];textarea.dispatchEvent(new Event('input',{bubbles:true}));textarea.focus();});
  async function snapshot(){
   const p=structuredClone(hooks.getProject());delete p.aiVoiceDrafts;delete p.aiInstructionDraft;delete p.aiDraftRequestKey;
   for(const a of [...p.assets,...(p.references||[])]){
@@ -69,7 +69,7 @@ export function mountAI(hooks){
   const chatWindow=window.open('about:blank','_blank');if(chatWindow)chatWindow.opener=null;
   try{
    await hooks.store.saveVersion(p,'Antes de solicitar cambios con IA');const baseRevision=await projectRevision(p),project=await snapshot();const voiceNotes=[];
-   for(const note of p.aiVoiceDrafts||[]){const blob=await hooks.store.getBlob(note.blobId);if(!blob)throw Error('Falta una nota de voz. Vuelve a grabarla o adjuntarla.');const media=await api('/api/media/'+encodeURIComponent(note.id),{method:'PUT',body:blob,headers:{'Content-Type':note.mime||blob.type}});voiceNotes.push({id:note.id,name:note.name,url:media.url,mime:note.mime,duration:note.duration,transcript:note.transcript});}
+   for(const note of p.aiVoiceDrafts||[]){let url=note.url;if(note.blobId){const blob=await hooks.store.getBlob(note.blobId);if(!blob)throw Error('Falta una nota de voz. Vuelve a grabarla o adjuntarla.');const media=await api('/api/media/'+encodeURIComponent(note.id),{method:'PUT',body:blob,headers:{'Content-Type':note.mime||blob.type}});url=media.url;}if(!/^\/api\/media\/[A-Za-z0-9_.-]+$/.test(url||''))throw Error('Vuelve a adjuntar esta nota de voz antes de enviarla.');voiceNotes.push({id:url.split('/').pop(),name:note.name,url,mime:note.mime,duration:note.duration,transcript:note.transcript});}
    let key=p.aiDraftRequestKey;if(!key){key=crypto.randomUUID();p.aiDraftRequestKey=key;}
    await hooks.store.save(p);const result=await api('/api/ai/requests',{method:'POST',body:JSON.stringify({project,instructions,comments,voiceNotes,scope:$('aiScope').value,sceneId:hooks.getSelectedSceneId(),idempotencyKey:key,baseRevision,mode:'chatgpt'})});
    delete p.aiDraftRequestKey;p.aiInstructionDraft='';p.aiVoiceDrafts=[];clearTimeout(draftTimer);await hooks.store.save(p);textarea.value='';voice.refresh();const url=chatGPTRequestURL(result.request.id);
@@ -85,7 +85,7 @@ export function mountAI(hooks){
  }
  async function apply(id,manual=false){
   try{const current=hooks.getProject();if(!manual&&voice.recording)return;if(!manual&&(current.aiAppliedRequestIds||[]).includes(id))return;
-   const result=await api(`/api/ai/requests/${encodeURIComponent(id)}/result`);await hooks.applyResult(result.project,{requestId:id,summary:result.summary,baseUpdatedAt:result.baseUpdatedAt,baseRevision:result.baseRevision});renderRequests();
+   const result=await api(`/api/ai/requests/${encodeURIComponent(id)}/result`);if(hooks.getProject().id!==current.id)return;await hooks.applyResult(result.project,{requestId:id,summary:result.summary,baseUpdatedAt:result.baseUpdatedAt,baseRevision:result.baseRevision});renderRequests();
   }catch(error){hooks.notify(error.message,'error',8000);}
  }
  async function refresh(){

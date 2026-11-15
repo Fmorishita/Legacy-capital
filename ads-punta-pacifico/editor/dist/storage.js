@@ -122,7 +122,7 @@ export class ProjectStore {
   async listProjects() {
     const db = await this.open();
     const records = await requestResult(db.transaction('projects', 'readonly').objectStore('projects').getAll());
-    return records.map(({id,title,updatedAt,version}) => ({id,title,updatedAt,version})).sort((a,b) => (b.updatedAt || '').localeCompare(a.updatedAt || ''));
+    return records.map(p => {const first=(p.assets||[]).find(a=>a.id===p.scenes?.[0]?.mediaId),image=(p.assets||[]).find(a=>a.type==='image');return {id:p.id,title:p.title,updatedAt:p.updatedAt,version:p.version,duration:p.duration,width:p.width,height:p.height,sceneCount:p.scenes?.length||0,assetCount:p.assets?.length||0,thumbnail:first?.thumbnail||(first?.type==='image'?first.url:null)||image?.url||null,sources:p.sources||[],cloudRevision:p.cloudRevision,storage:'device'};}).sort((a,b) => (b.updatedAt || '').localeCompare(a.updatedAt || ''));
   }
   async save(project) {
     validateProject(project);

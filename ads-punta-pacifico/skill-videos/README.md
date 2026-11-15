@@ -1,6 +1,8 @@
-# Videos Punta Pacífico · Skill 1.7.0
+# Videos Punta Pacífico · Skill 1.8.0
 
 Esta carpeta contiene la skill completa. Empieza por SKILL.md; las referencias desarrollan investigación, guion, imágenes, audio, HyperFrames, animación solicitada con presupuesto, QA, kits portables para otras IA, editor visual con feedback y mantenimiento.
+
+La versión 1.8.0 añade Inicio y proyectos independientes por video. Guardar conserva el proyecto y sus medios en el espacio privado del Site para abrirlos desde otro dispositivo; los borradores y su historial siguen siendo locales. Permite subir videos, importar JSON editables y vincular carpetas de Drive o repositorios/carpetas de GitHub como fuentes. Sus enlaces no equivalen a una conexión o sincronización: la importación mediante esas cuentas se solicita explícitamente a ChatGPT con las herramientas que tenga disponibles. Un MP4 no recupera automáticamente sus capas originales.
 
 La versión 1.7.0 añade una vista móvil centrada en Cambios con IA, herramientas desplegables y grabación de indicaciones por voz para revisarlas y enviarlas con el ChatGPT actual. El dictado depende del navegador; el audio se conserva como instrucción privada. No añade una API de IA de pago.
 
@@ -41,4 +43,4 @@ python scripts/export.py --out /ruta/entregables
 
 Exportar conserva una copia con versión y otra `latest.zip`, genera hashes y verifica que los archivos del ZIP coincidan con la carpeta fuente. Subir la descarga vigente al destino autorizado y verificarla antes de enlazarla.
 
-El editor incluye «Cambios con IA» como entrada principal. Las solicitudes privadas se envían a ChatGPT mediante la conexión MCP del Site; la IA devuelve los recursos y el proyecto para incorporarlos automáticamente. El usuario envía el mensaje en ChatGPT; no se configura una API de IA de pago ni se promete ejecución sin una sesión del asistente.
+El editor abre en Inicio; dentro del proyecto, «Cambios con IA» es la entrada principal de edición. Las solicitudes privadas se envían a ChatGPT mediante la conexión MCP del Site; la IA devuelve los recursos y el proyecto para incorporarlos automáticamente. El usuario envía el mensaje en ChatGPT; no se configura una API de IA de pago ni se promete ejecución sin una sesión del asistente.

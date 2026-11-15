@@ -1,6 +1,8 @@
 import * as UI from './ui.js';
 import {mountAI,projectRevision} from './ai.js';
 import {mountMobileWorkbench} from './mobile.js';
+import {mountProjects} from './projects.js';
+import {createCloudLibrary,createVideoProject,createBlankProject,normalizeSource} from './project-transfer.js';
 import {StudioEngine} from './engine.js';
 import {exportVideo,availableVideoFormats,downloadBlob,exportFrame} from './exporter.js';
 import {ProjectStore,blobToDataURL,validateProject} from './storage.js';
@@ -11,7 +13,8 @@ const $=id=>document.getElementById(id), esc=UI.escapeHTML;
 const store=new ProjectStore();
 let project,original,engine,selectedSceneId,selectedLayerId,selectedTrackId,selectedCaptionId;
 let undo=[],redo=[],saveTimer,mediaFilter='all',commentFilter='all',activeTab='scenes',snap=true,exporting=false;
-let aiPanel=null;
+let aiPanel=null,projectHub=null,cloudSaving=false;
+const cloudLibrary=createCloudLibrary({store});
 let latestAnalysis=null,latestReferenceId=null,dragScene=null,saveGeneration=0;
 const scene=()=>project.scenes.find(s=>s.id===selectedSceneId)||project.scenes[0];
 const track=()=>project.audioTracks.find(t=>t.id===selectedTrackId);
@@ -25,7 +28,7 @@ function tab(name){activeTab=name;UI.setActiveTab(name);}
 function status(text,saved=false){$('saveStatus').innerHTML=`<i></i>${esc(text)}`;$('saveStatus').classList.toggle('unsaved',!saved);}
 function scheduleSave(){
  clearTimeout(saveTimer);status('Guardando…');const n=++saveGeneration;
- saveTimer=setTimeout(async()=>{try{await store.save(project);if(n===saveGeneration)status('Guardado en este navegador',true);}catch(e){status('Descarga una copia');fail(e);}},650);
+ saveTimer=setTimeout(async()=>{try{const current=project;await store.save(current);if(n===saveGeneration){status('Borrador guardado en este equipo',true);projectHub?.refreshContext();};}catch(e){status('Descarga una copia');fail(e);}},650);
 }
 function checkpoint(){undo.push(M.clone(project));if(undo.length>40)undo.shift();redo=[];}
 function markTiming(){project.voiceStale=true;project.timingChanged=true;}
@@ -48,7 +51,7 @@ function renderInspector(){
  const transition=s.transition?.type||'cut';$('sceneTransition').value=[...$('sceneTransition').options].some(o=>o.value===transition)?transition:transition.startsWith('dip')?'flash':'cut';
 }
 function renderUI(inspector=true){
- if(!project)return;UI.updateProjectHeader(project);UI.renderScenes(project,{selectedSceneId,query:$('sceneSearch').value});
+ if(!project)return;$('previewCanvas').setAttribute('aria-label','Vista previa editable de '+project.title);UI.updateProjectHeader(project);UI.renderScenes(project,{selectedSceneId,query:$('sceneSearch').value});
  UI.renderMedia(project,{filter:mediaFilter});UI.renderTimeline(project,{selectedSceneId,time:engine?.currentTime||0,zoom:+$('timelineZoom').value});
  if(inspector)renderInspector();UI.renderAudio(project,selectedTrackId);UI.renderCaptions(project,{selectedId:selectedCaptionId});UI.renderComments(project,{filter:commentFilter});UI.renderReferences(project);if($('referenceSelect')){$('referenceSelect').innerHTML=project.references.map(r=>`<option value="${esc(r.id)}" ${r.id===latestReferenceId?'selected':''}>${esc(r.name)}</option>`).join('');}
  if(document.activeElement!==$('fullScript'))$('fullScript').value=project.script||'';
@@ -60,14 +63,14 @@ function renderUI(inspector=true){
  const colors=project.brand?.colors||{};for(const[k,id]of [['navy','brandNavy'],['gold','brandGold'],['cream','brandCream']])$(id).value=colors[k]||'#1A2B4C';
  $('brandLogoSelect').innerHTML=project.assets.filter(a=>a.type==='image').map(a=>`<option value="${esc(a.id)}" ${a.id===project.brand.logoAssetId?'selected':''}>${esc(a.name)}</option>`).join('');
  $('masterVolume').value=project.masterVolume??1;$('masterVolumeValue').value=`${Math.round((project.masterVolume??1)*100)}%`;$('versionBadge').textContent=project.version||'Borrador';$('assetStatus').textContent=`${project.scenes.length} escenas · ${project.assets.length} archivos`;
- aiPanel?.refreshContext();$('undoBtn').disabled=!undo.length;$('redoBtn').disabled=!redo.length;updateTime(engine?.currentTime||0);UI.mountIcons();
+ aiPanel?.refreshContext();projectHub?.refreshContext();$('undoBtn').disabled=!undo.length;$('redoBtn').disabled=!redo.length;updateTime(engine?.currentTime||0);UI.mountIcons();
 }
 function updateTime(time){UI.updatePlayhead(time,+$('timelineZoom').value);$('commentAnchorLabel').textContent=`${M.sceneAt(project,time)?.title||'Escena'} · ${UI.formatTime(time,true)}`;}
 async function loadProject(next,{save=true}={}){
- validateProject(next);engine?.dispose();project=next;project.audioTracks||=[];project.captions||=[];project.comments||=[];project.references||=[];project.overlays||=[];for(const t of project.audioTracks)if(t.kind==='sfx'&&!t.sceneId)t.sceneId=M.sceneAt(project,t.start).id;project.subtitleStyle||={enabled:true};project.brand||={name:'Mi marca',colors:{navy:'#1A2B4C',gold:'#C5A564',cream:'#F5F0E6'}};
+ validateProject(next);clearTimeout(saveTimer);saveTimer=null;saveGeneration++;engine?.dispose();project=next;project.audioTracks||=[];project.captions||=[];project.comments||=[];project.references||=[];project.sources||=[];project.overlays||=[];for(const t of project.audioTracks)if(t.kind==='sfx'&&!t.sceneId)t.sceneId=M.sceneAt(project,t.start).id;project.subtitleStyle||={enabled:true};project.brand||={name:'Mi marca',colors:{navy:'#1A2B4C',gold:'#C5A564',cream:'#F5F0E6'}};
  selectedSceneId=project.scenes[0].id;selectedLayerId=null;selectedTrackId=project.audioTracks[0]?.id;undo=[];redo=[];
  $('stageLoading').hidden=false;engine=new StudioEngine(project,$('previewCanvas'),{onTime:updateTime,onPlayState:playing=>{$('playBtn').innerHTML=UI.icon(playing?'pause':'play');$('playBtn').setAttribute('aria-label',playing?'Pausar':'Reproducir');},onError:fail});
- renderUI();await engine.ready();$('stageLoading').hidden=true;localStorage.setItem('legacy-active-project',project.id);if(save)scheduleSave();else status('Guardado en este navegador',true);
+ renderUI();await engine.ready();$('stageLoading').hidden=true;localStorage.setItem('legacy-active-project',project.id);if(save)scheduleSave();else status(project.cloudRevision?'Proyecto privado guardado':'Borrador guardado en este equipo',true);
  $('canvasShell').style.aspectRatio=`${project.width}/${project.height}`;
  if(project.missingAssets?.length)UI.toast('Hay archivos subidos que faltan en este navegador. Importa una copia portable o vuelve a subirlos.','error',10000);
 }
@@ -100,8 +103,8 @@ async function downloadProject(){
 }
 const fileName=()=>project.title.replace(/[^\p{L}\p{N}\-_ ]/gu,'').trim().replace(/\s+/g,'_')||'Mi_video';
 function textFile(text,name,mime='text/plain'){downloadBlob(new Blob([text],{type:mime}),name);}
-function showHelp(){UI.openDialog(`<span class="eyebrow">LEGACY STUDIO</span><h2>Edita tu anuncio, escena por escena</h2><ol class="guide-list"><li><b>Escenas.</b> Elige una toma, cambia su imagen o video, duración, encuadre, transición y movimiento. Arrastra las tarjetas para reordenarlas.</li><li><b>Capas.</b> Selecciona textos, cifras, logo o gráficas desde el inspector o directamente sobre el video. Arrastra los elementos para colocarlos.</li><li><b>Audio y guion.</b> La locución, música y efectos son independientes. Si cambias el guion o los tiempos, sube una voz nueva y revisa los subtítulos. El editor no genera automáticamente una locución nueva.</li><li><b>Comentarios.</b> Pausa en el momento exacto y deja una nota pendiente o resuelta.</li><li><b>Referencias.</b> Sube un video, elige un intervalo y qué tomar de él. El análisis mide cortes y color; las instrucciones de texto, sonido y otros detalles quedan en el brief para la edición con IA.</li><li><b>Guarda y exporta.</b> Los cambios y versiones se guardan en este navegador. Descarga el proyecto editable para llevarlo a otro dispositivo o adjuntarlo aquí junto con el brief. Exporta el video en MP4 si tu navegador lo permite, o WebM.</li></ol><p class="notice">La composición editable reproduce los materiales y tiempos del V6. La exportación del editor usa su propio motor; el MP4 original permanece disponible como referencia.</p><div class="button-pair"><button class="button" id="originalPreviewBtn">Ver V6 original</button><button class="button gold" id="helpDoneBtn">Empezar a editar</button></div>`);on('helpDoneBtn','click',()=>UI.closeDialog());on('originalPreviewBtn','click',showOriginal);}
-function showOriginal(){const ref=project.assets.find(a=>a.id==='original-reference')||original.assets.find(a=>a.id==='original-reference');UI.openDialog(`<h2>Doctor V6 original</h2><video controls playsinline style="max-height:66vh;max-width:100%;display:block;margin:auto" src="${esc(ref?.url||'')}"></video><p>Referencia del anuncio entregado. El lienzo del editor muestra la versión que estás modificando.</p>`);}
+function showHelp(){UI.openDialog(`<span class="eyebrow">LEGACY STUDIO</span><h2>Tus proyectos de video</h2><p><b>Inicio</b> muestra tus videos. <b>Guardar</b> conserva el proyecto y sus materiales en tu espacio privado para retomarlo desde otro dispositivo. Los borradores también se guardan en este navegador.</p><p>Desde Inicio puedes subir un video o importar un JSON editable. Un MP4 contiene el montaje terminado: los textos y gráficos ya incrustados no se convierten automáticamente en capas separadas. Doctor V6 ya incluye sus elementos editables.</p><p>Drive y GitHub se vinculan como fuentes. Abre tu carpeta o envía las indicaciones preparadas desde <b>Cambios con IA</b> para que tu ChatGPT importe sus materiales.</p><p>En el celular, <b>Ver anuncio</b> abre la reproducción y <b>Herramientas</b> despliega escenas, inspector, timeline y los demás controles. Puedes escribir o grabar los cambios con <b>Hablar</b>.</p><p>Las versiones locales y la copia portable permiten conservar revisiones. La exportación captura el montaje del editor; revisa voz, tiempos y subtítulos antes de exportar.</p><div class="button-pair"><button class="button" id="originalPreviewBtn">Ver video original</button><button class="button gold" id="helpDoneBtn">Volver al proyecto</button></div>`);on('helpDoneBtn','click',()=>UI.closeDialog());on('originalPreviewBtn','click',showOriginal);}
+function showOriginal(){const ref=project.assets.find(a=>a.id==='original-reference')||project.assets.find(a=>a.type==='video');if(!ref)return UI.toast('Este proyecto todavía no tiene un video original.','info');UI.openDialog(`<h2>${esc(project.title)} · Original</h2><video controls playsinline style="max-height:66vh;max-width:100%;display:block;margin:auto" src="${esc(ref.url)}"></video><p>El lienzo del editor muestra la versión que estás modificando.</p>`);}
 function showExport(){
  const formats=availableVideoFormats();UI.openDialog(`<span class="eyebrow">TU NUEVA VERSIÓN</span><h2>Exportar video</h2><p>${project.width} × ${project.height} · ${project.fps||24} fps · ${UI.formatTime(project.duration,true)}</p>${project.voiceStale?'<div class="notice"><b>Revisa la voz:</b> el guion o los tiempos cambiaron. La locución no se genera de nuevo automáticamente.</div>':''}<label class="field">Formato<select id="exportFormat">${formats.map(f=>`<option value="${f.extension}">${esc(f.label)}</option>`).join('')}</select></label><label class="field">Intervalo<select id="exportRange"><option value="all">Video completo</option><option value="scene">Solo la escena seleccionada</option></select></label><p>La exportación tarda aproximadamente lo mismo que el video. Mantén esta pestaña visible y espera a que termine.</p><div class="export-progress" id="exportProgress" hidden><progress id="exportProgressBar" max="1" value="0"></progress><strong id="exportPercent">0%</strong></div><div class="button-pair"><button class="button gold" id="startExportBtn" ${formats.length?'':'disabled'}>Exportar y descargar</button><button class="button subtle" id="exportFrameBtn">Descargar fotograma</button></div><button class="button subtle full" id="cancelExportBtn" hidden>Cancelar exportación</button>${formats.length?'':'<p>Este navegador no permite exportar video. Abre el editor en Chrome o Edge actualizado.</p>'}`);
  on('exportFrameBtn','click',()=>exportFrame(engine,`${fileName()}-${engine.currentTime.toFixed(2)}.png`));
@@ -213,13 +216,13 @@ function wire(){
  on('projectMenuBtn','click',()=>$('projectMenu').hidden=!$('projectMenu').hidden);document.addEventListener('click',e=>{if(!e.target.closest('#projectMenu,#projectMenuBtn'))$('projectMenu').hidden=true;});
  on('downloadProjectBtn','click',downloadProject);on('importProjectBtn','click',()=>$('projectImport').click());
  on('projectImport','change',async e=>{if(e.target.files[0]){const incoming=await store.importProject(await e.target.files[0].text());await loadProject(incoming);UI.toast('Proyecto abierto con sus archivos.');}e.target.value='';});
- on('duplicateProjectBtn','click',async()=>{await store.save(project);const copy=M.clone(project);copy.id=M.uid('project');copy.title+=' · Copia';copy.version='Nueva versión';await loadProject(copy);UI.toast('Copia independiente creada.');});
- on('saveVersionBtn','click',async()=>{await store.save(project);const v=await store.saveVersion(project,`${project.title} · ${new Date().toLocaleString('es-MX')}`);UI.toast('Versión guardada en el historial de este navegador.');});
+ on('duplicateProjectBtn','click',async()=>{await flushLocalProject();const copy=independentCopy(project,' · Copia');await loadProject(copy);await saveCurrentProject();UI.toast('Copia independiente guardada.');});
+ on('saveVersionBtn','click',saveCurrentProject);
  on('versionHistoryBtn','click',showVersions);
  on('resetProjectBtn','click',async()=>{await store.saveVersion(project,'Antes de volver al original');const fresh=M.clone(original);fresh.id=M.uid('project');fresh.title='Doctor V6 · Nueva edición';await loadProject(fresh);UI.toast('Nueva copia del V6 original. La anterior permanece guardada.');});
  on('helpBtn','click',showHelp);on('helpStatusBtn','click',showHelp);on('shortcutsBtn','click',()=>UI.openDialog('<h2>Atajos de teclado</h2><p><kbd>Espacio</kbd> Reproducir o pausar</p><p><kbd>← / →</kbd> Retroceder o avanzar un fotograma</p><p><kbd>Ctrl / ⌘ + Z</kbd> Deshacer</p><p><kbd>Ctrl / ⌘ + Shift + Z</kbd> Rehacer</p><p><kbd>Ctrl / ⌘ + S</kbd> Guardar versión</p>'));
  on('exportBtn','click',showExport);
- document.addEventListener('keydown',run(e=>{if(e.target.matches('input,textarea,select,[contenteditable]'))return;if(e.code==='Space'){e.preventDefault();return engine.isPlaying?engine.pause():engine.play();}if(['ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();seek(engine.currentTime+(e.key==='ArrowLeft'?-1:1)/(project.fps||24));}if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='z'){e.preventDefault();$(e.shiftKey?'redoBtn':'undoBtn').click();}if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'){e.preventDefault();$('saveVersionBtn').click();}}));
+ document.addEventListener('keydown',run(e=>{if(document.body.classList.contains('projects-home'))return;if(e.target.matches('input,textarea,select,[contenteditable]'))return;if(e.code==='Space'){e.preventDefault();return engine.isPlaying?engine.pause():engine.play();}if(['ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();seek(engine.currentTime+(e.key==='ArrowLeft'?-1:1)/(project.fps||24));}if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='z'){e.preventDefault();$(e.shiftKey?'redoBtn':'undoBtn').click();}if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'){e.preventDefault();$('saveVersionBtn').click();}}));
  window.addEventListener('beforeunload',e=>{if(exporting||saveTimer&&$('saveStatus').textContent.includes('Guardando')){e.preventDefault();e.returnValue='';}});
  // Every supported field remains available for less common graphic properties.
  const advanced=document.createElement('button');advanced.className='button full subtle';advanced.id='advancedLayerBtn';advanced.textContent='Propiedades avanzadas del elemento';$('inspectorLayersPanel').append(advanced);
@@ -252,19 +255,62 @@ async function showVersions(){
  for(const b of document.querySelectorAll('[data-restore-version]'))b.onclick=run(async()=>{await store.saveVersion(project,'Antes de restaurar');await loadProject(await store.restoreVersion(project.id,b.dataset.restoreVersion));UI.closeDialog();UI.toast('Versión restaurada.');});
  for(const b of document.querySelectorAll('[data-open-project]'))b.onclick=run(async()=>{await store.save(project);await loadProject(await store.load(b.dataset.openProject));UI.closeDialog();});
 }
+function independentCopy(value,suffix=' · Copia'){
+ const copy=M.clone(value);copy.id=M.uid('project');copy.title+=suffix;copy.version='Borrador';delete copy.cloudRevision;delete copy.cloudContentRevision;delete copy.aiSourceProjectId;delete copy.aiDraftRequestKey;copy.aiAppliedRequestIds=[];return copy;
+}
+function canLeaveProject(){if(exporting)throw Error('Espera a que termine la exportación antes de cambiar de proyecto.');if(aiPanel?.voice.recording)throw Error('Termina o cancela la nota de voz antes de cambiar de proyecto.');if(cloudSaving)throw Error('Espera a que termine el guardado del proyecto.');}
+async function flushLocalProject(){clearTimeout(saveTimer);saveTimer=null;saveGeneration++;if(project)await store.save(project);}
+async function listLibraryProjects(){
+ const local=await store.listProjects();let remote;try{remote=(await cloudLibrary.list()).projects;}catch{return {projects:local,offline:true};}
+ const merged=new Map(remote.map(p=>[p.id,{...p,storage:'cloud'}]));for(const p of local){const cloud=merged.get(p.id);if(!cloud)merged.set(p.id,p);else if(p.cloudRevision===cloud.revision)merged.set(p.id,{...cloud,title:p.title,thumbnail:p.thumbnail||cloud.thumbnail});}
+ return {projects:[...merged.values()].sort((a,b)=>(b.updatedAt||'').localeCompare(a.updatedAt||''))};
+}
+async function saveCurrentProject(){
+ canLeaveProject();cloudSaving=true;projectHub?.setSaving(true);engine?.pause();let saved=project;const previousCloudHash=project.cloudContentRevision;
+ try{await flushLocalProject();await store.saveVersion(saved,`${saved.title} · ${new Date().toLocaleString('es-MX')}`);saved.cloudContentRevision=await projectRevision(saved);
+  try{await cloudLibrary.save(saved);}catch(e){if(e.status!==409)throw e;const copy=independentCopy(saved,' · Copia de este equipo');copy.cloudContentRevision=await projectRevision(copy);await cloudLibrary.save(copy);await store.save(copy);await loadProject(copy,{save:false});saved=project;UI.toast('El proyecto cambió en otro dispositivo. Guardé tus cambios como una copia independiente.','info',8500);}
+  await store.save(saved);status('Proyecto guardado en tu espacio privado',true);projectHub?.refreshContext();return {project:saved,storage:'cloud'};
+ }catch(e){if(saved===project){if(previousCloudHash)saved.cloudContentRevision=previousCloudHash;else delete saved.cloudContentRevision;}status('Borrador local · pendiente de guardar en la nube',true);throw e;}
+ finally{cloudSaving=false;projectHub?.setSaving(false);}
+}
+async function openSavedProject(id){
+ canLeaveProject();await flushLocalProject();const local=await store.load(id);let next;
+ try{const remote=await cloudLibrary.load(id);if(local&&(local.cloudRevision===remote.cloudRevision||await projectRevision(local)===await projectRevision(remote))){next=local;next.cloudRevision=remote.cloudRevision;}else{
+   if(local&&(!local.cloudContentRevision||await projectRevision(local)!==local.cloudContentRevision||local.aiInstructionDraft?.trim()||local.aiVoiceDrafts?.length)){const copy=independentCopy(local,' · Borrador conservado');await store.save(copy);UI.toast('Conservé el borrador de este equipo como otra copia antes de abrir la versión guardada.','info',8500);}
+   next=remote;
+  }}catch(e){if(!local)throw e;next=local;UI.toast('Abrí el borrador guardado en este equipo.','info');}
+ await loadProject(next,{save:false});await store.save(project);aiPanel.open({focus:false});return project;
+}
+async function addVideoProject(file){canLeaveProject();await flushLocalProject();const next=await createVideoProject(file,{store});await loadProject(next);await saveCurrentProject();aiPanel.open({focus:false});return project;}
+async function importEditableProject(file){
+ canLeaveProject();await flushLocalProject();const incoming=validateProject(JSON.parse(await file.text())),exists=(await store.listProjects()).some(p=>p.id===incoming.id);const value=exists?independentCopy(incoming,' · Importado'):independentCopy(incoming,'');
+ for(const a of [...value.assets,...(value.references||[]),...(value.aiVoiceDrafts||[])])if(a.embeddedDataUrl)a.blobId=M.uid('imported-blob');
+ const portable={format:'legacy-video-studio',project:value};const next=await store.importProject(portable);await loadProject(next);await saveCurrentProject();aiPanel.open({focus:false});return project;
+}
+async function linkProjectSource(input){
+ const source=normalizeSource(input);if(input.projectId&&input.projectId!==project.id)throw Error('Abre primero el proyecto al que quieres vincular la carpeta.');canLeaveProject();
+ mutate('Vincular fuente',()=>{project.sources||=[];if(!project.sources.some(s=>s.url===source.url))project.sources.push(source);});await saveCurrentProject();return source;
+}
+async function startFromSource(input){
+ canLeaveProject();await flushLocalProject();const source=normalizeSource(input),next=createBlankProject({title:input.name||('Video desde '+(source.type==='drive'?'Drive':'GitHub')),sources:[source]});
+ next.aiInstructionDraft=`Importa los materiales de esta fuente de ${source.type==='drive'?'Google Drive':'GitHub'}: ${source.url}. Usa mis conectores actuales de ChatGPT. Si hay un proyecto editable, conserva sus escenas, voz, música, efectos, tipografías y subtítulos; si hay solo un video terminado, impórtalo conservando su audio y explica qué elementos ya están incrustados. Conserva la fuente y organiza este proyecto de forma independiente. No publiques archivos privados ni gastes créditos de servicios externos. Si hay varias versiones, revisa los nombres y utiliza la más reciente claramente identificada; si no puedes determinarla, indícalo antes de sustituir medios.`;
+ await loadProject(next);await saveCurrentProject();aiPanel.open({focus:false});UI.toast('Fuente vinculada. Envía las indicaciones desde Cambios con IA para que ChatGPT importe sus materiales.','info',10000);return project;
+}
 async function boot(){
- original=await(await fetch('doctor-v6.json')).json();wire();let saved=null;try{const id=localStorage.getItem('legacy-active-project')||original.id;saved=await store.load(id);}catch(e){fail(e);}
+ original=await(await fetch('doctor-v6.json')).json();wire();let saved=null;const activeId=localStorage.getItem('legacy-active-project')||original.id;
+ try{saved=await store.load(activeId);}catch(e){fail(e);}if(!saved){try{saved=await cloudLibrary.load(activeId);}catch{}}
  await loadProject(saved||M.clone(original),{save:!saved});
- if(!localStorage.getItem('legacy-studio-intro')){localStorage.setItem('legacy-studio-intro','1');setTimeout(()=>UI.toast('Doctor V6 listo. Selecciona una escena para empezar; la guía está en el menú del proyecto.','info',8500),700);}
- window.legacyStudio={get project(){return project;},get engine(){return engine;},store,selectScene,mutate,downloadProject};
+ window.legacyStudio={get project(){return project;},get engine(){return engine;},store,selectScene,mutate,downloadProject,cloudLibrary,saveProject:saveCurrentProject,openProject:openSavedProject,createFromSource:startFromSource,importEditableProject};
  aiPanel=mountAI({getProject:()=>project,getSelectedSceneId:()=>selectedSceneId,store,openTab:tab,notify:UI.toast,async applyResult(next,meta){
   if((project.aiAppliedRequestIds||[]).includes(meta.requestId))return UI.toast('Esta versión de IA ya está incorporada.','info');
   const current=project;await store.saveVersion(current,'Antes de incorporar cambios con IA');
   const result=structuredClone(next);result.aiInstructionDraft=current.aiInstructionDraft||'';result.aiVoiceDrafts=current.aiVoiceDrafts||[];const concurrent=meta.baseRevision?await projectRevision(current)!==meta.baseRevision:meta.baseUpdatedAt&&current.updatedAt&&meta.baseUpdatedAt!==current.updatedAt;
   result.aiSourceProjectId=current.aiSourceProjectId||current.id;result.aiAppliedRequestIds=[...new Set([...(current.aiAppliedRequestIds||[]),...(result.aiAppliedRequestIds||[]),meta.requestId])];
-  if(concurrent){result.id='project-'+crypto.randomUUID();result.title+=' · Versión IA';}
+  if(concurrent){result.id='project-'+crypto.randomUUID();result.title+=' · Versión IA';}else result.cloudRevision=current.cloudRevision;
   await loadProject(result);UI.toast(concurrent?'Guardé tus cambios manuales y abrí la versión de IA como un proyecto separado.':(meta.summary||'Cambios de IA incorporados al video.'),'success',8000);
  }});
  window.legacyStudio.ai=aiPanel;window.legacyStudio.mobile=mountMobileWorkbench({openAI:aiPanel.open,openTab:tab});
+ projectHub=mountProjects({getProject:()=>project,listProjects:listLibraryProjects,openProject:openSavedProject,saveProject:saveCurrentProject,uploadVideo:addVideoProject,importProject:importEditableProject,linkSource:linkProjectSource,importSource:startFromSource,notify:UI.toast,async beforeHome(){canLeaveProject();engine?.pause();window.legacyStudio.mobile.close({restore:false});await flushLocalProject();},onEditor(){aiPanel.open({focus:false});}});
+ window.legacyStudio.projects=projectHub;await projectHub.showHome();window.legacyStudio.ready=true;
 }
 boot().catch(e=>{$('stageLoading').textContent='No se pudo abrir el proyecto. Recarga la página para intentarlo de nuevo.';fail(e);});

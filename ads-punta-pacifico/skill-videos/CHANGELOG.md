@@ -1,5 +1,13 @@
 # Historial
 
+## 1.8.0 — 2026-11-14
+
+- Petición: guardar cada video como proyecto, volver a Inicio, subir otros videos y trabajar con fuentes de Drive o GitHub, conservando Doctor V6 como primera prueba.
+- Antes: un proyecto abierto y borradores/historial locales. Ahora: biblioteca por video, guardado explícito privado con medios y apertura desde otro dispositivo, además de los borradores y versiones locales. Los conflictos de revisión conservan copias y no sobrescriben silenciosamente otro dispositivo.
+- Un video nuevo o un JSON importado tiene identidad independiente. Los recursos, comentarios y solicitudes de IA no se mezclan entre proyectos. Un MP4 terminado se identifica como montaje con elementos incrustados, sin afirmar recuperación automática de capas.
+- Drive/GitHub se vinculan como fuentes y pueden abrirse fuera del editor. La importación mediante las cuentas ocurre al enviar una solicitud a ChatGPT. No se declara OAuth, navegación autenticada ni sincronización de carpetas dentro del Site: la herramienta de elegibilidad de conectores Sites no está disponible en esta revisión.
+- Los nuevos proyectos usan su configuración de marca y datos; el ejemplo Doctor y las entregas previas se conservan. El alcance de validación y publicación de esta revisión se registra por separado; no implica nueva aprobación estética ni una prueba física de teléfono.
+
 ## 1.7.0 — 2026-11-14
 
 - Petición: editar desde el celular con foco en comentarios/cambios con IA; ocultar escenas, inspector y timeline hasta abrirlos; indicar cambios con voz grabada.

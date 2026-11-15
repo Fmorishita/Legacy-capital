@@ -61,3 +61,9 @@ El código del backend está en `editor/worker/index.mjs`; `editor/tools/build-w
 ## Edición desde el teléfono
 
 «Cambios con IA» es la pantalla principal móvil. «Ver anuncio» y «Herramientas» despliegan sólo lo necesario. «Hablar» permite grabar, revisar y enviar indicaciones reales de voz con tu ChatGPT actual; el dictado en vivo depende del navegador. El audio se guarda como instrucción privada y nunca como pista del anuncio. Las notas y comentarios privados no forman parte de este repositorio.
+
+## Biblioteca de proyectos de video
+
+El estudio abre en Inicio: un proyecto por video, con búsqueda, subida de video (hasta 50 MB) e importación de JSON editable. Guardar conserva el proyecto y sus medios en el espacio privado del Site para retomarlo desde otro dispositivo. Los borradores y el historial local siguen en el navegador. Los cambios de otro dispositivo se conservan mediante revisión condicional y copia independiente.
+
+Las carpetas de Drive y los repositorios/carpetas de GitHub se guardan como fuentes. Se pueden abrir en su servicio o preparar un proyecto y enviar la solicitud de importación desde Cambios con IA usando los conectores actuales de ChatGPT. No se afirma conexión OAuth dentro del editor ni sincronización automática de esas carpetas. Un MP4 conserva su audio original mezclado y sus elementos incrustados; importar el video no reconstruye automáticamente sus capas.

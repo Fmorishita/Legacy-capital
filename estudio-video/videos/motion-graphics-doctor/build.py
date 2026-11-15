@@ -100,20 +100,33 @@ b+=f'''<div id="cc" class="abs" style="left:30px;top:508px;width:1020px;height:5
 <div id="lg" class="abs" style="left:60px;top:560px;font-size:22px;line-height:1.3;display:flex;gap:36px"><span><i style="display:inline-block;width:46px;height:8px;border-radius:4px;background:#C99A2E;vertical-align:middle;margin-right:10px"></i>Conservador · 8% anual</span><span><i style="display:inline-block;width:46px;height:8px;border-radius:4px;background:#0E2A4A;vertical-align:middle;margin-right:10px"></i>Optimista · 10% anual</span></div>
 <svg class="abs" style="left:40px;top:600px" width="1000" height="460" viewBox="0 0 1000 460">{grid}{xl}
 <path id="lo" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1" d="{pth(op)}" fill="none" stroke="#0E2A4A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="lc" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1" d="{pth(co)}" fill="none" stroke="#C99A2E" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>{dots}{labs}</svg>
+<path id="lc" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1" d="{pth(co)}" fill="none" stroke="#C99A2E" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>{dots}{labs}
+<circle id="hoG" cx="{X[0]}" cy="{yv(4.57):.1f}" r="30" fill="#0E2A4A" opacity="0"/><circle id="ho" cx="{X[0]}" cy="{yv(4.57):.1f}" r="14" fill="#0E2A4A" stroke="#fff" stroke-width="4" opacity="0"/>
+<circle id="hcG" cx="{X[0]}" cy="{yv(4.57):.1f}" r="30" fill="#FFD086" opacity="0"/><circle id="hc" cx="{X[0]}" cy="{yv(4.57):.1f}" r="14" fill="#C99A2E" stroke="#fff" stroke-width="4" opacity="0"/></svg>
+<div id="cnt" class="abs" style="left:150px;top:618px;width:380px;height:92px;border-radius:20px;background:#0E2A4A;color:#FFD086;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(14,42,74,.35)"><span style="font-family:'PPText';font-size:19px;color:#fff;letter-spacing:.08em">VALOR ESTIMADO · OPTIMISTA</span><b id="cntv" style="font-family:'PPCondensed';font-size:46px;line-height:1.05">$4.57 M</b></div>
 <div id="pn" class="abs" style="left:30px;top:1080px;width:1020px;height:166px;border-radius:26px;background:#F6E9D4"></div>
 <div id="p0" class="abs" style="left:0;right:0;top:1086px;text-align:center;font-family:'PPBold';font-size:27px;line-height:1.3">ENTREGA · DIC 2028</div>
 <div id="p1" class="abs" style="left:60px;top:1118px;width:470px"><div style="font-family:'PPBold';font-size:22px;color:#8A620C;line-height:1.4">CONSERVADOR 8%:</div><div style="font-family:'PPCondensed';font-size:46px;line-height:1.4">$5,365,384</div><div style="font-size:22px;line-height:1.4;color:#4A5568">Plusvalía: $794,839</div></div>
 <div id="p2" class="abs" style="left:560px;top:1118px;width:470px"><div style="font-family:'PPBold';font-size:22px;color:#8A620C;line-height:1.4">OPTIMISTA 10%:</div><div style="font-family:'PPCondensed';font-size:46px;line-height:1.4">$5,574,459</div><div style="font-size:22px;line-height:1.4;color:#4A5568">Plusvalía: $1,003,914</div></div>
 <div id="f1" class="abs" style="left:30px;right:30px;top:1256px;text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:22px;line-height:1.2;white-space:nowrap">Cálculo: $4,570,545 × (1 + tasa anual)^(meses/12). Diciembre de 2028: 25 meses; 2031: 5 años; 2034: 8 años.</div>
 <div id="f2" class="abs" style="left:30px;right:30px;top:1288px;text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:22px;line-height:1.2;color:#6B6558">Supuestos de apreciación anual compuesta de 8% y 10%, aplicados al precio base del ejemplo.</div>'''
-js='''pop("#cc",0.35);fade("#ct",0.5);fade("#lg",0.6);
-tl.to("#lc",{attr:{"stroke-dashoffset":0},duration:1.5,ease:"power2.inOut"},0.7);tl.to("#lo",{attr:{"stroke-dashoffset":0},duration:1.5,ease:"power2.inOut"},0.7);
-[0.7,1.25,1.7,2.2].forEach((t,j)=>{[0,1].forEach(k=>tl.fromTo("#d"+k+j,{opacity:0,scale:0,transformOrigin:"50% 50%"},{opacity:1,scale:1,duration:0.2,ease:"back.out(3)"},t));});
-[[0,0.72],[1,1.27],[2,1.33],[3,1.72],[4,1.78],[5,2.22],[6,2.28]].forEach(([i,t])=>tl.fromTo("#lb"+i,{opacity:0,y:14},{opacity:1,y:0,duration:0.2,ease:"back.out(2.5)"},t));
-up("#pn",2.6);fade("#p0",2.7);up("#p1",2.85);up("#p2",3.1);fade("#f1",3.5);fade("#f2",3.7);'''
-sfx=[('imp',0.0,0.5),('sw',0.3,0.4),('fw',0.65,0.4),('st',1.22,0.4),('st',1.68,0.4),('imp',2.15,0.4),('who',2.55,0.35),('st',2.82,0.4),('st',3.07,0.4),('sw',3.5,0.3)]
-page(3,5,'',b,js,sfx)
+js='''pop("#cc",0.3);fade("#ct",0.4);fade("#lg",0.45);
+const T0=0.5,TD=1.7,FR=[0,0.32,0.65,1];
+tl.to("#lc",{attr:{"stroke-dashoffset":0},duration:TD,ease:"none"},T0);tl.to("#lo",{attr:{"stroke-dashoffset":0},duration:TD,ease:"none"},T0);
+const PO=[[150,366.9],[400,308.9],[650,205.1],[900,63.6]],PC=[[150,366.9],[400,320.5],[650,242.2],[900,141.3]];
+[["#ho","#hoG",PO],["#hc","#hcG",PC]].forEach(([h,g,P])=>{tl.set(h,{opacity:1},T0);tl.set(g,{opacity:0.25},T0);
+ for(let j=1;j<4;j++){tl.to([h,g],{attr:{cx:P[j][0],cy:P[j][1]},duration:TD*(FR[j]-FR[j-1]),ease:"none"},T0+TD*FR[j-1]);}
+ tl.fromTo(g,{attr:{r:22}},{attr:{r:40},duration:0.25,yoyo:true,repeat:6,ease:"sine.inOut",immediateRender:false},T0);
+ tl.to(g,{opacity:0,duration:0.2},T0+TD+0.05);});
+FR.forEach((f,j)=>{const t=T0+TD*f;[0,1].forEach(k=>tl.fromTo("#d"+k+j,{opacity:0,scale:0,transformOrigin:"50% 50%"},{opacity:1,scale:1,duration:0.2,ease:"back.out(3)"},t));});
+[[0,0],[1,1],[2,1],[3,2],[4,2],[5,3],[6,3]].forEach(([i,j])=>tl.fromTo("#lb"+i,{opacity:0,y:14,scale:0.6,transformOrigin:"50% 50%"},{opacity:1,y:0,scale:1,duration:0.22,ease:"back.out(2.5)"},T0+TD*FR[j]+0.03));
+const cv={v:4.57};tl.fromTo("#cnt",{opacity:0,y:-20},{opacity:1,y:0,duration:0.25,ease:"back.out(2)"},T0);
+tl.fromTo(cv,{v:4.57},{v:9.80,duration:TD,ease:"none",onUpdate:()=>{document.getElementById("cntv").textContent="$"+cv.v.toFixed(2)+" M";}},T0);
+tl.to("#cnt",{scale:1.08,duration:0.12,yoyo:true,repeat:1},T0+TD);
+up("#pn",2.25);fade("#p0",2.3);up("#p1",2.4);up("#p2",2.55);fade("#f1",2.75);fade("#f2",2.85);
+tl.to("#p1 div:nth-child(2),#p2 div:nth-child(2)",{scale:1.1,duration:0.15,yoyo:true,repeat:1,transformOrigin:"0 50%"},3.3);'''
+sfx=[('imp',0.0,0.5),('sw',0.28,0.4),('fw',0.45,0.45)]+[('st',0.5+1.7*f,0.4) for f in (0.32,0.65)]+[('imp',2.2,0.45),('who',2.22,0.3),('st',2.4,0.35),('st',2.55,0.35),('sw',3.28,0.3)]
+page(3,4.2,'',b,js,sfx)
 # ---------- MG4
 b=HEAD('El Puente Financiero:<br>Apalancamiento Inteligente','')
 b+='''<svg class="abs" style="left:0;top:480px" width="1080" height="800" viewBox="0 0 1080 800">
@@ -133,4 +146,38 @@ tl.fromTo("#gr",{scaleY:0.92,transformOrigin:"50% 100%"},{scaleY:1,duration:0.35
 tl.to("#gmt",{scale:1.08,duration:0.18,yoyo:true,repeat:1,ease:"power1.inOut"},3.4);tl.to("#m20",{scale:1.1,duration:0.18,yoyo:true,repeat:1,ease:"power1.inOut"},3.55);'''
 sfx=[('imp',0.0,0.5),('fw',0.35,0.35),('imp',0.72,0.5),('who',1.05,0.45),('st',1.5,0.45),('st',2.06,0.45),('air',2.4,0.35),('imp',2.82,0.6),('sw',3.4,0.35)]
 page(4,4.5,'',b,js,sfx)
+# ---------- MG4 sincronizado con la voz del video Doctor v8 (mismo diseño, otros tiempos)
+js4s=js.replace('0.45);tl.fromTo("#gl",{scaleY','0.45);tl.fromTo("#gl",{scaleY')
+rep=[('},1.1);tl.to("#cab"','},1.6);tl.to("#cab"'),('},1.15);\ntl.fromTo("#hg','},1.65);\ntl.fromTo("#hg'),('stagger:0.05},1.3)','stagger:0.05},1.8)'),('(2.6)"},1.55)','(2.6)"},2.0)'),('(2.6)"},2.1)','(2.6)"},2.45)'),
+('ease:"power3.in"},2.55);tl.fromTo("#flash"','ease:"power3.in"},3.85);tl.fromTo("#flash"'),('immediateRender:false},2.87);\ntl.fromTo("#gr"','immediateRender:false},4.17);\ntl.fromTo("#gr"'),('immediateRender:false},2.87);\ntl.to','immediateRender:false},4.17);\ntl.to'),
+('ease:"power1.inOut"},3.4);','ease:"power1.inOut"},5.2);'),('ease:"power1.inOut"},3.55);','ease:"power1.inOut"},5.4);tl.to("#gr",{scale:1.06,transformOrigin:"50% 50%",duration:0.18,yoyo:true,repeat:1,ease:"power1.inOut"},6.75);')]
+for a_,b_ in rep:
+    assert a_ in js4s,a_; js4s=js4s.replace(a_,b_)
+sfx4=[('imp',0.0,0.5),('fw',0.35,0.35),('imp',0.72,0.5),('who',1.55,0.45),('st',2.0,0.45),('st',2.41,0.45),('air',3.7,0.35),('imp',4.12,0.6),('sw',5.2,0.35),('imp',6.72,0.4)]
+page('4s',7.9,'',b,js4s,sfx4)
+# ---------- MG5 rendimiento esperado
+b=HEAD('Rendimiento esperado<br>en 2 años','Escenario conservador · plusvalía + rentas a corto plazo')
+b+=f'''<svg id="ring" class="abs" style="left:250px;top:520px" width="580" height="580" viewBox="0 0 580 580">
+<circle cx="290" cy="290" r="250" fill="#FFFBF3" stroke="#EAD9B8" stroke-width="34"/>
+<circle id="arc" cx="290" cy="290" r="250" fill="none" stroke="#C99A2E" stroke-width="34" stroke-linecap="round" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1" transform="rotate(-90 290 290)"/>
+<circle id="glow" cx="290" cy="290" r="210" fill="#FFD086" opacity="0"/></svg>
+<div id="pct" class="abs" style="left:250px;width:580px;top:700px;text-align:center;font-family:'PPCondensed';font-size:180px;line-height:1;color:#0E2A4A">0.00%</div>
+<div id="pctl" class="abs" style="left:250px;width:580px;top:930px;text-align:center;font-family:'PPBold';font-size:30px;letter-spacing:.12em;color:#8A620C">EN 2 AÑOS</div>
+<div id="k1" class="abs chipk" style="left:65px;top:1140px;width:420px">Plusvalía</div><div id="kp" class="abs" style="left:505px;top:1136px;width:70px;text-align:center;font-family:'PPBold';font-size:72px;line-height:90px;color:#A47611">+</div>
+<div id="k2" class="abs chipk" style="left:595px;top:1140px;width:420px">Rentas a corto plazo<br><small>(Airbnb)</small></div>
+<div id="badge" class="abs" style="left:290px;width:500px;top:1252px;height:52px;border-radius:999px;background:#0E2A4A;color:#FFD086;font-family:'PPBold';font-size:24px;letter-spacing:.1em;display:flex;align-items:center;justify-content:center">ESCENARIO CONSERVADOR</div>
+<div id="f5" class="abs" style="left:40px;right:40px;top:1316px;text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:23px;line-height:1.2;color:#4A4336">Estimación, no garantizada: depende de ocupación, tarifas, gastos y mercado.</div>'''
+css5='''.chipk{height:96px;border-radius:24px;background:#0E2A4A;color:#fff;font-family:'PPBold';font-size:32px;line-height:1.05;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 8px 20px rgba(14,42,74,.25)}.chipk small{font-family:'PPText';font-size:24px;color:#FFD086}'''
+js5='''tl.fromTo("#ring",{opacity:0,scale:0.4,transformOrigin:"50% 50%"},{opacity:1,scale:1,duration:0.35,ease:"back.out(1.8)"},0.35);
+tl.to("#arc",{attr:{"stroke-dashoffset":0.8167},duration:1.9,ease:"power2.out"},0.6);
+const pv={v:0};tl.fromTo(pv,{v:0},{v:18.33,duration:1.9,ease:"power2.out",onUpdate:()=>{document.getElementById("pct").textContent=pv.v.toFixed(2)+"%";}},0.6);
+fade("#pct",0.55);fade("#pctl",0.7);
+tl.fromTo("#pct",{scale:1},{scale:1.16,duration:0.14,yoyo:true,repeat:1,ease:"power2.out",immediateRender:false},2.5);
+tl.fromTo("#glow",{opacity:0.5,scale:0.6,transformOrigin:"50% 50%"},{opacity:0,scale:1.5,duration:0.6,ease:"power2.out",immediateRender:false},2.5);
+tl.fromTo("#flash",{opacity:0.35},{opacity:0,duration:0.3,immediateRender:false},2.5);
+tl.fromTo("#k1",{opacity:0,x:-160},{opacity:1,x:0,duration:0.28,ease:"back.out(1.8)"},2.9);pop("#kp",3.15);tl.fromTo("#k2",{opacity:0,x:160},{opacity:1,x:0,duration:0.28,ease:"back.out(1.8)"},3.3);
+pop("#badge",3.8);fade("#f5",4.2);
+tl.to("#pct",{color:"#A47611",duration:0.3,yoyo:true,repeat:3,ease:"sine.inOut"},4.4);'''
+sfx5=[('imp',0.0,0.5),('who',0.3,0.4),('fw',0.6,0.4),('imp',2.48,0.6),('st',2.88,0.4),('sw',3.13,0.35),('st',3.28,0.4),('imp',3.78,0.4)]
+page(5,6.0,css5,b,js5,sfx5)
 print('ok')

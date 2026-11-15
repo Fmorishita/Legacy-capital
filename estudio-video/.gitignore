@@ -19,3 +19,5 @@ videos/*/snapshots/
 videos/*/.hyperframes/
 videos/*/*/assets/
 videos/*/qa/
+videos/*/*/snapshots/
+videos/*/*/renders/

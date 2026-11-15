@@ -1,0 +1,45 @@
+<!doctype html><html lang="es"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1080, height=1920" /><title>MG4</title>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script><style>@font-face{font-family:"PPCondensed";src:url("assets/fonts/OpenSans_Condensed_Bold.ttf") format("truetype");}
+@font-face{font-family:"PPText";src:url("assets/fonts/OpenSans_Semibold.ttf") format("truetype");}
+@font-face{font-family:"PPBold";src:url("assets/fonts/OpenSans_ExtraBold.ttf") format("truetype");}
+@font-face{font-family:"Cormorant Garamond";font-weight:600;src:url("assets/fonts/cormorant-garamond-latin-600-normal.woff2") format("woff2");}
+@font-face{font-family:"Cormorant Garamond";font-weight:600;font-style:italic;src:url("assets/fonts/cormorant-garamond-latin-600-italic.woff2") format("woff2");}
+@font-face{font-family:"Cinzel";font-weight:700;src:url("assets/fonts/cinzel-latin-700-normal.woff2") format("woff2");}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#FBF3E4}
+#root{position:relative;width:100%;height:100%;overflow:hidden;font-family:"PPText",sans-serif;color:#0E2A4A;background:linear-gradient(180deg,#FDF7EC 0%,#FBF1E0 100%)}
+.abs{position:absolute}
+#crest{left:455px;top:70px;width:170px}
+#brand{left:0;right:0;top:300px;text-align:center;font-family:"Cinzel",serif;font-weight:700;font-size:46px;letter-spacing:.06em;line-height:1.2}
+#re{left:0;right:0;top:362px;text-align:center;font-size:24px;letter-spacing:.42em;color:#0E2A4A;line-height:1.3}
+#re:before,#re:after{content:"";display:inline-block;width:70px;height:3px;background:#C99A2E;vertical-align:middle;margin:0 18px}
+#title{left:60px;right:60px;top:430px;text-align:center;font-family:"Cormorant Garamond",serif;font-weight:600;font-size:82px;line-height:1.08;letter-spacing:-.01em}
+#rule{left:440px;width:200px;height:8px;border-radius:4px;background:#C99A2E}
+#sub{left:70px;right:70px;text-align:center;font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:600;font-size:40px;line-height:1.2;color:#1B3A6B}
+.note{left:60px;right:60px;border-radius:999px;background:#F4E3C3;display:flex;align-items:center;justify-content:center;font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:600;font-size:29px;line-height:1.15;text-align:center;padding:10px 40px}
+.note b{font-family:"PPBold";font-style:normal;color:#8A5A12;border:3px solid #8A5A12;border-radius:50%;width:40px;height:40px;flex:none;display:inline-flex;align-items:center;justify-content:center;margin-right:18px;font-size:24px}
+.pc{left:60px;right:60px;height:188px}.pc .bx{height:112px;border-radius:14px;background:#E6EAF4;border-left:14px solid #C99A2E;text-align:center;padding-top:6px}
+.pc .a{font-family:"PPBold";font-size:30px;line-height:1.35}.pc .v{font-family:"PPBold";font-size:44px;line-height:1.2}
+.pc .d{margin-top:8px;text-align:center;font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:600;font-size:31px;line-height:1.1}</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="10.5" data-width="1080" data-height="1920">
+<div id="scene" class="clip" data-start="0" data-duration="10.5" data-track-index="0" style="position:absolute;inset:0"><img id="crest" class="abs" src="assets/crest.png" alt="Legacy Capital" /><div id="brand" class="abs">LEGACY CAPITAL</div><div id="re" class="abs">REAL ESTATE</div>
+<div id="title" class="abs" style="top:430px">El Puente Financiero:<br>Apalancamiento Inteligente</div><div id="rule" class="abs" style="top:622px"></div><svg class="abs" style="left:0;top:680px" width="1080" height="560" viewBox="0 0 1080 560">
+<g id="gl"><text x="185" y="225" text-anchor="middle" font-family="PPBold" font-size="44" fill="#0E2A4A">Hoy</text><polygon points="40,290 70,262 345,262 315,290" fill="#1D6E8C"/><polygon points="315,290 345,262 345,412 315,440" fill="#082038"/><rect x="40" y="290" width="275" height="150" fill="#0E3A5E"/><text x="177" y="352" text-anchor="middle" font-family="PPBold" font-size="42" fill="#FFE1AD">10% a</text><text x="177" y="402" text-anchor="middle" font-family="PPBold" font-size="42" fill="#FFE1AD">la Firma</text></g>
+<g id="gm"><text x="540" y="140" text-anchor="middle" font-family="PPBold" font-size="40" fill="#0E2A4A">Construcción</text><text x="540" y="200" text-anchor="middle" font-family="PPBold" font-size="56" fill="#0E2A4A">10%</text><text x="540" y="268" text-anchor="middle" font-family="PPBold" font-size="50" fill="#0E2A4A">Diferido</text>
+<path id="cab" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1" d="M345,265 Q560,420 765,170" fill="none" stroke="#0E2A4A" stroke-width="6"/><line id="deck" x1="345" y1="360" x2="765" y2="360" stroke="#0E2A4A" stroke-width="12"/>
+<g id="hg" stroke="#C99A2E" stroke-width="4"><line x1="385" y1="291" x2="385" y2="360"/><line x1="425" y1="312" x2="425" y2="360"/><line x1="465" y1="327" x2="465" y2="360"/><line x1="505" y1="336" x2="505" y2="360"/><line x1="545" y1="337" x2="545" y2="360"/><line x1="585" y1="331" x2="585" y2="360"/><line x1="625" y1="316" x2="625" y2="360"/><line x1="665" y1="293" x2="665" y2="360"/><line x1="705" y1="258" x2="705" y2="360"/><line x1="740" y1="215" x2="740" y2="360"/></g>
+<g id="m20"><line x1="365" y1="410" x2="455" y2="410" stroke="#C99A2E" stroke-width="3"/><line x1="365" y1="398" x2="365" y2="422" stroke="#C99A2E" stroke-width="3"/><line x1="655" y1="410" x2="745" y2="410" stroke="#C99A2E" stroke-width="3"/><line x1="745" y1="398" x2="745" y2="422" stroke="#C99A2E" stroke-width="3"/><rect x="463" y="384" width="184" height="52" rx="26" fill="#A47611"/><text x="555" y="421" text-anchor="middle" font-family="PPBold" font-size="34" fill="#fff">20 meses</text></g></g>
+<g id="gr"><text x="900" y="105" text-anchor="middle" font-family="PPBold" font-size="44" fill="#0E2A4A">Entrega</text><rect x="750" y="140" width="300" height="26" fill="#0E2A4A"/><rect x="750" y="418" width="300" height="24" fill="#0E2A4A"/><rect x="770" y="150" width="260" height="280" fill="#0E2A4A"/><text x="900" y="278" text-anchor="middle" font-family="PPBold" font-size="58" fill="#FFE1AD">80%</text><text x="900" y="358" text-anchor="middle" font-family="PPBold" font-size="56" fill="#FFE1AD">Final</text></g></svg><div class="pc abs" id="pc0" style="top:1180px"><div class="bx"><div class="a">Rango:</div><div class="v">$398,278 a $489,048 MXN</div></div><div class="d">Enganche inicial, bloqueo de inventario y plusvalía.</div></div><div class="pc abs" id="pc1" style="top:1380px"><div class="bx"><div class="a">20 mensualidades desde</div><div class="v">$19,914 hasta $24,452 MXN</div></div><div class="d">Flujo cómodo dividido en 20 meses sin intereses.</div></div><div class="pc abs" id="pc2" style="top:1580px"><div class="bx"><div class="a">Rango:</div><div class="v">$3,186,224 a $3,912,386 MXN</div></div><div class="d">A la entrega y escrituración. Totalmente apalancable con crédito hipotecario.</div></div><div class="note abs" id="note" style="top:1790px;height:84px;background:#0E3A5E;color:#fff"><b style="color:#FFD086;border-color:#FFD086">i</b>Estos rangos corresponden a la unidad de menor y mayor valor de la lista de precios.</div></div></div>
+<script>window.__timelines=window.__timelines||{};const tl=gsap.timeline({paused:true});
+tl.fromTo("#crest",{opacity:0,scale:1.5,filter:"blur(12px)"},{opacity:1,scale:1,filter:"blur(0px)",duration:0.45,ease:"power3.out"},0.1);
+tl.fromTo("#brand",{opacity:0,y:14},{opacity:1,y:0,duration:0.3,ease:"power2.out"},0.35);tl.fromTo("#re",{opacity:0},{opacity:1,duration:0.3},0.5);
+tl.fromTo("#title",{opacity:0,y:40},{opacity:1,y:0,duration:0.45,ease:"power3.out"},0.6);tl.fromTo("#rule",{scaleX:0},{scaleX:1,duration:0.4,ease:"power2.out"},0.9);
+if(document.getElementById("sub"))tl.fromTo("#sub",{opacity:0,y:20},{opacity:1,y:0,duration:0.4,ease:"power2.out"},1.05);
+const up=(s,t,o)=>tl.fromTo(s,{opacity:0,y:34},Object.assign({opacity:1,y:0,duration:0.35,ease:"power3.out"},o||{}),t);
+const pop=(s,t)=>tl.fromTo(s,{opacity:0,scale:0.5},{opacity:1,scale:1,duration:0.32,ease:"back.out(2.2)"},t);
+const fade=(s,t)=>tl.fromTo(s,{opacity:0},{opacity:1,duration:0.4,ease:"none"},t);
+tl.fromTo("#gl",{opacity:0,y:70},{opacity:1,y:0,duration:0.5,ease:"back.out(1.5)"},1.4);up("#pc0",2.0);
+fade("#gm text",3.0);tl.fromTo("#deck",{scaleX:0,transformOrigin:"0 50%"},{scaleX:1,duration:0.7,ease:"power2.out"},3.1);tl.to("#cab",{attr:{"stroke-dashoffset":0},duration:0.9,ease:"power2.out"},3.2);
+tl.fromTo("#hg line",{opacity:0},{opacity:1,duration:0.15,stagger:0.07},3.5);fade("#m20",4.3);up("#pc1",4.6);
+tl.fromTo("#gr",{opacity:0,y:70},{opacity:1,y:0,duration:0.5,ease:"back.out(1.5)"},5.8);up("#pc2",6.4);fade("#note",7.6);
+tl.to({},{duration:10.5},0);window.__timelines["main"]=tl;</script></body></html>

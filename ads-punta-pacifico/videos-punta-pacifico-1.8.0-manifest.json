@@ -30,8 +30,8 @@
     },
     {
       "path": "metadata.json",
-      "bytes": 4863,
-      "sha256": "9858eb29d9498a1f97dd46909bd714431499fffe6adcee24602c7b294ff246ea"
+      "bytes": 4922,
+      "sha256": "3b16a5eb1d3c7bfc91b0d0cb65003ecfbf374e7d2e72c1eb4ac87381b17e8603"
     },
     {
       "path": "references/contexto-punta-pacifico.md",
@@ -112,6 +112,6 @@
   "skill_sha256": "6c9051bc2c15c446aeee0eca42dc60cc91ae0f9de3cc5150fe8427aae7cb0ab0",
   "archive": "videos-punta-pacifico-1.8.0.zip",
   "latest": "videos-punta-pacifico-latest.zip",
-  "archive_bytes": 73106,
-  "archive_sha256": "542937e029d19f9508eb7a630b9858c2838abee6d20170d5153be329b968bc86"
+  "archive_bytes": 73124,
+  "archive_sha256": "e2b50254a04203bc1649edc9565e5a32e415af71a3673b81d29d7d161f641924"
 }

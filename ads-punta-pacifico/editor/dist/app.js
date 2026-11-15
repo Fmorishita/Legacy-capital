@@ -66,11 +66,11 @@ function renderUI(inspector=true){
  aiPanel?.refreshContext();projectHub?.refreshContext();$('undoBtn').disabled=!undo.length;$('redoBtn').disabled=!redo.length;updateTime(engine?.currentTime||0);UI.mountIcons();
 }
 function updateTime(time){UI.updatePlayhead(time,+$('timelineZoom').value);$('commentAnchorLabel').textContent=`${M.sceneAt(project,time)?.title||'Escena'} · ${UI.formatTime(time,true)}`;}
-async function loadProject(next,{save=true}={}){
+async function loadProject(next,{save=true,skipMedia=false}={}){
  validateProject(next);clearTimeout(saveTimer);saveTimer=null;saveGeneration++;engine?.dispose();project=next;project.audioTracks||=[];project.captions||=[];project.comments||=[];project.references||=[];project.sources||=[];project.overlays||=[];for(const t of project.audioTracks)if(t.kind==='sfx'&&!t.sceneId)t.sceneId=M.sceneAt(project,t.start).id;project.subtitleStyle||={enabled:true};project.brand||={name:'Mi marca',colors:{navy:'#1A2B4C',gold:'#C5A564',cream:'#F5F0E6'}};
  selectedSceneId=project.scenes[0].id;selectedLayerId=null;selectedTrackId=project.audioTracks[0]?.id;undo=[];redo=[];
  $('stageLoading').hidden=false;engine=new StudioEngine(project,$('previewCanvas'),{onTime:updateTime,onPlayState:playing=>{$('playBtn').innerHTML=UI.icon(playing?'pause':'play');$('playBtn').setAttribute('aria-label',playing?'Pausar':'Reproducir');},onError:fail});
- renderUI();await engine.ready();$('stageLoading').hidden=true;localStorage.setItem('legacy-active-project',project.id);if(save)scheduleSave();else status(project.cloudRevision?'Proyecto privado guardado':'Borrador guardado en este equipo',true);
+ renderUI();if(!skipMedia){await engine.ready();$('stageLoading').hidden=true;}localStorage.setItem('legacy-active-project',project.id);if(save)scheduleSave();else status(project.cloudRevision?'Proyecto privado guardado':'Borrador guardado en este equipo',true);
  $('canvasShell').style.aspectRatio=`${project.width}/${project.height}`;
  if(project.missingAssets?.length)UI.toast('Hay archivos subidos que faltan en este navegador. Importa una copia portable o vuelve a subirlos.','error',10000);
 }
@@ -299,7 +299,7 @@ async function startFromSource(input){
 async function boot(){
  original=await(await fetch('doctor-v6.json')).json();wire();let saved=null;const activeId=localStorage.getItem('legacy-active-project')||original.id;
  try{saved=await store.load(activeId);}catch(e){fail(e);}if(!saved){try{saved=await cloudLibrary.load(activeId);}catch{}}
- await loadProject(saved||M.clone(original),{save:!saved});
+ await loadProject(saved||M.clone(original),{save:!saved,skipMedia:true});
  window.legacyStudio={get project(){return project;},get engine(){return engine;},store,selectScene,mutate,downloadProject,cloudLibrary,saveProject:saveCurrentProject,openProject:openSavedProject,createFromSource:startFromSource,importEditableProject};
  aiPanel=mountAI({getProject:()=>project,getSelectedSceneId:()=>selectedSceneId,store,openTab:tab,notify:UI.toast,async applyResult(next,meta){
   if((project.aiAppliedRequestIds||[]).includes(meta.requestId))return UI.toast('Esta versión de IA ya está incorporada.','info');

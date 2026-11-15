@@ -31,7 +31,7 @@
     "original_render_equivalence": "not_claimed",
     "user_aesthetic_approval": "pending_user_review",
     "url": "https://legacy-video-studio-fran.trimjewel4.chatgpt.site",
-    "source_commit": "f505c5caf2940545925a12efd2c2cdefc450042e",
+    "source_commit": "1327854fff3f0ca856effd8eb4fc3b15231114d3",
     "qa": {
       "node_dom_interactions": "passed",
       "data_and_asset_checks": "passed",
@@ -81,7 +81,8 @@
       "embedded_provider_connection": "not_claimed; Sites_plugin_eligibility_tool_unavailable",
       "flattened_video_layers": "not_automatically_recovered",
       "isolation": "project_media_comments_and_AI_requests_independent",
-      "source_commit": "f505c5caf2940545925a12efd2c2cdefc450042e"
+      "source_commit": "1327854fff3f0ca856effd8eb4fc3b15231114d3",
+      "initial_media_load": "deferred_until_project_open"
     }
   },
   "repository_delivery": {

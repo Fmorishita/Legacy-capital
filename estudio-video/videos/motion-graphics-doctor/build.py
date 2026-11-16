@@ -3,6 +3,7 @@ CSS='''@font-face{font-family:"PPCondensed";src:url("assets/fonts/OpenSans_Conde
 @font-face{font-family:"PPText";src:url("assets/fonts/OpenSans_Semibold.ttf") format("truetype");}
 @font-face{font-family:"PPBold";src:url("assets/fonts/OpenSans_ExtraBold.ttf") format("truetype");}
 @font-face{font-family:"Cormorant Garamond";font-weight:600;src:url("assets/fonts/cormorant-garamond-latin-600-normal.woff2") format("woff2");}
+@font-face{font-family:"Cinzel";font-weight:700;src:url("assets/fonts/cinzel-latin-700-normal.woff2") format("woff2");}
 @font-face{font-family:"Cormorant Garamond";font-weight:600;font-style:italic;src:url("assets/fonts/cormorant-garamond-latin-600-italic.woff2") format("woff2");}
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1920px;overflow:hidden;background:#FBF3E4}
@@ -13,9 +14,11 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#FBF3E4}
 #sub{left:60px;right:60px;top:428px;text-align:center;font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:600;font-size:31px;line-height:1.12;color:#1B3A6B}
 #flash{inset:0;background:#FFD086;opacity:0}
 #foot{left:-10%;right:-10%;top:1400px;height:700px;background:#0E2A4A;border-top:10px solid #C99A2E;border-radius:50% 50% 0 0/80px 80px 0 0}
+#flogo{left:0;right:0;top:1490px;display:flex;flex-direction:column;align-items:center;gap:8px}#flogo img{width:70px;height:auto;display:block}#flogo span{font-family:"Cinzel",serif;font-weight:700;font-size:25px;letter-spacing:.14em;color:#FBF3E4;white-space:nowrap}
 '''
-HEAD=lambda tt,sub: f'<div id="foot" class="abs"></div><div id="title" class="abs">{tt}</div><div id="rule" class="abs"></div>'+(f'<div id="sub" class="abs">{sub}</div>' if sub else '')
-HJS='''tl.fromTo("#title",{opacity:0,scale:1.35,filter:"blur(14px)"},{opacity:1,scale:1,filter:"blur(0px)",duration:0.3,ease:"power4.out"},0.02);
+HEAD=lambda tt,sub: f'<div id="foot" class="abs"></div><div id="flogo" class="abs"><img src="assets/crest.png" alt="" /><span>LEGACY CAPITAL</span></div><div id="title" class="abs">{tt}</div><div id="rule" class="abs"></div>'+(f'<div id="sub" class="abs">{sub}</div>' if sub else '')
+HJS='''tl.fromTo("#flogo",{opacity:0,y:16},{opacity:1,y:0,duration:0.35,ease:"power2.out"},0.15);
+tl.fromTo("#title",{opacity:0,scale:1.35,filter:"blur(14px)"},{opacity:1,scale:1,filter:"blur(0px)",duration:0.3,ease:"power4.out"},0.02);
 tl.fromTo("#flash",{opacity:0.55},{opacity:0,duration:0.3,ease:"power2.out"},0.02);
 tl.fromTo("#rule",{scaleX:0},{scaleX:1,duration:0.25,ease:"power3.out"},0.2);
 if(document.getElementById("sub"))tl.fromTo("#sub",{opacity:0,y:16},{opacity:1,y:0,duration:0.25,ease:"power2.out"},0.28);
@@ -47,7 +50,7 @@ b+='<div id="mapw" class="abs" data-layout-allow-overflow style="left:140px;top:
 for i,(nm,km,tm) in enumerate(rows):
     b+=f'<div class="row abs" id="r{i}" style="top:{1036+i*72}px"><div class="ic"><img src="assets/ico{i+1}.png" alt="" /></div><div class="bar"></div><div class="nm">{nm}</div><div class="bar"></div><div class="km">{PIN}<div><span>aprox.</span>{km}</div></div><div class="bar"></div><div class="tm" id="t{i}">{CAR}<b>{tm}</b></div></div>'
 b+='<div class="note abs" id="note"><b>i</b>Tiempos estimados, sujetos a tráfico y condiciones de ruta; el cruce fronterizo puede variar.</div>'
-css='''#title{font-size:54px;top:250px;white-space:nowrap}#rule{top:318px}#sub{top:330px;font-size:25px;white-space:nowrap}#foot{top:1460px}
+css='''#title{font-size:54px;top:250px;white-space:nowrap}#rule{top:318px}#sub{top:330px;font-size:25px;white-space:nowrap}#foot{top:1460px}#flogo{top:1548px}
 .row{left:30px;right:30px;height:66px;border-radius:22px;background:linear-gradient(90deg,#0B2A4E,#0A2444);display:flex;align-items:center;color:#fff;padding:0 14px 0 8px;box-shadow:0 5px 12px rgba(14,42,74,.25)}
 .row .ic{width:70px;height:54px;flex:none;overflow:hidden;mix-blend-mode:lighten}.row .ic img{width:64px;display:block;margin:0 auto}
 .row .bar{width:3px;height:48px;background:#C99A2E;flex:none;margin:0 14px}

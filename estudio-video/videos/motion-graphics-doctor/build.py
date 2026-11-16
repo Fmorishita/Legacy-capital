@@ -40,29 +40,29 @@ tl.to({{}},{{duration:{dur}}},0);window.__timelines["main"]=tl;</script></body><
     open(B+f'mg{n}/index.html','w').write(h)
 PIN='<svg width="26" height="34" viewBox="0 0 34 44" fill="none" stroke="#FFD086" stroke-width="3.6"><path d="M17 41C17 41 31 26 31 16A14 14 0 1 0 3 16C3 26 17 41 17 41Z"/><circle cx="17" cy="16" r="5"/></svg>'
 CAR='<svg width="40" height="26" viewBox="0 0 50 32" fill="none" stroke="#FFD086" stroke-width="3.4" stroke-linejoin="round"><path d="M5 22V15L11 14L15 5H35L39 14L45 15V22H5Z"/><path d="M11 14H39"/><circle cx="13" cy="24" r="4" fill="#0B2A4E"/><circle cx="37" cy="24" r="4" fill="#0B2A4E"/></svg>'
-# ---------- MG1 (v3: mapa fijo y más grande, filas debajo)
-rows=[('Caseta de San Miguel','6 km','10 min'),('Valle de Guadalupe','27 km','30 min'),('Tijuana','108 km','1 h 10 min'),('<small>Frontera con Estados Unidos (San Ysidro)</small>','125 km','1 h 30 min'),('Mexicali','250 km','3 h')]
-b=HEAD('Conectividad regional<br>desde el proyecto','Acceso práctico hacia vino, frontera y las principales ciudades del noroeste.')
-b+='<div id="mapw" class="abs" data-layout-allow-overflow style="left:215px;top:500px;width:650px;height:528px;border-radius:26px;overflow:hidden;box-shadow:0 14px 40px rgba(14,42,74,.25)"><img id="mapi" src="assets/mapa.png" style="width:100%;height:100%;display:block" alt="" /></div><div id="ring" class="abs" style="left:414px;top:845px;width:80px;height:80px;border-radius:50%;border:7px solid #C99A2E"></div>'
+# ---------- MG1 (v4: mapa más grande y renglones grandes y legibles)
+rows=[('Caseta de San Miguel','6 km','10 min'),('Valle de Guadalupe','27 km','30 min'),('Tijuana','108 km','1 h 10 min'),('<small>Frontera con Estados Unidos<br>(San Ysidro)</small>','125 km','1 h 30 min'),('Mexicali','250 km','3 h')]
+b=HEAD('Conectividad regional desde el proyecto','Acceso práctico hacia vino, frontera y las principales ciudades del noroeste.')
+b+='<div id="mapw" class="abs" data-layout-allow-overflow style="left:140px;top:372px;width:800px;height:650px;border-radius:26px;overflow:hidden;box-shadow:0 14px 40px rgba(14,42,74,.25)"><img id="mapi" src="assets/mapa.png" style="width:100%;height:100%;display:block" alt="" /></div><div id="ring" class="abs" style="left:394px;top:806px;width:80px;height:80px;border-radius:50%;border:7px solid #C99A2E"></div>'
 for i,(nm,km,tm) in enumerate(rows):
-    b+=f'<div class="row abs" id="r{i}" style="top:{1040+i*52}px"><div class="ic"><img src="assets/ico{i+1}.png" alt="" /></div><div class="bar"></div><div class="nm">{nm}</div><div class="bar"></div><div class="km">{PIN}<div><span>aprox.</span>{km}</div></div><div class="bar"></div><div class="tm" id="t{i}">{CAR}<b>{tm}</b></div></div>'
+    b+=f'<div class="row abs" id="r{i}" style="top:{1036+i*72}px"><div class="ic"><img src="assets/ico{i+1}.png" alt="" /></div><div class="bar"></div><div class="nm">{nm}</div><div class="bar"></div><div class="km">{PIN}<div><span>aprox.</span>{km}</div></div><div class="bar"></div><div class="tm" id="t{i}">{CAR}<b>{tm}</b></div></div>'
 b+='<div class="note abs" id="note"><b>i</b>Tiempos estimados, sujetos a tráfico y condiciones de ruta; el cruce fronterizo puede variar.</div>'
-css='''#title{font-size:66px}#rule{top:398px}#sub{top:412px;font-size:28px}
-.row{left:40px;right:40px;height:48px;border-radius:18px;background:linear-gradient(90deg,#0B2A4E,#0A2444);display:flex;align-items:center;color:#fff;padding:0 14px 0 8px;box-shadow:0 5px 12px rgba(14,42,74,.25)}
-.row .ic{width:60px;height:42px;flex:none;overflow:hidden;mix-blend-mode:lighten}.row .ic img{width:50px;display:block;margin:0 auto}
-.row .bar{width:3px;height:36px;background:#C99A2E;flex:none;margin:0 14px}
-.row .nm{width:350px;flex:none;font-family:"Cormorant Garamond",serif;font-weight:600;font-size:30px;line-height:1.1;white-space:nowrap}.row .nm small{font-size:21px}
-.row .km{width:160px;flex:none;display:flex;align-items:center;gap:10px;font-family:"PPBold";font-size:25px;line-height:.95}.row .km span{display:block;font-family:"PPText";font-size:15px}
-.row .tm{flex:1;height:40px;border:3px solid #FFD086;border-radius:999px;display:flex;align-items:center;justify-content:center;gap:10px;font-family:"PPBold";font-size:27px;white-space:nowrap}.row .tm b{font-weight:400}
-.note{left:40px;right:40px;top:1302px;height:40px;border-radius:999px;background:#F4E3C3;display:flex;align-items:center;justify-content:center;font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:600;font-size:22px;white-space:nowrap}
-.note b{font-family:"PPBold";font-style:normal;color:#8A5A12;border:3px solid #8A5A12;border-radius:50%;width:28px;height:28px;flex:none;display:inline-flex;align-items:center;justify-content:center;margin-right:12px;font-size:17px}'''
+css='''#title{font-size:54px;top:250px;white-space:nowrap}#rule{top:318px}#sub{top:330px;font-size:25px;white-space:nowrap}#foot{top:1460px}
+.row{left:30px;right:30px;height:66px;border-radius:22px;background:linear-gradient(90deg,#0B2A4E,#0A2444);display:flex;align-items:center;color:#fff;padding:0 14px 0 8px;box-shadow:0 5px 12px rgba(14,42,74,.25)}
+.row .ic{width:70px;height:54px;flex:none;overflow:hidden;mix-blend-mode:lighten}.row .ic img{width:64px;display:block;margin:0 auto}
+.row .bar{width:3px;height:48px;background:#C99A2E;flex:none;margin:0 14px}
+.row .nm{width:350px;flex:none;font-family:"Cormorant Garamond",serif;font-weight:600;font-size:38px;line-height:1.1;white-space:nowrap}.row .nm small{font-size:25px;line-height:1.05;display:block}
+.row .km{width:200px;flex:none;display:flex;align-items:center;gap:10px;font-family:"PPBold";font-size:33px;line-height:1}.row .km span{display:block;font-family:"PPText";font-size:17px}
+.row .tm{flex:1;height:52px;border:3px solid #FFD086;border-radius:999px;display:flex;align-items:center;justify-content:center;gap:10px;font-family:"PPBold";font-size:34px;white-space:nowrap}.row .tm b{font-weight:400}
+.note{left:30px;right:30px;top:1398px;height:44px;border-radius:999px;background:#F4E3C3;display:flex;align-items:center;justify-content:center;font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:600;font-size:24px;white-space:nowrap}
+.note b{font-family:"PPBold";font-style:normal;color:#8A5A12;border:3px solid #8A5A12;border-radius:50%;width:30px;height:30px;flex:none;display:inline-flex;align-items:center;justify-content:center;margin-right:12px;font-size:18px}'''
 js='''tl.fromTo("#mapw",{clipPath:"circle(0% at 36.8% 72.9%)"},{clipPath:"circle(130% at 36.8% 72.9%)",duration:0.55,ease:"power3.out"},0.35);
 tl.fromTo("#mapi",{scale:1.4,transformOrigin:"36.8% 72.9%"},{scale:1,duration:3.6,ease:"power2.out"},0.35);
 [0.4,0.85,1.3,1.75,2.2].forEach((t,i)=>tl.fromTo("#ring",{scale:0.3,opacity:1},{scale:2.8,opacity:0,duration:0.45,ease:"power1.out",immediateRender:i===0},t));
 [0,1,2,3,4].forEach(i=>{tl.fromTo("#r"+i,{opacity:0,x:-140},{opacity:1,x:0,duration:0.24,ease:"back.out(1.7)"},0.9+i*0.3);pop("#t"+i,1.0+i*0.3);});
 fade("#note",2.5);tl.fromTo(".tm",{boxShadow:"0 0 0 0 rgba(255,208,134,.7)"},{boxShadow:"0 0 0 12px rgba(255,208,134,0)",duration:0.5,stagger:0.06},2.9);'''
 sfx=[('imp',0.0,0.45),('wu',0.3,0.45)]+[(['pop','ph','thud','pop','ph'][i],0.9+i*0.3,0.5) for i in range(5)]+[('shim',2.85,0.3)]
-page(1,5.2,css,b,js,sfx)
+page(1,6.0,css,b,js,sfx)
 # ---------- MG2 (v3: mapa fijo y lugares grandes)
 cards=[('Punta Morro /<br>restaurante y hotel','aprox. 2 min'),('Soriana /<br>autoservicio','aprox. 3 min'),('CETYS<br>Universidad','aprox. 5 min'),('Hospitales y<br>servicios médicos','aprox. 7 min'),('Hotel Coral &amp; Marina','aprox. 4–5 min'),('OXXO y tiendas<br>de conveniencia','aprox. 4 min'),('UABC / CICESE','aprox. 3–4 min'),None]
 b=HEAD('Servicios y puntos de<br>interés alrededor','Vida diaria, educación, salud y conveniencia a pocos minutos del desarrollo.')

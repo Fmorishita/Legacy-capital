@@ -374,7 +374,42 @@ for i, (src, t, d, v) in enumerate(B11B['ev']):
     tr11b.append(track(f'sfx{i:02d}', 'Efecto · ' + os.path.basename(src)[:-4], 'sfx', sfx_asset(src), t, d, v))
 P11B = proyecto('doctor-v11b-asesor-legacy', 'Doctor V11b · con asesor · Legacy Capital', 'V11b · con asesor, voz de estudio (16 nov)', DB, sc11b, cap11b, tr11b, TEXTO)
 
-for p in (P11, P11B):
+# ===== V12 (avatar de Fran): intro en el rooftop y cierre frente a la casa
+A12 = V + 'punta-pacifico-doctor-v12-avatar-es/'
+B12 = run_build(A12 + 'build.py')
+intro12 = []
+for sid, a, b, src, ms, hl in B12['SC']:
+    name = os.path.splitext(os.path.basename(src))[0]
+    mid = clip(name, A12)
+    L = headline(sid, *hl) if hl else []
+    if sid == 'i1':
+        L += [txt('i1-hook-a', 'DOCTOR O MÉDICO,', 70, 866, 96, anim='pop', start=0.05, dur=0.35),
+              txt('i1-hook-b', '¿BUSCAS COMPRAR CASA CON VISTA AL MAR?', 70, 978, 47, GOLD, start=0.75, width=960, dur=0.3),
+              dict(id='i1-hook-rule', type='line', x=70, y=1052, width=170, strokeWidth=8, color=GOLD, animation='wipe', start=1.0, animationDuration=0.3, enabled=True)]
+    L += logo(sid, anim=(sid == 'i1'))
+    intro12.append(scene(sid, f'{sid} · ' + ('Avatar Fran · rooftop' if sid == 'i1' else hl[0] + ' ' + hl[1]), a, b, mid, L,
+                         {'top': 0, 'bottom': 0.35} if sid == 'i1' else SHADE, offset=ms))
+cuerpo12 = copy.deepcopy(cuerpo)
+AV_END = B12['AV_END']
+casa = clip('avatar-casa', A12)
+Lc = [txt('c1-cta-t', 'MÁS INFORMACIÓN', 540, 292, 104, anim='rise', start=0.05, width=1000, align='center'),
+      rect('c1-cta-w', 180, 1172, 720, 74, '#071D29E0', 'pop', 0.3, radius=37, stroke=GOLD, strokeWidth=3),
+      txt('c1-cta-w1', 'WhatsApp', 520, 1188, 38, font='PPBold', anim='pop', start=0.3, width=300, align='right', shadow=False),
+      txt('c1-cta-w2', '+52 646 256 3006', 536, 1188, 38, GOLD, 'PPBold', 'pop', 0.3, width=400, shadow=False)] + logo('c1', True)
+cierre12 = [scene('c1', 'c1 · Avatar Fran · frente a la casa', B_C1, AV_END, casa, Lc, {'top': 0.78, 'bottom': 0.3}),
+            cierre(AV_END, B12['DUR'], shift_anim=B12['END_SRC'] - B11['END'][0], sid='fin')]
+sc12 = sorted(intro12 + cuerpo12 + cierre12, key=lambda s: s['start'])
+G12 = B12['G']
+cap12 = captions_from(G12, sc12, desde=0, hasta=H) + captions_from(B11['G'], sc12, shift=OFF, desde=A0, hasta=A1, ini=50) + captions_from(G12, sc12, desde=H, hasta=999, ini=200)
+for i, c in enumerate(cap12):
+    c['id'] = f'cap-{i:03d}'
+tr12 = [t for t in copy.deepcopy(tr11b) if not t['id'].startswith('sfx')]
+for i, (src, t, d, v) in enumerate(B12['ev']):
+    tr12.append(track(f'sfx{i:02d}', 'Efecto · ' + os.path.basename(src)[:-4], 'sfx', sfx_asset(src), t, d, v))
+P12 = proyecto('doctor-v12-avatar-legacy', 'Doctor V12 · avatar de Fran · Legacy Capital', 'V12 · avatar en rooftop y frente a la casa (16 nov)', B12['DUR'], sc12, cap12, tr12, TEXTO)
+P12['source']['hyperframes'] = 'estudio-video/videos/punta-pacifico-doctor-v12-avatar-es'
+
+for p in (P11, P11B, P12):
     f = os.path.join(OUT, p['id'] + '.json')
     json.dump(p, open(f, 'w'), ensure_ascii=False)
     print(f"{p['id']}: {len(p['scenes'])} escenas, {len(p['captions'])} subtítulos, {len(p['audioTracks'])} pistas, {len(p['assets'])} assets, "

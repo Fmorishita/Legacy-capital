@@ -1,0 +1,3155 @@
+{
+  "profile": "doctor",
+  "brand": "Legacy Capital",
+  "version": "V9 Legacy",
+  "duration": 60.7,
+  "fps": 30,
+  "sample_rate": 48000,
+  "sample_count": 2913600,
+  "voice_path": "doctor_v9_voice.wav",
+  "mix_path": "doctor_v9_mix.wav",
+  "music_stem_path": "doctor_v9_music_edit.wav",
+  "sfx_stem_path": "doctor_v9_effects.wav",
+  "words_path": "../words_v9.json",
+  "voice_config": {
+    "provider": "Google Gemini via Treg",
+    "model": "gemini-3.8-flash-tts",
+    "voice": "Charon",
+    "style": "Voz masculina adulta, cálida y profesional, español mexicano del norte (Baja California/Sonora), acento discreto y auténtico sin caricatura ni seseo castellano. Conversación cercana de asesor inmobiliario de confianza, nunca voz de tráiler o locutor exagerado. Sonrisa leve en beneficios, pregunta inicial con intención real, variación natural de tono, respiraciones pequeñas. Ritmo ágil de 175 a 185 palabras por minuto, sin correr cifras ni dividir la narración en frases robóticas. Pausas breves entre ideas. Pronunciar roof garden, pickleball, smart home y Legacy Capital con naturalidad bilingüe. No cantar, no añadir música ni palabras.",
+    "cost_usd": 0.013603,
+    "call_id": "b9783833b1c24ca9a715196519a4552c",
+    "source_script": "Doctor o médico, ¿buscas una casa con vista al mar para disfrutar en pareja, o invertir para crecer tu patrimonio?\nConoce este nuevo proyecto residencial, en El Sauzal, en la entrada de Ensenada. Desde tres punto nueve, hasta cuatro punto nueve millones de pesos: casas de un nivel, de dos o tres recámaras, con roof garden privado, y la mejor vista al mar.\nImagina una pausa en la alberca, juegos con tus amigos en la cancha de pickleball, tardes de asador, o cenas con tus seres queridos en las amenidades, o en tu roof privado.\nCuida tu liquidez con pagos flexibles: diez por ciento de enganche, diez por ciento en veinte mensualidades, y ochenta por ciento contra entrega, a mediados del dos mil veintiocho.\nGenera plusvalía anual, más flujos mensuales con renta de estancia corta.\nVive la experiencia de contar con una smart home, y controlar las luces, minisplit y cerradura digital desde tu celular.\nSi apartas tu casa este mes, llévate la cocina, cuartos, baños y roof con equipamiento incluido, ¡ahorrando hasta cuatrocientos cincuenta mil pesos!\nHaz clic en el botón de abajo para más información, y un asesor de Legacy Capital te atenderá.",
+    "continuous": true,
+    "usage": {
+      "promptTokenCount": 277,
+      "candidatesTokenCount": 1496,
+      "totalTokenCount": 1773,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 277
+        }
+      ],
+      "candidatesTokensDetails": [
+        {
+          "modality": "AUDIO",
+          "tokenCount": 1496
+        }
+      ],
+      "serviceTier": "standard"
+    }
+  },
+  "narration_offset": 0,
+  "text": "Doctor o médico, ¿buscas una casa con vista al mar para disfrutar en pareja, o invertir para crecer tu patrimonio?\nConoce este nuevo proyecto residencial, en El Sauzal, en la entrada de Ensenada. Desde tres punto nueve, hasta cuatro punto nueve millones de pesos: casas de un nivel, de dos o tres recámaras, con roof garden privado, y la mejor vista al mar.\nImagina una pausa en la alberca, juegos con tus amigos en la cancha de pickleball, tardes de asador, o cenas con tus seres queridos en las amenidades, o en tu roof privado.\nCuida tu liquidez con pagos flexibles: diez por ciento de enganche, diez por ciento en veinte mensualidades, y ochenta por ciento contra entrega, a mediados del dos mil veintiocho.\nGenera plusvalía anual, más flujos mensuales con renta de estancia corta.\nVive la experiencia de contar con una smart home, y controlar las luces, minisplit y cerradura digital desde tu celular.\nSi apartas tu casa este mes, llévate la cocina, cuartos, baños y roof con equipamiento incluido, ¡ahorrando hasta cuatrocientos cincuenta mil pesos!\nHaz clic en el botón de abajo para más información, y un asesor de Legacy Capital te atenderá.\n",
+  "words": [
+    {
+      "text": "Doctor",
+      "start": 0.0,
+      "end": 0.36
+    },
+    {
+      "text": "o",
+      "start": 0.36,
+      "end": 0.72
+    },
+    {
+      "text": "médico,",
+      "start": 0.72,
+      "end": 0.96
+    },
+    {
+      "text": "¿buscas",
+      "start": 1.36,
+      "end": 1.6
+    },
+    {
+      "text": "una",
+      "start": 1.6,
+      "end": 1.84
+    },
+    {
+      "text": "casa",
+      "start": 1.84,
+      "end": 2.08
+    },
+    {
+      "text": "con",
+      "start": 2.08,
+      "end": 2.36
+    },
+    {
+      "text": "vista",
+      "start": 2.36,
+      "end": 2.62
+    },
+    {
+      "text": "al",
+      "start": 2.62,
+      "end": 2.96
+    },
+    {
+      "text": "mar",
+      "start": 2.96,
+      "end": 3.06
+    },
+    {
+      "text": "para",
+      "start": 3.06,
+      "end": 3.4
+    },
+    {
+      "text": "disfrutar",
+      "start": 3.4,
+      "end": 3.84
+    },
+    {
+      "text": "en",
+      "start": 3.84,
+      "end": 3.96
+    },
+    {
+      "text": "pareja,",
+      "start": 3.96,
+      "end": 4.42
+    },
+    {
+      "text": "o",
+      "start": 4.42,
+      "end": 4.8
+    },
+    {
+      "text": "invertir",
+      "start": 4.8,
+      "end": 5.28
+    },
+    {
+      "text": "para",
+      "start": 5.28,
+      "end": 5.46
+    },
+    {
+      "text": "crecer",
+      "start": 5.46,
+      "end": 5.76
+    },
+    {
+      "text": "tu",
+      "start": 5.76,
+      "end": 5.9
+    },
+    {
+      "text": "patrimonio?",
+      "start": 5.9,
+      "end": 6.42
+    },
+    {
+      "text": "Conoce",
+      "start": 6.82,
+      "end": 7.3
+    },
+    {
+      "text": "este",
+      "start": 7.3,
+      "end": 7.44
+    },
+    {
+      "text": "nuevo",
+      "start": 7.44,
+      "end": 7.66
+    },
+    {
+      "text": "proyecto",
+      "start": 7.66,
+      "end": 8.0
+    },
+    {
+      "text": "residencial,",
+      "start": 8.0,
+      "end": 8.66
+    },
+    {
+      "text": "en",
+      "start": 8.66,
+      "end": 8.84
+    },
+    {
+      "text": "El",
+      "start": 8.84,
+      "end": 8.98
+    },
+    {
+      "text": "Sauzal,",
+      "start": 8.98,
+      "end": 9.22
+    },
+    {
+      "text": "en",
+      "start": 9.62,
+      "end": 9.7
+    },
+    {
+      "text": "la",
+      "start": 9.7,
+      "end": 9.74
+    },
+    {
+      "text": "entrada",
+      "start": 9.74,
+      "end": 10.04
+    },
+    {
+      "text": "de",
+      "start": 10.04,
+      "end": 10.18
+    },
+    {
+      "text": "Ensenada.",
+      "start": 10.18,
+      "end": 10.58
+    },
+    {
+      "text": "Desde",
+      "start": 11.06,
+      "end": 11.16
+    },
+    {
+      "text": "tres",
+      "start": 11.16,
+      "end": 11.413333333333334
+    },
+    {
+      "text": "punto",
+      "start": 11.413333333333334,
+      "end": 11.666666666666666
+    },
+    {
+      "text": "nueve,",
+      "start": 11.666666666666666,
+      "end": 11.92
+    },
+    {
+      "text": "hasta",
+      "start": 11.92,
+      "end": 12.2
+    },
+    {
+      "text": "cuatro",
+      "start": 12.2,
+      "end": 12.453333333333333
+    },
+    {
+      "text": "punto",
+      "start": 12.453333333333333,
+      "end": 12.706666666666667
+    },
+    {
+      "text": "nueve",
+      "start": 12.706666666666667,
+      "end": 12.96
+    },
+    {
+      "text": "millones",
+      "start": 12.96,
+      "end": 13.3
+    },
+    {
+      "text": "de",
+      "start": 13.3,
+      "end": 13.5
+    },
+    {
+      "text": "pesos:",
+      "start": 13.5,
+      "end": 13.74
+    },
+    {
+      "text": "casas",
+      "start": 14.1,
+      "end": 14.36
+    },
+    {
+      "text": "de",
+      "start": 14.36,
+      "end": 14.52
+    },
+    {
+      "text": "un",
+      "start": 14.52,
+      "end": 14.68
+    },
+    {
+      "text": "nivel,",
+      "start": 14.68,
+      "end": 14.98
+    },
+    {
+      "text": "de",
+      "start": 14.98,
+      "end": 15.32
+    },
+    {
+      "text": "dos",
+      "start": 15.32,
+      "end": 15.48
+    },
+    {
+      "text": "o",
+      "start": 15.48,
+      "end": 15.62
+    },
+    {
+      "text": "tres",
+      "start": 15.62,
+      "end": 15.78
+    },
+    {
+      "text": "recámaras,",
+      "start": 15.78,
+      "end": 16.3
+    },
+    {
+      "text": "con",
+      "start": 16.3,
+      "end": 16.52
+    },
+    {
+      "text": "roof",
+      "start": 16.52,
+      "end": 16.806666666666665
+    },
+    {
+      "text": "garden",
+      "start": 16.806666666666665,
+      "end": 17.093333333333334
+    },
+    {
+      "text": "privado,",
+      "start": 17.093333333333334,
+      "end": 17.38
+    },
+    {
+      "text": "y",
+      "start": 17.38,
+      "end": 17.58
+    },
+    {
+      "text": "la",
+      "start": 17.58,
+      "end": 17.74
+    },
+    {
+      "text": "mejor",
+      "start": 17.74,
+      "end": 18.06
+    },
+    {
+      "text": "vista",
+      "start": 18.06,
+      "end": 18.44
+    },
+    {
+      "text": "al",
+      "start": 18.44,
+      "end": 18.62
+    },
+    {
+      "text": "mar.",
+      "start": 18.62,
+      "end": 18.76
+    },
+    {
+      "text": "Imagina",
+      "start": 19.38,
+      "end": 19.64
+    },
+    {
+      "text": "una",
+      "start": 19.64,
+      "end": 19.82
+    },
+    {
+      "text": "pausa",
+      "start": 19.82,
+      "end": 20.04
+    },
+    {
+      "text": "en",
+      "start": 20.04,
+      "end": 20.18
+    },
+    {
+      "text": "la",
+      "start": 20.18,
+      "end": 20.26
+    },
+    {
+      "text": "alberca,",
+      "start": 20.26,
+      "end": 20.6
+    },
+    {
+      "text": "juegos",
+      "start": 20.94,
+      "end": 21.06
+    },
+    {
+      "text": "con",
+      "start": 21.06,
+      "end": 21.24
+    },
+    {
+      "text": "tus",
+      "start": 21.24,
+      "end": 21.36
+    },
+    {
+      "text": "amigos",
+      "start": 21.36,
+      "end": 21.62
+    },
+    {
+      "text": "en",
+      "start": 21.62,
+      "end": 21.84
+    },
+    {
+      "text": "la",
+      "start": 21.84,
+      "end": 21.94
+    },
+    {
+      "text": "cancha",
+      "start": 21.94,
+      "end": 22.18
+    },
+    {
+      "text": "de",
+      "start": 22.18,
+      "end": 22.34
+    },
+    {
+      "text": "pickleball,",
+      "start": 22.34,
+      "end": 22.76
+    },
+    {
+      "text": "tardes",
+      "start": 23.2,
+      "end": 23.56
+    },
+    {
+      "text": "de",
+      "start": 23.56,
+      "end": 23.66
+    },
+    {
+      "text": "asador,",
+      "start": 23.66,
+      "end": 24.02
+    },
+    {
+      "text": "o",
+      "start": 24.46,
+      "end": 24.5
+    },
+    {
+      "text": "cenas",
+      "start": 24.5,
+      "end": 24.74
+    },
+    {
+      "text": "con",
+      "start": 24.74,
+      "end": 24.94
+    },
+    {
+      "text": "tus",
+      "start": 24.94,
+      "end": 25.06
+    },
+    {
+      "text": "seres",
+      "start": 25.06,
+      "end": 25.22
+    },
+    {
+      "text": "queridos",
+      "start": 25.22,
+      "end": 25.58
+    },
+    {
+      "text": "en",
+      "start": 25.58,
+      "end": 25.74
+    },
+    {
+      "text": "las",
+      "start": 25.74,
+      "end": 25.86
+    },
+    {
+      "text": "amenidades,",
+      "start": 25.86,
+      "end": 26.28
+    },
+    {
+      "text": "o",
+      "start": 26.28,
+      "end": 26.52
+    },
+    {
+      "text": "en",
+      "start": 26.52,
+      "end": 26.6
+    },
+    {
+      "text": "tu",
+      "start": 26.6,
+      "end": 26.7
+    },
+    {
+      "text": "roof",
+      "start": 26.7,
+      "end": 26.9
+    },
+    {
+      "text": "privado.",
+      "start": 26.9,
+      "end": 27.28
+    },
+    {
+      "text": "Cuida",
+      "start": 27.880000000000003,
+      "end": 28.18
+    },
+    {
+      "text": "tu",
+      "start": 28.18,
+      "end": 28.32
+    },
+    {
+      "text": "liquidez",
+      "start": 28.32,
+      "end": 28.64
+    },
+    {
+      "text": "con",
+      "start": 28.64,
+      "end": 28.86
+    },
+    {
+      "text": "pagos",
+      "start": 28.86,
+      "end": 29.12
+    },
+    {
+      "text": "flexibles:",
+      "start": 29.12,
+      "end": 29.56
+    },
+    {
+      "text": "diez",
+      "start": 30.08,
+      "end": 30.21333333333333
+    },
+    {
+      "text": "por",
+      "start": 30.21333333333333,
+      "end": 30.346666666666668
+    },
+    {
+      "text": "ciento",
+      "start": 30.346666666666668,
+      "end": 30.48
+    },
+    {
+      "text": "de",
+      "start": 30.48,
+      "end": 30.66
+    },
+    {
+      "text": "enganche,",
+      "start": 30.66,
+      "end": 30.98
+    },
+    {
+      "text": "diez",
+      "start": 31.34,
+      "end": 31.493333333333332
+    },
+    {
+      "text": "por",
+      "start": 31.493333333333332,
+      "end": 31.64666666666667
+    },
+    {
+      "text": "ciento",
+      "start": 31.64666666666667,
+      "end": 31.8
+    },
+    {
+      "text": "en",
+      "start": 31.8,
+      "end": 32.06
+    },
+    {
+      "text": "veinte",
+      "start": 32.06,
+      "end": 32.24
+    },
+    {
+      "text": "mensualidades,",
+      "start": 32.24,
+      "end": 32.88
+    },
+    {
+      "text": "y",
+      "start": 32.88,
+      "end": 33.2
+    },
+    {
+      "text": "ochenta",
+      "start": 33.2,
+      "end": 33.46
+    },
+    {
+      "text": "por",
+      "start": 33.46,
+      "end": 33.72
+    },
+    {
+      "text": "ciento",
+      "start": 33.72,
+      "end": 33.98
+    },
+    {
+      "text": "contra",
+      "start": 33.98,
+      "end": 34.42
+    },
+    {
+      "text": "entrega,",
+      "start": 34.42,
+      "end": 34.82
+    },
+    {
+      "text": "a",
+      "start": 34.82,
+      "end": 35.0
+    },
+    {
+      "text": "mediados",
+      "start": 35.0,
+      "end": 35.48
+    },
+    {
+      "text": "del",
+      "start": 35.48,
+      "end": 35.66
+    },
+    {
+      "text": "dos",
+      "start": 35.66,
+      "end": 35.86666666666667
+    },
+    {
+      "text": "mil",
+      "start": 35.86666666666667,
+      "end": 36.07333333333333
+    },
+    {
+      "text": "veintiocho.",
+      "start": 36.07333333333333,
+      "end": 36.28
+    },
+    {
+      "text": "Genera",
+      "start": 36.96,
+      "end": 37.28
+    },
+    {
+      "text": "plusvalía",
+      "start": 37.28,
+      "end": 37.67
+    },
+    {
+      "text": "anual,",
+      "start": 37.67,
+      "end": 38.06
+    },
+    {
+      "text": "más",
+      "start": 38.18,
+      "end": 38.26
+    },
+    {
+      "text": "flujos",
+      "start": 38.26,
+      "end": 38.6
+    },
+    {
+      "text": "mensuales",
+      "start": 38.6,
+      "end": 39.08
+    },
+    {
+      "text": "con",
+      "start": 39.08,
+      "end": 39.16
+    },
+    {
+      "text": "renta",
+      "start": 39.16,
+      "end": 39.46
+    },
+    {
+      "text": "de",
+      "start": 39.46,
+      "end": 39.54
+    },
+    {
+      "text": "estancia",
+      "start": 39.54,
+      "end": 39.82
+    },
+    {
+      "text": "corta.",
+      "start": 39.82,
+      "end": 40.2
+    },
+    {
+      "text": "Vive",
+      "start": 40.84,
+      "end": 41.0
+    },
+    {
+      "text": "la",
+      "start": 41.0,
+      "end": 41.12
+    },
+    {
+      "text": "experiencia",
+      "start": 41.12,
+      "end": 41.5
+    },
+    {
+      "text": "de",
+      "start": 41.5,
+      "end": 41.74
+    },
+    {
+      "text": "contar",
+      "start": 41.74,
+      "end": 42.0
+    },
+    {
+      "text": "con",
+      "start": 42.0,
+      "end": 42.2
+    },
+    {
+      "text": "una",
+      "start": 42.2,
+      "end": 42.34
+    },
+    {
+      "text": "smart",
+      "start": 42.34,
+      "end": 42.58
+    },
+    {
+      "text": "home,",
+      "start": 42.58,
+      "end": 42.84
+    },
+    {
+      "text": "y",
+      "start": 42.84,
+      "end": 43.24
+    },
+    {
+      "text": "controlar",
+      "start": 43.24,
+      "end": 43.52
+    },
+    {
+      "text": "las",
+      "start": 43.52,
+      "end": 43.86
+    },
+    {
+      "text": "luces,",
+      "start": 43.86,
+      "end": 44.2
+    },
+    {
+      "text": "minisplit",
+      "start": 44.48,
+      "end": 44.88
+    },
+    {
+      "text": "y",
+      "start": 44.88,
+      "end": 45.12
+    },
+    {
+      "text": "cerradura",
+      "start": 45.12,
+      "end": 45.46
+    },
+    {
+      "text": "digital",
+      "start": 45.46,
+      "end": 45.86
+    },
+    {
+      "text": "desde",
+      "start": 45.86,
+      "end": 46.12
+    },
+    {
+      "text": "tu",
+      "start": 46.12,
+      "end": 46.34
+    },
+    {
+      "text": "celular.",
+      "start": 46.34,
+      "end": 46.7
+    },
+    {
+      "text": "Si",
+      "start": 47.18,
+      "end": 47.42
+    },
+    {
+      "text": "apartas",
+      "start": 47.42,
+      "end": 47.76
+    },
+    {
+      "text": "tu",
+      "start": 47.76,
+      "end": 47.9
+    },
+    {
+      "text": "casa",
+      "start": 47.9,
+      "end": 48.0
+    },
+    {
+      "text": "este",
+      "start": 48.0,
+      "end": 48.24
+    },
+    {
+      "text": "mes,",
+      "start": 48.24,
+      "end": 48.48
+    },
+    {
+      "text": "llévate",
+      "start": 48.88,
+      "end": 48.96
+    },
+    {
+      "text": "la",
+      "start": 48.96,
+      "end": 49.16
+    },
+    {
+      "text": "cocina,",
+      "start": 49.16,
+      "end": 49.5
+    },
+    {
+      "text": "cuartos,",
+      "start": 49.94,
+      "end": 50.24
+    },
+    {
+      "text": "baños",
+      "start": 50.52,
+      "end": 50.76
+    },
+    {
+      "text": "y",
+      "start": 50.76,
+      "end": 51.08
+    },
+    {
+      "text": "roof",
+      "start": 51.08,
+      "end": 51.34
+    },
+    {
+      "text": "con",
+      "start": 51.34,
+      "end": 51.52
+    },
+    {
+      "text": "equipamiento",
+      "start": 51.52,
+      "end": 51.94
+    },
+    {
+      "text": "incluido,",
+      "start": 51.94,
+      "end": 52.44
+    },
+    {
+      "text": "¡ahorrando",
+      "start": 52.74,
+      "end": 52.98
+    },
+    {
+      "text": "hasta",
+      "start": 52.98,
+      "end": 53.2
+    },
+    {
+      "text": "cuatrocientos",
+      "start": 53.2,
+      "end": 53.620000000000005
+    },
+    {
+      "text": "cincuenta",
+      "start": 53.620000000000005,
+      "end": 54.04
+    },
+    {
+      "text": "mil",
+      "start": 54.04,
+      "end": 54.46
+    },
+    {
+      "text": "pesos!",
+      "start": 54.46,
+      "end": 54.72
+    },
+    {
+      "text": "Haz",
+      "start": 54.72,
+      "end": 55.48
+    },
+    {
+      "text": "clic",
+      "start": 55.48,
+      "end": 55.64
+    },
+    {
+      "text": "en",
+      "start": 55.64,
+      "end": 55.8
+    },
+    {
+      "text": "el",
+      "start": 55.8,
+      "end": 55.92
+    },
+    {
+      "text": "botón",
+      "start": 55.92,
+      "end": 56.14
+    },
+    {
+      "text": "de",
+      "start": 56.14,
+      "end": 56.22
+    },
+    {
+      "text": "abajo",
+      "start": 56.22,
+      "end": 56.38
+    },
+    {
+      "text": "para",
+      "start": 56.38,
+      "end": 56.62
+    },
+    {
+      "text": "más",
+      "start": 56.62,
+      "end": 56.78
+    },
+    {
+      "text": "información,",
+      "start": 56.78,
+      "end": 57.22
+    },
+    {
+      "text": "y",
+      "start": 57.22,
+      "end": 57.74
+    },
+    {
+      "text": "un",
+      "start": 57.74,
+      "end": 57.86
+    },
+    {
+      "text": "asesor",
+      "start": 57.86,
+      "end": 58.2
+    },
+    {
+      "text": "de",
+      "start": 58.2,
+      "end": 58.32
+    },
+    {
+      "text": "Legacy",
+      "start": 58.32,
+      "end": 58.72
+    },
+    {
+      "text": "Capital",
+      "start": 58.72,
+      "end": 59.02
+    },
+    {
+      "text": "te",
+      "start": 59.02,
+      "end": 59.18
+    },
+    {
+      "text": "atenderá.",
+      "start": 59.18,
+      "end": 59.6
+    }
+  ],
+  "captions": [
+    {
+      "id": "caption-000",
+      "text": "Doctor o médico,",
+      "start": 0.0,
+      "end": 1.14,
+      "words": [
+        {
+          "text": "Doctor",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "text": "o",
+          "start": 0.36,
+          "end": 0.72
+        },
+        {
+          "text": "médico,",
+          "start": 0.72,
+          "end": 0.96
+        }
+      ],
+      "shot_id": "v9-01",
+      "top": 1180
+    },
+    {
+      "id": "caption-001",
+      "text": "¿buscas una casa con",
+      "start": 1.36,
+      "end": 2.36,
+      "words": [
+        {
+          "text": "¿buscas",
+          "start": 1.36,
+          "end": 1.6
+        },
+        {
+          "text": "una",
+          "start": 1.6,
+          "end": 1.84
+        },
+        {
+          "text": "casa",
+          "start": 1.84,
+          "end": 2.08
+        },
+        {
+          "text": "con",
+          "start": 2.08,
+          "end": 2.36
+        }
+      ],
+      "shot_id": "v9-01",
+      "top": 1180
+    },
+    {
+      "id": "caption-002",
+      "text": "vista al mar",
+      "start": 2.36,
+      "end": 3.06,
+      "words": [
+        {
+          "text": "vista",
+          "start": 2.36,
+          "end": 2.62
+        },
+        {
+          "text": "al",
+          "start": 2.62,
+          "end": 2.96
+        },
+        {
+          "text": "mar",
+          "start": 2.96,
+          "end": 3.06
+        }
+      ],
+      "shot_id": "v9-01",
+      "top": 1180
+    },
+    {
+      "id": "caption-003",
+      "text": "para disfrutar en pareja,",
+      "start": 3.06,
+      "end": 4.42,
+      "words": [
+        {
+          "text": "para",
+          "start": 3.06,
+          "end": 3.4
+        },
+        {
+          "text": "disfrutar",
+          "start": 3.4,
+          "end": 3.84
+        },
+        {
+          "text": "en",
+          "start": 3.84,
+          "end": 3.96
+        },
+        {
+          "text": "pareja,",
+          "start": 3.96,
+          "end": 4.42
+        }
+      ],
+      "shot_id": "v9-02",
+      "top": 1240
+    },
+    {
+      "id": "caption-004",
+      "text": "o invertir para crecer",
+      "start": 4.42,
+      "end": 5.76,
+      "words": [
+        {
+          "text": "o",
+          "start": 4.42,
+          "end": 4.8
+        },
+        {
+          "text": "invertir",
+          "start": 4.8,
+          "end": 5.28
+        },
+        {
+          "text": "para",
+          "start": 5.28,
+          "end": 5.46
+        },
+        {
+          "text": "crecer",
+          "start": 5.46,
+          "end": 5.76
+        }
+      ],
+      "shot_id": "v9-03",
+      "top": 1210
+    },
+    {
+      "id": "caption-005",
+      "text": "tu patrimonio?",
+      "start": 5.76,
+      "end": 6.6,
+      "words": [
+        {
+          "text": "tu",
+          "start": 5.76,
+          "end": 5.9
+        },
+        {
+          "text": "patrimonio?",
+          "start": 5.9,
+          "end": 6.42
+        }
+      ],
+      "shot_id": "v9-03",
+      "top": 1210
+    },
+    {
+      "id": "caption-006",
+      "text": "Conoce este nuevo",
+      "start": 6.82,
+      "end": 7.66,
+      "words": [
+        {
+          "text": "Conoce",
+          "start": 6.82,
+          "end": 7.3
+        },
+        {
+          "text": "este",
+          "start": 7.3,
+          "end": 7.44
+        },
+        {
+          "text": "nuevo",
+          "start": 7.44,
+          "end": 7.66
+        }
+      ],
+      "shot_id": "v9-04",
+      "top": 1240
+    },
+    {
+      "id": "caption-007",
+      "text": "proyecto residencial, en",
+      "start": 7.66,
+      "end": 8.84,
+      "words": [
+        {
+          "text": "proyecto",
+          "start": 7.66,
+          "end": 8.0
+        },
+        {
+          "text": "residencial,",
+          "start": 8.0,
+          "end": 8.66
+        },
+        {
+          "text": "en",
+          "start": 8.66,
+          "end": 8.84
+        }
+      ],
+      "shot_id": "v9-04",
+      "top": 1240
+    },
+    {
+      "id": "caption-008",
+      "text": "El",
+      "start": 8.84,
+      "end": 8.98,
+      "words": [
+        {
+          "text": "El",
+          "start": 8.84,
+          "end": 8.98
+        }
+      ],
+      "shot_id": "v9-04",
+      "top": 1240
+    },
+    {
+      "id": "caption-009",
+      "text": "Sauzal,",
+      "start": 8.98,
+      "end": 9.4,
+      "words": [
+        {
+          "text": "Sauzal,",
+          "start": 8.98,
+          "end": 9.22
+        }
+      ],
+      "shot_id": "v9-05",
+      "top": 1240
+    },
+    {
+      "id": "caption-010",
+      "text": "en la entrada de",
+      "start": 9.62,
+      "end": 10.18,
+      "words": [
+        {
+          "text": "en",
+          "start": 9.62,
+          "end": 9.7
+        },
+        {
+          "text": "la",
+          "start": 9.7,
+          "end": 9.74
+        },
+        {
+          "text": "entrada",
+          "start": 9.74,
+          "end": 10.04
+        },
+        {
+          "text": "de",
+          "start": 10.04,
+          "end": 10.18
+        }
+      ],
+      "shot_id": "v9-05",
+      "top": 1240
+    },
+    {
+      "id": "caption-011",
+      "text": "Ensenada.",
+      "start": 10.18,
+      "end": 10.76,
+      "words": [
+        {
+          "text": "Ensenada.",
+          "start": 10.18,
+          "end": 10.58
+        }
+      ],
+      "shot_id": "v9-05",
+      "top": 1240
+    },
+    {
+      "id": "caption-012",
+      "text": "Desde tres punto nueve,",
+      "start": 11.06,
+      "end": 11.92,
+      "words": [
+        {
+          "text": "Desde",
+          "start": 11.06,
+          "end": 11.16
+        },
+        {
+          "text": "tres",
+          "start": 11.16,
+          "end": 11.413333333333334
+        },
+        {
+          "text": "punto",
+          "start": 11.413333333333334,
+          "end": 11.666666666666666
+        },
+        {
+          "text": "nueve,",
+          "start": 11.666666666666666,
+          "end": 11.92
+        }
+      ],
+      "shot_id": "v9-06",
+      "top": 1230
+    },
+    {
+      "id": "caption-013",
+      "text": "hasta cuatro punto",
+      "start": 11.92,
+      "end": 12.706666666666667,
+      "words": [
+        {
+          "text": "hasta",
+          "start": 11.92,
+          "end": 12.2
+        },
+        {
+          "text": "cuatro",
+          "start": 12.2,
+          "end": 12.453333333333333
+        },
+        {
+          "text": "punto",
+          "start": 12.453333333333333,
+          "end": 12.706666666666667
+        }
+      ],
+      "shot_id": "v9-06",
+      "top": 1230
+    },
+    {
+      "id": "caption-014",
+      "text": "nueve millones de pesos:",
+      "start": 12.706666666666667,
+      "end": 13.92,
+      "words": [
+        {
+          "text": "nueve",
+          "start": 12.706666666666667,
+          "end": 12.96
+        },
+        {
+          "text": "millones",
+          "start": 12.96,
+          "end": 13.3
+        },
+        {
+          "text": "de",
+          "start": 13.3,
+          "end": 13.5
+        },
+        {
+          "text": "pesos:",
+          "start": 13.5,
+          "end": 13.74
+        }
+      ],
+      "shot_id": "v9-07",
+      "top": 780
+    },
+    {
+      "id": "caption-015",
+      "text": "casas de un nivel,",
+      "start": 14.1,
+      "end": 14.98,
+      "words": [
+        {
+          "text": "casas",
+          "start": 14.1,
+          "end": 14.36
+        },
+        {
+          "text": "de",
+          "start": 14.36,
+          "end": 14.52
+        },
+        {
+          "text": "un",
+          "start": 14.52,
+          "end": 14.68
+        },
+        {
+          "text": "nivel,",
+          "start": 14.68,
+          "end": 14.98
+        }
+      ],
+      "shot_id": "v9-07",
+      "top": 780
+    },
+    {
+      "id": "caption-016",
+      "text": "de dos o tres",
+      "start": 14.98,
+      "end": 15.78,
+      "words": [
+        {
+          "text": "de",
+          "start": 14.98,
+          "end": 15.32
+        },
+        {
+          "text": "dos",
+          "start": 15.32,
+          "end": 15.48
+        },
+        {
+          "text": "o",
+          "start": 15.48,
+          "end": 15.62
+        },
+        {
+          "text": "tres",
+          "start": 15.62,
+          "end": 15.78
+        }
+      ],
+      "shot_id": "v9-07",
+      "top": 780
+    },
+    {
+      "id": "caption-017",
+      "text": "recámaras,",
+      "start": 15.78,
+      "end": 16.3,
+      "words": [
+        {
+          "text": "recámaras,",
+          "start": 15.78,
+          "end": 16.3
+        }
+      ],
+      "shot_id": "v9-07",
+      "top": 780
+    },
+    {
+      "id": "caption-018",
+      "text": "con roof garden privado,",
+      "start": 16.3,
+      "end": 17.38,
+      "words": [
+        {
+          "text": "con",
+          "start": 16.3,
+          "end": 16.52
+        },
+        {
+          "text": "roof",
+          "start": 16.52,
+          "end": 16.806666666666665
+        },
+        {
+          "text": "garden",
+          "start": 16.806666666666665,
+          "end": 17.093333333333334
+        },
+        {
+          "text": "privado,",
+          "start": 17.093333333333334,
+          "end": 17.38
+        }
+      ],
+      "shot_id": "v9-08",
+      "top": 1240
+    },
+    {
+      "id": "caption-019",
+      "text": "y la mejor vista",
+      "start": 17.38,
+      "end": 18.44,
+      "words": [
+        {
+          "text": "y",
+          "start": 17.38,
+          "end": 17.58
+        },
+        {
+          "text": "la",
+          "start": 17.58,
+          "end": 17.74
+        },
+        {
+          "text": "mejor",
+          "start": 17.74,
+          "end": 18.06
+        },
+        {
+          "text": "vista",
+          "start": 18.06,
+          "end": 18.44
+        }
+      ],
+      "shot_id": "v9-08",
+      "top": 1240
+    },
+    {
+      "id": "caption-020",
+      "text": "al mar.",
+      "start": 18.44,
+      "end": 18.94,
+      "words": [
+        {
+          "text": "al",
+          "start": 18.44,
+          "end": 18.62
+        },
+        {
+          "text": "mar.",
+          "start": 18.62,
+          "end": 18.76
+        }
+      ],
+      "shot_id": "v9-08",
+      "top": 1240
+    },
+    {
+      "id": "caption-021",
+      "text": "Imagina una pausa en",
+      "start": 19.38,
+      "end": 20.18,
+      "words": [
+        {
+          "text": "Imagina",
+          "start": 19.38,
+          "end": 19.64
+        },
+        {
+          "text": "una",
+          "start": 19.64,
+          "end": 19.82
+        },
+        {
+          "text": "pausa",
+          "start": 19.82,
+          "end": 20.04
+        },
+        {
+          "text": "en",
+          "start": 20.04,
+          "end": 20.18
+        }
+      ],
+      "shot_id": "v9-09",
+      "top": 1230
+    },
+    {
+      "id": "caption-022",
+      "text": "la alberca,",
+      "start": 20.18,
+      "end": 20.78,
+      "words": [
+        {
+          "text": "la",
+          "start": 20.18,
+          "end": 20.26
+        },
+        {
+          "text": "alberca,",
+          "start": 20.26,
+          "end": 20.6
+        }
+      ],
+      "shot_id": "v9-09",
+      "top": 1230
+    },
+    {
+      "id": "caption-023",
+      "text": "juegos con tus amigos",
+      "start": 20.94,
+      "end": 21.62,
+      "words": [
+        {
+          "text": "juegos",
+          "start": 20.94,
+          "end": 21.06
+        },
+        {
+          "text": "con",
+          "start": 21.06,
+          "end": 21.24
+        },
+        {
+          "text": "tus",
+          "start": 21.24,
+          "end": 21.36
+        },
+        {
+          "text": "amigos",
+          "start": 21.36,
+          "end": 21.62
+        }
+      ],
+      "shot_id": "v9-10",
+      "top": 1110
+    },
+    {
+      "id": "caption-024",
+      "text": "en la cancha de",
+      "start": 21.62,
+      "end": 22.34,
+      "words": [
+        {
+          "text": "en",
+          "start": 21.62,
+          "end": 21.84
+        },
+        {
+          "text": "la",
+          "start": 21.84,
+          "end": 21.94
+        },
+        {
+          "text": "cancha",
+          "start": 21.94,
+          "end": 22.18
+        },
+        {
+          "text": "de",
+          "start": 22.18,
+          "end": 22.34
+        }
+      ],
+      "shot_id": "v9-10",
+      "top": 1110
+    },
+    {
+      "id": "caption-025",
+      "text": "pickleball,",
+      "start": 22.34,
+      "end": 22.94,
+      "words": [
+        {
+          "text": "pickleball,",
+          "start": 22.34,
+          "end": 22.76
+        }
+      ],
+      "shot_id": "v9-10",
+      "top": 1110
+    },
+    {
+      "id": "caption-026",
+      "text": "tardes de asador,",
+      "start": 23.2,
+      "end": 24.2,
+      "words": [
+        {
+          "text": "tardes",
+          "start": 23.2,
+          "end": 23.56
+        },
+        {
+          "text": "de",
+          "start": 23.56,
+          "end": 23.66
+        },
+        {
+          "text": "asador,",
+          "start": 23.66,
+          "end": 24.02
+        }
+      ],
+      "shot_id": "v9-11",
+      "top": 920
+    },
+    {
+      "id": "caption-027",
+      "text": "o cenas con tus",
+      "start": 24.46,
+      "end": 25.06,
+      "words": [
+        {
+          "text": "o",
+          "start": 24.46,
+          "end": 24.5
+        },
+        {
+          "text": "cenas",
+          "start": 24.5,
+          "end": 24.74
+        },
+        {
+          "text": "con",
+          "start": 24.74,
+          "end": 24.94
+        },
+        {
+          "text": "tus",
+          "start": 24.94,
+          "end": 25.06
+        }
+      ],
+      "shot_id": "v9-12",
+      "top": 760
+    },
+    {
+      "id": "caption-028",
+      "text": "seres queridos en las",
+      "start": 25.06,
+      "end": 25.86,
+      "words": [
+        {
+          "text": "seres",
+          "start": 25.06,
+          "end": 25.22
+        },
+        {
+          "text": "queridos",
+          "start": 25.22,
+          "end": 25.58
+        },
+        {
+          "text": "en",
+          "start": 25.58,
+          "end": 25.74
+        },
+        {
+          "text": "las",
+          "start": 25.74,
+          "end": 25.86
+        }
+      ],
+      "shot_id": "v9-12",
+      "top": 760
+    },
+    {
+      "id": "caption-029",
+      "text": "amenidades,",
+      "start": 25.86,
+      "end": 26.28,
+      "words": [
+        {
+          "text": "amenidades,",
+          "start": 25.86,
+          "end": 26.28
+        }
+      ],
+      "shot_id": "v9-12",
+      "top": 760
+    },
+    {
+      "id": "caption-030",
+      "text": "o en tu roof",
+      "start": 26.28,
+      "end": 26.9,
+      "words": [
+        {
+          "text": "o",
+          "start": 26.28,
+          "end": 26.52
+        },
+        {
+          "text": "en",
+          "start": 26.52,
+          "end": 26.6
+        },
+        {
+          "text": "tu",
+          "start": 26.6,
+          "end": 26.7
+        },
+        {
+          "text": "roof",
+          "start": 26.7,
+          "end": 26.9
+        }
+      ],
+      "shot_id": "v9-13",
+      "top": 780
+    },
+    {
+      "id": "caption-031",
+      "text": "privado.",
+      "start": 26.9,
+      "end": 27.46,
+      "words": [
+        {
+          "text": "privado.",
+          "start": 26.9,
+          "end": 27.28
+        }
+      ],
+      "shot_id": "v9-13",
+      "top": 780
+    },
+    {
+      "id": "caption-032",
+      "text": "Cuida tu liquidez con",
+      "start": 27.880000000000003,
+      "end": 28.86,
+      "words": [
+        {
+          "text": "Cuida",
+          "start": 27.880000000000003,
+          "end": 28.18
+        },
+        {
+          "text": "tu",
+          "start": 28.18,
+          "end": 28.32
+        },
+        {
+          "text": "liquidez",
+          "start": 28.32,
+          "end": 28.64
+        },
+        {
+          "text": "con",
+          "start": 28.64,
+          "end": 28.86
+        }
+      ],
+      "shot_id": "v9-14",
+      "top": 930
+    },
+    {
+      "id": "caption-033",
+      "text": "pagos flexibles:",
+      "start": 28.86,
+      "end": 29.74,
+      "words": [
+        {
+          "text": "pagos",
+          "start": 28.86,
+          "end": 29.12
+        },
+        {
+          "text": "flexibles:",
+          "start": 29.12,
+          "end": 29.56
+        }
+      ],
+      "shot_id": "v9-14",
+      "top": 930
+    },
+    {
+      "id": "caption-034",
+      "text": "diez por ciento de",
+      "start": 30.08,
+      "end": 30.66,
+      "words": [
+        {
+          "text": "diez",
+          "start": 30.08,
+          "end": 30.21333333333333
+        },
+        {
+          "text": "por",
+          "start": 30.21333333333333,
+          "end": 30.346666666666668
+        },
+        {
+          "text": "ciento",
+          "start": 30.346666666666668,
+          "end": 30.48
+        },
+        {
+          "text": "de",
+          "start": 30.48,
+          "end": 30.66
+        }
+      ],
+      "shot_id": "v9-15",
+      "top": 1210
+    },
+    {
+      "id": "caption-035",
+      "text": "enganche,",
+      "start": 30.66,
+      "end": 31.16,
+      "words": [
+        {
+          "text": "enganche,",
+          "start": 30.66,
+          "end": 30.98
+        }
+      ],
+      "shot_id": "v9-15",
+      "top": 1210
+    },
+    {
+      "id": "caption-036",
+      "text": "diez por ciento en",
+      "start": 31.34,
+      "end": 32.06,
+      "words": [
+        {
+          "text": "diez",
+          "start": 31.34,
+          "end": 31.493333333333332
+        },
+        {
+          "text": "por",
+          "start": 31.493333333333332,
+          "end": 31.64666666666667
+        },
+        {
+          "text": "ciento",
+          "start": 31.64666666666667,
+          "end": 31.8
+        },
+        {
+          "text": "en",
+          "start": 31.8,
+          "end": 32.06
+        }
+      ],
+      "shot_id": "v9-16",
+      "top": 1210
+    },
+    {
+      "id": "caption-037",
+      "text": "veinte mensualidades, y",
+      "start": 32.06,
+      "end": 33.2,
+      "words": [
+        {
+          "text": "veinte",
+          "start": 32.06,
+          "end": 32.24
+        },
+        {
+          "text": "mensualidades,",
+          "start": 32.24,
+          "end": 32.88
+        },
+        {
+          "text": "y",
+          "start": 32.88,
+          "end": 33.2
+        }
+      ],
+      "shot_id": "v9-16",
+      "top": 1210
+    },
+    {
+      "id": "caption-038",
+      "text": "ochenta por ciento contra",
+      "start": 33.2,
+      "end": 34.42,
+      "words": [
+        {
+          "text": "ochenta",
+          "start": 33.2,
+          "end": 33.46
+        },
+        {
+          "text": "por",
+          "start": 33.46,
+          "end": 33.72
+        },
+        {
+          "text": "ciento",
+          "start": 33.72,
+          "end": 33.98
+        },
+        {
+          "text": "contra",
+          "start": 33.98,
+          "end": 34.42
+        }
+      ],
+      "shot_id": "v9-17",
+      "top": 1210
+    },
+    {
+      "id": "caption-039",
+      "text": "entrega, a mediados del",
+      "start": 34.42,
+      "end": 35.66,
+      "words": [
+        {
+          "text": "entrega,",
+          "start": 34.42,
+          "end": 34.82
+        },
+        {
+          "text": "a",
+          "start": 34.82,
+          "end": 35.0
+        },
+        {
+          "text": "mediados",
+          "start": 35.0,
+          "end": 35.48
+        },
+        {
+          "text": "del",
+          "start": 35.48,
+          "end": 35.66
+        }
+      ],
+      "shot_id": "v9-17",
+      "top": 1210
+    },
+    {
+      "id": "caption-040",
+      "text": "dos mil veintiocho.",
+      "start": 35.66,
+      "end": 36.46,
+      "words": [
+        {
+          "text": "dos",
+          "start": 35.66,
+          "end": 35.86666666666667
+        },
+        {
+          "text": "mil",
+          "start": 35.86666666666667,
+          "end": 36.07333333333333
+        },
+        {
+          "text": "veintiocho.",
+          "start": 36.07333333333333,
+          "end": 36.28
+        }
+      ],
+      "shot_id": "v9-17",
+      "top": 1210
+    },
+    {
+      "id": "caption-041",
+      "text": "Genera plusvalía anual,",
+      "start": 36.96,
+      "end": 38.162,
+      "words": [
+        {
+          "text": "Genera",
+          "start": 36.96,
+          "end": 37.28
+        },
+        {
+          "text": "plusvalía",
+          "start": 37.28,
+          "end": 37.67
+        },
+        {
+          "text": "anual,",
+          "start": 37.67,
+          "end": 38.06
+        }
+      ],
+      "shot_id": "v9-18",
+      "top": 1210
+    },
+    {
+      "id": "caption-042",
+      "text": "más flujos mensuales con",
+      "start": 38.18,
+      "end": 39.16,
+      "words": [
+        {
+          "text": "más",
+          "start": 38.18,
+          "end": 38.26
+        },
+        {
+          "text": "flujos",
+          "start": 38.26,
+          "end": 38.6
+        },
+        {
+          "text": "mensuales",
+          "start": 38.6,
+          "end": 39.08
+        },
+        {
+          "text": "con",
+          "start": 39.08,
+          "end": 39.16
+        }
+      ],
+      "shot_id": "v9-18",
+      "top": 1210
+    },
+    {
+      "id": "caption-043",
+      "text": "renta de estancia corta.",
+      "start": 39.16,
+      "end": 40.38,
+      "words": [
+        {
+          "text": "renta",
+          "start": 39.16,
+          "end": 39.46
+        },
+        {
+          "text": "de",
+          "start": 39.46,
+          "end": 39.54
+        },
+        {
+          "text": "estancia",
+          "start": 39.54,
+          "end": 39.82
+        },
+        {
+          "text": "corta.",
+          "start": 39.82,
+          "end": 40.2
+        }
+      ],
+      "shot_id": "v9-19",
+      "top": 660
+    },
+    {
+      "id": "caption-044",
+      "text": "Vive la experiencia de",
+      "start": 40.84,
+      "end": 41.74,
+      "words": [
+        {
+          "text": "Vive",
+          "start": 40.84,
+          "end": 41.0
+        },
+        {
+          "text": "la",
+          "start": 41.0,
+          "end": 41.12
+        },
+        {
+          "text": "experiencia",
+          "start": 41.12,
+          "end": 41.5
+        },
+        {
+          "text": "de",
+          "start": 41.5,
+          "end": 41.74
+        }
+      ],
+      "shot_id": "v9-20",
+      "top": 550
+    },
+    {
+      "id": "caption-045",
+      "text": "contar con una smart",
+      "start": 41.74,
+      "end": 42.58,
+      "words": [
+        {
+          "text": "contar",
+          "start": 41.74,
+          "end": 42.0
+        },
+        {
+          "text": "con",
+          "start": 42.0,
+          "end": 42.2
+        },
+        {
+          "text": "una",
+          "start": 42.2,
+          "end": 42.34
+        },
+        {
+          "text": "smart",
+          "start": 42.34,
+          "end": 42.58
+        }
+      ],
+      "shot_id": "v9-20",
+      "top": 550
+    },
+    {
+      "id": "caption-046",
+      "text": "home, y",
+      "start": 42.58,
+      "end": 43.24,
+      "words": [
+        {
+          "text": "home,",
+          "start": 42.58,
+          "end": 42.84
+        },
+        {
+          "text": "y",
+          "start": 42.84,
+          "end": 43.24
+        }
+      ],
+      "shot_id": "v9-20",
+      "top": 550
+    },
+    {
+      "id": "caption-047",
+      "text": "controlar las luces,",
+      "start": 43.24,
+      "end": 44.38,
+      "words": [
+        {
+          "text": "controlar",
+          "start": 43.24,
+          "end": 43.52
+        },
+        {
+          "text": "las",
+          "start": 43.52,
+          "end": 43.86
+        },
+        {
+          "text": "luces,",
+          "start": 43.86,
+          "end": 44.2
+        }
+      ],
+      "shot_id": "v9-21",
+      "top": 1160
+    },
+    {
+      "id": "caption-048",
+      "text": "minisplit",
+      "start": 44.48,
+      "end": 44.88,
+      "words": [
+        {
+          "text": "minisplit",
+          "start": 44.48,
+          "end": 44.88
+        }
+      ],
+      "shot_id": "v9-21",
+      "top": 1160
+    },
+    {
+      "id": "caption-049",
+      "text": "y cerradura digital desde",
+      "start": 44.88,
+      "end": 46.12,
+      "words": [
+        {
+          "text": "y",
+          "start": 44.88,
+          "end": 45.12
+        },
+        {
+          "text": "cerradura",
+          "start": 45.12,
+          "end": 45.46
+        },
+        {
+          "text": "digital",
+          "start": 45.46,
+          "end": 45.86
+        },
+        {
+          "text": "desde",
+          "start": 45.86,
+          "end": 46.12
+        }
+      ],
+      "shot_id": "v9-22",
+      "top": 550
+    },
+    {
+      "id": "caption-050",
+      "text": "tu celular.",
+      "start": 46.12,
+      "end": 46.88,
+      "words": [
+        {
+          "text": "tu",
+          "start": 46.12,
+          "end": 46.34
+        },
+        {
+          "text": "celular.",
+          "start": 46.34,
+          "end": 46.7
+        }
+      ],
+      "shot_id": "v9-22",
+      "top": 550
+    },
+    {
+      "id": "caption-051",
+      "text": "Si apartas tu casa",
+      "start": 47.18,
+      "end": 48.0,
+      "words": [
+        {
+          "text": "Si",
+          "start": 47.18,
+          "end": 47.42
+        },
+        {
+          "text": "apartas",
+          "start": 47.42,
+          "end": 47.76
+        },
+        {
+          "text": "tu",
+          "start": 47.76,
+          "end": 47.9
+        },
+        {
+          "text": "casa",
+          "start": 47.9,
+          "end": 48.0
+        }
+      ],
+      "shot_id": "v9-23",
+      "top": 550
+    },
+    {
+      "id": "caption-052",
+      "text": "este mes,",
+      "start": 48.0,
+      "end": 48.66,
+      "words": [
+        {
+          "text": "este",
+          "start": 48.0,
+          "end": 48.24
+        },
+        {
+          "text": "mes,",
+          "start": 48.24,
+          "end": 48.48
+        }
+      ],
+      "shot_id": "v9-23",
+      "top": 550
+    },
+    {
+      "id": "caption-053",
+      "text": "llévate la cocina,",
+      "start": 48.88,
+      "end": 49.68,
+      "words": [
+        {
+          "text": "llévate",
+          "start": 48.88,
+          "end": 48.96
+        },
+        {
+          "text": "la",
+          "start": 48.96,
+          "end": 49.16
+        },
+        {
+          "text": "cocina,",
+          "start": 49.16,
+          "end": 49.5
+        }
+      ],
+      "shot_id": "v9-24",
+      "top": 800
+    },
+    {
+      "id": "caption-054",
+      "text": "cuartos,",
+      "start": 49.94,
+      "end": 50.42,
+      "words": [
+        {
+          "text": "cuartos,",
+          "start": 49.94,
+          "end": 50.24
+        }
+      ],
+      "shot_id": "v9-25",
+      "top": 800
+    },
+    {
+      "id": "caption-055",
+      "text": "baños y",
+      "start": 50.52,
+      "end": 51.08,
+      "words": [
+        {
+          "text": "baños",
+          "start": 50.52,
+          "end": 50.76
+        },
+        {
+          "text": "y",
+          "start": 50.76,
+          "end": 51.08
+        }
+      ],
+      "shot_id": "v9-26",
+      "top": 700
+    },
+    {
+      "id": "caption-056",
+      "text": "roof con equipamiento",
+      "start": 51.08,
+      "end": 51.94,
+      "words": [
+        {
+          "text": "roof",
+          "start": 51.08,
+          "end": 51.34
+        },
+        {
+          "text": "con",
+          "start": 51.34,
+          "end": 51.52
+        },
+        {
+          "text": "equipamiento",
+          "start": 51.52,
+          "end": 51.94
+        }
+      ],
+      "shot_id": "v9-27",
+      "top": 1100
+    },
+    {
+      "id": "caption-057",
+      "text": "incluido,",
+      "start": 51.94,
+      "end": 52.62,
+      "words": [
+        {
+          "text": "incluido,",
+          "start": 51.94,
+          "end": 52.44
+        }
+      ],
+      "shot_id": "v9-27",
+      "top": 1100
+    },
+    {
+      "id": "caption-058",
+      "text": "¡ahorrando hasta",
+      "start": 52.74,
+      "end": 53.2,
+      "words": [
+        {
+          "text": "¡ahorrando",
+          "start": 52.74,
+          "end": 52.98
+        },
+        {
+          "text": "hasta",
+          "start": 52.98,
+          "end": 53.2
+        }
+      ],
+      "shot_id": "v9-28",
+      "top": 1210
+    },
+    {
+      "id": "caption-059",
+      "text": "cuatrocientos cincuenta",
+      "start": 53.2,
+      "end": 54.04,
+      "words": [
+        {
+          "text": "cuatrocientos",
+          "start": 53.2,
+          "end": 53.620000000000005
+        },
+        {
+          "text": "cincuenta",
+          "start": 53.620000000000005,
+          "end": 54.04
+        }
+      ],
+      "shot_id": "v9-28",
+      "top": 1210
+    },
+    {
+      "id": "caption-060",
+      "text": "mil pesos!",
+      "start": 54.04,
+      "end": 54.72,
+      "words": [
+        {
+          "text": "mil",
+          "start": 54.04,
+          "end": 54.46
+        },
+        {
+          "text": "pesos!",
+          "start": 54.46,
+          "end": 54.72
+        }
+      ],
+      "shot_id": "v9-28",
+      "top": 1210
+    },
+    {
+      "id": "caption-061",
+      "text": "Haz clic en el",
+      "start": 54.72,
+      "end": 55.92,
+      "words": [
+        {
+          "text": "Haz",
+          "start": 54.72,
+          "end": 55.48
+        },
+        {
+          "text": "clic",
+          "start": 55.48,
+          "end": 55.64
+        },
+        {
+          "text": "en",
+          "start": 55.64,
+          "end": 55.8
+        },
+        {
+          "text": "el",
+          "start": 55.8,
+          "end": 55.92
+        }
+      ],
+      "shot_id": "v9-29",
+      "top": 1260
+    },
+    {
+      "id": "caption-062",
+      "text": "botón de abajo para",
+      "start": 55.92,
+      "end": 56.62,
+      "words": [
+        {
+          "text": "botón",
+          "start": 55.92,
+          "end": 56.14
+        },
+        {
+          "text": "de",
+          "start": 56.14,
+          "end": 56.22
+        },
+        {
+          "text": "abajo",
+          "start": 56.22,
+          "end": 56.38
+        },
+        {
+          "text": "para",
+          "start": 56.38,
+          "end": 56.62
+        }
+      ],
+      "shot_id": "v9-29",
+      "top": 1260
+    },
+    {
+      "id": "caption-063",
+      "text": "más información,",
+      "start": 56.62,
+      "end": 57.22,
+      "words": [
+        {
+          "text": "más",
+          "start": 56.62,
+          "end": 56.78
+        },
+        {
+          "text": "información,",
+          "start": 56.78,
+          "end": 57.22
+        }
+      ],
+      "shot_id": "v9-29",
+      "top": 1260
+    },
+    {
+      "id": "caption-064",
+      "text": "y un asesor de",
+      "start": 57.22,
+      "end": 58.32,
+      "words": [
+        {
+          "text": "y",
+          "start": 57.22,
+          "end": 57.74
+        },
+        {
+          "text": "un",
+          "start": 57.74,
+          "end": 57.86
+        },
+        {
+          "text": "asesor",
+          "start": 57.86,
+          "end": 58.2
+        },
+        {
+          "text": "de",
+          "start": 58.2,
+          "end": 58.32
+        }
+      ],
+      "shot_id": "v9-30",
+      "top": 1260
+    },
+    {
+      "id": "caption-065",
+      "text": "Legacy Capital te",
+      "start": 58.32,
+      "end": 59.18,
+      "words": [
+        {
+          "text": "Legacy",
+          "start": 58.32,
+          "end": 58.72
+        },
+        {
+          "text": "Capital",
+          "start": 58.72,
+          "end": 59.02
+        },
+        {
+          "text": "te",
+          "start": 59.02,
+          "end": 59.18
+        }
+      ],
+      "shot_id": "v9-30",
+      "top": 1260
+    },
+    {
+      "id": "caption-066",
+      "text": "atenderá.",
+      "start": 59.18,
+      "end": 59.78,
+      "words": [
+        {
+          "text": "atenderá.",
+          "start": 59.18,
+          "end": 59.6
+        }
+      ],
+      "shot_id": "v9-30",
+      "top": 1260
+    }
+  ],
+  "music": {
+    "file": "music/i-can-hear-your-heartbeat-1000.mp3",
+    "title": "I Can Hear Your Heartbeat",
+    "artist": "Michael Ramir C.",
+    "source_url": "https://assets.mixkit.co/music/1000/1000.mp3",
+    "bpm": 125,
+    "in": 30.72,
+    "gain_db": -10.5,
+    "tempo_changed": false,
+    "voice_duck": ".80–1.00 with 60ms RMS and smoothed release",
+    "fade_in": 0.04,
+    "fade_out": 0.7
+  },
+  "sfx_events": [
+    {
+      "shot": "v9-02",
+      "cause": "title_entry",
+      "effect": "fast-small-sweep-166.mp3",
+      "source_path": "sfx/fast-small-sweep-166.mp3",
+      "source_crop_start": 0.226333,
+      "source_crop_end": 0.516333,
+      "source_peak_after_crop": 0.07,
+      "start": 3.23,
+      "peak_at": 3.3,
+      "picture_landing_at": 3.3,
+      "target_peak_before_master": 0.085,
+      "gain": 0.08590907187805936
+    },
+    {
+      "shot": "v9-03",
+      "cause": "title_entry",
+      "effect": "short-transition-sweep-175.mp3",
+      "source_path": "sfx/short-transition-sweep-175.mp3",
+      "source_crop_start": 0.370958,
+      "source_crop_end": 0.606,
+      "source_peak_after_crop": 0.09,
+      "start": 4.57,
+      "peak_at": 4.66,
+      "picture_landing_at": 4.66,
+      "target_peak_before_master": 0.085,
+      "gain": 0.12900420954780517
+    },
+    {
+      "shot": "v9-04",
+      "cause": "title_entry",
+      "effect": "air-zoom-vacuum-2608.mp3",
+      "source_path": "sfx/air-zoom-vacuum-2608.mp3",
+      "source_crop_start": 0.254583,
+      "source_crop_end": 0.734583,
+      "source_peak_after_crop": 0.18,
+      "start": 6.88,
+      "peak_at": 7.06,
+      "picture_landing_at": 7.06,
+      "target_peak_before_master": 0.085,
+      "gain": 0.09477449291751643
+    },
+    {
+      "shot": "v9-05",
+      "cause": "broll_transition",
+      "effect": "fast-whoosh-1490.mp3",
+      "source_path": "sfx/fast-whoosh-1490.mp3",
+      "source_crop_start": 0.532125,
+      "source_crop_end": 1.052125,
+      "source_peak_after_crop": 0.18,
+      "start": 8.88,
+      "peak_at": 9.06,
+      "picture_landing_at": 9.06,
+      "target_peak_before_master": 0.085,
+      "gain": 0.09506806397623112
+    },
+    {
+      "shot": "v9-06",
+      "cause": "title_entry",
+      "effect": "cinematic-whoosh-fast-1492.mp3",
+      "source_path": "sfx/cinematic-whoosh-fast-1492.mp3",
+      "source_crop_start": 0.8095,
+      "source_crop_end": 1.334146,
+      "source_peak_after_crop": 0.28,
+      "start": 11.02,
+      "peak_at": 11.3,
+      "picture_landing_at": 11.3,
+      "target_peak_before_master": 0.085,
+      "gain": 0.09492598930818737
+    },
+    {
+      "shot": "v9-07",
+      "cause": "title_entry",
+      "effect": "quick-zoom-impact-772.mp3",
+      "source_path": "sfx/quick-zoom-impact-772.mp3",
+      "source_crop_start": 0.359375,
+      "source_crop_end": 0.604375,
+      "source_peak_after_crop": 0.055,
+      "start": 12.725,
+      "peak_at": 12.78,
+      "picture_landing_at": 12.78,
+      "target_peak_before_master": 0.085,
+      "gain": 0.09508293450503731
+    },
+    {
+      "shot": "v9-08",
+      "cause": "title_entry",
+      "effect": "fast-small-sweep-166.mp3",
+      "source_path": "sfx/fast-small-sweep-166.mp3",
+      "source_crop_start": 0.226333,
+      "source_crop_end": 0.516333,
+      "source_peak_after_crop": 0.07,
+      "start": 16.47,
+      "peak_at": 16.54,
+      "picture_landing_at": 16.54,
+      "target_peak_before_master": 0.085,
+      "gain": 0.08590907187805936
+    },
+    {
+      "shot": "v9-09",
+      "cause": "title_entry",
+      "effect": "short-transition-sweep-175.mp3",
+      "source_path": "sfx/short-transition-sweep-175.mp3",
+      "source_crop_start": 0.370958,
+      "source_crop_end": 0.606,
+      "source_peak_after_crop": 0.09,
+      "start": 19.53,
+      "peak_at": 19.62,
+      "picture_landing_at": 19.62,
+      "target_peak_before_master": 0.085,
+      "gain": 0.12900420954780517
+    },
+    {
+      "shot": "v9-10",
+      "cause": "title_entry",
+      "effect": "air-zoom-vacuum-2608.mp3",
+      "source_path": "sfx/air-zoom-vacuum-2608.mp3",
+      "source_crop_start": 0.254583,
+      "source_crop_end": 0.734583,
+      "source_peak_after_crop": 0.18,
+      "start": 21.0,
+      "peak_at": 21.18,
+      "picture_landing_at": 21.18,
+      "target_peak_before_master": 0.085,
+      "gain": 0.09477449291751643
+    },
+    {
+      "shot": "v9-11",
+      "cause": "title_entry",
+      "effect": "fast-whoosh-1490.mp3",
+      "source_path": "sfx/fast-whoosh-1490.mp3",
+      "source_crop_start": 0.532125,
+      "source_crop_end": 1.052125,
+      "source_peak_after_crop": 0.18,
+      "start": 23.26,
+      "peak_at": 23.44,
+      "picture_landing_at": 23.44,
+      "target_peak_before_master": 0.085,
+      "gain": 0.09506806397623112
+    },
+    {
+      "shot": "v9-12",
+      "cause": "title_entry",
+      "effect": "cinematic-whoosh-fast-1492.mp3",
+      "source_path": "sfx/cinematic-whoosh-fast-1492.mp3",
+      "source_crop_start": 0.8095,
+      "source_crop_end": 1.334146,
+      "source_peak_after_crop": 0.28,
+      "start": 24.42,
+      "peak_at": 24.7,
+      "picture_landing_at": 24.7,
+      "target_peak_before_master": 0.085,
+      "gain": 0.09492598930818737
+    },
+    {
+      "shot": "v9-13",
+      "cause": "title_entry",
+      "effect": "quick-zoom-impact-772.mp3",
+      "source_path": "sfx/quick-zoom-impact-772.mp3",
+      "source_crop_start": 0.359375,
+      "source_crop_end": 0.604375,
+      "source_peak_after_crop": 0.055,
+      "start": 26.465,
+      "peak_at": 26.52,
+      "picture_landing_at": 26.52,
+      "target_peak_before_master": 0.085,
+      "gain": 0.09508293450503731
+    },
+    {
+      "shot": "v9-14",
+      "cause": "title_entry",
+      "effect": "fast-small-sweep-166.mp3",
+      "source_path": "sfx/fast-small-sweep-166.mp3",
+      "source_crop_start": 0.226333,
+      "source_crop_end": 0.516333,
+      "source_peak_after_crop": 0.07,
+      "start": 28.05,
+      "peak_at": 28.12,
+      "picture_landing_at": 28.12,
+      "target_peak_before_master": 0.085,
+      "gain": 0.08590907187805936
+    },
+    {
+      "shot": "v9-15",
+      "cause": "payment_number",
+      "effect": "quick-zoom-impact-772.mp3",
+      "source_path": "sfx/quick-zoom-impact-772.mp3",
+      "source_crop_start": 0.359375,
+      "source_crop_end": 0.604375,
+      "source_peak_after_crop": 0.055,
+      "start": 30.635,
+      "peak_at": 30.69,
+      "picture_landing_at": 30.69,
+      "target_peak_before_master": 0.135,
+      "gain": 0.15101407244917692
+    },
+    {
+      "shot": "v9-16",
+      "cause": "payment_number",
+      "effect": "quick-zoom-impact-772.mp3",
+      "source_path": "sfx/quick-zoom-impact-772.mp3",
+      "source_crop_start": 0.359375,
+      "source_crop_end": 0.604375,
+      "source_peak_after_crop": 0.055,
+      "start": 32.105,
+      "peak_at": 32.16,
+      "picture_landing_at": 32.16,
+      "target_peak_before_master": 0.135,
+      "gain": 0.15101407244917692
+    },
+    {
+      "shot": "v9-17",
+      "cause": "payment_number",
+      "effect": "quick-zoom-impact-772.mp3",
+      "source_path": "sfx/quick-zoom-impact-772.mp3",
+      "source_crop_start": 0.359375,
+      "source_crop_end": 0.604375,
+      "source_peak_after_crop": 0.055,
+      "start": 33.815,
+      "peak_at": 33.87,
+      "picture_landing_at": 33.87,
+      "target_peak_before_master": 0.135,
+      "gain": 0.15101407244917692
+    },
+    {
+      "shot": "v9-18",
+      "cause": "chart_line",
+      "effect": "cinematic-whoosh-fast-1492.mp3",
+      "source_path": "sfx/cinematic-whoosh-fast-1492.mp3",
+      "source_crop_start": 0.8095,
+      "source_crop_end": 1.334146,
+      "source_peak_after_crop": 0.28,
+      "start": 37.77,
+      "peak_at": 38.05,
+      "picture_landing_at": 38.05,
+      "target_peak_before_master": 0.085,
+      "gain": 0.09492598930818737
+    },
+    {
+      "shot": "v9-19",
+      "cause": "title_entry",
+      "effect": "quick-zoom-impact-772.mp3",
+      "source_path": "sfx/quick-zoom-impact-772.mp3",
+      "source_crop_start": 0.359375,
+      "source_crop_end": 0.604375,
+      "source_peak_after_crop": 0.055,
+      "start": 39.345,
+      "peak_at": 39.4,
+      "picture_landing_at": 39.4,
+      "target_peak_before_master": 0.085,
+      "gain": 0.09508293450503731
+    },
+    {
+      "shot": "v9-20",
+      "cause": "title_entry",
+      "effect": "fast-small-sweep-166.mp3",
+      "source_path": "sfx/fast-small-sweep-166.mp3",
+      "source_crop_start": 0.226333,
+      "source_crop_end": 0.516333,
+      "source_peak_after_crop": 0.07,
+      "start": 41.01,
+      "peak_at": 41.08,
+      "picture_landing_at": 41.08,
+      "target_peak_before_master": 0.085,
+      "gain": 0.08590907187805936
+    },
+    {
+      "shot": "v9-21",
+      "cause": "broll_transition",
+      "effect": "short-transition-sweep-175.mp3",
+      "source_path": "sfx/short-transition-sweep-175.mp3",
+      "source_crop_start": 0.370958,
+      "source_crop_end": 0.606,
+      "source_peak_after_crop": 0.09,
+      "start": 43.23,
+      "peak_at": 43.32,
+      "picture_landing_at": 43.32,
+      "target_peak_before_master": 0.085,
+      "gain": 0.12900420954780517
+    },
+    {
+      "shot": "v9-22",
+      "cause": "title_entry",
+      "effect": "air-zoom-vacuum-2608.mp3",
+      "source_path": "sfx/air-zoom-vacuum-2608.mp3",
+      "source_crop_start": 0.254583,
+      "source_crop_end": 0.734583,
+      "source_peak_after_crop": 0.18,
+      "start": 44.94,
+      "peak_at": 45.12,
+      "picture_landing_at": 45.12,
+      "target_peak_before_master": 0.085,
+      "gain": 0.09477449291751643
+    },
+    {
+      "shot": "v9-23",
+      "cause": "title_entry",
+      "effect": "fast-whoosh-1490.mp3",
+      "source_path": "sfx/fast-whoosh-1490.mp3",
+      "source_crop_start": 0.532125,
+      "source_crop_end": 1.052125,
+      "source_peak_after_crop": 0.18,
+      "start": 47.24,
+      "peak_at": 47.42,
+      "picture_landing_at": 47.42,
+      "target_peak_before_master": 0.085,
+      "gain": 0.09506806397623112
+    },
+    {
+      "shot": "v9-24",
+      "cause": "broll_transition",
+      "effect": "cinematic-whoosh-fast-1492.mp3",
+      "source_path": "sfx/cinematic-whoosh-fast-1492.mp3",
+      "source_crop_start": 0.8095,
+      "source_crop_end": 1.334146,
+      "source_peak_after_crop": 0.28,
+      "start": 48.68,
+      "peak_at": 48.96,
+      "picture_landing_at": 48.96,
+      "target_peak_before_master": 0.085,
+      "gain": 0.09492598930818737
+    },
+    {
+      "shot": "v9-25",
+      "cause": "broll_transition",
+      "effect": "quick-zoom-impact-772.mp3",
+      "source_path": "sfx/quick-zoom-impact-772.mp3",
+      "source_crop_start": 0.359375,
+      "source_crop_end": 0.604375,
+      "source_peak_after_crop": 0.055,
+      "start": 49.965,
+      "peak_at": 50.02,
+      "picture_landing_at": 50.02,
+      "target_peak_before_master": 0.085,
+      "gain": 0.09508293450503731
+    },
+    {
+      "shot": "v9-26",
+      "cause": "broll_transition",
+      "effect": "fast-small-sweep-166.mp3",
+      "source_path": "sfx/fast-small-sweep-166.mp3",
+      "source_crop_start": 0.226333,
+      "source_crop_end": 0.516333,
+      "source_peak_after_crop": 0.07,
+      "start": 50.53,
+      "peak_at": 50.6,
+      "picture_landing_at": 50.6,
+      "target_peak_before_master": 0.085,
+      "gain": 0.08590907187805936
+    },
+    {
+      "shot": "v9-27",
+      "cause": "broll_transition",
+      "effect": "short-transition-sweep-175.mp3",
+      "source_path": "sfx/short-transition-sweep-175.mp3",
+      "source_crop_start": 0.370958,
+      "source_crop_end": 0.606,
+      "source_peak_after_crop": 0.09,
+      "start": 51.07,
+      "peak_at": 51.16,
+      "picture_landing_at": 51.16,
+      "target_peak_before_master": 0.085,
+      "gain": 0.12900420954780517
+    },
+    {
+      "shot": "v9-28",
+      "cause": "bonus_number",
+      "effect": "quick-zoom-impact-772.mp3",
+      "source_path": "sfx/quick-zoom-impact-772.mp3",
+      "source_crop_start": 0.359375,
+      "source_crop_end": 0.604375,
+      "source_peak_after_crop": 0.055,
+      "start": 53.485,
+      "peak_at": 53.54,
+      "picture_landing_at": 53.54,
+      "target_peak_before_master": 0.135,
+      "gain": 0.15101407244917692
+    },
+    {
+      "shot": "v9-29",
+      "cause": "cta",
+      "effect": "cinematic-whoosh-fast-1492.mp3",
+      "source_path": "sfx/cinematic-whoosh-fast-1492.mp3",
+      "source_crop_start": 0.8095,
+      "source_crop_end": 1.334146,
+      "source_peak_after_crop": 0.28,
+      "start": 54.52,
+      "peak_at": 54.8,
+      "picture_landing_at": 54.8,
+      "target_peak_before_master": 0.12,
+      "gain": 0.1340131613762645
+    },
+    {
+      "shot": "v9-30",
+      "cause": "cta",
+      "effect": "cinematic-whoosh-fast-1492.mp3",
+      "source_path": "sfx/cinematic-whoosh-fast-1492.mp3",
+      "source_crop_start": 0.8095,
+      "source_crop_end": 1.334146,
+      "source_peak_after_crop": 0.28,
+      "start": 57.02,
+      "peak_at": 57.3,
+      "picture_landing_at": 57.3,
+      "target_peak_before_master": 0.12,
+      "gain": 0.1340131613762645
+    }
+  ],
+  "mastering": {
+    "input_measurement": {
+      "input_i": "-18.19",
+      "input_tp": "-3.33",
+      "input_lra": "3.20",
+      "input_thresh": "-28.31",
+      "output_i": "-15.78",
+      "output_tp": "-1.20",
+      "output_lra": "2.00",
+      "output_thresh": "-25.87",
+      "normalization_type": "dynamic",
+      "target_offset": "0.78"
+    },
+    "filter": "loudnorm=I=-15:TP=-1.2:LRA=9:measured_I=-18.19:measured_TP=-3.33:measured_LRA=3.20:measured_thresh=-28.31:offset=0.78:linear=true,atrim=duration=60.7,apad=whole_dur=60.7",
+    "output_measurement": {
+      "input_i": "-15.08",
+      "input_tp": "-1.18",
+      "input_lra": "2.00",
+      "input_thresh": "-25.19",
+      "output_i": "-15.32",
+      "output_tp": "-1.20",
+      "output_lra": "2.10",
+      "output_thresh": "-25.40",
+      "normalization_type": "dynamic",
+      "target_offset": "0.32"
+    },
+    "target_lufs": -15,
+    "target_true_peak_dbtp": -1.2,
+    "stems": "pre-master PCM16 components; sum then apply shared mastering filter, do not play master together with stems"
+  },
+  "loudness": {
+    "integrated_lufs": -15.08,
+    "true_peak_dbtp": -1.18,
+    "lra": 2.0
+  },
+  "files": [
+    {
+      "file": "doctor_v9_voice.wav",
+      "bytes": 2880028,
+      "sha256": "295ba63dc5589ad613695f30a5703970cb4ba2b16f2fb55dc835794154d56fba"
+    },
+    {
+      "file": "doctor_v9_mix.wav",
+      "bytes": 11654478,
+      "sha256": "305ab89511c0ddf8c32f8029092a284095f09c4d9927a9ec65e3880e95b9e44d"
+    },
+    {
+      "file": "doctor_v9_music_edit.wav",
+      "bytes": 11654444,
+      "sha256": "5aaba4e5be5d5d6435700e55c4b76c242ca7b7fb683f9d69a9d406421a3a5ee5"
+    },
+    {
+      "file": "doctor_v9_effects.wav",
+      "bytes": 11654444,
+      "sha256": "f1373094acf3ab9cb1357197c6e29739fa221829d6f16da45910aeb984016abf"
+    }
+  ],
+  "qa": {
+    "full_decode": true,
+    "matching_duration": true,
+    "clip_free_peak": true,
+    "speech_retimed": false,
+    "human_listening_review": false
+  },
+  "timeline_source": "../timeline.json",
+  "timeline_sha256": "a040074010d2f1c81ef73adfdc87c04a3b46dfdfceb3b1e7f6a9096b60816569"
+}

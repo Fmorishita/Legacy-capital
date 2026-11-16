@@ -1,0 +1,31 @@
+{
+  "input_version": "Doctor V8c user source",
+  "original_drive_file_id": "1Eb7lRRPWsd0IsZPqcnbKjcDvVYOnOGJ6",
+  "original_source_sha256": "ee2d4e934a9a601ed346b2381e9d7ec8b6089a04d2c86eea8c52d6e4a32cf1b6",
+  "residential_render": {
+    "file": "source_assets/source_render.mp4",
+    "provided_by": "user_attachment",
+    "original_filename": "video render del residencial pp.mp4",
+    "sha256": "0f9d4f4f8408b2f20218702e3d66278efe87b52f8fcab139746eed5f6da51d5b"
+  },
+  "seedance": {
+    "status": "existing_completed_clips_reused_new_generation_disabled",
+    "selected_existing_MCP": 15,
+    "selected_existing_API_completed_before_stop": 2,
+    "new_generation_after_stop": 0,
+    "active_jobs_after_status_check": 0,
+    "note": "Historical API production and paid SDK verification occurred before the latest stop instruction; accounting is distinct from reuse."
+  },
+  "voice": {
+    "file": "audio/doctor_v9_voice.wav",
+    "provider": "Gemini 3.8 Flash TTS / Charon via Treg",
+    "actual_cost_usd": 0.013603,
+    "human_listening_review": false
+  },
+  "images": "Only v23.jpg bedroom and v24.jpg bathroom displayed as brief unique native-camera shots; other clean references retained as context.",
+  "reuse": "17 distinct selected video files with reviewed active source intervals; no source repeated in final",
+  "prior_versions_preserved": true,
+  "shot_review": "shot_review.json",
+  "raw_MCP_inventory": "existing_mcp_assets.json",
+  "generation_policy": "generation_policy.json"
+}

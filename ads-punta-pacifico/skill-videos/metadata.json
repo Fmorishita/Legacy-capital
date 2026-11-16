@@ -1,22 +1,22 @@
 {
   "name": "videos-punta-pacifico",
-  "version": "1.8.0",
+  "version": "1.11.0",
   "created": "2026-11-06",
-  "updated": "2026-11-14",
+  "updated": "2026-11-16",
   "language": "es",
   "baseline_delivery": "V4",
   "baseline_aesthetic_approval": "approved_in_general_with_refinements",
   "maintenance_authorization": "Actualizar al aplicar cambios importantes y reutilizables solicitados por el usuario; sincronizar instalada y descargable.",
   "installation_scope": "local_agent_environment",
   "cloud_library_registration": "not_performed",
-  "current_work_version": "V6-Legacy-Capital-Doctor",
-  "current_work_status": "rendered_verified_pending_user_review",
+  "current_work_version": "V9-Legacy-Capital-Doctor",
+  "current_work_status": "final_verified_existing_assets",
   "V5_aesthetic_approval": "pending_user_review",
   "preferred_editing_base": "V5",
   "current_brand_visible": "Legacy Capital",
   "internal_source_identity": "Punta Pacífico",
   "active_profile_versions": {
-    "salud": "V6-Legacy-Capital-Doctor",
+    "salud": "V9-Legacy-Capital-Doctor",
     "empresarios": "V5",
     "california": "V5"
   },
@@ -97,5 +97,35 @@
     ],
     "media": "optimized_working_copies_and_verified_downloads; exact_originals_in_authorized_Drive",
     "visibility": "existing_public_repository_unchanged"
+  },
+  "V7_Legacy_Capital_Doctor_aesthetic_approval": "pending_user_review",
+  "reference_video_editing": {
+    "revision": "1.9.0",
+    "script_source": "user-selected Claude draft narration cross-checked with original client paragraph",
+    "reference_video": "doctor-v6-borrador_claude.mp4",
+    "historical_graphic_date_conflict": "selected narration: mid-2028; historical graphic: Dec-2028; graphics follow selected narration",
+    "graphics": "native vertical editable vectors and verified map crops; captions throughout",
+    "photo_reuse_audit": "hash, source lineage and visual review; each photographic background once",
+    "pause_editing": "quiet centers only; retain words and realign all timing",
+    "technical_report": "separate project report; skill does not assert render completion or human listening",
+    "prior_versions_preserved": true
+  },
+  "V9_Legacy_Capital_Doctor_aesthetic_approval": "pending_user_review",
+  "api_local_workflow": {
+    "revision": "1.11.0",
+    "execution_choice": "latest_explicit_user_preference",
+    "key_location": "runtime_only_not_in_distribution",
+    "paid_seedance_verification": "real_SDK_completed_result_recorded_before_stop",
+    "new_generations_allowed": false,
+    "api_and_mcp_balances": "distinct",
+    "voice_direction": "male_professional_northern_Mexican_requested_not_human_verified",
+    "final_export": "see_project_QA"
+  },
+  "existing_asset_workflow": {
+    "MCP_selected_clips": 15,
+    "API_previously_completed_selected_clips": 2,
+    "native_render_cuts": 2,
+    "new_jobs_after_stop": 0,
+    "aesthetic_approval": "pending_user_review"
   }
 }

@@ -50,3 +50,8 @@ La devolución se incorpora sola cuando el usuario vuelve a la pestaña del edit
 ## Comentarios por voz y vista móvil
 
 El editor móvil prioriza «Cambios con IA». Sus notas de voz son instrucciones privadas, no locución del video. Lee voiceNotes al recuperar la solicitud y escucha los audios que devuelve legacy_get_ai_request; también existe legacy_get_voice_note. Si la conexión aún no descubre la herramienta nueva, el helper download guarda las notas desde el servicio privado en voice-notes/. No inventes transcripción ni subas estos archivos al repositorio. Si la sesión no admite audio, usa el helper transcribe con Whisper.cpp local y el modelo cuantizado base-q5_1: instala pywhispercpp y FFmpeg si faltan. No envíes las notas a una API de pago. Revisa nombres, cifras y fragmentos inciertos. Si tampoco hay ejecución local para transcribir, registra needs_input con la limitación. El texto que el usuario corrigió explícitamente tiene prioridad sobre el dictado parcial.
+
+
+## Doctor V9 · clips existentes
+
+La revisión nueva vive en `versiones/v9-doctor-legacy/`. Lee su README y DESCARGAS_VERIFICADAS.json. Descarga las dos partes del kit desde Drive con la cuenta autorizada y extráelas juntas; contienen videos, voz, música, SFX, fuentes y fotos. La copia del repositorio conserva código, guion y tiempos, sin redistribuir los binarios de stock. Las generaciones nuevas de Higgsfield están desactivadas por instrucción del usuario. No ejecutar planes o pruebas API históricos. Se conserva V5/V6 y el editor como proyectos distintos.

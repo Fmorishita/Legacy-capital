@@ -1,0 +1,13 @@
+{
+  "name": "doctor-v9-legacy-capital",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "hyperframes": "0.9.18"
+  },
+  "scripts": {
+    "dev": "hyperframes preview",
+    "check": "hyperframes check --json",
+    "render": "hyperframes render --fps 30 --quality delivery --workers 1 --crf 19 --video-frame-format jpg --frames-cache-dir off -o ../exports/Doctor_V9_MASTER_1080.mp4"
+  }
+}

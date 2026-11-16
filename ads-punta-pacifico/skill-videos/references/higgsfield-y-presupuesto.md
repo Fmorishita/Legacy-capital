@@ -14,7 +14,7 @@ El registro del trabajo, no el paquete portable de la skill, conserva los prompt
 
 ## 1. Consultar y asignar el saldo
 
-1. Leer saldo y estado real de la cuenta por MCP. No asumir que «cuenta gratis» implica generaciones ilimitadas o que todo saldo procede de la misma concesión.
+1. Leer saldo y estado real del canal solicitado, distinguiendo MCP y API. Para API leer [ejecución local segura](api-local-segura.md). Un saldo MCP cero no determina el saldo de la API. No asumir que «cuenta gratis» implica generaciones ilimitadas o que todo saldo procede de la misma concesión.
 2. Resolver el nombre solicitado con el catálogo vigente; leer parámetros, roles de medios, relaciones de aspecto y duraciones. No inventar un ID a partir del nombre coloquial.
 3. Cotizar con los parámetros que se enviarán: modelo, modo, duración, resolución, cantidad, audio y referencias cuando se requieran. Una cotización no es un trabajo enviado ni valida por sí sola los medios.
 4. Calcular la asignación antes de enviar: costo unitario por número de tomas, margen, máximo autorizado y saldo esperado. Priorizar las primeras escenas solicitadas; no convertir el saldo en una cuota que haya que agotar.
@@ -72,3 +72,17 @@ La pregunta «¿podemos usar Katana?» pide primero una comprobación de disponi
 Si los controles requeridos del editor local no están disponibles, explicarlo con precisión. No afirmar que se abrió o usó Katana ni crear un sustituto de ese editor en un sandbox cloud para superar la ausencia. Diferenciar la generación ordinaria de clips que sí puede hacer el MCP de la edición interactiva que no está expuesta. Una composición con HyperFrames sigue siendo HyperFrames y sólo se hace cuando está dentro de la tarea autorizada.
 
 No ejecutar un preset Katana, abrir una sesión de preset ni cambiar a una receta de recreación sólo por la consulta de disponibilidad. Si el usuario pide después ese flujo, resolverlo de nuevo con las instrucciones y permisos vigentes, conservando su presupuesto.
+
+## Intervalos activos y material ya animado
+
+Cuando el usuario pida evitar momentos quietos y aprovechar el mínimo generado, revisar el movimiento real antes de fijar los puntos de entrada. Dar a cada ventana su acción y registrar archivo, SHA256, in, out y duración visible con transición. Se permite compartir un clip entre dos o más momentos sólo con intervalos distintos y sin fotogramas repetidos; no usar pausa, loop o espejado para disimular una foto repetida.
+
+Si el render original ya muestra una caminata, teléfono, fachada o aéreo pertinente, recortar ese movimiento fiel en lugar de volver a pagarlo. El ahorro se calcula con el plan real, incluidos mínimos y prueba de SDK pedida. Los montajes con varias referencias y cortes pedidos al modelo son propuestas: comprobar sus transiciones, continuidad y geometría antes de aceptarlos. No afirmar que varios cortes exactos están garantizados.
+
+## Reutilización de assets y detención de generaciones
+
+Antes de una generación pagada, consultar los videos ya completados del proyecto en la cuenta autorizada. Registrar ID, prompt/parámetros observables, archivo local y hash. Revisar temporalmente el resultado real; un thumbnail o un prompt no demuestra que la acción sea correcta. Elegir la ventana que ya muestre acción y evitar finales donde la cámara abandona los rostros o revela espacios no sustentados.
+
+Una orden de «no hagas más videos» bloquea nuevos envíos, reintentos y ejemplos SDK. Conservar un archivo explícito de política y hacer que cualquier ejecutor lo respete. Consultar los IDs pendientes conocidos y cancelar sólo cuando el estado y contrato lo permitan. Un trabajo ya terminal se registra como completado/fallido/cancelado según la respuesta, sin atribuir una cancelación inexistente. La edición y descarga de clips ya existentes pueden continuar dentro del encargo.
+
+Si faltan tomas, usar material original pertinente o cortes nativos de renders únicos y documentar cuáles siguen siendo fotos. No rellenar con congelados de un video ni gastar para completar una cuota. El kit final conserva los videos originales seleccionados, los recortes y su procedencia; las referencias o planes históricos no autorizan por sí solos nuevas generaciones.

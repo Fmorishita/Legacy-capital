@@ -1,5 +1,30 @@
 # Historial
 
+## 1.11.0 — 2026-11-16
+
+- Petición: detener nuevas generaciones Higgsfield y terminar Doctor V9 con los videos ya creados en los assets de la cuenta; sustituir la toma de inversión por la pareja celebrando.
+- Antes: plan local pendiente y once tomas propuestas. Ahora: ejecución remota cuando el usuario la autoriza, prueba SDK realmente completada registrada, lectura y revisión del banco MCP y selección de ventanas activas sin pagar de nuevo.
+- La orden de detener bloquea nuevos envíos/reintentos y ejemplos de prueba; se consulta el último ID conocido. Si ya terminó se registra como completado y no se afirma que fue cancelado.
+- Se documentan redondeos de dimensiones, fotos que siguen con cámara nativa, fuente/hash/offset por escena y separación entre cotización y facturación. Se conserva la clave fuera del código, Git, documentación y entregables.
+- Alcance V9: 15 clips MCP existentes, dos clips API completados antes de la detención, cuatro recortes aportados y dos fotos breves. MP4 final 720×1280, 30 fps y 60.7 s decodificado completo; 34 fotogramas codificados revisados y audio medido. Los detalles viven en el reporte de proyecto. No implica nueva aprobación estética ni escucha humana.
+
+## 1.10.0 — 2026-11-15
+
+- Petición: revisar Doctor V8c con firma Legacy pequeña, textos complementarios, voz más natural y tomas activas de Seedance 2.5 mediante API, dentro de USD 15; el usuario necesita guardar la clave y ejecutar en su computadora.
+- Antes: presupuesto y animación por MCP, reglas generales de captions. Ahora: separar saldo API/MCP, leer contratos por endpoint, entregar SDK local con clave oculta y excluida, registrar solicitudes y reservas sin duplicar POST inciertos, y distinguir prueba simulada de éxito real del proveedor.
+- Los titulares aportan otro ángulo; precio, pagos y CTA conservan su función explícita. Un clip puede cubrir varias ventanas con intervalos activos distintos y sin repetir fotogramas. Se aprovecha movimiento del render original antes de pagar una nueva generación.
+- La dirección vocal regional queda como intención solicitada; no se inventa escucha humana ni aprobación estética. El rechazo de la voz de V8c y la retirada del rendimiento esperado pertenecen a la configuración V9, no a todos los anuncios.
+- Estado: composición base, mezcla y ejecutor preparados; controles de presupuesto y revisión de composición pasados. Prueba pagada de API, once clips y render final animado pendientes de ejecución local y revisión real. V5 y versiones posteriores anteriores se conservan.
+
+## 1.9.0 — 2026-11-15
+
+- Petición: crear Doctor V7 con el guion del borrador de Claude adjunto, sus mecanismos de motion graphics reinterpretados, fotos sin repetir y una edición continua, y entregar el MP4 en el chat.
+- Antes: reglas generales de guion, correspondencia visual y gráficos. Ahora: flujo explícito para recuperar el guion elegido, contrastar ASR con fuentes del cliente y documentar discrepancias entre locución y gráficos de contexto. La última instrucción explícita manda; no se mezcla una entrega hablada a mediados de 2028 con la fecha histórica de una gráfica.
+- Se recomponen gráficos densos como secuencias verticales editables por etapas y con captions durante toda la narración. Las proyecciones conservan base y horizonte, sin convertir estimaciones a cinco años en valores a la entrega.
+- Se comprueban pausas y sólo se recortan centros silenciosos, conservando palabras y realineando toda la edición. Los SFX siguen la llegada visible del elemento. Las tomas cortas deben completar su animación; las fotos se auditan por hash, linaje y revisión visual.
+- Alcance: método de reedición reutilizable; precio, mensualidades, fecha, datos de las gráficas y casting siguen en configuración. V5 y ambas identidades V6 se conservan como históricos distintos.
+- Estado: preferencias y fuente de guion solicitadas explícitamente. Doctor V7 estaba en producción al preparar esta actualización; su render, QA y entrega se registran en su reporte de proyecto. No se afirma aprobación estética ni escucha humana.
+
 ## 1.8.0 — 2026-11-14
 
 - Petición: guardar cada video como proyecto, volver a Inicio, subir otros videos y trabajar con fuentes de Drive o GitHub, conservando Doctor V6 como primera prueba.

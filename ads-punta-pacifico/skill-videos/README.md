@@ -1,6 +1,8 @@
-# Videos Punta Pacífico · Skill 1.8.0
+# Videos Punta Pacífico · Skill 1.11.0
 
 Esta carpeta contiene la skill completa. Empieza por SKILL.md; las referencias desarrollan investigación, guion, imágenes, audio, HyperFrames, animación solicitada con presupuesto, QA, kits portables para otras IA, editor visual con feedback y mantenimiento.
+
+La versión 1.11.0 añade la revisión y reutilización de los assets existentes de Higgsfield antes de pagar nuevas tomas, la detención explícita de generaciones y la ejecución API en el lugar autorizado por el usuario. Conserva IDs, hashes, puntos de entrada, fuentes y estado real. Doctor V9 se entrega con clips ya completados; reconstruir su montaje no reactiva generaciones. El guion, los titulares complementarios, la sincronía y el kit portable siguen siendo editables, y la aprobación estética permanece separada de la verificación técnica.
 
 La versión 1.8.0 añade Inicio y proyectos independientes por video. Guardar conserva el proyecto y sus medios en el espacio privado del Site para abrirlos desde otro dispositivo; los borradores y su historial siguen siendo locales. Permite subir videos, importar JSON editables y vincular carpetas de Drive o repositorios/carpetas de GitHub como fuentes. Sus enlaces no equivalen a una conexión o sincronización: la importación mediante esas cuentas se solicita explícitamente a ChatGPT con las herramientas que tenga disponibles. Un MP4 no recupera automáticamente sus capas originales.
 

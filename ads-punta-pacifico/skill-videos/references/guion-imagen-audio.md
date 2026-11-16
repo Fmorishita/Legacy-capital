@@ -133,3 +133,26 @@ Entregar las imágenes generadas también como archivos individuales cuando lo s
 - En una entrega de video conservar el mix narrado integrado. Cuando el mismo usuario pida reorganizar sus materiales para continuar sus propios anuncios, incluir también la voz limpia alineada y los componentes exactos de música/SFX de ese proyecto con licencias, URLs y función de edición. No confundir esa organización con una librería de stock para nuevos terceros ni conceder derechos de redistribución. Ver [entrega portable](entrega-portable-ia.md).
 - Si se preparan stems de trabajo, documentar su tratamiento antes/después del mastering y si su suma reproduce el master o sólo sirve como aproximación editable. Cambiar el contenedor no altera la licencia de la música o los efectos.
 - Medir y decodificar el audio. No afirmar una escucha humana o una evaluación auditiva que no ocurrió.
+
+## 6. Reedición desde un video de referencia
+
+Cuando el usuario elige un MP4 como fuente del guion y pide adaptar su estilo de animación:
+
+1. Conservar el archivo adjunto y registrar duración, resolución y origen. Examinar su montaje completo con muestras representativas de las transiciones y los gráficos, además de las imágenes estáticas de contexto.
+2. Recuperar el guion hablado y contrastarlo con el texto original del cliente si existe. Usar reconocimiento de voz como apoyo y corregir nombres, importes y fechas con evidencia. No sustituirlo por otra revisión pulida del asistente cuando el usuario pidió el mismo guion.
+3. Documentar los mecanismos de animación observados: orden de construcción, trazado de líneas, aparición de números, movimiento de cámara y acentos de sonido. Reinterpretarlos con una composición propia; no afirmar que se recuperaron las capas originales del MP4.
+4. Resolver datos con la última instrucción explícita. Si ésta exige conservar la locución de la referencia, las gráficas se ajustan a ese guion. Registrar cualquier diferencia con imágenes históricas: en Doctor V7, la narración elegida indica mediados de 2028, mientras una gráfica de contexto muestra diciembre de 2028. No combinar ambas fechas ni inventar una confirmación comercial adicional.
+5. Recomponer las infografías horizontales para lectura vertical. Dar prioridad al dato que se dice en cada momento y construir el puente, rutas o curvas por etapas. Usar SVG/texto editable para números y diagramas; los recortes verificables de mapas pueden conservar su geografía original. No inventar coordenadas a partir de una ilustración.
+6. Mantener captions durante los mapas y gráficos. Dividirlos en los cortes, reservarles espacio y comprobarlos también en el archivo codificado. Titulares y leyendas no reemplazan la transcripción completa.
+7. Expresar escenarios de apreciación como proyecciones o estimaciones con base, tasa y horizonte coherentes. No transformar el valor estimado a cinco años en valor a la entrega. Los datos concretos pertenecen a la configuración, no a la regla general de la skill.
+8. Generar una narración continua cuando se cambie la voz. Para retirar pausas excesivas, identificar centros de silencio por energía de audio, conservar los extremos y verificar que ninguna palabra sea cortada. Guardar el mapa de recortes y realinear palabras, cortes, captions, música y SFX al reloj resultante. No borrar respiraciones indiscriminadamente ni usar silencio cero como objetivo literal.
+9. Verificar continuidad de la mezcla y de los visuales sin huecos muertos. Medir duración y picos, decodificar y separar estos controles de una escucha humana; no declarar ésta si no ocurrió. Sincronizar el pico de cada SFX con la llegada visible del texto, cifra o acción, no siempre con el inicio de escena.
+10. Contar cada fotografía una sola vez dentro del alcance solicitado. Comprobar SHA256, fuente y parentesco visual: cambiar el encuadre no crea otra foto. Una gráfica editable que evoluciona durante una secuencia no es una foto reutilizada. Verificar también que una toma breve termine su animación antes del siguiente corte.
+
+La petición de entregar el MP4 en el chat autoriza renderizarlo y verificarlo; conservar las versiones anteriores y enlazar el archivo final. Registrar por separado revisión técnica, entrega y feedback estético del usuario.
+
+## Titulares complementarios y cambio de voz
+
+Cuando haya subtítulos completos, usar el titular opcional para sumar una consecuencia o beneficio: ante una alberca, «Recarga tu energía»; ante la planeación, «Distribuye el desembolso». Evitar copiar la frase de la locución en otra capa. Los datos de decisión como precio, pagos y CTA pueden tener énfasis gráfico explícito. Comprobar que todo el texto llegue a verse antes del corte.
+
+Si el usuario rechaza una voz por robótica, registrar el rechazo de esa versión y probar otra síntesis/prosodia dentro del presupuesto autorizado. Solicitar una locución continua, dirección regional discreta y ritmo conversacional, sin retiming para forzar el montaje. Regenerar el reloj de escenas, palabras, subtítulos y sonido. El texto del prompt no demuestra un acento logrado ni sustituye una escucha real; declarar qué revisión se hizo.

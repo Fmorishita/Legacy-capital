@@ -74,7 +74,7 @@ for m in re.finditer(r'<audio id="sfx\d+" src="([^"]+)" data-start="([\d.]+)" da
 sfx=lambda n:'assets/sfx/'+n+'.mp3'
 D={'syn-boom':0.94,'syn-whoosh-up':0.6,'syn-swish':0.31,'syn-whoosh-down':0.62,'syn-whoosh-low':0.83,'syn-thud':0.33,'syn-shimmer':0.94,'syn-pop':0.2}
 for n,t,v in [('syn-boom',0.05,0.3),('syn-whoosh-up',1.3,0.22),('syn-swish',3.27,0.2),('syn-whoosh-down',4.85,0.2),('syn-whoosh-up',6.8,0.25),
-              ('syn-whoosh-low',B_C1-0.25,0.25),('syn-pop',B_C1+0.25,0.3),('syn-thud',B_C2,0.3),('syn-shimmer',B_END-0.1,0.2)]:
+              ('syn-whoosh-low',B_C1-0.70,0.25),('syn-pop',B_C1+0.25,0.2),('syn-thud',B_C2,0.3),('syn-shimmer',B_END-0.1,0.2)]:
     ev.append((sfx(n),round(t,3),D[n],v))
 for i,(src,t,d,v) in enumerate(ev):
     X(f'<audio id="fx{i}" src="{src}" data-start="{t}" data-duration="{round(d,3)}" data-track-index="{10+i%9}" data-volume="{v}"></audio>')

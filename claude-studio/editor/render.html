@@ -15,7 +15,16 @@ window.renderer = {
     await engine.ready();
     return {duracion: engine.duration(), errores};
   },
-  cuadro(t, calidad = 0.95) { engine.render(t); return document.getElementById('c').toDataURL('image/jpeg', calidad); },
+  // Con clips de video, espera a que cada clip llegue al cuadro exacto antes de capturar.
+  async cuadro(t, calidad = 0.95) {
+    engine.render(t);
+    const videos = [...engine.assets.values()].filter(r => r.type === 'video' && r.element.seeking);
+    if (videos.length) {
+      await Promise.all(videos.map(r => new Promise(ok => { r.element.addEventListener('seeked', ok, {once: true}); setTimeout(ok, 3000); })));
+      engine.render(t, {skipVideoSync: true});
+    }
+    return document.getElementById('c').toDataURL('image/jpeg', calidad);
+  },
   // Mezcla de audio con el mismo código de reproducción del editor, en un contexto sin conexión.
   async audio(sr = 48000) {
     const dur = engine.duration(), extra = 0.025;

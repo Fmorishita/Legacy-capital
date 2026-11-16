@@ -352,6 +352,9 @@ function inspToma(box, s) {
     <div class="row"><span class="hint" style="flex:1">Inicio del corte</span>${i > 0 ? `<button class="btn sm" data-c="${i}" data-d="-0.25">−0.25 s</button><button class="btn sm" data-c="${i}" data-d="0.25">+0.25 s</button>` : '<span class="hint">primera toma</span>'}</div>
     <div class="row"><span class="hint" style="flex:1">Final de la toma</span>${i < P().scenes.length - 1 ? `<button class="btn sm" data-c="${i + 1}" data-d="-0.25">−0.25 s</button><button class="btn sm" data-c="${i + 1}" data-d="0.25">+0.25 s</button>` : '<span class="hint">última toma</span>'}</div>
     <p class="hint">También puedes arrastrar la línea entre tomas en la línea de tiempo. La voz y los subtítulos no se mueven.</p>
+    ${a?.type === 'video' ? `<hr class="sep"><h3>Clip de video</h3>
+    ${rango('i-vel', 'Velocidad del clip', m.speed ?? 1, 0.25, 3, 0.05, '×')}
+    ${rango('i-off', 'Empezar el clip desde', m.offset ?? 0, 0, 10, 0.05, ' s')}` : ''}
     <hr class="sep"><h3>Encuadre</h3>
     ${rango('i-zoom', 'Zoom', m.scale ?? 1.04, 0.8, 2.5, 0.01, '×')}
     ${rango('i-x', 'Posición horizontal', m.x || 0, -600, 600, 1, ' px')}
@@ -368,6 +371,7 @@ function inspToma(box, s) {
   box.querySelectorAll('[data-c]').forEach(b => b.onclick = () => moverCorte(+b.dataset.c, +b.dataset.d));
   enlazar('i-zoom', v => m.scale = v); enlazar('i-x', v => m.x = v); enlazar('i-y', v => m.y = v);
   enlazar('i-int', v => m.intensity = v);
+  enlazar('i-vel', v => m.speed = v); enlazar('i-off', v => m.offset = v);
   enlazar('i-mov', v => m.motion = v, {evento: 'change', num: false});
   enlazar('i-tr', v => { s.transition = {type: v, duration: v === 'cut' ? 0 : (tr.duration || .28)}; }, {evento: 'change', num: false});
   enlazar('i-trd', v => { s.transition = {type: (s.transition?.type || 'dissolve'), duration: v}; }, {evento: 'change'});
@@ -477,9 +481,9 @@ function pintarLib() {
   const box = $('libbody'); if (!P()) { box.innerHTML = ''; return; }
   const p = P(), sc = tomaActual();
   if (S.lib === 'medios') {
-    const imgs = p.assets.filter(a => a.type === 'image' && !/crest|logo|fondo/.test(a.id));
-    box.innerHTML = `<h3>Imágenes del proyecto</h3><p class="hint">Toca una para ponerla en la toma ${p.scenes.indexOf(sc) + 1}.</p>
-      <div class="thumbs">${imgs.map(a => `<button data-a="${esc(a.id)}" title="${esc(a.name || a.id)}" style="background-image:url('${esc(a.thumbnail || a.url)}')"></button>`).join('')}</div>
+    const imgs = p.assets.filter(a => (a.type === 'image' || a.type === 'video') && !/crest|logo|fondo|reference/.test(a.id));
+    box.innerHTML = `<h3>Imágenes y clips del proyecto</h3><p class="hint">Toca una para ponerla en la toma ${p.scenes.indexOf(sc) + 1}.</p>
+      <div class="thumbs">${imgs.map(a => `<button data-a="${esc(a.id)}" title="${esc(a.name || a.id)}" style="background-image:url('${esc(a.thumbnail || (a.type === 'image' ? a.url : ''))}')">${a.type === 'video' ? '<span style="color:#fff;font-size:11px">▶ clip</span>' : ''}</button>`).join('')}</div>
       <label class="btn" style="justify-content:center">⤒ Subir imagen o video<input type="file" id="up" accept="image/*,video/*" hidden></label>
       <button class="btn" id="m-prompt">✦ Prompt para pedir la imagen a ChatGPT</button>
       <p class="hint">Genera la imagen en ChatGPT con el prompt, descárgala y súbela aquí: queda en la toma seleccionada.</p>`;

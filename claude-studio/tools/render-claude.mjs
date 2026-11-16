@@ -33,7 +33,14 @@ const types = {'.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css
 const server = http.createServer((req, res) => {
   const p = path.join(dist, decodeURIComponent(req.url.split('?')[0]));
   if (!p.startsWith(dist) || !fs.existsSync(p) || fs.statSync(p).isDirectory()) { res.writeHead(404); return res.end(); }
-  res.writeHead(200, {'Content-Type': types[path.extname(p)] || 'application/octet-stream'}); fs.createReadStream(p).pipe(res);
+  // Rangos: sin ellos Chrome no puede saltar dentro de un clip de video.
+  const size = fs.statSync(p).size, type = types[path.extname(p)] || 'application/octet-stream', m = /bytes=(\d*)-(\d*)/.exec(req.headers.range || '');
+  if (m) {
+    const a = m[1] ? +m[1] : Math.max(0, size - +m[2]), b = m[1] && m[2] ? Math.min(+m[2], size - 1) : size - 1;
+    res.writeHead(206, {'Content-Type': type, 'Accept-Ranges': 'bytes', 'Content-Range': `bytes ${a}-${b}/${size}`, 'Content-Length': b - a + 1});
+    return fs.createReadStream(p, {start: a, end: b}).pipe(res);
+  }
+  res.writeHead(200, {'Content-Type': type, 'Accept-Ranges': 'bytes', 'Content-Length': size}); fs.createReadStream(p).pipe(res);
 });
 await new Promise(r => server.listen(0, '127.0.0.1', r));
 const base = `http://127.0.0.1:${server.address().port}`;

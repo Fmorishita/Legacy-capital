@@ -1,5 +1,8 @@
 """Quita eco (reverberación) y ruido de una voz grabada con celular.
 
+NOTA (16 nov 2026): con eco fuerte esta cadena se queda corta (Fran la escuchó lejana
+y con eco en V11b). Para esos casos usa ../voz-estudio (Sidon + EQ de estudio).
+
 Cadena elegida para el video del asesor (Doctor V11b), medida con DNSMOS, cola de
 eco tras cada palabra y transcripción con Whisper:
   1. WPE de un canal (nara_wpe, taps=6, delay=2, STFT 1536/384 a 48 kHz)

@@ -1,0 +1,69 @@
+<title>Legacy Studio</title>
+<meta name="theme-color" content="#0B111C">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="studio.css">
+<div id="app">
+  <header class="bar">
+    <div class="logo"><i>L</i>LEGACY STUDIO</div>
+    <button class="btn sm ghost" id="b-videos" title="Elegir otro video">☰ Videos</button>
+    <div class="title"><input id="p-title" aria-label="Nombre del video" maxlength="120"></div>
+    <span class="save" id="save">Sin cambios</span>
+    <button class="btn icon" id="b-undo" title="Deshacer (Ctrl Z)" aria-label="Deshacer">↶</button>
+    <button class="btn icon" id="b-redo" title="Rehacer (Ctrl Shift Z)" aria-label="Rehacer">↷</button>
+    <button class="btn" id="b-claude" title="Pedir cambios a Claude">✦ Pedir a Claude <span id="n-req" class="tag" hidden></span></button>
+    <button class="btn gold" id="b-export">⤓ Exportar</button>
+  </header>
+
+  <aside class="lib" aria-label="Catálogo">
+    <nav class="rail" id="rail">
+      <button data-lib="medios" aria-pressed="true"><b>▦</b>Medios</button>
+      <button data-lib="texto" aria-pressed="false"><b>T</b>Texto</button>
+      <button data-lib="subs" aria-pressed="false"><b>☰</b>Subtítulos</button>
+      <button data-lib="trans" aria-pressed="false"><b>⧉</b>Transición</button>
+      <button data-lib="mov" aria-pressed="false"><b>⤢</b>Movimiento</button>
+      <button data-lib="sonido" aria-pressed="false"><b>♪</b>Sonidos</button>
+    </nav>
+    <div class="libbody" id="libbody"></div>
+  </aside>
+
+  <main class="stage">
+    <div class="view"><canvas id="cv" width="1080" height="1920" aria-label="Vista previa: toca un elemento para editarlo"></canvas><div class="selbadge" id="selbadge"></div></div>
+    <div class="transport">
+      <button class="btn sm" id="b-prev" title="Toma anterior">⏮</button>
+      <button class="btn sm" id="b-fb" title="Un cuadro atrás (←)">−1f</button>
+      <button class="play" id="b-play" title="Reproducir (espacio)" aria-label="Reproducir">▶</button>
+      <button class="btn sm" id="b-ff" title="Un cuadro adelante (→)">+1f</button>
+      <button class="btn sm" id="b-next" title="Toma siguiente">⏭</button>
+      <span class="tc" id="tc"><b>00:00.00</b> / 00:00.00</span>
+    </div>
+  </main>
+
+  <aside class="insp" id="insp" aria-label="Propiedades"></aside>
+
+  <div class="mtabs"><button class="btn" id="m-lib">Catálogo</button><button class="btn" id="m-insp">Editar selección</button></div>
+
+  <section class="tl" aria-label="Línea de tiempo">
+    <div class="tltools">
+      <span>Zoom</span><input type="range" id="zoom" min="8" max="220" value="40" aria-label="Zoom de la línea de tiempo">
+      <span id="tlhint">Arrastra la línea entre dos tomas para adelantar o atrasar el corte · arrastra textos, subtítulos y sonidos para moverlos</span>
+    </div>
+    <div class="tlbody">
+      <div class="tllabels"><div></div><div>Video</div><div>Texto</div><div>Subtítulos</div><div>Voz</div><div>Música</div><div>Sonidos</div></div>
+      <div class="tlscroll" id="tlscroll"><div class="tlin" id="tlin">
+        <div class="ruler" id="ruler"></div>
+        <div class="track" id="tr-video"></div><div class="track" id="tr-text"></div><div class="track" id="tr-cap"></div>
+        <div class="track" id="tr-voz"></div><div class="track" id="tr-mus"></div><div class="track" id="tr-sfx"></div>
+        <div class="ph" id="ph"></div>
+      </div></div>
+    </div>
+  </section>
+</div>
+
+<div class="picker" id="picker"><div class="pickin">
+  <h1>¿Qué video quieres editar?<small>Cada cambio se guarda solo. Puedes salir cuando quieras y continuar después, desde cualquier dispositivo.</small></h1>
+  <div class="projs" id="projs"><div class="empty">Cargando tus videos…</div></div>
+</div></div>
+
+<dialog id="dlg"><div class="dlg" id="dlgbody"></div></dialog>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<script type="module" src="studio.js"></script>

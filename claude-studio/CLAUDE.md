@@ -1,10 +1,14 @@
 # Claude Studio — reglas
 
 - Todo el trabajo de Claude vive en `claude-studio/` (y `estudio-video/`). **Nunca edites `ads-punta-pacifico/`**: es el trabajo de GPT. Para cambiar el comportamiento del editor, agrega un parche en `tools/armar.py` o un archivo en `editor/`.
+- El editor publicado es `studio/` (studio.html, studio.js, studio.css): editor propio tipo CapCut sobre el motor de GPT (`engine.js`, copiado al armar). El editor viejo de GPT ya no se publica en el artifact.
 - Para publicar: `python3 tools/armar.py --lista` y luego `Artifact` publish con `file_path: build/dist/claude-page.html`, `root: build/dist`, `url` del editor y los archivos listados.
 
 ## Datos del editor en Claude (artifact TvyAwhsn4M9Scyfbt6zsui)
 Colecciones: `proyectos/<id>` ({project}), `versiones` ({projectId, label, project}), `archivos/<blobId>` ({partes: ids de assets de 19 MB, tipo}), `solicitudes` ({tipo: cambios|render, proyectoId, instrucciones, alcance, escena, tiempo, comentarios, estado, avance, respuesta, video}), `resultados/<solicitudId>` ({project}).
+
+### Proyectos
+`proyectos/<id>`: cada video o versión es su propio proyecto (el selector «¿Qué video quieres editar?» los lista por fecha). Lo que Fran edita a mano se guarda solo en ese mismo documento. Antes de aplicar cambios, lee siempre la versión actual de `proyectos/<proyectoId>`, porque puede tener ediciones manuales recientes.
 
 ### Al recibir «aplica mis cambios del editor»
 1. `ArtifactData query` en `solicitudes` con `estado == pendiente`. Pon `estado: trabajando` y escribe `avance` mientras trabajas.

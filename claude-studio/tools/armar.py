@@ -24,6 +24,7 @@ GPT = os.path.join(RAIZ, "ads-punta-pacifico")
 ORIGEN = os.path.join(GPT, "editor", "dist")
 BUILD = os.path.join(AQUI, "..", "build", "dist")
 PROPIOS = os.path.join(AQUI, "..", "editor")
+STUDIO = os.path.join(AQUI, "..", "studio")
 
 PARCHES = {
     "app.js": [
@@ -71,14 +72,19 @@ def main():
         open(p, "w", encoding="utf-8").write(s)
     for f in os.listdir(PROPIOS):
         shutil.copy2(os.path.join(PROPIOS, f), os.path.join(BUILD, f))
-    # Página para Claude: Claude pone su propio <head>, así que va título, estilos y <body>.
-    src = open(os.path.join(BUILD, "index.html"), encoding="utf-8").read()
-    body = re.search(r"<body[^>]*>(.*)</body>", src, re.S).group(1).strip()
-    open(os.path.join(BUILD, "claude-page.html"), "w", encoding="utf-8").write(
-        "<title>Legacy Studio</title>\n<meta name=\"theme-color\" content=\"#0e1420\">\n<link rel=\"stylesheet\" href=\"styles.css\">\n" + body + "\n")
+    # Editor nuevo de Claude (tipo CapCut). La página publicada es studio.html;
+    # Claude pone su propio <head>, así que el archivo solo trae título, estilos y cuerpo.
+    for f in os.listdir(STUDIO):
+        shutil.copy2(os.path.join(STUDIO, f), os.path.join(BUILD, f))
+    page = open(os.path.join(STUDIO, "studio.html"), encoding="utf-8").read()
+    open(os.path.join(BUILD, "claude-page.html"), "w", encoding="utf-8").write(page)
+    # copia local para probar fuera de Claude: http.server en build/dist → /studio-local.html
+    open(os.path.join(BUILD, "studio-local.html"), "w", encoding="utf-8").write(
+        '<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
+        '</head><body>' + page + '</body></html>')
     archivos = sorted(os.path.relpath(os.path.join(r, f), BUILD) for r, _, fs in os.walk(BUILD) for f in fs
-                      if f not in ("index.html", "claude-page.html", "render.html") and "licenses" not in r)
-    print(f"build/dist listo: {sum(len(c) for c in PARCHES.values())} parches, {len(os.listdir(PROPIOS))} archivos propios, {len(archivos)} archivos a publicar")
+                      if f not in ("index.html", "claude-page.html", "render.html", "studio-local.html", "studio.html") and "licenses" not in r)
+    print(f"build/dist listo: {sum(len(c) for c in PARCHES.values())} parches, {len(os.listdir(PROPIOS)) + len(os.listdir(STUDIO))} archivos propios, {len(archivos)} archivos a publicar")
     if "--lista" in sys.argv:
         print("\n".join(archivos))
 

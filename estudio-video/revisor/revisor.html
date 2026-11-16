@@ -1,0 +1,752 @@
+<title>Sala de Revisión Legacy</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Sala de edición: monitor 9:16, línea de tiempo con tira de miniaturas y onda de audio, mesa de notas */
+:root {
+  --bg: #EEF0F4; --surface: #FFFFFF; --sunk: #E3E6EC; --ink: #15213A; --muted: #586379; --line: #D3D8E1;
+  --gold: #8C6B1F; --gold-soft: #F3EAD3; --on-gold: #FFFFFF; --wave: #6F7E98;
+  --pend: #9A5B00; --pend-bg: #FCEFD9; --ok: #1F6B45; --ok-bg: #DDF1E5; --off: #6A7282; --off-bg: #E7E9EE; --ask: #1D4F91; --ask-bg: #DDE8F7;
+  --t-foto: #8FA6C9; --t-grafico: #C9A85C; --t-libre: #9C8FC2; --playhead: #C2410C; --err: #B4380B;
+  --f-display: "Cormorant Garamond", Georgia, serif; --f-ui: "IBM Plex Sans", system-ui, sans-serif; --f-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0C1220; --surface: #141C2D; --sunk: #0F1626; --ink: #E6E9F0; --muted: #98A2B6; --line: #26314A;
+  --gold: #D9B868; --gold-soft: #2C2716; --on-gold: #1A1408; --wave: #7F90AE;
+  --pend: #F2B35B; --pend-bg: #33260F; --ok: #6FD29C; --ok-bg: #12301F; --off: #8B93A3; --off-bg: #1E2638; --ask: #8DB7F0; --ask-bg: #162A47;
+  --t-foto: #4E6A96; --t-grafico: #9C7D35; --t-libre: #6A5E96; --playhead: #FB923C; --err: #FB923C; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0C1220; --surface: #141C2D; --sunk: #0F1626; --ink: #E6E9F0; --muted: #98A2B6; --line: #26314A;
+  --gold: #D9B868; --gold-soft: #2C2716; --on-gold: #1A1408; --wave: #7F90AE;
+  --pend: #F2B35B; --pend-bg: #33260F; --ok: #6FD29C; --ok-bg: #12301F; --off: #8B93A3; --off-bg: #1E2638; --ask: #8DB7F0; --ask-bg: #162A47;
+  --t-foto: #4E6A96; --t-grafico: #9C7D35; --t-libre: #6A5E96; --playhead: #FB923C; --err: #FB923C; color-scheme: dark }
+
+* { box-sizing: border-box }
+[hidden] { display: none !important }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-ui); font-size: 14px; line-height: 1.45; }
+.wrap { max-width: 1360px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 14px 40px; }
+button, input, select, textarea { font: inherit; color: inherit }
+button { cursor: pointer }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px }
+.mono { font-family: var(--f-mono); font-variant-numeric: tabular-nums }
+
+header.top { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; padding-bottom: 12px; border-bottom: 1px solid var(--line); margin-bottom: 14px }
+.brand { font-family: var(--f-display); font-size: 26px; line-height: 1; letter-spacing: .01em; margin: 0 }
+.brand small { display: block; font-family: var(--f-ui); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-top: 4px }
+nav.views { display: flex; gap: 4px; background: var(--sunk); border-radius: 8px; padding: 3px }
+nav.views button { border: 0; background: transparent; padding: 6px 12px; border-radius: 6px; color: var(--muted); font-weight: 500 }
+nav.views button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 2px rgb(0 0 0 / 12%) }
+.picker { display: flex; align-items: center; gap: 8px; margin-left: auto; min-width: 0; flex-wrap: wrap }
+.picker select { max-width: 100%; min-width: 0; padding: 6px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface) }
+.status { font-size: 12px; color: var(--muted) }
+
+.grid { display: grid; grid-template-columns: minmax(280px, 380px) minmax(0, 1fr); gap: 20px; align-items: start }
+@media (max-width: 900px) { .grid { grid-template-columns: minmax(0, 1fr) } }
+.monitor { display: flex; flex-direction: column; gap: 10px; min-width: 0 }
+.screen { position: relative; aspect-ratio: 9 / 16; max-width: 100%; max-height: 68vh; margin: 0 auto; width: 100%; background: #05080F; border-radius: 10px; overflow: hidden }
+.screen video { width: 100%; height: 100%; display: block; object-fit: contain; background: #05080F }
+.noscreen { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; gap: 12px; padding: 22px; color: #D6DBE6 }
+.noscreen h3 { margin: 0; font-family: var(--f-display); font-size: 24px; color: #F1E3BC }
+.noscreen p { margin: 0; color: #AEB6C6; font-size: 13px }
+.noscreen .scene-now { border-left: 2px solid #C9A85C; padding-left: 10px; font-size: 13px; color: #E5E8EF }
+.tc { position: absolute; left: 8px; top: 8px; background: rgb(5 8 15 / 72%); color: #F4F6FA; font-family: var(--f-mono); font-size: 12px; padding: 3px 7px; border-radius: 4px; pointer-events: none }
+.transport { display: flex; align-items: center; justify-content: center; gap: 6px; flex-wrap: wrap }
+.transport button { min-width: 44px; height: 36px; padding: 0 10px; border: 1px solid var(--line); background: var(--surface); border-radius: 6px; font-family: var(--f-mono); font-size: 13px }
+.transport button.play { background: var(--ink); color: var(--bg); border-color: var(--ink); min-width: 64px }
+.readout { display: flex; justify-content: space-between; gap: 8px; font-size: 12px; color: var(--muted) }
+.readout b { color: var(--ink); font-weight: 500 }
+
+/* línea de tiempo de editor (ancho completo) */
+.timeline { grid-column: 1 / -1; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 8px; min-width: 0 }
+.tl-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; font-size: 12px; color: var(--muted) }
+.tl-tools .zoom { display: flex; gap: 4px; align-items: center }
+.tl-tools button { border: 1px solid var(--line); background: var(--surface); border-radius: 6px; min-width: 32px; height: 28px; font-family: var(--f-mono) }
+.tl-tools .legend { display: flex; gap: 12px; flex-wrap: wrap; margin-left: auto }
+.tl-tools .legend i { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 5px; vertical-align: -1px }
+.tl { overflow-x: auto; overflow-y: hidden; border-radius: 6px; background: var(--sunk); cursor: pointer; touch-action: pan-x }
+.tl-in { position: relative; min-width: 100%; user-select: none }
+.lane { position: relative; height: 22px }
+.lane .blk { position: absolute; top: 3px; bottom: 3px; border-right: 1px solid var(--bg); display: flex; align-items: center; padding-left: 4px; font-family: var(--f-mono); font-size: 10px; color: rgb(10 14 24 / 82%); overflow: hidden; white-space: nowrap }
+.blk.foto { background: var(--t-foto) } .blk.grafico { background: var(--t-grafico) } .blk.libre { background: var(--t-libre) }
+.blk.cur { box-shadow: inset 0 0 0 2px var(--ink) }
+.ticks { position: relative; height: 16px; font-family: var(--f-mono); font-size: 10px; color: var(--muted) }
+.ticks span { position: absolute; top: 1px; border-left: 1px solid var(--line); padding-left: 3px; height: 15px; white-space: nowrap }
+canvas.strip { display: block; height: 64px; width: 100% }
+canvas.wave { display: block; height: 34px; width: 100% }
+.lane.notes { height: 14px }
+.mk { position: absolute; top: 3px; width: 8px; height: 8px; margin-left: -4px; border-radius: 50%; background: var(--pend) }
+.mk.aplicada { background: var(--ok) } .mk.descartada { background: var(--off) } .mk.pregunta { background: var(--ask) }
+.ph { position: absolute; top: 0; bottom: 0; width: 2px; margin-left: -1px; background: var(--playhead); pointer-events: none }
+.tl-note { font-size: 12px; color: var(--muted) }
+
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; min-width: 0 }
+.tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--line); padding: 0 8px; overflow-x: auto }
+.tabs button { border: 0; background: none; padding: 11px 12px; color: var(--muted); font-weight: 500; border-bottom: 2px solid transparent; white-space: nowrap }
+.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--gold) }
+.tabs .count { font-family: var(--f-mono); font-size: 11px; background: var(--pend-bg); color: var(--pend); padding: 1px 6px; border-radius: 99px; margin-left: 4px }
+.body { padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 16px; min-width: 0; max-height: 78vh; overflow-y: auto }
+@media (max-width: 900px) { .body { max-height: none } }
+
+.scene-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px }
+.scene-head h2 { margin: 0; font-family: var(--f-mono); font-size: 20px; font-weight: 500 }
+.chip { display: inline-flex; align-items: center; font-size: 11px; letter-spacing: .04em; text-transform: uppercase; padding: 2px 8px; border-radius: 99px; background: var(--sunk); color: var(--ink); font-weight: 600 }
+.chip.foto { background: color-mix(in srgb, var(--t-foto) 30%, transparent) } .chip.grafico { background: color-mix(in srgb, var(--t-grafico) 30%, transparent) } .chip.libre { background: color-mix(in srgb, var(--t-libre) 30%, transparent) }
+.meta { font-size: 12px; color: var(--muted) }
+.field { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 4px 14px; align-items: baseline }
+@media (max-width: 520px) { .field { grid-template-columns: minmax(0, 1fr) } }
+.field dt { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 600; padding-top: 2px }
+.field dd { margin: 0; min-width: 0; overflow-wrap: anywhere }
+dl.fields { margin: 0; display: flex; flex-direction: column; gap: 12px }
+.voz { font-family: var(--f-display); font-size: 19px; line-height: 1.3 }
+ul.plain { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 5px }
+ul.plain li { display: flex; gap: 10px; align-items: baseline; min-width: 0 }
+ul.plain .t { font-family: var(--f-mono); font-size: 12px; color: var(--muted); flex: none; width: 52px }
+ul.plain .sel { font-family: var(--f-mono); font-size: 11px; color: var(--muted); margin-left: auto; flex: none; max-width: 40%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+ul.plain li.now, ul.plain li.now .t { color: var(--gold) }
+.subs span { display: inline-block; margin: 0 6px 6px 0; padding: 2px 8px; border-radius: 5px; background: var(--sunk); font-size: 13px }
+.subs span.now { background: var(--gold); color: var(--on-gold) }
+code { font-family: var(--f-mono); font-size: 12px; background: var(--sunk); padding: 1px 5px; border-radius: 4px }
+
+.composer { border-top: 1px dashed var(--line); padding-top: 14px; display: flex; flex-direction: column; gap: 10px }
+.composer h3 { margin: 0; font-size: 13px; font-weight: 600 }
+.cats { display: flex; flex-wrap: wrap; gap: 6px }
+.cats button { border: 1px solid var(--line); background: var(--surface); padding: 5px 10px; border-radius: 99px; font-size: 12px }
+.cats button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink) }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center }
+select.el, input.txt { padding: 7px 9px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); min-width: 0; max-width: 100%; width: 100% }
+select.el { width: auto; flex: 1 }
+textarea { width: 100%; min-height: 84px; padding: 9px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); resize: vertical }
+.btn { border: 0; background: var(--gold); color: var(--on-gold); padding: 9px 14px; border-radius: 6px; font-weight: 600 }
+.btn:disabled { opacity: .5; cursor: default }
+.btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); font-weight: 500 }
+.msg { font-size: 12px; color: var(--muted); margin: 0 } .msg.err { color: var(--err) }
+progress { width: 100%; height: 6px; accent-color: var(--gold) }
+
+.notes { display: flex; flex-direction: column; gap: 10px }
+.filters { display: flex; gap: 6px; flex-wrap: wrap; align-items: center }
+.filters button { border: 1px solid var(--line); background: var(--surface); padding: 4px 10px; border-radius: 99px; font-size: 12px }
+.filters button[aria-pressed="true"] { background: var(--sunk); border-color: var(--ink) }
+.note { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; display: flex; flex-direction: column; gap: 6px }
+.note.on { border-color: var(--gold) }
+.note .h { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; font-size: 12px; color: var(--muted) }
+.note .h button.go { border: 0; background: none; padding: 0; font-family: var(--f-mono); color: var(--ink); text-decoration: underline; text-underline-offset: 2px }
+.note p { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere }
+.note .reply { border-left: 2px solid var(--gold); padding: 2px 0 2px 10px; font-size: 13px; color: var(--muted); white-space: pre-wrap }
+.note .reply b { color: var(--ink); font-weight: 600 }
+.note .acts { display: flex; gap: 8px; flex-wrap: wrap }
+.note .acts button { border: 0; background: none; padding: 0; font-size: 12px; color: var(--muted); text-decoration: underline; text-underline-offset: 2px }
+.st { font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; padding: 1px 7px; border-radius: 99px }
+.st.pendiente { background: var(--pend-bg); color: var(--pend) } .st.aplicada, .st.analizada { background: var(--ok-bg); color: var(--ok) }
+.st.descartada { background: var(--off-bg); color: var(--off) } .st.pregunta { background: var(--ask-bg); color: var(--ask) }
+.empty { padding: 18px; border: 1px dashed var(--line); border-radius: 8px; color: var(--muted); font-size: 13px }
+
+.secs { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 8px }
+.sec { border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: var(--sunk); padding: 0; text-align: left; position: relative }
+.sec canvas, .sec .ph0 { display: block; width: 100%; aspect-ratio: 9 / 16; background: #05080F }
+.sec .lbl { display: flex; justify-content: space-between; gap: 4px; padding: 3px 6px; font-family: var(--f-mono); font-size: 11px; color: var(--muted) }
+.sec.cur { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold) }
+.sec .dot { position: absolute; top: 5px; right: 5px; width: 9px; height: 9px; border-radius: 50%; background: var(--pend); box-shadow: 0 0 0 2px #05080F }
+
+.tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px }
+table { border-collapse: collapse; width: 100%; font-size: 13px; min-width: 640px }
+th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); vertical-align: top }
+th { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; background: var(--sunk) }
+tr.sc { cursor: pointer } tr.sc:hover td { background: var(--sunk) } tr.sc.cur td { background: var(--gold-soft) }
+.guion { white-space: pre-wrap; font-family: var(--f-display); font-size: 18px; line-height: 1.4; margin: 0 }
+h4.sec-t { margin: 0; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted) }
+
+.cols { display: grid; grid-template-columns: minmax(0, 380px) minmax(0, 1fr); gap: 20px; align-items: start }
+@media (max-width: 900px) { .cols { grid-template-columns: minmax(0, 1fr) } }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 10px; min-width: 0 }
+.card h3 { margin: 0; font-family: var(--f-display); font-size: 22px; font-weight: 600 }
+.card label { font-size: 12px; font-weight: 600; color: var(--muted) }
+.or { display: flex; align-items: center; gap: 10px; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .12em }
+.or::before, .or::after { content: ""; flex: 1; border-top: 1px solid var(--line) }
+.reflist { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px }
+.ref video { width: 100%; aspect-ratio: 9 / 16; max-height: 360px; background: #05080F; border-radius: 6px; object-fit: contain }
+.ref .resumen { font-size: 13px; white-space: pre-wrap; border-left: 2px solid var(--gold); padding-left: 10px }
+.how { font-size: 13px; color: var(--muted); margin: 0 }
+.how b { color: var(--ink) }
+dialog { border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--ink); padding: 0; width: min(460px, calc(100vw - 32px)) }
+dialog::backdrop { background: rgb(5 8 15 / 55%) }
+dialog form { padding: 18px; display: flex; flex-direction: column; gap: 10px }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <h1 class="brand">Sala de Revisión<small>Legacy Capital · video</small></h1>
+    <nav class="views" aria-label="Secciones">
+      <button id="v-videos" aria-pressed="true">Videos</button>
+      <button id="v-refs" aria-pressed="false">Referencias</button>
+    </nav>
+    <div class="picker" id="picker">
+      <label for="sel-video" class="status">Video</label>
+      <select id="sel-video"><option>Cargando…</option></select>
+      <button class="btn ghost" id="b-nuevo" type="button">+ Video para revisar</button>
+    </div>
+    <span class="status" id="sync">Conectando…</span>
+  </header>
+
+  <section id="view-videos">
+    <div class="grid">
+      <div class="monitor">
+        <div class="screen">
+          <video id="vid" playsinline preload="auto" hidden></video>
+          <div class="noscreen" id="noscreen">
+            <h3 id="ns-title">Sin video todavía</h3>
+            <p id="ns-txt">Puedes revisar la ficha cuadro por cuadro con la línea de tiempo.</p>
+            <progress id="ns-prog" hidden max="1" value="0"></progress>
+            <div class="scene-now" id="ns-scene"></div>
+            <div id="ns-up" hidden>
+              <label class="btn ghost" style="display:inline-block;border-color:#4A5670;color:#E6E9F0" for="up-video">Subir el video (cualquier tamaño)</label>
+              <input type="file" id="up-video" accept="video/*" hidden>
+              <p class="msg" id="up-video-msg" style="color:#AEB6C6"></p>
+            </div>
+          </div>
+          <span class="tc" id="tc">00:00:00 · f0</span>
+        </div>
+        <div class="transport" role="group" aria-label="Transporte">
+          <button id="b-s-1" title="Atrás 1 s (Shift + ←)">−1 s</button>
+          <button id="b-f-1" title="Atrás 1 cuadro (←)">−1 f</button>
+          <button id="b-play" class="play" title="Reproducir / pausa (espacio)">▶</button>
+          <button id="b-f1" title="Adelante 1 cuadro (→)">+1 f</button>
+          <button id="b-s1" title="Adelante 1 s (Shift + →)">+1 s</button>
+        </div>
+        <div class="readout"><span>Escena <b id="ro-scene">—</b></span><span class="mono"><b id="ro-frame">f0</b> / <span id="ro-total">0</span></span></div>
+      </div>
+
+      <div class="panel">
+        <div class="tabs" role="tablist">
+          <button role="tab" id="t-escena" aria-selected="true">Escena</button>
+          <button role="tab" id="t-segundos" aria-selected="false">Segundos</button>
+          <button role="tab" id="t-notas" aria-selected="false">Notas <span class="count" id="n-pend" hidden>0</span></button>
+          <button role="tab" id="t-ficha" aria-selected="false">Ficha completa</button>
+        </div>
+        <div class="body" id="tab-escena"></div>
+        <div class="body" id="tab-segundos" hidden></div>
+        <div class="body" id="tab-notas" hidden></div>
+        <div class="body" id="tab-ficha" hidden></div>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-tools">
+          <span class="zoom"><button id="z-out" title="Alejar" aria-label="Alejar">−</button><span class="mono" id="z-val">1×</span><button id="z-in" title="Acercar" aria-label="Acercar">+</button></span>
+          <span class="tl-note" id="tl-note">Clic o arrastra para moverte. ← → un cuadro, Shift un segundo, espacio reproduce, N nota.</span>
+          <span class="legend"><span><i style="background:var(--t-foto)"></i>foto</span><span><i style="background:var(--t-grafico)"></i>gráfico</span><span><i style="background:var(--t-libre)"></i>libre</span><span><i style="background:var(--pend);border-radius:50%"></i>nota</span></span>
+        </div>
+        <div class="tl" id="tl">
+          <div class="tl-in" id="tl-in">
+            <div class="ticks" id="ticks"></div>
+            <div class="lane" id="lane-esc"></div>
+            <canvas class="strip" id="strip" height="64"></canvas>
+            <canvas class="wave" id="wave" height="34"></canvas>
+            <div class="lane notes" id="lane-notes"></div>
+            <div class="ph" id="ph"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="view-refs" hidden>
+    <div class="cols">
+      <form class="card" id="ref-form">
+        <h3>Nueva referencia</h3>
+        <p class="how">Un video cuyo <b>estilo</b> quieras para próximos videos (ritmo, subtítulos, transiciones, sonido). Lo mido y te dejo aquí el resumen; del video no se copia contenido.</p>
+        <label for="ref-name">Nombre corto</label>
+        <input class="txt" id="ref-name" placeholder="ej. casas-cancun-reel">
+        <label for="ref-file">Video (cualquier tamaño)</label>
+        <input type="file" id="ref-file" accept="video/*">
+        <div class="or">o</div>
+        <label for="ref-link">Enlace de Google Drive</label>
+        <input class="txt" id="ref-link" placeholder="https://drive.google.com/file/d/…">
+        <p class="how">Compártelo como “Cualquier persona con el enlace”; si no, no lo puedo bajar.</p>
+        <label for="ref-like">¿Qué te gusta de este video?</label>
+        <textarea id="ref-like" placeholder="ej. los subtítulos grandes en amarillo, el ritmo rápido al inicio, el cierre con logo"></textarea>
+        <progress id="ref-prog" hidden max="1" value="0"></progress>
+        <button class="btn" id="ref-send" type="submit">Guardar referencia</button>
+        <p class="msg" id="ref-msg"></p>
+      </form>
+      <div class="reflist" id="ref-list"></div>
+    </div>
+  </section>
+</div>
+
+<dialog id="dlg-nuevo">
+  <form id="nuevo-form" method="dialog">
+    <h3 style="margin:0;font-family:var(--f-display);font-size:22px">Video para revisar</h3>
+    <p class="how">Cualquier video: uno mío sin ficha, uno de otra agencia o una versión tuya. Podrás verlo segundo por segundo y dejar notas.</p>
+    <label for="nv-name" class="meta">Nombre</label>
+    <input class="txt" id="nv-name" placeholder="ej. Doctor V6 entregado">
+    <label for="nv-file" class="meta">Archivo (cualquier tamaño)</label>
+    <input type="file" id="nv-file" accept="video/*">
+    <div class="or">o</div>
+    <label for="nv-link" class="meta">Enlace de Google Drive (compartido con cualquiera que tenga el enlace)</label>
+    <input class="txt" id="nv-link" placeholder="https://drive.google.com/file/d/…">
+    <progress id="nv-prog" hidden max="1" value="0"></progress>
+    <p class="msg" id="nv-msg"></p>
+    <div class="row" style="justify-content:flex-end"><button class="btn ghost" type="button" id="nv-cancel">Cancelar</button><button class="btn" type="button" id="nv-ok">Agregar</button></div>
+  </form>
+</dialog>
+
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const CATS = ["Texto en pantalla", "Imagen", "Animación", "Voz / guion", "Subtítulos", "Música / SFX", "Ritmo / tiempo", "Otro"];
+  const PARTE = 19 * 1024 * 1024, MAXB = 600 * 1024 * 1024;
+  const S = { db: null, assets: null, user: null, videos: [], vid: null, notas: [], refs: [], frame: 0, filtro: "pendientes", cat: CATS[0],
+              zoom: 1, dur: 0, thumbs: [], peaks: null, srcKey: "", loadToken: 0 };
+  const store = { get(k) { try { return localStorage.getItem(k); } catch { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch {} } };
+  const video = $("vid");
+  const now = () => new Date().toISOString();
+
+  // ---------- tiempo
+  const F = () => (S.vid && S.vid.ficha) || null;
+  const fps = () => (F() && F().fps) || (S.vid && S.vid.fps) || 30;
+  const total = () => (F() && F().frames) || (S.dur ? Math.max(1, Math.round(S.dur * fps())) : 1);
+  const durS = () => total() / fps();
+  const tc = (f) => { const r = fps(); const s = Math.floor(f / r); return `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}:${String(f % r).padStart(2, "0")}`; };
+  const sceneAt = (f) => F() ? F().escenas.find((e) => f >= e.frame_inicio && f <= e.frame_fin) || null : null;
+  const hasVideo = () => !video.hidden && !!video.src;
+
+  function seek(f, fromVideo) {
+    f = Math.max(0, Math.min(total() - 1, Math.round(f)));
+    S.frame = f;
+    if (hasVideo() && !fromVideo) { video.pause(); video.currentTime = (f + 0.5) / fps(); }
+    paintTime(true);
+  }
+
+  // ---------- fuentes de video (un asset, pedazos o enlace)
+  function driveId(u) { const m = String(u || "").match(/(?:\/d\/|id=)([\w-]{20,})/); return m ? m[1] : null; }
+
+  async function loadSource() {
+    const v = S.vid, key = v ? [v.id, v.proxy || "", (v.partes || []).join(",")].join("|") : "";
+    if (key === S.srcKey) return;
+    S.srcKey = key; const tok = ++S.loadToken;
+    S.thumbs = []; S.peaks = null; S.dur = 0; video.pause();
+    if (video.src && video.src.startsWith("blob:")) URL.revokeObjectURL(video.src);
+    video.removeAttribute("src"); video.hidden = true; $("noscreen").hidden = false; $("ns-prog").hidden = true;
+    paintNoScreen();
+    if (!v) return;
+    let src = null, blob = null;
+    if (v.proxy) src = "/_blob/" + v.proxy;
+    else if (v.partes && v.partes.length) {
+      $("ns-title").textContent = "Cargando video…"; $("ns-prog").hidden = false;
+      const trozos = [];
+      for (let i = 0; i < v.partes.length; i++) {
+        $("ns-txt").textContent = `Uniendo parte ${i + 1} de ${v.partes.length}…`; $("ns-prog").value = i / v.partes.length;
+        const r = await fetch("/_blob/" + v.partes[i]);
+        if (!r.ok) { if (tok === S.loadToken) { $("ns-title").textContent = "No se pudo cargar"; $("ns-txt").textContent = `Falta la parte ${i + 1}. Vuelve a subir el video.`; } return; }
+        trozos.push(await r.blob());
+        if (tok !== S.loadToken) return;
+      }
+      blob = new Blob(trozos, { type: v.tipo || "video/mp4" }); src = URL.createObjectURL(blob);
+    }
+    if (!src || tok !== S.loadToken) { paintNoScreen(); return; }
+    video.src = src; video.hidden = false; $("noscreen").hidden = true;
+    video.onloadedmetadata = () => {
+      if (tok !== S.loadToken) return;
+      S.dur = video.duration || 0; layoutTimeline(); paintAll();
+      buildThumbs(src, tok); buildWave(blob, src, tok);
+    };
+  }
+
+  // miniaturas: una por segundo, con un segundo <video> que salta de segundo en segundo
+  async function buildThumbs(src, tok) {
+    const n = Math.max(1, Math.ceil(S.dur));
+    const v2 = document.createElement("video"); v2.muted = true; v2.preload = "auto"; v2.playsInline = true; v2.src = src;
+    await new Promise((ok) => { v2.onloadeddata = ok; v2.onerror = ok; setTimeout(ok, 8000); });
+    for (let s = 0; s < n; s++) {
+      if (tok !== S.loadToken) return;
+      await new Promise((ok) => { v2.onseeked = ok; v2.currentTime = Math.min(S.dur - 0.05, s + 0.02); setTimeout(ok, 3000); });
+      const c = document.createElement("canvas"); c.width = 108; c.height = 192;
+      try { c.getContext("2d").drawImage(v2, 0, 0, 108, 192); } catch { /* cuadro no listo */ }
+      S.thumbs[s] = c;
+      if (s % 4 === 3 || s === n - 1) { drawStrip(); paintSecondsIncremental(); }
+    }
+    v2.removeAttribute("src"); v2.load();
+  }
+
+  async function buildWave(blob, src, tok) {
+    try {
+      const buf = blob ? await blob.arrayBuffer() : await (await fetch(src)).arrayBuffer();
+      const AC = window.AudioContext || window.webkitAudioContext; if (!AC) return;
+      const ac = new AC(); const audio = await ac.decodeAudioData(buf); ac.close && ac.close();
+      if (tok !== S.loadToken) return;
+      const ch = audio.getChannelData(0), N = 3000, step = Math.max(1, Math.floor(ch.length / N)), peaks = new Float32Array(N);
+      for (let i = 0; i < N; i++) { let m = 0; const a = i * step, b = Math.min(ch.length, a + step); for (let j = a; j < b; j += 4) { const x = Math.abs(ch[j]); if (x > m) m = x; } peaks[i] = m; }
+      S.peaks = peaks; drawWave();
+    } catch { /* sin pista de audio o formato no decodificable */ }
+  }
+
+  // ---------- línea de tiempo
+  function tlWidth() { return Math.max($("tl").clientWidth, Math.round($("tl").clientWidth * S.zoom)); }
+  function layoutTimeline() {
+    const W = tlWidth(); $("tl-in").style.width = W + "px"; $("z-val").textContent = S.zoom + "×";
+    const T = total(), D = durS();
+    $("lane-esc").innerHTML = F() ? F().escenas.map((e) => `<div class="blk ${esc(e.tipo)}" data-id="${esc(e.id)}" style="left:${(e.frame_inicio / T) * 100}%;width:${((e.frame_fin - e.frame_inicio + 1) / T) * 100}%">${esc(e.id)}</div>`).join("") : "";
+    $("lane-esc").hidden = !F();
+    const pxs = W / Math.max(D, 0.001), stepS = [1, 2, 5, 10, 15, 30, 60].find((s) => s * pxs >= 46) || 60;
+    let ticks = ""; for (let s = 0; s <= D; s += stepS) ticks += `<span style="left:${(s / D) * 100}%">${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}</span>`;
+    $("ticks").innerHTML = ticks;
+    paintMarkers(); drawStrip(); drawWave(); paintTime();
+  }
+  function paintMarkers() { const T = total(); $("lane-notes").innerHTML = myNotes().map((n) => `<span class="mk ${esc(n.estado)}" style="left:${(n.frame / T) * 100}%" title="${esc(n.texto.slice(0, 80))}"></span>`).join(""); }
+  function fitCanvas(c) { const W = tlWidth(), dpr = Math.min(2, window.devicePixelRatio || 1); c.width = Math.min(32000, Math.round(W * dpr)); c.style.width = W + "px"; return { ctx: c.getContext("2d"), W: c.width, H: c.height = Math.round(c.clientHeight * dpr || c.height), dpr }; }
+  function drawStrip() {
+    const c = $("strip"); const { ctx, W, H } = fitCanvas(c);
+    ctx.fillStyle = "#05080F"; ctx.fillRect(0, 0, W, H);
+    const tw = Math.round(H * 9 / 16), D = durS(); if (!S.thumbs.length || !D) return;
+    for (let x = 0; x < W; x += tw) { const s = Math.min(S.thumbs.length - 1, Math.floor((x / W) * D)); const th = S.thumbs[s]; if (th) ctx.drawImage(th, x, 0, tw, H); }
+  }
+  function drawWave() {
+    const c = $("wave"); const { ctx, W, H } = fitCanvas(c);
+    ctx.clearRect(0, 0, W, H); if (!S.peaks) return;
+    ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue("--wave").trim() || "#6F7E98";
+    const P = S.peaks, mid = H / 2;
+    for (let x = 0; x < W; x++) { const p = P[Math.floor((x / W) * P.length)] || 0; const h = Math.max(1, p * (H - 2)); ctx.fillRect(x, mid - h / 2, 1, h); }
+  }
+  function tlSeek(ev) { const r = $("tl-in").getBoundingClientRect(); seek(((ev.clientX - r.left) / r.width) * total()); }
+  $("tl-in").onpointerdown = (ev) => { if (ev.pointerType === "touch") { tlSeek(ev); return; } $("tl-in").setPointerCapture(ev.pointerId); tlSeek(ev); $("tl-in").onpointermove = tlSeek; };
+  $("tl-in").onpointerup = () => { $("tl-in").onpointermove = null; };
+  const setZoom = (z) => { S.zoom = Math.max(1, Math.min(32, z)); layoutTimeline(); keepPlayheadVisible(true); };
+  $("z-in").onclick = () => setZoom(S.zoom * 2); $("z-out").onclick = () => setZoom(S.zoom / 2);
+  function keepPlayheadVisible(center) {
+    const tl = $("tl"), x = (S.frame / total()) * tlWidth();
+    if (center || x < tl.scrollLeft + 20 || x > tl.scrollLeft + tl.clientWidth - 20) tl.scrollLeft = x - tl.clientWidth / 2;
+  }
+  let rz; window.addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(layoutTimeline, 150); });
+
+  // ---------- pintar
+  function paintVideoList() {
+    const sel = $("sel-video");
+    if (!S.videos.length) { sel.innerHTML = "<option>Sin videos</option>"; return; }
+    sel.innerHTML = S.videos.map((v) => `<option value="${esc(v.id)}">${esc(v.titulo || v.id)}${v.render ? " · " + esc(v.render) : ""}</option>`).join("");
+    if (S.vid) sel.value = S.vid.id;
+  }
+  function selectVideo(id) {
+    S.vid = S.videos.find((x) => x.id === id) || S.videos[0] || null;
+    if (S.vid) store.set("revisor.video", S.vid.id);
+    S.frame = Math.min(S.frame, total() - 1);
+    paintVideoList(); loadSource(); layoutTimeline(); paintAll();
+  }
+  function paintNoScreen() {
+    const v = S.vid;
+    if (!v) { $("ns-title").textContent = "Sin videos"; $("ns-txt").textContent = "Agrega uno con “+ Video para revisar”."; $("ns-up").hidden = true; return; }
+    if (v.proxy || (v.partes && v.partes.length)) return;
+    $("ns-title").textContent = v.enlace ? "Video en Drive" : "Sin video todavía";
+    $("ns-txt").textContent = v.enlace
+      ? "Pídeme en el chat que lo baje: lo convierto a una copia ligera y aparece aquí. Mientras, puedes subir el archivo tú."
+      : F() ? "Puedes revisar la ficha cuadro por cuadro con la línea de tiempo. Si ya tienes el video, súbelo para verlo aquí." : "Sube el archivo para verlo aquí.";
+    $("ns-up").hidden = !S.assets;
+  }
+  function paintTime(fromSeek) {
+    const f = S.frame, e = sceneAt(f);
+    $("tc").textContent = `${tc(f)} · f${f}`; $("ro-frame").textContent = "f" + f; $("ro-total").textContent = total() - 1; $("ro-scene").textContent = e ? e.id : "—";
+    $("ph").style.left = (f / total()) * 100 + "%";
+    document.querySelectorAll("#lane-esc .blk").forEach((b) => b.classList.toggle("cur", !!e && b.dataset.id === e.id));
+    if (fromSeek || !video.paused) keepPlayheadVisible(false);
+    if ((e && e.id) !== S._lastScene) { S._lastScene = e && e.id; paintScene(); paintFichaCur(); } else paintSceneLive();
+    const sec = Math.floor(f / fps());
+    if (sec !== S._lastSec) { S._lastSec = sec; document.querySelectorAll(".sec").forEach((x) => x.classList.toggle("cur", +x.dataset.s === sec)); }
+    $("ns-scene").innerHTML = e ? `<b>${esc(e.id)}</b> · ${esc(e.tipo)}${e.imagen ? " · " + esc(e.imagen.split("/").pop()) : ""}<br>${esc((e.textos || []).filter((t) => !t.texto.startsWith("[")).map((t) => t.texto).join(" · "))}` : "";
+    const btn = $("save-note"); if (btn) btn.textContent = `Guardar nota en f${f} (${tc(f)})`;
+  }
+  const animLabel = (a) => a.t == null ? "·" : a.t.toFixed(2) + " s";
+
+  function paintScene() {
+    const box = $("tab-escena"), e = sceneAt(S.frame);
+    let info;
+    if (!S.vid) info = `<div class="empty">Aún no hay videos en la sala.</div>`;
+    else if (!F()) info = `<div class="empty">Este video no tiene ficha (no se armó con el sistema de escenas). Igual puedes moverte segundo por segundo y dejar notas en el cuadro exacto.</div>`;
+    else if (!e) info = `<div class="empty">Este cuadro no pertenece a ninguna escena.</div>`;
+    else info = `
+      <div class="scene-head"><h2>${esc(e.id)}</h2><span class="chip ${esc(e.tipo)}">${esc(e.tipo)}</span>
+        <span class="meta mono">${e.inicio.toFixed(2)}–${e.fin.toFixed(2)} s · f${e.frame_inicio}–${e.frame_fin} · ${e.duracion} s · segmento ${e.segmento}</span></div>
+      <dl class="fields">
+        ${e.voz ? `<div class="field"><dt>Voz</dt><dd class="voz">${esc(e.voz)}</dd></div>` : ""}
+        ${e.subtitulos && e.subtitulos.length ? `<div class="field"><dt>Subtítulos</dt><dd class="subs" id="live-subs">${e.subtitulos.map((s, i) => `<span data-i="${i}">${esc(s.texto)}</span>`).join("")}<div class="meta">altura y = ${esc(e.subtitulos_y)} px</div></dd></div>` : ""}
+        ${e.textos && e.textos.length ? `<div class="field"><dt>En pantalla</dt><dd><ul class="plain">${e.textos.map((t) => `<li><span>${esc(t.texto)}</span><span class="sel">${esc(t.donde)}</span></li>`).join("")}</ul></dd></div>` : ""}
+        ${e.imagen ? `<div class="field"><dt>Imagen</dt><dd><code>${esc(e.imagen)}</code> · encuadre ${esc(e.encuadre || "—")} · ${esc(e.movimiento || "")}${e.filtro ? " · " + esc(e.filtro) : ""}</dd></div>` : ""}
+        ${e.animaciones && e.animaciones.length ? `<div class="field"><dt>Animaciones</dt><dd><ul class="plain" id="live-anim">${e.animaciones.map((a) => `<li data-t="${a.t ?? ""}"><span class="t">${animLabel(a)}</span><span>${esc(a.que)}</span>${a.elemento ? `<span class="sel">${esc(a.elemento)}</span>` : ""}</li>`).join("")}</ul></dd></div>` : ""}
+        ${e.sfx && e.sfx.length ? `<div class="field"><dt>Sonido</dt><dd><ul class="plain">${e.sfx.map((s) => `<li><span class="t">${Number(s.inicio).toFixed(2)} s</span><span>${esc(s.archivo)}</span><span class="sel">vol ${esc(s.volumen)}</span></li>`).join("")}</ul></dd></div>` : ""}
+        ${e.capas && e.capas.length ? `<div class="field"><dt>Capas</dt><dd>${e.capas.map(esc).join(", ")}</dd></div>` : ""}
+        ${e.nota ? `<div class="field"><dt>Nota</dt><dd>${esc(e.nota)}</dd></div>` : ""}
+        ${e.archivos && e.archivos.length ? `<div class="field"><dt>Archivos</dt><dd>${e.archivos.map((a) => `<code>${esc(a)}</code>`).join(" ")}</dd></div>` : ""}
+      </dl>`;
+    const els = elementOptions(e);
+    box.innerHTML = info + (S.vid ? `
+      <div class="composer">
+        <h3>Nota para Claude</h3>
+        <div class="cats" id="cats">${CATS.map((c) => `<button type="button" aria-pressed="${c === S.cat}">${esc(c)}</button>`).join("")}</div>
+        <div class="row"><label for="el" class="meta">Elemento</label>
+          <select id="el" class="el">${els.map((o) => `<option value="${esc(o.v)}">${esc(o.l)}</option>`).join("")}</select></div>
+        <textarea id="note-txt" placeholder="Qué quieres cambiar. Ej.: el precio debe decir “desde $3,982,780”; que el titular entre más lento; quitar el whoosh."></textarea>
+        <div class="row"><button class="btn" id="save-note" type="button">Guardar nota</button><span class="msg" id="note-msg"></span></div>
+      </div>` : "");
+    if (!S.vid) return;
+    $("cats").onclick = (ev) => { const b = ev.target.closest("button"); if (!b) return; S.cat = b.textContent; $("cats").querySelectorAll("button").forEach((x) => x.setAttribute("aria-pressed", String(x === b))); };
+    $("save-note").onclick = saveNote;
+    const draft = store.get("revisor.borrador"); if (draft) $("note-txt").value = draft;
+    $("note-txt").oninput = (ev) => store.set("revisor.borrador", ev.target.value);
+    paintSceneLive();
+    const btn = $("save-note"); btn.textContent = `Guardar nota en f${S.frame} (${tc(S.frame)})`;
+  }
+  function paintSceneLive() {
+    const t = S.frame / fps(), e = sceneAt(S.frame); if (!e) return;
+    const subs = $("live-subs"); if (subs) subs.querySelectorAll("span[data-i]").forEach((sp) => { const s = e.subtitulos[+sp.dataset.i]; sp.classList.toggle("now", t >= s.inicio && t < s.fin); });
+    const an = $("live-anim"); if (an) an.querySelectorAll("li").forEach((li) => { const a = parseFloat(li.dataset.t); li.classList.toggle("now", !isNaN(a) && t >= a && t < a + 0.6); });
+  }
+  function elementOptions(e) {
+    const o = [{ v: "", l: e ? "Toda la escena" : "Todo el cuadro" }];
+    if (!e) { ["Texto", "Imagen", "Subtítulos", "Voz", "Música", "Logo / cierre"].forEach((x) => o.push({ v: x.toLowerCase(), l: x })); return o; }
+    if (e.voz) o.push({ v: "voz", l: "Voz / guion" });
+    if (e.subtitulos && e.subtitulos.length) o.push({ v: "subtitulos", l: "Subtítulos" });
+    if (e.imagen) o.push({ v: "imagen", l: "Imagen de fondo" });
+    (e.textos || []).forEach((t) => o.push({ v: t.donde, l: `${t.texto.slice(0, 40)} (${t.donde})` }));
+    (e.animaciones || []).filter((a) => a.elemento && !o.some((x) => x.v === a.elemento)).forEach((a) => o.push({ v: a.elemento, l: `Animación ${a.elemento}` }));
+    (e.sfx || []).forEach((s) => o.push({ v: s.id, l: `Sonido ${s.id} (${s.archivo})` }));
+    return o;
+  }
+  const myNotes = () => S.vid ? S.notas.filter((n) => n.video === S.vid.id).sort((a, b) => a.frame - b.frame) : [];
+
+  async function saveNote() {
+    const txt = $("note-txt").value.trim(), msg = $("note-msg");
+    if (!txt) { msg.className = "msg err"; msg.textContent = "Escribe qué quieres cambiar."; return; }
+    if (!S.db) { msg.className = "msg err"; msg.textContent = "No hay conexión con la base de notas. Abre la página en claude.ai."; return; }
+    const e = sceneAt(S.frame), btn = $("save-note");
+    btn.disabled = true; msg.className = "msg"; msg.textContent = "Guardando…";
+    try {
+      await S.db.collection("notas").add({ video: S.vid.id, render: S.vid.render || "", frame: S.frame, t: +(S.frame / fps()).toFixed(3), tc: tc(S.frame),
+        escena: e ? e.id : "", categoria: S.cat, elemento: $("el").value, texto: txt, estado: "pendiente", respuesta: "",
+        autor: S.user ? await S.user.id() : null, creado: now() });
+      $("note-txt").value = ""; store.set("revisor.borrador", "");
+      msg.textContent = `Guardada en f${S.frame}. Cuando termines, escríbeme en el chat: “revisa las notas de ${S.vid.titulo || S.vid.id}”.`;
+    } catch (err) { msg.className = "msg err"; msg.textContent = err && err.code === "invalid_argument" ? "No tienes permiso para guardar notas aquí." : "No se pudo guardar. Intenta de nuevo."; }
+    btn.disabled = false;
+  }
+
+  // pestaña Segundos: una miniatura por segundo
+  function paintSeconds() {
+    const box = $("tab-segundos"); const n = Math.max(1, Math.ceil(durS()));
+    if (!hasVideo()) { box.innerHTML = `<div class="empty">Las miniaturas por segundo aparecen cuando el video está cargado.</div>`; return; }
+    const conNota = new Set(myNotes().map((x) => Math.floor(x.frame / fps())));
+    box.innerHTML = `<p class="meta">${n} segundos · clic en uno para ir a él. ${S.thumbs.length < n ? `Generando miniaturas (${S.thumbs.length}/${n})…` : ""}</p>
+      <div class="secs" id="secs">${Array.from({ length: n }, (_, s) => { const e = sceneAt(s * fps());
+        return `<button class="sec ${Math.floor(S.frame / fps()) === s ? "cur" : ""}" data-s="${s}" type="button"><div class="ph0" data-s="${s}"></div>${conNota.has(s) ? '<span class="dot"></span>' : ""}<span class="lbl"><span>${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}</span><span>${e ? esc(e.id) : ""}</span></span></button>`; }).join("")}</div>`;
+    S._secsShown = 0; paintSecondsIncremental();
+    $("secs").onclick = (ev) => { const b = ev.target.closest(".sec"); if (b) seek(+b.dataset.s * fps()); };
+  }
+  function paintSecondsIncremental() {
+    if ($("tab-segundos").hidden) return;
+    document.querySelectorAll("#secs .ph0").forEach((d) => { const th = S.thumbs[+d.dataset.s]; if (th) { const c = document.createElement("canvas"); c.width = 108; c.height = 192; c.getContext("2d").drawImage(th, 0, 0); d.replaceWith(c); } });
+    const p = $("tab-segundos").querySelector("p.meta"); const n = Math.max(1, Math.ceil(durS()));
+    if (p) p.textContent = `${n} segundos · clic en uno para ir a él.` + (S.thumbs.length < n ? ` Generando miniaturas (${S.thumbs.length}/${n})…` : "");
+  }
+
+  function paintNotes() {
+    const box = $("tab-notas"), list = myNotes();
+    const pend = list.filter((n) => n.estado === "pendiente").length;
+    $("n-pend").hidden = !pend; $("n-pend").textContent = pend;
+    const shown = S.filtro === "pendientes" ? list.filter((n) => n.estado === "pendiente" || n.estado === "pregunta") : list;
+    box.innerHTML = `
+      <div class="filters" role="group" aria-label="Filtro">
+        <button data-f="pendientes" aria-pressed="${S.filtro === "pendientes"}">Por resolver</button>
+        <button data-f="todas" aria-pressed="${S.filtro === "todas"}">Todas (${list.length})</button>
+        <span class="meta" style="margin-left:auto">Claude marca cada nota como aplicada y responde aquí.</span>
+      </div>
+      <div class="notes">${shown.length ? shown.map(noteHtml).join("") : `<div class="empty">${list.length ? "No hay notas por resolver." : "Aún no hay notas. Ve al cuadro que quieres cambiar y escribe la nota en la pestaña Escena."}</div>`}</div>`;
+    box.querySelector(".filters").onclick = (ev) => { const b = ev.target.closest("button[data-f]"); if (!b) return; S.filtro = b.dataset.f; paintNotes(); };
+    box.querySelector(".notes").onclick = onNoteAction;
+  }
+  function noteHtml(n) {
+    const cur = sceneAt(S.frame);
+    return `<article class="note ${cur && cur.id === n.escena ? "on" : ""}" data-id="${esc(n.id)}">
+      <div class="h"><span class="st ${esc(n.estado)}">${esc(n.estado)}</span><button class="go" data-act="go" data-f="${n.frame}">${esc(n.tc || tc(n.frame))} · f${n.frame}</button>
+        <span>${esc(n.escena)}</span><span>${esc(n.categoria)}</span>${n.elemento ? `<code>${esc(n.elemento)}</code>` : ""}</div>
+      <p>${esc(n.texto)}</p>
+      ${n.respuesta ? `<div class="reply"><b>Claude${n.render_aplicado ? " · " + esc(n.render_aplicado) : ""}:</b> ${esc(n.respuesta)}</div>` : ""}
+      <div class="acts">
+        ${n.estado === "pendiente" ? `<button data-act="descartar">Descartar</button>` : `<button data-act="reabrir">Reabrir</button>`}
+        ${S.confirmDel === n.id ? `<button data-act="borrar-si">Sí, borrar</button><button data-act="borrar-no">Cancelar</button>` : `<button data-act="borrar">Borrar</button>`}
+      </div></article>`;
+  }
+  async function onNoteAction(ev) {
+    const b = ev.target.closest("button[data-act]"); if (!b) return;
+    const id = b.closest(".note").dataset.id, act = b.dataset.act;
+    if (act === "go") { seek(+b.dataset.f); return; }
+    if (act === "borrar") { S.confirmDel = id; paintNotes(); return; }
+    if (act === "borrar-no") { S.confirmDel = null; paintNotes(); return; }
+    try {
+      const ref = S.db.doc("notas/" + id);
+      if (act === "descartar") await ref.update({ estado: "descartada" });
+      if (act === "reabrir") await ref.update({ estado: "pendiente" });
+      if (act === "borrar-si") { S.confirmDel = null; await ref.delete(); }
+    } catch { /* la vista se actualiza con el siguiente snapshot */ }
+  }
+
+  function paintFicha() {
+    const box = $("tab-ficha");
+    if (!F()) { box.innerHTML = `<div class="empty">${S.vid ? "Este video no tiene ficha." : "Sin video."}</div>`; return; }
+    const f = F();
+    box.innerHTML = `
+      <div class="meta mono">${f.duracion} s · ${f.frames} cuadros a ${f.fps} fps · ${f.ancho}×${f.alto} · ${f.escenas.length} escenas · ${f.segmentos ? f.segmentos.length : "?"} segmentos de render</div>
+      ${f.estilo ? `<div class="field"><dt>Estilo</dt><dd>${esc(f.estilo)}</dd></div>` : ""}
+      ${f.voz && f.voz.motor ? `<div class="field"><dt>Voz</dt><dd>${esc(f.voz.motor)}</dd></div>` : ""}
+      ${f.musica && (f.musica.titulo || f.musica.archivo) ? `<div class="field"><dt>Música</dt><dd>${esc(f.musica.titulo || f.musica.archivo)} · volumen ${esc(f.musica.volumen)}</dd></div>` : ""}
+      <h4 class="sec-t">Escenas</h4>
+      <div class="tablewrap"><table><thead><tr><th>Escena</th><th>Tiempo</th><th>Imagen</th><th>En pantalla</th><th>Voz</th></tr></thead><tbody>
+      ${f.escenas.map((e) => `<tr class="sc" data-id="${esc(e.id)}" data-f="${e.frame_inicio}"><td class="mono">${esc(e.id)}</td><td class="mono">${e.inicio.toFixed(2)}–${e.fin.toFixed(2)}</td>
+        <td>${e.imagen ? esc(e.imagen.split("/").pop()) : "—"}</td><td>${esc((e.textos || []).filter((t) => !t.texto.startsWith("[")).map((t) => t.texto).join(" · ") || "—")}</td><td>${esc(e.voz || "—")}</td></tr>`).join("")}
+      </tbody></table></div>
+      ${f.guion ? `<h4 class="sec-t">Guion completo</h4><p class="guion">${esc(f.guion)}</p>` : ""}`;
+    box.querySelector("tbody").onclick = (ev) => { const tr = ev.target.closest("tr[data-f]"); if (tr) seek(+tr.dataset.f); };
+    paintFichaCur();
+  }
+  function paintFichaCur() { const e = sceneAt(S.frame); document.querySelectorAll("#tab-ficha tr.sc").forEach((tr) => tr.classList.toggle("cur", !!e && tr.dataset.id === e.id)); }
+  function paintAll() { S._lastScene = undefined; S._lastSec = undefined; paintNoScreen(); paintTime(); paintNotes(); paintFicha(); if (!$("tab-segundos").hidden) paintSeconds(); }
+
+  // ---------- subida en pedazos
+  async function subir(file, prog, msg) {
+    if (!S.assets) throw new Error("Solo quien puede editar esta página sube archivos.");
+    if (file.size > MAXB) throw new Error(`Pesa ${(file.size / 1048576).toFixed(0)} MB; el máximo es ${MAXB / 1048576} MB. Usa el enlace de Drive.`);
+    const type = /\.mov$/i.test(file.name) ? "video/quicktime" : /\.webm$/i.test(file.name) ? "video/webm" : "video/mp4";
+    const n = Math.max(1, Math.ceil(file.size / PARTE)), ids = [];
+    prog.hidden = false; prog.value = 0;
+    for (let i = 0; i < n; i++) {
+      msg.className = "msg"; msg.textContent = n > 1 ? `Subiendo parte ${i + 1} de ${n} (${(file.size / 1048576).toFixed(0)} MB en total)…` : `Subiendo ${(file.size / 1048576).toFixed(1)} MB…`;
+      const trozo = file.slice(i * PARTE, Math.min(file.size, (i + 1) * PARTE), type);
+      const up = await S.assets.upload(new File([trozo], `${file.name}.parte${i + 1}`, { type }), { type });
+      ids.push(up.id); prog.value = (i + 1) / n;
+    }
+    prog.hidden = true;
+    return { partes: ids, tipo: type, archivo: file.name, mb: +(file.size / 1048576).toFixed(1) };
+  }
+  const errTxt = (err) => err && err.message ? err.message : err && err.code === "unsupported_type" ? "Ese formato no se acepta; usa MP4." : err && err.code === "quota_exceeded" ? "Se llenó el espacio de la sala (1 GB). Pídeme que borre videos viejos." : "No se pudo subir.";
+
+  $("up-video").onchange = async () => {
+    const file = $("up-video").files[0], msg = $("up-video-msg"); if (!file || !S.vid) return;
+    try { const r = await subir(file, $("ns-prog"), msg); await S.db.doc("videos/" + S.vid.id).update(Object.assign(r, { proxy: null, fuente: "subido en la sala", actualizado: now() })); msg.textContent = "Video cargado."; }
+    catch (err) { msg.className = "msg err"; msg.textContent = errTxt(err); }
+  };
+
+  // ---------- video nuevo para revisar
+  const dlg = $("dlg-nuevo");
+  $("b-nuevo").onclick = () => { $("nv-msg").textContent = ""; if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", ""); };
+  $("nv-cancel").onclick = () => dlg.close();
+  $("nv-ok").onclick = async () => {
+    const nombre = $("nv-name").value.trim(), file = $("nv-file").files[0], link = $("nv-link").value.trim(), msg = $("nv-msg");
+    if (!nombre || (!file && !link)) { msg.className = "msg err"; msg.textContent = "Ponle nombre y elige el archivo o pega el enlace."; return; }
+    if (link && !driveId(link)) { msg.className = "msg err"; msg.textContent = "Ese enlace no parece de un archivo de Drive (debe tener /file/d/…)."; return; }
+    if (!S.db) { msg.className = "msg err"; msg.textContent = "Abre la página en claude.ai."; return; }
+    const id = nombre.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60) + "-" + Date.now().toString(36);
+    $("nv-ok").disabled = true;
+    try {
+      const doc = { titulo: nombre, fps: 30, ficha: null, proxy: null, enlace: link || "", estado: link && !file ? "por bajar" : "listo", creado: now(), actualizado: now() };
+      if (file) Object.assign(doc, await subir(file, $("nv-prog"), msg));
+      await S.db.doc("videos/" + id).set(doc);
+      store.set("revisor.video", id); dlg.close(); $("nuevo-form").reset();
+      S.vid = { id }; setTimeout(() => selectVideo(id), 300);
+    } catch (err) { msg.className = "msg err"; msg.textContent = errTxt(err); }
+    $("nv-ok").disabled = false;
+  };
+
+  // ---------- referencias
+  function paintRefs() {
+    const box = $("ref-list");
+    if (!S.refs.length) { box.innerHTML = `<div class="empty">Aún no hay referencias. La primera que guardes aparecerá aquí con su estado y, cuando la analice, con el resumen del estilo.</div>`; return; }
+    box.innerHTML = S.refs.slice().sort((a, b) => (b.creado || "").localeCompare(a.creado || "")).map((r) => `
+      <article class="card ref" data-id="${esc(r.id)}">
+        <div class="row" style="justify-content:space-between"><h3>${esc(r.nombre)}</h3><span class="st ${r.estado === "analizada" ? "analizada" : "pendiente"}">${esc(r.estado)}</span></div>
+        ${r.asset ? `<video controls playsinline preload="metadata" src="/_blob/${esc(r.asset)}"></video>` : r.partes && r.partes.length ? `<button class="btn ghost" data-act="cargar" type="button">Ver video (${esc(r.mb || "")} MB, ${r.partes.length} partes)</button>` : r.enlace ? `<p class="how">En Drive: <code>${esc(r.enlace)}</code></p>` : ""}
+        ${r.que_me_gusta ? `<p class="how"><b>Lo que te gusta:</b> ${esc(r.que_me_gusta)}</p>` : ""}
+        ${r.resumen ? `<div class="resumen">${esc(r.resumen)}</div>` : `<p class="how">Pídeme en el chat: “analiza la referencia ${esc(r.nombre)}”.</p>`}
+        ${r.estilo ? `<p class="how">Estilo guardado como <code>${esc(r.estilo)}</code></p>` : ""}
+      </article>`).join("");
+  }
+  $("ref-list").onclick = async (ev) => {
+    const b = ev.target.closest("button[data-act='cargar']"); if (!b) return;
+    const r = S.refs.find((x) => x.id === b.closest(".ref").dataset.id); b.disabled = true; b.textContent = "Cargando…";
+    try { const ps = []; for (const id of r.partes) ps.push(await (await fetch("/_blob/" + id)).blob());
+      const v = document.createElement("video"); v.controls = true; v.playsInline = true; v.src = URL.createObjectURL(new Blob(ps, { type: r.tipo || "video/mp4" })); b.replaceWith(v); }
+    catch { b.textContent = "No se pudo cargar"; }
+  };
+  $("ref-form").onsubmit = async (ev) => {
+    ev.preventDefault();
+    const file = $("ref-file").files[0], link = $("ref-link").value.trim(), msg = $("ref-msg");
+    const nombre = $("ref-name").value.trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9-]+/g, "-").replace(/^-|-$/g, "");
+    if (!nombre || (!file && !link)) { msg.className = "msg err"; msg.textContent = "Ponle un nombre corto y elige el video o pega el enlace de Drive."; return; }
+    if (link && !driveId(link)) { msg.className = "msg err"; msg.textContent = "Ese enlace no parece de un archivo de Drive (debe tener /file/d/…)."; return; }
+    if (!S.db) { msg.className = "msg err"; msg.textContent = "Abre la página en claude.ai para guardar referencias."; return; }
+    $("ref-send").disabled = true;
+    try {
+      const doc = { nombre, enlace: link || "", que_me_gusta: $("ref-like").value.trim(), estado: "pendiente", resumen: "", estilo: "", creado: now() };
+      if (file) Object.assign(doc, await subir(file, $("ref-prog"), msg));
+      await S.db.collection("referencias").add(doc);
+      msg.className = "msg"; msg.textContent = `Listo. Pídeme en el chat: “analiza la referencia ${nombre}”.`;
+      $("ref-form").reset();
+    } catch (err) { msg.className = "msg err"; msg.textContent = errTxt(err); }
+    $("ref-send").disabled = false;
+  };
+
+  // ---------- controles
+  const step = (d) => seek(S.frame + d);
+  $("b-f-1").onclick = () => step(-1); $("b-f1").onclick = () => step(1);
+  $("b-s-1").onclick = () => step(-fps()); $("b-s1").onclick = () => step(fps());
+  $("b-play").onclick = togglePlay;
+  function togglePlay() { if (!hasVideo()) return; if (video.paused) video.play().catch(() => {}); else video.pause(); }
+  video.onplay = () => { $("b-play").textContent = "❚❚"; tick(); };
+  video.onpause = () => { $("b-play").textContent = "▶"; seek(Math.floor(video.currentTime * fps() + 1e-3), true); };
+  video.onseeked = () => { if (video.paused) { S.frame = Math.min(total() - 1, Math.floor(video.currentTime * fps() + 1e-3)); paintTime(); } };
+  function tick() {
+    if (video.paused) return;
+    S.frame = Math.min(total() - 1, Math.floor(video.currentTime * fps() + 1e-3)); paintTime();
+    if (video.requestVideoFrameCallback) video.requestVideoFrameCallback(tick); else requestAnimationFrame(tick);
+  }
+  document.addEventListener("keydown", (ev) => {
+    if (ev.target.closest("input, textarea, select, dialog") || $("view-videos").hidden) return;
+    if (ev.key === "ArrowLeft") { ev.preventDefault(); step(ev.shiftKey ? -fps() : -1); }
+    else if (ev.key === "ArrowRight") { ev.preventDefault(); step(ev.shiftKey ? fps() : 1); }
+    else if (ev.key === " ") { ev.preventDefault(); togglePlay(); }
+    else if (ev.key === "+" || ev.key === "=") setZoom(S.zoom * 2);
+    else if (ev.key === "-") setZoom(S.zoom / 2);
+    else if (ev.key === "n" || ev.key === "N") { ev.preventDefault(); setTab("escena"); $("note-txt") && $("note-txt").focus(); }
+  });
+  function setTab(t) {
+    ["escena", "segundos", "notas", "ficha"].forEach((k) => { $("t-" + k).setAttribute("aria-selected", String(k === t)); $("tab-" + k).hidden = k !== t; });
+    if (t === "segundos") paintSeconds();
+  }
+  ["escena", "segundos", "notas", "ficha"].forEach((k) => ($("t-" + k).onclick = () => setTab(k)));
+  function setView(v) {
+    $("v-videos").setAttribute("aria-pressed", String(v === "videos")); $("v-refs").setAttribute("aria-pressed", String(v === "refs"));
+    $("view-videos").hidden = v !== "videos"; $("view-refs").hidden = v !== "refs"; $("picker").hidden = v !== "videos";
+    if (v === "refs") video.pause(); else layoutTimeline();
+    const h = "#" + (v === "refs" ? "referencias" : "videos"); if (location.hash !== h) history.replaceState(null, "", h);
+  }
+  $("v-videos").onclick = () => setView("videos"); $("v-refs").onclick = () => setView("refs");
+  window.addEventListener("hashchange", () => setView(location.hash === "#referencias" ? "refs" : "videos"));
+  $("sel-video").onchange = (ev) => selectVideo(ev.target.value);
+
+  // ---------- datos
+  async function start() {
+    setView(location.hash === "#referencias" ? "refs" : "videos");
+    layoutTimeline(); paintAll(); paintRefs();
+    if (!window.claude || !window.claude.use) { $("sync").textContent = "Abre esta página en claude.ai para ver los videos y guardar notas."; return; }
+    const [db, assets, user] = await Promise.all([claude.use("db"), claude.use("assets"), claude.use("user")]);
+    S.db = db; S.assets = assets; S.user = user; paintNoScreen();
+    if (!db) { $("sync").textContent = "Sin acceso a la base de notas en esta vista."; return; }
+    const timer = setTimeout(() => { $("sync").textContent = "La base tarda en responder; lo que ves puede estar desactualizado."; }, 10000);
+    db.collection("videos").onSnapshot((snap) => {
+      if (!snap.metadata.fromCache) { clearTimeout(timer); $("sync").textContent = "Sincronizado"; }
+      S.videos = snap.docs.map((d) => Object.assign({ id: d.id }, d.data())).sort((a, b) => (b.actualizado || "").localeCompare(a.actualizado || ""));
+      selectVideo((S.vid && S.vid.id) || store.get("revisor.video"));
+    }, () => { clearTimeout(timer); $("sync").textContent = "Se perdió la conexión con la base. Recarga la página."; });
+    db.collection("notas").onSnapshot((snap) => { S.notas = snap.docs.map((d) => Object.assign({ id: d.id }, d.data())); paintNotes(); paintMarkers(); if (!$("tab-segundos").hidden) paintSeconds(); }, () => {});
+    db.collection("referencias").onSnapshot((snap) => { S.refs = snap.docs.map((d) => Object.assign({ id: d.id }, d.data())); paintRefs(); }, () => {});
+  }
+  start();
+})();
+</script>

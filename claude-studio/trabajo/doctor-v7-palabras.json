@@ -1,0 +1,906 @@
+{
+  "text": "Doctor o médico, ¿buscas una casa con vista al mar para disfrutar en pareja o invertir para crecer tu patrimonio? En El Sauzal, en la entrada de Ensenada, descubre casas de un nivel, de dos o tres recámaras, desde tres punto nueve hasta cuatro punto nueve millones de pesos, con roof garden privado y vista al mar. Imagina una pausa en la alberca, pickleball con tus amigos, tardes de asador y cenas con tus seres queridos en las amenidades o en tu roof privado. Cuida tu liquidez con pagos flexibles: diez por ciento de enganche, diez por ciento distribuido en veinte mensualidades y ochenta por ciento contra entrega, a mediados de dos mil veintiocho. Explora su potencial de plusvalía y de ingresos por rentas de estancia corta. Disfruta una smart home: controla luces, minisplit y cerradura digital desde tu celular. Aparta este mes y recibe cocina, recámaras, baños y roof con equipamiento incluido, con un ahorro de hasta cuatrocientos cincuenta mil pesos. Haz clic en el botón de abajo para más información. Un asesor de Legacy Capital te atenderá.",
+  "voice_config": {
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+3%"
+  },
+  "words": [
+    {
+      "text": "Doctor",
+      "start": 0.098541,
+      "end": 0.486874
+    },
+    {
+      "text": "o",
+      "start": 0.499041,
+      "end": 0.5354569
+    },
+    {
+      "text": "médico",
+      "start": 0.547583,
+      "end": 0.972333
+    },
+    {
+      "text": "buscas",
+      "start": 1.3,
+      "end": 1.664083
+    },
+    {
+      "text": "una",
+      "start": 1.676208,
+      "end": 1.833958
+    },
+    {
+      "text": "casa",
+      "start": 1.846125,
+      "end": 2.137375
+    },
+    {
+      "text": "con",
+      "start": 2.1495,
+      "end": 2.343666
+    },
+    {
+      "text": "vista",
+      "start": 2.355833,
+      "end": 2.659249
+    },
+    {
+      "text": "al",
+      "start": 2.671375,
+      "end": 2.768458
+    },
+    {
+      "text": "mar",
+      "start": 2.780583,
+      "end": 3.011166
+    },
+    {
+      "text": "para",
+      "start": 3.023291,
+      "end": 3.193207
+    },
+    {
+      "text": "disfrutar",
+      "start": 3.205333,
+      "end": 3.702916
+    },
+    {
+      "text": "en",
+      "start": 3.715041,
+      "end": 3.812124
+    },
+    {
+      "text": "pareja",
+      "start": 3.824291,
+      "end": 4.249041
+    },
+    {
+      "text": "o",
+      "start": 4.261166,
+      "end": 4.358249
+    },
+    {
+      "text": "invertir",
+      "start": 4.370375,
+      "end": 4.855791
+    },
+    {
+      "text": "para",
+      "start": 4.867958,
+      "end": 5.074249
+    },
+    {
+      "text": "crecer",
+      "start": 5.086416,
+      "end": 5.474749
+    },
+    {
+      "text": "tu",
+      "start": 5.486875,
+      "end": 5.583958
+    },
+    {
+      "text": "patrimonio",
+      "start": 5.596125,
+      "end": 6.239333
+    },
+    {
+      "text": "En",
+      "start": 7.07525,
+      "end": 7.245166
+    },
+    {
+      "text": "El",
+      "start": 7.257291,
+      "end": 7.366499
+    },
+    {
+      "text": "Sauzal",
+      "start": 7.378625,
+      "end": 7.839791
+    },
+    {
+      "text": "en",
+      "start": 8.106791,
+      "end": 8.215999
+    },
+    {
+      "text": "la",
+      "start": 8.228166,
+      "end": 8.300999
+    },
+    {
+      "text": "entrada",
+      "start": 8.313125,
+      "end": 8.713625
+    },
+    {
+      "text": "de",
+      "start": 8.725708,
+      "end": 8.822791
+    },
+    {
+      "text": "Ensenada",
+      "start": 8.834958,
+      "end": 9.368958
+    },
+    {
+      "text": "descubre",
+      "start": 9.684458,
+      "end": 10.133499
+    },
+    {
+      "text": "casas",
+      "start": 10.145625,
+      "end": 10.497583
+    },
+    {
+      "text": "de",
+      "start": 10.509708,
+      "end": 10.594666
+    },
+    {
+      "text": "un",
+      "start": 10.606791,
+      "end": 10.715999
+    },
+    {
+      "text": "nivel",
+      "start": 10.728166,
+      "end": 11.067957
+    },
+    {
+      "text": "de",
+      "start": 11.334958,
+      "end": 11.407791
+    },
+    {
+      "text": "dos",
+      "start": 11.419916,
+      "end": 11.674791
+    },
+    {
+      "text": "o",
+      "start": 11.686875,
+      "end": 11.747541
+    },
+    {
+      "text": "tres",
+      "start": 11.759708,
+      "end": 12.038833
+    },
+    {
+      "text": "recámaras",
+      "start": 12.050958,
+      "end": 12.669874
+    },
+    {
+      "text": "desde",
+      "start": 12.949041,
+      "end": 13.228166
+    },
+    {
+      "text": "tres",
+      "start": 13.240291,
+      "end": 13.531541
+    },
+    {
+      "text": "punto",
+      "start": 13.543708,
+      "end": 13.859249
+    },
+    {
+      "text": "nueve",
+      "start": 13.871375,
+      "end": 14.138375
+    },
+    {
+      "text": "hasta",
+      "start": 14.1505,
+      "end": 14.368958
+    },
+    {
+      "text": "cuatro",
+      "start": 14.381083,
+      "end": 14.708749
+    },
+    {
+      "text": "punto",
+      "start": 14.720875,
+      "end": 15.048541
+    },
+    {
+      "text": "nueve",
+      "start": 15.060666,
+      "end": 15.327666
+    },
+    {
+      "text": "millones",
+      "start": 15.339791,
+      "end": 15.788832
+    },
+    {
+      "text": "de",
+      "start": 15.800958,
+      "end": 15.885916
+    },
+    {
+      "text": "pesos",
+      "start": 15.898041,
+      "end": 16.347082
+    },
+    {
+      "text": "con",
+      "start": 16.553416,
+      "end": 16.747582
+    },
+    {
+      "text": "roof",
+      "start": 16.759708,
+      "end": 16.965999
+    },
+    {
+      "text": "garden",
+      "start": 16.978166,
+      "end": 17.293707
+    },
+    {
+      "text": "privado",
+      "start": 17.305833,
+      "end": 17.742708
+    },
+    {
+      "text": "y",
+      "start": 17.754875,
+      "end": 17.815541
+    },
+    {
+      "text": "vista",
+      "start": 17.827666,
+      "end": 18.179624
+    },
+    {
+      "text": "al",
+      "start": 18.19175,
+      "end": 18.288833
+    },
+    {
+      "text": "mar.",
+      "start": 18.300958,
+      "end": 18.652916
+    },
+    {
+      "text": "Imagina",
+      "start": 19.490291,
+      "end": 20.036416
+    },
+    {
+      "text": "una",
+      "start": 20.048541,
+      "end": 20.266999
+    },
+    {
+      "text": "pausa",
+      "start": 20.279125,
+      "end": 20.631083
+    },
+    {
+      "text": "en",
+      "start": 20.643208,
+      "end": 20.716041
+    },
+    {
+      "text": "la",
+      "start": 20.728166,
+      "end": 20.800999
+    },
+    {
+      "text": "alberca",
+      "start": 20.813125,
+      "end": 21.286416
+    },
+    {
+      "text": "pickleball",
+      "start": 21.577666,
+      "end": 22.111666
+    },
+    {
+      "text": "con",
+      "start": 22.123791,
+      "end": 22.281541
+    },
+    {
+      "text": "tus",
+      "start": 22.293708,
+      "end": 22.475749
+    },
+    {
+      "text": "amigos",
+      "start": 22.487875,
+      "end": 22.936916
+    },
+    {
+      "text": "tardes",
+      "start": 23.216,
+      "end": 23.567958
+    },
+    {
+      "text": "de",
+      "start": 23.580083,
+      "end": 23.640749
+    },
+    {
+      "text": "asador",
+      "start": 23.652916,
+      "end": 24.004874
+    },
+    {
+      "text": "y",
+      "start": 24.017,
+      "end": 24.0655409
+    },
+    {
+      "text": "cenas",
+      "start": 24.077666,
+      "end": 24.453874
+    },
+    {
+      "text": "con",
+      "start": 24.466,
+      "end": 24.635916
+    },
+    {
+      "text": "tus",
+      "start": 24.648041,
+      "end": 24.793666
+    },
+    {
+      "text": "seres",
+      "start": 24.805833,
+      "end": 25.097083
+    },
+    {
+      "text": "queridos",
+      "start": 25.109208,
+      "end": 25.546083
+    },
+    {
+      "text": "en",
+      "start": 25.55825,
+      "end": 25.643208
+    },
+    {
+      "text": "las",
+      "start": 25.655333,
+      "end": 25.800958
+    },
+    {
+      "text": "amenidades",
+      "start": 25.813125,
+      "end": 26.468458
+    },
+    {
+      "text": "o",
+      "start": 26.480583,
+      "end": 26.565541
+    },
+    {
+      "text": "en",
+      "start": 26.577666,
+      "end": 26.686874
+    },
+    {
+      "text": "tu",
+      "start": 26.699041,
+      "end": 26.820416
+    },
+    {
+      "text": "roof",
+      "start": 26.832541,
+      "end": 27.063124
+    },
+    {
+      "text": "privado",
+      "start": 27.07525,
+      "end": 27.572833
+    },
+    {
+      "text": "Cuida",
+      "start": 28.410208,
+      "end": 28.689333
+    },
+    {
+      "text": "tu",
+      "start": 28.701458,
+      "end": 28.798541
+    },
+    {
+      "text": "liquidez",
+      "start": 28.810666,
+      "end": 29.271832
+    },
+    {
+      "text": "con",
+      "start": 29.284,
+      "end": 29.478166
+    },
+    {
+      "text": "pagos",
+      "start": 29.490291,
+      "end": 29.817957
+    },
+    {
+      "text": "flexibles",
+      "start": 29.830083,
+      "end": 30.473291
+    },
+    {
+      "text": "diez",
+      "start": 30.740291,
+      "end": 30.970874
+    },
+    {
+      "text": "por",
+      "start": 30.983,
+      "end": 31.14075
+    },
+    {
+      "text": "ciento",
+      "start": 31.152916,
+      "end": 31.468457
+    },
+    {
+      "text": "de",
+      "start": 31.480583,
+      "end": 31.577666
+    },
+    {
+      "text": "enganche",
+      "start": 31.589791,
+      "end": 32.050957
+    },
+    {
+      "text": "diez",
+      "start": 32.354375,
+      "end": 32.584958
+    },
+    {
+      "text": "por",
+      "start": 32.597083,
+      "end": 32.766999
+    },
+    {
+      "text": "ciento",
+      "start": 32.779125,
+      "end": 33.094666
+    },
+    {
+      "text": "distribuido",
+      "start": 33.106791,
+      "end": 33.725707
+    },
+    {
+      "text": "en",
+      "start": 33.737875,
+      "end": 33.847083
+    },
+    {
+      "text": "veinte",
+      "start": 33.859208,
+      "end": 34.150458
+    },
+    {
+      "text": "mensualidades",
+      "start": 34.162625,
+      "end": 34.927208
+    },
+    {
+      "text": "y",
+      "start": 34.939333,
+      "end": 34.9878739
+    },
+    {
+      "text": "ochenta",
+      "start": 35.0,
+      "end": 35.412625
+    },
+    {
+      "text": "por",
+      "start": 35.42475,
+      "end": 35.606791
+    },
+    {
+      "text": "ciento",
+      "start": 35.618916,
+      "end": 35.946582
+    },
+    {
+      "text": "contra",
+      "start": 35.95875,
+      "end": 36.22575
+    },
+    {
+      "text": "entrega",
+      "start": 36.237875,
+      "end": 36.686916
+    },
+    {
+      "text": "a",
+      "start": 36.929625,
+      "end": 37.026708
+    },
+    {
+      "text": "mediados",
+      "start": 37.038833,
+      "end": 37.536416
+    },
+    {
+      "text": "de",
+      "start": 37.548541,
+      "end": 37.633499
+    },
+    {
+      "text": "dos",
+      "start": 37.645625,
+      "end": 37.851916
+    },
+    {
+      "text": "mil",
+      "start": 37.864083,
+      "end": 38.021833
+    },
+    {
+      "text": "veintiocho",
+      "start": 38.034,
+      "end": 38.652916
+    },
+    {
+      "text": "Explora",
+      "start": 39.490291,
+      "end": 39.987874
+    },
+    {
+      "text": "su",
+      "start": 40.0,
+      "end": 40.1335
+    },
+    {
+      "text": "potencial",
+      "start": 40.145625,
+      "end": 40.667458
+    },
+    {
+      "text": "de",
+      "start": 40.679625,
+      "end": 40.764583
+    },
+    {
+      "text": "plusvalía",
+      "start": 40.776708,
+      "end": 41.347083
+    },
+    {
+      "text": "y",
+      "start": 41.359208,
+      "end": 41.419874
+    },
+    {
+      "text": "de",
+      "start": 41.432041,
+      "end": 41.529124
+    },
+    {
+      "text": "ingresos",
+      "start": 41.54125,
+      "end": 42.063083
+    },
+    {
+      "text": "por",
+      "start": 42.07525,
+      "end": 42.233
+    },
+    {
+      "text": "rentas",
+      "start": 42.245166,
+      "end": 42.597124
+    },
+    {
+      "text": "de",
+      "start": 42.609208,
+      "end": 42.694166
+    },
+    {
+      "text": "estancia",
+      "start": 42.706291,
+      "end": 43.179582
+    },
+    {
+      "text": "corta",
+      "start": 43.19175,
+      "end": 43.6165
+    },
+    {
+      "text": "Disfruta",
+      "start": 44.453875,
+      "end": 44.987875
+    },
+    {
+      "text": "una",
+      "start": 45.0,
+      "end": 45.194166
+    },
+    {
+      "text": "smart",
+      "start": 45.206291,
+      "end": 45.497541
+    },
+    {
+      "text": "home",
+      "start": 45.509708,
+      "end": 45.776708
+    },
+    {
+      "text": "controla",
+      "start": 46.019416,
+      "end": 46.504832
+    },
+    {
+      "text": "luces",
+      "start": 46.517,
+      "end": 46.966041
+    },
+    {
+      "text": "minisplit",
+      "start": 47.196583,
+      "end": 47.742708
+    },
+    {
+      "text": "y",
+      "start": 47.754875,
+      "end": 47.8034159
+    },
+    {
+      "text": "cerradura",
+      "start": 47.815541,
+      "end": 48.288832
+    },
+    {
+      "text": "digital",
+      "start": 48.300958,
+      "end": 48.810666
+    },
+    {
+      "text": "desde",
+      "start": 48.822833,
+      "end": 49.101958
+    },
+    {
+      "text": "tu",
+      "start": 49.114083,
+      "end": 49.211166
+    },
+    {
+      "text": "celular",
+      "start": 49.223291,
+      "end": 49.781541
+    },
+    {
+      "text": "Aparta",
+      "start": 50.618916,
+      "end": 51.116499
+    },
+    {
+      "text": "este",
+      "start": 51.128625,
+      "end": 51.347083
+    },
+    {
+      "text": "mes",
+      "start": 51.359208,
+      "end": 51.601916
+    },
+    {
+      "text": "y",
+      "start": 51.614083,
+      "end": 51.674749
+    },
+    {
+      "text": "recibe",
+      "start": 51.686875,
+      "end": 52.075208
+    },
+    {
+      "text": "cocina",
+      "start": 52.087375,
+      "end": 52.560666
+    },
+    {
+      "text": "recámaras",
+      "start": 52.827666,
+      "end": 53.482999
+    },
+    {
+      "text": "baños",
+      "start": 53.75,
+      "end": 54.138333
+    },
+    {
+      "text": "y",
+      "start": 54.1505,
+      "end": 54.211166
+    },
+    {
+      "text": "roof",
+      "start": 54.223291,
+      "end": 54.453874
+    },
+    {
+      "text": "con",
+      "start": 54.466041,
+      "end": 54.611666
+    },
+    {
+      "text": "equipamiento",
+      "start": 54.623791,
+      "end": 55.230582
+    },
+    {
+      "text": "incluido",
+      "start": 55.242708,
+      "end": 55.752416
+    },
+    {
+      "text": "con",
+      "start": 56.007291,
+      "end": 56.177207
+    },
+    {
+      "text": "un",
+      "start": 56.189333,
+      "end": 56.310708
+    },
+    {
+      "text": "ahorro",
+      "start": 56.322833,
+      "end": 56.662624
+    },
+    {
+      "text": "de",
+      "start": 56.67475,
+      "end": 56.771833
+    },
+    {
+      "text": "hasta",
+      "start": 56.784,
+      "end": 56.990291
+    },
+    {
+      "text": "cuatrocientos",
+      "start": 57.002416,
+      "end": 57.657749
+    },
+    {
+      "text": "cincuenta",
+      "start": 57.669916,
+      "end": 58.106791
+    },
+    {
+      "text": "mil",
+      "start": 58.118916,
+      "end": 58.337374
+    },
+    {
+      "text": "pesos",
+      "start": 58.3495,
+      "end": 58.8835
+    },
+    {
+      "text": "Haz",
+      "start": 59.720875,
+      "end": 59.927166
+    },
+    {
+      "text": "clic",
+      "start": 59.939333,
+      "end": 60.218458
+    },
+    {
+      "text": "en",
+      "start": 60.230583,
+      "end": 60.339791
+    },
+    {
+      "text": "el",
+      "start": 60.351958,
+      "end": 60.449041
+    },
+    {
+      "text": "botón",
+      "start": 60.461166,
+      "end": 60.752416
+    },
+    {
+      "text": "de",
+      "start": 60.764583,
+      "end": 60.825249
+    },
+    {
+      "text": "abajo",
+      "start": 60.837375,
+      "end": 61.201458
+    },
+    {
+      "text": "para",
+      "start": 61.213583,
+      "end": 61.419874
+    },
+    {
+      "text": "más",
+      "start": 61.432041,
+      "end": 61.662624
+    },
+    {
+      "text": "información",
+      "start": 61.67475,
+      "end": 62.39075
+    },
+    {
+      "text": "Un",
+      "start": 63.228166,
+      "end": 63.373791
+    },
+    {
+      "text": "asesor",
+      "start": 63.385916,
+      "end": 63.798541
+    },
+    {
+      "text": "de",
+      "start": 63.810666,
+      "end": 63.895624
+    },
+    {
+      "text": "Legacy",
+      "start": 63.90775,
+      "end": 64.3325
+    },
+    {
+      "text": "Capital",
+      "start": 64.344666,
+      "end": 64.793707
+    },
+    {
+      "text": "te",
+      "start": 64.805833,
+      "end": 64.878666
+    },
+    {
+      "text": "atenderá",
+      "start": 64.890791,
+      "end": 65.473332
+    }
+  ],
+  "provider": "Edge TTS client",
+  "note": "Mide el audio y realinea escenas/subtítulos antes de entregar; los límites son los reportados por el proveedor."
+}

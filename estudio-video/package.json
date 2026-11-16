@@ -1,0 +1,14 @@
+{
+  "name": "estudio-video",
+  "private": true,
+  "description": "Producción de reels verticales con HyperFrames (ver CLAUDE.md)",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "hyperframes": "0.8.139"
+  },
+  "devDependencies": {
+    "@hyperframes/core": "0.8.139"
+  }
+}

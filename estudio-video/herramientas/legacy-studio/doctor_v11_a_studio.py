@@ -126,9 +126,12 @@ def headline(sid, l1, l2, d=0.0, anim=True):
                  start=round(0.22 + d, 3), animationDuration=0.25, enabled=True)]
 
 
+LOGO = {'w': 62, 'y': 1312, 'txt': 22}
+
+
 def logo(sid, anim=False):
-    return [img(f'{sid}-logo', 'crest', 540, 1312, 62, align='center', anim='rise' if anim else 'none', start=0.3 if anim else 0, animationDuration=0.4),
-            txt(f'{sid}-logo-t', 'LEGACY CAPITAL', 540, 1400, 22, font='Cinzel', anim='rise' if anim else 'none', start=0.3 if anim else 0, width=500, align='center', dur=0.4)]
+    return [img(f'{sid}-logo', 'crest', 540, LOGO['y'], LOGO['w'], align='center', anim='rise' if anim else 'none', start=0.3 if anim else 0, animationDuration=0.4),
+            txt(f'{sid}-logo-t', 'LEGACY CAPITAL', 540, LOGO['y'] + round(LOGO['w'] * 391 / 300) + 7, LOGO['txt'], font='Cinzel', anim='rise' if anim else 'none', start=0.3 if anim else 0, width=500, align='center', dur=0.4)]
 
 
 def pill(id, text, x, y, size, start, anim='pop', fg=DARK, bg=GOLD, h=74, pad=30, align='left'):
@@ -409,7 +412,70 @@ for i, (src, t, d, v) in enumerate(B12['ev']):
 P12 = proyecto('doctor-v12-avatar-legacy', 'Doctor V12 · avatar de Fran · Legacy Capital', 'V12 · avatar en rooftop y frente a la casa (16 nov)', B12['DUR'], sc12, cap12, tr12, TEXTO)
 P12['source']['hyperframes'] = 'estudio-video/videos/punta-pacifico-doctor-v12-avatar-es'
 
-for p in (P11, P11B, P12):
+# ===== V13: doctor + avatar en el intro, brindis en el cierre, 3 ubicaciones por toma, logo grande
+A13 = V + 'punta-pacifico-doctor-v13-avatar-es/'
+B13 = run_build(A13 + 'build.py')
+LOGO.update(w=96, y=1282, txt=32)
+
+
+def servicios13(shift):
+    out = []
+    SRVL = B11['SRV']; SHOW = [[0, 2, 4], [1, 5, 6]]
+    for n, (a, b, c) in enumerate([(6.5, 8.4, 'aereo-terreno'), (8.4, 10.3, 'aereo-marina')]):
+        dt = -(a - 6.5)
+        L = [txt(f'srv{n}-eb', 'EL SAUZAL · ENTRADA DE ENSENADA', 65, 284, 28, GOLD, 'PPBold', 'slide-right', 0.05 + dt, width=950),
+             txt(f'srv{n}-t1', 'SERVICIOS Y PUNTOS', 65, 334, 84, anim='slide-right', start=0.12 + dt),
+             txt(f'srv{n}-t2', 'DE INTERÉS ALREDEDOR', 65, 426, 84, GOLD, anim='slide-right', start=0.12 + dt),
+             dict(id=f'srv{n}-rule', type='line', x=65, y=528, width=160, strokeWidth=8, color=GOLD, animation='wipe', start=round(0.3 + dt, 3), animationDuration=0.25, enabled=True)]
+        for j, k in enumerate(SHOW[n]):
+            cc = SRVL[k]; x, y = 40, 900 + j * 122; t0 = (0.45 if n == 0 else 0.1) + j * 0.22
+            lines = cc[0].replace('&amp;', '&').split('<br>'); hn = 27 * len(lines); top = y + (112 - (hn + 3 + 31)) / 2
+            L += [rect(f'srv{n}-c{j}', x, y, 495, 112, '#FFFBF3F5', 'pop', t0, radius=24, stroke='#E3B869', strokeWidth=4),
+                  img(f'srv{n}-c{j}-ico', f'ico{cc[2]}', x + 12, y + 17, 78, 'pop', t0, animationDuration=0.25),
+                  rect(f'srv{n}-c{j}-bar', x + 102, y + 17, 5, 78, '#C99A2E', 'pop', t0, radius=3),
+                  txt(f'srv{n}-c{j}-n', '\n'.join(lines), x + 119, top, 25, '#132B6B', 'PPBold', 'pop', t0, width=360, shadow=False, lineHeight=1.08)]
+            L += pill(f'srv{n}-c{j}-p', cc[1], x + 119, top + hn + 3, 24, t0 + 0.1, 'pop', '#FFFFFF', '#8A620C', h=31, pad=16)
+        L += logo(f'srv{n}')
+        out.append(scene(f'srv{n + 1}', f'srv{n + 1} · Servicios alrededor ({c})', a + shift, b + shift, clip(c), L, {'top': 0.6, 'bottom': 0.3}))
+    return out
+
+
+intro13 = []
+for sid, a, b, src, ms, hl in B13['SC']:
+    name = os.path.splitext(os.path.basename(src))[0]
+    mid = clip(name, A13)
+    L = headline(sid, *hl) if hl else []
+    if sid == 'i1':
+        L += [txt('i1-hook-a', 'DOCTOR O MÉDICO,', 70, 866, 96, anim='pop', start=0.05, dur=0.35),
+              dict(id='i1-hook-rule', type='line', x=70, y=980, width=170, strokeWidth=8, color=GOLD, animation='wipe', start=0.4, animationDuration=0.3, enabled=True)]
+    L += logo(sid, anim=(sid == 'i1'))
+    titulo = {'i1': 'Doctor', 'i2': 'Avatar Fran · rooftop'}.get(sid) or (hl[0] + ' ' + hl[1])
+    intro13.append(scene(sid, f'{sid} · {titulo}', a, b, mid, L, {'top': 0, 'bottom': 0.35} if sid in ('i1', 'i2') else SHADE, offset=ms))
+cuerpo13 = [s for s in (v11_escenas(OFF, A0, A1, logo_anim=False) + servicios13(OFF) + mgs(OFF) + [promo(OFF)])]
+for s_ in cuerpo13:
+    s_['id'] = 'b-' + s_['id']
+    for l in s_['layers']:
+        l['id'] = 'b-' + l['id']
+AV13 = B13['AV_END']
+brindis = clip('avatar-brindis', A13)
+Lb = [txt('c1-cta-t', 'MÁS INFORMACIÓN', 540, 292, 104, anim='rise', start=0.05, width=1000, align='center'),
+      rect('c1-cta-w', 180, 1172, 720, 74, '#071D29E0', 'pop', 0.3, radius=37, stroke=GOLD, strokeWidth=3),
+      txt('c1-cta-w1', 'WhatsApp', 520, 1188, 38, font='PPBold', anim='pop', start=0.3, width=300, align='right', shadow=False),
+      txt('c1-cta-w2', '+52 646 256 3006', 536, 1188, 38, GOLD, 'PPBold', 'pop', 0.3, width=400, shadow=False)] + logo('c1', True)
+cierre13 = [scene('c1', 'c1 · Avatar Fran · brindis', B_C1, AV13, brindis, Lb, {'top': 0.78, 'bottom': 0.3}),
+            cierre(AV13, B13['DUR'], shift_anim=B13['END_SRC'] - B11['END'][0], sid='fin')]
+sc13 = sorted(intro13 + cuerpo13 + cierre13, key=lambda s: s['start'])
+G13 = B13['G']
+cap13 = captions_from(G13, sc13, desde=0, hasta=H) + captions_from(B11['G'], sc13, shift=OFF, desde=A0, hasta=A1, ini=50) + captions_from(G13, sc13, desde=H, hasta=999, ini=200)
+for i, c in enumerate(cap13):
+    c['id'] = f'cap-{i:03d}'
+tr13 = [t for t in copy.deepcopy(tr11b) if not t['id'].startswith('sfx')]
+for i, (src, t, d, v) in enumerate(B13['ev']):
+    tr13.append(track(f'sfx{i:02d}', 'Efecto · ' + os.path.basename(src)[:-4], 'sfx', sfx_asset(src), t, d, v))
+P13 = proyecto('doctor-v13-avatar-legacy', 'Doctor V13 · avatar y brindis · Legacy Capital', 'V13 · doctor + avatar, brindis, ubicaciones reducidas (17 nov)', B13['DUR'], sc13, cap13, tr13, TEXTO)
+P13['source']['hyperframes'] = 'estudio-video/videos/punta-pacifico-doctor-v13-avatar-es'
+
+for p in (P11, P11B, P12, P13):
     f = os.path.join(OUT, p['id'] + '.json')
     json.dump(p, open(f, 'w'), ensure_ascii=False)
     print(f"{p['id']}: {len(p['scenes'])} escenas, {len(p['captions'])} subtítulos, {len(p['audioTracks'])} pistas, {len(p['assets'])} assets, "

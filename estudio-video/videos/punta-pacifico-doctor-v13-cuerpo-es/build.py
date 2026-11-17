@@ -31,10 +31,10 @@ SC=[
 ('s17',49.15,50.55,'clip:celular','50% 50%',1,1,0,0,('DESDE','DONDE ESTÉS',''),1),
 ('s18',50.55,53.0,'clip:ai-cerradura-cut','50% 50%',1,1,0,0,('LLEGA','Y TODO LISTO',''),1),
 ('s19',53.0,54.65,'clip:ai-aparta-cut','50% 50%',1,1,0,0,('TU CASA','YA EQUIPADA',''),1),
-('s20',54.65,55.75,'clip:ai-cocina-cut','50% 50%',1,1,0,0,None,1),
-('s21',55.75,56.35,'v23','50% 50%',1.1,1.16,0,0,None,1),
-('s22',56.35,56.7,'r-bano','50% 50%',1.06,1.12,0,0,None,1),
-('s23',56.7,58.6,'clip:ai-roofeq-cut','50% 50%',1,1,0,0,None,1),
+('s20',54.65,55.55,'clip:ai-cocina-cut','50% 50%',1,1,0,0,None,1),
+('s21',55.55,56.05,'v23','50% 50%',1.1,1.16,0,0,None,1),
+('s22',56.05,56.65,'r-bano','50% 50%',1.06,1.12,0,0,None,1),
+('s23',56.65,58.6,'clip:ai-roofeq-sol','50% 50%',1,1,0,0,None,1),
 ]
 CAPTOP={'s01':1105,'s02':760}
 HLTOP={}
@@ -85,8 +85,8 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#071D29}
 .sc .nm{font-family:"PPBold";font-size:25px;line-height:1.08}.sc .pl{padding:0 16px 2px;border-radius:999px;background:#8A620C;color:#fff;font-family:"PPBold";font-size:24px;line-height:1.3;white-space:nowrap}
 .sc .nm.sm{font-size:20px;white-space:nowrap}
 #logo{z-index:5;pointer-events:none}
-#logo-in{position:absolute;left:0;right:0;top:1282px;display:flex;flex-direction:column;align-items:center;gap:6px}
-#logo-in img{width:96px;height:auto;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,.6))}#logo-in span{font-family:"Cinzel",serif;font-weight:700;font-size:32px;letter-spacing:.14em;color:#fff;white-space:nowrap;text-shadow:0 2px 6px rgba(0,0,0,.85),0 0 12px rgba(0,0,0,.6)}
+#logo-in{position:absolute;left:0;right:0;top:1400px;display:flex;flex-direction:column;align-items:center;gap:6px}
+#logo-in img{width:120px;height:auto;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,.6))}#logo-in span{font-family:"Cinzel",serif;font-weight:700;font-size:38px;letter-spacing:.14em;color:#fff;white-space:nowrap;text-shadow:0 2px 6px rgba(0,0,0,.85),0 0 12px rgba(0,0,0,.6)}
 .mgz{z-index:6}#end{z-index:6}#captions{z-index:7}
 #eq{position:absolute;left:90px;top:290px;font-family:"PPCondensed";font-size:96px;line-height:1.16;text-shadow:0 3px 10px rgba(0,0,0,.45)}#eq span{color:#FFD086;display:block}
 #eq-n{position:absolute;left:90px;top:540px;height:74px;border-radius:999px;background:#FFD086;color:#071D29;font-family:"PPBold";font-size:36px;display:flex;align-items:center;padding:0 30px}
@@ -144,11 +144,11 @@ A('<video id="srv-v1" class="clip mgv" src="assets/clips/aereo-terreno.mp4" data
 A('<video id="srv-v2" class="clip mgv" src="assets/clips/aereo-marina.mp4" data-start="8.4" data-duration="1.9" data-track-index="1" muted playsinline></video>')
 A('<div id="srv" class="clip" data-start="6.5" data-duration="3.8" data-track-index="2"><div class="srv-sh"></div><div id="srv-eb">EL SAUZAL · ENTRADA DE ENSENADA</div><div id="srv-t">SERVICIOS Y PUNTOS<br><span>DE INTERÉS ALREDEDOR</span></div><div id="srv-r"></div>')
 SRV=[('Punta Morro /<br>restaurante y hotel','aprox. 2 min',1),('Hotel Coral &amp; Marina','aprox. 4–5 min',5),('Soriana /<br>autoservicio','aprox. 3 min',2),('OXXO y tiendas<br>de conveniencia','aprox. 4 min',6),('CETYS<br>Universidad','aprox. 5 min',3),('UABC / CICESE','aprox. 3–4 min',7),('Hospitales y<br>servicios médicos','aprox. 7 min',4),None]
-SHOW=[0,2,4,1,5,6]  # toma 1: Punta Morro, Soriana, CETYS · toma 2: Hotel Coral, UABC/CICESE, hospitales
+SHOW=[0,2,1,6]  # toma 1: Punta Morro, Soriana, CETYS · toma 2: Hotel Coral, UABC/CICESE, hospitales
 for j,k in enumerate(SHOW):
     c=SRV[k]
     inner=f'<div class="nm">{c[0]}</div><div class="pl">{c[1]}</div>'
-    A(f'<div class="sc" id="sc{j}" style="left:40px;top:{900+(j%3)*122}px"><img src="assets/ico/ico{c[2]}.png" alt="" /><div class="bar2"></div><div class="tx">{inner}</div></div>')
+    A(f'<div class="sc" id="sc{j}" style="left:292px;top:{1010+(j%2)*124}px"><img src="assets/ico/ico{c[2]}.png" alt="" /><div class="bar2"></div><div class="tx">{inner}</div></div>')
 A('</div>')
 A(f'<div id="logo" class="clip" data-start="0" data-duration="{END[0]}" data-track-index="4"><div id="logo-in"><img src="assets/crest.png" alt="" /><span>LEGACY CAPITAL</span></div></div>')
 A('<div id="eqw" class="clip" data-start="54.65" data-duration="3.95" data-track-index="3"><div id="eq">INCLUIDO<span>DESDE EL DÍA 1</span></div><div id="eq-n">Cocina</div></div>')
@@ -183,7 +183,7 @@ for i,c in enumerate(cuts):
 ev+=[('wu',6.25,0.25),('ss',8.25,0.2)]+[(['pop','ph','thud','pop','ph','tk','pop','ph'][i],6.95+i*0.2,0.4) for i in range(8)]+[('shim',9.2,0.2)]
 ev+=[('boom',0.05,0.3),('thud',16.1,0.4),('boom',17.4,0.3),
      ('tk',45.5,0.35),('coin',45.65,0.22),('tk',45.8,0.35),('coin',45.95,0.22),('tk',46.1,0.35),('coin',46.25,0.22),('cha',46.5,0.25),
-     ('pop',55.25,0.35),('ph',55.8,0.35),('pop',56.4,0.35),('ph',56.75,0.35),
+     ('pop',55.1,0.35),('ph',55.6,0.35),('pop',56.1,0.35),('ph',56.7,0.35),
      ('rise',58.7,0.35),('boom',59.75,0.55),('cha',59.77,0.35),('shim',60.15,0.22),('wl',61.0,0.25),('thud',61.4,0.35),('pop',62.5,0.35)]
 for i,(k,t,v) in enumerate(ev):
     f,d=SFX[k]
@@ -228,8 +228,8 @@ tl.fromTo("#hook .b",{opacity:0,y:40},{opacity:1,y:0,duration:0.3,ease:"power3.o
 tl.fromTo("#logo-in",{opacity:0,y:20},{opacity:1,y:0,duration:0.4,ease:"power2.out"},0.3);
 // servicios sobre el video render
 tl.fromTo("#srv-eb",{opacity:0,x:-40},{opacity:1,x:0,duration:0.22,ease:"power3.out"},6.55);tl.fromTo("#srv-t",{opacity:0,x:-50},{opacity:1,x:0,duration:0.25,ease:"power3.out"},6.62);tl.fromTo("#srv-r",{scaleX:0,transformOrigin:"0 50%"},{scaleX:1,duration:0.25},6.8);
-[0,1,2,3,4,5].forEach(i=>{const t=(i<3?6.95:8.5)+(i%3)*0.22;tl.fromTo("#sc"+i,{opacity:0,y:60,scale:0.8},{opacity:1,y:0,scale:1,duration:0.24,ease:"back.out(2)",immediateRender:false},t);tl.fromTo("#sc"+i+" .pl",{scale:0.3},{scale:1,duration:0.22,ease:"back.out(3)",immediateRender:false},t+0.1);});
-tl.set("#sc0,#sc1,#sc2,#sc3,#sc4,#sc5",{opacity:0},0);tl.to("#sc0,#sc1,#sc2",{opacity:0,x:-40,duration:0.18,ease:"power2.in"},8.22);
+[0,1,2,3].forEach(i=>{const t=(i<2?6.95:8.5)+(i%2)*0.25;tl.fromTo("#sc"+i,{opacity:0,y:60,scale:0.8},{opacity:1,y:0,scale:1,duration:0.24,ease:"back.out(2)",immediateRender:false},t);tl.fromTo("#sc"+i+" .pl",{scale:0.3},{scale:1,duration:0.22,ease:"back.out(3)",immediateRender:false},t+0.1);});
+tl.set("#sc0,#sc1,#sc2,#sc3",{opacity:0},0);tl.to("#sc0,#sc1",{opacity:0,y:-30,duration:0.18,ease:"power2.in"},8.22);
 // precios
 tl.fromTo("#pr1 .a",{opacity:0,x:-40},{opacity:1,x:0,duration:0.2},15.5);tl.fromTo("#pr1 .b",{opacity:0,scale:1.6},{opacity:1,scale:1,duration:0.25,ease:"power4.out",transformOrigin:"0 50%"},16.1);up("#pr1 .c",16.3);
 tl.fromTo("#pr2 .a",{opacity:0,x:-40},{opacity:1,x:0,duration:0.2},17.12);tl.fromTo("#pr2 .b",{opacity:0,scale:1.6},{opacity:1,scale:1,duration:0.25,ease:"power4.out",transformOrigin:"0 50%"},17.4);up("#pr2 .c",18.0);
@@ -241,7 +241,7 @@ tl.to("#ra",{attr:{"stroke-dashoffset":0},duration:0.9,ease:"none"},45.55);tl.fr
 tl.to(".coin",{scale:1.15,duration:0.12,yoyo:true,repeat:1,stagger:0.04},46.5);
 // equipamiento incluido
 tl.fromTo("#eq",{opacity:0,x:-50},{opacity:1,x:0,duration:0.22,ease:"power3.out"},54.7);
-[["Cocina",55.25],["Cuartos",55.8],["Baños",56.4],["Roof",56.75]].forEach(([t,at])=>{tl.set("#eq-n",{textContent:"✓ "+t},at);tl.fromTo("#eq-n",{scale:0.5,opacity:0},{scale:1,opacity:1,duration:0.2,ease:"back.out(3)",transformOrigin:"0 50%",immediateRender:false},at);});
+[["Cocina",55.1],["Cuartos",55.6],["Baños",56.1],["Roof",56.7]].forEach(([t,at])=>{tl.set("#eq-n",{textContent:"✓ "+t},at);tl.fromTo("#eq-n",{scale:0.5,opacity:0},{scale:1,opacity:1,duration:0.2,ease:"back.out(3)",transformOrigin:"0 50%",immediateRender:false},at);});
 // PROMO: tensión + explosión
 tl.fromTo("#rays",{rotation:0,scale:0.6,opacity:0},{rotation:40,scale:1.15,opacity:1,duration:2.65,ease:"none"},58.6);
 tl.fromTo("#pa",{opacity:0,y:-60},{opacity:1,y:0,duration:0.25,ease:"power3.out"},58.65);

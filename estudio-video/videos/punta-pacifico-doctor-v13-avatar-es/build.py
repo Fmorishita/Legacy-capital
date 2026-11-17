@@ -13,14 +13,14 @@ OFF=H-A0              # B = A + OFF
 C1=(7.80,10.42)       # cierre parte 1 (tiempo del video del asesor)
 C2=(11.55,14.05)      # cierre parte 2 (se quita la pausa 10.42–11.55)
 B_C1=A1+OFF; B_C2=B_C1+(C1[1]-C1[0]); B_END=B_C2+(C2[1]-C2[0])
-AV_END=B_C1+5.45      # cierre completo hasta «te atenderá» y el brindis
-END_LEN=round(B_END-AV_END+1.43,2); END_SRC=round(66.38-END_LEN,2)
-DUR=round(AV_END+END_LEN,2)
+AV_END=B_C1+5.9       # cierra con el brindis; sin tarjeta final
+END_LEN=0; END_SRC=0
+DUR=round(AV_END,2)
 k1=B_C1-C1[0]; k2=B_C2-C2[0]
 CSS+='''
 .shade-top{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,29,41,.78) 0%,rgba(7,29,41,.42) 22%,rgba(7,29,41,0) 29%,rgba(7,29,41,0) 72%,rgba(7,29,41,.3) 100%)}
-.logo-in{position:absolute;left:0;right:0;top:1282px;display:flex;flex-direction:column;align-items:center;gap:6px}
-.logo-in img{width:96px;height:auto;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,.6))}.logo-in span{font-family:"Cinzel",serif;font-weight:700;font-size:32px;letter-spacing:.14em;color:#fff;white-space:nowrap;text-shadow:0 2px 6px rgba(0,0,0,.85),0 0 12px rgba(0,0,0,.6)}
+.logo-in{position:absolute;left:0;right:0;top:1400px;display:flex;flex-direction:column;align-items:center;gap:6px}
+.logo-in img{width:120px;height:auto;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,.6))}.logo-in span{font-family:"Cinzel",serif;font-weight:700;font-size:38px;letter-spacing:.14em;color:#fff;white-space:nowrap;text-shadow:0 2px 6px rgba(0,0,0,.85),0 0 12px rgba(0,0,0,.6)}
 .eb{position:absolute;left:90px;top:300px;text-shadow:0 3px 10px rgba(0,0,0,.55)}
 .eb .a{display:block;font-family:"PPBold";font-size:30px;letter-spacing:.24em;color:#FFD086}
 .eb .b{display:block;font-family:"Cinzel",serif;font-weight:700;font-size:56px;letter-spacing:.05em;color:#fff;margin-top:8px}
@@ -38,8 +38,8 @@ X('''<!doctype html>
 <div id="root" data-composition-id="main" data-start="0" data-duration="%s" data-width="1080" data-height="1920">'''%DUR)
 # ---- intro: portada del doctor + asesor + B-roll
 SC=[('i1',0,1.62,'clips/ai-doc-1080.mp4',0,None),
-    ('i2',1.62,3.45,'clips/avatar-rooftop-v13.mp4',0,None),
-    ('i3',3.45,5.0,'clips/ai-sala-b.mp4',0,('DESCONECTA','DE LA GUARDIA')),
+    ('i2',1.62,3.52,'clips/avatar-rooftop-v13.mp4',0,None),
+    ('i3',3.52,5.0,'clips/ai-sala-b.mp4',0,('DESCONECTA','DE LA GUARDIA')),
     ('i4',5.0,H,'clips/ai-celebra-cut.mp4',0,('TU DINERO','TRABAJANDO PARA TI'))]
 for sid,a,b,src,ms,hl in SC:
     X(f'<video id="{sid}-v" class="clip mgv" src="assets/{src}" data-start="{a}" data-duration="{round(b-a,3)}" data-media-start="{ms}" data-track-index="1" muted playsinline></video>')
@@ -53,7 +53,6 @@ X(f'<video id="cuerpo" class="clip mgv" src="assets/cuerpo.mp4" data-start="{H}"
 # ---- cierre con el asesor
 X(f'<video id="c1-v" class="clip mgv" src="assets/clips/avatar-brindis.mp4" data-start="{round(B_C1,3)}" data-duration="{round(AV_END-B_C1,3)}" data-media-start="0" data-track-index="1" muted playsinline></video>')
 X(f'<div id="ctaw" class="clip" data-start="{round(B_C1,3)}" data-duration="{round(AV_END-B_C1,3)}" data-track-index="2"><div class="shade shade-top"></div><div id="cta-t">MÁS INFORMACIÓN</div><div id="cta-w">WhatsApp <span>+52 646 256 3006</span></div></div>')
-X(f'<video id="fin" class="clip mgv" src="assets/cuerpo.mp4" data-start="{round(AV_END,3)}" data-duration="{END_LEN}" data-media-start="{END_SRC}" data-track-index="1" muted playsinline></video>')
 X(f'<div id="logo-a" class="clip" data-start="0" data-duration="{H}" data-track-index="4"><div class="logo-in" id="la"><img src="assets/crest.png" alt="" /><span>LEGACY CAPITAL</span></div></div>')
 X(f'<div id="logo-b" class="clip" data-start="{round(B_C1,3)}" data-duration="{round(AV_END-B_C1,3)}" data-track-index="4"><div class="logo-in" id="lb"><img src="assets/crest.png" alt="" /><span>LEGACY CAPITAL</span></div></div>')
 X(f'<div id="captions" class="clip" data-start="0" data-duration="{DUR}" data-track-index="5"></div>')
@@ -74,8 +73,8 @@ for m in re.finditer(r'<audio id="sfx\d+" src="([^"]+)" data-start="([\d.]+)" da
     if A0<=st<A1-0.05: ev.append((src,round(st+OFF,3),min(du,A1+OFF-(st+OFF)),vol))
 sfx=lambda n:'assets/sfx/'+n+'.mp3'
 D={'syn-boom':0.94,'syn-whoosh-up':0.6,'syn-swish':0.31,'syn-whoosh-down':0.62,'syn-whoosh-low':0.83,'syn-thud':0.33,'syn-shimmer':0.94,'syn-pop':0.2}
-for n,t,v in [('syn-boom',0.05,0.3),('syn-whoosh-up',1.45,0.2),('syn-swish',3.3,0.2),('syn-whoosh-down',4.85,0.2),('syn-whoosh-up',6.8,0.25),
-              ('syn-whoosh-low',B_C1-0.70,0.25),('syn-pop',B_C1+0.25,0.2),('syn-shimmer',AV_END-0.1,0.2)]:
+for n,t,v in [('syn-boom',0.05,0.3),('syn-whoosh-up',1.42,0.16),('syn-whoosh-down',4.85,0.2),('syn-whoosh-up',6.8,0.25),
+              ('syn-whoosh-low',B_C1-0.70,0.25),('syn-pop',B_C1+0.25,0.2),('syn-shimmer',B_C1+4.55,0.16)]:
     ev.append((sfx(n),round(t,3),D[n],v))
 for i,(src,t,d,v) in enumerate(ev):
     X(f'<audio id="fx{i}" src="{src}" data-start="{t}" data-duration="{round(d,3)}" data-track-index="{10+i%9}" data-volume="{v}"></audio>')
@@ -85,7 +84,7 @@ W=lambda L,k:[[w,round(t+k,3)] for w,t in L]
 G=[
  {'top':1105,'s':1.62,'end':2.45,'w':W([['¿Buscas',1.77],['una',2.05],['casa',2.2]],0)},
  {'top':1105,'s':2.45,'end':3.42,'w':W([['con',2.45],['vista',2.64],['al',3.05],['mar?',3.14]],0)},
- {'top':760,'s':3.45,'end':4.98,'w':W([['para',3.57],['disfrutar',3.78],['en',4.28],['pareja',4.40]],0)},
+ {'top':760,'s':3.52,'end':4.98,'w':W([['para',3.57],['disfrutar',3.78],['en',4.28],['pareja',4.40]],0)},
  {'top':1085,'s':5.0,'end':5.90,'w':W([['o',5.10],['invertir',5.16],['para',5.68]],0)},
  {'top':1085,'s':5.90,'end':7.06,'w':W([['crecer',5.92],['tu',6.24],['patrimonio?',6.36]],0)},
  {'top':1085,'s':B_C1,'end':8.45+k1,'w':W([['Haz',7.89],['clic',8.08],['en',8.19],['el',8.34]],k1)},
@@ -93,7 +92,7 @@ G=[
  {'top':1085,'s':9.20+k1,'end':C1[1]+k1-0.02,'w':W([['para',9.22],['más',9.52],['información',9.74]],k1)},
  {'top':1085,'s':B_C2,'end':12.24+k2,'w':W([['y',11.60],['un',11.66],['asesor',11.78],['de',12.15]],k2)},
  {'top':1085,'s':12.24+k2,'end':13.16+k2,'w':W([['Legacy',12.27],['Capital',12.65]],k2)},
- {'top':1085,'s':13.16+k2,'end':AV_END-0.05,'w':W([['te',13.18],['atenderá.',13.28]],k2)},
+ {'top':1085,'s':13.16+k2,'end':14.1+k2,'w':W([['te',13.18],['atenderá.',13.28]],k2)},
 ]
 X('const CAPS='+json.dumps(G,ensure_ascii=False)+';')
 X('''const host=document.getElementById("captions");
@@ -110,7 +109,7 @@ tl.fromTo("#hook .rule",{scaleX:0,transformOrigin:"0 50%"},{scaleX:1,duration:0.
 tl.fromTo("#la",{opacity:0,y:20},{opacity:1,y:0,duration:0.4,ease:"power2.out"},0.3);
 // asesor en cámara
 // titulares del B-roll
-[["i3",3.45],["i4",5.0]].forEach(([s,a])=>{tl.fromTo("#"+s+"-hl .l1",{opacity:0,x:-50},{opacity:1,x:0,duration:0.22,ease:"power3.out"},a+0.05);tl.fromTo("#"+s+"-hl .l2",{opacity:0,x:-50},{opacity:1,x:0,duration:0.22,ease:"power3.out"},a+0.14);tl.fromTo("#"+s+"-hl .rule",{scaleX:0,transformOrigin:"0 50%"},{scaleX:1,duration:0.25,ease:"power2.out"},a+0.22);});
+[["i3",3.52],["i4",5.0]].forEach(([s,a])=>{tl.fromTo("#"+s+"-hl .l1",{opacity:0,x:-50},{opacity:1,x:0,duration:0.22,ease:"power3.out"},a+0.05);tl.fromTo("#"+s+"-hl .l2",{opacity:0,x:-50},{opacity:1,x:0,duration:0.22,ease:"power3.out"},a+0.14);tl.fromTo("#"+s+"-hl .rule",{scaleX:0,transformOrigin:"0 50%"},{scaleX:1,duration:0.25,ease:"power2.out"},a+0.22);});
 // cierre con el asesor (corte con punch-in en la segunda parte)
 up("#cta-t",@B1@+0.05);pop("#cta-w",@B1@+0.3);
 tl.to("#cta-w",{scale:1.06,duration:0.35,yoyo:true,repeat:5,ease:"sine.inOut"},@B1@+0.7);

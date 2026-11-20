@@ -90,3 +90,14 @@ Mismo guion, voz y tiempos. Cambios:
 | Panel de $25,000 USD | roof con el tragaluz grande abajo | Fran en el roof al atardecer (carpeta v1), encuadre sin el tragaluz; el panel no tapa su cara |
 
 Higgsfield: 0 créditos. Legacy Studio: no se cargó (en pausa).
+
+## v5 (20 nov 2026): ajustes de Fran sobre la v4
+
+| Escena | v4 | v5 |
+|---|---|---|
+| ¿Y si tu próxima casa estuviera en México? | pareja con la maleta en la cama, luego la vista aérea | solo la vista aérea del fraccionamiento al atardecer (dura ~4.6 s), con el titular y «Ensenada · Baja California» |
+| Mapa | renglones de tiempo sobre la parte baja del mapa | renglones debajo del mapa, sin encimarse |
+| Más información | Fran solo en el roof | Fran entregando la llave a la pareja y apuntando hacia el botón; el botón late hasta el final |
+| Cierre | placa azul de Legacy Capital (1.35 s) | sin placa: el video termina en la toma de «Más información» |
+
+Higgsfield: 0 créditos. Legacy Studio: no se cargó (en pausa).

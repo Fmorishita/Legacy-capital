@@ -96,7 +96,8 @@ Cuando te corrija algo y apruebe el resultado:
 
 ## Entregables por video
 
-- **Siempre, sin preguntar (Fran, 16 nov 2026):** todo video y animación nueva se carga en Legacy Studio (https://claude.ai/artifact/TvyAwhsn4M9Scyfbt6zsui) como proyecto editable con todos sus elementos: cada toma como escena, textos como capas, subtítulos por palabra, y voz, música, efectos y audio de las animaciones como pistas separadas. Además se sube el MP4 final en partes de 14 MB con una solicitud `tipo: render`, `estado: lista`. Formato y pasos: rama `claude/sleepy-euler-pd0igu` (`CLAUDE.md` y `claude-studio/CLAUDE.md`); ejemplo de convertidor: `herramientas/legacy-studio/doctor_v11_a_studio.py`. Usa un id nuevo por versión y no pises proyectos existentes.
+- **Legacy Studio: en pausa (Fran, 20 nov 2026).** No cargues videos ni animaciones a Legacy Studio (https://claude.ai/artifact/TvyAwhsn4M9Scyfbt6zsui) hasta que Fran lo vuelva a pedir. Cuando lo pida: proyecto editable con cada toma como escena, textos como capas, subtítulos por palabra y pistas separadas, más el MP4 en partes de 14 MB (convertidores en `herramientas/legacy-studio/`, un id nuevo por versión).
+- **Higgsfield: no gastes créditos (Fran, 20 nov 2026)** hasta que Fran lo pida explícitamente.
 
 - `videos/<slug>-<formato>-<idioma>/renders/<nombre>-vNN.mp4`
 - `proyectos/<slug>/guiones/<formato>-<idioma>.md` con tabla de trazabilidad y checklist de cumplimiento.

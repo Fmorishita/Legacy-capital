@@ -54,3 +54,24 @@
 
 - Música: «Happy Times», Alejandro Magaña (Mixkit Stock Music Free License: uso comercial y en anuncios, sin atribución).
 - Voz: Qwen3-TTS-12Hz-1.7B-VoiceDesign + Base (Apache 2.0). El locutor se generó por descripción («voz masculina grave y cálida, español mexicano nativo, ritmo ágil»).
+
+## v3 (20 nov 2026): cambio de fotos
+
+Se mantienen el mismo guion, la misma voz y los mismos tiempos de la v2. Cambian las tomas que Fran marcó, usando las fotos de su carpeta del 20 nov:
+
+| Escena | v2 | v3 |
+|---|---|---|
+| ¿Y si tu próxima casa… | C02 | pareja haciendo la maleta |
+| …estuviera en México? | C02 | vista aérea de las casas al atardecer, con la ubicación «Ensenada · Baja California» |
+| Un nuevo proyecto | B01 | Fran frente a la fachada |
+| Casas de un nivel | C04 | Fran en la sala |
+| 2 habitaciones | C07 | pareja llegando a la recámara |
+| 3 habitaciones | C14 | recámara con vista |
+| Acceso controlado | B04 (dos personas del mismo lado del auto) | caseta de acceso al atardecer |
+| Cuida tu liquidez | (animación) | pareja revisando el plan de pagos, 0.8 s antes de la animación |
+| Reserva este mes | C13 | Fran con la pareja firmando |
+| Cocina / baño | C13 / render del baño | cocina con la pareja / baño con la señora; los ✓ se acumulan abajo |
+| El Pacífico desde tu rooftop | C18 | amigos en el roof al atardecer |
+| Más información | B09 | Fran en el roof al atardecer |
+
+Además, el panel de $25,000 USD se reacomodó para que «Al reservar tu casa este mes» no quede pegado al borde inferior. No se gastaron créditos de Higgsfield y no se cargó nada a Legacy Studio (Fran lo pausó).

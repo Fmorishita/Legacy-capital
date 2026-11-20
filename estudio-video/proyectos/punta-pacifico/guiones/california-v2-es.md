@@ -111,3 +111,31 @@ Higgsfield: 0 créditos. Legacy Studio: no se cargó (en pausa).
 | Asadores / salón al aire libre | foto del asador y luego foto del salón | se quitó la foto del salón; el asador dura ~4.5 s |
 
 Higgsfield: 0 créditos. Legacy Studio: no se cargó (en pausa).
+
+## v7 (20 nov 2026): fotos animadas con Higgsfield
+
+Mismo guion, voz y tiempos de la v6. Fran aprobó animar las fotos con **Seedance 2.5 a 720p** (sin audio, 9:16, modo omni_reference con la foto como primer cuadro). En las escenas del asesor se agregó como referencia de identidad la hoja «Navy Suit Character Reference Sheet» de la carpeta FRAN CLON IA, y el prompt pide que nunca tenga las manos en los bolsillos.
+
+| # | Escena (voz) | Acción en el video | Duración | Créditos |
+|---|---|---|---|---|
+| 1 | Trabajas en EE.UU. | termina de escribir, se recarga y sonríe | 4 s | 28 |
+| 2 | ¿Y si tu próxima casa…? | toma de dron sobre las casas hacia el mar | 4 s | 28 |
+| 3 | …y descanso | la pareja brinda en el roof | 4 s | 28 |
+| 4 | Conoce este nuevo proyecto | Fran camina a la puerta, la abre e invita a pasar | 4 s | 28 |
+| 5 | Casas de un nivel | Fran presenta la sala caminando | 4 s | 28 |
+| 6 | Roof garden y vista al mar | Fran va al barandal y señala el mar | 4 s | 28 |
+| 8 | 2 habitaciones | la pareja llega; ella abre las cortinas | 4 s | 28 |
+| 10 | ¿La quieres rentar por temporadas? | abre con la cerradura inteligente y entran con la maleta | 4 s | 28 |
+| 12 | Acceso controlado / 24/7 (un solo video) | sale la camioneta por un carril; se abre la reja del otro y entra el sedán | 5 s | 35 |
+| 13 | Si reservas este mes | el cliente firma y le da la mano a Fran | 4 s | 28 |
+| 16 | ¿Se arma una partida? | golpe de raqueta con barrido de cámara | 4 s | 28 |
+| 17 | Asadores… | flama en el asador; la niña lleva el plato | 5 s | 35 |
+| 18 | El Pacífico desde tu rooftop | brindis al atardecer; la cámara sube | 4 s | 28 |
+| 19 | Más información | Fran entrega la llave y después apunta hacia abajo | 6 s | 42 |
+
+- Total: 14 clips, **420 créditos** (saldo inicial 436.52; quedan 16.52).
+- Pendientes por falta de créditos (siguen como foto): atardecer en el acantilado, 3 habitaciones, celular, «Imagina despertar» y alberca (5 × 28 = 140 créditos).
+- Sin video, por indicación de Fran: cerradura (foto con zoom al teclado y destello), cocina, cuartos, baño y roof del equipamiento, y las animaciones (mapa, pagos y plusvalía).
+- El clip del acceso no muestra que las rejas se cierren; si Fran lo pide, se repite (35 créditos).
+- En el montaje se usa el tramo más dinámico de cada clip, acelerado entre 1.0× y 1.45×. En el cierre, el título y el botón entran después de que Fran entrega la llave, para que se vea cómo apunta hacia abajo.
+- Videos originales en Drive: carpeta «Videos IA Higgsfield» dentro de la carpeta general de California. Las fotos de todas las versiones están en «Fotos IA California (todas las versiones)».

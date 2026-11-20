@@ -97,7 +97,7 @@ Cuando te corrija algo y apruebe el resultado:
 ## Entregables por video
 
 - **Legacy Studio: en pausa (Fran, 20 nov 2026).** No cargues videos ni animaciones a Legacy Studio (https://claude.ai/artifact/TvyAwhsn4M9Scyfbt6zsui) hasta que Fran lo vuelva a pedir. Cuando lo pida: proyecto editable con cada toma como escena, textos como capas, subtítulos por palabra y pistas separadas, más el MP4 en partes de 14 MB (convertidores en `herramientas/legacy-studio/`, un id nuevo por versión).
-- **Higgsfield: no gastes créditos (Fran, 20 nov 2026)** hasta que Fran lo pida explícitamente.
+- **Higgsfield: no gastes créditos (Fran, 20 nov 2026)** hasta que Fran lo pida explícitamente. El 20 nov autorizó animar las fotos de California v7: siempre **Seedance 2.5 a 720p**, sin audio (la voz es en off), clips del largo que pida la toma (mínimo 4 s) y, en las escenas del asesor, la hoja de personaje de FRAN CLON IA como referencia de identidad. El asesor nunca va con las manos en los bolsillos, cambia de lado y de gesto entre escenas y hace una acción ligada a lo que dice la voz.
 
 - `videos/<slug>-<formato>-<idioma>/renders/<nombre>-vNN.mp4`
 - `proyectos/<slug>/guiones/<formato>-<idioma>.md` con tabla de trazabilidad y checklist de cumplimiento.

@@ -75,3 +75,18 @@ Se mantienen el mismo guion, la misma voz y los mismos tiempos de la v2. Cambian
 | Más información | B09 | Fran en el roof al atardecer |
 
 Además, el panel de $25,000 USD se reacomodó para que «Al reservar tu casa este mes» no quede pegado al borde inferior. No se gastaron créditos de Higgsfield y no se cargó nada a Legacy Studio (Fran lo pausó).
+
+## v4 (20 nov 2026): ajustes de Fran sobre la v3
+
+Mismo guion, voz y tiempos. Cambios:
+
+| Escena | v3 | v4 |
+|---|---|---|
+| Mapa «A un paso de California» | 686 px de ancho | 900 px de ancho; los renglones de tiempo se apoyan en la parte baja del mapa |
+| ¿La quieres rentar por temporadas? | hombre con el celular en la oficina | pareja llegando con la maleta (la foto que antes salía en «Seguridad 24/7») |
+| Seguridad 24/7 | pareja con maleta | caseta de acceso de día (carpeta v3) |
+| Cuida tu liquidez | foto de la pareja con la laptop 0.8 s antes | solo la animación |
+| Equipamiento: cocina, **cuartos**, baño, roof | en «cuartos» salía el baño | cocina → recámara con la pareja → baño → roof; los ✓ se acumulan |
+| Panel de $25,000 USD | roof con el tragaluz grande abajo | Fran en el roof al atardecer (carpeta v1), encuadre sin el tragaluz; el panel no tapa su cara |
+
+Higgsfield: 0 créditos. Legacy Studio: no se cargó (en pausa).

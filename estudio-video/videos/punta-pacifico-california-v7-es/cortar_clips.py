@@ -13,8 +13,9 @@ for sid, spec in CLIPS.items():
     if len(spec) > 3:  # un clip que cubre varias tomas seguidas
         b2, d2 = span[spec[3]]
         d = b2 + d2 - a
-    need = d * sp + 0.15
-    vf = f'setpts=PTS/{sp},fps=30,scale=1080:1920:flags=lanczos,format=yuv420p'
+    need = d + 0.15  # duración de salida (después de cambiar la velocidad)
+    mi = ',minterpolate=fps=30:mi_mode=mci:mc_mode=aobmc' if sp < 0.7 else ''  # cámara lenta suave
+    vf = f'setpts=PTS/{sp}{mi},fps=30,scale=1080:1920:flags=lanczos,format=yuv420p'
     subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-y', '-ss', str(ss), '-i', f'{SRC}/{f}', '-t', f'{need:.3f}', '-vf', vf, '-an',
                     '-c:v', 'libx264', '-crf', '15', '-preset', 'medium', f'{P}assets/vid/{sid}.mp4'], check=True)
     out = float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', f'{P}assets/vid/{sid}.mp4'], capture_output=True, text=True).stdout)

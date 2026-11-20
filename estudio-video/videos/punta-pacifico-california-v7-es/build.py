@@ -188,9 +188,9 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#071D29}
 #promo .d{position:absolute;left:0;right:0;top:322px;text-align:center}#promo .d span{display:inline-block;background:#FFD086;color:#071D29;border-radius:999px;padding:6px 32px;font-family:"PPBold";font-size:34px}
 .pt{position:absolute;left:470px;top:160px;width:16px;height:16px;border-radius:50%;background:#FFD086;opacity:0}
 /* CTA */
-#cta-t{position:absolute;left:0;right:0;top:812px;text-align:center;font-family:"PPCondensed";font-size:78px;line-height:1;text-shadow:0 4px 14px rgba(0,0,0,.65)}
-#cta{position:absolute;left:110px;right:110px;top:924px;height:104px;border-radius:999px;background:#FFD086;color:#071D29;font-family:"PPBold";font-size:44px;display:flex;align-items:center;justify-content:center;gap:16px;box-shadow:0 12px 30px rgba(0,0,0,.45)}
-#cta-wa{position:absolute;left:0;right:0;top:1044px;text-align:center;font-family:"PPBold";font-size:36px;text-shadow:0 2px 8px rgba(0,0,0,.8)}#cta-wa span{color:#FFD086}
+#cta-t{position:absolute;left:0;right:0;top:1150px;text-align:center;font-family:"PPCondensed";font-size:78px;line-height:1;text-shadow:0 4px 14px rgba(0,0,0,.65)}
+#cta{position:absolute;left:110px;right:110px;top:1262px;height:104px;border-radius:999px;background:#FFD086;color:#071D29;font-family:"PPBold";font-size:44px;display:flex;align-items:center;justify-content:center;gap:16px;box-shadow:0 12px 30px rgba(0,0,0,.45)}
+#cta-wa{position:absolute;left:0;right:0;top:1382px;text-align:center;font-family:"PPBold";font-size:36px;text-shadow:0 2px 8px rgba(0,0,0,.8)}#cta-wa span{color:#FFD086}
 </style></head><body>
 <div id="root" data-composition-id="main" data-start="0" data-duration="%DUR%" data-width="1080" data-height="1920">
 '''.replace('%DUR%', str(DUR)))
@@ -434,7 +434,7 @@ PTS.forEach(([x,y,s],i)=>tl.fromTo("#pt"+i,{{x:0,y:0,scale:s,opacity:1}},{{x:x,y
 tl.set(".pt",{{opacity:0}},0);up("#pcx",P1+0.2);pop("#pd",P1+0.45);tl.to("#pn",{{scale:1.07,duration:0.25,yoyo:true,repeat:3,ease:"sine.inOut"}},P1+0.5);
 // CTA con Fran y placa final
 tl.fromTo("#cta-t",{{opacity:0,scale:1.3,filter:"blur(10px)"}},{{opacity:1,scale:1,filter:"blur(0px)",duration:0.3,ease:"power4.out"}},{TCTA});
-pop("#cta",{round(TCTA + 0.15, 2)});tl.fromTo("#cta-wa",{{opacity:0}},{{opacity:1,duration:0.3}},{round(max(at('recibir', 12), TCTA + 0.3), 2)});
+tl.to("#logo-in",{{y:-1120,scale:0.62,duration:0.35,ease:"power3.inOut"}},{round(TCTA - 0.2, 2)});pop("#cta",{round(TCTA + 0.15, 2)});tl.fromTo("#cta-wa",{{opacity:0}},{{opacity:1,duration:0.3}},{round(max(at('recibir', 12), TCTA + 0.3), 2)});
 tl.to("#cta",{{scale:1.07,duration:0.36,ease:"sine.inOut",yoyo:true,repeat:{NREP}}},{round(TCTA + 0.55, 2)});tl.fromTo("#arw",{{y:-6}},{{y:10,duration:0.36,yoyo:true,repeat:{NREP},ease:"power1.inOut"}},{round(TCTA + 0.55, 2)});''')
 A(f'tl.to({{}},{{duration:{DUR}}},0);window.__timelines["main"]=tl;\n</script></body></html>')
 open(P + 'index.html', 'w').write('\n'.join(H))

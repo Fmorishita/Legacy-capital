@@ -16,7 +16,7 @@
 3. Está en la carretera principal de El Sauzal, a una hora y media de la frontera con San Diego, a una hora de Tijuana y a tres horas de Mexicali.
 4. Hay casas de dos habitaciones desde doscientos quince mil dólares y de tres desde doscientos treinta y cinco mil dólares.
 5. ¿La quieres rentar por temporadas? Desde tu celular puedes controlar las luces, los minisplits y la cerradura.
-6. El residencial tendrá acceso controlado con seguridad las veinticuatro horas, los siete días de la semana.
+6. El residencial tendrá acceso controlado con seguridad veinticuatro siete. *(desde v6; antes: «las veinticuatro horas, los siete días de la semana»)*
 7. Puedes cuidar tu liquidez con diez por ciento de enganche, otro diez por ciento dividido en veinte mensualidades y el ochenta por ciento contra entrega, prevista para mediados de dos mil veintiocho.
 8. Así puedes planear tu patrimonio desde hoy y aprovechar el potencial de plusvalía mientras pagas.
 9. Si reservas este mes, obtén equipamiento en cocina, cuartos, **baño** y roof garden por un valor de hasta **veinticinco mil dólares**.
@@ -99,5 +99,15 @@ Higgsfield: 0 créditos. Legacy Studio: no se cargó (en pausa).
 | Mapa | renglones de tiempo sobre la parte baja del mapa | renglones debajo del mapa, sin encimarse |
 | Más información | Fran solo en el roof | Fran entregando la llave a la pareja y apuntando hacia el botón; el botón late hasta el final |
 | Cierre | placa azul de Legacy Capital (1.35 s) | sin placa: el video termina en la toma de «Más información» |
+
+Higgsfield: 0 créditos. Legacy Studio: no se cargó (en pausa).
+
+## v6 (20 nov 2026): ajustes de Fran sobre la v5
+
+| Escena | v5 | v6 |
+|---|---|---|
+| ¿Y si tu próxima casa de inversión y **descanso**…? | solo vista aérea | vista aérea y, en «descanso», la pareja relajándose en el roof al atardecer (foto no usada antes); el titular se queda fijo |
+| Seguridad (voz) | «…las veinticuatro horas, los siete días de la semana» | «…con seguridad veinticuatro siete»; se regeneró solo esa frase con el mismo locutor Qwen3-TTS (toma semilla 409, F0 99 Hz, DNSMOS 3.39) y se insertó con el mismo tempo ×1.15 y nivel. El video queda 1.76 s más corto |
+| Asadores / salón al aire libre | foto del asador y luego foto del salón | se quitó la foto del salón; el asador dura ~4.5 s |
 
 Higgsfield: 0 créditos. Legacy Studio: no se cargó (en pausa).

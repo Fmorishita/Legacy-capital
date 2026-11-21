@@ -15,6 +15,16 @@ const nextConfig: NextConfig = {
     remotePatterns: [{ protocol: "https", hostname: "lpdqksuvccsocntditik.supabase.co" }],
   },
   poweredByHeader: false,
+  async redirects() {
+    // El dominio oficial es legacycapitalmx.com: los .vercel.app de producción redirigen ahí
+    // (los previews de ramas, con otro host, no se tocan).
+    return ["legacycapitalmx.vercel.app", "legacycapitalrealestate.vercel.app", "legacy-capital-rho.vercel.app"].map((host) => ({
+      source: "/:path*",
+      has: [{ type: "host" as const, value: host }],
+      destination: "https://legacycapitalmx.com/:path*",
+      permanent: true,
+    }));
+  },
   async headers() {
     return [
       {

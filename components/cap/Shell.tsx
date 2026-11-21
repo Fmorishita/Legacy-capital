@@ -96,7 +96,7 @@ export function AuthFrame({ title, kicker, children }: { title: string; kicker?:
         </div>
         <p className="text-center text-xs text-muted">
           <Link href="/" className="underline-offset-4 hover:underline">
-            legacycapitalmx.vercel.app
+            legacycapitalmx.com
           </Link>
         </p>
       </div>

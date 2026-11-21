@@ -151,7 +151,8 @@ const dash = (v: unknown) => (v === undefined || v === null || v === "" ? undefi
  */
 async function notifyEmail(lead: Record<string, unknown>, kind: "nuevo" | "actualizacion") {
   if (!NOTIFY_EMAIL || process.env.LEAD_EMAIL_DISABLED === "1") return;
-  const site = process.env.NEXT_PUBLIC_SITE_URL || "https://legacycapitalmx.vercel.app";
+  // Siempre el dominio oficial: FormSubmit activa el formulario por origen
+  const site = "https://legacycapitalmx.com";
   const proyecto = PROYECTO_LABEL[String(lead.proyecto ?? "general")] ?? "General";
   const nombre = dash(lead.nombre) ?? "Sin nombre";
   const mensaje = dash(lead.mensaje);

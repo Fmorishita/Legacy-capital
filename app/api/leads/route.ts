@@ -82,6 +82,12 @@ const leadSchema = z.object({
 const qualifySchema = z.object({
   id: z.uuid(),
   token: z.uuid(),
+  // Solo para el correo de aviso (el paso 2 no repite los datos de contacto)
+  nombre: optionalText(120),
+  telefono: optionalText(30),
+  email: optionalText(160),
+  idioma: z.enum(["es", "en"]).optional(),
+  origen: optionalText(40),
   horizonte_compra: z.enum(["0-3", "3-6", "6-12", "explorando"]).optional(),
   forma_pago: z.enum(["contado", "credito", "infonavit", "usd"]).optional(),
   uso: z.enum(["segunda_casa", "renta", "vivir", "retiro", "broker"]).optional(),
@@ -134,6 +140,71 @@ async function notifyWebhook(lead: Record<string, unknown>) {
   }
 }
 
+const NOTIFY_EMAIL = process.env.LEAD_NOTIFY_EMAIL || "fmejiam@sisol.com.mx";
+const PROYECTO_LABEL: Record<string, string> = { preventa: "Preventa", vinedos: "Entrega inmediata", general: "General" };
+
+const dash = (v: unknown) => (v === undefined || v === null || v === "" ? undefined : String(v));
+
+/**
+ * Avisa por correo a Fran con los datos del lead (mismo método que la landing de preventa: FormSubmit).
+ * Nunca debe tumbar el envío del lead: si falla, solo se registra.
+ */
+async function notifyEmail(lead: Record<string, unknown>, kind: "nuevo" | "actualizacion") {
+  if (!NOTIFY_EMAIL || process.env.LEAD_EMAIL_DISABLED === "1") return;
+  const site = process.env.NEXT_PUBLIC_SITE_URL || "https://legacycapitalmx.vercel.app";
+  const proyecto = PROYECTO_LABEL[String(lead.proyecto ?? "general")] ?? "General";
+  const nombre = dash(lead.nombre) ?? "Sin nombre";
+  const mensaje = dash(lead.mensaje);
+  const porEmail = mensaje?.startsWith("[Enviar por email]") || mensaje?.startsWith("[Send by email]");
+  const subject =
+    `${porEmail ? "ENVIAR POR EMAIL: " : ""}Legacy Capital · ${kind === "nuevo" ? "Nuevo lead" : "Lead actualizado"} · ${proyecto} · ${nombre}`;
+
+  const fields: Record<string, string | undefined> = {
+    Nombre: nombre,
+    WhatsApp: dash(lead.telefono),
+    Email: dash(lead.email),
+    Proyecto: proyecto,
+    Interes: dash(lead.interes),
+    Perfil: dash(lead.perfil),
+    Origen: dash(lead.origen),
+    Mensaje: mensaje,
+    Visita: [dash(lead.modo_visita), dash(lead.fecha_visita)].filter(Boolean).join(" · ") || undefined,
+    Esquema_pago: dash(lead.esquema_pago),
+    Horizonte_compra: dash(lead.horizonte_compra),
+    Forma_pago: dash(lead.forma_pago),
+    Uso: dash(lead.uso),
+    Idioma: lead.idioma === "en" ? "Inglés (USD)" : "Español",
+    Pagina: dash(lead.pagina),
+    UTM: [lead.utm_source, lead.utm_medium, lead.utm_campaign, lead.utm_content, lead.utm_term].filter(Boolean).join(" / ") || undefined,
+    Referrer: dash(lead.referrer),
+    Fecha: new Date().toLocaleString("es-MX", { timeZone: "America/Tijuana" }),
+  };
+  const payload: Record<string, string> = {
+    _subject: subject,
+    _template: "table",
+    _captcha: "false",
+  };
+  if (typeof lead.email === "string" && lead.email) payload._replyto = lead.email;
+  for (const [k, v] of Object.entries(fields)) if (v) payload[k] = v.slice(0, 1500);
+
+  try {
+    const res = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(NOTIFY_EMAIL)}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json", Origin: site, Referer: `${site}/` },
+      body: JSON.stringify(payload),
+      signal: AbortSignal.timeout(6000),
+    });
+    const json = (await res.json().catch(() => ({}))) as { success?: string | boolean; message?: string };
+    if (!res.ok || String(json.success) === "false") console.error("[leads] email failed", res.status, json.message);
+  } catch (err) {
+    console.error("[leads] email failed", err);
+  }
+}
+
+async function notifyAll(lead: Record<string, unknown>, kind: "nuevo" | "actualizacion" = "nuevo") {
+  await Promise.allSettled([notifyEmail(lead, kind), kind === "nuevo" ? notifyWebhook(lead) : Promise.resolve()]);
+}
+
 function clientIp(req: NextRequest) {
   return (req.headers.get("x-forwarded-for") || "").split(",")[0].trim() || "unknown";
 }
@@ -174,7 +245,7 @@ export async function POST(req: NextRequest) {
   const secret = process.env.LEADS_RPC_SECRET;
   if (!client || !secret) {
     console.error("[leads] Supabase no configurado. Lead:", JSON.stringify(record));
-    await notifyWebhook(record);
+    await notifyAll(record);
     return NextResponse.json({ ok: true, stored: false });
   }
 
@@ -183,12 +254,12 @@ export async function POST(req: NextRequest) {
     const limited = error.message?.includes("rate_limited");
     console.error("[leads] submit_lead error", error.message, JSON.stringify(record));
     if (limited) return NextResponse.json({ ok: false, error: "rate_limited" }, { status: 429 });
-    await notifyWebhook(record);
+    await notifyAll(record);
     return NextResponse.json({ ok: true, stored: false });
   }
 
   const result = data as { id: string; token: string };
-  await notifyWebhook({ ...record, id: result.id });
+  await notifyAll({ ...record, id: result.id });
   return NextResponse.json({ ok: true, stored: true, id: result.id, token: result.token });
 }
 
@@ -210,6 +281,11 @@ export async function PATCH(req: NextRequest) {
   if (error) {
     console.error("[leads] qualify_lead error", error.message);
     return NextResponse.json({ ok: false }, { status: 500 });
+  }
+  if (data) {
+    const { id, token, ...detail } = parsed.data;
+    void token;
+    await notifyEmail({ ...detail, id }, "actualizacion");
   }
   return NextResponse.json({ ok: Boolean(data) });
 }

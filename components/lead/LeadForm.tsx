@@ -181,6 +181,12 @@ export function LeadForm({
           body: JSON.stringify({
             id: result.id,
             token: result.token,
+            nombre: name.trim(),
+            telefono: `${cc} ${digits}`,
+            email: email.trim(),
+            idioma: lang,
+            origen: origin,
+            proyecto: proyecto ?? "general",
             interes,
             modo_visita: modo,
             fecha_visita: fecha,
@@ -515,7 +521,7 @@ export function LeadForm({
             {t.success.whatsapp}
           </a>
           {!hasStep2 && result?.stored && result.id && result.token && (
-            <Qualify t={t} id={result.id} token={result.token} />
+            <Qualify t={t} id={result.id} token={result.token} contact={{ nombre: name.trim(), telefono: `${cc} ${digits}`, email: email.trim(), idioma: lang, origen: origin, proyecto: proyecto ?? "general" }} />
           )}
         </motion.div>
       )}
@@ -523,7 +529,7 @@ export function LeadForm({
   );
 }
 
-function Qualify({ t, id, token }: { t: Dict["form"]; id: string; token: string }) {
+function Qualify({ t, id, token, contact }: { t: Dict["form"]; id: string; token: string; contact: Record<string, string> }) {
   const [answers, setAnswers] = useState<{ horizonte_compra?: string; forma_pago?: string; uso?: string }>({});
   const [state, setState] = useState<"idle" | "sending" | "done" | "error">("idle");
   const s = t.success;
@@ -541,7 +547,7 @@ function Qualify({ t, id, token }: { t: Dict["form"]; id: string; token: string 
       const res = await fetch("/api/leads", {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ id, token, ...answers }),
+        body: JSON.stringify({ id, token, ...contact, ...answers }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok || !data.ok) throw new Error("qualify");

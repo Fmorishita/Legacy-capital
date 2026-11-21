@@ -523,7 +523,7 @@ const vdmEs: VdmCopy = {
     formTitle: "Agenda tu recorrido",
     imageAlt: "Alberca y casa club de la comunidad al atardecer",
   },
-  mobileBar: { whatsapp: "WhatsApp", prices: "Inventario", visit: "Recorrido" },
+  mobileBar: { whatsapp: "WhatsApp", prices: "Inventario", visit: "Recorrido", ask: "¿Dudas? Escríbeme" },
   exit: {
     title: "¿Te enviamos el inventario disponible?",
     body: "Departamentos y casas terminados desde $3.64 MDP, con precio y planos de cada unidad. Te lo enviamos por WhatsApp.",
@@ -945,7 +945,7 @@ const vdmEn: VdmCopy = {
     formTitle: "Book your tour",
     imageAlt: "Pool and clubhouse in the community at dusk",
   },
-  mobileBar: { whatsapp: "WhatsApp", prices: "Inventory", visit: "Tour" },
+  mobileBar: { whatsapp: "WhatsApp", prices: "Inventory", visit: "Tour", ask: "Questions? Message me" },
   exit: {
     title: "Want the available inventory?",
     body: "Finished condos and homes from MXN $3.64M, with price and floor plans for each unit. We'll send it to your WhatsApp.",

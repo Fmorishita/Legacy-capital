@@ -11,6 +11,8 @@ export type LeadRequest = LeadDefaults & {
   origin: string;
   title?: string;
   subtitle?: string;
+  /** Fotos con pie para el aviso de salida (lo que viene incluido en la casa) */
+  pics?: readonly { src: string; caption: string }[];
 };
 
 type Ctx = {

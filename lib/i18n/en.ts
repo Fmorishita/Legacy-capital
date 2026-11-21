@@ -10,7 +10,7 @@ export const en: Dict = {
   meta: {
     title: "Ocean-view homes with a roof garden in Ensenada | Legacy Capital Real Estate",
     description:
-      "Private pre-sale of single-level homes with a roof garden and ocean views in El Sauzal, Ensenada, for a second home or vacation rental. From MXN $3.9M. Get the price list and the rental return study on WhatsApp from Legacy Capital Real Estate.",
+      "Pre-sale single-story homes with a roof garden and ocean views in northern Ensenada, Baja California, in a private gated cluster. From $215K USD with 10% down, 20 monthly payments and delivery in 2028. Get the brochure and ROI analysis by email or WhatsApp from Legacy Capital Real Estate.",
     ogAlt: "Legacy Capital Real Estate: ocean-view homes with a roof garden in Ensenada",
   },
   a11y: {
@@ -26,14 +26,14 @@ export const en: Dict = {
   },
   nav: {
     links: [
-      { href: "#para-ti", label: "For you" },
-      { href: "#asesor", label: "Advisor" },
+      { href: "#asesor", label: "Your advisor" },
       { href: "#casas", label: "Homes" },
-      { href: "#rentabilidad", label: "Returns" },
+      { href: "#roof", label: "Roof garden" },
+      { href: "#amenidades", label: "Amenities" },
+      { href: "#plusvalia", label: "Appreciation" },
       { href: "#pagos", label: "Payments" },
-      { href: "#ensenada", label: "Ensenada" },
     ],
-    cta: "Price list",
+    cta: "Book an appointment",
     switchLang: { label: "Español", href: "/preventa", short: "ES" },
     advisors: { label: "Advisor access", href: "/capacitacion" },
   },
@@ -48,7 +48,7 @@ export const en: Dict = {
     eyebrow: "Private pre-sale · Ensenada, Baja California",
     title: "The Pacific Ocean, from your own roof garden.",
     subtitle:
-      "Ocean-view homes in north Ensenada, for your second home or as a vacation rental. From MXN $3.9M.",
+      "Ocean-view homes in northern Ensenada, for your second home or as a vacation rental. From $215K USD.",
     ctaPrimary: "Price list",
     ctaSecondary: "Message on WhatsApp",
     imageAlt: "Roof garden with pergola overlooking the Pacific Ocean at sunset",
@@ -58,15 +58,15 @@ export const en: Dict = {
     title: "Get prices and the rental return study",
     subtitle: "Sent to your WhatsApp: pre-sale prices, payment plans and the vacation rental projection.",
     priceLine: [
-      { label: "2 bedrooms", value: "from MXN $3.9M" },
-      { label: "3 bedrooms", value: "from MXN $4.3M" },
+      { label: "2 bedrooms", value: "from $215K USD" },
+      { label: "3 bedrooms", value: "from $235K USD" },
     ],
     advisor: "Personally assisted by",
   },
   form: {
     name: "Name",
     namePh: "Your name",
-    phone: "WhatsApp",
+    phone: "WhatsApp or mobile",
     phonePh: "10 digits",
     email: "Email (optional)",
     emailPh: "you@email.com",
@@ -104,6 +104,16 @@ export const en: Dict = {
     consent: "Legacy Capital Real Estate uses your data to send you the information you request and to follow up. See our",
     privacy: "Privacy notice",
     reassurance: "Same-day reply.",
+    deliver: {
+      label: "How should I send it?",
+      whatsapp: "WhatsApp",
+      email: "Email",
+      emailLabel: "Email",
+      emailRequired: "Enter your email so I can send it",
+      successEmail: "Fran Morishita will email it to you today. Please check your spam folder too.",
+      tagEmail: "Send by email",
+      tagWhatsapp: "Send by WhatsApp",
+    },
     errors: {
       name: "Enter your name",
       phone: "Enter a valid WhatsApp number",
@@ -170,7 +180,7 @@ export const en: Dict = {
         kicker: "I live in",
         city: "California",
         tags: ["Second home", "Investment"],
-        image: "/img/street-aerial-sunset.jpg",
+        image: "/media/img/golden-hour-pareja.webp",
         imageAlt: "Homes with roof gardens facing the ocean at sunset",
         headline: "Ocean views without the California price tag.",
         pains: [
@@ -179,7 +189,7 @@ export const en: Dict = {
           "Buying in Mexico appeals to you, but the bank trust, the title and who to call if something goes wrong worry you.",
         ],
         gains: [
-          "Ocean-view homes with a roof garden from MXN $3.9M, about 100 km from the border along the scenic highway.",
+          "Ocean-view homes with a roof garden from $215K USD, about 78 miles from the border along the scenic highway.",
           "A guided process in English or Spanish: bank trust, notary and payments, step by step.",
           "When you're not using it, it can earn income as a vacation rental.",
         ],
@@ -210,7 +220,7 @@ export const en: Dict = {
         kicker: "I live in",
         city: "Monterrey",
         tags: ["Second home", "Investment"],
-        image: "/img/facade-dusk.jpg",
+        image: "/media/img/terraza-atardecer.webp",
         imageAlt: "Home facade with a roof garden at sunset",
         headline: "Trade 40 °C summers for a Pacific breeze.",
         pains: [
@@ -260,7 +270,7 @@ export const en: Dict = {
         ],
         gains: [
           "Ocean breeze, Valle de Guadalupe wine and Baja cuisine minutes from home.",
-          "Pre-sale pricing from MXN $3.9M, with 19 months to complete your down payment.",
+          "Pre-sale pricing from $215K USD, with 10% down and 20 monthly payments during construction.",
           "An equipped home, ready to use or rent from day one.",
         ],
       },
@@ -279,7 +289,7 @@ export const en: Dict = {
           "You've seen pre-sales that never got delivered and don't know who to trust.",
         ],
         gains: [
-          "A new single-level home with ocean views and a roof garden, with 19 months to complete your down payment.",
+          "A new single-level home with ocean views and a roof garden: 10% down and 80% at delivery in 2028.",
           "An asset you can rent to US visitors when you're not using it.",
           "A contract under NOM-247, written warranties and a local advisor with you until delivery.",
         ],
@@ -630,11 +640,16 @@ export const en: Dict = {
       "Images are illustrative and for promotional purposes. Prices in Mexican pesos, subject to change and availability without notice. Features, finishes and dimensions may vary according to the final plans. Rental projections are for reference only and do not guarantee returns. Legacy Capital Real Estate acts as a broker; the development is built by an independent developer. This is not a binding offer.",
     rights: "All rights reserved.",
   },
-  mobileBar: { whatsapp: "WhatsApp", prices: "Prices", visit: "Visit" },
+  mobileBar: { whatsapp: "WhatsApp", prices: "Prices", visit: "Book a visit", ask: "Questions? Message me" },
   exit: {
-    title: "Take the rental return study with you?",
-    body: "An estimated 12.33% annual return as a vacation rental. We'll send it to your WhatsApp with the price list.",
+    title: "Before you go: your home comes fully equipped.",
+    body: "Up to $24,000 USD in equipment included in the price: granite kitchen, mini-split A/C, smart home and a roof with grill. We'll send prices and the brochure by email or WhatsApp.",
     dismiss: "No, thanks",
+    pics: [
+      { src: "/media/img/eq-cocina-real.webp", caption: "Equipped kitchen" },
+      { src: "/media/img/eq-recamara-real.webp", caption: "Mini-split in bedrooms" },
+      { src: "/media/img/eq-roof-real.webp", caption: "Roof with grill" },
+    ],
   },
   dialog: {
     pricesTitle: "Get prices and the rental return study",

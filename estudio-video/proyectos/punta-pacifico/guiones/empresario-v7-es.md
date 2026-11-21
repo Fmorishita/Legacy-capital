@@ -41,7 +41,7 @@ Fotos sin usar: e-asador y f-pickleball (el guion no menciona amenidades).
 
 ## Música y SFX
 
-- «Uplifting Bass» (Mixkit, pista 617), tramo desde 47.5 s. Mixkit Stock Music Free License: uso comercial y anuncios, sin atribución. Fuente: https://assets.mixkit.co/music/617/617.mp3
+- «Wind Leaves», Eugenio Mininni (Mixkit, pista 617), tramo desde 47.5 s. Mixkit Stock Music Free License: uso comercial y anuncios, sin atribución. Fuente: https://assets.mixkit.co/music/617/617.mp3 (corregido el 21 nov: antes decía «Uplifting Bass» por un error al leer el catálogo).
 - SFX: los mismos de California v7 / Doctor V13.
 
 ## Checklist de cumplimiento (pendiente de validación legal)

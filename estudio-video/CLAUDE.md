@@ -23,7 +23,7 @@ videos/<slug>-<formato>-<idioma>/      un proyecto HyperFrames por video (lo cre
 - 1080x1920, 30 fps, MP4 (`npx hyperframes render --fps 30 ...`).
 - Duración: la que pida el brief (15 / 30 / 45 / 60 s).
 - Zonas seguras (Reels de Meta): nada de texto, subtítulos, logo ni CTA en el 14 % superior (270 px), el 35 % inferior (672 px) ni el 6 % de cada lado (65 px). Área útil: x 65–1015, y 270–1248. Si estilo.md pone los subtítulos más abajo, en versiones para anuncio súbelos al área útil. Para TikTok, deja libre también la columna derecha de botones (revísalo en su vista previa).
-- Ningún título, subtítulo ni animación tapa la cara de las personas; no se repite la misma foto dentro de un video.
+- Ningún título, subtítulo, texto ni animación tapa la cara de las personas ni lo más relevante de la toma (p. ej. la caseta de acceso, la puerta, el documento que se firma, las copas del brindis, el minisplit) (Fran, 21 nov 2026). Cada proyecto marca sus zonas protegidas (caras detectadas + objetos clave), coloca textos donde no tapan nada y lo comprueba en el navegador cuadro a cuadro (ver `videos/punta-pacifico-empresario-v8-es/qa_textos.cjs`). No se repite la misma foto dentro de un video.
 - Música: el nivel se escribe en la lane `volume` de `data-automation` (con el CLI 0.8.139 la lane reemplaza a `data-volume`); cama a unos 16–17 dB por debajo de la voz.
 - Audio: iguala la loudness integrada medida en la referencia; si no se pudo medir, −14 LUFS y pico ≤ −1 dBTP [ajustable]. Música siempre por debajo de la voz (carve con /hyperframes-audio).
 

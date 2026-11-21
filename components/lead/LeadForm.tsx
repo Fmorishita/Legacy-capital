@@ -6,6 +6,7 @@ import { ArrowRight, CheckCircle, CircleNotch, EnvelopeSimple, WhatsappLogo } fr
 import type { Dict } from "@/lib/i18n/es";
 import { readAttribution } from "@/lib/attribution";
 import { trackEvent } from "@/lib/track";
+import { sendLeadEmail } from "@/lib/leadEmail";
 import { waLink, type Lang } from "@/lib/site";
 import type { LeadProject } from "@/lib/projects";
 import { useLead } from "./context";
@@ -157,6 +158,25 @@ export function LeadForm({
       const data = await res.json().catch(() => ({}));
       if (!res.ok || !data.ok) throw new Error(data.error || "error");
       setResult({ stored: Boolean(data.stored), id: data.id, token: data.token });
+      // Aviso por correo a Fran (no bloquea ni rompe el envío si falla). Bots (trampa/rapidez) no lo disparan.
+      if (!trap && Date.now() - mountedAt.current >= 1500) {
+        void sendLeadEmail({
+          kind: "nuevo",
+          nombre: name.trim(),
+          telefono: `${cc} ${digits}`,
+          email: email.trim(),
+          proyecto: proyecto ?? "general",
+          interes,
+          perfil: defaults?.perfil,
+          origen: origin,
+          mensaje: (deliver ? `[${byEmail ? t.deliver.tagEmail : t.deliver.tagWhatsapp}] ${mensaje}` : mensaje).trim(),
+          modo_visita: modo,
+          fecha_visita: fecha,
+          esquema_pago: defaults?.esquema_pago,
+          idioma: lang,
+          attr: attr as Record<string, string | undefined>,
+        });
+      }
       setStatus(hasStep2 ? "step2" : "done");
       try {
         // Ya dejó sus datos: no mostrar el aviso de salida en esta sesión
@@ -181,12 +201,6 @@ export function LeadForm({
           body: JSON.stringify({
             id: result.id,
             token: result.token,
-            nombre: name.trim(),
-            telefono: `${cc} ${digits}`,
-            email: email.trim(),
-            idioma: lang,
-            origen: origin,
-            proyecto: proyecto ?? "general",
             interes,
             modo_visita: modo,
             fecha_visita: fecha,
@@ -197,6 +211,19 @@ export function LeadForm({
         // El lead ya está guardado desde el paso 1; el detalle también viaja en el mensaje de WhatsApp
       }
     }
+    void sendLeadEmail({
+      kind: "actualizacion",
+      nombre: name.trim(),
+      telefono: `${cc} ${digits}`,
+      email: email.trim(),
+      proyecto: proyecto ?? "general",
+      interes,
+      origen: `${origin}-paso2`,
+      mensaje: mensaje.trim(),
+      modo_visita: modo,
+      fecha_visita: fecha,
+      idioma: lang,
+    });
     trackEvent("lead_step2", { origin, interest: interes, visit: modo });
     setStatus("done");
   }
@@ -521,7 +548,7 @@ export function LeadForm({
             {t.success.whatsapp}
           </a>
           {!hasStep2 && result?.stored && result.id && result.token && (
-            <Qualify t={t} id={result.id} token={result.token} contact={{ nombre: name.trim(), telefono: `${cc} ${digits}`, email: email.trim(), idioma: lang, origen: origin, proyecto: proyecto ?? "general" }} />
+            <Qualify t={t} id={result.id} token={result.token} contact={{ nombre: name.trim(), telefono: `${cc} ${digits}`, email: email.trim(), proyecto: proyecto ?? "general", origen: origin, idioma: lang }} />
           )}
         </motion.div>
       )}
@@ -529,7 +556,7 @@ export function LeadForm({
   );
 }
 
-function Qualify({ t, id, token, contact }: { t: Dict["form"]; id: string; token: string; contact: Record<string, string> }) {
+function Qualify({ t, id, token, contact }: { t: Dict["form"]; id: string; token: string; contact: { nombre: string; telefono: string; email: string; proyecto: string; origen: string; idioma: string } }) {
   const [answers, setAnswers] = useState<{ horizonte_compra?: string; forma_pago?: string; uso?: string }>({});
   const [state, setState] = useState<"idle" | "sending" | "done" | "error">("idle");
   const s = t.success;
@@ -547,11 +574,12 @@ function Qualify({ t, id, token, contact }: { t: Dict["form"]; id: string; token
       const res = await fetch("/api/leads", {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ id, token, ...contact, ...answers }),
+        body: JSON.stringify({ id, token, ...answers }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok || !data.ok) throw new Error("qualify");
       setState("done");
+      void sendLeadEmail({ kind: "actualizacion", ...contact, origen: `${contact.origen}-calificacion`, ...answers });
       trackEvent("lead_qualified");
     } catch {
       setState("error");

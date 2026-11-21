@@ -1,0 +1,49 @@
+<!doctype html><html lang="es"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1080, height=1920" /><title>MG2</title>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script><style>@font-face{font-family:"PPCondensed";src:url("assets/fonts/OpenSans_Condensed_Bold.ttf") format("truetype");}
+@font-face{font-family:"PPText";src:url("assets/fonts/OpenSans_Semibold.ttf") format("truetype");}
+@font-face{font-family:"PPBold";src:url("assets/fonts/OpenSans_ExtraBold.ttf") format("truetype");}
+@font-face{font-family:"Cormorant Garamond";font-weight:600;src:url("assets/fonts/cormorant-garamond-latin-600-normal.woff2") format("woff2");}
+@font-face{font-family:"Cinzel";font-weight:700;src:url("assets/fonts/cinzel-latin-700-normal.woff2") format("woff2");}
+@font-face{font-family:"Cormorant Garamond";font-weight:600;font-style:italic;src:url("assets/fonts/cormorant-garamond-latin-600-italic.woff2") format("woff2");}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#FBF3E4}
+#root{position:relative;width:100%;height:100%;overflow:hidden;font-family:"PPText",sans-serif;color:#0E2A4A;background:linear-gradient(180deg,#FDF7EC 0%,#FBF1E0 100%)}
+.abs{position:absolute}
+#title{left:50px;right:50px;top:250px;text-align:center;font-family:"Cormorant Garamond",serif;font-weight:600;font-size:74px;line-height:1.04;letter-spacing:-.01em}
+#rule{left:440px;top:412px;width:200px;height:8px;border-radius:4px;background:#C99A2E}
+#sub{left:60px;right:60px;top:428px;text-align:center;font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:600;font-size:31px;line-height:1.12;color:#1B3A6B}
+#flash{inset:0;background:#FFD086;opacity:0}
+#foot{left:-10%;right:-10%;top:1400px;height:700px;background:#0E2A4A;border-top:10px solid #C99A2E;border-radius:50% 50% 0 0/80px 80px 0 0}
+#flogo{left:0;right:0;top:1490px;display:flex;flex-direction:column;align-items:center;gap:8px}#flogo img{width:70px;height:auto;display:block}#flogo span{font-family:"Cinzel",serif;font-weight:700;font-size:25px;letter-spacing:.14em;color:#FBF3E4;white-space:nowrap}
+.card{border-radius:26px;border:4px solid #E3B869;background:#FFFBF3;display:flex;align-items:center;padding:0 14px;box-shadow:0 8px 18px rgba(14,42,74,.16)}
+.card img{width:84px;height:84px;border-radius:50%;flex:none}.card .bar{width:5px;height:84px;background:#C99A2E;margin:0 14px;flex:none;border-radius:3px}
+.card .tx{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.card .nm{font-family:"PPBold";font-size:27px;line-height:1.08;color:#132B6B}.card .pl{padding:1px 18px 3px;border-radius:999px;background:#8A620C;color:#fff;font-family:"PPBold";font-size:25px;line-height:1.3;white-space:nowrap}
+.card .nm.sm{font-size:21px;white-space:nowrap}</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="5" data-width="1080" data-height="1920">
+<div id="scene" class="clip" data-start="0" data-duration="5" data-track-index="0" style="position:absolute;inset:0"><div id="foot" class="abs"></div><div id="flogo" class="abs"><img src="assets/crest.png" alt="" /><span>LEGACY CAPITAL</span></div><div id="title" class="abs">Servicios y puntos de<br>interés alrededor</div><div id="rule" class="abs"></div><div id="sub" class="abs">Vida diaria, educación, salud y conveniencia a pocos minutos del desarrollo.</div><div id="mapw" class="abs" data-layout-allow-overflow style="left:40px;top:515px;width:470px;height:525px;border-radius:30px;overflow:hidden;box-shadow:0 14px 40px rgba(14,42,74,.3)"><img id="mapi" src="assets/mapa.png" style="width:100%;height:100%;display:block" alt="" /></div><div class="card abs" id="c0" style="left:530px;top:515px;width:510px;height:124px"><img src="assets/ico1.png" alt="" /><div class="bar"></div><div class="tx"><div class="nm">Punta Morro /<br>restaurante y hotel</div><div class="pl">aprox. 2 min</div></div></div><div class="card abs" id="c1" style="left:530px;top:649px;width:510px;height:124px"><img src="assets/ico5.png" alt="" /><div class="bar"></div><div class="tx"><div class="nm">Hotel Coral &amp; Marina</div><div class="pl">aprox. 4–5 min</div></div></div><div class="card abs" id="c2" style="left:530px;top:782px;width:510px;height:124px"><img src="assets/ico2.png" alt="" /><div class="bar"></div><div class="tx"><div class="nm">Soriana /<br>autoservicio</div><div class="pl">aprox. 3 min</div></div></div><div class="card abs" id="c3" style="left:530px;top:916px;width:510px;height:124px"><img src="assets/ico6.png" alt="" /><div class="bar"></div><div class="tx"><div class="nm">OXXO y tiendas<br>de conveniencia</div><div class="pl">aprox. 4 min</div></div></div><div class="card abs" id="c4" style="left:40px;top:1056px;width:495px;height:118px"><img src="assets/ico3.png" alt="" /><div class="bar"></div><div class="tx"><div class="nm">CETYS<br>Universidad</div><div class="pl">aprox. 5 min</div></div></div><div class="card abs" id="c5" style="left:545px;top:1056px;width:495px;height:118px"><img src="assets/ico7.png" alt="" /><div class="bar"></div><div class="tx"><div class="nm">UABC / CICESE</div><div class="pl">aprox. 3–4 min</div></div></div><div class="card abs" id="c6" style="left:40px;top:1184px;width:495px;height:118px"><img src="assets/ico4.png" alt="" /><div class="bar"></div><div class="tx"><div class="nm">Hospitales y<br>servicios médicos</div><div class="pl">aprox. 7 min</div></div></div><div class="card abs" id="c7" style="left:545px;top:1184px;width:495px;height:118px"><img src="assets/ico8.png" alt="" /><div class="bar"></div><div class="tx"><div class="nm sm">A menos de</div><div class="pl">800 metros</div><div class="nm sm">de la carretera de Ensenada</div></div></div><div id="flash" class="abs"></div></div>
+<audio id="s0" src="assets/sfx/quick-zoom-impact-772.mp3" data-start="0.0" data-duration="1.25" data-track-index="2" data-volume="0.5"></audio>
+<audio id="s1" src="assets/sfx/syn-whoosh-up.mp3" data-start="0.3" data-duration="0.6" data-track-index="3" data-volume="0.5"></audio>
+<audio id="s2" src="assets/sfx/syn-pop.mp3" data-start="0.95" data-duration="0.2" data-track-index="4" data-volume="0.5"></audio>
+<audio id="s3" src="assets/sfx/syn-pop-hi.mp3" data-start="1.22" data-duration="0.18" data-track-index="5" data-volume="0.5"></audio>
+<audio id="s4" src="assets/sfx/syn-thud.mp3" data-start="1.49" data-duration="0.33" data-track-index="6" data-volume="0.5"></audio>
+<audio id="s5" src="assets/sfx/syn-pop.mp3" data-start="1.76" data-duration="0.2" data-track-index="7" data-volume="0.5"></audio>
+<audio id="s6" src="assets/sfx/syn-pop-hi.mp3" data-start="2.03" data-duration="0.18" data-track-index="8" data-volume="0.5"></audio>
+<audio id="s7" src="assets/sfx/syn-tick.mp3" data-start="2.3" data-duration="0.1" data-track-index="9" data-volume="0.5"></audio>
+<audio id="s8" src="assets/sfx/syn-pop.mp3" data-start="2.57" data-duration="0.2" data-track-index="10" data-volume="0.5"></audio>
+<audio id="s9" src="assets/sfx/syn-pop-hi.mp3" data-start="2.84" data-duration="0.18" data-track-index="11" data-volume="0.5"></audio>
+<audio id="s10" src="assets/sfx/syn-shimmer.mp3" data-start="3.55" data-duration="0.94" data-track-index="12" data-volume="0.3"></audio>
+</div>
+<script>window.__timelines=window.__timelines||{};const tl=gsap.timeline({paused:true});
+tl.fromTo("#flogo",{opacity:0,y:16},{opacity:1,y:0,duration:0.35,ease:"power2.out"},0.15);
+tl.fromTo("#title",{opacity:0,scale:1.35,filter:"blur(14px)"},{opacity:1,scale:1,filter:"blur(0px)",duration:0.3,ease:"power4.out"},0.02);
+tl.fromTo("#flash",{opacity:0.55},{opacity:0,duration:0.3,ease:"power2.out"},0.02);
+tl.fromTo("#rule",{scaleX:0},{scaleX:1,duration:0.25,ease:"power3.out"},0.2);
+if(document.getElementById("sub"))tl.fromTo("#sub",{opacity:0,y:16},{opacity:1,y:0,duration:0.25,ease:"power2.out"},0.28);
+const up=(s,t,o)=>tl.fromTo(s,{opacity:0,y:40},Object.assign({opacity:1,y:0,duration:0.26,ease:"back.out(1.9)"},o||{}),t);
+const pop=(s,t)=>tl.fromTo(s,{opacity:0,scale:0.3},{opacity:1,scale:1,duration:0.26,ease:"back.out(3)"},t);
+const fade=(s,t)=>tl.fromTo(s,{opacity:0},{opacity:1,duration:0.25,ease:"none"},t);
+tl.fromTo("#mapw",{opacity:0,scale:0.5},{opacity:1,scale:1,duration:0.4,ease:"back.out(1.6)"},0.4);tl.fromTo("#mapi",{scale:1.28},{scale:1,duration:4.4,ease:"power2.out"},0.4);
+[0,1,2,3,4,5,6,7].forEach(i=>{const t=0.95+i*0.27;tl.fromTo("#c"+i,i<4?{opacity:0,x:160,scale:0.85}:{opacity:0,y:70,scale:0.85},{opacity:1,x:0,y:0,scale:1,duration:0.26,ease:"back.out(2)"},t);pop("#c"+i+" .pl",t+0.12);});
+tl.fromTo(".card",{borderColor:"#E3B869"},{borderColor:"#C99A2E",duration:0.25,yoyo:true,repeat:1,stagger:0.04},3.6);
+tl.to({},{duration:5},0);window.__timelines["main"]=tl;</script></body></html>

@@ -1,0 +1,141 @@
+# California · inversión y uso propio · v2 (montaje con fotos)
+
+- Base: guion, storyboard y montaje V2 de Fran (carpeta de Drive del 18 nov 2026).
+- Cambios que pidió Fran ese mismo día:
+  1. Equipamiento: se agrega el **baño** antes del roof garden, con su foto. En Higgsfield no había video del baño, así que se usó el render del baño y no se gastaron créditos.
+  2. El monto del equipamiento pasa a **$25,000 USD**, en dólares como los precios.
+  3. Al inicio ya no aparecen los precios. «Trabajas en EE.UU.» y «Ganas en dólares» van como afirmación, no como pregunta.
+  4. La plusvalía usa la información de la animación del Doctor: curvas de 8% y 10% anual sobre la misma casa. Se quitaron el título «Paga poco a poco» y las barras del plan de pagos.
+  5. Voz nueva, gratuita y más fluida. Se generó con Qwen3-TTS 1.7B (licencia Apache 2.0, uso comercial permitido). El locutor se diseñó con una descripción de texto y no clona a ninguna persona real. El modelo base mantiene el mismo timbre en los 13 párrafos.
+- Proyecto: `videos/punta-pacifico-california-v2-es/`. `build.py` genera `index.html` a partir de los tiempos por palabra de la voz.
+
+## Guion final (voz)
+
+1. Trabajas en Estados Unidos, ganas en dólares… ¿Y si tu próxima casa de inversión y descanso estuviera en México?
+2. Conoce este nuevo proyecto residencial en Ensenada. Casas de un nivel, con tu propio roof garden y vista al mar para vivir los mejores atardeceres.
+3. Está en la carretera principal de El Sauzal, a una hora y media de la frontera con San Diego, a una hora de Tijuana y a tres horas de Mexicali.
+4. Hay casas de dos habitaciones desde doscientos quince mil dólares y de tres desde doscientos treinta y cinco mil dólares.
+5. ¿La quieres rentar por temporadas? Desde tu celular puedes controlar las luces, los minisplits y la cerradura.
+6. El residencial tendrá acceso controlado con seguridad veinticuatro siete. *(desde v6; antes: «las veinticuatro horas, los siete días de la semana»)*
+7. Puedes cuidar tu liquidez con diez por ciento de enganche, otro diez por ciento dividido en veinte mensualidades y el ochenta por ciento contra entrega, prevista para mediados de dos mil veintiocho.
+8. Así puedes planear tu patrimonio desde hoy y aprovechar el potencial de plusvalía mientras pagas.
+9. Si reservas este mes, obtén equipamiento en cocina, cuartos, **baño** y roof garden por un valor de hasta **veinticinco mil dólares**.
+10. Imagina despertar en tu casa y pasar la mañana en la alberca. ¿Se arma una partida de pickleball?
+11. Habrá asadores para la carne asada y un salón al aire libre para reunir a la familia.
+12. Y al caer la tarde, el Pacífico desde tu propio rooftop.
+13. Haz clic en el botón de abajo para recibir más información con Legacy Capital.
+
+## Trazabilidad de datos
+
+| Párrafo | Dato | En pantalla | Fuente |
+|---|---|---|---|
+| 2 | Casas de un nivel, roof garden, vista al mar | Titulares | Guion V2 de Fran |
+| 3 | Frontera ≈1 h 30, Tijuana ≈1 h, Mexicali ≈3 h | Mapa y renglones «aprox.» con nota de tiempos aproximados | Guion V2 de Fran. **Pendiente:** el mg1 del Doctor decía Tijuana 1 h 10 min |
+| 4 | 2 hab. desde $215,000 USD; 3 hab. desde $235,000 USD | Precio grande con contador (ya no en el hook) | Guion V2 de Fran |
+| 5 | Control de luces, minisplits y cerradura desde el celular; renta por temporadas | Chips | Guion V2 de Fran |
+| 6 | Acceso controlado, seguridad 24/7 | Titulares «Acceso controlado» y «Seguridad 24/7» | Guion V2 de Fran (amenidad futura: «tendrá») |
+| 7 | 10% enganche + 10% en 20 mensualidades + 80% contra entrega, mediados de 2028 | Barra 10/10/80 y tarjetas | Guion V2 de Fran |
+| 7 | Ej.: $21,500 USD y 20 × $1,075 USD | Con la nota «*Ejemplo con casa de 2 habitaciones desde $215,000 USD» | **PROPUESTA**: es un cálculo sobre el precio del guion |
+| 8 | Plusvalía proyectada al 8% y 10% anual sobre $215,000 USD, hasta mediados de 2028 (19 meses), 2031 y 2034 | Curvas, valores y cálculo con supuestos visibles; «Escenario ilustrativo, no garantizado» | Supuestos de la animación del Doctor ya aprobada (8% y 10%), por pedido de Fran. Las cifras son un cálculo |
+| 9 | Equipamiento en cocina, cuartos, baño y roof garden por hasta $25,000 USD al reservar este mes | Chips y contador $25,000 USD | Fran, 18 nov 2026 |
+| 10–11 | Alberca, pickleball, asadores, salón al aire libre | Titulares | Guion V2 de Fran (amenidades futuras: «habrá») |
+| 13 | CTA y WhatsApp +52 646 256 3006 | Botón, WhatsApp y placa final | Cierre del Doctor |
+
+## Checklist de cumplimiento (pendiente de validación legal)
+
+- [ ] Precios y equipamiento solo en USD. La NOM-247 5.6 pide pesos aunque también se muestre USD; no hay tipo de cambio en el brief.
+- [ ] Promoción «este mes» sin vigencia ni términos (LFPC art. 48).
+- [ ] Plusvalía como escenario con supuestos visibles y sin garantía. Validar que se pueda usar en anuncios.
+- [ ] Amenidades futuras (seguridad 24/7, alberca, pickleball, asadores, salón) mostradas con imágenes generadas por IA y sin «Imagen ilustrativa» (decisión de Fran).
+- [ ] Datos del proveedor completos (domicilio, correo).
+- [ ] Renta por temporadas sin cifras de ocupación ni de ingresos.
+
+## Música y voz
+
+- Música: «Happy Times», Alejandro Magaña (Mixkit Stock Music Free License: uso comercial y en anuncios, sin atribución).
+- Voz: Qwen3-TTS-12Hz-1.7B-VoiceDesign + Base (Apache 2.0). El locutor se generó por descripción («voz masculina grave y cálida, español mexicano nativo, ritmo ágil»).
+
+## v3 (20 nov 2026): cambio de fotos
+
+Se mantienen el mismo guion, la misma voz y los mismos tiempos de la v2. Cambian las tomas que Fran marcó, usando las fotos de su carpeta del 20 nov:
+
+| Escena | v2 | v3 |
+|---|---|---|
+| ¿Y si tu próxima casa… | C02 | pareja haciendo la maleta |
+| …estuviera en México? | C02 | vista aérea de las casas al atardecer, con la ubicación «Ensenada · Baja California» |
+| Un nuevo proyecto | B01 | Fran frente a la fachada |
+| Casas de un nivel | C04 | Fran en la sala |
+| 2 habitaciones | C07 | pareja llegando a la recámara |
+| 3 habitaciones | C14 | recámara con vista |
+| Acceso controlado | B04 (dos personas del mismo lado del auto) | caseta de acceso al atardecer |
+| Cuida tu liquidez | (animación) | pareja revisando el plan de pagos, 0.8 s antes de la animación |
+| Reserva este mes | C13 | Fran con la pareja firmando |
+| Cocina / baño | C13 / render del baño | cocina con la pareja / baño con la señora; los ✓ se acumulan abajo |
+| El Pacífico desde tu rooftop | C18 | amigos en el roof al atardecer |
+| Más información | B09 | Fran en el roof al atardecer |
+
+Además, el panel de $25,000 USD se reacomodó para que «Al reservar tu casa este mes» no quede pegado al borde inferior. No se gastaron créditos de Higgsfield y no se cargó nada a Legacy Studio (Fran lo pausó).
+
+## v4 (20 nov 2026): ajustes de Fran sobre la v3
+
+Mismo guion, voz y tiempos. Cambios:
+
+| Escena | v3 | v4 |
+|---|---|---|
+| Mapa «A un paso de California» | 686 px de ancho | 900 px de ancho; los renglones de tiempo se apoyan en la parte baja del mapa |
+| ¿La quieres rentar por temporadas? | hombre con el celular en la oficina | pareja llegando con la maleta (la foto que antes salía en «Seguridad 24/7») |
+| Seguridad 24/7 | pareja con maleta | caseta de acceso de día (carpeta v3) |
+| Cuida tu liquidez | foto de la pareja con la laptop 0.8 s antes | solo la animación |
+| Equipamiento: cocina, **cuartos**, baño, roof | en «cuartos» salía el baño | cocina → recámara con la pareja → baño → roof; los ✓ se acumulan |
+| Panel de $25,000 USD | roof con el tragaluz grande abajo | Fran en el roof al atardecer (carpeta v1), encuadre sin el tragaluz; el panel no tapa su cara |
+
+Higgsfield: 0 créditos. Legacy Studio: no se cargó (en pausa).
+
+## v5 (20 nov 2026): ajustes de Fran sobre la v4
+
+| Escena | v4 | v5 |
+|---|---|---|
+| ¿Y si tu próxima casa estuviera en México? | pareja con la maleta en la cama, luego la vista aérea | solo la vista aérea del fraccionamiento al atardecer (dura ~4.6 s), con el titular y «Ensenada · Baja California» |
+| Mapa | renglones de tiempo sobre la parte baja del mapa | renglones debajo del mapa, sin encimarse |
+| Más información | Fran solo en el roof | Fran entregando la llave a la pareja y apuntando hacia el botón; el botón late hasta el final |
+| Cierre | placa azul de Legacy Capital (1.35 s) | sin placa: el video termina en la toma de «Más información» |
+
+Higgsfield: 0 créditos. Legacy Studio: no se cargó (en pausa).
+
+## v6 (20 nov 2026): ajustes de Fran sobre la v5
+
+| Escena | v5 | v6 |
+|---|---|---|
+| ¿Y si tu próxima casa de inversión y **descanso**…? | solo vista aérea | vista aérea y, en «descanso», la pareja relajándose en el roof al atardecer (foto no usada antes); el titular se queda fijo |
+| Seguridad (voz) | «…las veinticuatro horas, los siete días de la semana» | «…con seguridad veinticuatro siete»; se regeneró solo esa frase con el mismo locutor Qwen3-TTS (toma semilla 409, F0 99 Hz, DNSMOS 3.39) y se insertó con el mismo tempo ×1.15 y nivel. El video queda 1.76 s más corto |
+| Asadores / salón al aire libre | foto del asador y luego foto del salón | se quitó la foto del salón; el asador dura ~4.5 s |
+
+Higgsfield: 0 créditos. Legacy Studio: no se cargó (en pausa).
+
+## v7 (20 nov 2026): fotos animadas con Higgsfield
+
+Mismo guion, voz y tiempos de la v6. Fran aprobó animar las fotos con **Seedance 2.5 a 720p** (sin audio, 9:16, modo omni_reference con la foto como primer cuadro). En las escenas del asesor se agregó como referencia de identidad la hoja «Navy Suit Character Reference Sheet» de la carpeta FRAN CLON IA, y el prompt pide que nunca tenga las manos en los bolsillos.
+
+| # | Escena (voz) | Acción en el video | Duración | Créditos |
+|---|---|---|---|---|
+| 1 | Trabajas en EE.UU. | termina de escribir, se recarga y sonríe | 4 s | 28 |
+| 2 | ¿Y si tu próxima casa…? | toma de dron sobre las casas hacia el mar | 4 s | 28 |
+| 3 | …y descanso | la pareja brinda en el roof | 4 s | 28 |
+| 4 | Conoce este nuevo proyecto | Fran camina a la puerta, la abre e invita a pasar | 4 s | 28 |
+| 5 | Casas de un nivel | Fran presenta la sala caminando | 4 s | 28 |
+| 6 | Roof garden y vista al mar | Fran va al barandal y señala el mar | 4 s | 28 |
+| 8 | 2 habitaciones | la pareja llega; ella abre las cortinas | 4 s | 28 |
+| 10 | ¿La quieres rentar por temporadas? | abre con la cerradura inteligente y entran con la maleta | 4 s | 28 |
+| 12 | Acceso controlado / 24/7 (un solo video) | sale la camioneta por un carril; se abre la reja del otro y entra el sedán | 5 s | 35 |
+| 13 | Si reservas este mes | el cliente firma y le da la mano a Fran | 4 s | 28 |
+| 16 | ¿Se arma una partida? | golpe de raqueta con barrido de cámara | 4 s | 28 |
+| 17 | Asadores… | flama en el asador; la niña lleva el plato | 5 s | 35 |
+| 18 | El Pacífico desde tu rooftop | brindis al atardecer; la cámara sube | 4 s | 28 |
+| 19 | Más información | Fran entrega la llave y después apunta hacia abajo | 6 s | 42 |
+
+- Total: 14 clips, **420 créditos** (saldo inicial 436.52; quedan 16.52).
+- Pendientes por falta de créditos (siguen como foto): atardecer en el acantilado, 3 habitaciones, celular, «Imagina despertar» y alberca (5 × 28 = 140 créditos).
+- Sin video, por indicación de Fran: cerradura (foto con zoom al teclado y destello), cocina, cuartos, baño y roof del equipamiento, y las animaciones (mapa, pagos y plusvalía).
+- El clip del acceso no muestra que las rejas se cierren; si Fran lo pide, se repite (35 créditos).
+- En el montaje se usa el tramo más dinámico de cada clip, acelerado entre 1.0× y 1.45×. En el cierre, el título y el botón entran después de que Fran entrega la llave, para que se vea cómo apunta hacia abajo.
+- Videos originales en Drive: carpeta «Videos IA Higgsfield» dentro de la carpeta general de California. Las fotos de todas las versiones están en «Fotos IA California (todas las versiones)».

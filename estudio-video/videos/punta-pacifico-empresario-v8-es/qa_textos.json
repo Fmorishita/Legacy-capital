@@ -1,0 +1,313 @@
+{
+ "hits": [],
+ "safe": [
+  {
+   "t": 6.3,
+   "text": "l2 «Y PARA INVERTIR»",
+   "r": [
+    40,
+    375,
+    619,
+    492
+   ]
+  },
+  {
+   "t": 32.4,
+   "text": "pc-a «6%de engancheA la firma · ej.: $»",
+   "r": [
+    20,
+    664,
+    1060,
+    845
+   ]
+  },
+  {
+   "t": 32.5,
+   "text": "pc-a «9%de engancheA la firma · ej.: $»",
+   "r": [
+    41,
+    668,
+    1039,
+    841
+   ]
+  },
+  {
+   "t": 34.3,
+   "text": "pc-b «6%en 20 mensualidadesej.: 20 × $»",
+   "r": [
+    24,
+    845,
+    1056,
+    1024
+   ]
+  },
+  {
+   "t": 34.4,
+   "text": "pc-b «9%en 20 mensualidadesej.: 20 × $»",
+   "r": [
+    37,
+    847,
+    1043,
+    1022
+   ]
+  },
+  {
+   "t": 37.1,
+   "text": "pc-c «56%contra entregaAl recibir tu c»",
+   "r": [
+    8,
+    1022,
+    1072,
+    1207
+   ]
+  },
+  {
+   "t": 37.2,
+   "text": "pc-c «74%contra entregaAl recibir tu c»",
+   "r": [
+    58,
+    1031,
+    1022,
+    1198
+   ]
+  },
+  {
+   "t": 37.4,
+   "text": "pc-c «80%contra entregaAl recibir tu c»",
+   "r": [
+    63,
+    1033,
+    1013,
+    1198
+   ]
+  },
+  {
+   "t": 37.5,
+   "text": "pc-c «80%contra entregaAl recibir tu c»",
+   "r": [
+    70,
+    1027,
+    1020,
+    1192
+   ]
+  },
+  {
+   "t": 37.6,
+   "text": "pc-c «80%contra entregaAl recibir tu c»",
+   "r": [
+    61,
+    1035,
+    1011,
+    1200
+   ]
+  },
+  {
+   "t": 46.5,
+   "text": "promo «VALOR DE HASTA$0MXNEN EQUIPAMIEN»",
+   "r": [
+    42,
+    826,
+    1038,
+    1256
+   ]
+  },
+  {
+   "t": 46.6,
+   "text": "promo «VALOR DE HASTA$7MXNEN EQUIPAMIEN»",
+   "r": [
+    55,
+    832,
+    1025,
+    1250
+   ]
+  },
+  {
+   "t": 48.4,
+   "text": "promo «VALOR DE HASTA$450,000MXNEN EQUI»",
+   "r": [
+    55,
+    842,
+    1005,
+    1252
+   ]
+  },
+  {
+   "t": 48.5,
+   "text": "promo «VALOR DE HASTA$450,000MXNEN EQUI»",
+   "r": [
+    63,
+    837,
+    1013,
+    1247
+   ]
+  },
+  {
+   "t": 48.6,
+   "text": "promo «VALOR DE HASTA$450,000MXNEN EQUI»",
+   "r": [
+    69,
+    834,
+    1019,
+    1244
+   ]
+  }
+ ],
+ "over": [
+  {
+   "t": 1.1,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5220
+  },
+  {
+   "t": 1.2,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5184
+  },
+  {
+   "t": 1.3,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5011
+  },
+  {
+   "t": 1.4,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5425
+  },
+  {
+   "t": 1.5,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5473
+  },
+  {
+   "t": 1.6,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 1.7,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 1.8,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 1.9,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.1,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.2,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.3,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.4,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.5,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.6,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.7,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.8,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.9,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 3,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 3.1,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 3.2,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 16.4,
+   "a": "prd1 «DESDE»",
+   "b": "prb1 «$2,219,000MXN»",
+   "area": 651
+  },
+  {
+   "t": 17.8,
+   "a": "prd2 «HASTA»",
+   "b": "prb2 «$1,766,000MXN»",
+   "area": 765
+  },
+  {
+   "t": 18.5,
+   "a": "prd2 «HASTA»",
+   "b": "prb2 «$4,900,000MXN»",
+   "area": 2139
+  },
+  {
+   "t": 46.6,
+   "a": "q-eb «RESERVA ESTE MES»",
+   "b": "th1 «✓ Minisplits»",
+   "area": 527
+  }
+ ]
+}

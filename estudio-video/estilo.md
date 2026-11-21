@@ -157,4 +157,12 @@ La referencia usa a la presentadora el 30 % del tiempo. Para videos solo con ren
 
 ## 13. Reglas aprendidas
 
-(vacía por ahora)
+Aprobadas por Fran el 21 nov 2026 con Empresario V10 (`videos/punta-pacifico-empresario-v10-es/`):
+
+- **Cada foto cuadra con lo que dice la voz en ese momento.** Ej.: «disfrútala con tu familia» → clientes en el asador; «rentas de corta estancia» → familia con hijos y maletas llegando; «para invertir» → la pareja con dinero y la tablet. No se repite la misma foto en un video.
+- **Una toma por frase:** fotos y clips de 2–4.5 s. Solo una lista enumerada (p. ej. equipamiento) cambia de imagen por palabra, ~1 s por imagen; si la voz va muy rápido se agregan pausas de 0.2–0.25 s entre elementos.
+- **Escenas con personas animadas con Seedance 2.5 (Dreamina) a 720p, clips de 4 s** desde la foto aprobada (primer cuadro; en las del asesor también último cuadro para fijar su cara y ropa). Si la toma dura más, el clip se desacelera hasta ~0.88× con interpolación. Los renders sin personas (equipamiento) se quedan como foto con Ken Burns.
+- **Cierre:** clip de 4 s del asesor señalando el botón y después una animación del logotipo hecha en HyperFrames (escudo con destello, LEGACY CAPITAL letra por letra, «Building wealth for generations», botón y WhatsApp) hasta el final de la música.
+- **Música con emoción y arco:** crece desde el inicio, el ritmo entra con el corte al mapa, el clímax entra en la promoción («Reserva este mes») y un piano suave queda bajo el cierre. Cama a ~16 LU bajo la voz con ducking.
+- **Logo de marca abajo al centro**, se oculta solo en las tomas donde taparía una cara u objeto clave (ya invisible al entrar la toma).
+

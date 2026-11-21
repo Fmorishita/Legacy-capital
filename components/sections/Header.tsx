@@ -2,14 +2,15 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
-import { List, X, ArrowRight, CaretDown, Globe, UserCircle } from "@phosphor-icons/react";
+import { AnimatePresence, motion, useMotionValueEvent, useScroll, useSpring } from "motion/react";
+import { List, X, ArrowRight, CaretDown, Globe, UserCircle, WhatsappLogo } from "@phosphor-icons/react";
 import Image from "next/image";
 import type { Dict } from "@/lib/i18n/es";
 import type { NavCopy } from "@/lib/i18n/types";
 import type { PortfolioCopy } from "@/lib/i18n/portfolio";
 import type { ProjectId } from "@/lib/projects";
 import { site } from "@/lib/site";
+import { trackEvent } from "@/lib/track";
 import { Logo } from "@/components/ui/Logo";
 import { StatusChip } from "@/components/ui/StatusChip";
 
@@ -94,11 +95,14 @@ type Props = {
   portfolio?: PortfolioCopy;
   active?: ProjectId;
   ctaKind?: LeadKind;
+  /** Enlace de WhatsApp con el mensaje de la página */
+  waHref?: string;
 };
 
-export function Header({ t, homeHref, portfolio, active, ctaKind = "prices" }: Props) {
+export function Header({ t, homeHref, portfolio, active, ctaKind = "prices", waHref }: Props) {
   const { openLead } = useLead();
-  const { scrollY } = useScroll();
+  const { scrollY, scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, { stiffness: 140, damping: 30, restDelta: 0.001 });
   const [solid, setSolid] = useState(false);
   const [open, setOpen] = useState(false);
   const projects = useProjectsMenu();
@@ -152,12 +156,12 @@ export function Header({ t, homeHref, portfolio, active, ctaKind = "prices" }: P
         className={`transition-[background-color,border-color,backdrop-filter] duration-500 ${
           light
             ? "border-b border-transparent bg-gradient-to-b from-navy-950/55 to-transparent"
-            : "border-b border-line bg-bg/88 backdrop-blur-xl"
+            : "border-b border-white/10 bg-[#0a1a2e]/92 shadow-[0_10px_30px_-20px_rgb(0_0_0/0.6)] backdrop-blur-xl"
         }`}
       >
         <nav className="container-x flex h-[4.5rem] items-center justify-between gap-6" aria-label={t.a11y.mainNav}>
           <Link href={homeHref} aria-label={t.a11y.home} className="shrink-0">
-            <Logo tone={light ? "light" : "auto"} />
+            <Logo tone="light" />
           </Link>
 
           <ul className="hidden items-center gap-7 lg:flex">
@@ -169,11 +173,7 @@ export function Header({ t, homeHref, portfolio, active, ctaKind = "prices" }: P
                   aria-expanded={projects.open}
                   aria-controls="menu-proyectos"
                   onClick={projects.toggle}
-                  className={`flex items-center gap-2 whitespace-nowrap rounded-full border px-3.5 py-1.5 text-[0.92rem] font-semibold transition-colors ${
-                    light
-                      ? "border-cream-100/35 text-cream-100 hover:border-cream-100/70"
-                      : "border-line-strong text-ink hover:border-ink"
-                  }`}
+                  className="flex items-center gap-2 whitespace-nowrap rounded-full border border-cream-100/35 px-3.5 py-1.5 text-[0.92rem] font-medium text-cream-100 transition-colors hover:border-cream-100/70"
                 >
                   <span aria-hidden className="flex gap-1">
                     {portfolio.items.map((p) => (
@@ -194,9 +194,7 @@ export function Header({ t, homeHref, portfolio, active, ctaKind = "prices" }: P
               <li key={l.href} className={!portfolio ? undefined : i >= 5 ? "hidden 2xl:block" : i >= 2 ? "hidden xl:block" : undefined}>
                 <a
                   href={l.href}
-                  className={`relative whitespace-nowrap text-[0.92rem] font-medium transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 hover:after:scale-x-100 ${
-                    light ? "text-cream-100/90 hover:text-cream-100" : "text-ink-soft hover:text-ink"
-                  }`}
+                  className="relative whitespace-nowrap text-[0.92rem] font-normal text-cream-100/85 transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-gold after:transition-transform after:duration-500 hover:text-cream-100 hover:after:scale-x-100"
                 >
                   {l.label}
                 </a>
@@ -208,9 +206,7 @@ export function Header({ t, homeHref, portfolio, active, ctaKind = "prices" }: P
             <Link
               href={t.nav.switchLang.href}
               hrefLang={t.nav.switchLang.short.toLowerCase()}
-              className={`hidden items-center gap-1.5 rounded-full px-3 py-2 text-sm font-medium transition sm:inline-flex ${
-                light ? "text-cream-100/90 hover:text-cream-100" : "text-ink-soft hover:text-ink"
-              }`}
+              className="hidden items-center gap-1.5 rounded-full px-3 py-2 text-sm font-medium text-cream-100/85 transition hover:text-cream-100 sm:inline-flex"
             >
               <Globe className="size-4" aria-hidden />
               {t.nav.switchLang.short}
@@ -219,16 +215,26 @@ export function Header({ t, homeHref, portfolio, active, ctaKind = "prices" }: P
               href={t.nav.advisors.href}
               aria-label={t.nav.advisors.label}
               title={t.nav.advisors.label}
-              className={`hidden size-10 place-items-center rounded-full transition lg:grid ${
-                light ? "text-cream-100/60 hover:text-cream-100" : "text-ink-soft/70 hover:text-ink"
-              }`}
+              className="hidden size-10 place-items-center rounded-full text-cream-100/55 transition hover:text-cream-100 lg:grid"
             >
               <UserCircle className="size-5" aria-hidden />
             </a>
+            {waHref && (
+              <a
+                href={waHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackEvent("whatsapp_click", { origin: "nav" })}
+                className="hidden items-center gap-2 rounded-full border border-cream-100/35 px-4 py-2.5 text-sm text-cream-100 transition hover:border-cream-100/75 xl:inline-flex"
+              >
+                <WhatsappLogo className="size-4 text-[#5be38e]" weight="fill" aria-hidden />
+                WhatsApp
+              </a>
+            )}
             <button
               type="button"
               onClick={() => openLead({ kind: ctaKind, origin: "nav" })}
-              className={`btn hidden px-5 py-3 text-sm md:inline-flex ${light ? "btn-gold" : "btn-primary"}`}
+              className="btn btn-gold btn-glow hidden px-5 py-3 text-sm md:inline-flex"
             >
               {t.nav.cta}
             </button>
@@ -237,12 +243,17 @@ export function Header({ t, homeHref, portfolio, active, ctaKind = "prices" }: P
               aria-label={open ? t.a11y.close : t.a11y.menu}
               aria-expanded={open}
               onClick={() => setOpen((o) => !o)}
-              className={`grid size-11 place-items-center rounded-full lg:hidden ${light ? "text-cream-100" : "text-ink"}`}
+              className="grid size-11 place-items-center rounded-full text-cream-100 lg:hidden"
             >
               {open ? <X className="size-6" aria-hidden /> : <List className="size-6" aria-hidden />}
             </button>
           </div>
         </nav>
+        <motion.span
+          aria-hidden
+          style={{ scaleX: progress }}
+          className={`absolute inset-x-0 bottom-0 h-[2px] origin-left bg-gradient-to-r from-gold-500 to-gold-300 transition-opacity duration-500 ${light ? "opacity-0" : "opacity-100"}`}
+        />
 
         <AnimatePresence>
           {portfolio && projects.open && (
@@ -316,11 +327,11 @@ export function Header({ t, homeHref, portfolio, active, ctaKind = "prices" }: P
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-x-0 bottom-0 top-[4.5rem] overflow-y-auto bg-bg lg:hidden"
+            className="on-dark fixed inset-x-0 bottom-0 top-[4.5rem] overflow-y-auto bg-[#0a1a2e] text-cream-100 lg:hidden"
             style={{ top: `calc(4.5rem${promoActive ? " + 2.1rem" : ""})` }}
           >
             {portfolio && (
-              <p className="container-x pt-6 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">{portfolio.title}</p>
+              <p className="container-x pt-6 text-xs font-semibold uppercase tracking-[0.16em] text-cream-100/60">{portfolio.title}</p>
             )}
             {portfolio && (
               <div className="container-x mt-3 grid grid-cols-2 gap-3">
@@ -335,8 +346,8 @@ export function Header({ t, homeHref, portfolio, active, ctaKind = "prices" }: P
                       href={p.href}
                       onClick={() => setOpen(false)}
                       aria-current={p.id === active ? "page" : undefined}
-                      className={`group block overflow-hidden rounded-2xl border bg-surface ${
-                        p.id === active ? "border-ink" : "border-line"
+                      className={`group block overflow-hidden rounded-2xl border bg-white/[0.04] ${
+                        p.id === active ? "border-gold-400" : "border-white/12"
                       }`}
                     >
                       <span className="relative block aspect-[4/3] overflow-hidden">
@@ -345,7 +356,7 @@ export function Header({ t, homeHref, portfolio, active, ctaKind = "prices" }: P
                       <span className="block p-3">
                         <StatusChip project={p.id} label={p.status} className="!px-2 !py-1 !text-[0.6rem]" />
                         <span className="mt-2 block text-sm font-semibold leading-snug">{p.name}</span>
-                        <span className="mt-1 block text-xs leading-snug text-ink-soft">{p.goal}</span>
+                        <span className="mt-1 block text-xs leading-snug text-cream-100/65">{p.goal}</span>
                         <span className="mt-1.5 block text-xs font-semibold">{p.price}</span>
                       </span>
                     </Link>
@@ -364,10 +375,10 @@ export function Header({ t, homeHref, portfolio, active, ctaKind = "prices" }: P
                   <a
                     href={l.href}
                     onClick={() => setOpen(false)}
-                    className="display flex items-center justify-between border-b border-line py-4 text-[2rem]"
+                    className="display flex items-baseline gap-4 border-b border-white/12 py-4 text-[1.9rem]"
                   >
+                    <small className="font-sans text-xs tracking-[0.14em] text-[#ddbb84]">{String(i + 1).padStart(2, "0")}</small>
                     {l.label}
-                    <ArrowRight className="size-5 text-gold-ink" aria-hidden />
                   </a>
                 </motion.li>
               ))}
@@ -375,7 +386,7 @@ export function Header({ t, homeHref, portfolio, active, ctaKind = "prices" }: P
             <div className="container-x grid gap-3 pb-10">
               <button
                 type="button"
-                className="btn btn-primary w-full"
+                className="btn btn-gold btn-glow w-full"
                 onClick={() => {
                   setOpen(false);
                   openLead({ kind: ctaKind, origin: "menu" });
@@ -383,11 +394,17 @@ export function Header({ t, homeHref, portfolio, active, ctaKind = "prices" }: P
               >
                 {t.nav.cta}
               </button>
-              <Link href={t.nav.switchLang.href} className="btn btn-ghost w-full">
+              {waHref && (
+                <a href={waHref} target="_blank" rel="noopener noreferrer" className="btn btn-wa w-full" onClick={() => trackEvent("whatsapp_click", { origin: "menu" })}>
+                  <WhatsappLogo className="size-5" weight="fill" aria-hidden />
+                  WhatsApp
+                </a>
+              )}
+              <Link href={t.nav.switchLang.href} className="btn btn-glass w-full">
                 <Globe className="size-4" aria-hidden />
                 {t.nav.switchLang.label}
               </Link>
-              <a href={t.nav.advisors.href} className="mt-3 inline-flex items-center justify-center gap-1.5 text-sm text-ink-soft">
+              <a href={t.nav.advisors.href} className="mt-3 inline-flex items-center justify-center gap-1.5 text-sm text-cream-100/55">
                 <UserCircle className="size-4" aria-hidden />
                 {t.nav.advisors.label}
               </a>

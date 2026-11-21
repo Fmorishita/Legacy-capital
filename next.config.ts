@@ -36,7 +36,7 @@ const nextConfig: NextConfig = {
         headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
       },
       {
-        source: "/(img|video|brand)/(.*)",
+        source: "/(img|video|brand|media)/(.*)",
         headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
       },
     ];

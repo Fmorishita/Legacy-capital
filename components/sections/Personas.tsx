@@ -1,5 +1,6 @@
 "use client";
 
+import { Eyebrow } from "@/components/showcase/primitives";
 import { useRef, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
@@ -10,7 +11,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { useLead } from "@/components/lead/LeadProvider";
 import { trackEvent } from "@/lib/track";
 
-export function Personas({ t, label }: { t: Dict["personas"]; label: string }) {
+export function Personas({ t, label, num }: { t: Dict["personas"]; label: string; num?: number }) {
   const [active, setActive] = useState(0);
   // Hasta que la persona elige un perfil, los botones laten en secuencia para invitar a tocarlos
   const [touched, setTouched] = useState(false);
@@ -50,8 +51,8 @@ export function Personas({ t, label }: { t: Dict["personas"]; label: string }) {
     <section id="para-ti" aria-labelledby="personas-title" className="py-24 md:py-36">
       <div className="container-x">
         <Reveal className="max-w-3xl">
-          <p className="eyebrow">{t.eyebrow}</p>
-          <h2 id="personas-title" className="display mt-4 text-[2.6rem] leading-[1.04] md:text-6xl">
+          <Eyebrow num={num}>{t.eyebrow}</Eyebrow>
+          <h2 id="personas-title" className="display mt-5 text-[2.5rem] md:text-[3.6rem]">
             {t.title}
           </h2>
           <p className="mt-6 max-w-[52ch] text-lg leading-relaxed text-ink-soft">{t.body}</p>

@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { ArrowRight, CheckCircle, CircleNotch, WhatsappLogo } from "@phosphor-icons/react";
+import { ArrowRight, CheckCircle, CircleNotch, EnvelopeSimple, WhatsappLogo } from "@phosphor-icons/react";
 import type { Dict } from "@/lib/i18n/es";
 import { readAttribution } from "@/lib/attribution";
 import { trackEvent } from "@/lib/track";
@@ -49,6 +49,8 @@ type Props = {
   /** Mensaje de WhatsApp y texto de éxito propios (p. ej. para el brochure) */
   waTemplate?: string;
   successBody?: string;
+  /** Material exclusivo: el prospecto elige si lo recibe por WhatsApp o por email (en inglés, email por defecto) */
+  deliver?: boolean;
 };
 
 type Result = { stored: boolean; id?: string; token?: string };
@@ -69,6 +71,7 @@ export function LeadForm({
   autoFocus,
   waTemplate,
   successBody,
+  deliver,
 }: Props) {
   const uid = useId();
   const { project: pageProject } = useLead();
@@ -86,6 +89,8 @@ export function LeadForm({
   const [fecha, setFecha] = useState("");
   const [mensaje, setMensaje] = useState("");
   const [trap, setTrap] = useState("");
+  const [via, setVia] = useState<"whatsapp" | "email">(lang === "en" ? "email" : "whatsapp");
+  const byEmail = Boolean(deliver && via === "email");
   const [errors, setErrors] = useState<{ name?: string; phone?: string; email?: string; form?: string }>({});
   const [status, setStatus] = useState<"idle" | "sending" | "step2" | "saving" | "done">("idle");
   // Formulario por pasos: primero nombre y WhatsApp (el lead ya queda guardado), luego el detalle
@@ -116,6 +121,7 @@ export function LeadForm({
     if (name.trim().length < 2) next.name = t.errors.name;
     if (digits.length !== 10) next.phone = t.errors.phone;
     if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.trim())) next.email = t.errors.email;
+    if (byEmail && !email.trim()) next.email = t.deliver.emailRequired;
     setErrors(next);
     return Object.keys(next).length === 0;
   }
@@ -137,7 +143,8 @@ export function LeadForm({
           perfil: defaults?.perfil,
           proyecto: proyecto ?? "general",
           origen: origin,
-          mensaje: mensaje.trim(),
+          // La forma de entrega viaja en el mensaje: Fran la ve en la tabla de leads y en el webhook
+          mensaje: (deliver ? `[${byEmail ? t.deliver.tagEmail : t.deliver.tagWhatsapp}] ${mensaje}` : mensaje).trim(),
           modo_visita: modo,
           fecha_visita: fecha,
           esquema_pago: defaults?.esquema_pago,
@@ -155,7 +162,7 @@ export function LeadForm({
         // Ya dejó sus datos: no mostrar el aviso de salida en esta sesión
         sessionStorage.setItem("lc_exit", "1");
       } catch {}
-      trackEvent("lead", { origin, interest: interes, profile: defaults?.perfil, project: proyecto ?? "general", lang });
+      trackEvent("lead", { origin, interest: interes, profile: defaults?.perfil, project: proyecto ?? "general", lang, via: deliver ? via : undefined });
     } catch {
       setStatus("idle");
       setErrors({ form: t.errors.generic });
@@ -398,10 +405,10 @@ export function LeadForm({
             )}
           </div>
 
-          {fields.email && (
+          {(fields.email || deliver) && (
             <div className="grid gap-1.5">
               <label htmlFor={`${uid}-email`} className="text-sm font-medium">
-                {t.email}
+                {deliver ? t.deliver.emailLabel : t.email}
               </label>
               <input
                 id={`${uid}-email`}
@@ -416,6 +423,20 @@ export function LeadForm({
               />
               {errors.email && <p className="text-sm text-[#b3261e] dark:text-[#ffb4a9]">{errors.email}</p>}
             </div>
+          )}
+
+          {deliver && (
+            <fieldset className="grid gap-2">
+              <legend className="mb-2 text-sm font-medium">{t.deliver.label}</legend>
+              <div className="flex flex-wrap gap-2">
+                {(lang === "en" ? (["email", "whatsapp"] as const) : (["whatsapp", "email"] as const)).map((v) => (
+                  <button key={v} type="button" className="chip" aria-pressed={via === v} onClick={() => setVia(v)}>
+                    {v === "email" ? <EnvelopeSimple className="size-4" aria-hidden /> : <WhatsappLogo className="size-4" aria-hidden />}
+                    {v === "email" ? t.deliver.email : t.deliver.whatsapp}
+                  </button>
+                ))}
+              </div>
+            </fieldset>
           )}
 
           {/* Campo trampa para bots: oculto a personas y lectores de pantalla */}
@@ -478,7 +499,9 @@ export function LeadForm({
               <p ref={focusOnMount} tabIndex={-1} className="display text-3xl outline-none">
                 {t.success.title.replace("{name}", firstName)}
               </p>
-              <p className="mt-2 text-ink-soft">{result?.stored ? (successBody ?? t.success.body) : t.success.fallback}</p>
+              <p className="mt-2 text-ink-soft">
+                {result?.stored ? (byEmail ? t.deliver.successEmail : (successBody ?? t.success.body)) : t.success.fallback}
+              </p>
             </div>
           </div>
           <a

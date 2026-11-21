@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import Image from "next/image";
 import { X } from "@phosphor-icons/react";
 import type { Dict } from "@/lib/i18n/es";
 import type { Lang } from "@/lib/site";
@@ -169,6 +170,18 @@ function LeadDialog({
           </h2>
           {!isVisit && <p className="mt-2 text-ink-soft">{req.subtitle ?? t.quickForm.subtitle}</p>}
         </div>
+        {req.pics && req.pics.length > 0 && (
+          <ul className="-mt-2 mb-6 grid grid-cols-3 gap-2">
+            {req.pics.map((p) => (
+              <li key={p.src} className="overflow-hidden rounded-xl border border-line bg-bg-alt">
+                <span className="relative block aspect-[4/5]">
+                  <Image src={p.src} alt="" fill sizes="10rem" className="object-cover" />
+                </span>
+                <span className="block px-2 py-1.5 text-[0.72rem] font-medium leading-tight">{p.caption}</span>
+              </li>
+            ))}
+          </ul>
+        )}
         <LeadForm
           t={t.form}
           lang={lang}

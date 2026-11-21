@@ -4,12 +4,15 @@
 // Cifras: brochure (sep. 2026), lista de precios (jun. 2026), contrato de promesa,
 // datos AirDNA y análisis de rentabilidad (jul. 2026) compartidos por el desarrollador.
 
+type MobileBarCopy = { whatsapp: string; prices: string; visit: string; ask?: string };
+type ExitCopy = { title: string; body: string; dismiss: string; pics?: readonly { src: string; caption: string }[] };
+
 export const es = {
   lang: "es",
   meta: {
     title: "Casas con roof garden y vista al mar en Ensenada | Legacy Capital Real Estate",
     description:
-      "Preventa privada de casas con roof garden y vista al mar en El Sauzal, Ensenada, para segunda casa o renta vacacional. Desde $3.9 MDP. Recibe por WhatsApp la lista de precios y el estudio de rentabilidad con Legacy Capital Real Estate.",
+      "Preventa de casas de un nivel con roof garden y vista al mar en la zona norte de Ensenada, en clúster privado con acceso controlado. Desde $3.9 MDP con 10% de enganche, 20 mensualidades y entrega en 2028. Recibe el brochure y el análisis de rentabilidad con Legacy Capital Real Estate.",
     ogAlt: "Legacy Capital Real Estate: casas con roof garden y vista al mar en Ensenada",
   },
   a11y: {
@@ -25,14 +28,14 @@ export const es = {
   },
   nav: {
     links: [
-      { href: "#para-ti", label: "Para ti" },
-      { href: "#asesor", label: "Asesor" },
+      { href: "#asesor", label: "Tu asesor" },
       { href: "#casas", label: "Casas" },
-      { href: "#rentabilidad", label: "Rentabilidad" },
+      { href: "#roof", label: "Roof garden" },
+      { href: "#amenidades", label: "Amenidades" },
+      { href: "#plusvalia", label: "Plusvalía" },
       { href: "#pagos", label: "Pagos" },
-      { href: "#ensenada", label: "Ensenada" },
     ],
-    cta: "Lista de precios",
+    cta: "Agenda tu cita",
     switchLang: { label: "English", href: "/en/presale", short: "EN" },
     advisors: { label: "Acceso asesores", href: "/capacitacion" },
   },
@@ -65,7 +68,7 @@ export const es = {
   form: {
     name: "Nombre",
     namePh: "Tu nombre",
-    phone: "WhatsApp",
+    phone: "WhatsApp o celular",
     phonePh: "10 dígitos",
     email: "Correo (opcional)",
     emailPh: "tu@correo.com",
@@ -103,6 +106,16 @@ export const es = {
     consent: "Legacy Capital Real Estate usa tus datos para enviarte la información que solicitas y darte seguimiento. Consulta nuestro",
     privacy: "Aviso de privacidad",
     reassurance: "Respuesta el mismo día.",
+    deliver: {
+      label: "¿Cómo te lo envío?",
+      whatsapp: "WhatsApp",
+      email: "Email",
+      emailLabel: "Correo electrónico",
+      emailRequired: "Escribe tu correo para enviártelo",
+      successEmail: "Fran Morishita te lo enviará a tu correo hoy mismo. Revisa también la carpeta de spam.",
+      tagEmail: "Enviar por email",
+      tagWhatsapp: "Enviar por WhatsApp",
+    },
     errors: {
       name: "Escribe tu nombre",
       phone: "Escribe un número de WhatsApp válido",
@@ -169,8 +182,8 @@ export const es = {
         kicker: "Vivo en",
         city: "California",
         tags: ["Segunda casa", "Inversión"],
-        image: "/img/street-aerial-sunset.jpg",
-        imageAlt: "Casas con roof garden frente al mar al atardecer",
+        image: "/media/img/golden-hour-pareja.webp",
+        imageAlt: "Pareja caminando frente a su casa con roof garden al atardecer",
         headline: "La vida frente al Pacífico que California ya no te permite.",
         pains: [
           "La casa media en San Diego ya pasa del millón de dólares y las tasas hipotecarias siguen altas.",
@@ -209,8 +222,8 @@ export const es = {
         kicker: "Vivo en",
         city: "Monterrey",
         tags: ["Segunda casa", "Inversión"],
-        image: "/img/facade-dusk.jpg",
-        imageAlt: "Fachada con roof garden al atardecer",
+        image: "/media/img/terraza-atardecer.webp",
+        imageAlt: "Pareja con una copa de vino en su terraza frente al mar al atardecer",
         headline: "Cambia 40 grados por la brisa del Pacífico.",
         pains: [
           "Veranos de más de 40 °C que te obligan a vivir encerrado con el aire acondicionado.",
@@ -259,7 +272,7 @@ export const es = {
         ],
         gains: [
           "Brisa de mar, vino del Valle de Guadalupe y cocina de Baja a minutos de tu casa.",
-          "Precio de preventa desde $3.9 MDP, con tu enganche en 19 meses.",
+          "Precio de preventa desde $3.9 MDP, con 10% de enganche y 20 mensualidades durante la obra.",
           "Casa equipada, lista para usarla o rentarla desde el primer día.",
         ],
       },
@@ -278,7 +291,7 @@ export const es = {
           "Has visto preventas que no se entregan y no sabes en quién confiar.",
         ],
         gains: [
-          "Casa nueva de un nivel, con vista al mar y roof garden, y tu enganche en 19 meses.",
+          "Casa nueva de un nivel, con vista al mar y roof garden: 10% de enganche y el 80% hasta la entrega en 2028.",
           "Un patrimonio que puedes rentar a turistas de Estados Unidos cuando no lo uses.",
           "Contrato bajo la NOM-247, garantías por escrito y un asesor local contigo hasta la entrega.",
         ],
@@ -629,12 +642,17 @@ export const es = {
       "Imágenes ilustrativas con fines promocionales. Precios en moneda nacional, sujetos a cambio y disponibilidad sin previo aviso. Las características, acabados y dimensiones pueden variar conforme al proyecto ejecutivo. Las proyecciones de renta son referenciales y no garantizan rendimientos. Legacy Capital Real Estate participa como comercializador; el desarrollo lo realiza un desarrollador independiente. No constituye una oferta vinculante.",
     rights: "Todos los derechos reservados.",
   },
-  mobileBar: { whatsapp: "WhatsApp", prices: "Precios", visit: "Visita" },
+  mobileBar: { whatsapp: "WhatsApp", prices: "Precios", visit: "Agenda tu cita", ask: "¿Dudas? Escríbeme" } as MobileBarCopy,
   exit: {
-    title: "¿Te llevas el estudio de rentabilidad?",
-    body: "12.33% anual estimado en renta vacacional. Te lo enviamos por WhatsApp junto con la lista de precios.",
+    title: "Antes de irte: tu casa ya viene equipada.",
+    body: "Hasta $450,000 de equipamiento incluido en el precio: cocina con granito, minisplits, smart home y roof con asador. Te enviamos precios y el brochure por WhatsApp o email.",
     dismiss: "No, gracias",
-  },
+    pics: [
+      { src: "/media/img/eq-cocina-real.webp", caption: "Cocina equipada" },
+      { src: "/media/img/eq-recamara-real.webp", caption: "Minisplit en recámaras" },
+      { src: "/media/img/eq-roof-real.webp", caption: "Roof con asador" },
+    ],
+  } as ExitCopy,
   dialog: {
     pricesTitle: "Recibe precios y el estudio de rentabilidad",
     visitTitle: "Agenda tu visita",

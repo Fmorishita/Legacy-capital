@@ -70,19 +70,20 @@ export type HomeCopy = {
 
 const homeEs: HomeCopy = {
   meta: {
-    title: "Legacy Capital Real Estate | Casas y departamentos en Ensenada, en preventa o con entrega inmediata",
+    title: "Legacy Capital Real Estate | Casas con roof garden y vista al mar en Ensenada",
     description:
-      "Legacy Capital Real Estate te asesora en El Sauzal, Ensenada: casas con roof garden y vista al mar en preventa desde $3.9 MDP, y departamentos y casas con entrega inmediata desde $3.64 MDP.",
+      "Legacy Capital Real Estate te acompaña a comprar en Ensenada: casas de un nivel con roof garden y vista al mar en preventa desde $3.9 MDP con 10% de enganche, y casas y departamentos con entrega inmediata.",
     ogAlt: "Legacy Capital Real Estate: preventa con vista al mar y entrega inmediata en Ensenada",
   },
   nav: {
     links: [
-      { href: "#ayuda", label: "Cómo te ayudamos" },
-      { href: "#compara", label: "¿Cuál te conviene?" },
-      { href: "#asesor", label: "Asesor" },
-      { href: "#ensenada", label: "El Sauzal" },
+      { href: "#asesor", label: "Tu asesor" },
+      { href: "#casas", label: "Casas" },
+      { href: "#camino", label: "Cómo compras" },
+      { href: "#pagos", label: "Pagos" },
+      { href: "#estrenar", label: "Entrega inmediata" },
     ],
-    cta: "Agendar visita",
+    cta: "Agenda tu cita",
     switchLang: { label: "English", href: "/en", short: "EN" },
     advisors: es.nav.advisors,
   },
@@ -278,7 +279,7 @@ const homeEs: HomeCopy = {
       },
       {
         q: "¿Puedo usar crédito hipotecario o Infonavit?",
-        a: "En entrega inmediata puedes comprar con crédito bancario, Infonavit o de contado. En la preventa, el 80% que se paga a la escritura puede cubrirse con recursos propios o con crédito hipotecario.",
+        a: "En entrega inmediata puedes comprar con crédito bancario, Infonavit o de contado. En la preventa pagas 10% de enganche y 10% en 20 mensualidades, y el 80% contra entrega puede cubrirse con crédito hipotecario, recursos propios o ambos.",
       },
       {
         q: "¿Puedo visitar los dos proyectos el mismo día?",
@@ -320,9 +321,8 @@ const homeEs: HomeCopy = {
   },
   mobileBar: es.mobileBar,
   exit: {
-    title: "¿Te enviamos precios de los dos proyectos?",
-    body: "Preventa con vista al mar desde $3.9 MDP y entrega inmediata desde $3.64 MDP. Te los enviamos por WhatsApp.",
-    dismiss: es.exit.dismiss,
+    ...es.exit,
+    body: "Hasta $450,000 de equipamiento incluido en el precio de la preventa: cocina con granito, minisplits, smart home y roof con asador. Te enviamos precios y el brochure por WhatsApp o email.",
   },
   dialog: { ...es.dialog, pricesTitle: "Recibe precios y disponibilidad" },
   footer: es.footer,
@@ -331,19 +331,20 @@ const homeEs: HomeCopy = {
 
 const homeEn: HomeCopy = {
   meta: {
-    title: "Legacy Capital Real Estate | Homes and condos in Ensenada, pre-sale or move-in ready",
+    title: "Legacy Capital Real Estate | Ocean-view roof-garden homes in Ensenada",
     description:
-      "Legacy Capital Real Estate advises you in El Sauzal, Ensenada: ocean-view roof garden homes in pre-sale from MXN $3.9M, and move-in ready condos and homes from MXN $3.64M.",
+      "Legacy Capital Real Estate guides you through buying in Ensenada, Baja California: single-story pre-sale homes with a roof garden and ocean views from $215K USD with 10% down, plus move-in-ready homes and condos.",
     ogAlt: "Legacy Capital Real Estate: ocean-view pre-sale and move-in ready homes in Ensenada",
   },
   nav: {
     links: [
-      { href: "#ayuda", label: "How we help" },
-      { href: "#compara", label: "Which one fits?" },
-      { href: "#asesor", label: "Advisor" },
-      { href: "#ensenada", label: "El Sauzal" },
+      { href: "#asesor", label: "Your advisor" },
+      { href: "#casas", label: "Homes" },
+      { href: "#camino", label: "How to buy" },
+      { href: "#pagos", label: "Payments" },
+      { href: "#estrenar", label: "Move-in ready" },
     ],
-    cta: "Book a visit",
+    cta: "Book an appointment",
     switchLang: { label: "Español", href: "/", short: "ES" },
     advisors: en.nav.advisors,
   },
@@ -523,7 +524,7 @@ const homeEn: HomeCopy = {
       },
       {
         q: "Can I use a mortgage or Infonavit?",
-        a: "With move-in ready you can buy with a bank mortgage, Infonavit or cash. In the pre-sale, the 80% paid at closing can be covered with your own funds or a mortgage.",
+        a: "With move-in ready you can buy with a bank mortgage, Infonavit or cash. In the pre-sale you pay 10% down and 10% in 20 monthly payments, and the 80% at delivery can be covered with a mortgage, your own funds or both.",
       },
       {
         q: "Can I visit both projects on the same day?",
@@ -565,9 +566,8 @@ const homeEn: HomeCopy = {
   },
   mobileBar: en.mobileBar,
   exit: {
-    title: "Want prices for both projects?",
-    body: "Ocean-view pre-sale from MXN $3.9M and move-in ready from MXN $3.64M. We'll send them to your WhatsApp.",
-    dismiss: en.exit.dismiss,
+    ...en.exit,
+    body: "Up to $24,000 USD in equipment included in the pre-sale price: granite kitchen, mini-split A/C, smart home and a roof with grill. We'll send prices and the brochure by email or WhatsApp.",
   },
   dialog: { ...en.dialog, pricesTitle: "Get prices and availability" },
   footer: en.footer,

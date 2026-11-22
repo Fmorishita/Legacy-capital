@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { ArrowRight, CheckCircle, CircleNotch, EnvelopeSimple, WhatsappLogo } from "@phosphor-icons/react";
 import type { Dict } from "@/lib/i18n/es";
 import { readAttribution } from "@/lib/attribution";
-import { trackEvent } from "@/lib/track";
+import { newEventId, readMetaCookies, trackEvent } from "@/lib/track";
 import { sendLeadEmail } from "@/lib/leadEmail";
 import { waLink, type Lang } from "@/lib/site";
 import type { LeadProject } from "@/lib/projects";
@@ -132,6 +132,7 @@ export function LeadForm({
     if (status === "sending" || !validate()) return;
     setStatus("sending");
     const attr = readAttribution();
+    const eventId = newEventId();
     try {
       const res = await fetch("/api/leads", {
         method: "POST",
@@ -152,6 +153,8 @@ export function LeadForm({
           idioma: lang,
           website: trap,
           elapsed: Date.now() - mountedAt.current,
+          event_id: eventId,
+          ...readMetaCookies(),
           ...attr,
         }),
       });
@@ -182,7 +185,7 @@ export function LeadForm({
         // Ya dejó sus datos: no mostrar el aviso de salida en esta sesión
         sessionStorage.setItem("lc_exit", "1");
       } catch {}
-      trackEvent("lead", { origin, interest: interes, profile: defaults?.perfil, project: proyecto ?? "general", lang, via: deliver ? via : undefined });
+      trackEvent("lead", { origin, interest: interes, profile: defaults?.perfil, project: proyecto ?? "general", lang, via: deliver ? via : undefined }, { eventId });
     } catch {
       setStatus("idle");
       setErrors({ form: t.errors.generic });

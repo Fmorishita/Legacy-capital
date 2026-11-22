@@ -46,7 +46,7 @@ Plataforma privada del Curso de Ventas Inmobiliarias: 14 módulos (0 a 13) más 
 
 ## Variables de entorno
 
-Ver `.env.example`. En Vercel: `NEXT_PUBLIC_SITE_URL`, `NEXT_PUBLIC_SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`, `LEADS_RPC_SECRET`, `CAP_RPC_SECRET`, y opcionales `LEAD_WEBHOOK_URL`, `NEXT_PUBLIC_META_PIXEL_ID`, `NEXT_PUBLIC_GA_ID`, `PERMITIR_INDEXACION` (poner `1` al conectar el dominio definitivo).
+Ver `.env.example`. En Vercel: `NEXT_PUBLIC_SITE_URL`, `NEXT_PUBLIC_SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`, `LEADS_RPC_SECRET`, `CAP_RPC_SECRET`, y opcionales `LEAD_WEBHOOK_URL`, `NEXT_PUBLIC_META_PIXEL_ID`, `META_CAPI_TOKEN` (API de conversiones; opcional `META_CAPI_TEST_CODE`), `NEXT_PUBLIC_GA_ID`, `PERMITIR_INDEXACION` (poner `1` al conectar el dominio definitivo).
 
 ## Contenido
 

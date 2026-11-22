@@ -1,6 +1,7 @@
-import { NextResponse, type NextRequest } from "next/server";
+import { NextResponse, after, type NextRequest } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { z } from "zod";
+import { sendMetaLead } from "@/lib/metaCapi";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -74,6 +75,10 @@ const leadSchema = z.object({
   fbclid: optionalText(300),
   pagina: optionalText(500),
   referrer: optionalText(500),
+  // Deduplicación con el píxel de Meta (mismo id que usa el navegador) y cookies de Meta
+  event_id: z.string().trim().regex(/^[\w-]{8,64}$/).optional().catch(undefined),
+  fbp: optionalText(200),
+  fbc: optionalText(300),
   // Anti-spam: campo trampa vacío y tiempo mínimo de llenado
   website: z.string().max(500).optional(),
   elapsed: z.number().min(0).optional(),
@@ -154,7 +159,7 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const { website, elapsed, ...lead } = parsed.data;
+  const { website, elapsed, event_id, fbp, fbc, ...lead } = parsed.data;
 
   // Bots: respondemos 200 para no darles señal, pero no guardamos nada.
   if (website || (typeof elapsed === "number" && elapsed < 1500)) {
@@ -170,11 +175,33 @@ export async function POST(req: NextRequest) {
     user_agent: (req.headers.get("user-agent") || "").slice(0, 400),
   };
 
+  // API de conversiones: se envía después de responder, para no retrasar al visitante ni perder el evento
+  // si el navegador bloquea el píxel. Es inerte sin META_CAPI_TOKEN.
+  const ip = clientIp(req);
+  const sendCapi = () =>
+    after(() =>
+      sendMetaLead({
+        eventId: event_id,
+        nombre: lead.nombre,
+        telefono: lead.telefono,
+        email: lead.email,
+        origen: lead.origen,
+        interes: lead.interes,
+        pagina: lead.pagina,
+        fbclid: lead.fbclid,
+        ip,
+        userAgent: record.user_agent,
+        fbp,
+        fbc,
+      }),
+    );
+
   const client = supabase();
   const secret = process.env.LEADS_RPC_SECRET;
   if (!client || !secret) {
     console.error("[leads] Supabase no configurado. Lead:", JSON.stringify(record));
     await notifyWebhook(record);
+    sendCapi();
     return NextResponse.json({ ok: true, stored: false });
   }
 
@@ -184,11 +211,13 @@ export async function POST(req: NextRequest) {
     console.error("[leads] submit_lead error", error.message, JSON.stringify(record));
     if (limited) return NextResponse.json({ ok: false, error: "rate_limited" }, { status: 429 });
     await notifyWebhook(record);
+    sendCapi();
     return NextResponse.json({ ok: true, stored: false });
   }
 
   const result = data as { id: string; token: string };
   await notifyWebhook({ ...record, id: result.id });
+  sendCapi();
   return NextResponse.json({ ok: true, stored: true, id: result.id, token: result.token });
 }
 

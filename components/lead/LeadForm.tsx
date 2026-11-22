@@ -488,6 +488,7 @@ export function LeadForm({
                 href={waLink(waMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackEvent("whatsapp_click", { origin: `${origin}-error` })}
               >
                 WhatsApp
               </a>

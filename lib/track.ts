@@ -18,9 +18,14 @@ export function trackEvent(name: string, props: Record<string, string | number |
   if (name === "lead") {
     w.fbq?.("track", "Lead", { content_name: clean.origin, content_category: clean.interest });
     w.gtag?.("event", "generate_lead", clean);
-  } else if (name === "whatsapp_click") {
-    w.fbq?.("track", "Contact", { content_name: clean.origin });
-    w.gtag?.("event", "contact_whatsapp", clean);
+  } else if (name === "lead_step2") {
+    // Ya dejó sus datos y ahora eligió cómo/cuándo visitar: cita en proceso
+    w.fbq?.("track", "Schedule", { content_name: clean.origin, content_category: clean.interest });
+    w.gtag?.("event", name, clean);
+  } else if (name === "whatsapp_click" || name === "phone_click") {
+    const channel = name === "whatsapp_click" ? "whatsapp" : "phone";
+    w.fbq?.("track", "Contact", { content_name: clean.origin, content_category: channel });
+    w.gtag?.("event", name === "whatsapp_click" ? "contact_whatsapp" : "contact_phone", clean);
   } else {
     w.gtag?.("event", name, clean);
   }

@@ -1,0 +1,1037 @@
+{
+ "DUR": 61.26,
+ "VOZ_FIN": 55.596,
+ "T_DROP": 8.863,
+ "TS": 51.695,
+ "MOFF": 13.187,
+ "M_CUT_A": 64.882,
+ "M_CUT_B": 139.64,
+ "events": [
+  {
+   "f": "swoosh-cine-1481",
+   "hit": 3.661,
+   "db": -16,
+   "pan": 0.35,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "swoosh-viento-1468",
+   "hit": 6.777,
+   "db": -16,
+   "pan": -0.35,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "whoosh-barrido-2632",
+   "hit": 13.284,
+   "db": -16,
+   "pan": 0.35,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "swoosh-rapido-3115",
+   "hit": 16.51,
+   "db": -16,
+   "pan": -0.35,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "cinematic-whoosh-fast-1492",
+   "hit": 20.426,
+   "db": -16,
+   "pan": 0.35,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "swoosh-acento-1464",
+   "hit": 23.007,
+   "db": -16,
+   "pan": -0.35,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "swoosh-cine-1481",
+   "hit": 26.408,
+   "db": -16,
+   "pan": 0.35,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "swoosh-viento-1468",
+   "hit": 30.909,
+   "db": -16,
+   "pan": -0.35,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "whoosh-barrido-2632",
+   "hit": 37.531,
+   "db": -16,
+   "pan": 0.35,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "swoosh-rapido-3115",
+   "hit": 40.091,
+   "db": -16,
+   "pan": -0.35,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "cinematic-whoosh-fast-1492",
+   "hit": 41.537,
+   "db": -19,
+   "pan": 0.35,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "swoosh-acento-1464",
+   "hit": 42.412,
+   "db": -19,
+   "pan": -0.35,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "swoosh-cine-1481",
+   "hit": 43.552,
+   "db": -19,
+   "pan": 0.35,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "swoosh-viento-1468",
+   "hit": 44.493,
+   "db": -19,
+   "pan": -0.35,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "whoosh-barrido-2632",
+   "hit": 48.614,
+   "db": -16,
+   "pan": 0.35,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "syn-boom",
+   "hit": 0.03,
+   "db": -14,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "quick-zoom-impact-772",
+   "hit": 0.34,
+   "db": -22,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "pop-whoosh-3005",
+   "hit": 1.38,
+   "db": -18,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "syn-coin",
+   "hit": 1.63,
+   "db": -20,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "olas-pajaros-1185",
+   "hit": 3.461,
+   "db": -27,
+   "pan": 0.0,
+   "dur": 5.602,
+   "fade": 0.6,
+   "ref": "onset"
+  },
+  {
+   "f": "copa-vino-clink-2936",
+   "hit": 4.011,
+   "db": -13,
+   "pan": 0.15,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "monedas-1993",
+   "hit": 7.027,
+   "db": -18,
+   "pan": -0.2,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "click-dispositivo-2577",
+   "hit": 7.677,
+   "db": -20,
+   "pan": 0.25,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "pasos-pavimento-542",
+   "hit": 13.334,
+   "db": -24,
+   "pan": 0.0,
+   "dur": 3.226000000000001,
+   "fade": 0.3,
+   "ref": "onset"
+  },
+  {
+   "f": "whoosh-impacto-1143",
+   "hit": 8.863,
+   "db": -15,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "barrido-magico-2638",
+   "hit": 9.763,
+   "db": -21,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "syn-pop",
+   "hit": 9.363,
+   "db": -24,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-pop",
+   "hit": 9.963,
+   "db": -26,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-pop",
+   "hit": 10.563,
+   "db": -28,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "mar-lejano-1191",
+   "hit": 16.31,
+   "db": -26,
+   "pan": 0.0,
+   "dur": 4.215999999999997,
+   "fade": 0.5,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-thud",
+   "hit": 17.505,
+   "db": -15,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-chaching",
+   "hit": 17.555,
+   "db": -19,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "moneda-oro-1999",
+   "hit": 17.525,
+   "db": -22,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-thud",
+   "hit": 18.905,
+   "db": -15,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-chaching",
+   "hit": 18.955,
+   "db": -19,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "moneda-oro-1999",
+   "hit": 18.925,
+   "db": -22,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 16.825,
+   "db": -26,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 18.105,
+   "db": -26,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 16.901,
+   "db": -26,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 18.194,
+   "db": -26,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 16.976,
+   "db": -26,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 18.283,
+   "db": -26,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 17.052,
+   "db": -26,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 18.372,
+   "db": -26,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 17.127,
+   "db": -26,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 18.461,
+   "db": -26,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 17.203,
+   "db": -26,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 18.549,
+   "db": -26,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 17.278,
+   "db": -26,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 18.638,
+   "db": -26,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 17.354,
+   "db": -26,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 18.727,
+   "db": -26,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 17.429,
+   "db": -26,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 18.816,
+   "db": -26,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-shimmer",
+   "hit": 19.185,
+   "db": -22,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "asador-chisporroteo-123",
+   "hit": 20.326,
+   "db": -19,
+   "pan": 0.0,
+   "dur": 2.7810000000000032,
+   "fade": 0.35,
+   "ref": "onset"
+  },
+  {
+   "f": "ninos-risas-2261",
+   "hit": 23.207,
+   "db": -25,
+   "pan": 0.0,
+   "dur": 2.8,
+   "fade": 0.5,
+   "ref": "onset"
+  },
+  {
+   "f": "pasos-pavimento-542",
+   "hit": 23.007,
+   "db": -26,
+   "pan": 0.0,
+   "dur": 3.401,
+   "fade": 0.3,
+   "ref": "onset"
+  },
+  {
+   "f": "click-dispositivo-2577",
+   "hit": 29.048,
+   "db": -25,
+   "pan": 0.3,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-thud",
+   "hit": 30.969,
+   "db": -16,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-pop",
+   "hit": 32.609,
+   "db": -18,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-thud",
+   "hit": 35.29,
+   "db": -15,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "moneda-notif-1992",
+   "hit": 35.71,
+   "db": -24,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 33.97,
+   "db": -25,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 34.02,
+   "db": -25,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 34.07,
+   "db": -25,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 34.12,
+   "db": -25,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 34.17,
+   "db": -25,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 34.22,
+   "db": -25,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 34.27,
+   "db": -25,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 34.32,
+   "db": -25,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 34.37,
+   "db": -25,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 34.42,
+   "db": -25,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 34.47,
+   "db": -25,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 34.52,
+   "db": -25,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 34.57,
+   "db": -25,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 34.62,
+   "db": -25,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 34.67,
+   "db": -25,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 34.72,
+   "db": -25,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 34.77,
+   "db": -25,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 34.82,
+   "db": -25,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 34.87,
+   "db": -25,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-tick",
+   "hit": 34.92,
+   "db": -25,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-shimmer",
+   "hit": 31.369,
+   "db": -26,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "firma-papel-2368",
+   "hit": 37.781,
+   "db": -13,
+   "pan": 0.0,
+   "dur": 2.2,
+   "fade": 0.2,
+   "ref": "onset"
+  },
+  {
+   "f": "pluma-papel-2367",
+   "hit": 38.631,
+   "db": -17,
+   "pan": 0.0,
+   "dur": 1.2,
+   "fade": 0.15,
+   "ref": "onset"
+  },
+  {
+   "f": "plato-mesa-1799",
+   "hit": 40.241,
+   "db": -20,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "check-click-1120",
+   "hit": 40.362,
+   "db": -15,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-pop-hi",
+   "hit": 40.372,
+   "db": -21,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "check-click-1120",
+   "hit": 41.622,
+   "db": -15,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-pop-hi",
+   "hit": 41.632,
+   "db": -21,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "check-click-1120",
+   "hit": 42.442,
+   "db": -15,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-pop-hi",
+   "hit": 42.452,
+   "db": -21,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "check-click-1120",
+   "hit": 43.582,
+   "db": -15,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-pop-hi",
+   "hit": 43.592,
+   "db": -21,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "check-click-1120",
+   "hit": 44.523,
+   "db": -15,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "syn-pop-hi",
+   "hit": 44.533,
+   "db": -21,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "aire-frio-1172",
+   "hit": 42.412,
+   "db": -24,
+   "pan": 0.0,
+   "dur": 1.3400000000000005,
+   "fade": 0.15,
+   "ref": "onset"
+  },
+  {
+   "f": "burbuja-agua-1317",
+   "hit": 43.762,
+   "db": -24,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "olas-pajaros-1185",
+   "hit": 44.493,
+   "db": -28,
+   "pan": 0.0,
+   "dur": 0.9800000000000011,
+   "fade": 0.2,
+   "ref": "onset"
+  },
+  {
+   "f": "destello-whoosh-2350",
+   "hit": 45.323,
+   "db": -22,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "riser-cine-790",
+   "hit": 47.454,
+   "db": -18,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "impacto-epico-2908",
+   "hit": 47.454,
+   "db": -16,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "syn-chaching",
+   "hit": 47.484,
+   "db": -17,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "monedas-1993",
+   "hit": 47.504,
+   "db": -20,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "destello-toque-3083",
+   "hit": 47.754,
+   "db": -21,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "fogata-1329",
+   "hit": 48.514,
+   "db": -6,
+   "pan": 0.0,
+   "dur": 3.2810000000000032,
+   "fade": 0.5,
+   "ref": "onset"
+  },
+  {
+   "f": "copa-vino-clink-2936",
+   "hit": 49.814,
+   "db": -14,
+   "pan": -0.2,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "mar-lejano-1191",
+   "hit": 51.395,
+   "db": -30,
+   "pan": 0.0,
+   "dur": 9.864999999999998,
+   "fade": 0.8,
+   "ref": "onset"
+  },
+  {
+   "f": "click-ui-2568",
+   "hit": 52.215,
+   "db": -16,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "llaves-1558",
+   "hit": 51.795,
+   "db": -16,
+   "pan": -0.2,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "destello-toque-3083",
+   "hit": 59.64,
+   "db": -20,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  },
+  {
+   "f": "impacto-logo-2900",
+   "hit": 55.745,
+   "db": -17,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "onset"
+  },
+  {
+   "f": "destello-whoosh-2350",
+   "hit": 56.295,
+   "db": -22,
+   "pan": 0.0,
+   "dur": null,
+   "fade": 0.05,
+   "ref": "peak"
+  }
+ ]
+}

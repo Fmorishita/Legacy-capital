@@ -1,0 +1,380 @@
+{
+ "air-zoom-vacuum-2608": {
+  "dur": 1.275,
+  "onset": 0.32,
+  "peak": 0.45,
+  "peak_db": -9.6,
+  "lufs": "-14.4"
+ },
+ "aire-frio-1172": {
+  "dur": 26.244,
+  "onset": 0.11,
+  "peak": 11.69,
+  "peak_db": -20.0,
+  "lufs": "-22.2"
+ },
+ "barrido-magico-2638": {
+  "dur": 3.945,
+  "onset": 0.68,
+  "peak": 1.31,
+  "peak_db": -14.8,
+  "lufs": "-16.4"
+ },
+ "burbuja-agua-1317": {
+  "dur": 0.424,
+  "onset": 0.06,
+  "peak": 0.12,
+  "peak_db": -15.7,
+  "lufs": "-23.7"
+ },
+ "check-click-1120": {
+  "dur": 0.237,
+  "onset": 0.1,
+  "peak": 0.1,
+  "peak_db": -17.6,
+  "lufs": "-70.0"
+ },
+ "cinematic-whoosh-fast-1492": {
+  "dur": 1.334,
+  "onset": 0.52,
+  "peak": 1.08,
+  "peak_db": -14.3,
+  "lufs": "-13.0"
+ },
+ "click-dispositivo-2577": {
+  "dur": 1.047,
+  "onset": 0.0,
+  "peak": 0.0,
+  "peak_db": -11.2,
+  "lufs": "-15.8"
+ },
+ "click-ui-2568": {
+  "dur": 0.2,
+  "onset": 0.0,
+  "peak": 0.0,
+  "peak_db": -15.1,
+  "lufs": "-70.0"
+ },
+ "copa-vino-clink-2936": {
+  "dur": 1.2,
+  "onset": 0.0,
+  "peak": 0.01,
+  "peak_db": -13.9,
+  "lufs": "-20.0"
+ },
+ "copas-clink-154": {
+  "dur": 2.637,
+  "onset": 0.11,
+  "peak": 0.18,
+  "peak_db": -24.8,
+  "lufs": "-27.9"
+ },
+ "destello-toque-3083": {
+  "dur": 2.333,
+  "onset": 0.24,
+  "peak": 0.47,
+  "peak_db": -16.8,
+  "lufs": "-13.9"
+ },
+ "destello-whoosh-2350": {
+  "dur": 3.5,
+  "onset": 0.14,
+  "peak": 0.45,
+  "peak_db": -14.4,
+  "lufs": "-15.2"
+ },
+ "fast-small-sweep-166": {
+  "dur": 0.781,
+  "onset": 0.13,
+  "peak": 0.33,
+  "peak_db": -9.0,
+  "lufs": "-14.6"
+ },
+ "fast-whoosh-1490": {
+  "dur": 1.757,
+  "onset": 0.42,
+  "peak": 0.72,
+  "peak_db": -14.3,
+  "lufs": "-15.4"
+ },
+ "firma-papel-2368": {
+  "dur": 2.935,
+  "onset": 0.03,
+  "peak": 2.09,
+  "peak_db": -15.0,
+  "lufs": "-19.9"
+ },
+ "fogata-1329": {
+  "dur": 14.076,
+  "onset": 0.2,
+  "peak": 1.28,
+  "peak_db": -42.7,
+  "lufs": "-54.1"
+ },
+ "impacto-epico-2908": {
+  "dur": 4.866,
+  "onset": 0.14,
+  "peak": 0.95,
+  "peak_db": -6.3,
+  "lufs": "-13.9"
+ },
+ "impacto-logo-2900": {
+  "dur": 8.973,
+  "onset": 0.48,
+  "peak": 4.45,
+  "peak_db": -6.8,
+  "lufs": "-12.0"
+ },
+ "mar-lejano-1191": {
+  "dur": 44.86,
+  "onset": 0.0,
+  "peak": 1.46,
+  "peak_db": -16.2,
+  "lufs": "-20.8"
+ },
+ "moneda-notif-1992": {
+  "dur": 2.497,
+  "onset": 0.0,
+  "peak": 0.25,
+  "peak_db": -10.1,
+  "lufs": "-10.0"
+ },
+ "moneda-oro-1999": {
+  "dur": 1.962,
+  "onset": 0.0,
+  "peak": 0.17,
+  "peak_db": -13.8,
+  "lufs": "-16.8"
+ },
+ "monedas-1993": {
+  "dur": 1.025,
+  "onset": 0.05,
+  "peak": 0.08,
+  "peak_db": -17.7,
+  "lufs": "-12.1"
+ },
+ "ninos-risas-2261": {
+  "dur": 6.99,
+  "onset": 0.37,
+  "peak": 0.97,
+  "peak_db": -11.8,
+  "lufs": "-19.1"
+ },
+ "olas-pajaros-1185": {
+  "dur": 38.041,
+  "onset": 0.02,
+  "peak": 15.47,
+  "peak_db": -8.3,
+  "lufs": "-18.8"
+ },
+ "pluma-papel-2367": {
+  "dur": 1.467,
+  "onset": 0.03,
+  "peak": 0.06,
+  "peak_db": -15.2,
+  "lufs": "-18.8"
+ },
+ "pop-whoosh-3005": {
+  "dur": 0.18,
+  "onset": 0.01,
+  "peak": 0.02,
+  "peak_db": -7.9,
+  "lufs": "-70.0"
+ },
+ "quick-zoom-impact-772": {
+  "dur": 1.222,
+  "onset": 0.13,
+  "peak": 0.51,
+  "peak_db": -7.9,
+  "lufs": "-11.6"
+ },
+ "riser-cine-790": {
+  "dur": 2.575,
+  "onset": 1.32,
+  "peak": 2.49,
+  "peak_db": -16.9,
+  "lufs": "-22.3"
+ },
+ "short-transition-sweep-175": {
+  "dur": 0.606,
+  "onset": 0.26,
+  "peak": 0.43,
+  "peak_db": -19.5,
+  "lufs": "-17.4"
+ },
+ "swoosh-acento-1464": {
+  "dur": 1.1,
+  "onset": 0.02,
+  "peak": 0.11,
+  "peak_db": -11.8,
+  "lufs": "-16.9"
+ },
+ "swoosh-cine-1481": {
+  "dur": 2.043,
+  "onset": 0.33,
+  "peak": 0.76,
+  "peak_db": -10.3,
+  "lufs": "-8.6"
+ },
+ "swoosh-rapido-3115": {
+  "dur": 0.574,
+  "onset": 0.07,
+  "peak": 0.11,
+  "peak_db": -17.0,
+  "lufs": "-17.7"
+ },
+ "swoosh-ventoso-1474": {
+  "dur": 3.204,
+  "onset": 0.45,
+  "peak": 1.17,
+  "peak_db": -11.3,
+  "lufs": "-10.2"
+ },
+ "swoosh-viento-1468": {
+  "dur": 1.323,
+  "onset": 0.23,
+  "peak": 0.3,
+  "peak_db": -8.3,
+  "lufs": "-13.9"
+ },
+ "syn-boom": {
+  "dur": 0.9,
+  "onset": 0.0,
+  "peak": 0.03,
+  "peak_db": -3.7,
+  "lufs": "-10.2"
+ },
+ "syn-chaching": {
+  "dur": 1.1,
+  "onset": 0.0,
+  "peak": 0.28,
+  "peak_db": -11.9,
+  "lufs": "-10.5"
+ },
+ "syn-coin": {
+  "dur": 0.7,
+  "onset": 0.0,
+  "peak": 0.08,
+  "peak_db": -9.0,
+  "lufs": "-10.7"
+ },
+ "syn-pop-hi": {
+  "dur": 0.14,
+  "onset": 0.0,
+  "peak": 0.0,
+  "peak_db": -6.8,
+  "lufs": "-70.0"
+ },
+ "syn-pop": {
+  "dur": 0.16,
+  "onset": 0.0,
+  "peak": 0.0,
+  "peak_db": -6.8,
+  "lufs": "-70.0"
+ },
+ "syn-riser": {
+  "dur": 1.0,
+  "onset": 0.47,
+  "peak": 0.97,
+  "peak_db": -14.8,
+  "lufs": "-17.3"
+ },
+ "syn-shimmer": {
+  "dur": 0.9,
+  "onset": 0.0,
+  "peak": 0.12,
+  "peak_db": -12.1,
+  "lufs": "-10.1"
+ },
+ "syn-swish": {
+  "dur": 0.28,
+  "onset": 0.05,
+  "peak": 0.15,
+  "peak_db": -15.0,
+  "lufs": "-70.0"
+ },
+ "syn-thud": {
+  "dur": 0.3,
+  "onset": 0.0,
+  "peak": 0.01,
+  "peak_db": -6.3,
+  "lufs": "-70.0"
+ },
+ "syn-tick": {
+  "dur": 0.06,
+  "onset": 0.0,
+  "peak": 0.0,
+  "peak_db": -16.0,
+  "lufs": "-70.0"
+ },
+ "syn-whoosh-down": {
+  "dur": 0.6,
+  "onset": 0.02,
+  "peak": 0.23,
+  "peak_db": -13.3,
+  "lufs": "-12.2"
+ },
+ "syn-whoosh-low": {
+  "dur": 0.8,
+  "onset": 0.3,
+  "peak": 0.59,
+  "peak_db": -10.8,
+  "lufs": "-13.1"
+ },
+ "syn-whoosh-up": {
+  "dur": 0.55,
+  "onset": 0.17,
+  "peak": 0.37,
+  "peak_db": -12.4,
+  "lufs": "-12.2"
+ },
+ "whoosh-barrido-2632": {
+  "dur": 1.165,
+  "onset": 0.12,
+  "peak": 0.44,
+  "peak_db": -13.8,
+  "lufs": "-14.3"
+ },
+ "whoosh-impacto-1143": {
+  "dur": 4.063,
+  "onset": 0.27,
+  "peak": 0.63,
+  "peak_db": -4.8,
+  "lufs": "-13.2"
+ },
+ "asador-chisporroteo-123": {
+  "dur": 22.519,
+  "onset": 0.0,
+  "peak": 11.81,
+  "peak_db": 0.5,
+  "lufs": "-19.1"
+ },
+ "llaves-1558": {
+  "dur": 1.159,
+  "onset": 0.14,
+  "peak": 0.59,
+  "peak_db": -2.3,
+  "lufs": "-21.4"
+ },
+ "llaves-click-2838": {
+  "dur": 1.159,
+  "onset": 0.02,
+  "peak": 0.3,
+  "peak_db": 2.8,
+  "lufs": "-16.7"
+ },
+ "pasos-pavimento-542": {
+  "dur": 5.248,
+  "onset": 0.01,
+  "peak": 4.83,
+  "peak_db": 1.9,
+  "lufs": "-31.6"
+ },
+ "plato-mesa-1799": {
+  "dur": 1.103,
+  "onset": 0.0,
+  "peak": 0.07,
+  "peak_db": 2.7,
+  "lufs": "-17.9"
+ }
+}

@@ -1,0 +1,280 @@
+{
+ "_nota": "Zonas que ningún texto puede tapar, en píxeles de la foto ya recortada a 1080x1920. faces: detectadas con YuNet (OpenCV); objects: marcadas a mano.",
+ "a-empresario": {
+  "objects": [
+   [
+    287,
+    230,
+    344,
+    551,
+    "cara y mano"
+   ]
+  ]
+ },
+ "n-brindis": {
+  "objects": [
+   [
+    402,
+    1022,
+    195,
+    207,
+    "copas"
+   ]
+  ]
+ },
+ "d-fachada": {
+  "objects": [
+   [
+    582,
+    265,
+    378,
+    849,
+    "entrada y puerta"
+   ],
+   [
+    377,
+    106,
+    716,
+    212,
+    "pérgola"
+   ]
+  ]
+ },
+ "i-roof-sofa": {
+  "objects": []
+ },
+ "k-familia": {
+  "objects": [
+   [
+    413,
+    434,
+    488,
+    138,
+    "pérgola"
+   ],
+   [
+    574,
+    566,
+    235,
+    300,
+    "puerta (parte alta)"
+   ]
+  ]
+ },
+ "m-asesoria": {
+  "objects": [
+   [
+    712,
+    1217,
+    369,
+    241,
+    "tablet"
+   ]
+  ]
+ },
+ "b-firma": {
+  "objects": [
+   [
+    367,
+    1298,
+    517,
+    247,
+    "documento y firma"
+   ]
+  ]
+ },
+ "c-roof-vino": {
+  "objects": [
+   [
+    519,
+    871,
+    256,
+    156,
+    "copas"
+   ],
+   [
+    815,
+    1459,
+    265,
+    265,
+    "fogata"
+   ]
+  ]
+ },
+ "h-fran-cta": {
+  "objects": [
+   [
+    310,
+    1343,
+    551,
+    201,
+    "manos señalando"
+   ]
+  ]
+ },
+ "eq-closet": {
+  "objects": [
+   [
+    97,
+    615,
+    890,
+    720,
+    "clósets"
+   ]
+  ]
+ },
+ "eq-minisplit": {
+  "objects": [
+   [
+    864,
+    660,
+    165,
+    75,
+    "minisplit"
+   ],
+   [
+    595,
+    1122,
+    171,
+    246,
+    "celular"
+   ]
+  ]
+ },
+ "eq-bano": {
+  "objects": [
+   [
+    150,
+    660,
+    770,
+    860,
+    "lavabo, espejo y repisa"
+   ],
+   [
+    890,
+    350,
+    190,
+    1400,
+    "puerta"
+   ]
+  ]
+ },
+ "eq-roof": {
+  "objects": [
+   [
+    85,
+    512,
+    962,
+    193,
+    "pérgola"
+   ],
+   [
+    192,
+    916,
+    449,
+    215,
+    "cocineta"
+   ],
+   [
+    684,
+    1003,
+    342,
+    160,
+    "sala"
+   ]
+  ]
+ },
+ "o-dinero": {
+  "objects": [
+   [
+    630,
+    960,
+    400,
+    310,
+    "tablet"
+   ],
+   [
+    240,
+    1270,
+    470,
+    330,
+    "dinero"
+   ],
+   [
+    630,
+    1390,
+    190,
+    120,
+    "llaves"
+   ],
+   [
+    560,
+    820,
+    180,
+    180,
+    "mano en la tablet"
+   ]
+  ]
+ },
+ "e-asador": {
+  "objects": [
+   [
+    300,
+    1290,
+    780,
+    390,
+    "asador y comida"
+   ],
+   [
+    450,
+    1250,
+    360,
+    260,
+    "manos y pinzas"
+   ]
+  ]
+ },
+ "eq-cocina": {
+  "objects": [
+   [
+    0,
+    1020,
+    1080,
+    260,
+    "barra de la isla"
+   ],
+   [
+    90,
+    460,
+    180,
+    560,
+    "refrigerador"
+   ],
+   [
+    300,
+    470,
+    560,
+    520,
+    "repisas y cocina"
+   ]
+  ]
+ },
+ "a-fran-llave": {
+  "objects": [
+   [
+    540,
+    700,
+    200,
+    200,
+    "llaves y manos"
+   ],
+   [
+    330,
+    840,
+    240,
+    230,
+    "mano de Fran señalando (segundos 2–4 del clip)"
+   ]
+  ]
+ }
+}

@@ -40,7 +40,11 @@ export async function sendMetaLead(l: MetaLeadSignal): Promise<void> {
   const token = process.env.META_CAPI_TOKEN;
   const pixel = process.env.NEXT_PUBLIC_META_PIXEL_ID;
   // Sin event_id no hay forma de deduplicar contra el píxel: mejor no enviar que contar doble.
-  if (!token || !pixel || !l.eventId) return;
+  if (!token || !pixel || !l.eventId) {
+    // Solo estado, nunca valores: sirve para saber por qué no salió el envío
+    console.info("[capi] omitido", { token: Boolean(token), pixel: Boolean(pixel), eventId: Boolean(l.eventId) });
+    return;
+  }
 
   const phone = l.telefono.replace(/\D/g, "");
   const [first, ...rest] = l.nombre.trim().toLowerCase().split(/\s+/);
@@ -87,6 +91,8 @@ export async function sendMetaLead(l: MetaLeadSignal): Promise<void> {
     if (!res.ok) {
       // No se registra el cuerpo enviado (lleva datos personales cifrados) ni el token
       console.error("[capi] Meta respondió", res.status, (await res.text().catch(() => "")).slice(0, 300));
+    } else {
+      console.info("[capi] Lead enviado", res.status, process.env.META_CAPI_TEST_CODE ? "(modo prueba)" : "");
     }
   } catch (err) {
     console.error("[capi] envío fallido", err instanceof Error ? err.message : "error");

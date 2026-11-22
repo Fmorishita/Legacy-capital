@@ -19,8 +19,10 @@ export function trackEvent(name: string, props: Record<string, string | number |
     w.fbq?.("track", "Lead", { content_name: clean.origin, content_category: clean.interest });
     w.gtag?.("event", "generate_lead", clean);
   } else if (name === "lead_step2") {
-    // Ya dejó sus datos y ahora eligió cómo/cuándo visitar: cita en proceso
-    w.fbq?.("track", "Schedule", { content_name: clean.origin, content_category: clean.interest });
+    // Solo cuenta como cita si eligió cómo visitar (el paso 2 también aparece solo con interés o mensaje)
+    if (clean.visit) {
+      w.fbq?.("track", "Schedule", { content_name: clean.origin, content_category: clean.interest });
+    }
     w.gtag?.("event", name, clean);
   } else if (name === "whatsapp_click" || name === "phone_click") {
     const channel = name === "whatsapp_click" ? "whatsapp" : "phone";

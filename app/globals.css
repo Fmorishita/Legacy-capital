@@ -808,3 +808,15 @@
     transition: none;
   }
 }
+
+/* VSL vertical: aviso de sonido que late */
+@keyframes vsl-listen {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+.vsl-listen {
+  animation: vsl-listen 1.6s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .vsl-listen { animation: none; }
+}

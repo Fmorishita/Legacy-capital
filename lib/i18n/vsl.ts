@@ -21,7 +21,9 @@ export type VslCopy = {
   title: string;
   sub: string;
   risk: string;
-  video: { src: string; poster: string; captions: string; label: string; demoNote?: string };
+  /** VSL vertical; mientras no esté listo, se muestra `photo` en su lugar */
+  video?: { src: string; poster: string; captions: string; label: string };
+  photo?: { src: string; alt: string };
   checks: [string, string];
   cta: string;
   ctaAlt: string;
@@ -81,13 +83,7 @@ export const vsl: Record<"doctores", VslCopy> = {
     title: "Doctor: tu casa frente al mar, *pagando hoy solo el 10%.*",
     sub: "Tú cuidas la salud de otros. Nosotros te ayudamos a cuidar tu patrimonio, con una casa que disfrutas en pareja y que puede rentarse cuando no la usas.",
     risk: "Mira el video antes de agendar. Si no es para ti, te lo digo en la llamada.",
-    video: {
-      src: "/media/video/vsl-demo-doctor.mp4",
-      poster: "/media/video/vsl-demo-doctor.jpg",
-      captions: "/media/video/vsl-demo-doctor.vtt",
-      label: "Video: por qué un médico invierte en esta preventa con vista al mar",
-      demoNote: "Video de muestra (anuncio Doctor V9). Aquí va el VSL completo de 8–10 min.",
-    },
+    photo: { src: "/media/img/terraza-atardecer.webp", alt: "Pareja con una copa de vino en su terraza frente al mar al atardecer" },
     checks: ["Apartas con el 10%", "Te acompaño hasta tus llaves"],
     cta: "Agendar mi Zoom de 30 min",
     ctaAlt: "Prefiero visitar en persona",

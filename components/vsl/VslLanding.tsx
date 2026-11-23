@@ -81,16 +81,21 @@ export function VslLanding({ t, persona, privacyHref }: Props) {
             </div>
 
             <div>
-              <VslPlayer
-                src={t.video.src}
-                poster={t.video.poster}
-                captions={t.video.captions}
-                label={t.video.label}
-                persona={persona}
-                ctaAt={55}
-                onCtaTime={() => setCtaHot(true)}
-              />
-              {t.video.demoNote && <p className="mx-auto mt-2 max-w-[22rem] text-center text-[0.72rem] text-ink-soft">{t.video.demoNote}</p>}
+              {t.video ? (
+                <VslPlayer
+                  src={t.video.src}
+                  poster={t.video.poster}
+                  captions={t.video.captions}
+                  label={t.video.label}
+                  persona={persona}
+                  ctaAt={55}
+                  onCtaTime={() => setCtaHot(true)}
+                />
+              ) : t.photo ? (
+                <div className="relative mx-auto aspect-[9/16] w-full max-w-[22rem] overflow-hidden rounded-[22px] shadow-[0_30px_80px_-30px_rgb(10_26_46/0.75)] ring-1 ring-black/10">
+                  <Image src={t.photo.src} alt={t.photo.alt} fill priority sizes="22rem" className="object-cover" />
+                </div>
+              ) : null}
               <ul className="mx-auto mt-4 grid max-w-[22rem] gap-2">
                 {t.checks.map((c) => (
                   <li key={c} className="flex items-center gap-3 rounded-xl border border-line bg-surface px-4 py-3 text-[0.95rem] font-medium">

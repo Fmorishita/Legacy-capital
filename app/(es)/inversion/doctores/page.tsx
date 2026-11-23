@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: t.meta.title,
   description: t.meta.description,
   robots: { index: false, follow: false },
-  openGraph: { title: t.meta.title, description: t.meta.description, images: ["/media/video/vsl-demo-doctor.jpg"] },
+  openGraph: { title: t.meta.title, description: t.meta.description, images: ["/media/img/terraza-atardecer.webp"] },
 };
 
 export default function Page() {

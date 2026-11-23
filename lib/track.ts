@@ -52,6 +52,10 @@ export function trackEvent(
       w.fbq?.("track", "Schedule", { content_name: clean.origin, content_category: clean.interest });
     }
     w.gtag?.("event", name, clean);
+  } else if (name === "vsl_progress") {
+    // El 50 % del VSL con sonido alimenta el público de retargeting en Meta
+    if (clean.pct === 50) w.fbq?.("track", "ViewContent", { content_name: `vsl_50_${clean.persona}`, content_category: "vsl" });
+    w.gtag?.("event", name, clean);
   } else if (name === "whatsapp_click" || name === "phone_click") {
     const channel = name === "whatsapp_click" ? "whatsapp" : "phone";
     w.fbq?.("track", "Contact", { content_name: clean.origin, content_category: channel });

@@ -84,15 +84,15 @@ export function Home({ t, lang }: { t: HomeCopy; lang: Lang }) {
         />
         <Band items={sc.band} />
         <AdvisorIntro t={sc.advisor} num={1} waMessage={waMessage} origin={origin} />
-        <Pains t={t.pains} num={2} />
-        <ScrollStory id="dia" num={3} t={sc.day} origin={origin} />
-        <Secure t={sc.secure} num={4} ui={sc.ui} />
-        <HomesTeaser t={sc.homesTeaser} homes={sc.homes} num={5} lang={lang} href={`${href("preventa", lang)}#casas`} origin={origin} />
-        <Material doc="brochure" t={sc.material} form={t.form} num={6} lang={lang} privacyHref={privacyHref} origin={origin} tone="plain" />
-        <ScrollStory id="camino" num={7} t={sc.path} waHref={waHref} origin={origin} />
-        <PaymentBridge t={sc.pay} num={8} lang={lang} waMessage={waMessage} origin={origin} />
-        <Material doc="roi" t={sc.material} form={t.form} num={9} lang={lang} privacyHref={privacyHref} origin={origin} />
-        <MoveInTeaser t={sc.moveIn} num={10} href={href("vinedos", lang)} origin={origin} />
+        <ScrollStory id="dia" num={2} t={sc.day} origin={origin} />
+        <Secure t={sc.secure} num={3} ui={sc.ui} />
+        <HomesTeaser t={sc.homesTeaser} homes={sc.homes} num={4} lang={lang} href={`${href("preventa", lang)}#casas`} origin={origin} />
+        <Material doc="brochure" t={sc.material} form={t.form} num={5} lang={lang} privacyHref={privacyHref} origin={origin} tone="plain" />
+        <ScrollStory id="camino" num={6} t={sc.path} waHref={waHref} origin={origin} />
+        <PaymentBridge t={sc.pay} num={7} lang={lang} waMessage={waMessage} origin={origin} />
+        <Material doc="roi" t={sc.material} form={t.form} num={8} lang={lang} privacyHref={privacyHref} origin={origin} />
+        <MoveInTeaser t={sc.moveIn} num={9} href={href("vinedos", lang)} origin={origin} />
+        <Pains t={t.pains} num={10} />
         <FaqShowcase t={{ ...sc.faq, items: t.faq.items }} />
         <Contact t={sc.contact} form={t.form} num={11} lang={lang} privacyHref={privacyHref} origin={origin} />
         <Closing t={sc.closing} waMessage={waMessage} ui={sc.ui} origin={origin} />

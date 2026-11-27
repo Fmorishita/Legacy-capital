@@ -22,14 +22,14 @@ export function Pains({ t, num }: { t: HomeCopy["pains"]; num?: number }) {
   const { openLead } = useLead();
 
   return (
-    <section id="ayuda" aria-labelledby="pains-title" className="py-24 md:py-36">
+    <section id="ayuda" aria-labelledby="pains-title" className="on-dark section-dark py-24 md:py-36">
       <div className="container-x grid gap-14 lg:grid-cols-[0.82fr_1.18fr] lg:gap-20">
         <Reveal className="lg:sticky lg:top-28 lg:self-start">
           <Eyebrow num={num}>{t.eyebrow}</Eyebrow>
           <h2 id="pains-title" className="display mt-5 max-w-[14ch] text-[2.5rem] md:text-[3.6rem]">
             {t.title}
           </h2>
-          <p className="mt-6 max-w-[42ch] text-lg leading-relaxed text-ink-soft">{t.body}</p>
+          <p className="mt-6 max-w-[42ch] text-lg leading-relaxed text-[#b3c3cd]">{t.body}</p>
           <div className="mt-10 hidden lg:block">
             <button
               type="button"
@@ -41,7 +41,7 @@ export function Pains({ t, num }: { t: HomeCopy["pains"]; num?: number }) {
               {t.cta}
               <ArrowRight className="size-4" weight="bold" aria-hidden />
             </button>
-            <p className="mt-4 flex items-center gap-3 text-sm text-ink-soft">
+            <p className="mt-4 flex items-center gap-3 text-sm text-[#b3c3cd]">
               <AdvisorAvatar name={site.advisor.name} className="size-8 shrink-0" />
               {t.ctaNote}
             </p>
@@ -49,7 +49,7 @@ export function Pains({ t, num }: { t: HomeCopy["pains"]; num?: number }) {
         </Reveal>
 
         <div>
-          <ul className="border-b border-line">
+          <ul className="border-b border-white/12">
             {t.items.map((item, i) => {
               const Icon = icons[item.icon];
               return (
@@ -57,23 +57,23 @@ export function Pains({ t, num }: { t: HomeCopy["pains"]; num?: number }) {
                   as="li"
                   key={item.concern}
                   delay={(i % 2) * 0.05}
-                  className="grid grid-cols-[2.5rem_1fr] gap-4 border-t border-line py-8 sm:grid-cols-[3.25rem_1fr] sm:gap-6 md:py-10"
+                  className="grid grid-cols-[2.5rem_1fr] gap-4 border-t border-white/12 py-8 sm:grid-cols-[3.25rem_1fr] sm:gap-6 md:py-10"
                 >
-                  <span aria-hidden className="grid size-10 place-items-center rounded-full bg-gold-500/12 text-gold-ink sm:size-12">
+                  <span aria-hidden className="grid size-10 place-items-center rounded-full bg-gold-500/12 text-[#ddbb84] sm:size-12">
                     <Icon className="size-5 sm:size-6" weight="duotone" />
                   </span>
                   <div>
                     <p className="display text-[1.5rem] leading-[1.15] sm:text-[1.65rem] md:text-[1.95rem]">
-                      <span aria-hidden className="text-gold-ink">“</span>
+                      <span aria-hidden className="text-[#ddbb84]">“</span>
                       {item.concern}
-                      <span aria-hidden className="text-gold-ink">”</span>
+                      <span aria-hidden className="text-[#ddbb84]">”</span>
                     </p>
-                    <p className="mt-4 flex gap-3 leading-relaxed text-ink-soft">
+                    <p className="mt-4 flex gap-3 leading-relaxed text-[#b3c3cd]">
                       <span aria-hidden className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-gold-500 text-navy-900">
                         <Check className="size-3" weight="bold" />
                       </span>
                       <span>
-                        <span className="font-semibold text-ink">{t.answerLabel}: </span>
+                        <span className="font-semibold text-white">{t.answerLabel}: </span>
                         {item.answer}
                       </span>
                     </p>
@@ -94,7 +94,7 @@ export function Pains({ t, num }: { t: HomeCopy["pains"]; num?: number }) {
               {t.cta}
               <ArrowRight className="size-4" weight="bold" aria-hidden />
             </button>
-            <p className="mt-4 flex items-center gap-3 text-sm text-ink-soft">
+            <p className="mt-4 flex items-center gap-3 text-sm text-[#b3c3cd]">
               <AdvisorAvatar name={site.advisor.name} className="size-8 shrink-0" />
               {t.ctaNote}
             </p>

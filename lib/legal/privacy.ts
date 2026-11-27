@@ -68,7 +68,9 @@ export const privacy: { es: PrivacyDoc; en: PrivacyDoc } = {
           "Supabase: base de datos donde guardamos las solicitudes.",
           "Vercel: alojamiento del sitio y medición de visitas sin cookies.",
           "Meta (WhatsApp): mensajería con usted.",
-          "Meta y Google: medición de campañas con Meta Pixel y Google Analytics 4, solo si están activos en el sitio.",
+          "Meta y Google: medición de campañas con Meta Pixel, la API de conversiones de Meta y Google Analytics 4, solo si están activos en el sitio.",
+          "Microsoft (Clarity): mapas de calor y grabaciones anónimas de navegación para mejorar el sitio, solo si está activo.",
+          "FormSubmit: envío por correo electrónico a Legacy Capital de los datos que usted captura en los formularios.",
         ],
       },
       {
@@ -119,7 +121,7 @@ export const privacy: { es: PrivacyDoc; en: PrivacyDoc } = {
       {
         heading: "Cookies y tecnologías de rastreo",
         paragraphs: [
-          "Usamos Vercel Web Analytics, que cuenta visitas de forma agregada y sin cookies. Cuando están activos, Meta Pixel y Google Analytics 4 usan cookies y píxeles (web beacons) para medir nuestros anuncios; pueden obtener páginas visitadas, eventos como el envío de un formulario o un clic a WhatsApp, identificadores de cookie y de clic, dirección IP y tipo de navegador y dispositivo. No les enviamos su nombre, teléfono ni correo. Además, el sitio guarda en su navegador (sessionStorage) los parámetros de campaña de su visita, que se borran al cerrar la pestaña.",
+          "Usamos Vercel Web Analytics, que cuenta visitas de forma agregada y sin cookies. Cuando están activos, Meta Pixel y Google Analytics 4 usan cookies y píxeles (web beacons) para medir nuestros anuncios; pueden obtener páginas visitadas, eventos como el envío de un formulario o un clic a WhatsApp, identificadores de cookie y de clic, dirección IP y tipo de navegador y dispositivo. Cuando usted envía un formulario, también podemos enviar a Meta su teléfono, correo y nombre cifrados (hash SHA-256, irreversible) para medir el resultado de nuestros anuncios; Meta no recibe esos datos en texto legible. Microsoft Clarity, cuando está activo, registra clics, desplazamiento y movimientos dentro del sitio para generar mapas de calor; oculta lo que usted escribe en los formularios. Además, el sitio guarda en su navegador (sessionStorage) los parámetros de campaña de su visita, que se borran al cerrar la pestaña.",
           "Puede bloquear o eliminar cookies en su navegador, usar el complemento de inhabilitación de Google Analytics (tools.google.com/dlpage/gaoptout) y ajustar sus preferencias de anuncios en Meta y Google. El sitio seguirá funcionando.",
         ],
       },
@@ -194,7 +196,9 @@ export const privacy: { es: PrivacyDoc; en: PrivacyDoc } = {
           "Supabase: database where we store requests.",
           "Vercel: website hosting and cookieless visit measurement.",
           "Meta (WhatsApp): messaging with you.",
-          "Meta and Google: campaign measurement with Meta Pixel and Google Analytics 4, only if active on the website.",
+          "Meta and Google: campaign measurement with Meta Pixel, the Meta Conversions API and Google Analytics 4, only if active on the website.",
+          "Microsoft (Clarity): heatmaps and anonymous browsing recordings to improve the website, only if active.",
+          "FormSubmit: email delivery to Legacy Capital of the data you enter in the forms.",
         ],
       },
       {
@@ -245,7 +249,7 @@ export const privacy: { es: PrivacyDoc; en: PrivacyDoc } = {
       {
         heading: "Cookies and tracking technologies",
         paragraphs: [
-          "We use Vercel Web Analytics, which counts visits in aggregate and without cookies. When active, Meta Pixel and Google Analytics 4 use cookies and pixels (web beacons) to measure our ads; they may collect pages visited, events such as a form submission or a WhatsApp click, cookie and click identifiers, IP address and browser and device type. We do not send them your name, phone number or email. The website also stores your visit's campaign parameters in your browser (sessionStorage), which are deleted when you close the tab.",
+          "We use Vercel Web Analytics, which counts visits in aggregate and without cookies. When active, Meta Pixel and Google Analytics 4 use cookies and pixels (web beacons) to measure our ads; they may collect pages visited, events such as a form submission or a WhatsApp click, cookie and click identifiers, IP address and browser and device type. When you submit a form, we may also send Meta your phone number, email and name in encrypted form (SHA-256 hash, irreversible) to measure our ads; Meta does not receive them in readable form. Microsoft Clarity, when active, records clicks, scrolling and movement on the website to build heatmaps; it masks what you type in the forms. The website also stores your visit's campaign parameters in your browser (sessionStorage), which are deleted when you close the tab.",
           "You can block or delete cookies in your browser, use the Google Analytics opt-out add-on (tools.google.com/dlpage/gaoptout) and adjust your ad preferences on Meta and Google. The website will keep working.",
         ],
       },

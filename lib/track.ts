@@ -36,8 +36,14 @@ export function trackEvent(
   } catch {
     /* noop */
   }
-  const w = window as unknown as { fbq?: Fbq; gtag?: Gtag; dataLayer?: unknown[] };
+  const w = window as unknown as { fbq?: Fbq; gtag?: Gtag; dataLayer?: unknown[]; clarity?: Fbq };
   w.dataLayer?.push({ event: name, ...clean });
+  // Clarity: permite filtrar mapas de calor y grabaciones por quien dejó sus datos o completó el formulario
+  try {
+    w.clarity?.("event", name);
+  } catch {
+    /* noop */
+  }
   if (name === "lead") {
     w.fbq?.(
       "track",
@@ -46,6 +52,9 @@ export function trackEvent(
       opts.eventId ? { eventID: opts.eventId } : undefined,
     );
     w.gtag?.("event", "generate_lead", clean);
+  } else if (name === "lead_complete") {
+    w.fbq?.("trackCustom", "LeadCompleto", { content_name: clean.origin, use: clean.use, timeline: clean.timeline, payment: clean.payment });
+    w.gtag?.("event", name, clean);
   } else if (name === "lead_step2") {
     // Solo cuenta como cita si eligió cómo visitar (el paso 2 también aparece solo con interés o mensaje)
     if (clean.visit) {

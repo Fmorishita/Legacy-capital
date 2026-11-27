@@ -97,7 +97,7 @@ export function VideoHero({ t, head, moveIn, image = "/img/hero-roof.jpg", origi
               {t.ctaPrimary}
               <ArrowRight className="nudge size-4" weight="bold" aria-hidden />
             </button>
-            <a href="#material" className="btn btn-glass btn-lg" onClick={() => trackEvent("cta_click", { cta: "brochure", origin: `${origin}-hero` })}>
+            <a href="#brochure" className="btn btn-glass btn-lg" onClick={() => trackEvent("cta_click", { cta: "brochure", origin: `${origin}-hero` })}>
               <LockSimple className="size-4" weight="bold" aria-hidden />
               {t.ctaSecondary}
             </a>

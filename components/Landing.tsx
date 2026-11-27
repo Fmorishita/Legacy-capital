@@ -112,15 +112,16 @@ export function Landing({ t, lang }: { t: Dict; lang: Lang }) {
         <EnsenadaPlace t={sc.ensenada} num={5} />
         <LocationPlace t={sc.location} num={6} origin={origin} />
         <Homes t={sc.homes} num={7} lang={lang} origin={origin} />
-        <InteriorTour t={sc.interior} num={8} />
-        <Equipment t={sc.equipment} num={9} lang={lang} ui={sc.ui} />
-        <RoofBanner t={sc.roof} num={10} origin={origin} />
-        <ScrollStory id="camino" num={11} t={sc.path} waHref={waHref} origin={origin} />
-        <AmenitiesShowcase t={sc.amenities} num={12} />
-        <Appreciation t={sc.value} num={13} lang={lang} origin={origin} />
-        <PaymentBridge t={sc.pay} num={14} lang={lang} waMessage={waMessage} origin={origin} />
-        <Material t={sc.material} form={t.form} num={15} lang={lang} privacyHref={privacyHref} origin={origin} />
-        <Contact t={sc.contact} form={t.form} num={16} lang={lang} privacyHref={privacyHref} origin={origin} />
+        <Material doc="brochure" t={sc.material} form={t.form} num={8} lang={lang} privacyHref={privacyHref} origin={origin} />
+        <InteriorTour t={sc.interior} num={9} />
+        <Equipment t={sc.equipment} num={10} lang={lang} ui={sc.ui} />
+        <RoofBanner t={sc.roof} num={11} origin={origin} />
+        <ScrollStory id="camino" num={12} t={sc.path} waHref={waHref} origin={origin} />
+        <AmenitiesShowcase t={sc.amenities} num={13} />
+        <Appreciation t={sc.value} num={14} lang={lang} origin={origin} />
+        <Material doc="roi" t={sc.material} form={t.form} num={15} lang={lang} privacyHref={privacyHref} origin={origin} tone="plain" />
+        <PaymentBridge t={sc.pay} num={16} lang={lang} waMessage={waMessage} origin={origin} />
+        <Contact t={sc.contact} form={t.form} num={17} lang={lang} privacyHref={privacyHref} origin={origin} />
         <MoveInTeaser t={sc.moveIn} href={href("vinedos", lang)} origin={origin} />
         <FaqShowcase t={sc.faq} />
         <Closing t={sc.closing} waMessage={waMessage} ui={sc.ui} origin={origin} />

@@ -87,9 +87,17 @@ const leadSchema = z.object({
 const qualifySchema = z.object({
   id: z.uuid(),
   token: z.uuid(),
-  horizonte_compra: z.enum(["0-3", "3-6", "6-12", "explorando"]).optional(),
-  forma_pago: z.enum(["contado", "credito", "infonavit", "usd"]).optional(),
-  uso: z.enum(["segunda_casa", "renta", "vivir", "retiro", "broker"]).optional(),
+  // Preguntas de filtro (valores nuevos + los anteriores, para no romper envíos de pestañas viejas)
+  horizonte_compra: z.enum(["0-3", "3-6", "6-12", "12+", "explorando"]).optional(),
+  forma_pago: z.enum(["propios", "credito", "ambos", "contado", "infonavit", "usd"]).optional(),
+  uso: z.enum(["vivir", "descanso", "inversion", "segunda_casa", "renta", "retiro", "broker"]).optional(),
+  // El correo puede llegar hasta el último paso (cuando elige recibir el material por email)
+  email: z
+    .string()
+    .trim()
+    .max(320)
+    .optional()
+    .transform((v) => (v && v.length <= 160 && z.email().safeParse(v).success ? v : undefined)),
   // Segundo paso del formulario
   interes: z.enum(INTERESES).optional(),
   proyecto: z.enum(PROYECTOS).optional(),

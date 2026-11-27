@@ -6,7 +6,8 @@ const ENDPOINT = "https://formsubmit.co/ajax/fmejiam@sisol.com.mx";
 const PROYECTO: Record<string, string> = { preventa: "Preventa", vinedos: "Entrega inmediata", general: "General" };
 
 export type LeadEmail = {
-  kind: "nuevo" | "actualizacion";
+  /** nuevo: dejó nombre y WhatsApp (paso 1); completo: contestó todo el formulario */
+  kind: "nuevo" | "completo";
   nombre: string;
   telefono: string;
   email?: string;
@@ -19,40 +20,61 @@ export type LeadEmail = {
   fecha_visita?: string;
   esquema_pago?: string;
   idioma?: string;
-  horizonte_compra?: string;
-  forma_pago?: string;
-  uso?: string;
+  /** Respuestas ya traducidas a texto legible */
+  proposito?: string;
+  plazo?: string;
+  fuente_pago?: string;
+  entrega?: string;
+  paso?: string;
   attr?: Record<string, string | undefined>;
 };
+
+/** De dónde llegó: link con UTM, anuncio de Meta/Google, otra página o directo. */
+export function trafficSource(attr: Record<string, string | undefined> = {}): string {
+  if (attr.utm_source) {
+    return [attr.utm_source, attr.utm_medium, attr.utm_campaign, attr.utm_content].filter(Boolean).join(" · ");
+  }
+  if (attr.fbclid) return "Meta (Facebook/Instagram) · clic sin UTM";
+  if (attr.gclid) return "Google Ads";
+  if (attr.referrer) {
+    try {
+      const host = new URL(attr.referrer).hostname.replace(/^www\./, "");
+      if (host && host !== location.hostname) return `Referido · ${host}`;
+    } catch {
+      /* referrer inválido */
+    }
+  }
+  return "Directo (sin UTM ni referido)";
+}
 
 export async function sendLeadEmail(l: LeadEmail): Promise<boolean> {
   const proyecto = PROYECTO[l.proyecto ?? "general"] ?? "General";
   const porEmail = /^\[(Enviar por email|Send by email)\]/.test(l.mensaje ?? "");
-  const utm = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"]
-    .map((k) => l.attr?.[k])
-    .filter(Boolean)
-    .join(" / ");
   const fields: Record<string, string | undefined> = {
+    Estado: l.kind === "completo" ? "Formulario completo" : `Solo contacto${l.paso ? ` (${l.paso})` : ""}: aún no termina las preguntas`,
     Nombre: l.nombre,
     WhatsApp: l.telefono,
     Email: l.email,
     Proyecto: proyecto,
+    Proposito: l.proposito,
+    Plazo: l.plazo,
+    Fuente_de_pago: l.fuente_pago,
+    Entrega: l.entrega,
     Interes: l.interes,
     Perfil: l.perfil,
     Origen: l.origen,
     Mensaje: l.mensaje,
     Visita: [l.modo_visita, l.fecha_visita].filter(Boolean).join(" · "),
     Esquema_pago: l.esquema_pago,
-    Horizonte_compra: l.horizonte_compra,
-    Forma_pago: l.forma_pago,
-    Uso: l.uso,
     Idioma: l.idioma === "en" ? "Inglés (USD)" : "Español",
+    Fuente_del_trafico: trafficSource(l.attr),
     Pagina: location.origin + location.pathname,
-    UTM: utm,
+    Pagina_de_entrada: l.attr?.pagina,
     Fecha: new Date().toLocaleString("es-MX", { timeZone: "America/Tijuana" }),
   };
+  const head = l.kind === "completo" ? "Lead completo" : "Nuevo contacto (incompleto)";
   const payload: Record<string, string> = {
-    _subject: `${porEmail ? "ENVIAR POR EMAIL: " : ""}Legacy Capital · ${l.kind === "nuevo" ? "Nuevo lead" : "Lead actualizado"} · ${proyecto} · ${l.nombre}`,
+    _subject: `${porEmail ? "ENVIAR POR EMAIL: " : ""}Legacy Capital · ${head} · ${proyecto} · ${l.nombre}`,
     _template: "table",
     _captcha: "false",
   };

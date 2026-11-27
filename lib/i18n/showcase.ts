@@ -177,6 +177,8 @@ export type ShowcaseCopy = {
     eyebrow: string;
     title: string;
     tabs: { roi: string; brochure: string };
+    /** Cada documento tiene su propia sección: el brochure arriba (casas) y el análisis junto a la inversión */
+    sections: Record<"roi" | "brochure", { eyebrow: string; title: string; formTitle: string; formNote: string }>;
     roi: { meta: string; title: string; kpis: { value: string; label: string }[]; rows: [string, string][]; disclaimer: string };
     brochure: { meta: string; title: string; pages: string; rows: [string, string][]; coverAlt: string };
     form: {
@@ -526,6 +528,20 @@ const es: ShowcaseCopy = {
     eyebrow: "Material exclusivo",
     title: "Brochure y análisis de rentabilidad, *para recibirlos por email o WhatsApp.*",
     tabs: { roi: "Análisis de rentabilidad", brochure: "Brochure noviembre 2026" },
+    sections: {
+      brochure: {
+        eyebrow: "Brochure noviembre 2026",
+        title: "Precios, plantas y amenidades, *en un solo documento.*",
+        formTitle: "Recibe el brochure",
+        formNote: "Fran te lo envía en PDF con la disponibilidad y la promoción de la semana.",
+      },
+      roi: {
+        eyebrow: "Análisis de rentabilidad",
+        title: "Los números de tu inversión, *antes de decidir.*",
+        formTitle: "Recibe el análisis de rentabilidad",
+        formNote: "Fran te lo envía en PDF y resuelve tus dudas sobre los números.",
+      },
+    },
     roi: {
       meta: "Renta vacacional · Ensenada · Noviembre 2026",
       title: "Análisis de rentabilidad",
@@ -955,6 +971,20 @@ const en: ShowcaseCopy = {
     eyebrow: "Exclusive material",
     title: "Brochure and ROI analysis, *sent to your email or WhatsApp.*",
     tabs: { roi: "ROI analysis", brochure: "November 2026 brochure" },
+    sections: {
+      brochure: {
+        eyebrow: "November 2026 brochure",
+        title: "Prices, floor plans and amenities, *in one document.*",
+        formTitle: "Get the brochure",
+        formNote: "Fran sends you the PDF with this week’s availability and promotion.",
+      },
+      roi: {
+        eyebrow: "ROI analysis",
+        title: "The numbers behind your investment, *before you decide.*",
+        formTitle: "Get the ROI analysis",
+        formNote: "Fran sends you the PDF and answers your questions about the numbers.",
+      },
+    },
     roi: {
       meta: "Vacation rental · Ensenada · November 2026",
       title: "ROI analysis",

@@ -138,7 +138,7 @@ export function Appreciation({ t, num, lang, origin }: { t: ShowcaseCopy["value"
         <p className="mt-5 max-w-[80ch] text-xs leading-relaxed text-white/55">{t.note}</p>
         <Reveal className="mt-8 flex flex-wrap items-center gap-4">
           <p className="text-white/85">{t.ask}</p>
-          <a href="#material" className="btn btn-gold btn-glow" onClick={() => trackEvent("cta_click", { cta: "roi", origin: `${origin}-plusvalia` })}>
+          <a href="#analisis" className="btn btn-gold btn-glow" onClick={() => trackEvent("cta_click", { cta: "roi", origin: `${origin}-plusvalia` })}>
             {t.cta}
             <ArrowRight className="nudge size-4" weight="bold" aria-hidden />
           </a>

@@ -1,21 +1,22 @@
 import type { HomeCopy } from "@/lib/i18n/home";
 import { portfolio } from "@/lib/i18n/portfolio";
-import { site, type Lang } from "@/lib/site";
+import { showcase } from "@/lib/i18n/showcase";
+import { site, waLink, type Lang } from "@/lib/site";
 import { href } from "@/lib/projects";
 import { LeadProvider } from "@/components/lead/LeadProvider";
 import { Header } from "@/components/sections/Header";
-import { Facts } from "@/components/sections/Facts";
-import { Advisor } from "@/components/sections/Advisor";
-import { Trust } from "@/components/sections/Trust";
-import { Ensenada } from "@/components/sections/Ensenada";
-import { Faq } from "@/components/sections/Faq";
-import { FinalCta } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/sections/Footer";
 import { FloatingActions } from "@/components/sections/FloatingActions";
-import { StudyMagnet } from "@/components/sections/StudyMagnet";
-import { HomeHero } from "@/components/home/HomeHero";
 import { Pains } from "@/components/home/Pains";
-import { Paths } from "@/components/home/Paths";
+import { VideoHero } from "@/components/showcase/VideoHero";
+import { Band } from "@/components/showcase/Band";
+import { AdvisorIntro } from "@/components/showcase/AdvisorIntro";
+import { ScrollStory } from "@/components/showcase/ScrollStory";
+import { HomesTeaser } from "@/components/showcase/Homes";
+import { PaymentBridge } from "@/components/showcase/Numbers";
+import { Material } from "@/components/showcase/Material";
+import { Secure } from "@/components/showcase/Place";
+import { Closing, Contact, FaqShowcase, MoveInTeaser } from "@/components/showcase/Closing";
 
 function jsonLd(t: HomeCopy, lang: Lang) {
   const url = `${site.url}${href("home", lang) === "/" ? "" : href("home", lang)}`;
@@ -53,12 +54,17 @@ function jsonLd(t: HomeCopy, lang: Lang) {
 }
 
 /**
- * Página principal: Legacy Capital del lado del cliente. Parte de lo que busca y de sus dudas, explica
- * los dos caminos (preventa y entrega inmediata) y lleva a la página de cada proyecto.
+ * Portada de Legacy Capital con el lenguaje de la landing de la preventa. El 80% del recorrido es la
+ * preventa con vista al mar (video, historias, modelos, pagos y material exclusivo); la entrega
+ * inmediata aparece como la opción para quien necesita estrenar ya.
  */
 export function Home({ t, lang }: { t: HomeCopy; lang: Lang }) {
   const privacyHref = href("privacy", lang);
   const p = portfolio[lang];
+  const sc = showcase[lang];
+  const waMessage = t.form.waGeneric;
+  const waHref = waLink(waMessage);
+  const origin = "home";
 
   return (
     <LeadProvider t={{ form: t.form, dialog: t.dialog, a11y: t.a11y, quickForm: t.quickForm }} lang={lang} privacyHref={privacyHref}>
@@ -68,25 +74,28 @@ export function Home({ t, lang }: { t: HomeCopy; lang: Lang }) {
       >
         {t.a11y.skip}
       </a>
-      <Header t={{ nav: t.nav, a11y: t.a11y }} homeHref={href("home", lang)} portfolio={p} ctaKind="visit" />
+      <Header t={{ nav: t.nav, a11y: t.a11y }} homeHref={href("home", lang)} portfolio={p} ctaKind="visit" waHref={waHref} />
       <main id="contenido">
-        <HomeHero t={t.hero} portfolio={p} waGeneric={t.form.waGeneric} />
-        <Facts t={t.facts} label={t.a11y.facts} />
-        <Pains t={t.pains} />
-        <Paths t={t.paths} portfolio={p} />
-        <StudyMagnet t={t.study} form={t.form} lang={lang} privacyHref={privacyHref} className="bg-bg" />
-        <Advisor t={t.advisor} waGeneric={t.form.waGeneric} />
-        <Trust t={t.trust} />
-        <Ensenada t={t.ensenada} />
-        <Faq t={t.faq} />
-        <FinalCta
-          t={t.finalCta}
-          form={t.form}
-          whatsappLabel={t.advisor.ctaWhatsapp}
-          lang={lang}
-          privacyHref={privacyHref}
-          image="/img/coast-road.jpg"
+        <VideoHero
+          t={sc.hero}
+          head={sc.homeHero}
+          moveIn={{ ...sc.homeHero.moveIn, href: href("vinedos", lang) }}
+          origin={origin}
         />
+        <Band items={sc.band} />
+        <AdvisorIntro t={sc.advisor} num={1} waMessage={waMessage} origin={origin} />
+        <Pains t={t.pains} num={2} />
+        <ScrollStory id="dia" num={3} t={sc.day} origin={origin} />
+        <Secure t={sc.secure} num={4} ui={sc.ui} />
+        <HomesTeaser t={sc.homesTeaser} homes={sc.homes} num={5} lang={lang} href={`${href("preventa", lang)}#casas`} origin={origin} />
+        <Material doc="brochure" t={sc.material} form={t.form} num={6} lang={lang} privacyHref={privacyHref} origin={origin} tone="plain" />
+        <ScrollStory id="camino" num={7} t={sc.path} waHref={waHref} origin={origin} />
+        <PaymentBridge t={sc.pay} num={8} lang={lang} waMessage={waMessage} origin={origin} />
+        <Material doc="roi" t={sc.material} form={t.form} num={9} lang={lang} privacyHref={privacyHref} origin={origin} />
+        <MoveInTeaser t={sc.moveIn} num={10} href={href("vinedos", lang)} origin={origin} />
+        <FaqShowcase t={{ ...sc.faq, items: t.faq.items }} />
+        <Contact t={sc.contact} form={t.form} num={11} lang={lang} privacyHref={privacyHref} origin={origin} />
+        <Closing t={sc.closing} waMessage={waMessage} ui={sc.ui} origin={origin} />
       </main>
       <Footer t={t.footer} nav={t.nav} waGeneric={t.form.waGeneric} privacyHref={privacyHref} navLabel={t.a11y.footerNav} portfolio={p} />
       <FloatingActions t={t.mobileBar} exit={t.exit} waGeneric={t.form.waGeneric} label={t.a11y.quickActions} />

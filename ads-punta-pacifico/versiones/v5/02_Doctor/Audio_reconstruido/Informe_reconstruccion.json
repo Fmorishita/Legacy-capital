@@ -1,0 +1,62 @@
+{
+  "perfil": "doctor",
+  "duration": 36.875,
+  "sample_rate": 48000,
+  "channels": 2,
+  "recipe": "Cortes, ducking, foco de pagos, transitorios y ganancias documentados de V5",
+  "reference_exact_mix": "Audio/mezcla_final_V5.wav",
+  "bit_exact_claim": false,
+  "limitation": "La voz alineada PCM16 tiene cuantización respecto a la voz flotante del máster original; FFmpeg también puede variar por versión.",
+  "levels_reconstructed": {
+    "input_i": "-15.02",
+    "input_tp": "-1.20",
+    "input_lra": "1.70",
+    "input_thresh": "-25.10",
+    "output_i": "-15.05",
+    "output_tp": "-1.20",
+    "output_lra": "1.70",
+    "output_thresh": "-25.12",
+    "normalization_type": "dynamic",
+    "target_offset": "0.05"
+  },
+  "levels_reference_v5": {
+    "input_i": "-15.02",
+    "input_tp": "-1.20",
+    "input_lra": "1.70",
+    "input_thresh": "-25.10",
+    "output_i": "-15.05",
+    "output_tp": "-1.20",
+    "output_lra": "1.70",
+    "output_thresh": "-25.12",
+    "normalization_type": "dynamic",
+    "target_offset": "0.05"
+  },
+  "files": {
+    "musica_editada.wav": {
+      "bytes": 14160058,
+      "sha256": "e1843f74174bdeb3668a4cce05cbbda6b53f18c3aff22c808b93490ae2d9b074"
+    },
+    "efectos.wav": {
+      "bytes": 14160058,
+      "sha256": "d1208a3789aed0526f0457ca8526449711618f6e5aee294ba12de858a0033713"
+    },
+    "premaster.wav": {
+      "bytes": 14160058,
+      "sha256": "b8ec40d4d96e82b8b5d28a54863660055e5f81952f1493ee39303972b5f249e7"
+    },
+    "mezcla_reconstruida.wav": {
+      "bytes": 7080078,
+      "sha256": "f88c2b909bf7104a296ab37ecc344ec60e1035f307d13601af3bde51bfb10500"
+    }
+  },
+  "waveform_comparison_to_supplied_exact_v5_mix": {
+    "same_sample_count": true,
+    "sample_frames": 1770000,
+    "sample_rate": 48000,
+    "channels": 2,
+    "correlation": 0.9999999571820113,
+    "rms_error": 4.125571595288919e-05,
+    "maximum_absolute_sample_difference": 0.00067138671875,
+    "bit_exact": false
+  }
+}

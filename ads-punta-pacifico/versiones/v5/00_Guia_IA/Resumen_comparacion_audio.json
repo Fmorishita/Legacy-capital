@@ -1,0 +1,53 @@
+{
+  "scope": "Reconstructed working stems; original V5 mix remains exact reference",
+  "profiles": [
+    {
+      "profile_folder": "02_Doctor",
+      "original_LUFS": "-15.02",
+      "reconstructed_LUFS": "-15.02",
+      "reconstructed_dBTP": "-1.20",
+      "waveform_comparison": {
+        "same_sample_count": true,
+        "sample_frames": 1770000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "correlation": 0.9999999571820113,
+        "rms_error": 4.125571595288919e-05,
+        "maximum_absolute_sample_difference": 0.00067138671875,
+        "bit_exact": false
+      }
+    },
+    {
+      "profile_folder": "03_Empresario",
+      "original_LUFS": "-15.00",
+      "reconstructed_LUFS": "-15.00",
+      "reconstructed_dBTP": "-1.22",
+      "waveform_comparison": {
+        "same_sample_count": true,
+        "sample_frames": 1892000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "correlation": 0.9999999912990767,
+        "rms_error": 2.724429371057284e-05,
+        "maximum_absolute_sample_difference": 6.103515625e-05,
+        "bit_exact": false
+      }
+    },
+    {
+      "profile_folder": "04_California",
+      "original_LUFS": "-15.05",
+      "reconstructed_LUFS": "-15.05",
+      "reconstructed_dBTP": "-1.20",
+      "waveform_comparison": {
+        "same_sample_count": true,
+        "sample_frames": 1994000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "correlation": 0.999999979672191,
+        "rms_error": 0.00011788253047814104,
+        "maximum_absolute_sample_difference": 0.000823974609375,
+        "bit_exact": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Videos Punta Pacífico"
+  short_description: "Anuncios y materiales editables para otras IA"
+  default_prompt: "Usa $videos-punta-pacifico sobre la versión fuente que indique para crear o modificar anuncios, o reunir sus materiales editables para otra IA. Aplica las preferencias vigentes y actualiza la skill si cambia un criterio importante."

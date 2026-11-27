@@ -1,32 +1,28 @@
 import type { Dict } from "@/lib/i18n/es";
-import { site, type Lang } from "@/lib/site";
+import { site, waLink, type Lang } from "@/lib/site";
 import { href } from "@/lib/projects";
 import { portfolio } from "@/lib/i18n/portfolio";
+import { showcase } from "@/lib/i18n/showcase";
+import { LIST_PRICE } from "@/lib/money";
 import { LeadProvider } from "@/components/lead/LeadProvider";
 import { Header } from "@/components/sections/Header";
-import { Hero } from "@/components/sections/Hero";
-import { Facts } from "@/components/sections/Facts";
-import { Project } from "@/components/sections/Project";
-import { RoofToggle } from "@/components/sections/RoofToggle";
-import { Models } from "@/components/sections/Models";
-import { Included } from "@/components/sections/Included";
-import { Lifestyle } from "@/components/sections/Lifestyle";
-import { Amenities } from "@/components/sections/Amenities";
-import { Payments } from "@/components/sections/Payments";
-import { Invest } from "@/components/sections/Invest";
-import { BrochureMagnet, StudyMagnet } from "@/components/sections/StudyMagnet";
-import { Personas } from "@/components/sections/Personas";
-import { Ensenada } from "@/components/sections/Ensenada";
-import { Trust } from "@/components/sections/Trust";
-import { Advisor } from "@/components/sections/Advisor";
-import { Faq } from "@/components/sections/Faq";
-import { FinalCta } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/sections/Footer";
 import { FloatingActions } from "@/components/sections/FloatingActions";
-import { CrossSell } from "@/components/sections/CrossSell";
+import { VideoHero } from "@/components/showcase/VideoHero";
+import { Band } from "@/components/showcase/Band";
+import { AdvisorIntro } from "@/components/showcase/AdvisorIntro";
+import { ScrollStory } from "@/components/showcase/ScrollStory";
+import { EnsenadaPlace, LocationPlace, Secure } from "@/components/showcase/Place";
+import { Homes } from "@/components/showcase/Homes";
+import { AmenitiesShowcase, Equipment, InteriorTour, RoofBanner, SmartHome } from "@/components/showcase/Inside";
+import { Appreciation, PaymentBridge } from "@/components/showcase/Numbers";
+import { Material } from "@/components/showcase/Material";
+import { Closing, Contact, FaqShowcase, MoveInTeaser } from "@/components/showcase/Closing";
+import { plain } from "@/lib/text";
 
 function jsonLd(t: Dict, lang: Lang) {
   const url = `${site.url}${href("preventa", lang)}`;
+  const sc = showcase[lang];
   return [
     {
       "@context": "https://schema.org",
@@ -44,10 +40,10 @@ function jsonLd(t: Dict, lang: Lang) {
     {
       "@context": "https://schema.org",
       "@type": "Residence",
-      name: t.meta.title.split(" | ")[0],
+      name: plain(sc.hero.title),
       description: t.meta.description,
       url,
-      image: [`${site.url}/img/hero-roof.jpg`, `${site.url}/img/aerial-homes.jpg`, `${site.url}/img/roof-sunset.jpg`],
+      image: [`${site.url}/img/hero-roof.jpg`, `${site.url}/media/img/proto2r-render.webp`, `${site.url}/media/img/aerea-atardecer.webp`],
       address: {
         "@type": "PostalAddress",
         addressLocality: "El Sauzal de Rodríguez, Ensenada",
@@ -55,14 +51,21 @@ function jsonLd(t: Dict, lang: Lang) {
         addressCountry: "MX",
       },
       containsPlace: [
-        { "@type": "SingleFamilyResidence", name: t.models.tabs["2R"].label, numberOfRooms: 2, floorSize: { "@type": "QuantitativeValue", value: 178.06, unitCode: "MTK" } },
-        { "@type": "SingleFamilyResidence", name: t.models.tabs["3R"].label, numberOfRooms: 3, floorSize: { "@type": "QuantitativeValue", value: 195.19, unitCode: "MTK" } },
+        { "@type": "SingleFamilyResidence", name: sc.homes.models["2R"].tab, numberOfRooms: 2, floorSize: { "@type": "QuantitativeValue", value: 178.06, unitCode: "MTK" } },
+        { "@type": "SingleFamilyResidence", name: sc.homes.models["3R"].tab, numberOfRooms: 3, floorSize: { "@type": "QuantitativeValue", value: 195.19, unitCode: "MTK" } },
       ],
+      offers: {
+        "@type": "AggregateOffer",
+        priceCurrency: "MXN",
+        lowPrice: LIST_PRICE["2R"],
+        highPrice: LIST_PRICE["3R"],
+        availability: "https://schema.org/PreOrder",
+      },
     },
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      mainEntity: t.faq.items.map((i) => ({
+      mainEntity: sc.faq.items.map((i) => ({
         "@type": "Question",
         name: i.q,
         acceptedAnswer: { "@type": "Answer", text: i.a },
@@ -71,11 +74,18 @@ function jsonLd(t: Dict, lang: Lang) {
   ];
 }
 
-/** Preventa de casas con roof garden y vista al mar en El Sauzal (sin nombre comercial). */
+/**
+ * Preventa de casas con roof garden y vista al mar (sin nombre comercial), con el mismo recorrido
+ * de la landing del proyecto: video, historias al hacer scroll, modelos, pagos, plusvalía y material.
+ */
 export function Landing({ t, lang }: { t: Dict; lang: Lang }) {
   const privacyHref = href("privacy", lang);
   const homeHref = href("home", lang);
   const p = portfolio[lang];
+  const sc = showcase[lang];
+  const waMessage = t.form.waGeneric;
+  const waHref = waLink(waMessage);
+  const origin = "preventa";
 
   return (
     <LeadProvider
@@ -90,27 +100,30 @@ export function Landing({ t, lang }: { t: Dict; lang: Lang }) {
       >
         {t.a11y.skip}
       </a>
-      <Header t={{ nav: t.nav, promo: t.promo, a11y: t.a11y }} homeHref={homeHref} portfolio={p} active="preventa" />
+      <Header t={{ nav: t.nav, promo: t.promo, a11y: t.a11y }} homeHref={homeHref} portfolio={p} active="preventa" ctaKind="visit" waHref={waHref} />
       <main id="contenido">
-        <Hero t={{ hero: t.hero, quickForm: t.quickForm, form: t.form }} lang={lang} privacyHref={privacyHref} />
-        <Facts t={t.facts} label={t.a11y.facts} />
-        <Personas t={t.personas} label={t.a11y.personas} />
-        <Advisor t={t.advisor} waGeneric={t.form.waGeneric} />
-        <Project t={t.project} />
-        <RoofToggle t={t.roof} />
-        <Models t={t.models} />
-        <Included t={t.included} />
-        <Lifestyle t={t.lifestyle} />
-        <Amenities t={t.amenities} />
-        <BrochureMagnet t={t.study} form={t.form} lang={lang} privacyHref={privacyHref} />
-        <Invest t={t.invest} lang={lang} />
-        <StudyMagnet t={t.study} form={t.form} lang={lang} privacyHref={privacyHref} />
-        <Payments t={t.payments} models={t.models.tabs} lang={lang} />
-        <CrossSell item={p.items[1]} t={t.crossSell} />
-        <Trust t={t.trust} />
-        <Ensenada t={t.ensenada} />
-        <Faq t={t.faq} />
-        <FinalCta t={t.finalCta} form={t.form} whatsappLabel={t.hero.ctaSecondary} lang={lang} privacyHref={privacyHref} />
+        <VideoHero t={sc.hero} origin={origin} />
+        <Band items={sc.band} />
+        <AdvisorIntro t={sc.advisor} num={1} waMessage={waMessage} origin={origin} />
+        <ScrollStory id="dia" num={2} t={sc.day} origin={origin} />
+        <Secure t={sc.secure} num={3} ui={sc.ui} />
+        <EnsenadaPlace t={sc.ensenada} num={4} />
+        <LocationPlace t={sc.location} num={5} origin={origin} />
+        <Homes t={sc.homes} num={6} lang={lang} origin={origin} />
+        <Material doc="brochure" t={sc.material} form={t.form} num={7} lang={lang} privacyHref={privacyHref} origin={origin} tone="plain" />
+        <InteriorTour t={sc.interior} num={8} />
+        <Equipment t={sc.equipment} num={9} lang={lang} />
+        <SmartHome t={sc.smart} num={10} origin={origin} />
+        <RoofBanner t={sc.roof} num={11} origin={origin} />
+        <ScrollStory id="camino" num={12} t={sc.path} waHref={waHref} origin={origin} />
+        <AmenitiesShowcase t={sc.amenities} num={13} />
+        <Appreciation t={sc.value} num={14} lang={lang} origin={origin} />
+        <Material doc="roi" t={sc.material} form={t.form} num={15} lang={lang} privacyHref={privacyHref} origin={origin} tone="plain" />
+        <PaymentBridge t={sc.pay} num={16} lang={lang} waMessage={waMessage} origin={origin} />
+        <Contact t={sc.contact} form={t.form} num={17} lang={lang} privacyHref={privacyHref} origin={origin} />
+        <MoveInTeaser t={sc.moveIn} href={href("vinedos", lang)} origin={origin} />
+        <FaqShowcase t={sc.faq} />
+        <Closing t={sc.closing} waMessage={waMessage} ui={sc.ui} origin={origin} />
       </main>
       <Footer t={t.footer} nav={t.nav} waGeneric={t.form.waGeneric} privacyHref={privacyHref} navLabel={t.a11y.footerNav} portfolio={p} />
       <FloatingActions t={t.mobileBar} exit={t.exit} waGeneric={t.form.waGeneric} label={t.a11y.quickActions} />

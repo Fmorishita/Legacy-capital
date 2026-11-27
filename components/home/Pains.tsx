@@ -1,5 +1,6 @@
 "use client";
 
+import { Eyebrow } from "@/components/showcase/primitives";
 import { ArrowRight, Check, Compass, FileText, GlobeHemisphereWest, Handshake, ShieldCheck, Tag } from "@phosphor-icons/react";
 import type { HomeCopy, PainIcon } from "@/lib/i18n/home";
 import { site } from "@/lib/site";
@@ -17,15 +18,15 @@ const icons: Record<PainIcon, typeof Compass> = {
 };
 
 /** Las dudas del comprador, en sus palabras, y lo que Legacy Capital hace con cada una. */
-export function Pains({ t }: { t: HomeCopy["pains"] }) {
+export function Pains({ t, num }: { t: HomeCopy["pains"]; num?: number }) {
   const { openLead } = useLead();
 
   return (
     <section id="ayuda" aria-labelledby="pains-title" className="py-24 md:py-36">
       <div className="container-x grid gap-14 lg:grid-cols-[0.82fr_1.18fr] lg:gap-20">
         <Reveal className="lg:sticky lg:top-28 lg:self-start">
-          <p className="eyebrow">{t.eyebrow}</p>
-          <h2 id="pains-title" className="display mt-4 max-w-[14ch] text-[2.6rem] leading-[1.04] md:text-6xl">
+          <Eyebrow num={num}>{t.eyebrow}</Eyebrow>
+          <h2 id="pains-title" className="display mt-5 max-w-[14ch] text-[2.5rem] md:text-[3.6rem]">
             {t.title}
           </h2>
           <p className="mt-6 max-w-[42ch] text-lg leading-relaxed text-ink-soft">{t.body}</p>

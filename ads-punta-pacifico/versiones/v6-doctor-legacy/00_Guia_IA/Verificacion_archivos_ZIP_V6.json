@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "parts": [
+    "00_Guia_IA/Proyecto_Doctor_V6_Legacy_parte_01_de_03.zip",
+    "00_Guia_IA/Proyecto_Doctor_V6_Legacy_parte_02_de_03.zip",
+    "00_Guia_IA/Proyecto_Doctor_V6_Legacy_parte_03_de_03.zip"
+  ],
+  "extracted_runtime_files": 70,
+  "all_sha256_identical": true,
+  "method": "All independent parts physically extracted together into a fresh temporary folder"
+}

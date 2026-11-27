@@ -1,0 +1,26 @@
+{
+  "project": "Doctor-V9-Legacy-Capital",
+  "new_generations_enabled": false,
+  "video": {
+    "drive_id": "13dWevQYa_tgtoo7zvtI3jtKyk2kbMmxW",
+    "url": "https://drive.google.com/file/d/13dWevQYa_tgtoo7zvtI3jtKyk2kbMmxW/view?usp=drivesdk",
+    "sha256": "ac70e905c73338fde66d815766291f4aca211da6c5974385a869bf72dede20e7"
+  },
+  "editable_parts": [
+    {
+      "drive_id": "1TNOta5o6vfPCYYjogiSBVfZSTqLH-Nm3",
+      "url": "https://drive.google.com/file/d/1TNOta5o6vfPCYYjogiSBVfZSTqLH-Nm3/view?usp=drivesdk",
+      "name": "Doctor_V9_Editable_FINAL_Parte_1_Proyecto_Audio.zip",
+      "bytes": 43894187,
+      "sha256": "a2b9b09a718565fcbea2cfbac58dee5e6ca717ded0450cffac3f53b2aee5b7d3"
+    },
+    {
+      "drive_id": "1oNzREyqNJNzf7xeGFKNAfAHX-YFWsfHI",
+      "url": "https://drive.google.com/file/d/1oNzREyqNJNzf7xeGFKNAfAHX-YFWsfHI/view?usp=drivesdk",
+      "name": "Doctor_V9_Editable_FINAL_Parte_2_Videos_Referencias.zip",
+      "bytes": 73824530,
+      "sha256": "a926b444908e3f70616154a04aad49bed6c75c082f4d2ad49e66ba4947f22da8"
+    }
+  ],
+  "download_note": "Use the authorized Google Drive account if requested; no anonymous access or permission change is assumed. Extract both parts together, then use build_v9.py --final. No AI credential is required."
+}

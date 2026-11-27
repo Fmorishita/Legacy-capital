@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "assets": 44,
+  "scenes": 28,
+  "captionGroups": 59,
+  "words": 172,
+  "audioTracks": 30,
+  "allAssetUrlsPresent": true,
+  "allAssetHashesMatch": true,
+  "maxAssetBytes": 3930331,
+  "assetFolderBytes": 24306039,
+  "duration": 64.04166666666667,
+  "originalReference": "assets/reference/doctor-v6-reference.mp4",
+  "note": "Same source photos, recompressed for web; original source hashes included per asset."
+}

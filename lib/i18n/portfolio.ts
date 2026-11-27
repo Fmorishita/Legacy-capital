@@ -45,7 +45,7 @@ const es: PortfolioCopy = {
       place: "El Sauzal, Ensenada",
       summary: "Casas de un nivel con roof garden frente al Pacífico, para segunda casa o renta vacacional.",
       price: "Desde $3.9 MDP",
-      priceNote: "Enganche en 19 meses",
+      priceNote: "10% de enganche · entrega 2028",
       href: routes.preventa.es,
       image: "/img/hero-roof.jpg",
       imageAlt: "Roof garden con pérgola frente al mar del Pacífico al atardecer",
@@ -54,8 +54,8 @@ const es: PortfolioCopy = {
       highlights: [
         "Casas de un nivel de 2 y 3 recámaras",
         "Hasta 75 m² de roof garden con pérgola y asador",
-        "20% de enganche diferido; 80% a la escritura",
-        "12.33% anual estimado en renta vacacional",
+        "10% de enganche, 10% en 20 mensualidades y 80% contra entrega",
+        "Entrega estimada a mediados de 2028",
       ],
     },
     {
@@ -94,8 +94,8 @@ const en: PortfolioCopy = {
       short: "Ocean-view homes",
       place: "El Sauzal, Ensenada",
       summary: "Single-level homes with a private roof garden facing the Pacific, for a second home or vacation rental.",
-      price: "From MXN $3.9M",
-      priceNote: "Down payment over 19 months",
+      price: "From $215K USD",
+      priceNote: "10% down · delivery 2028",
       href: routes.preventa.en,
       image: "/img/hero-roof.jpg",
       imageAlt: "Roof garden with pergola facing the Pacific at sunset",
@@ -104,8 +104,8 @@ const en: PortfolioCopy = {
       highlights: [
         "Single-level 2 and 3 bedroom homes",
         "Up to 75 m² of roof garden with pergola and grill",
-        "20% deferred down payment; 80% at closing",
-        "12.33% estimated annual vacation rental return",
+        "10% down, 10% in 20 monthly payments, 80% at delivery",
+        "Estimated delivery mid-2028",
       ],
     },
     {

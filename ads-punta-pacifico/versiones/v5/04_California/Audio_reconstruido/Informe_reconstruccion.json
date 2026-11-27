@@ -1,0 +1,62 @@
+{
+  "perfil": "california",
+  "duration": 41.541666666666664,
+  "sample_rate": 48000,
+  "channels": 2,
+  "recipe": "Cortes, ducking, foco de pagos, transitorios y ganancias documentados de V5",
+  "reference_exact_mix": "Audio/mezcla_final_V5.wav",
+  "bit_exact_claim": false,
+  "limitation": "La voz alineada PCM16 tiene cuantización respecto a la voz flotante del máster original; FFmpeg también puede variar por versión.",
+  "levels_reconstructed": {
+    "input_i": "-15.05",
+    "input_tp": "-1.20",
+    "input_lra": "2.00",
+    "input_thresh": "-25.11",
+    "output_i": "-15.14",
+    "output_tp": "-1.21",
+    "output_lra": "1.90",
+    "output_thresh": "-25.19",
+    "normalization_type": "dynamic",
+    "target_offset": "0.14"
+  },
+  "levels_reference_v5": {
+    "input_i": "-15.05",
+    "input_tp": "-1.20",
+    "input_lra": "2.00",
+    "input_thresh": "-25.10",
+    "output_i": "-15.14",
+    "output_tp": "-1.22",
+    "output_lra": "1.90",
+    "output_thresh": "-25.19",
+    "normalization_type": "dynamic",
+    "target_offset": "0.14"
+  },
+  "files": {
+    "musica_editada.wav": {
+      "bytes": 15952058,
+      "sha256": "54c6140fc3cd51b9b96e432d817428d1a71b2a10a8c677821cbf27d6392233f1"
+    },
+    "efectos.wav": {
+      "bytes": 15952058,
+      "sha256": "597ca1148e7697ad17fc7f32d984e9ffe6b5a30dc42e39ed35fd0f60d43419b2"
+    },
+    "premaster.wav": {
+      "bytes": 15952058,
+      "sha256": "9a0191dd2aa19de6d8d29ae717009229e83fc1c71c97853867bde9cd84a8e51f"
+    },
+    "mezcla_reconstruida.wav": {
+      "bytes": 7976078,
+      "sha256": "31b2f87b98391a83c7290a559002844341925a1e3a0a690a9754585827f700d5"
+    }
+  },
+  "waveform_comparison_to_supplied_exact_v5_mix": {
+    "same_sample_count": true,
+    "sample_frames": 1994000,
+    "sample_rate": 48000,
+    "channels": 2,
+    "correlation": 0.999999979672191,
+    "rms_error": 0.00011788253047814104,
+    "maximum_absolute_sample_difference": 0.000823974609375,
+    "bit_exact": false
+  }
+}

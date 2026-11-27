@@ -1,0 +1,225 @@
+{
+  "project": "Punta Pacífico",
+  "version": "VERSION_EXPLICITA_DEL_BRIEF",
+  "status": "brief",
+  "duration_target_seconds": null,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 24,
+  "max_shot_duration_including_overlap_seconds": 4,
+  "price_opening_seconds": 3.6,
+  "commercial_data": {
+    "verification_status": "REVALIDAR_ANTES_DE_RENDER_FINAL",
+    "price_list_date": "2026-09-29",
+    "source_url": "https://drive.google.com/file/d/1bOyeUZvaU2C8_-9XX-3DfVsNsQzkMP4E/view",
+    "currency": "MXN",
+    "historical_reference_prices": [
+      {
+        "bedrooms": 2,
+        "from": 3982780
+      },
+      {
+        "bedrooms": 3,
+        "from": 4352900
+      }
+    ],
+    "current_confirmed_prices": [],
+    "payment": {
+      "deposit_percent": 10,
+      "installments_total_percent": 10,
+      "installments_months": null,
+      "on_delivery_percent": 80,
+      "source": "Último guion explícito del cliente de esta revisión; configurar antes de render",
+      "benefit": "Pagos flexibles para planear el desembolso y cuidar liquidez; evitar descapitalizarse como objetivo, no garantía absoluta"
+    },
+    "price_range": {
+      "minimum_mdp": null,
+      "maximum_mdp": null,
+      "bedrooms": [
+        2,
+        3
+      ],
+      "currency": "MXN",
+      "display": null,
+      "approximate": true,
+      "source": null,
+      "verification_status": "REQUIRES_LATEST_BRIEF",
+      "show_subject_to_change_line": false
+    },
+    "historical_reference_status": "Lista de29/09/2026usada enV4; no confundir con inventario vigente confirmado",
+    "appreciation_estimate": {
+      "annual_percent": null,
+      "scenario": null,
+      "classification": "Sólo si la pieza vigente lo pide",
+      "verification_status": "REQUIRES_LATEST_BRIEF",
+      "display_label": "PLUSVALÍA ESTIMADA",
+      "guaranteed_return": false,
+      "show_no_guarantee_note": false
+    },
+    "historical_client_examples": {
+      "V5": {
+        "price_range_mdp": [
+          3.9,
+          4.8
+        ],
+        "installments_months": 19,
+        "appreciation_annual_percent": 8
+      }
+    },
+    "delivery": {
+      "display": null,
+      "source": null,
+      "conflicting_historical_labels": []
+    },
+    "promotion": {
+      "display": null,
+      "maximum_value_mxn": null,
+      "eligibility": null,
+      "validity_label": null,
+      "observed_brief_date": null,
+      "source": null
+    }
+  },
+  "profiles": [
+    "salud",
+    "empresarios",
+    "california"
+  ],
+  "cta": "Haz clic en el botón de abajo para más información.",
+  "aesthetic_approval": {
+    "V4": "aprobada en general con observaciones",
+    "california_V4": "tono general aprobado",
+    "V5": "entregada y verificada; evaluación estética pendiente",
+    "V6-Higgsfield": "rechazada por el usuario el14/11/2026",
+    "V6-Legacy-Capital-Doctor": "revisión nueva; pendiente de evaluación del usuario"
+  },
+  "source_drive_folder": "1SCQmTtt1A9YJdk70TO3H5vBzdkINR24u",
+  "delivery_parent_folder": "1rw_-8yciiCoDiztBsSB6aQ3ln0Y6ldvo",
+  "delivery_version_folder": null,
+  "decision_log": [],
+  "sea_view": {
+    "required_from_opening": true,
+    "mention_in_first_phrase": true,
+    "visible_in_first_image": true,
+    "source": "Render oficial del proyecto pertinente a la vista",
+    "source_file": null,
+    "scope": "Confirmar alcance de la vista por unidad; no inventar mar o asumir que toda unidad tiene la misma vista"
+  },
+  "amenities": {
+    "stage": "primeras áreas a construir, proyectadas",
+    "preview_status": "preview aportado por cliente, no render final ni obra terminada",
+    "preview_file": null,
+    "preview_drive_id": null,
+    "materialization_status": "awaiting_accessible_reference",
+    "items": [
+      "alberca",
+      "cancha de pickleball",
+      "asadores",
+      "salón de usos múltiples al aire libre"
+    ],
+    "after_opening": true,
+    "clothing": "acorde a alberca/deporte/asadores/reunión",
+    "preserve_preview_geometry": true
+  },
+  "visual_direction": {
+    "entrepreneur_casting": "hombre solo o con esposa, elección de este proyecto",
+    "palette": [
+      "azul marino",
+      "dorado"
+    ],
+    "avoid_palette": [
+      "mint",
+      "verde claro"
+    ],
+    "closing_alignment": "centrado: logo, titular, CTA y flecha",
+    "laptop_check": "pantalla hacia usuarios, carcasa sin UI hacia cámara, bisagra y mirada coherentes",
+    "motion_sound": "SFX con causa para textos/cifras y transiciones B-roll motivadas"
+  },
+  "skill_collection_folder": "17N5Or2vADGOvhgcQCfxxe3e4LnEnBKwU",
+  "image_to_video": {
+    "enabled": false,
+    "provider_requested": null,
+    "model_id_confirmed": null,
+    "catalog_observed_at": null,
+    "resolution_requested": null,
+    "aspect_ratio_requested": null,
+    "requested_duration_seconds": null,
+    "model_minimum_duration_seconds": null,
+    "generate_audio": false,
+    "prioritize": "primeras escenas solicitadas con acciones pequeñas según la voz",
+    "preserve_existing_voice_and_caption_timing": true,
+    "preserve_architecture_and_identity": true,
+    "guaranteed_pixel_exact_preservation": false,
+    "generation_ledger_path": null
+  },
+  "generation_budget": {
+    "currency": "service_credits",
+    "maximum_authorized": null,
+    "balance_before_observed": null,
+    "quote_credits_each": null,
+    "count_authorized": null,
+    "planned_total_credits": null,
+    "actual_credits_spent": null,
+    "balance_after_observed": null,
+    "quote_is_submission": false,
+    "prices_and_entitlements_are_live": true
+  },
+  "preferred_editing_base": "V5",
+  "portable_handoff": {
+    "enabled": false,
+    "source_version": null,
+    "exclude_versions": [],
+    "same_user_project_working_copies": true,
+    "folders_by_profile_and_function": true,
+    "include_individual_assets": true,
+    "include_lightweight_source_zip": true,
+    "include_complete_portable_projects": true,
+    "timeline_formats": [
+      "CSV",
+      "JSON"
+    ],
+    "voice_aligned_separate_from_master": true,
+    "actual_visible_copy_source": "HTML final y fotogramas codificados; metadata.overlay puede contener copy de planificación",
+    "licenses_and_source_urls_required": true,
+    "sha256_manifest_required": true,
+    "ai_handoff_guide_required": true,
+    "drive_readback_verified": false
+  },
+  "source_identity": {
+    "development_name_internal": null,
+    "source_folder": null
+  },
+  "branding": {
+    "advertiser_brand": null,
+    "visible_name": null,
+    "voice_name": null,
+    "logo_path": null,
+    "brandbook_path": null,
+    "allowed_public_names": [],
+    "forbidden_public_names": [],
+    "internal_names_allowed_in_provenance": true
+  },
+  "versioning": {
+    "revision_id": null,
+    "profile": null,
+    "source_version": null,
+    "historical_revisions_excluded_by_id": [
+      "V6-Higgsfield"
+    ],
+    "aesthetic_approval": "pending_user_review",
+    "preserve_previous_versions": true
+  },
+  "duration_reference_seconds": [
+    30,
+    45
+  ],
+  "duration_rule": "La voz continua del último guion determina duración real; no recortar ni acelerar para forzar el rango de referencia.",
+  "visual_requirements": {
+    "opening_professional_cues": null,
+    "structural_counts": [],
+    "sports_gaze_target": null,
+    "verify_anatomy_and_action": true
+  }
+}

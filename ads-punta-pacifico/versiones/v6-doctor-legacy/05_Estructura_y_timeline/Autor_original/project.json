@@ -1,0 +1,19 @@
+{
+  "brand": {
+    "name": "Legacy Capital",
+    "logo_path": "assets/Legacy_Capital_logo_original.jpg"
+  },
+  "audio": {
+    "mix_path": "audio/doctor_v6_mix.wav",
+    "voice_path": "audio/doctor_v6_voice.wav",
+    "words_path": "audio/doctor_v6_words.json",
+    "metadata_path": "audio/doctor_v6_voice.json"
+  },
+  "price": {
+    "range": "$3.9–$4.9 MDP",
+    "end": 4.0
+  },
+  "logo_width": 680,
+  "transition_seconds": 0.28,
+  "shots_path": "planning/visual_plan.json"
+}

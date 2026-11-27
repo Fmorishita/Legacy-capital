@@ -1,0 +1,54 @@
+{
+  "source_version": "V4/V5 licensed project originals, copied as private working assets for same user",
+  "files": [
+    {
+      "file": "music/i-can-hear-your-heartbeat-1000.mp3",
+      "source_file": "procedencia/i-can-hear-your-heartbeat-1000.mp3",
+      "bytes": 3516752,
+      "sha256": "a23c959605dc4a53f7e3b8c8949fcc0d082c29989b944bb2a7f8d9601ddca0d1",
+      "kind": "music"
+    },
+    {
+      "file": "sfx/air-zoom-vacuum-2608.mp3",
+      "source_file": "procedencia/air-zoom-vacuum-2608.mp3",
+      "bytes": 41082,
+      "sha256": "0e25921648c66e30924892ee17110ae621243de770b2944496526845a15a9998",
+      "kind": "sfx"
+    },
+    {
+      "file": "sfx/fast-whoosh-1490.mp3",
+      "source_file": "procedencia/fast-whoosh-1490.mp3",
+      "bytes": 57624,
+      "sha256": "b88fd5d484251930efd6eca78c4340339908ea29d1e69bd24fb5191a10da4f78",
+      "kind": "sfx"
+    },
+    {
+      "file": "sfx/short-transition-sweep-175.mp3",
+      "source_file": "procedencia/short-transition-sweep-175.mp3",
+      "bytes": 18057,
+      "sha256": "49a2706fb3e7923db4228629865ccecf8e49e196b0dbcb65343a489e5406d4bc",
+      "kind": "sfx"
+    },
+    {
+      "file": "sfx/cinematic-whoosh-fast-1492.mp3",
+      "source_file": "procedencia/cinematic-whoosh-fast-1492.mp3",
+      "bytes": 44574,
+      "sha256": "5a20424fb50af5c0eda1c8aecfa2836fd347f5072391c0b3c685dc03dab7ed0d",
+      "kind": "sfx"
+    },
+    {
+      "file": "sfx/quick-zoom-impact-772.mp3",
+      "source_file": "procedencia/quick-zoom-impact-772.mp3",
+      "bytes": 39932,
+      "sha256": "c5eba091c94b5292d9a545576bbbee1c21dd5cbc2539822fb61ac2aec69836d0",
+      "kind": "sfx"
+    },
+    {
+      "file": "sfx/fast-small-sweep-166.mp3",
+      "source_file": "procedencia/fast-small-sweep-166.mp3",
+      "bytes": 27247,
+      "sha256": "5d8153579cfbd4ec23738494dff8dec95b3737981578222b793eff9e3fdd4ca8",
+      "kind": "sfx"
+    }
+  ]
+}

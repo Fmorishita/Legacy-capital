@@ -1,0 +1,237 @@
+{
+  "version": "V5",
+  "editing_base_selected_by_user": true,
+  "v6_included": false,
+  "profiles": [
+    {
+      "profile": "salud",
+      "folder": "02_Doctor",
+      "duration": 36.875,
+      "frames": 885,
+      "shots": 16,
+      "source_only_zip": "00_Guia_IA/Estructura_codigo_V5_salud.zip",
+      "source_metadata_sha256": "c2b6419174888752178a6ddf26d60721c4dadecd267e849af00f1d0829c172fd",
+      "images": [
+        {
+          "path": "02_Doctor/Imagenes_en_orden/01_salud-01.png",
+          "sha256": "4e934bea4bcd1e41b433a9776211bb614259489ee83b349c045549d2ce7a550e"
+        },
+        {
+          "path": "02_Doctor/Imagenes_en_orden/02_salud-02.png",
+          "sha256": "ae5f5cfbd922f6bb780d4d8be8a813205f993beed05651b3270e85b786fb8042"
+        },
+        {
+          "path": "02_Doctor/Imagenes_en_orden/03_salud-03.png",
+          "sha256": "0429dd9facc591e05bc3ca5ed04cb0baca1e1bb5b2cc28f9aa367ac11b6ebe2b"
+        },
+        {
+          "path": "02_Doctor/Imagenes_en_orden/04_salud-04.png",
+          "sha256": "cb4ab8800751d65d5a8decf96c4ab1c0c5035fa51875e8780ab8e014cd2d221a"
+        },
+        {
+          "path": "02_Doctor/Imagenes_en_orden/05_salud-05.png",
+          "sha256": "6f23d7f25e55f5b159cdf66f02459b0e95f5bd015ea35c68a8d63ec70f94c6d2"
+        },
+        {
+          "path": "02_Doctor/Imagenes_en_orden/06_salud-06.png",
+          "sha256": "1a798e935dc884ef45c563bdc869cd0219a683622dd07b613a4506e4c882521e"
+        },
+        {
+          "path": "02_Doctor/Imagenes_en_orden/07_salud-07.png",
+          "sha256": "7c72bef3152584ef1ba6c83a31d36b7bbc4000bfce5c1f695c296ec2d8afd93d"
+        },
+        {
+          "path": "02_Doctor/Imagenes_en_orden/08_salud-08.png",
+          "sha256": "9c0927489baf12fc9d59fc8656b0c1655c4d1ba7f6b8c7f9b71eabf534b7ec50"
+        },
+        {
+          "path": "02_Doctor/Imagenes_en_orden/09_salud-09.png",
+          "sha256": "c299fe0ee870cb8fec0cb9ecd44c4f8871e9b15532ebe6b0714abe6af45bc693"
+        },
+        {
+          "path": "02_Doctor/Imagenes_en_orden/10_salud-10.png",
+          "sha256": "63b878f7632bbca1d3b0a2214c2dea984b84450e47a4dad6425e464143cead49"
+        },
+        {
+          "path": "02_Doctor/Imagenes_en_orden/11_salud-11.png",
+          "sha256": "55e34e62c30513bebcca6ed0c91bb563dfa7c46d13d8a5b37c6e0fc74b0b83d8"
+        },
+        {
+          "path": "02_Doctor/Imagenes_en_orden/12_salud-12.png",
+          "sha256": "ce980bb1d25114056e1edf406b1d462627aed46aa6f64a004c4b703b5adf4872"
+        },
+        {
+          "path": "02_Doctor/Imagenes_en_orden/13_salud-13a.png",
+          "sha256": "812358daff6dc36984df067240af4e6a9bcb0263669aec21d5a2447f6c09ec80"
+        },
+        {
+          "path": "02_Doctor/Imagenes_en_orden/14_salud-13b.png",
+          "sha256": "4da8395af6466bdfb9a5280a3157ab08694f57ac6eeda23ed9c8c2570b3e7638"
+        },
+        {
+          "path": "02_Doctor/Imagenes_en_orden/15_salud-14.png",
+          "sha256": "2e009a15c9ae9497b1385cad5a61dbd120c8638076fd56561b072a8e92bbe5db"
+        },
+        {
+          "path": "02_Doctor/Imagenes_en_orden/16_salud-15.png",
+          "sha256": "2153651e7e490359f22ebae7fa8e9a65af4c7ce0ad7fecfc8f37b71bf6f91594"
+        }
+      ]
+    },
+    {
+      "profile": "empresarios",
+      "folder": "03_Empresario",
+      "duration": 39.416666666666664,
+      "frames": 946,
+      "shots": 17,
+      "source_only_zip": "00_Guia_IA/Estructura_codigo_V5_empresarios.zip",
+      "source_metadata_sha256": "ebf776612d593c586bb7eedecc0db6ab4b47ab7cd69b70811784dcebc3d75fc6",
+      "images": [
+        {
+          "path": "03_Empresario/Imagenes_en_orden/01_empresarios-01.png",
+          "sha256": "bd957ba4af0631f9f9082b8c582203b5da3a5468365058b2ffe18a8a6f168e9e"
+        },
+        {
+          "path": "03_Empresario/Imagenes_en_orden/02_empresarios-02.png",
+          "sha256": "da963ead1c028ff0c9a4644cd8d2cb80d0542ef88fe8b249d67a3095a7302a78"
+        },
+        {
+          "path": "03_Empresario/Imagenes_en_orden/03_empresarios-03.png",
+          "sha256": "61d1aa2e662e81607ae3adebec4493bd31e889a4ba3aaa106a414ffe35a4453b"
+        },
+        {
+          "path": "03_Empresario/Imagenes_en_orden/04_empresarios-04.png",
+          "sha256": "8447a2dc3adbf18b24f025b35dd4f5d342225f2c7b25d374e8877ea1cd27401c"
+        },
+        {
+          "path": "03_Empresario/Imagenes_en_orden/05_empresarios-05.png",
+          "sha256": "6739f0d5be088e4b035876f0f1c9740469a97c04f10755b0f970a62083ebf1ba"
+        },
+        {
+          "path": "03_Empresario/Imagenes_en_orden/06_empresarios-06.png",
+          "sha256": "f35e1716adeffe2706c7a2c97fda6fdece221a8251b7b57b791085b63e5f7621"
+        },
+        {
+          "path": "03_Empresario/Imagenes_en_orden/07_empresarios-07.png",
+          "sha256": "16494c4980f87d7717b087b56e280a98c685dd51e8d8c4f918ba7d38705ebb33"
+        },
+        {
+          "path": "03_Empresario/Imagenes_en_orden/08_empresarios-08.png",
+          "sha256": "2489d85412d2ead29ee8491e1123f6f0cb45cfc1b6504787c2b8bd43d1407f0c"
+        },
+        {
+          "path": "03_Empresario/Imagenes_en_orden/09_empresarios-09.png",
+          "sha256": "45e9b0016527cf22c08a0ed51dfec2943148e309008aaf1d6074c81bea9e8aee"
+        },
+        {
+          "path": "03_Empresario/Imagenes_en_orden/10_empresarios-10.png",
+          "sha256": "65afe8c99e50893ec95445bcce6aed5c43c679d97e93c0acda1a5ee829e45258"
+        },
+        {
+          "path": "03_Empresario/Imagenes_en_orden/11_empresarios-11.png",
+          "sha256": "0425551a6def40efabac98d65d1a8c4e9dc3d187fd545759ad304d4e51dbaad2"
+        },
+        {
+          "path": "03_Empresario/Imagenes_en_orden/12_empresarios-12.png",
+          "sha256": "f2b7c015d622dba304a2da1db499096ebcb23c7ce1cf2d3dcc060d425bb88d5c"
+        },
+        {
+          "path": "03_Empresario/Imagenes_en_orden/13_empresarios-13.png",
+          "sha256": "8b2a07e99566bb28f508ca7c2709ea91121d3e95de22c530f4c532c872c7e552"
+        },
+        {
+          "path": "03_Empresario/Imagenes_en_orden/14_empresarios-14.png",
+          "sha256": "8c6e7da59d855589c7b3e80ddaf5e1dcdb9f050459540357544321bb60be2812"
+        },
+        {
+          "path": "03_Empresario/Imagenes_en_orden/15_empresarios-15a.png",
+          "sha256": "b6ce98fa11f4f37aee8e8baa7ddab661b664e8079da1afa68cd521422e68e14d"
+        },
+        {
+          "path": "03_Empresario/Imagenes_en_orden/16_empresarios-15b.png",
+          "sha256": "ba5d9e3dd44902ee6941a1f45820a0d2e30afffce81e4655eed7b59d0454f4ba"
+        },
+        {
+          "path": "03_Empresario/Imagenes_en_orden/17_empresarios-16.png",
+          "sha256": "2baac8e22f27ec21077b8dbb9ca00fac328e9f32f8113cd1fe5e7a6d86b6a61c"
+        }
+      ]
+    },
+    {
+      "profile": "california",
+      "folder": "04_California",
+      "duration": 41.541666666666664,
+      "frames": 997,
+      "shots": 16,
+      "source_only_zip": "00_Guia_IA/Estructura_codigo_V5_california.zip",
+      "source_metadata_sha256": "0567db03880793fbb7610d0fbeee0a953f1a9429a275f2fac34d1bc17d4fe864",
+      "images": [
+        {
+          "path": "04_California/Imagenes_en_orden/01_california-01.png",
+          "sha256": "163efc4fa0b9b797234a354bf0b3eed674703c070aa65f1cff05944cae0510bf"
+        },
+        {
+          "path": "04_California/Imagenes_en_orden/02_california-02.png",
+          "sha256": "ebead78c6342148a34a4993cdf6279bc41c6d576476e6d1ce454e914a7b6c92d"
+        },
+        {
+          "path": "04_California/Imagenes_en_orden/03_california-03.png",
+          "sha256": "5cdaf11629b197d1c0d60c0066e8f7a1519857ae4fe102debfc7bcd9331059ff"
+        },
+        {
+          "path": "04_California/Imagenes_en_orden/04_california-04.png",
+          "sha256": "c79225fcaae304e438f133d92cbb2a0872e7da22251b24f538e93498dfcfda98"
+        },
+        {
+          "path": "04_California/Imagenes_en_orden/05_california-05.png",
+          "sha256": "6ce5cd09b4d81734e4fe5e4a6bf9bd152183862507cd0fdd6b155cc0bdfd5f74"
+        },
+        {
+          "path": "04_California/Imagenes_en_orden/06_california-06.png",
+          "sha256": "363800d5d2b5972c8b2188df449fbcb8fcac0fc2289eccbe161fb91474007e69"
+        },
+        {
+          "path": "04_California/Imagenes_en_orden/07_california-07.png",
+          "sha256": "a5f6f712b0eb9c465e1b09f3ed8343161794889baa26f16ad21e40afb0a35614"
+        },
+        {
+          "path": "04_California/Imagenes_en_orden/08_california-08.png",
+          "sha256": "9b8e10ebbed8eed1bace635f2e9ae6cd17930f41d0a291031ec9cf9b68752708"
+        },
+        {
+          "path": "04_California/Imagenes_en_orden/09_california-09.png",
+          "sha256": "964e68a19cf0e5d19fa6f20938f091807a0a98b56d0de1c06040bd19a50b3989"
+        },
+        {
+          "path": "04_California/Imagenes_en_orden/10_california-10.png",
+          "sha256": "2553a8ca8ea6452117fb37e4b8ae1012248409fcc6831ec143f692fe9e945402"
+        },
+        {
+          "path": "04_California/Imagenes_en_orden/11_california-11.png",
+          "sha256": "43593e13f9010a331f447ae30e4f9938c6a8b6c2640515a7c2dda7f73ae5b9bf"
+        },
+        {
+          "path": "04_California/Imagenes_en_orden/12_california-12.png",
+          "sha256": "8f8f2ea5220c79a78e2186375c354643f2e6a178e014d5e9dd1ccc2d518ccc37"
+        },
+        {
+          "path": "04_California/Imagenes_en_orden/13_california-13.png",
+          "sha256": "5b51b4d732c8567e16bfc77ef7ec1c313bc0940181b618b3dd31425745e22782"
+        },
+        {
+          "path": "04_California/Imagenes_en_orden/14_california-14.png",
+          "sha256": "e7340cf415eb836d8bbbc2b7f4f07c0e6fd497ed5cd7f08e025f419c67dc2eb0"
+        },
+        {
+          "path": "04_California/Imagenes_en_orden/15_california-15.png",
+          "sha256": "12e334c7a93abd2a10ca23d765c0c7df7778af119feafe3c16be16b8036f2bc6"
+        },
+        {
+          "path": "04_California/Imagenes_en_orden/16_california-16.png",
+          "sha256": "277e4e4faccd8d3a7abdcdc5f2b71355785ec99c8893a9ca32fc5301b1e10b5d"
+        }
+      ]
+    }
+  ],
+  "path_base": "kit_root"
+}

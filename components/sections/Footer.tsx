@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { WhatsappLogo, Phone, MapPin } from "@phosphor-icons/react/dist/ssr";
+import { WhatsappLogo, MapPin } from "@phosphor-icons/react/dist/ssr";
 import type { Dict } from "@/lib/i18n/es";
 import type { NavCopy } from "@/lib/i18n/types";
 import type { PortfolioCopy } from "@/lib/i18n/portfolio";
 import { site, waLink } from "@/lib/site";
 import { Logo } from "@/components/ui/Logo";
+import { TrackedLink } from "@/components/ui/TrackedLink";
 import { StatusDot } from "@/components/ui/StatusChip";
 
 export function Footer({
@@ -35,14 +36,16 @@ export function Footer({
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cream-100/60">{t.contact}</p>
             <ul className="mt-5 grid gap-3 text-sm">
               <li>
-                <a href={waLink(waGeneric)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-gold-300">
+                <TrackedLink
+                  event="whatsapp_click"
+                  origin="footer"
+                  href={waLink(waGeneric)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 hover:text-gold-300"
+                >
                   <WhatsappLogo className="size-4" weight="fill" aria-hidden /> WhatsApp {site.advisor.phoneDisplay}
-                </a>
-              </li>
-              <li>
-                <a href={site.advisor.phoneHref} className="inline-flex items-center gap-2 hover:text-gold-300">
-                  <Phone className="size-4" aria-hidden /> {site.advisor.phoneDisplay}
-                </a>
+                </TrackedLink>
               </li>
               <li className="inline-flex items-center gap-2 text-cream-100/80">
                 <MapPin className="size-4" aria-hidden /> {site.city}

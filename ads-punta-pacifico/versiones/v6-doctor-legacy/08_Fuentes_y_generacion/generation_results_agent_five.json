@@ -1,0 +1,108 @@
+[
+  {
+    "key": "doctor_pickleball_real",
+    "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-cb8551d2-166b-4c27-91dd-7f8966e58fb1.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+    "suggested_output": "03_Imagenes_en_orden/09-legacy-doctor-09.png",
+    "reference_paths": [
+      "03_Imagenes_en_orden/01-legacy-doctor-01.png",
+      "08_Fuentes_y_generacion/Referencias/Amenidades_preview_original.jpg"
+    ],
+    "prompt": "Fotografía editorial inmobiliaria fotorrealista vertical9:16 sin texto ni marcas. Misma identidad ficticia del doctor de la referencia: hombre mexicano de unos40–45años, cabello oscuro con canas sutiles peinado hacia atrás, rostro, nariz y mandíbula reconocibles, piel real con textura y proporciones humanas. Misma pareja de la referencia cuando aparezca. Conservar geometría, materiales, colores, cerramientos, pergolado, piso y mobiliario del proyecto de la referencia; no inventar albercas privadas, mar pegado a la casa ni una planta superior interior. Toda azotea debe tener EXACTAMENTE UN tragaluz, nunca dos; quitar el extra es la corrección expresa autorizada. Ropa correspondiente a la situación, manos anatómicas, miradas hacia la acción, luz y sombras coherentes. Cámara a altura humana, encuadre con aire en tercio superior para titulares, rostros y manos despejados. El texto, gráficas e interfaces se agregan en edición: no dibujar palabras ilegibles ni logos, no mostrar gráfica en tapa exterior de laptop. Mismo doctor, ahora vestido con polo deportivo azul marino, shorts blancos y tenis apropiados, jugando pickleball con un amigo adulto en la cancha AZUL del preview oficial. Conservar dimensiones y líneas de cancha, red, pabellón y palmeras del preview. Captura de un golpe sencillo a la altura de la cintura; pala visible con agarre correcto, UNA pelota amarilla perforada viajando hacia el golpe. Doctor en lado cercano de red con cuerpo de tres cuartos; rostro visible de perfil tres cuartos y OJOS dirigidos a la pelota, nunca mirando atrás o posando a cámara. Amigo al otro lado de la red en postura de espera mirando la pelota. Manos y pies completos y bien apoyados, sin cruzar físicamente la red con cuerpos. Priorizar anatomía y jugada verosímil por encima de acción extrema. EXACTAMENTE DOS jugadores en total. Misma identidad del doctor hero; quitar estetoscopio y uniforme de consulta y poner ropa deportiva. Ningún espectador ni tercera persona. Una sola fotografía, nunca collage.",
+    "generated_source": "procedencia/exec-cb8551d2-166b-4c27-91dd-7f8966e58fb1.png",
+    "sha256": "5617c36cdfe69df9c7f7a761b58f519475fb8a8961025bff75a0c053753c29a3",
+    "bytes": 2340520,
+    "dimensions": [
+      941,
+      1672
+    ],
+    "model_tool": "image_gen.imagegen",
+    "generated_at": "2026-11-14T11:18:27.729328+00:00",
+    "status": "accepted_for_integration_pending_encoded_frame_review",
+    "visual_qa": "Aceptada para integración: dos jugadores, una pelota amarilla, red entre lados, jugador cercano doctor en tres cuartos y ambos orientados a la acción; rostros y agarres plausibles. Sin texto ni uniforme de consulta en cancha."
+  },
+  {
+    "key": "doctor_cena_pabellon",
+    "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-6fe8f5f4-3932-49a6-8e58-c1ad30f1b305.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+    "suggested_output": "03_Imagenes_en_orden/11-legacy-doctor-11.png",
+    "reference_paths": [
+      "03_Imagenes_en_orden/01-legacy-doctor-01.png",
+      "03_Imagenes_en_orden/10-legacy-doctor-10.png",
+      "08_Fuentes_y_generacion/Referencias/Amenidades_preview_original.jpg"
+    ],
+    "prompt": "Fotografía editorial inmobiliaria fotorrealista vertical9:16 sin texto ni marcas. Misma identidad ficticia del doctor de la referencia: hombre mexicano de unos40–45años, cabello oscuro con canas sutiles peinado hacia atrás, rostro, nariz y mandíbula reconocibles, piel real con textura y proporciones humanas. Misma pareja de la referencia cuando aparezca. Conservar geometría, materiales, colores, cerramientos, pergolado, piso y mobiliario del proyecto de la referencia; no inventar albercas privadas, mar pegado a la casa ni una planta superior interior. Toda azotea debe tener EXACTAMENTE UN tragaluz, nunca dos; quitar el extra es la corrección expresa autorizada. Ropa correspondiente a la situación, manos anatómicas, miradas hacia la acción, luz y sombras coherentes. Cámara a altura humana, encuadre con aire en tercio superior para titulares, rostros y manos despejados. El texto, gráficas e interfaces se agregan en edición: no dibujar palabras ilegibles ni logos, no mostrar gráfica en tapa exterior de laptop. Doctor con su pareja, dos personas en total, compartiendo una cena relajada en el SALÓN/PABELLÓN DE USOS MÚLTIPLES AL AIRE LIBRE del preview. Mantener pérgola de madera, postes negros, piedra, vegetación y apertura del pabellón. No convertirlo en restaurante interior. Ropa casual elegante de verano, sin uniforme médico para cenar. Médico de polo azul marino, pareja blusa terracota o crema. Todos sentados de forma natural mirando a quien sirve comida o conversa; manos sirven plato y vasos coherentes, no manos flotantes. Mesa cálida, comida realista y luz de final de tarde, fondo permite reconocer que son amenidades del mismo proyecto. Usar EXACTAMENTE DOS personas, no agregar amigos ni familia extra. Nada de estetoscopio o uniforme para cenar.",
+    "generated_source": "procedencia/exec-6fe8f5f4-3932-49a6-8e58-c1ad30f1b305.png",
+    "sha256": "72f77d1517ed2c1c42f4f6c9b52e81367c5ca7667ca5aacfadf36a002d8c5e53",
+    "bytes": 2520878,
+    "dimensions": [
+      941,
+      1672
+    ],
+    "model_tool": "image_gen.imagegen",
+    "generated_at": "2026-11-14T11:18:27.741811+00:00",
+    "status": "accepted_for_integration_pending_encoded_frame_review",
+    "visual_qa": "Aceptada para integración: pareja coherente, ropa casual, manos sostienen plato, dos personas; pabellón abierto y amenidades reconocibles, sin salón cerrado inventado."
+  },
+  {
+    "key": "doctor_estancia_corta",
+    "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-76dda2b8-b28b-4d4d-85e9-e1256f2544c5.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+    "suggested_output": "03_Imagenes_en_orden/19-legacy-doctor-19.png",
+    "reference_paths": [
+      "03_Imagenes_en_orden/01-legacy-doctor-01.png",
+      "03_Imagenes_en_orden/17-legacy-doctor-17.png"
+    ],
+    "prompt": "Fotografía editorial inmobiliaria fotorrealista vertical9:16 sin texto ni marcas. Misma identidad ficticia del doctor de la referencia: hombre mexicano de unos40–45años, cabello oscuro con canas sutiles peinado hacia atrás, rostro, nariz y mandíbula reconocibles, piel real con textura y proporciones humanas. Misma pareja de la referencia cuando aparezca. Conservar geometría, materiales, colores, cerramientos, pergolado, piso y mobiliario del proyecto de la referencia; no inventar albercas privadas, mar pegado a la casa ni una planta superior interior. Toda azotea debe tener EXACTAMENTE UN tragaluz, nunca dos; quitar el extra es la corrección expresa autorizada. Ropa correspondiente a la situación, manos anatómicas, miradas hacia la acción, luz y sombras coherentes. Cámara a altura humana, encuadre con aire en tercio superior para titulares, rostros y manos despejados. El texto, gráficas e interfaces se agregan en edición: no dibujar palabras ilegibles ni logos, no mostrar gráfica en tapa exterior de laptop. Doctor en ropa casual azul marino y beige recibiendo de manera cordial a UN huésped adulto con una maleta discreta en la entrada de la CASA OFICIAL. Es una escena conceptual de hospedaje de estancia corta: el doctor entrega una tarjeta/llave al huésped, no efectivo, no contrato con texto. Mantener fachada de piedra, madera, cancelería y planta de la referencia. Mano entrega una llave de tamaño natural y manos completas, huésped mira la llave o al anfitrión. El huésped sostiene una maleta mientras recibe la llave, no todos miran a la cámara. Sol de mañana, composición vertical con arquitectura reconocible. EXACTAMENTE DOS personas en total: doctor anfitrión y un huésped adulto. Ningún cartel ni número de unidad inventado.",
+    "generated_source": "procedencia/exec-76dda2b8-b28b-4d4d-85e9-e1256f2544c5.png",
+    "sha256": "78d5dbad66c731c009b35b6d6fc863f56b7c6f46bdb954c945168bfb54b966be",
+    "bytes": 2713378,
+    "dimensions": [
+      941,
+      1672
+    ],
+    "model_tool": "image_gen.imagegen",
+    "generated_at": "2026-11-14T11:18:27.752421+00:00",
+    "status": "accepted_for_integration_pending_encoded_frame_review",
+    "visual_qa": "Aceptada para integración: doctor anfitrión y un huésped con maleta, entrega de llave/tarjeta conceptual, manos visibles y coherentes; fachada y único tragaluz visible en roof. No cifras de renta ni ganancias."
+  },
+  {
+    "key": "doctor_smarthome_luces_clima",
+    "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-69a56947-260d-4959-9aa2-3c9bb2329c06.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+    "suggested_output": "03_Imagenes_en_orden/20-legacy-doctor-20.png",
+    "reference_paths": [
+      "03_Imagenes_en_orden/01-legacy-doctor-01.png",
+      "03_Imagenes_en_orden/26-legacy-doctor-26.png"
+    ],
+    "prompt": "Fotografía editorial inmobiliaria fotorrealista vertical9:16 sin texto ni marcas. Misma identidad ficticia del doctor de la referencia: hombre mexicano de unos40–45años, cabello oscuro con canas sutiles peinado hacia atrás, rostro, nariz y mandíbula reconocibles, piel real con textura y proporciones humanas. Misma pareja de la referencia cuando aparezca. Conservar geometría, materiales, colores, cerramientos, pergolado, piso y mobiliario del proyecto de la referencia; no inventar albercas privadas, mar pegado a la casa ni una planta superior interior. Toda azotea debe tener EXACTAMENTE UN tragaluz, nunca dos; quitar el extra es la corrección expresa autorizada. Ropa correspondiente a la situación, manos anatómicas, miradas hacia la acción, luz y sombras coherentes. Cámara a altura humana, encuadre con aire en tercio superior para titulares, rostros y manos despejados. El texto, gráficas e interfaces se agregan en edición: no dibujar palabras ilegibles ni logos, no mostrar gráfica en tapa exterior de laptop. Doctor en ropa casual dentro de sala oficial, usando smartphone para controlar casa inteligente. Toma sobre su hombro a45grados: rostro de perfil y pantalla físicamente orientada a él; cámara ve pantalla en perspectiva real, dedo toca zona central. Pantalla limpia oscura sin iconos ni texto: la interfaz se compondrá después con motion graphics. Conservar sala, cocina, ventanas y puertas del render. Mostrar luminarias originales encendidas con brillo cálido; minisplit blanco discreto en pared alta donde sea físicamente posible, sin alterar techo, puertas o mobiliario. No poner imagen flotante de teléfono gigante ni gráficas sobre carcasa. Enfatizar gesto de uso, luz y clima, acabado realista. Una sola persona, nada de estetoscopio ni uniforme, ropa casual azul marino. Teléfono proporcionado y con perspectiva física clara.",
+    "generated_source": "procedencia/exec-69a56947-260d-4959-9aa2-3c9bb2329c06.png",
+    "sha256": "68145225db012f3130340ac44df7de264f76914349f51219990acd6d63f5c04d",
+    "bytes": 2286664,
+    "dimensions": [
+      992,
+      1586
+    ],
+    "model_tool": "image_gen.imagegen",
+    "generated_at": "2026-11-14T11:18:27.762888+00:00",
+    "status": "accepted_for_integration_pending_encoded_frame_review",
+    "visual_qa": "Aceptada para integración: móvil negro orientado al usuario en vista sobre hombro, pulgar y mano coherentes; luces y minisplit visibles. Componer UI/iconos en edición. Aspecto992x1586 requiere cover9:16, margen lateral permite recorte sin perder rostro/móvil."
+  },
+  {
+    "key": "doctor_cerradura_digital",
+    "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-a1aed2c6-6fbf-4827-84a4-e8b694304f3e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+    "suggested_output": "03_Imagenes_en_orden/21-legacy-doctor-21.png",
+    "reference_paths": [
+      "03_Imagenes_en_orden/01-legacy-doctor-01.png",
+      "03_Imagenes_en_orden/17-legacy-doctor-17.png"
+    ],
+    "prompt": "Fotografía editorial inmobiliaria fotorrealista vertical9:16 sin texto ni marcas. Misma identidad ficticia del doctor de la referencia: hombre mexicano de unos40–45años, cabello oscuro con canas sutiles peinado hacia atrás, rostro, nariz y mandíbula reconocibles, piel real con textura y proporciones humanas. Misma pareja de la referencia cuando aparezca. Conservar geometría, materiales, colores, cerramientos, pergolado, piso y mobiliario del proyecto de la referencia; no inventar albercas privadas, mar pegado a la casa ni una planta superior interior. Toda azotea debe tener EXACTAMENTE UN tragaluz, nunca dos; quitar el extra es la corrección expresa autorizada. Ropa correspondiente a la situación, manos anatómicas, miradas hacia la acción, luz y sombras coherentes. Cámara a altura humana, encuadre con aire en tercio superior para titulares, rostros y manos despejados. El texto, gráficas e interfaces se agregan en edición: no dibujar palabras ilegibles ni logos, no mostrar gráfica en tapa exterior de laptop. Primer plano narrativo distinto en la puerta de madera de la casa: doctor de tres cuartos usando smartphone junto a cerradura digital negra discreta. Una mano sostiene teléfono, la otra acerca o toca cerradura de forma natural, no abrir puerta con manos imposibles. Teléfono con pantalla orientada hacia doctor y visible a cámara sólo en perspectiva lateral, sin banco ni pagos ni palabras. Cerradura en ubicación y escala correctas de manija existente, mantener material madera/piedra de fachada. Rostro parcialmente visible, mirada al mecanismo, ropa casual azul marino. Una sola puerta, ninguna duplicación de brazos. Debe leerse como acceso desde celular. Una sola persona, nada de estetoscopio ni uniforme; ropa casual azul marino. Pantalla limpia oscura sin letras ni iconos: las indicaciones se harán en el video.",
+    "generated_source": "procedencia/exec-a1aed2c6-6fbf-4827-84a4-e8b694304f3e.png",
+    "sha256": "803b66f859477dd031f43355b994eacd209b19d313b0a78f440ce8c2950677fe",
+    "bytes": 2627003,
+    "dimensions": [
+      941,
+      1672
+    ],
+    "model_tool": "image_gen.imagegen",
+    "generated_at": "2026-11-14T11:18:27.771636+00:00",
+    "status": "accepted_for_integration_pending_encoded_frame_review",
+    "visual_qa": "Aceptada para integración: un médico en ropa casual toca cerradura con una mano y sostiene teléfono con la otra; perspectiva y puerta plausibles, pantalla limpia sin datos inventados."
+  }
+]

@@ -4,12 +4,15 @@
 // Cifras: brochure (sep. 2026), lista de precios (jun. 2026), contrato de promesa,
 // datos AirDNA y análisis de rentabilidad (jul. 2026) compartidos por el desarrollador.
 
+type MobileBarCopy = { whatsapp: string; prices: string; visit: string; ask?: string };
+type ExitCopy = { title: string; body: string; dismiss: string; pics?: readonly { src: string; caption: string }[] };
+
 export const es = {
   lang: "es",
   meta: {
     title: "Casas con roof garden y vista al mar en Ensenada | Legacy Capital Real Estate",
     description:
-      "Preventa privada de casas con roof garden y vista al mar en El Sauzal, Ensenada, para segunda casa o renta vacacional. Desde $3.9 MDP. Recibe por WhatsApp la lista de precios y el estudio de rentabilidad con Legacy Capital Real Estate.",
+      "Preventa de casas de un nivel con roof garden y vista al mar en la zona norte de Ensenada, en clúster privado con acceso controlado. Desde $3.9 MDP con 10% de enganche, 20 mensualidades y entrega en 2028. Recibe el brochure y el análisis de rentabilidad con Legacy Capital Real Estate.",
     ogAlt: "Legacy Capital Real Estate: casas con roof garden y vista al mar en Ensenada",
   },
   a11y: {
@@ -25,14 +28,14 @@ export const es = {
   },
   nav: {
     links: [
-      { href: "#para-ti", label: "Para ti" },
-      { href: "#asesor", label: "Asesor" },
+      { href: "#asesor", label: "Tu asesor" },
       { href: "#casas", label: "Casas" },
-      { href: "#rentabilidad", label: "Rentabilidad" },
+      { href: "#roof", label: "Roof garden" },
+      { href: "#amenidades", label: "Amenidades" },
+      { href: "#plusvalia", label: "Plusvalía" },
       { href: "#pagos", label: "Pagos" },
-      { href: "#ensenada", label: "Ensenada" },
     ],
-    cta: "Lista de precios",
+    cta: "Agenda tu cita",
     switchLang: { label: "English", href: "/en/presale", short: "EN" },
     advisors: { label: "Acceso asesores", href: "/capacitacion" },
   },
@@ -65,7 +68,7 @@ export const es = {
   form: {
     name: "Nombre",
     namePh: "Tu nombre",
-    phone: "WhatsApp",
+    phone: "WhatsApp o celular",
     phonePh: "10 dígitos",
     email: "Correo (opcional)",
     emailPh: "tu@correo.com",
@@ -103,6 +106,16 @@ export const es = {
     consent: "Legacy Capital Real Estate usa tus datos para enviarte la información que solicitas y darte seguimiento. Consulta nuestro",
     privacy: "Aviso de privacidad",
     reassurance: "Respuesta el mismo día.",
+    deliver: {
+      label: "¿Cómo te lo envío?",
+      whatsapp: "WhatsApp",
+      email: "Email",
+      emailLabel: "Correo electrónico",
+      emailRequired: "Escribe tu correo para enviártelo",
+      successEmail: "Fran Morishita te lo enviará a tu correo hoy mismo. Revisa también la carpeta de spam.",
+      tagEmail: "Enviar por email",
+      tagWhatsapp: "Enviar por WhatsApp",
+    },
     errors: {
       name: "Escribe tu nombre",
       phone: "Escribe un número de WhatsApp válido",
@@ -164,13 +177,53 @@ export const es = {
     dialogSubtitle: "Te enviamos por WhatsApp precios, esquemas de pago y el estudio de rentabilidad, pensados para tu caso.",
     items: [
       {
+        id: "tijuana",
+        label: "Vivo en Tijuana",
+        kicker: "Vivo en",
+        city: "Tijuana",
+        tags: ["Escape de fin de semana", "Inversión"],
+        image: "/img/coast-road.jpg",
+        imageAlt: "Carretera escénica junto al mar al atardecer",
+        headline: "Del tráfico de la ciudad a tu casa frente al mar, en 1 h 10 min.",
+        pains: [
+          "Horas al día en el tráfico de bulevares, garitas y obras.",
+          "La vivienda en las zonas que te gustan de la ciudad cada vez cuesta más y tiene menos espacio.",
+          "Quieres un lugar tranquilo para el fin de semana sin tomar un avión.",
+        ],
+        gains: [
+          "Llegas por la carretera escénica en cerca de 1 h 10 min, con el mar a un lado todo el camino.",
+          "Casa de un nivel con roof garden y vista al mar desde $3.9 MDP, en un clúster privado con acceso controlado.",
+          "Cuando no la uses, puede generar ingresos como renta vacacional.",
+        ],
+      },
+      {
+        id: "mexicali",
+        label: "Vivo en Mexicali",
+        kicker: "Vivo en",
+        city: "Mexicali",
+        tags: ["Escape del calor", "Segunda casa"],
+        image: "/media/img/roof-vista.webp",
+        imageAlt: "Roof garden con pérgola frente al mar en un día despejado",
+        headline: "Cambia los 45 °C por la brisa del Pacífico.",
+        pains: [
+          "Veranos con días de más de 45 °C que te obligan a vivir encerrado con el aire acondicionado.",
+          "Las vacaciones se te van en buscar dónde refrescarte.",
+          "Quieres tu dinero en un activo que crezca, no solo en el banco.",
+        ],
+        gains: [
+          "Veranos templados junto al mar, con máximas promedio cercanas a 27 °C en agosto.",
+          "A unas 3 horas en auto: tu casa de verano y de fines de semana largos, sin vuelos.",
+          "Precio de preventa desde $3.9 MDP, con 10% de enganche y 20 mensualidades durante la obra.",
+        ],
+      },
+      {
         id: "california",
         label: "Vivo en California",
         kicker: "Vivo en",
         city: "California",
         tags: ["Segunda casa", "Inversión"],
-        image: "/img/street-aerial-sunset.jpg",
-        imageAlt: "Casas con roof garden frente al mar al atardecer",
+        image: "/media/img/golden-hour-pareja.webp",
+        imageAlt: "Pareja caminando frente a su casa con roof garden al atardecer",
         headline: "La vida frente al Pacífico que California ya no te permite.",
         pains: [
           "La casa media en San Diego ya pasa del millón de dólares y las tasas hipotecarias siguen altas.",
@@ -181,46 +234,6 @@ export const es = {
           "Casas con roof garden y vista al mar desde $3.9 MDP, a unos 100 km de la frontera por la carretera escénica.",
           "Proceso guiado en español o inglés: fideicomiso bancario, notario y pagos, paso a paso.",
           "Si no la usas, puede generar ingresos como renta vacacional.",
-        ],
-      },
-      {
-        id: "mexicoamericano",
-        label: "Soy mexicoamericano",
-        kicker: "Soy",
-        city: "Mexicoamericano",
-        tags: ["Legado", "Segunda casa"],
-        image: "/img/couple-retire.jpg",
-        imageAlt: "Pareja abrazada frente al mar al atardecer",
-        headline: "Construye en México el patrimonio que tus padres soñaron.",
-        pains: [
-          "Comprar casa en Estados Unidos se volvió inalcanzable para muchas familias.",
-          "Has visto terrenos familiares en México perdidos entre intestados, ejidos y pleitos.",
-          "Estás lejos y no tienes a alguien de confianza que vea por tu inversión.",
-        ],
-        gains: [
-          "Escritura clara ante notario: con nacionalidad mexicana compras a tu nombre; si no, te guiamos con el fideicomiso.",
-          "Un lugar para reunir a la familia y un activo que puedes heredar.",
-          "Acompañamiento a distancia: videollamadas, firma y seguimiento de obra en español o inglés.",
-        ],
-      },
-      {
-        id: "monterrey",
-        label: "Vivo en Monterrey",
-        kicker: "Vivo en",
-        city: "Monterrey",
-        tags: ["Segunda casa", "Inversión"],
-        image: "/img/facade-dusk.jpg",
-        imageAlt: "Fachada con roof garden al atardecer",
-        headline: "Cambia 40 grados por la brisa del Pacífico.",
-        pains: [
-          "Veranos de más de 40 °C que te obligan a vivir encerrado con el aire acondicionado.",
-          "La vivienda en Monterrey ya está cara y quieres diversificar tu patrimonio fuera de la ciudad.",
-          "Te interesa invertir en Baja, pero no conoces la zona ni a alguien de confianza allá.",
-        ],
-        gains: [
-          "Veranos templados junto al mar, con máximas promedio cercanas a 27 °C en agosto.",
-          "Un activo que se puede rentar a turistas de Estados Unidos mientras tú no estás.",
-          "Números completos por escrito y recorrido por videollamada, sin viajar para decidir.",
         ],
       },
       {
@@ -244,10 +257,30 @@ export const es = {
         ],
       },
       {
+        id: "monterrey",
+        label: "Vivo en Monterrey",
+        kicker: "Vivo en",
+        city: "MTY",
+        tags: ["Segunda casa", "Inversión"],
+        image: "/media/img/terraza-atardecer.webp",
+        imageAlt: "Pareja con una copa de vino en su terraza frente al mar al atardecer",
+        headline: "Cambia 40 grados por la brisa del Pacífico.",
+        pains: [
+          "Veranos de más de 40 °C que te obligan a vivir encerrado con el aire acondicionado.",
+          "La vivienda en Monterrey ya está cara y quieres diversificar tu patrimonio fuera de la ciudad.",
+          "Te interesa invertir en Baja, pero no conoces la zona ni a alguien de confianza allá.",
+        ],
+        gains: [
+          "Veranos templados junto al mar, con máximas promedio cercanas a 27 °C en agosto.",
+          "Un activo que se puede rentar a turistas de Estados Unidos mientras tú no estás.",
+          "Números completos por escrito y recorrido por videollamada, sin viajar para decidir.",
+        ],
+      },
+      {
         id: "guadalajara",
         label: "Vivo en Guadalajara",
         kicker: "Vivo en",
-        city: "Guadalajara",
+        city: "GDL",
         tags: ["Segunda casa", "Diversificación"],
         image: "/img/wine-couple.jpg",
         imageAlt: "Pareja brindando con vino entre viñedos",
@@ -259,28 +292,8 @@ export const es = {
         ],
         gains: [
           "Brisa de mar, vino del Valle de Guadalupe y cocina de Baja a minutos de tu casa.",
-          "Precio de preventa desde $3.9 MDP, con tu enganche en 19 meses.",
+          "Precio de preventa desde $3.9 MDP, con 10% de enganche y 20 mensualidades durante la obra.",
           "Casa equipada, lista para usarla o rentarla desde el primer día.",
-        ],
-      },
-      {
-        id: "ensenada",
-        label: "Vivo en Ensenada",
-        kicker: "Vivo en",
-        city: "Ensenada",
-        tags: ["Patrimonio", "Para vivir o rentar"],
-        image: "/img/bedroom-family.jpg",
-        imageAlt: "Madre e hijo en la recámara de su casa nueva",
-        headline: "El Pacífico que siempre has visto, ahora a tu nombre.",
-        pains: [
-          "Rentas o vives en una casa que ya no le queda a tu familia, y cada año todo sube.",
-          "Tu ahorro pierde valor en el banco mientras los precios de la ciudad siguen subiendo.",
-          "Has visto preventas que no se entregan y no sabes en quién confiar.",
-        ],
-        gains: [
-          "Casa nueva de un nivel, con vista al mar y roof garden, y tu enganche en 19 meses.",
-          "Un patrimonio que puedes rentar a turistas de Estados Unidos cuando no lo uses.",
-          "Contrato bajo la NOM-247, garantías por escrito y un asesor local contigo hasta la entrega.",
         ],
       },
     ],
@@ -629,12 +642,17 @@ export const es = {
       "Imágenes ilustrativas con fines promocionales. Precios en moneda nacional, sujetos a cambio y disponibilidad sin previo aviso. Las características, acabados y dimensiones pueden variar conforme al proyecto ejecutivo. Las proyecciones de renta son referenciales y no garantizan rendimientos. Legacy Capital Real Estate participa como comercializador; el desarrollo lo realiza un desarrollador independiente. No constituye una oferta vinculante.",
     rights: "Todos los derechos reservados.",
   },
-  mobileBar: { whatsapp: "WhatsApp", prices: "Precios", visit: "Visita" },
+  mobileBar: { whatsapp: "WhatsApp", prices: "Precios", visit: "Agenda tu cita", ask: "¿Dudas? Escríbeme" } as MobileBarCopy,
   exit: {
-    title: "¿Te llevas el estudio de rentabilidad?",
-    body: "12.33% anual estimado en renta vacacional. Te lo enviamos por WhatsApp junto con la lista de precios.",
+    title: "Antes de irte: tu casa ya viene equipada.",
+    body: "Hasta $450,000 de equipamiento incluido en el precio: cocina con granito, minisplits, smart home y roof con asador. Te enviamos precios y el brochure por WhatsApp o email.",
     dismiss: "No, gracias",
-  },
+    pics: [
+      { src: "/media/img/eq-cocina-real.webp", caption: "Cocina equipada" },
+      { src: "/media/img/eq-recamara-real.webp", caption: "Minisplit en recámaras" },
+      { src: "/media/img/eq-roof-real.webp", caption: "Roof con asador" },
+    ],
+  } as ExitCopy,
   dialog: {
     pricesTitle: "Recibe precios y el estudio de rentabilidad",
     visitTitle: "Agenda tu visita",

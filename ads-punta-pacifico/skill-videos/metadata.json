@@ -1,0 +1,131 @@
+{
+  "name": "videos-punta-pacifico",
+  "version": "1.11.0",
+  "created": "2026-11-06",
+  "updated": "2026-11-16",
+  "language": "es",
+  "baseline_delivery": "V4",
+  "baseline_aesthetic_approval": "approved_in_general_with_refinements",
+  "maintenance_authorization": "Actualizar al aplicar cambios importantes y reutilizables solicitados por el usuario; sincronizar instalada y descargable.",
+  "installation_scope": "local_agent_environment",
+  "cloud_library_registration": "not_performed",
+  "current_work_version": "V9-Legacy-Capital-Doctor",
+  "current_work_status": "final_verified_existing_assets",
+  "V5_aesthetic_approval": "pending_user_review",
+  "preferred_editing_base": "V5",
+  "current_brand_visible": "Legacy Capital",
+  "internal_source_identity": "Punta Pacífico",
+  "active_profile_versions": {
+    "salud": "V9-Legacy-Capital-Doctor",
+    "empresarios": "V5",
+    "california": "V5"
+  },
+  "V6_Higgsfield_aesthetic_approval": "rejected_by_user_2026-11-14",
+  "V6_Legacy_Capital_Doctor_aesthetic_approval": "pending_user_review",
+  "visual_editor": {
+    "name": "Legacy Video Studio",
+    "source_path": "/workspace/sites/legacy-video-studio",
+    "example_project": "V6-Legacy-Capital-Doctor",
+    "publication_status": "deployed_verified",
+    "storage": "private_Site_R2_explicit_project_save_with_browser_IndexedDB_drafts_and_portable_export",
+    "original_render_equivalence": "not_claimed",
+    "user_aesthetic_approval": "pending_user_review",
+    "url": "https://legacy-video-studio-fran.trimjewel4.chatgpt.site",
+    "source_commit": "1327854fff3f0ca856effd8eb4fc3b15231114d3",
+    "qa": {
+      "node_dom_interactions": "passed",
+      "data_and_asset_checks": "passed",
+      "native_deployment_screenshot": "reviewed",
+      "interactive_browser_and_media_export": "not_verified_tools_unavailable",
+      "native_mcp_connection": "passed",
+      "new_real_voice_and_private_result": "passed",
+      "simulated_auto_integration": "passed",
+      "mobile_dom_and_voice_adapters": "passed",
+      "physical_phone_microphone": "not_verified",
+      "native_audio_input": "not_supported_in_current_session",
+      "free_local_voice_transcription": "passed_real_private_MP3_exact_text_match",
+      "project_library": "passed_Node_backend_transfer_and_desktop_mobile_DOM",
+      "live_private_project_save_and_reload": "passed_Doctor_V6_preserved_stale_write_rejected"
+    },
+    "ai_workflow": "ChatGPT MCP request → real generation → uploaded assets → validated project result → automatic integration",
+    "ai_mode": "existing_ChatGPT_account_no_paid_AI_API",
+    "ai_request_storage": "private_Site_R2",
+    "manual_draft_storage": "browser_IndexedDB",
+    "chatGPT_message_submission_required": true,
+    "mcp_tool_count": 11,
+    "mcp_connection_verified": true,
+    "live_voice_generation_upload_and_result_verified": true,
+    "qa_request_isolated_from_working_ad": true,
+    "ai_plugin_id": "plugin_asdk_app_sites_e17500d2b35c8191acf2a508fdfbf1d2",
+    "mobile_workflow": "Home project library; within a project AI instructions first with tools on demand",
+    "voice_instructions": "real MediaRecorder notes; optional browser dictation; private request attachments",
+    "mcp_server_tool_count": 11,
+    "native_connector_cached_tool_count": 10,
+    "voice_instruction_fallback": "Whisper.cpp base-q5_1 local CPU; no audio transcription API",
+    "project_library": {
+      "revision": "1.8.0",
+      "status": "deployed_verified",
+      "entry": "Home with independent video projects",
+      "saved_project_storage": "private_Site_R2_with_media_and_revision_preconditions",
+      "draft_and_history_storage": "browser_IndexedDB",
+      "cross_device": "explicit_saved_project_snapshots; local_drafts_not_automatically_synced",
+      "imports": [
+        "local_video",
+        "portable_editable_JSON"
+      ],
+      "source_links": [
+        "Google_Drive_folder_or_file",
+        "GitHub_repository_or_folder"
+      ],
+      "source_import": "explicit_ChatGPT_request_using_current_connectors",
+      "embedded_provider_connection": "not_claimed; Sites_plugin_eligibility_tool_unavailable",
+      "flattened_video_layers": "not_automatically_recovered",
+      "isolation": "project_media_comments_and_AI_requests_independent",
+      "source_commit": "1327854fff3f0ca856effd8eb4fc3b15231114d3",
+      "initial_media_load": "deferred_until_project_open"
+    }
+  },
+  "repository_delivery": {
+    "url": "https://github.com/Fmorishita/Legacy-capital/tree/main/ads-punta-pacifico",
+    "initial_materials_commit": "0565ad399c3b4f7d37b460caeb603670eef64c6b",
+    "scope": [
+      "Doctor V5",
+      "Empresario V5",
+      "California V5",
+      "Doctor V6 Legacy Capital",
+      "Legacy Video Studio"
+    ],
+    "media": "optimized_working_copies_and_verified_downloads; exact_originals_in_authorized_Drive",
+    "visibility": "existing_public_repository_unchanged"
+  },
+  "V7_Legacy_Capital_Doctor_aesthetic_approval": "pending_user_review",
+  "reference_video_editing": {
+    "revision": "1.9.0",
+    "script_source": "user-selected Claude draft narration cross-checked with original client paragraph",
+    "reference_video": "doctor-v6-borrador_claude.mp4",
+    "historical_graphic_date_conflict": "selected narration: mid-2028; historical graphic: Dec-2028; graphics follow selected narration",
+    "graphics": "native vertical editable vectors and verified map crops; captions throughout",
+    "photo_reuse_audit": "hash, source lineage and visual review; each photographic background once",
+    "pause_editing": "quiet centers only; retain words and realign all timing",
+    "technical_report": "separate project report; skill does not assert render completion or human listening",
+    "prior_versions_preserved": true
+  },
+  "V9_Legacy_Capital_Doctor_aesthetic_approval": "pending_user_review",
+  "api_local_workflow": {
+    "revision": "1.11.0",
+    "execution_choice": "latest_explicit_user_preference",
+    "key_location": "runtime_only_not_in_distribution",
+    "paid_seedance_verification": "real_SDK_completed_result_recorded_before_stop",
+    "new_generations_allowed": false,
+    "api_and_mcp_balances": "distinct",
+    "voice_direction": "male_professional_northern_Mexican_requested_not_human_verified",
+    "final_export": "see_project_QA"
+  },
+  "existing_asset_workflow": {
+    "MCP_selected_clips": 15,
+    "API_previously_completed_selected_clips": 2,
+    "native_render_cuts": 2,
+    "new_jobs_after_stop": 0,
+    "aesthetic_approval": "pending_user_review"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 24,
+    "coordinate_origin": "top-left",
+    "background": "#071D29"
+  },
+  "safe_text_reference": {
+    "x_min": 108,
+    "x_max": 972,
+    "y_min": 168,
+    "y_max": 1330
+  },
+  "fonts": {
+    "PPCondensed": {
+      "file": "Tipografias/OpenSans_Condensed_Bold.ttf",
+      "family": "Open Sans Condensed",
+      "weight": 700
+    },
+    "PPText": {
+      "file": "Tipografias/OpenSans_Semibold.ttf",
+      "family": "Open Sans",
+      "weight": 600
+    },
+    "PPBold": {
+      "file": "Tipografias/OpenSans_ExtraBold.ttf",
+      "family": "Open Sans",
+      "weight": 800
+    }
+  },
+  "colors": {
+    "navy": "#071D29",
+    "white": "#FFFFFF",
+    "salud_accent": "#FFD086",
+    "empresarios_accent": "#E5BC76",
+    "empresarios_cta_action": "#FFE1AD",
+    "california_accent": "#FFC696"
+  },
+  "layout": {
+    "image": "full bleed, object-fit:cover; per-shot object-position in timeline",
+    "opening_price_seconds": [
+      0,
+      3.6
+    ],
+    "cta_center_x": 540,
+    "captions": "group positions and font sizes are per-group, see subtitulos_animados.json"
+  },
+  "caption_animation": {
+    "group_enter": {
+      "y_from": 18,
+      "opacity_from": 0.3,
+      "duration_seconds": 0.13,
+      "ease": "power3.out"
+    },
+    "word_emphasis": {
+      "scale_from": 0.97,
+      "scale_to": 1.035,
+      "max_duration_seconds": 0.1,
+      "reset_before_next_word": true,
+      "color": "profile accent while spoken, white afterwards"
+    }
+  },
+  "authoritative_source": "CSS and GSAP in each Proyecto_HyperFrames/compositions/*.html. This summary is not a substitute for authored animation source."
+}

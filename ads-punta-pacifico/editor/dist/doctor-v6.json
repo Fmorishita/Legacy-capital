@@ -1,0 +1,5837 @@
+{
+  "schemaVersion": 1,
+  "id": "doctor-v6-legacy",
+  "title": "Doctor V6 · Legacy Capital",
+  "version": "V6 · Base editable",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "duration": 64.04166666666667,
+  "brand": {
+    "name": "Legacy Capital",
+    "logoAssetId": "legacy-logo",
+    "colors": {
+      "navy": "#1A2B4C",
+      "gold": "#C5A564",
+      "cream": "#F5F0E6",
+      "price": "#E2C98F"
+    }
+  },
+  "script": "Doctor, ¿buscas una casa con vista al mar para disfrutar en pareja o invertir? En El Sauzal, a la entrada de Ensenada, descubre casas de un nivel, de dos o tres recámaras, desde tres punto nueve hasta cuatro punto nueve millones de pesos, con roof garden privado y vista al mar. Imagina una pausa en la alberca, pickleball con tus amigos, tardes de asador y cenas con tus seres queridos en las amenidades o en tu roof. Cuida tu liquidez con pagos flexibles: diez por ciento de enganche, diez por ciento distribuido en veinte mensualidades y ochenta por ciento contra entrega, a mediados de dos mil veintiocho. Explora su potencial de plusvalía y de ingresos por rentas de estancia corta. Disfruta una smart home: controla luces, minisplit y cerradura digital desde tu celular. Aparta este mes y recibe cocina, recámaras, baños y roof con equipamiento incluido, con un ahorro de hasta cuatrocientos cincuenta mil pesos. Haz clic en el botón de abajo para más información. Un asesor de Legacy Capital te atenderá.",
+  "voiceScript": "Doctor, ¿buscas una casa con vista al mar para disfrutar en pareja o invertir? En El Sauzal, a la entrada de Ensenada, descubre casas de un nivel, de dos o tres recámaras, desde tres punto nueve hasta cuatro punto nueve millones de pesos, con roof garden privado y vista al mar. Imagina una pausa en la alberca, pickleball con tus amigos, tardes de asador y cenas con tus seres queridos en las amenidades o en tu roof. Cuida tu liquidez con pagos flexibles: diez por ciento de enganche, diez por ciento distribuido en veinte mensualidades y ochenta por ciento contra entrega, a mediados de dos mil veintiocho. Explora su potencial de plusvalía y de ingresos por rentas de estancia corta. Disfruta una smart home: controla luces, minisplit y cerradura digital desde tu celular. Aparta este mes y recibe cocina, recámaras, baños y roof con equipamiento incluido, con un ahorro de hasta cuatrocientos cincuenta mil pesos. Haz clic en el botón de abajo para más información. Un asesor de Legacy Capital te atenderá.",
+  "voiceStatus": "synced",
+  "scenes": [
+    {
+      "id": "legacy-doctor-01",
+      "title": "01 · Doctor,",
+      "start": 0,
+      "duration": 2.59575,
+      "coreEnd": 2.59575,
+      "originalVisibleDuration": 2.87575,
+      "mediaId": "image-01",
+      "narration": "Doctor, ¿buscas una casa con vista al mar",
+      "headline": "",
+      "captionY": 1160,
+      "heroY": 180,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 0,
+        "panY": 0,
+        "motion": "push-in",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "wipe-left",
+        "duration": 0
+      },
+      "layers": [],
+      "source": {
+        "image": "03_Imagenes_en_orden/01-legacy-doctor-01.png",
+        "imageSha256": "f5b106bb251b44db40fa2edb9520a311bd57b07db0838f94e599c88061c9d33b",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-01.html",
+        "visibleText": "",
+        "anchor": "Doctor,"
+      }
+    },
+    {
+      "id": "legacy-doctor-02",
+      "title": "02 · para disfrutar",
+      "start": 2.59575,
+      "duration": 2.789792,
+      "coreEnd": 5.385542,
+      "originalVisibleDuration": 3.069792,
+      "mediaId": "image-02",
+      "narration": "para disfrutar en pareja o invertir?",
+      "headline": "",
+      "captionY": 760,
+      "heroY": 180,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 20,
+        "panY": 0,
+        "motion": "drift-left",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "dissolve",
+        "duration": 0.28
+      },
+      "layers": [],
+      "source": {
+        "image": "03_Imagenes_en_orden/02-legacy-doctor-02.png",
+        "imageSha256": "ae5f5cfbd922f6bb780d4d8be8a813205f993beed05651b3270e85b786fb8042",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-02.html",
+        "visibleText": "",
+        "anchor": "para disfrutar"
+      }
+    },
+    {
+      "id": "legacy-doctor-03",
+      "title": "03 · EL SAUZAL ENTRADA A ENSENADA",
+      "start": 5.385542,
+      "duration": 2.536417,
+      "coreEnd": 7.921959,
+      "originalVisibleDuration": 2.816417,
+      "mediaId": "image-03",
+      "narration": "En El Sauzal, a la entrada de Ensenada,",
+      "headline": "ENTRADA A\nENSENADA",
+      "captionY": 1235,
+      "heroY": 200,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 0,
+        "panY": 0,
+        "motion": "push-in",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "zoom",
+        "duration": 0.28
+      },
+      "layers": [
+        {
+          "id": "legacy-doctor-03-location",
+          "type": "text",
+          "text": "EL SAUZAL",
+          "x": 108,
+          "y": 200,
+          "width": 864,
+          "fontSize": 34,
+          "fontFamily": "LegacyBody",
+          "color": "#F5F0E6",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-03-headline-0",
+          "type": "text",
+          "text": "ENTRADA A",
+          "x": 108,
+          "y": 260,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#F5F0E6",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-03-headline-1",
+          "type": "text",
+          "text": "ENSENADA",
+          "x": 108,
+          "y": 370,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#C5A564",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.16,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-03-rule",
+          "type": "line",
+          "x": 108,
+          "y": 492,
+          "width": 160,
+          "height": 7,
+          "color": "#C5A564",
+          "animation": "wipe",
+          "start": 0.18,
+          "enabled": true
+        }
+      ],
+      "source": {
+        "image": "03_Imagenes_en_orden/03-legacy-doctor-03.jpeg",
+        "imageSha256": "bffcfdca35e20efa862084f01c73103930e4b25a3610a5bc29e9a85ca63bb731",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-03.html",
+        "visibleText": "EL SAUZAL ENTRADA A ENSENADA",
+        "anchor": "En El Sauzal"
+      }
+    },
+    {
+      "id": "legacy-doctor-04",
+      "title": "04 · UN SOLO NIVEL",
+      "start": 7.921959,
+      "duration": 1.650458,
+      "coreEnd": 9.572417,
+      "originalVisibleDuration": 1.930458,
+      "mediaId": "image-04",
+      "narration": "descubre casas de un nivel,",
+      "headline": "UN SOLO\nNIVEL",
+      "captionY": 1235,
+      "heroY": 200,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 20,
+        "panY": 0,
+        "motion": "drift-left",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "wipe-left",
+        "duration": 0.28
+      },
+      "layers": [
+        {
+          "id": "legacy-doctor-04-headline-0",
+          "type": "text",
+          "text": "UN SOLO",
+          "x": 108,
+          "y": 200,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#F5F0E6",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-04-headline-1",
+          "type": "text",
+          "text": "NIVEL",
+          "x": 108,
+          "y": 310,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#C5A564",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.16,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-04-rule",
+          "type": "line",
+          "x": 108,
+          "y": 432,
+          "width": 160,
+          "height": 7,
+          "color": "#C5A564",
+          "animation": "wipe",
+          "start": 0.18,
+          "enabled": true
+        }
+      ],
+      "source": {
+        "image": "03_Imagenes_en_orden/04-legacy-doctor-04.png",
+        "imageSha256": "61d1aa2e662e81607ae3adebec4493bd31e889a4ba3aaa106a414ffe35a4453b",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-04.html",
+        "visibleText": "UN SOLO NIVEL",
+        "anchor": "descubre casas"
+      }
+    },
+    {
+      "id": "legacy-doctor-05",
+      "title": "05 · 2 O 3 RECÁMARAS",
+      "start": 9.572417,
+      "duration": 1.601958,
+      "coreEnd": 11.174375,
+      "originalVisibleDuration": 1.881958,
+      "mediaId": "image-05",
+      "narration": "de dos o tres recámaras,",
+      "headline": "2 O 3\nRECÁMARAS",
+      "captionY": 1235,
+      "heroY": 200,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 0,
+        "panY": 0,
+        "motion": "push-in",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "dissolve",
+        "duration": 0.28
+      },
+      "layers": [
+        {
+          "id": "legacy-doctor-05-headline-0",
+          "type": "text",
+          "text": "2 O 3",
+          "x": 108,
+          "y": 200,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#F5F0E6",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-05-headline-1",
+          "type": "text",
+          "text": "RECÁMARAS",
+          "x": 108,
+          "y": 310,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#C5A564",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.16,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-05-rule",
+          "type": "line",
+          "x": 108,
+          "y": 432,
+          "width": 160,
+          "height": 7,
+          "color": "#C5A564",
+          "animation": "wipe",
+          "start": 0.18,
+          "enabled": true
+        }
+      ],
+      "source": {
+        "image": "03_Imagenes_en_orden/05-legacy-doctor-05.png",
+        "imageSha256": "cb4ab8800751d65d5a8decf96c4ab1c0c5035fa51875e8780ab8e014cd2d221a",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-05.html",
+        "visibleText": "2 O 3 RECÁMARAS",
+        "anchor": "de dos o tres recámaras"
+      }
+    },
+    {
+      "id": "legacy-doctor-06",
+      "title": "06 · $3.9–$4.9 MDP MXN",
+      "start": 11.174375,
+      "duration": 3.59225,
+      "coreEnd": 14.766625,
+      "originalVisibleDuration": 3.87225,
+      "mediaId": "image-06",
+      "narration": "desde tres punto nueve hasta cuatro punto nueve millones de pesos,",
+      "headline": "$3.9–$4.9 MDP\nMXN",
+      "captionY": 1235,
+      "heroY": 200,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 20,
+        "panY": 0,
+        "motion": "drift-left",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "zoom",
+        "duration": 0.28
+      },
+      "layers": [
+        {
+          "id": "legacy-doctor-06-headline-0",
+          "type": "text",
+          "text": "$3.9–$4.9 MDP",
+          "x": 108,
+          "y": 200,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#F5F0E6",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-06-headline-1",
+          "type": "text",
+          "text": "MXN",
+          "x": 108,
+          "y": 310,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#C5A564",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.16,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-06-rule",
+          "type": "line",
+          "x": 108,
+          "y": 432,
+          "width": 160,
+          "height": 7,
+          "color": "#C5A564",
+          "animation": "wipe",
+          "start": 0.18,
+          "enabled": true
+        }
+      ],
+      "source": {
+        "image": "03_Imagenes_en_orden/06-legacy-doctor-06.png",
+        "imageSha256": "0429dd9facc591e05bc3ca5ed04cb0baca1e1bb5b2cc28f9aa367ac11b6ebe2b",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-06.html",
+        "visibleText": "$3.9–$4.9 MDP MXN",
+        "anchor": "desde tres punto nueve"
+      }
+    },
+    {
+      "id": "legacy-doctor-07",
+      "title": "07 · ROOF PRIVADO",
+      "start": 14.766625,
+      "duration": 2.92475,
+      "coreEnd": 17.691375,
+      "originalVisibleDuration": 3.20475,
+      "mediaId": "image-07",
+      "narration": "con roof garden privado y vista al mar.",
+      "headline": "ROOF\nPRIVADO",
+      "captionY": 1235,
+      "heroY": 200,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 0,
+        "panY": 0,
+        "motion": "push-in",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "wipe-left",
+        "duration": 0.28
+      },
+      "layers": [
+        {
+          "id": "legacy-doctor-07-headline-0",
+          "type": "text",
+          "text": "ROOF",
+          "x": 108,
+          "y": 200,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#F5F0E6",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-07-headline-1",
+          "type": "text",
+          "text": "PRIVADO",
+          "x": 108,
+          "y": 310,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#C5A564",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.16,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-07-rule",
+          "type": "line",
+          "x": 108,
+          "y": 432,
+          "width": 160,
+          "height": 7,
+          "color": "#C5A564",
+          "animation": "wipe",
+          "start": 0.18,
+          "enabled": true
+        }
+      ],
+      "source": {
+        "image": "03_Imagenes_en_orden/07-legacy-doctor-07.png",
+        "imageSha256": "347ce2d6fb695029e8ad4b22717e8a66a7aa884027f70cd9ef9461b6929f2d65",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-07.html",
+        "visibleText": "ROOF PRIVADO",
+        "anchor": "con roof garden privado"
+      }
+    },
+    {
+      "id": "legacy-doctor-08",
+      "title": "08 · ALBERCA",
+      "start": 17.691375,
+      "duration": 2.063084,
+      "coreEnd": 19.754459,
+      "originalVisibleDuration": 2.343084,
+      "mediaId": "image-08",
+      "narration": "Imagina una pausa en la alberca,",
+      "headline": "ALBERCA",
+      "captionY": 1235,
+      "heroY": 200,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 20,
+        "panY": 0,
+        "motion": "drift-left",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "dissolve",
+        "duration": 0.28
+      },
+      "layers": [
+        {
+          "id": "legacy-doctor-08-headline-0",
+          "type": "text",
+          "text": "ALBERCA",
+          "x": 108,
+          "y": 200,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#F5F0E6",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-08-rule",
+          "type": "line",
+          "x": 108,
+          "y": 322,
+          "width": 160,
+          "height": 7,
+          "color": "#C5A564",
+          "animation": "wipe",
+          "start": 0.18,
+          "enabled": true
+        }
+      ],
+      "source": {
+        "image": "03_Imagenes_en_orden/08-legacy-doctor-08.png",
+        "imageSha256": "1a798e935dc884ef45c563bdc869cd0219a683622dd07b613a4506e4c882521e",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-08.html",
+        "visibleText": "ALBERCA",
+        "anchor": "Imagina una pausa"
+      }
+    },
+    {
+      "id": "legacy-doctor-09",
+      "title": "09 · PICKLEBALL",
+      "start": 19.754459,
+      "duration": 1.638375,
+      "coreEnd": 21.392834,
+      "originalVisibleDuration": 1.918375,
+      "mediaId": "image-09",
+      "narration": "pickleball con tus amigos,",
+      "headline": "PICKLEBALL",
+      "captionY": 650,
+      "heroY": 200,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 0,
+        "panY": 0,
+        "motion": "push-in",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "zoom",
+        "duration": 0.28
+      },
+      "layers": [
+        {
+          "id": "legacy-doctor-09-headline-0",
+          "type": "text",
+          "text": "PICKLEBALL",
+          "x": 108,
+          "y": 200,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#F5F0E6",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-09-rule",
+          "type": "line",
+          "x": 108,
+          "y": 322,
+          "width": 160,
+          "height": 7,
+          "color": "#C5A564",
+          "animation": "wipe",
+          "start": 0.18,
+          "enabled": true
+        }
+      ],
+      "source": {
+        "image": "03_Imagenes_en_orden/09-legacy-doctor-09.png",
+        "imageSha256": "5617c36cdfe69df9c7f7a761b58f519475fb8a8961025bff75a0c053753c29a3",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-09.html",
+        "visibleText": "PICKLEBALL",
+        "anchor": "pickleball con tus amigos"
+      }
+    },
+    {
+      "id": "legacy-doctor-10",
+      "title": "10 · tardes de asador",
+      "start": 21.392834,
+      "duration": 0.861625,
+      "coreEnd": 22.254459,
+      "originalVisibleDuration": 1.141625,
+      "mediaId": "image-10",
+      "narration": "tardes de asador y",
+      "headline": "",
+      "captionY": 480,
+      "heroY": 200,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 20,
+        "panY": 0,
+        "motion": "drift-left",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "wipe-left",
+        "duration": 0.28
+      },
+      "layers": [],
+      "source": {
+        "image": "03_Imagenes_en_orden/10-legacy-doctor-10.png",
+        "imageSha256": "7c72bef3152584ef1ba6c83a31d36b7bbc4000bfce5c1f695c296ec2d8afd93d",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-10.html",
+        "visibleText": "",
+        "anchor": "tardes de asador"
+      }
+    },
+    {
+      "id": "legacy-doctor-11",
+      "title": "11 · cenas con tus seres queridos",
+      "start": 22.254459,
+      "duration": 2.378666,
+      "coreEnd": 24.633125,
+      "originalVisibleDuration": 2.658666,
+      "mediaId": "image-11",
+      "narration": "cenas con tus seres queridos en las amenidades",
+      "headline": "",
+      "captionY": 1235,
+      "heroY": 200,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 0,
+        "panY": 0,
+        "motion": "push-in",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "dissolve",
+        "duration": 0.28
+      },
+      "layers": [],
+      "source": {
+        "image": "03_Imagenes_en_orden/11-legacy-doctor-11.png",
+        "imageSha256": "72f77d1517ed2c1c42f4f6c9b52e81367c5ca7667ca5aacfadf36a002d8c5e53",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-11.html",
+        "visibleText": "",
+        "anchor": "cenas con tus seres queridos"
+      }
+    },
+    {
+      "id": "legacy-doctor-12",
+      "title": "12 · o en tu roof",
+      "start": 24.633125,
+      "duration": 1.492709,
+      "coreEnd": 26.125834,
+      "originalVisibleDuration": 1.772709,
+      "mediaId": "image-12",
+      "narration": "o en tu roof.",
+      "headline": "",
+      "captionY": 520,
+      "heroY": 200,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 20,
+        "panY": 0,
+        "motion": "drift-left",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "zoom",
+        "duration": 0.28
+      },
+      "layers": [],
+      "source": {
+        "image": "03_Imagenes_en_orden/12-legacy-doctor-12.png",
+        "imageSha256": "ebbdd355d0160d79f91339b0cca6a18bd7e259929191a5c28d3d686957f4d497",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-12.html",
+        "visibleText": "",
+        "anchor": "o en tu roof"
+      }
+    },
+    {
+      "id": "legacy-doctor-13",
+      "title": "13 · CUIDA TU LIQUIDEZ",
+      "start": 26.125834,
+      "duration": 2.330083,
+      "coreEnd": 28.455917,
+      "originalVisibleDuration": 2.610083,
+      "mediaId": "image-13",
+      "narration": "Cuida tu liquidez con pagos flexibles:",
+      "headline": "CUIDA TU\nLIQUIDEZ",
+      "captionY": 640,
+      "heroY": 168,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 0,
+        "panY": 0,
+        "motion": "push-in",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "wipe-left",
+        "duration": 0.28
+      },
+      "layers": [
+        {
+          "id": "legacy-doctor-13-headline-0",
+          "type": "text",
+          "text": "CUIDA TU",
+          "x": 108,
+          "y": 168,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#F5F0E6",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-13-headline-1",
+          "type": "text",
+          "text": "LIQUIDEZ",
+          "x": 108,
+          "y": 278,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#C5A564",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.16,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-13-rule",
+          "type": "line",
+          "x": 108,
+          "y": 400,
+          "width": 160,
+          "height": 7,
+          "color": "#C5A564",
+          "animation": "wipe",
+          "start": 0.18,
+          "enabled": true
+        }
+      ],
+      "source": {
+        "image": "03_Imagenes_en_orden/13-legacy-doctor-13.png",
+        "imageSha256": "c299fe0ee870cb8fec0cb9ecd44c4f8871e9b15532ebe6b0714abe6af45bc693",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-13.html",
+        "visibleText": "CUIDA TU LIQUIDEZ",
+        "anchor": "Cuida tu liquidez"
+      }
+    },
+    {
+      "id": "legacy-doctor-14",
+      "title": "14 · 10% DE ENGANCHE",
+      "start": 28.455917,
+      "duration": 1.614083,
+      "coreEnd": 30.07,
+      "originalVisibleDuration": 1.894083,
+      "mediaId": "image-14",
+      "narration": "diez por ciento de enganche,",
+      "headline": "10%\nDE ENGANCHE",
+      "captionY": 1235,
+      "heroY": 180,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 20,
+        "panY": 0,
+        "motion": "drift-left",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "dissolve",
+        "duration": 0.28
+      },
+      "layers": [
+        {
+          "id": "legacy-doctor-14-number",
+          "type": "text",
+          "text": "10%",
+          "x": 108,
+          "y": 180,
+          "width": 864,
+          "fontSize": 180,
+          "fontFamily": "LegacyDisplay",
+          "color": "#C5A564",
+          "align": "left",
+          "animation": "pop",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-14-label",
+          "type": "text",
+          "text": "DE ENGANCHE",
+          "x": 108,
+          "y": 385,
+          "width": 864,
+          "fontSize": 48,
+          "fontFamily": "LegacyDisplay",
+          "color": "#F5F0E6",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-14-stage-0",
+          "type": "rect",
+          "x": 108,
+          "y": 465,
+          "width": 80,
+          "height": 10,
+          "color": "#C5A564",
+          "animation": "wipe",
+          "start": 0.15,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-14-stage-1",
+          "type": "rect",
+          "x": 196,
+          "y": 465,
+          "width": 80,
+          "height": 10,
+          "color": "#8090A8",
+          "animation": "wipe",
+          "start": 0.195,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-14-stage-2",
+          "type": "rect",
+          "x": 284,
+          "y": 465,
+          "width": 640,
+          "height": 10,
+          "color": "#8090A8",
+          "animation": "wipe",
+          "start": 0.24,
+          "enabled": true
+        }
+      ],
+      "source": {
+        "image": "03_Imagenes_en_orden/14-legacy-doctor-14.png",
+        "imageSha256": "63b878f7632bbca1d3b0a2214c2dea984b84450e47a4dad6425e464143cead49",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-14.html",
+        "visibleText": "10% DE ENGANCHE",
+        "anchor": "diez por ciento de enganche"
+      }
+    },
+    {
+      "id": "legacy-doctor-15",
+      "title": "15 · 10% TOTAL EN 20 MENSUALIDADES",
+      "start": 30.07,
+      "duration": 2.645625,
+      "coreEnd": 32.715625,
+      "originalVisibleDuration": 2.925625,
+      "mediaId": "image-15",
+      "narration": "diez por ciento distribuido en veinte mensualidades y",
+      "headline": "10%\nEN 20 MENSUALIDADES",
+      "captionY": 545,
+      "heroY": 180,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 0,
+        "panY": 0,
+        "motion": "push-in",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "zoom",
+        "duration": 0.28
+      },
+      "layers": [
+        {
+          "id": "legacy-doctor-15-number",
+          "type": "text",
+          "text": "10%",
+          "x": 108,
+          "y": 180,
+          "width": 864,
+          "fontSize": 180,
+          "fontFamily": "LegacyDisplay",
+          "color": "#C5A564",
+          "align": "left",
+          "animation": "pop",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-15-label",
+          "type": "text",
+          "text": "TOTAL EN 20\nMENSUALIDADES",
+          "x": 108,
+          "y": 385,
+          "width": 864,
+          "fontSize": 48,
+          "fontFamily": "LegacyDisplay",
+          "color": "#F5F0E6",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-15-stage-0",
+          "type": "rect",
+          "x": 108,
+          "y": 530,
+          "width": 80,
+          "height": 10,
+          "color": "#8090A8",
+          "animation": "wipe",
+          "start": 0.15,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-15-stage-1",
+          "type": "rect",
+          "x": 196,
+          "y": 530,
+          "width": 80,
+          "height": 10,
+          "color": "#C5A564",
+          "animation": "wipe",
+          "start": 0.195,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-15-stage-2",
+          "type": "rect",
+          "x": 284,
+          "y": 530,
+          "width": 640,
+          "height": 10,
+          "color": "#8090A8",
+          "animation": "wipe",
+          "start": 0.24,
+          "enabled": true
+        }
+      ],
+      "source": {
+        "image": "03_Imagenes_en_orden/15-legacy-doctor-15.png",
+        "imageSha256": "55e34e62c30513bebcca6ed0c91bb563dfa7c46d13d8a5b37c6e0fc74b0b83d8",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-15.html",
+        "visibleText": "10% TOTAL EN 20 MENSUALIDADES",
+        "anchor": "diez por ciento distribuido"
+      }
+    },
+    {
+      "id": "legacy-doctor-16",
+      "title": "16 · 80% CONTRA ENTREGA",
+      "start": 32.715625,
+      "duration": 1.929625,
+      "coreEnd": 34.64525,
+      "originalVisibleDuration": 2.209625,
+      "mediaId": "image-16",
+      "narration": "ochenta por ciento contra entrega,",
+      "headline": "80%\nCONTRA ENTREGA",
+      "captionY": 970,
+      "heroY": 180,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 20,
+        "panY": 0,
+        "motion": "drift-left",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "wipe-left",
+        "duration": 0.28
+      },
+      "layers": [
+        {
+          "id": "legacy-doctor-16-number",
+          "type": "text",
+          "text": "80%",
+          "x": 108,
+          "y": 180,
+          "width": 864,
+          "fontSize": 180,
+          "fontFamily": "LegacyDisplay",
+          "color": "#C5A564",
+          "align": "left",
+          "animation": "pop",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-16-label",
+          "type": "text",
+          "text": "CONTRA ENTREGA",
+          "x": 108,
+          "y": 385,
+          "width": 864,
+          "fontSize": 48,
+          "fontFamily": "LegacyDisplay",
+          "color": "#F5F0E6",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-16-stage-0",
+          "type": "rect",
+          "x": 108,
+          "y": 465,
+          "width": 80,
+          "height": 10,
+          "color": "#8090A8",
+          "animation": "wipe",
+          "start": 0.15,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-16-stage-1",
+          "type": "rect",
+          "x": 196,
+          "y": 465,
+          "width": 80,
+          "height": 10,
+          "color": "#8090A8",
+          "animation": "wipe",
+          "start": 0.195,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-16-stage-2",
+          "type": "rect",
+          "x": 284,
+          "y": 465,
+          "width": 640,
+          "height": 10,
+          "color": "#C5A564",
+          "animation": "wipe",
+          "start": 0.24,
+          "enabled": true
+        }
+      ],
+      "source": {
+        "image": "03_Imagenes_en_orden/16-legacy-doctor-16.png",
+        "imageSha256": "ce980bb1d25114056e1edf406b1d462627aed46aa6f64a004c4b703b5adf4872",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-16.html",
+        "visibleText": "80% CONTRA ENTREGA",
+        "anchor": "ochenta por ciento contra entrega"
+      }
+    },
+    {
+      "id": "legacy-doctor-17",
+      "title": "17 · ENTREGA A MEDIADOS DE 2028",
+      "start": 34.64525,
+      "duration": 2.560667,
+      "coreEnd": 37.205917,
+      "originalVisibleDuration": 2.840667,
+      "mediaId": "image-17",
+      "narration": "a mediados de dos mil veintiocho.",
+      "headline": "ENTREGA\nMEDIADOS DE 2028",
+      "captionY": 1235,
+      "heroY": 200,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 0,
+        "panY": 0,
+        "motion": "push-in",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "dissolve",
+        "duration": 0.28
+      },
+      "layers": [
+        {
+          "id": "legacy-doctor-17-eyebrow",
+          "type": "text",
+          "text": "ENTREGA A MEDIADOS DE",
+          "x": 108,
+          "y": 200,
+          "width": 864,
+          "fontSize": 33,
+          "fontFamily": "LegacyBody",
+          "color": "#F5F0E6",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-17-number",
+          "type": "text",
+          "text": "2028",
+          "x": 108,
+          "y": 250,
+          "width": 864,
+          "fontSize": 210,
+          "fontFamily": "LegacyDisplay",
+          "color": "#C5A564",
+          "align": "left",
+          "animation": "pop",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        }
+      ],
+      "source": {
+        "image": "03_Imagenes_en_orden/17-legacy-doctor-17.png",
+        "imageSha256": "812358daff6dc36984df067240af4e6a9bcb0263669aec21d5a2447f6c09ec80",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-17.html",
+        "visibleText": "ENTREGA A MEDIADOS DE 2028",
+        "anchor": "a mediados de dos mil veintiocho"
+      }
+    },
+    {
+      "id": "legacy-doctor-18",
+      "title": "18 · POTENCIAL DE PLUSVALÍA",
+      "start": 37.205917,
+      "duration": 2.051,
+      "coreEnd": 39.256917,
+      "originalVisibleDuration": 2.331,
+      "mediaId": "image-18",
+      "narration": "Explora su potencial de plusvalía y de",
+      "headline": "POTENCIAL DE\nPLUSVALÍA",
+      "captionY": 1235,
+      "heroY": 200,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 20,
+        "panY": 0,
+        "motion": "drift-left",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "zoom",
+        "duration": 0.28
+      },
+      "layers": [
+        {
+          "id": "legacy-doctor-18-headline-0",
+          "type": "text",
+          "text": "POTENCIAL DE",
+          "x": 108,
+          "y": 200,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#F5F0E6",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-18-headline-1",
+          "type": "text",
+          "text": "PLUSVALÍA",
+          "x": 108,
+          "y": 310,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#C5A564",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.16,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-18-rule",
+          "type": "line",
+          "x": 108,
+          "y": 432,
+          "width": 160,
+          "height": 7,
+          "color": "#C5A564",
+          "animation": "wipe",
+          "start": 0.18,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-18-growth",
+          "type": "chart",
+          "x": 108,
+          "y": 477,
+          "width": 840,
+          "height": 260,
+          "color": "#C5A564",
+          "values": [
+            5,
+            9,
+            22,
+            35,
+            56,
+            80,
+            100
+          ],
+          "animation": "draw",
+          "start": 0.35,
+          "enabled": true,
+          "note": "Potencial ilustrativo, sin escala de rendimiento"
+        }
+      ],
+      "source": {
+        "image": "03_Imagenes_en_orden/18-legacy-doctor-18.png",
+        "imageSha256": "5b51b4d732c8567e16bfc77ef7ec1c313bc0940181b618b3dd31425745e22782",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-18.html",
+        "visibleText": "POTENCIAL DE PLUSVALÍA",
+        "anchor": "Explora su potencial"
+      }
+    },
+    {
+      "id": "legacy-doctor-19",
+      "title": "19 · ESTANCIA CORTA",
+      "start": 39.256917,
+      "duration": 2.912583,
+      "coreEnd": 42.1695,
+      "originalVisibleDuration": 3.192583,
+      "mediaId": "image-19",
+      "narration": "ingresos por rentas de estancia corta.",
+      "headline": "ESTANCIA\nCORTA",
+      "captionY": 1235,
+      "heroY": 200,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 0,
+        "panY": 0,
+        "motion": "push-in",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "wipe-left",
+        "duration": 0.28
+      },
+      "layers": [
+        {
+          "id": "legacy-doctor-19-headline-0",
+          "type": "text",
+          "text": "ESTANCIA",
+          "x": 108,
+          "y": 200,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#F5F0E6",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-19-headline-1",
+          "type": "text",
+          "text": "CORTA",
+          "x": 108,
+          "y": 310,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#C5A564",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.16,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-19-rule",
+          "type": "line",
+          "x": 108,
+          "y": 432,
+          "width": 160,
+          "height": 7,
+          "color": "#C5A564",
+          "animation": "wipe",
+          "start": 0.18,
+          "enabled": true
+        }
+      ],
+      "source": {
+        "image": "03_Imagenes_en_orden/19-legacy-doctor-19.png",
+        "imageSha256": "78d5dbad66c731c009b35b6d6fc863f56b7c6f46bdb954c945168bfb54b966be",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-19.html",
+        "visibleText": "ESTANCIA CORTA",
+        "anchor": "ingresos por rentas"
+      }
+    },
+    {
+      "id": "legacy-doctor-20",
+      "title": "20 · SMART HOME LUCES MINISPLIT",
+      "start": 42.1695,
+      "duration": 3.361667,
+      "coreEnd": 45.531167,
+      "originalVisibleDuration": 3.641667,
+      "mediaId": "image-20",
+      "narration": "Disfruta una smart home: controla luces, minisplit y",
+      "headline": "SMART\nHOME",
+      "captionY": 700,
+      "heroY": 200,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 20,
+        "panY": 0,
+        "motion": "drift-left",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "dissolve",
+        "duration": 0.28
+      },
+      "layers": [
+        {
+          "id": "legacy-doctor-20-headline-0",
+          "type": "text",
+          "text": "SMART",
+          "x": 108,
+          "y": 200,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#F5F0E6",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-20-headline-1",
+          "type": "text",
+          "text": "HOME",
+          "x": 108,
+          "y": 310,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#C5A564",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.16,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-20-rule",
+          "type": "line",
+          "x": 108,
+          "y": 432,
+          "width": 160,
+          "height": 7,
+          "color": "#C5A564",
+          "animation": "wipe",
+          "start": 0.18,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-20-smartbg-0",
+          "type": "rect",
+          "x": 108,
+          "y": 467,
+          "width": 274,
+          "height": 110,
+          "color": "#1A2B4C",
+          "opacity": 0.88,
+          "start": 0.28,
+          "animation": "rise",
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-20-smartlabel-0",
+          "type": "text",
+          "text": "LUCES",
+          "x": 245,
+          "y": 485,
+          "width": 250,
+          "fontSize": 30,
+          "fontFamily": "LegacyBody",
+          "color": "#F5F0E6",
+          "align": "center",
+          "animation": "rise",
+          "start": 0.3,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-20-smarttoggle-0",
+          "type": "text",
+          "text": "● ━",
+          "x": 245,
+          "y": 527,
+          "width": 864,
+          "fontSize": 30,
+          "fontFamily": "LegacyDisplay",
+          "color": "#C5A564",
+          "align": "center",
+          "animation": "rise",
+          "start": 0.35,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-20-smartbg-1",
+          "type": "rect",
+          "x": 396,
+          "y": 467,
+          "width": 274,
+          "height": 110,
+          "color": "#1A2B4C",
+          "opacity": 0.88,
+          "start": 0.4,
+          "animation": "rise",
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-20-smartlabel-1",
+          "type": "text",
+          "text": "MINISPLIT",
+          "x": 533,
+          "y": 485,
+          "width": 250,
+          "fontSize": 30,
+          "fontFamily": "LegacyBody",
+          "color": "#F5F0E6",
+          "align": "center",
+          "animation": "rise",
+          "start": 0.42,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-20-smarttoggle-1",
+          "type": "text",
+          "text": "● ━",
+          "x": 533,
+          "y": 527,
+          "width": 864,
+          "fontSize": 30,
+          "fontFamily": "LegacyDisplay",
+          "color": "#C5A564",
+          "align": "center",
+          "animation": "rise",
+          "start": 0.47,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        }
+      ],
+      "source": {
+        "image": "03_Imagenes_en_orden/20-legacy-doctor-20.png",
+        "imageSha256": "68145225db012f3130340ac44df7de264f76914349f51219990acd6d63f5c04d",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-20.html",
+        "visibleText": "SMART HOME LUCES MINISPLIT",
+        "anchor": "Disfruta una smart home"
+      }
+    },
+    {
+      "id": "legacy-doctor-21",
+      "title": "21 · CERRADURA DIGITAL CERRADURA",
+      "start": 45.531167,
+      "duration": 2.803417,
+      "coreEnd": 48.334584,
+      "originalVisibleDuration": 3.083417,
+      "mediaId": "image-21",
+      "narration": "cerradura digital desde tu celular.",
+      "headline": "CERRADURA DIGITAL",
+      "captionY": 530,
+      "heroY": 180,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 0,
+        "panY": 0,
+        "motion": "push-in",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "zoom",
+        "duration": 0.28
+      },
+      "layers": [
+        {
+          "id": "legacy-doctor-21-headline-0",
+          "type": "text",
+          "text": "CERRADURA DIGITAL",
+          "x": 108,
+          "y": 180,
+          "width": 864,
+          "fontSize": 106,
+          "fontFamily": "LegacyDisplay",
+          "color": "#F5F0E6",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-21-rule",
+          "type": "line",
+          "x": 108,
+          "y": 302,
+          "width": 160,
+          "height": 7,
+          "color": "#C5A564",
+          "animation": "wipe",
+          "start": 0.18,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-21-smartbg-0",
+          "type": "rect",
+          "x": 108,
+          "y": 337,
+          "width": 274,
+          "height": 110,
+          "color": "#1A2B4C",
+          "opacity": 0.88,
+          "start": 0.28,
+          "animation": "rise",
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-21-smartlabel-0",
+          "type": "text",
+          "text": "CERRADURA",
+          "x": 245,
+          "y": 355,
+          "width": 250,
+          "fontSize": 30,
+          "fontFamily": "LegacyBody",
+          "color": "#F5F0E6",
+          "align": "center",
+          "animation": "rise",
+          "start": 0.3,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-21-smarttoggle-0",
+          "type": "text",
+          "text": "● ━",
+          "x": 245,
+          "y": 397,
+          "width": 864,
+          "fontSize": 30,
+          "fontFamily": "LegacyDisplay",
+          "color": "#C5A564",
+          "align": "center",
+          "animation": "rise",
+          "start": 0.35,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        }
+      ],
+      "source": {
+        "image": "03_Imagenes_en_orden/21-legacy-doctor-21.png",
+        "imageSha256": "803b66f859477dd031f43355b994eacd209b19d313b0a78f440ce8c2950677fe",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-21.html",
+        "visibleText": "CERRADURA DIGITAL CERRADURA",
+        "anchor": "cerradura digital"
+      }
+    },
+    {
+      "id": "legacy-doctor-22",
+      "title": "22 · EQUIPAMIENTO INCLUIDO APARTA ESTE MES",
+      "start": 48.334584,
+      "duration": 2.208708,
+      "coreEnd": 50.543292,
+      "originalVisibleDuration": 2.488708,
+      "mediaId": "image-22",
+      "narration": "Aparta este mes y recibe cocina,",
+      "headline": "EQUIPAMIENTO\nINCLUIDO",
+      "captionY": 1235,
+      "heroY": 200,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 20,
+        "panY": 0,
+        "motion": "drift-left",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "wipe-left",
+        "duration": 0.28
+      },
+      "layers": [
+        {
+          "id": "legacy-doctor-22-headline-0",
+          "type": "text",
+          "text": "EQUIPAMIENTO",
+          "x": 108,
+          "y": 200,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#F5F0E6",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-22-headline-1",
+          "type": "text",
+          "text": "INCLUIDO",
+          "x": 108,
+          "y": 310,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#C5A564",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.16,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-22-rule",
+          "type": "line",
+          "x": 108,
+          "y": 432,
+          "width": 160,
+          "height": 7,
+          "color": "#C5A564",
+          "animation": "wipe",
+          "start": 0.18,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-22-support",
+          "type": "text",
+          "text": "APARTA ESTE MES",
+          "x": 108,
+          "y": 462,
+          "width": 864,
+          "fontSize": 33,
+          "fontFamily": "LegacyBody",
+          "color": "#F5F0E6",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        }
+      ],
+      "source": {
+        "image": "03_Imagenes_en_orden/22-legacy-doctor-22.png",
+        "imageSha256": "bce8817577b6200b013b45827a2c727cbaa2b6f21af1555711f092747efde0bd",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-22.html",
+        "visibleText": "EQUIPAMIENTO INCLUIDO APARTA ESTE MES",
+        "anchor": "Aparta este mes"
+      }
+    },
+    {
+      "id": "legacy-doctor-23",
+      "title": "23 · recámaras",
+      "start": 50.543292,
+      "duration": 0.922333,
+      "coreEnd": 51.465625,
+      "originalVisibleDuration": 1.202333,
+      "mediaId": "image-23",
+      "narration": "recámaras,",
+      "headline": "",
+      "captionY": 1235,
+      "heroY": 200,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 0,
+        "panY": 0,
+        "motion": "push-in",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "dissolve",
+        "duration": 0.28
+      },
+      "layers": [],
+      "source": {
+        "image": "03_Imagenes_en_orden/23-legacy-doctor-23.png",
+        "imageSha256": "8447a2dc3adbf18b24f025b35dd4f5d342225f2c7b25d374e8877ea1cd27401c",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-23.html",
+        "visibleText": "",
+        "anchor": "recámaras"
+      }
+    },
+    {
+      "id": "legacy-doctor-24",
+      "title": "24 · baños",
+      "start": 51.465625,
+      "duration": 0.473292,
+      "coreEnd": 51.938917,
+      "originalVisibleDuration": 0.753292,
+      "mediaId": "image-24",
+      "narration": "baños y",
+      "headline": "",
+      "captionY": 1235,
+      "heroY": 200,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 20,
+        "panY": 0,
+        "motion": "drift-left",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "zoom",
+        "duration": 0.28
+      },
+      "layers": [],
+      "source": {
+        "image": "03_Imagenes_en_orden/24-legacy-doctor-24.png",
+        "imageSha256": "047df52ce579ff3d5fa708c678c194ea4695f90b1c37218e303ea9ad39b74717",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-24.html",
+        "visibleText": "",
+        "anchor": "baños"
+      }
+    },
+    {
+      "id": "legacy-doctor-25",
+      "title": "25 · ROOF EQUIPADO",
+      "start": 51.938917,
+      "duration": 1.784,
+      "coreEnd": 53.722917,
+      "originalVisibleDuration": 2.064,
+      "mediaId": "image-25",
+      "narration": "roof con equipamiento incluido,",
+      "headline": "ROOF\nEQUIPADO",
+      "captionY": 1235,
+      "heroY": 200,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 0,
+        "panY": 0,
+        "motion": "push-in",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "wipe-left",
+        "duration": 0.28
+      },
+      "layers": [
+        {
+          "id": "legacy-doctor-25-headline-0",
+          "type": "text",
+          "text": "ROOF",
+          "x": 108,
+          "y": 200,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#F5F0E6",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-25-headline-1",
+          "type": "text",
+          "text": "EQUIPADO",
+          "x": 108,
+          "y": 310,
+          "width": 864,
+          "fontSize": 108,
+          "fontFamily": "LegacyDisplay",
+          "color": "#C5A564",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.16,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-25-rule",
+          "type": "line",
+          "x": 108,
+          "y": 432,
+          "width": 160,
+          "height": 7,
+          "color": "#C5A564",
+          "animation": "wipe",
+          "start": 0.18,
+          "enabled": true
+        }
+      ],
+      "source": {
+        "image": "03_Imagenes_en_orden/25-legacy-doctor-25.png",
+        "imageSha256": "29cf533a6ace2fd811f8f18c00bd5428442d4e3a302f263d98bb09d3897f9405",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-25.html",
+        "visibleText": "ROOF EQUIPADO",
+        "anchor": "roof con equipamiento"
+      }
+    },
+    {
+      "id": "legacy-doctor-26",
+      "title": "26 · AHORRA HASTA $450 MIL EN EQUIPAMIENTO APARTA ESTE MES",
+      "start": 53.722917,
+      "duration": 3.713583,
+      "coreEnd": 57.4365,
+      "originalVisibleDuration": 3.993583,
+      "mediaId": "image-26",
+      "narration": "con un ahorro de hasta cuatrocientos cincuenta mil pesos.",
+      "headline": "AHORRA HASTA\n$450,000 MXN",
+      "captionY": 1235,
+      "heroY": 200,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 20,
+        "panY": 0,
+        "motion": "drift-left",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "dissolve",
+        "duration": 0.28
+      },
+      "layers": [
+        {
+          "id": "legacy-doctor-26-eyebrow",
+          "type": "text",
+          "text": "AHORRA HASTA",
+          "x": 108,
+          "y": 200,
+          "width": 864,
+          "fontSize": 33,
+          "fontFamily": "LegacyBody",
+          "color": "#F5F0E6",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-26-number",
+          "type": "text",
+          "text": "$450 MIL",
+          "x": 108,
+          "y": 250,
+          "width": 864,
+          "fontSize": 188,
+          "fontFamily": "LegacyDisplay",
+          "color": "#C5A564",
+          "align": "left",
+          "animation": "pop",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-26-label",
+          "type": "text",
+          "text": "EN EQUIPAMIENTO",
+          "x": 108,
+          "y": 455,
+          "width": 864,
+          "fontSize": 56,
+          "fontFamily": "LegacyDisplay",
+          "color": "#F5F0E6",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-26-support",
+          "type": "text",
+          "text": "APARTA ESTE MES",
+          "x": 108,
+          "y": 535,
+          "width": 864,
+          "fontSize": 33,
+          "fontFamily": "LegacyBody",
+          "color": "#F5F0E6",
+          "align": "left",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        }
+      ],
+      "source": {
+        "image": "03_Imagenes_en_orden/26-legacy-doctor-26.png",
+        "imageSha256": "2baac8e22f27ec21077b8dbb9ca00fac328e9f32f8113cd1fe5e7a6d86b6a61c",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-26.html",
+        "visibleText": "AHORRA HASTA $450 MIL EN EQUIPAMIENTO APARTA ESTE MES",
+        "anchor": "con un ahorro"
+      }
+    },
+    {
+      "id": "legacy-doctor-27",
+      "title": "27 · MÁS INFORMACIÓN Haz clic en el botón de abajo",
+      "start": 57.4365,
+      "duration": 3.507292,
+      "coreEnd": 60.943792,
+      "originalVisibleDuration": 3.787292,
+      "mediaId": "image-27",
+      "narration": "Haz clic en el botón de abajo para más información.",
+      "headline": "MÁS INFORMACIÓN",
+      "captionY": 900,
+      "heroY": 300,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 0,
+        "panY": 0,
+        "motion": "push-in",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "zoom",
+        "duration": 0.28
+      },
+      "layers": [
+        {
+          "id": "legacy-doctor-27-logo",
+          "type": "logo",
+          "assetId": "legacy-logo",
+          "x": 200,
+          "y": 180,
+          "width": 680,
+          "height": 379.534884,
+          "opacity": 1,
+          "animation": "rise",
+          "start": 0.04,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-27-cta",
+          "type": "text",
+          "text": "MÁS INFORMACIÓN",
+          "x": 540,
+          "y": 600,
+          "width": 864,
+          "fontSize": 88,
+          "fontFamily": "LegacyDisplay",
+          "color": "#C5A564",
+          "align": "center",
+          "animation": "rise",
+          "start": 0.04,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-27-action",
+          "type": "text",
+          "text": "Haz clic en el botón de abajo",
+          "x": 540,
+          "y": 710,
+          "width": 864,
+          "fontSize": 31,
+          "fontFamily": "LegacyBody",
+          "color": "#F5F0E6",
+          "align": "center",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-27-arrow",
+          "type": "text",
+          "text": "↓",
+          "x": 540,
+          "y": 770,
+          "width": 864,
+          "fontSize": 70,
+          "fontFamily": "LegacyDisplay",
+          "color": "#C5A564",
+          "align": "center",
+          "animation": "bounce",
+          "start": 0.18,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        }
+      ],
+      "source": {
+        "image": "03_Imagenes_en_orden/27-legacy-doctor-27.png",
+        "imageSha256": "2e009a15c9ae9497b1385cad5a61dbd120c8638076fd56561b072a8e92bbe5db",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-27.html",
+        "visibleText": "MÁS INFORMACIÓN Haz clic en el botón de abajo",
+        "anchor": "Haz clic"
+      }
+    },
+    {
+      "id": "legacy-doctor-28",
+      "title": "28 · MÁS INFORMACIÓN Haz clic en el botón de abajo",
+      "start": 60.943792,
+      "duration": 3.097875,
+      "coreEnd": 64.041667,
+      "originalVisibleDuration": 3.097875,
+      "mediaId": "image-28",
+      "narration": "Un asesor de Legacy Capital te atenderá.",
+      "headline": "LEGACY CAPITAL\nTE ASESORA",
+      "captionY": 900,
+      "heroY": 300,
+      "media": {
+        "fit": "cover",
+        "scale": 1.04,
+        "x": 0,
+        "y": 0,
+        "panX": 20,
+        "panY": 0,
+        "motion": "drift-left",
+        "offset": 0,
+        "opacity": 1
+      },
+      "transition": {
+        "type": "wipe-left",
+        "duration": 0.28
+      },
+      "layers": [
+        {
+          "id": "legacy-doctor-28-logo",
+          "type": "logo",
+          "assetId": "legacy-logo",
+          "x": 200,
+          "y": 180,
+          "width": 680,
+          "height": 379.534884,
+          "opacity": 1,
+          "animation": "rise",
+          "start": 0.04,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-28-cta",
+          "type": "text",
+          "text": "MÁS INFORMACIÓN",
+          "x": 540,
+          "y": 600,
+          "width": 864,
+          "fontSize": 88,
+          "fontFamily": "LegacyDisplay",
+          "color": "#C5A564",
+          "align": "center",
+          "animation": "rise",
+          "start": 0.04,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-28-action",
+          "type": "text",
+          "text": "Haz clic en el botón de abajo",
+          "x": 540,
+          "y": 710,
+          "width": 864,
+          "fontSize": 31,
+          "fontFamily": "LegacyBody",
+          "color": "#F5F0E6",
+          "align": "center",
+          "animation": "rise",
+          "start": 0.12,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        },
+        {
+          "id": "legacy-doctor-28-arrow",
+          "type": "text",
+          "text": "↓",
+          "x": 540,
+          "y": 770,
+          "width": 864,
+          "fontSize": 70,
+          "fontFamily": "LegacyDisplay",
+          "color": "#C5A564",
+          "align": "center",
+          "animation": "bounce",
+          "start": 0.18,
+          "lineHeight": 1.02,
+          "opacity": 1,
+          "enabled": true
+        }
+      ],
+      "source": {
+        "image": "03_Imagenes_en_orden/28-legacy-doctor-28.png",
+        "imageSha256": "4da8395af6466bdfb9a5280a3157ab08694f57ac6eeda23ed9c8c2570b3e7638",
+        "composition": "06_Proyecto_HyperFrames/compositions/legacy-doctor-28.html",
+        "visibleText": "MÁS INFORMACIÓN Haz clic en el botón de abajo",
+        "anchor": "Un asesor de Legacy Capital"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "image-01",
+      "name": "01 · Doctor,",
+      "type": "image",
+      "url": "assets/images/doctor-01.jpg",
+      "bytes": 254690,
+      "sha256": "44fc0488d4c89c10552c7fd85dde55541425ddd440a0786c766f7daecc6fc468",
+      "width": 941,
+      "height": 1672,
+      "thumbnail": "assets/thumbs/doctor-01.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/01-legacy-doctor-01.png",
+        "sha256": "f5b106bb251b44db40fa2edb9520a311bd57b07db0838f94e599c88061c9d33b"
+      }
+    },
+    {
+      "id": "image-02",
+      "name": "02 · para disfrutar",
+      "type": "image",
+      "url": "assets/images/doctor-02.jpg",
+      "bytes": 209819,
+      "sha256": "687aa445e38ef85083d8c625345d4782a5ccf09a3e2d1c6a336007c612c80623",
+      "width": 941,
+      "height": 1672,
+      "thumbnail": "assets/thumbs/doctor-02.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/02-legacy-doctor-02.png",
+        "sha256": "ae5f5cfbd922f6bb780d4d8be8a813205f993beed05651b3270e85b786fb8042"
+      }
+    },
+    {
+      "id": "image-03",
+      "name": "03 · En El Sauzal",
+      "type": "image",
+      "url": "assets/images/doctor-03.jpg",
+      "bytes": 287201,
+      "sha256": "3d0baf64b7c7165d73166532d811336297e3346c379d62635b0c657a1b6f2f8f",
+      "width": 1080,
+      "height": 791,
+      "thumbnail": "assets/thumbs/doctor-03.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/03-legacy-doctor-03.jpeg",
+        "sha256": "bffcfdca35e20efa862084f01c73103930e4b25a3610a5bc29e9a85ca63bb731"
+      }
+    },
+    {
+      "id": "image-04",
+      "name": "04 · descubre casas",
+      "type": "image",
+      "url": "assets/images/doctor-04.jpg",
+      "bytes": 247554,
+      "sha256": "ed26794e645adc00b88fd442e9128555d98fbf0f79d74dd3d499a281ac89c66b",
+      "width": 1080,
+      "height": 832,
+      "thumbnail": "assets/thumbs/doctor-04.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/04-legacy-doctor-04.png",
+        "sha256": "61d1aa2e662e81607ae3adebec4493bd31e889a4ba3aaa106a414ffe35a4453b"
+      }
+    },
+    {
+      "id": "image-05",
+      "name": "05 · de dos o tres recámaras",
+      "type": "image",
+      "url": "assets/images/doctor-05.jpg",
+      "bytes": 146730,
+      "sha256": "221d4ad7c293baca60ccf3efb63292f8b6148bd5bfaf0b3bea89ea20dc98b2b2",
+      "width": 1080,
+      "height": 832,
+      "thumbnail": "assets/thumbs/doctor-05.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/05-legacy-doctor-05.png",
+        "sha256": "cb4ab8800751d65d5a8decf96c4ab1c0c5035fa51875e8780ab8e014cd2d221a"
+      }
+    },
+    {
+      "id": "image-06",
+      "name": "06 · desde tres punto nueve",
+      "type": "image",
+      "url": "assets/images/doctor-06.jpg",
+      "bytes": 166890,
+      "sha256": "4ca2beefdc286d3d1d2ae52d0af3b2a4c8a45a7c4e4104b5747749739d01d023",
+      "width": 1080,
+      "height": 832,
+      "thumbnail": "assets/thumbs/doctor-06.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/06-legacy-doctor-06.png",
+        "sha256": "0429dd9facc591e05bc3ca5ed04cb0baca1e1bb5b2cc28f9aa367ac11b6ebe2b"
+      }
+    },
+    {
+      "id": "image-07",
+      "name": "07 · con roof garden privado",
+      "type": "image",
+      "url": "assets/images/doctor-07.jpg",
+      "bytes": 249843,
+      "sha256": "8176fec62cfd5b6d75c39322bd3ade57f3a00d4f671646ccdbf787159d572a35",
+      "width": 941,
+      "height": 1672,
+      "thumbnail": "assets/thumbs/doctor-07.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/07-legacy-doctor-07.png",
+        "sha256": "347ce2d6fb695029e8ad4b22717e8a66a7aa884027f70cd9ef9461b6929f2d65"
+      }
+    },
+    {
+      "id": "image-08",
+      "name": "08 · Imagina una pausa",
+      "type": "image",
+      "url": "assets/images/doctor-08.jpg",
+      "bytes": 361505,
+      "sha256": "1a90ae91dc9e8df514e40a869bf12d6d2b558b9a7cf991335834cc105e050160",
+      "width": 941,
+      "height": 1672,
+      "thumbnail": "assets/thumbs/doctor-08.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/08-legacy-doctor-08.png",
+        "sha256": "1a798e935dc884ef45c563bdc869cd0219a683622dd07b613a4506e4c882521e"
+      }
+    },
+    {
+      "id": "image-09",
+      "name": "09 · pickleball con tus amigos",
+      "type": "image",
+      "url": "assets/images/doctor-09.jpg",
+      "bytes": 262140,
+      "sha256": "fe08f91f1122aae93d97141e1ba5d350687905190d6872c3a6942681372a4e95",
+      "width": 941,
+      "height": 1672,
+      "thumbnail": "assets/thumbs/doctor-09.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/09-legacy-doctor-09.png",
+        "sha256": "5617c36cdfe69df9c7f7a761b58f519475fb8a8961025bff75a0c053753c29a3"
+      }
+    },
+    {
+      "id": "image-10",
+      "name": "10 · tardes de asador",
+      "type": "image",
+      "url": "assets/images/doctor-10.jpg",
+      "bytes": 335386,
+      "sha256": "e7b1180fee18d08c67cfbc00cde0962b7f237f92068faed931d48b5d337a3dc1",
+      "width": 941,
+      "height": 1672,
+      "thumbnail": "assets/thumbs/doctor-10.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/10-legacy-doctor-10.png",
+        "sha256": "7c72bef3152584ef1ba6c83a31d36b7bbc4000bfce5c1f695c296ec2d8afd93d"
+      }
+    },
+    {
+      "id": "image-11",
+      "name": "11 · cenas con tus seres queridos",
+      "type": "image",
+      "url": "assets/images/doctor-11.jpg",
+      "bytes": 323583,
+      "sha256": "fa9156da87f62c1700194f4334d2b5ca6e779745354a078c4fbb60a9af1d445d",
+      "width": 941,
+      "height": 1672,
+      "thumbnail": "assets/thumbs/doctor-11.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/11-legacy-doctor-11.png",
+        "sha256": "72f77d1517ed2c1c42f4f6c9b52e81367c5ca7667ca5aacfadf36a002d8c5e53"
+      }
+    },
+    {
+      "id": "image-12",
+      "name": "12 · o en tu roof",
+      "type": "image",
+      "url": "assets/images/doctor-12.jpg",
+      "bytes": 240012,
+      "sha256": "478d673718065d78f2b16d9eada50f98f1c9ef1c93e2cedd5785c26ae9c02738",
+      "width": 941,
+      "height": 1672,
+      "thumbnail": "assets/thumbs/doctor-12.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/12-legacy-doctor-12.png",
+        "sha256": "ebbdd355d0160d79f91339b0cca6a18bd7e259929191a5c28d3d686957f4d497"
+      }
+    },
+    {
+      "id": "image-13",
+      "name": "13 · Cuida tu liquidez",
+      "type": "image",
+      "url": "assets/images/doctor-13.jpg",
+      "bytes": 280872,
+      "sha256": "60727c8432cbe9aa65621f4ea3dd06ba240355de66b78dcc5245b2256f62f5ce",
+      "width": 941,
+      "height": 1672,
+      "thumbnail": "assets/thumbs/doctor-13.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/13-legacy-doctor-13.png",
+        "sha256": "c299fe0ee870cb8fec0cb9ecd44c4f8871e9b15532ebe6b0714abe6af45bc693"
+      }
+    },
+    {
+      "id": "image-14",
+      "name": "14 · diez por ciento de enganche",
+      "type": "image",
+      "url": "assets/images/doctor-14.jpg",
+      "bytes": 227529,
+      "sha256": "766782c02aa9d734e83c5d2b6faa38af60115d9883c23e3859bfab1aad423dc6",
+      "width": 941,
+      "height": 1672,
+      "thumbnail": "assets/thumbs/doctor-14.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/14-legacy-doctor-14.png",
+        "sha256": "63b878f7632bbca1d3b0a2214c2dea984b84450e47a4dad6425e464143cead49"
+      }
+    },
+    {
+      "id": "image-15",
+      "name": "15 · diez por ciento distribuido",
+      "type": "image",
+      "url": "assets/images/doctor-15.jpg",
+      "bytes": 240139,
+      "sha256": "1357f9961c6a19e16b1e759b943fdc89d9105790806d931d20deb37bc2eb994d",
+      "width": 992,
+      "height": 1585,
+      "thumbnail": "assets/thumbs/doctor-15.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/15-legacy-doctor-15.png",
+        "sha256": "55e34e62c30513bebcca6ed0c91bb563dfa7c46d13d8a5b37c6e0fc74b0b83d8"
+      }
+    },
+    {
+      "id": "image-16",
+      "name": "16 · ochenta por ciento contra entrega",
+      "type": "image",
+      "url": "assets/images/doctor-16.jpg",
+      "bytes": 211785,
+      "sha256": "683a7fd0fc837bf53b610a16995861aad27ca473d2eb9fd59c2b8a6dc9aa584d",
+      "width": 941,
+      "height": 1672,
+      "thumbnail": "assets/thumbs/doctor-16.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/16-legacy-doctor-16.png",
+        "sha256": "ce980bb1d25114056e1edf406b1d462627aed46aa6f64a004c4b703b5adf4872"
+      }
+    },
+    {
+      "id": "image-17",
+      "name": "17 · a mediados de dos mil veintiocho",
+      "type": "image",
+      "url": "assets/images/doctor-17.jpg",
+      "bytes": 186666,
+      "sha256": "1567d768dca44d8615f3db5df7c306e1345bc10c68bf24c254c3ce1d4ed09886",
+      "width": 1080,
+      "height": 832,
+      "thumbnail": "assets/thumbs/doctor-17.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/17-legacy-doctor-17.png",
+        "sha256": "812358daff6dc36984df067240af4e6a9bcb0263669aec21d5a2447f6c09ec80"
+      }
+    },
+    {
+      "id": "image-18",
+      "name": "18 · Explora su potencial",
+      "type": "image",
+      "url": "assets/images/doctor-18.jpg",
+      "bytes": 316221,
+      "sha256": "4f41ccfbe18122780514967c726d0e8d3f1044fa90bf61dd1fa6b97727ff936f",
+      "width": 1080,
+      "height": 1350,
+      "thumbnail": "assets/thumbs/doctor-18.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/18-legacy-doctor-18.png",
+        "sha256": "5b51b4d732c8567e16bfc77ef7ec1c313bc0940181b618b3dd31425745e22782"
+      }
+    },
+    {
+      "id": "image-19",
+      "name": "19 · ingresos por rentas",
+      "type": "image",
+      "url": "assets/images/doctor-19.jpg",
+      "bytes": 333077,
+      "sha256": "e68c2fca7d217f0fc626f1839795bc2b361b378c1bfddf816c10ffc793b9e0f4",
+      "width": 941,
+      "height": 1672,
+      "thumbnail": "assets/thumbs/doctor-19.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/19-legacy-doctor-19.png",
+        "sha256": "78d5dbad66c731c009b35b6d6fc863f56b7c6f46bdb954c945168bfb54b966be"
+      }
+    },
+    {
+      "id": "image-20",
+      "name": "20 · Disfruta una smart home",
+      "type": "image",
+      "url": "assets/images/doctor-20.jpg",
+      "bytes": 225780,
+      "sha256": "6e7b98167cdc4a0c127c4279bb25d032fbaae6a45db6a89b1b209a7bfbe793c7",
+      "width": 992,
+      "height": 1586,
+      "thumbnail": "assets/thumbs/doctor-20.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/20-legacy-doctor-20.png",
+        "sha256": "68145225db012f3130340ac44df7de264f76914349f51219990acd6d63f5c04d"
+      }
+    },
+    {
+      "id": "image-21",
+      "name": "21 · cerradura digital",
+      "type": "image",
+      "url": "assets/images/doctor-21.jpg",
+      "bytes": 302919,
+      "sha256": "252410700252869021ef1f66e308ef029619bfbe0f4a43c3135edbe65f80c43c",
+      "width": 941,
+      "height": 1672,
+      "thumbnail": "assets/thumbs/doctor-21.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/21-legacy-doctor-21.png",
+        "sha256": "803b66f859477dd031f43355b994eacd209b19d313b0a78f440ce8c2950677fe"
+      }
+    },
+    {
+      "id": "image-22",
+      "name": "22 · Aparta este mes",
+      "type": "image",
+      "url": "assets/images/doctor-22.jpg",
+      "bytes": 131223,
+      "sha256": "6c3acefb8e118202f4f180338593673827cc1436bf78330101035efd2555f7de",
+      "width": 1080,
+      "height": 832,
+      "thumbnail": "assets/thumbs/doctor-22.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/22-legacy-doctor-22.png",
+        "sha256": "bce8817577b6200b013b45827a2c727cbaa2b6f21af1555711f092747efde0bd"
+      }
+    },
+    {
+      "id": "image-23",
+      "name": "23 · recámaras",
+      "type": "image",
+      "url": "assets/images/doctor-23.jpg",
+      "bytes": 144100,
+      "sha256": "26f964d601ee08eb68b1ce4481da87127ac4336863fe284487af709cdad06f6d",
+      "width": 1080,
+      "height": 832,
+      "thumbnail": "assets/thumbs/doctor-23.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/23-legacy-doctor-23.png",
+        "sha256": "8447a2dc3adbf18b24f025b35dd4f5d342225f2c7b25d374e8877ea1cd27401c"
+      }
+    },
+    {
+      "id": "image-24",
+      "name": "24 · baños",
+      "type": "image",
+      "url": "assets/images/doctor-24.jpg",
+      "bytes": 142563,
+      "sha256": "4b6c554a4c3d6ab7e68d20e7f1f12b5deba186b86fab201bfe17d45656bb827f",
+      "width": 1080,
+      "height": 832,
+      "thumbnail": "assets/thumbs/doctor-24.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/24-legacy-doctor-24.png",
+        "sha256": "047df52ce579ff3d5fa708c678c194ea4695f90b1c37218e303ea9ad39b74717"
+      }
+    },
+    {
+      "id": "image-25",
+      "name": "25 · roof con equipamiento",
+      "type": "image",
+      "url": "assets/images/doctor-25.jpg",
+      "bytes": 298997,
+      "sha256": "a4f7899dfd6b3ff47b80ce800347d14f4ace08a351cd7911cf1df0d32276cc72",
+      "width": 941,
+      "height": 1672,
+      "thumbnail": "assets/thumbs/doctor-25.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/25-legacy-doctor-25.png",
+        "sha256": "29cf533a6ace2fd811f8f18c00bd5428442d4e3a302f263d98bb09d3897f9405"
+      }
+    },
+    {
+      "id": "image-26",
+      "name": "26 · con un ahorro",
+      "type": "image",
+      "url": "assets/images/doctor-26.jpg",
+      "bytes": 192528,
+      "sha256": "933e58038dc58f4bb574eed1bc61b46b94ff382ef372df31e104a3b8b0d4c1df",
+      "width": 1080,
+      "height": 832,
+      "thumbnail": "assets/thumbs/doctor-26.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/26-legacy-doctor-26.png",
+        "sha256": "2baac8e22f27ec21077b8dbb9ca00fac328e9f32f8113cd1fe5e7a6d86b6a61c"
+      }
+    },
+    {
+      "id": "image-27",
+      "name": "27 · Haz clic",
+      "type": "image",
+      "url": "assets/images/doctor-27.jpg",
+      "bytes": 212058,
+      "sha256": "66da6efc28dbd7319100aa7776d1db9794ef7f4919325f929f94680f3e929d60",
+      "width": 941,
+      "height": 1672,
+      "thumbnail": "assets/thumbs/doctor-27.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/27-legacy-doctor-27.png",
+        "sha256": "2e009a15c9ae9497b1385cad5a61dbd120c8638076fd56561b072a8e92bbe5db"
+      }
+    },
+    {
+      "id": "image-28",
+      "name": "28 · Un asesor de Legacy Capital",
+      "type": "image",
+      "url": "assets/images/doctor-28.jpg",
+      "bytes": 339913,
+      "sha256": "e313ca730acb47b6973dae86ac5c7dd444fa9d910b31b34fe48f54cd63dd625b",
+      "width": 941,
+      "height": 1672,
+      "thumbnail": "assets/thumbs/doctor-28.jpg",
+      "source": {
+        "path": "03_Imagenes_en_orden/28-legacy-doctor-28.png",
+        "sha256": "4da8395af6466bdfb9a5280a3157ab08694f57ac6eeda23ed9c8c2570b3e7638"
+      }
+    },
+    {
+      "id": "font-LegacyDisplay",
+      "name": "LegacyDisplay",
+      "type": "font",
+      "url": "assets/fonts/display.ttf",
+      "bytes": 264372,
+      "sha256": "a859a438018739aee16c306586d91a453c208ee500c827d9e9aa063155c8a6e8",
+      "family": "LegacyDisplay",
+      "source": {
+        "path": "06_Proyecto_HyperFrames/assets/fonts/display.ttf",
+        "sha256": "a859a438018739aee16c306586d91a453c208ee500c827d9e9aa063155c8a6e8"
+      }
+    },
+    {
+      "id": "font-LegacyBody",
+      "name": "LegacyBody",
+      "type": "font",
+      "url": "assets/fonts/body.ttf",
+      "bytes": 221328,
+      "sha256": "aa3b0ef53db12e3d45094030cac0e69d384e44cc5978643dd4390041cad546e2",
+      "family": "LegacyBody",
+      "source": {
+        "path": "06_Proyecto_HyperFrames/assets/fonts/body.ttf",
+        "sha256": "aa3b0ef53db12e3d45094030cac0e69d384e44cc5978643dd4390041cad546e2"
+      }
+    },
+    {
+      "id": "font-LegacyBold",
+      "name": "LegacyBold",
+      "type": "font",
+      "url": "assets/fonts/bold.ttf",
+      "bytes": 222584,
+      "sha256": "0fcbdb5cbeea00ae532352c7c94a7d288ebc911ba85f4d595012032dcab64ba8",
+      "family": "LegacyBold",
+      "source": {
+        "path": "06_Proyecto_HyperFrames/assets/fonts/bold.ttf",
+        "sha256": "0fcbdb5cbeea00ae532352c7c94a7d288ebc911ba85f4d595012032dcab64ba8"
+      }
+    },
+    {
+      "id": "legacy-logo",
+      "name": "Legacy Capital · logotipo original",
+      "type": "image",
+      "url": "assets/brand/legacy-logo.jpg",
+      "bytes": 1853646,
+      "sha256": "3cdc0002b29d66c8f98049a8eea4a02780b491afc01e62ba56f89b3521fc319c",
+      "width": 2752,
+      "height": 1536,
+      "thumbnail": "assets/brand/legacy-logo.jpg",
+      "source": {
+        "path": "06_Proyecto_HyperFrames/assets/brand/legacy-logo.jpg",
+        "sha256": "3cdc0002b29d66c8f98049a8eea4a02780b491afc01e62ba56f89b3521fc319c"
+      }
+    },
+    {
+      "id": "voice-doctor",
+      "name": "Voz original Doctor V6",
+      "type": "audio",
+      "url": "assets/audio/voice-doctor.mp3",
+      "bytes": 1538540,
+      "sha256": "26c8020bb38642961104f512833820b4b551e54f169ceb5eb6521b92767adfea",
+      "duration": 64.08,
+      "source": {
+        "path": "04_Audio/doctor_v6_voice.wav",
+        "sha256": "babe4acdb724ff5d734fc94b8c0bd1966f1b0e78a727dc90baf656fbea693594"
+      }
+    },
+    {
+      "id": "master-original",
+      "name": "Mezcla de referencia original V6",
+      "type": "audio",
+      "url": "assets/audio/master-original.mp3",
+      "bytes": 1538540,
+      "sha256": "f488194722551d37ec8a2aa4ac8b9424afb8962a9382826cec5bea2e3020d900",
+      "duration": 64.08,
+      "source": {
+        "path": "04_Audio/doctor_v6_mix.wav",
+        "sha256": "876a7f8e58e5773e01d6c5d320aeb99f78e8d832c62d259ef420d8a1603c910d"
+      }
+    },
+    {
+      "id": "music-heartbeat",
+      "name": "I Can Hear Your Heartbeat · Michael Ramir C.",
+      "type": "audio",
+      "url": "assets/audio/i-can-hear-your-heartbeat-1000.mp3",
+      "bytes": 3516752,
+      "sha256": "a23c959605dc4a53f7e3b8c8949fcc0d082c29989b944bb2a7f8d9601ddca0d1",
+      "duration": 109.87102,
+      "license": "Mixkit Music Free License — see assets/licenses",
+      "bpm": 125,
+      "source": {
+        "path": "04_Audio/music/i-can-hear-your-heartbeat-1000.mp3",
+        "sha256": "a23c959605dc4a53f7e3b8c8949fcc0d082c29989b944bb2a7f8d9601ddca0d1"
+      }
+    },
+    {
+      "id": "sfx-air-zoom-vacuum-2608",
+      "name": "air zoom vacuum 2608",
+      "type": "audio",
+      "url": "assets/audio/air-zoom-vacuum-2608.mp3",
+      "bytes": 41082,
+      "sha256": "0e25921648c66e30924892ee17110ae621243de770b2944496526845a15a9998",
+      "duration": 1.306122,
+      "license": "Mixkit Sound Effects Free License — see assets/licenses",
+      "source": {
+        "path": "04_Audio/sfx/air-zoom-vacuum-2608.mp3",
+        "sha256": "0e25921648c66e30924892ee17110ae621243de770b2944496526845a15a9998"
+      }
+    },
+    {
+      "id": "sfx-cinematic-whoosh-fast-1492",
+      "name": "cinematic whoosh fast 1492",
+      "type": "audio",
+      "url": "assets/audio/cinematic-whoosh-fast-1492.mp3",
+      "bytes": 44574,
+      "sha256": "5a20424fb50af5c0eda1c8aecfa2836fd347f5072391c0b3c685dc03dab7ed0d",
+      "duration": 1.38449,
+      "license": "Mixkit Sound Effects Free License — see assets/licenses",
+      "source": {
+        "path": "04_Audio/sfx/cinematic-whoosh-fast-1492.mp3",
+        "sha256": "5a20424fb50af5c0eda1c8aecfa2836fd347f5072391c0b3c685dc03dab7ed0d"
+      }
+    },
+    {
+      "id": "sfx-fast-small-sweep-166",
+      "name": "fast small sweep 166",
+      "type": "audio",
+      "url": "assets/audio/fast-small-sweep-166.mp3",
+      "bytes": 27247,
+      "sha256": "5d8153579cfbd4ec23738494dff8dec95b3737981578222b793eff9e3fdd4ca8",
+      "duration": 0.809796,
+      "license": "Mixkit Sound Effects Free License — see assets/licenses",
+      "source": {
+        "path": "04_Audio/sfx/fast-small-sweep-166.mp3",
+        "sha256": "5d8153579cfbd4ec23738494dff8dec95b3737981578222b793eff9e3fdd4ca8"
+      }
+    },
+    {
+      "id": "sfx-fast-whoosh-1490",
+      "name": "fast whoosh 1490",
+      "type": "audio",
+      "url": "assets/audio/fast-whoosh-1490.mp3",
+      "bytes": 57624,
+      "sha256": "b88fd5d484251930efd6eca78c4340339908ea29d1e69bd24fb5191a10da4f78",
+      "duration": 1.802449,
+      "license": "Mixkit Sound Effects Free License — see assets/licenses",
+      "source": {
+        "path": "04_Audio/sfx/fast-whoosh-1490.mp3",
+        "sha256": "b88fd5d484251930efd6eca78c4340339908ea29d1e69bd24fb5191a10da4f78"
+      }
+    },
+    {
+      "id": "sfx-quick-zoom-impact-772",
+      "name": "quick zoom impact 772",
+      "type": "audio",
+      "url": "assets/audio/quick-zoom-impact-772.mp3",
+      "bytes": 39932,
+      "sha256": "c5eba091c94b5292d9a545576bbbee1c21dd5cbc2539822fb61ac2aec69836d0",
+      "duration": 1.253878,
+      "license": "Mixkit Sound Effects Free License — see assets/licenses",
+      "source": {
+        "path": "04_Audio/sfx/quick-zoom-impact-772.mp3",
+        "sha256": "c5eba091c94b5292d9a545576bbbee1c21dd5cbc2539822fb61ac2aec69836d0"
+      }
+    },
+    {
+      "id": "sfx-short-transition-sweep-175",
+      "name": "short transition sweep 175",
+      "type": "audio",
+      "url": "assets/audio/short-transition-sweep-175.mp3",
+      "bytes": 18057,
+      "sha256": "49a2706fb3e7923db4228629865ccecf8e49e196b0dbcb65343a489e5406d4bc",
+      "duration": 0.653061,
+      "license": "Mixkit Sound Effects Free License — see assets/licenses",
+      "source": {
+        "path": "04_Audio/sfx/short-transition-sweep-175.mp3",
+        "sha256": "49a2706fb3e7923db4228629865ccecf8e49e196b0dbcb65343a489e5406d4bc"
+      }
+    },
+    {
+      "id": "original-reference",
+      "name": "Doctor V6 · MP4 de referencia",
+      "type": "video",
+      "url": "assets/reference/doctor-v6-reference.mp4",
+      "bytes": 3930331,
+      "sha256": "20cbea0d06498bb7de16c6a234acba55b159e0a11006ea14f6cc82993e190880",
+      "duration": 64.042,
+      "width": 540,
+      "height": 960,
+      "role": "reference",
+      "thumbnail": "assets/thumbs/doctor-01.jpg",
+      "source": {
+        "path": "Doctor_Legacy_Capital_V6.mp4",
+        "sha256": "54472065df7b5f00718f8bf572d105d4cb3a3027a4270ed0b9dfea97edacf33d"
+      }
+    }
+  ],
+  "captions": [
+    {
+      "id": "caption-000",
+      "sceneId": "legacy-doctor-01",
+      "start": 0.12,
+      "end": 0.736875,
+      "text": "Doctor,",
+      "words": [
+        {
+          "text": "Doctor,",
+          "start": 0.12,
+          "end": 0.556875
+        }
+      ],
+      "x": 540,
+      "y": 1160,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-001",
+      "sceneId": "legacy-doctor-01",
+      "start": 0.884584,
+      "end": 1.916125,
+      "text": "¿buscas una casa con",
+      "words": [
+        {
+          "text": "¿buscas",
+          "start": 0.884584,
+          "end": 1.248667
+        },
+        {
+          "text": "una",
+          "start": 1.260792,
+          "end": 1.418542
+        },
+        {
+          "text": "casa",
+          "start": 1.430667,
+          "end": 1.721917
+        },
+        {
+          "text": "con",
+          "start": 1.734084,
+          "end": 1.916125
+        }
+      ],
+      "x": 540,
+      "y": 1160,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-002",
+      "sceneId": "legacy-doctor-01",
+      "start": 1.92825,
+      "end": 2.583583,
+      "text": "vista al mar",
+      "words": [
+        {
+          "text": "vista",
+          "start": 1.92825,
+          "end": 2.231666
+        },
+        {
+          "text": "al",
+          "start": 2.243792,
+          "end": 2.340875
+        },
+        {
+          "text": "mar",
+          "start": 2.353,
+          "end": 2.583583
+        }
+      ],
+      "x": 540,
+      "y": 1160,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-003",
+      "sceneId": "legacy-doctor-02",
+      "start": 2.59575,
+      "end": 3.845709,
+      "text": "para disfrutar en pareja",
+      "words": [
+        {
+          "text": "para",
+          "start": 2.59575,
+          "end": 2.777791
+        },
+        {
+          "text": "disfrutar",
+          "start": 2.789917,
+          "end": 3.2875
+        },
+        {
+          "text": "en",
+          "start": 3.299625,
+          "end": 3.396708
+        },
+        {
+          "text": "pareja",
+          "start": 3.408834,
+          "end": 3.845709
+        }
+      ],
+      "x": 540,
+      "y": 760,
+      "fontSize": 66.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-004",
+      "sceneId": "legacy-doctor-02",
+      "start": 3.857875,
+      "end": 4.7296249999999995,
+      "text": "o invertir?",
+      "words": [
+        {
+          "text": "o",
+          "start": 3.857875,
+          "end": 3.954958
+        },
+        {
+          "text": "invertir?",
+          "start": 3.967084,
+          "end": 4.549625
+        }
+      ],
+      "x": 540,
+      "y": 760,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-005",
+      "sceneId": "legacy-doctor-03",
+      "start": 5.385542,
+      "end": 6.417083,
+      "text": "En El Sauzal, a",
+      "words": [
+        {
+          "text": "En",
+          "start": 5.385542,
+          "end": 5.555458
+        },
+        {
+          "text": "El",
+          "start": 5.567584,
+          "end": 5.676792
+        },
+        {
+          "text": "Sauzal,",
+          "start": 5.688917,
+          "end": 6.150083
+        },
+        {
+          "text": "a",
+          "start": 6.368542,
+          "end": 6.417083
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-006",
+      "sceneId": "legacy-doctor-03",
+      "start": 6.429209,
+      "end": 7.786417,
+      "text": "la entrada de Ensenada,",
+      "words": [
+        {
+          "text": "la",
+          "start": 6.429209,
+          "end": 6.538417
+        },
+        {
+          "text": "entrada",
+          "start": 6.550584,
+          "end": 6.951084
+        },
+        {
+          "text": "de",
+          "start": 6.963209,
+          "end": 7.060292
+        },
+        {
+          "text": "Ensenada,",
+          "start": 7.072417,
+          "end": 7.606417
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 66.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-007",
+      "sceneId": "legacy-doctor-04",
+      "start": 7.921959,
+      "end": 8.9535,
+      "text": "descubre casas de un",
+      "words": [
+        {
+          "text": "descubre",
+          "start": 7.921959,
+          "end": 8.371
+        },
+        {
+          "text": "casas",
+          "start": 8.383125,
+          "end": 8.735083
+        },
+        {
+          "text": "de",
+          "start": 8.747167,
+          "end": 8.832125
+        },
+        {
+          "text": "un",
+          "start": 8.844292,
+          "end": 8.9535
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-008",
+      "sceneId": "legacy-doctor-04",
+      "start": 8.965625,
+      "end": 9.485415999999999,
+      "text": "nivel,",
+      "words": [
+        {
+          "text": "nivel,",
+          "start": 8.965625,
+          "end": 9.305416
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-009",
+      "sceneId": "legacy-doctor-05",
+      "start": 9.572417,
+      "end": 10.276292,
+      "text": "de dos o tres",
+      "words": [
+        {
+          "text": "de",
+          "start": 9.572417,
+          "end": 9.64525
+        },
+        {
+          "text": "dos",
+          "start": 9.657375,
+          "end": 9.91225
+        },
+        {
+          "text": "o",
+          "start": 9.924375,
+          "end": 9.985041
+        },
+        {
+          "text": "tres",
+          "start": 9.997167,
+          "end": 10.276292
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-010",
+      "sceneId": "legacy-doctor-05",
+      "start": 10.288459,
+      "end": 11.07525,
+      "text": "recámaras,",
+      "words": [
+        {
+          "text": "recámaras,",
+          "start": 10.288459,
+          "end": 10.89525
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-011",
+      "sceneId": "legacy-doctor-06",
+      "start": 11.174375,
+      "end": 12.363709,
+      "text": "desde tres punto nueve",
+      "words": [
+        {
+          "text": "desde",
+          "start": 11.174375,
+          "end": 11.4535
+        },
+        {
+          "text": "tres",
+          "start": 11.465625,
+          "end": 11.756875
+        },
+        {
+          "text": "punto",
+          "start": 11.769042,
+          "end": 12.084583
+        },
+        {
+          "text": "nueve",
+          "start": 12.096709,
+          "end": 12.363709
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 67.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-012",
+      "sceneId": "legacy-doctor-06",
+      "start": 12.375834,
+      "end": 13.540875,
+      "text": "hasta cuatro punto nueve",
+      "words": [
+        {
+          "text": "hasta",
+          "start": 12.375834,
+          "end": 12.582125
+        },
+        {
+          "text": "cuatro",
+          "start": 12.594292,
+          "end": 12.921958
+        },
+        {
+          "text": "punto",
+          "start": 12.934084,
+          "end": 13.26175
+        },
+        {
+          "text": "nueve",
+          "start": 13.273875,
+          "end": 13.540875
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 61.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-013",
+      "sceneId": "legacy-doctor-06",
+      "start": 13.553,
+      "end": 14.740291,
+      "text": "millones de pesos,",
+      "words": [
+        {
+          "text": "millones",
+          "start": 13.553,
+          "end": 14.002041
+        },
+        {
+          "text": "de",
+          "start": 14.014167,
+          "end": 14.099125
+        },
+        {
+          "text": "pesos,",
+          "start": 14.11125,
+          "end": 14.560291
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-014",
+      "sceneId": "legacy-doctor-07",
+      "start": 14.766625,
+      "end": 15.955917,
+      "text": "con roof garden privado",
+      "words": [
+        {
+          "text": "con",
+          "start": 14.766625,
+          "end": 14.960791
+        },
+        {
+          "text": "roof",
+          "start": 14.972917,
+          "end": 15.179208
+        },
+        {
+          "text": "garden",
+          "start": 15.191375,
+          "end": 15.506916
+        },
+        {
+          "text": "privado",
+          "start": 15.519042,
+          "end": 15.955917
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 66.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-015",
+      "sceneId": "legacy-doctor-07",
+      "start": 15.968042,
+      "end": 17.034,
+      "text": "y vista al mar.",
+      "words": [
+        {
+          "text": "y",
+          "start": 15.968042,
+          "end": 16.028708
+        },
+        {
+          "text": "vista",
+          "start": 16.040875,
+          "end": 16.380666
+        },
+        {
+          "text": "al",
+          "start": 16.392834,
+          "end": 16.489917
+        },
+        {
+          "text": "mar.",
+          "start": 16.502042,
+          "end": 16.854
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-016",
+      "sceneId": "legacy-doctor-08",
+      "start": 17.691375,
+      "end": 18.904958,
+      "text": "Imagina una pausa en",
+      "words": [
+        {
+          "text": "Imagina",
+          "start": 17.691375,
+          "end": 18.2375
+        },
+        {
+          "text": "una",
+          "start": 18.249625,
+          "end": 18.455916
+        },
+        {
+          "text": "pausa",
+          "start": 18.468042,
+          "end": 18.82
+        },
+        {
+          "text": "en",
+          "start": 18.832125,
+          "end": 18.904958
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-017",
+      "sceneId": "legacy-doctor-08",
+      "start": 18.917084,
+      "end": 19.655333,
+      "text": "la alberca,",
+      "words": [
+        {
+          "text": "la",
+          "start": 18.917084,
+          "end": 18.989917
+        },
+        {
+          "text": "alberca,",
+          "start": 19.002042,
+          "end": 19.475333
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-018",
+      "sceneId": "legacy-doctor-09",
+      "start": 19.754459,
+      "end": 20.652541,
+      "text": "pickleball con tus",
+      "words": [
+        {
+          "text": "pickleball",
+          "start": 19.754459,
+          "end": 20.288459
+        },
+        {
+          "text": "con",
+          "start": 20.300584,
+          "end": 20.458334
+        },
+        {
+          "text": "tus",
+          "start": 20.4705,
+          "end": 20.652541
+        }
+      ],
+      "x": 540,
+      "y": 650,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-019",
+      "sceneId": "legacy-doctor-09",
+      "start": 20.664667,
+      "end": 21.293708,
+      "text": "amigos,",
+      "words": [
+        {
+          "text": "amigos,",
+          "start": 20.664667,
+          "end": 21.113708
+        }
+      ],
+      "x": 540,
+      "y": 650,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-020",
+      "sceneId": "legacy-doctor-10",
+      "start": 21.392834,
+      "end": 22.242333,
+      "text": "tardes de asador y",
+      "words": [
+        {
+          "text": "tardes",
+          "start": 21.392834,
+          "end": 21.744792
+        },
+        {
+          "text": "de",
+          "start": 21.756875,
+          "end": 21.817541
+        },
+        {
+          "text": "asador",
+          "start": 21.829709,
+          "end": 22.181667
+        },
+        {
+          "text": "y",
+          "start": 22.193792,
+          "end": 22.242333
+        }
+      ],
+      "x": 540,
+      "y": 480,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-021",
+      "sceneId": "legacy-doctor-11",
+      "start": 22.254459,
+      "end": 23.26175,
+      "text": "cenas con tus seres",
+      "words": [
+        {
+          "text": "cenas",
+          "start": 22.254459,
+          "end": 22.618542
+        },
+        {
+          "text": "con",
+          "start": 22.630667,
+          "end": 22.800583
+        },
+        {
+          "text": "tus",
+          "start": 22.812709,
+          "end": 22.958334
+        },
+        {
+          "text": "seres",
+          "start": 22.9705,
+          "end": 23.26175
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-022",
+      "sceneId": "legacy-doctor-11",
+      "start": 23.273875,
+      "end": 23.97775,
+      "text": "queridos en las",
+      "words": [
+        {
+          "text": "queridos",
+          "start": 23.273875,
+          "end": 23.722916
+        },
+        {
+          "text": "en",
+          "start": 23.735042,
+          "end": 23.82
+        },
+        {
+          "text": "las",
+          "start": 23.832125,
+          "end": 23.97775
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-023",
+      "sceneId": "legacy-doctor-11",
+      "start": 23.989917,
+      "end": 24.621,
+      "text": "amenidades",
+      "words": [
+        {
+          "text": "amenidades",
+          "start": 23.989917,
+          "end": 24.621
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-024",
+      "sceneId": "legacy-doctor-12",
+      "start": 24.633125,
+      "end": 25.456291,
+      "text": "o en tu roof.",
+      "words": [
+        {
+          "text": "o",
+          "start": 24.633125,
+          "end": 24.705958
+        },
+        {
+          "text": "en",
+          "start": 24.718042,
+          "end": 24.815125
+        },
+        {
+          "text": "tu",
+          "start": 24.827292,
+          "end": 24.9365
+        },
+        {
+          "text": "roof.",
+          "start": 24.948625,
+          "end": 25.276291
+        }
+      ],
+      "x": 540,
+      "y": 520,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-025",
+      "sceneId": "legacy-doctor-13",
+      "start": 26.125834,
+      "end": 27.193791,
+      "text": "Cuida tu liquidez con",
+      "words": [
+        {
+          "text": "Cuida",
+          "start": 26.125834,
+          "end": 26.404959
+        },
+        {
+          "text": "tu",
+          "start": 26.417084,
+          "end": 26.514167
+        },
+        {
+          "text": "liquidez",
+          "start": 26.526334,
+          "end": 26.9875
+        },
+        {
+          "text": "con",
+          "start": 26.999625,
+          "end": 27.193791
+        }
+      ],
+      "x": 540,
+      "y": 640,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-026",
+      "sceneId": "legacy-doctor-13",
+      "start": 27.205917,
+      "end": 28.368958,
+      "text": "pagos flexibles:",
+      "words": [
+        {
+          "text": "pagos",
+          "start": 27.205917,
+          "end": 27.533583
+        },
+        {
+          "text": "flexibles:",
+          "start": 27.54575,
+          "end": 28.188958
+        }
+      ],
+      "x": 540,
+      "y": 640,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-027",
+      "sceneId": "legacy-doctor-14",
+      "start": 28.455917,
+      "end": 29.293292,
+      "text": "diez por ciento de",
+      "words": [
+        {
+          "text": "diez",
+          "start": 28.455917,
+          "end": 28.6865
+        },
+        {
+          "text": "por",
+          "start": 28.698625,
+          "end": 28.856375
+        },
+        {
+          "text": "ciento",
+          "start": 28.868542,
+          "end": 29.184083
+        },
+        {
+          "text": "de",
+          "start": 29.196209,
+          "end": 29.293292
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-028",
+      "sceneId": "legacy-doctor-14",
+      "start": 29.305459,
+      "end": 29.946625,
+      "text": "enganche,",
+      "words": [
+        {
+          "text": "enganche,",
+          "start": 29.305459,
+          "end": 29.766625
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-029",
+      "sceneId": "legacy-doctor-15",
+      "start": 30.07,
+      "end": 30.810291,
+      "text": "diez por ciento",
+      "words": [
+        {
+          "text": "diez",
+          "start": 30.07,
+          "end": 30.300583
+        },
+        {
+          "text": "por",
+          "start": 30.312709,
+          "end": 30.482625
+        },
+        {
+          "text": "ciento",
+          "start": 30.49475,
+          "end": 30.810291
+        }
+      ],
+      "x": 540,
+      "y": 545,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-030",
+      "sceneId": "legacy-doctor-15",
+      "start": 30.822417,
+      "end": 31.866125,
+      "text": "distribuido en veinte",
+      "words": [
+        {
+          "text": "distribuido",
+          "start": 30.822417,
+          "end": 31.441333
+        },
+        {
+          "text": "en",
+          "start": 31.4535,
+          "end": 31.562708
+        },
+        {
+          "text": "veinte",
+          "start": 31.574875,
+          "end": 31.866125
+        }
+      ],
+      "x": 540,
+      "y": 545,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-031",
+      "sceneId": "legacy-doctor-15",
+      "start": 31.87825,
+      "end": 32.7035,
+      "text": "mensualidades y",
+      "words": [
+        {
+          "text": "mensualidades",
+          "start": 31.87825,
+          "end": 32.642833
+        },
+        {
+          "text": "y",
+          "start": 32.654959,
+          "end": 32.7035
+        }
+      ],
+      "x": 540,
+      "y": 545,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-032",
+      "sceneId": "legacy-doctor-16",
+      "start": 32.715625,
+      "end": 33.941375,
+      "text": "ochenta por ciento contra",
+      "words": [
+        {
+          "text": "ochenta",
+          "start": 32.715625,
+          "end": 33.12825
+        },
+        {
+          "text": "por",
+          "start": 33.140375,
+          "end": 33.322416
+        },
+        {
+          "text": "ciento",
+          "start": 33.334584,
+          "end": 33.66225
+        },
+        {
+          "text": "contra",
+          "start": 33.674375,
+          "end": 33.941375
+        }
+      ],
+      "x": 540,
+      "y": 970,
+      "fontSize": 61.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-033",
+      "sceneId": "legacy-doctor-16",
+      "start": 33.9535,
+      "end": 34.582541,
+      "text": "entrega,",
+      "words": [
+        {
+          "text": "entrega,",
+          "start": 33.9535,
+          "end": 34.402541
+        }
+      ],
+      "x": 540,
+      "y": 970,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-034",
+      "sceneId": "legacy-doctor-17",
+      "start": 34.64525,
+      "end": 35.567541,
+      "text": "a mediados de dos",
+      "words": [
+        {
+          "text": "a",
+          "start": 34.64525,
+          "end": 34.742333
+        },
+        {
+          "text": "mediados",
+          "start": 34.754459,
+          "end": 35.252042
+        },
+        {
+          "text": "de",
+          "start": 35.264167,
+          "end": 35.349125
+        },
+        {
+          "text": "dos",
+          "start": 35.36125,
+          "end": 35.567541
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-035",
+      "sceneId": "legacy-doctor-17",
+      "start": 35.579709,
+      "end": 36.548541,
+      "text": "mil veintiocho.",
+      "words": [
+        {
+          "text": "mil",
+          "start": 35.579709,
+          "end": 35.737459
+        },
+        {
+          "text": "veintiocho.",
+          "start": 35.749625,
+          "end": 36.368541
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-036",
+      "sceneId": "legacy-doctor-18",
+      "start": 37.205917,
+      "end": 38.480208,
+      "text": "Explora su potencial de",
+      "words": [
+        {
+          "text": "Explora",
+          "start": 37.205917,
+          "end": 37.7035
+        },
+        {
+          "text": "su",
+          "start": 37.715625,
+          "end": 37.849125
+        },
+        {
+          "text": "potencial",
+          "start": 37.86125,
+          "end": 38.383083
+        },
+        {
+          "text": "de",
+          "start": 38.39525,
+          "end": 38.480208
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-037",
+      "sceneId": "legacy-doctor-18",
+      "start": 38.492334,
+      "end": 39.24475,
+      "text": "plusvalía y de",
+      "words": [
+        {
+          "text": "plusvalía",
+          "start": 38.492334,
+          "end": 39.062709
+        },
+        {
+          "text": "y",
+          "start": 39.074875,
+          "end": 39.135541
+        },
+        {
+          "text": "de",
+          "start": 39.147667,
+          "end": 39.24475
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-038",
+      "sceneId": "legacy-doctor-19",
+      "start": 39.256917,
+      "end": 40.409833,
+      "text": "ingresos por rentas de",
+      "words": [
+        {
+          "text": "ingresos",
+          "start": 39.256917,
+          "end": 39.77875
+        },
+        {
+          "text": "por",
+          "start": 39.790875,
+          "end": 39.948625
+        },
+        {
+          "text": "rentas",
+          "start": 39.960792,
+          "end": 40.31275
+        },
+        {
+          "text": "de",
+          "start": 40.324875,
+          "end": 40.409833
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-039",
+      "sceneId": "legacy-doctor-19",
+      "start": 40.421959,
+      "end": 41.512125,
+      "text": "estancia corta.",
+      "words": [
+        {
+          "text": "estancia",
+          "start": 40.421959,
+          "end": 40.89525
+        },
+        {
+          "text": "corta.",
+          "start": 40.907375,
+          "end": 41.332125
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-040",
+      "sceneId": "legacy-doctor-20",
+      "start": 42.1695,
+      "end": 43.672334,
+      "text": "Disfruta una smart home:",
+      "words": [
+        {
+          "text": "Disfruta",
+          "start": 42.1695,
+          "end": 42.7035
+        },
+        {
+          "text": "una",
+          "start": 42.715625,
+          "end": 42.909791
+        },
+        {
+          "text": "smart",
+          "start": 42.921959,
+          "end": 43.213209
+        },
+        {
+          "text": "home:",
+          "start": 43.225334,
+          "end": 43.492334
+        }
+      ],
+      "x": 540,
+      "y": 700,
+      "fontSize": 61.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-041",
+      "sceneId": "legacy-doctor-20",
+      "start": 43.735042,
+      "end": 45.458375,
+      "text": "controla luces, minisplit",
+      "words": [
+        {
+          "text": "controla",
+          "start": 43.735042,
+          "end": 44.220458
+        },
+        {
+          "text": "luces,",
+          "start": 44.232625,
+          "end": 44.681666
+        },
+        {
+          "text": "minisplit",
+          "start": 44.91225,
+          "end": 45.458375
+        }
+      ],
+      "x": 540,
+      "y": 700,
+      "fontSize": 65.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-042",
+      "sceneId": "legacy-doctor-20",
+      "start": 45.4705,
+      "end": 45.519041,
+      "text": "y",
+      "words": [
+        {
+          "text": "y",
+          "start": 45.4705,
+          "end": 45.519041
+        }
+      ],
+      "x": 540,
+      "y": 700,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-043",
+      "sceneId": "legacy-doctor-21",
+      "start": 45.531167,
+      "end": 46.817584,
+      "text": "cerradura digital desde",
+      "words": [
+        {
+          "text": "cerradura",
+          "start": 45.531167,
+          "end": 46.004458
+        },
+        {
+          "text": "digital",
+          "start": 46.016625,
+          "end": 46.526333
+        },
+        {
+          "text": "desde",
+          "start": 46.538459,
+          "end": 46.817584
+        }
+      ],
+      "x": 540,
+      "y": 530,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-044",
+      "sceneId": "legacy-doctor-21",
+      "start": 46.829709,
+      "end": 47.677167,
+      "text": "tu celular.",
+      "words": [
+        {
+          "text": "tu",
+          "start": 46.829709,
+          "end": 46.926792
+        },
+        {
+          "text": "celular.",
+          "start": 46.938917,
+          "end": 47.497167
+        }
+      ],
+      "x": 540,
+      "y": 530,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-045",
+      "sceneId": "legacy-doctor-22",
+      "start": 48.334584,
+      "end": 49.390375,
+      "text": "Aparta este mes y",
+      "words": [
+        {
+          "text": "Aparta",
+          "start": 48.334584,
+          "end": 48.832167
+        },
+        {
+          "text": "este",
+          "start": 48.844292,
+          "end": 49.06275
+        },
+        {
+          "text": "mes",
+          "start": 49.074875,
+          "end": 49.317583
+        },
+        {
+          "text": "y",
+          "start": 49.329709,
+          "end": 49.390375
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-046",
+      "sceneId": "legacy-doctor-22",
+      "start": 49.402542,
+      "end": 50.456291,
+      "text": "recibe cocina,",
+      "words": [
+        {
+          "text": "recibe",
+          "start": 49.402542,
+          "end": 49.790875
+        },
+        {
+          "text": "cocina,",
+          "start": 49.803,
+          "end": 50.276291
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-047",
+      "sceneId": "legacy-doctor-23",
+      "start": 50.543292,
+      "end": 51.378625,
+      "text": "recámaras,",
+      "words": [
+        {
+          "text": "recámaras,",
+          "start": 50.543292,
+          "end": 51.198625
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-048",
+      "sceneId": "legacy-doctor-24",
+      "start": 51.465625,
+      "end": 51.926791,
+      "text": "baños y",
+      "words": [
+        {
+          "text": "baños",
+          "start": 51.465625,
+          "end": 51.853958
+        },
+        {
+          "text": "y",
+          "start": 51.866125,
+          "end": 51.926791
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-049",
+      "sceneId": "legacy-doctor-25",
+      "start": 51.938917,
+      "end": 52.946208,
+      "text": "roof con equipamiento",
+      "words": [
+        {
+          "text": "roof",
+          "start": 51.938917,
+          "end": 52.1695
+        },
+        {
+          "text": "con",
+          "start": 52.181667,
+          "end": 52.327292
+        },
+        {
+          "text": "equipamiento",
+          "start": 52.339417,
+          "end": 52.946208
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-050",
+      "sceneId": "legacy-doctor-25",
+      "start": 52.958334,
+      "end": 53.648042,
+      "text": "incluido,",
+      "words": [
+        {
+          "text": "incluido,",
+          "start": 52.958334,
+          "end": 53.468042
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-051",
+      "sceneId": "legacy-doctor-26",
+      "start": 53.722917,
+      "end": 54.487458,
+      "text": "con un ahorro de",
+      "words": [
+        {
+          "text": "con",
+          "start": 53.722917,
+          "end": 53.892833
+        },
+        {
+          "text": "un",
+          "start": 53.904959,
+          "end": 54.026334
+        },
+        {
+          "text": "ahorro",
+          "start": 54.038459,
+          "end": 54.37825
+        },
+        {
+          "text": "de",
+          "start": 54.390375,
+          "end": 54.487458
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-052",
+      "sceneId": "legacy-doctor-26",
+      "start": 54.499625,
+      "end": 55.373375,
+      "text": "hasta cuatrocientos",
+      "words": [
+        {
+          "text": "hasta",
+          "start": 54.499625,
+          "end": 54.705916
+        },
+        {
+          "text": "cuatrocientos",
+          "start": 54.718042,
+          "end": 55.373375
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-053",
+      "sceneId": "legacy-doctor-26",
+      "start": 55.385542,
+      "end": 56.779167,
+      "text": "cincuenta mil pesos.",
+      "words": [
+        {
+          "text": "cincuenta",
+          "start": 55.385542,
+          "end": 55.822417
+        },
+        {
+          "text": "mil",
+          "start": 55.834584,
+          "end": 56.053042
+        },
+        {
+          "text": "pesos.",
+          "start": 56.065167,
+          "end": 56.599167
+        }
+      ],
+      "x": 540,
+      "y": 1235,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-054",
+      "sceneId": "legacy-doctor-27",
+      "start": 57.4365,
+      "end": 58.164667,
+      "text": "Haz clic en el",
+      "words": [
+        {
+          "text": "Haz",
+          "start": 57.4365,
+          "end": 57.642791
+        },
+        {
+          "text": "clic",
+          "start": 57.654959,
+          "end": 57.934084
+        },
+        {
+          "text": "en",
+          "start": 57.946209,
+          "end": 58.055417
+        },
+        {
+          "text": "el",
+          "start": 58.067584,
+          "end": 58.164667
+        }
+      ],
+      "x": 540,
+      "y": 900,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-055",
+      "sceneId": "legacy-doctor-27",
+      "start": 58.176792,
+      "end": 59.1355,
+      "text": "botón de abajo para",
+      "words": [
+        {
+          "text": "botón",
+          "start": 58.176792,
+          "end": 58.468042
+        },
+        {
+          "text": "de",
+          "start": 58.480209,
+          "end": 58.540875
+        },
+        {
+          "text": "abajo",
+          "start": 58.553,
+          "end": 58.917083
+        },
+        {
+          "text": "para",
+          "start": 58.929209,
+          "end": 59.1355
+        }
+      ],
+      "x": 540,
+      "y": 900,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-056",
+      "sceneId": "legacy-doctor-27",
+      "start": 59.147667,
+      "end": 60.286375,
+      "text": "más información.",
+      "words": [
+        {
+          "text": "más",
+          "start": 59.147667,
+          "end": 59.37825
+        },
+        {
+          "text": "información.",
+          "start": 59.390375,
+          "end": 60.106375
+        }
+      ],
+      "x": 540,
+      "y": 900,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-057",
+      "sceneId": "legacy-doctor-28",
+      "start": 60.943792,
+      "end": 62.048167,
+      "text": "Un asesor de Legacy",
+      "words": [
+        {
+          "text": "Un",
+          "start": 60.943792,
+          "end": 61.089417
+        },
+        {
+          "text": "asesor",
+          "start": 61.101542,
+          "end": 61.514167
+        },
+        {
+          "text": "de",
+          "start": 61.526334,
+          "end": 61.611292
+        },
+        {
+          "text": "Legacy",
+          "start": 61.623417,
+          "end": 62.048167
+        }
+      ],
+      "x": 540,
+      "y": 900,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    },
+    {
+      "id": "caption-058",
+      "sceneId": "legacy-doctor-28",
+      "start": 62.060292,
+      "end": 63.368958,
+      "text": "Capital te atenderá.",
+      "words": [
+        {
+          "text": "Capital",
+          "start": 62.060292,
+          "end": 62.509333
+        },
+        {
+          "text": "te",
+          "start": 62.521459,
+          "end": 62.594292
+        },
+        {
+          "text": "atenderá.",
+          "start": 62.606417,
+          "end": 63.188958
+        }
+      ],
+      "x": 540,
+      "y": 900,
+      "fontSize": 68.0,
+      "fontFamily": "LegacyBold",
+      "color": "#F5F0E6",
+      "highlightColor": "#C5A564",
+      "background": "#1A2B4CCC",
+      "align": "center",
+      "animation": "word",
+      "enabled": true
+    }
+  ],
+  "audioTracks": [
+    {
+      "id": "voice-main",
+      "name": "Voz · Doctor V6",
+      "kind": "voice",
+      "assetId": "voice-doctor",
+      "start": 0,
+      "offset": 0,
+      "duration": 64.04166666666667,
+      "volume": 1,
+      "fadeIn": 0,
+      "fadeOut": 0,
+      "muted": false,
+      "originalScript": "Doctor, ¿buscas una casa con vista al mar para disfrutar en pareja o invertir? En El Sauzal, a la entrada de Ensenada, descubre casas de un nivel, de dos o tres recámaras, desde tres punto nueve hasta cuatro punto nueve millones de pesos, con roof garden privado y vista al mar. Imagina una pausa en la alberca, pickleball con tus amigos, tardes de asador y cenas con tus seres queridos en las amenidades o en tu roof. Cuida tu liquidez con pagos flexibles: diez por ciento de enganche, diez por ciento distribuido en veinte mensualidades y ochenta por ciento contra entrega, a mediados de dos mil veintiocho. Explora su potencial de plusvalía y de ingresos por rentas de estancia corta. Disfruta una smart home: controla luces, minisplit y cerradura digital desde tu celular. Aparta este mes y recibe cocina, recámaras, baños y roof con equipamiento incluido, con un ahorro de hasta cuatrocientos cincuenta mil pesos. Haz clic en el botón de abajo para más información. Un asesor de Legacy Capital te atenderá."
+    },
+    {
+      "id": "music-main",
+      "name": "Música · I Can Hear Your Heartbeat",
+      "kind": "music",
+      "assetId": "music-heartbeat",
+      "start": 0,
+      "offset": 15.36,
+      "duration": 64.04166666666667,
+      "volume": 0.26868443570261635,
+      "fadeIn": 0.04,
+      "fadeOut": 0.7,
+      "muted": false,
+      "ducking": true,
+      "sourceRecipe": {
+        "file": "music/i-can-hear-your-heartbeat-1000.mp3",
+        "title": "I Can Hear Your Heartbeat",
+        "artist": "Michael Ramir C.",
+        "source_url": "https://assets.mixkit.co/music/1000/1000.mp3",
+        "bpm": 125,
+        "in": 15.36,
+        "gain_db": -10.5,
+        "tempo_changed": false,
+        "voice_duck": ".80–1.00 with 60ms RMS and smoothed release",
+        "fade_in": 0.04,
+        "fade_out": 0.7
+      }
+    },
+    {
+      "id": "sfx-01",
+      "name": "01 · role and price",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-01",
+      "assetId": "sfx-fast-small-sweep-166",
+      "start": 0.211667,
+      "offset": 0.226333,
+      "duration": 0.29,
+      "volume": 0.08590907187805936,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-01",
+        "cause": "role_and_price",
+        "effect": "fast-small-sweep-166.mp3",
+        "source_path": "sfx/fast-small-sweep-166.mp3",
+        "source_crop_start": 0.226333,
+        "source_crop_end": 0.516333,
+        "source_peak_after_crop": 0.07,
+        "start": 0.211667,
+        "peak_at": 0.281667,
+        "picture_landing_at": 0.281667,
+        "target_peak_before_master": 0.085,
+        "gain": 0.08590907187805936
+      }
+    },
+    {
+      "id": "sfx-02",
+      "name": "02 · broll transition",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-02",
+      "assetId": "sfx-short-transition-sweep-175",
+      "start": 2.827417,
+      "offset": 0.370958,
+      "duration": 0.235042,
+      "volume": 0.12900420954780517,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-02",
+        "cause": "broll_transition",
+        "effect": "short-transition-sweep-175.mp3",
+        "source_path": "sfx/short-transition-sweep-175.mp3",
+        "source_crop_start": 0.370958,
+        "source_crop_end": 0.606,
+        "source_peak_after_crop": 0.09,
+        "start": 2.827417,
+        "peak_at": 2.917417,
+        "picture_landing_at": 2.917417,
+        "target_peak_before_master": 0.085,
+        "gain": 0.12900420954780517
+      }
+    },
+    {
+      "id": "sfx-03",
+      "name": "03 · location title",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-03",
+      "assetId": "sfx-air-zoom-vacuum-2608",
+      "start": 5.795542,
+      "offset": 0.254583,
+      "duration": 0.48,
+      "volume": 0.10592443326075365,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-03",
+        "cause": "location_title",
+        "effect": "air-zoom-vacuum-2608.mp3",
+        "source_path": "sfx/air-zoom-vacuum-2608.mp3",
+        "source_crop_start": 0.254583,
+        "source_crop_end": 0.734583,
+        "source_peak_after_crop": 0.18,
+        "start": 5.795542,
+        "peak_at": 5.975542,
+        "picture_landing_at": 5.975542,
+        "target_peak_before_master": 0.095,
+        "gain": 0.10592443326075365
+      }
+    },
+    {
+      "id": "sfx-04",
+      "name": "04 · title entry",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-04",
+      "assetId": "sfx-fast-whoosh-1490",
+      "start": 8.331959,
+      "offset": 0.532125,
+      "duration": 0.52,
+      "volume": 0.09506806397623112,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-04",
+        "cause": "title_entry",
+        "effect": "fast-whoosh-1490.mp3",
+        "source_path": "sfx/fast-whoosh-1490.mp3",
+        "source_crop_start": 0.532125,
+        "source_crop_end": 1.052125,
+        "source_peak_after_crop": 0.18,
+        "start": 8.331959,
+        "peak_at": 8.511959,
+        "picture_landing_at": 8.511959,
+        "target_peak_before_master": 0.085,
+        "gain": 0.09506806397623112
+      }
+    },
+    {
+      "id": "sfx-05",
+      "name": "05 · title entry",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-05",
+      "assetId": "sfx-cinematic-whoosh-fast-1492",
+      "start": 9.937417,
+      "offset": 0.8095,
+      "duration": 0.524646,
+      "volume": 0.09492598930818737,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-05",
+        "cause": "title_entry",
+        "effect": "cinematic-whoosh-fast-1492.mp3",
+        "source_path": "sfx/cinematic-whoosh-fast-1492.mp3",
+        "source_crop_start": 0.8095,
+        "source_crop_end": 1.334146,
+        "source_peak_after_crop": 0.28,
+        "start": 9.937417,
+        "peak_at": 10.217417,
+        "picture_landing_at": 10.217417,
+        "target_peak_before_master": 0.085,
+        "gain": 0.09492598930818737
+      }
+    },
+    {
+      "id": "sfx-06",
+      "name": "06 · title entry",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-06",
+      "assetId": "sfx-quick-zoom-impact-772",
+      "start": 11.709375,
+      "offset": 0.359375,
+      "duration": 0.245,
+      "volume": 0.09508293450503731,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-06",
+        "cause": "title_entry",
+        "effect": "quick-zoom-impact-772.mp3",
+        "source_path": "sfx/quick-zoom-impact-772.mp3",
+        "source_crop_start": 0.359375,
+        "source_crop_end": 0.604375,
+        "source_peak_after_crop": 0.055,
+        "start": 11.709375,
+        "peak_at": 11.764375,
+        "picture_landing_at": 11.764375,
+        "target_peak_before_master": 0.085,
+        "gain": 0.09508293450503731
+      }
+    },
+    {
+      "id": "sfx-07",
+      "name": "07 · title entry",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-07",
+      "assetId": "sfx-fast-small-sweep-166",
+      "start": 15.231625,
+      "offset": 0.226333,
+      "duration": 0.29,
+      "volume": 0.08590907187805936,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-07",
+        "cause": "title_entry",
+        "effect": "fast-small-sweep-166.mp3",
+        "source_path": "sfx/fast-small-sweep-166.mp3",
+        "source_crop_start": 0.226333,
+        "source_crop_end": 0.516333,
+        "source_peak_after_crop": 0.07,
+        "start": 15.231625,
+        "peak_at": 15.301625,
+        "picture_landing_at": 15.301625,
+        "target_peak_before_master": 0.085,
+        "gain": 0.08590907187805936
+      }
+    },
+    {
+      "id": "sfx-08",
+      "name": "08 · title entry",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-08",
+      "assetId": "sfx-short-transition-sweep-175",
+      "start": 18.081375,
+      "offset": 0.370958,
+      "duration": 0.235042,
+      "volume": 0.12900420954780517,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-08",
+        "cause": "title_entry",
+        "effect": "short-transition-sweep-175.mp3",
+        "source_path": "sfx/short-transition-sweep-175.mp3",
+        "source_crop_start": 0.370958,
+        "source_crop_end": 0.606,
+        "source_peak_after_crop": 0.09,
+        "start": 18.081375,
+        "peak_at": 18.171375,
+        "picture_landing_at": 18.171375,
+        "target_peak_before_master": 0.085,
+        "gain": 0.12900420954780517
+      }
+    },
+    {
+      "id": "sfx-09",
+      "name": "09 · title entry",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-09",
+      "assetId": "sfx-air-zoom-vacuum-2608",
+      "start": 20.054459,
+      "offset": 0.254583,
+      "duration": 0.48,
+      "volume": 0.09477449291751643,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-09",
+        "cause": "title_entry",
+        "effect": "air-zoom-vacuum-2608.mp3",
+        "source_path": "sfx/air-zoom-vacuum-2608.mp3",
+        "source_crop_start": 0.254583,
+        "source_crop_end": 0.734583,
+        "source_peak_after_crop": 0.18,
+        "start": 20.054459,
+        "peak_at": 20.234459,
+        "picture_landing_at": 20.234459,
+        "target_peak_before_master": 0.085,
+        "gain": 0.09477449291751643
+      }
+    },
+    {
+      "id": "sfx-10",
+      "name": "10 · broll transition",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-10",
+      "assetId": "sfx-fast-whoosh-1490",
+      "start": 21.534501,
+      "offset": 0.532125,
+      "duration": 0.52,
+      "volume": 0.09506806397623112,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-10",
+        "cause": "broll_transition",
+        "effect": "fast-whoosh-1490.mp3",
+        "source_path": "sfx/fast-whoosh-1490.mp3",
+        "source_crop_start": 0.532125,
+        "source_crop_end": 1.052125,
+        "source_peak_after_crop": 0.18,
+        "start": 21.534501,
+        "peak_at": 21.714501,
+        "picture_landing_at": 21.714501,
+        "target_peak_before_master": 0.085,
+        "gain": 0.09506806397623112
+      }
+    },
+    {
+      "id": "sfx-11",
+      "name": "11 · broll transition",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-11",
+      "assetId": "sfx-cinematic-whoosh-fast-1492",
+      "start": 22.296126,
+      "offset": 0.8095,
+      "duration": 0.524646,
+      "volume": 0.09492598930818737,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-11",
+        "cause": "broll_transition",
+        "effect": "cinematic-whoosh-fast-1492.mp3",
+        "source_path": "sfx/cinematic-whoosh-fast-1492.mp3",
+        "source_crop_start": 0.8095,
+        "source_crop_end": 1.334146,
+        "source_peak_after_crop": 0.28,
+        "start": 22.296126,
+        "peak_at": 22.576126,
+        "picture_landing_at": 22.576126,
+        "target_peak_before_master": 0.085,
+        "gain": 0.09492598930818737
+      }
+    },
+    {
+      "id": "sfx-12",
+      "name": "12 · broll transition",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-12",
+      "assetId": "sfx-quick-zoom-impact-772",
+      "start": 24.899792,
+      "offset": 0.359375,
+      "duration": 0.245,
+      "volume": 0.09508293450503731,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-12",
+        "cause": "broll_transition",
+        "effect": "quick-zoom-impact-772.mp3",
+        "source_path": "sfx/quick-zoom-impact-772.mp3",
+        "source_crop_start": 0.359375,
+        "source_crop_end": 0.604375,
+        "source_peak_after_crop": 0.055,
+        "start": 24.899792,
+        "peak_at": 24.954792,
+        "picture_landing_at": 24.954792,
+        "target_peak_before_master": 0.085,
+        "gain": 0.09508293450503731
+      }
+    },
+    {
+      "id": "sfx-13",
+      "name": "13 · title entry",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-13",
+      "assetId": "sfx-fast-small-sweep-166",
+      "start": 26.645834,
+      "offset": 0.226333,
+      "duration": 0.29,
+      "volume": 0.08590907187805936,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-13",
+        "cause": "title_entry",
+        "effect": "fast-small-sweep-166.mp3",
+        "source_path": "sfx/fast-small-sweep-166.mp3",
+        "source_crop_start": 0.226333,
+        "source_crop_end": 0.516333,
+        "source_peak_after_crop": 0.07,
+        "start": 26.645834,
+        "peak_at": 26.715834,
+        "picture_landing_at": 26.715834,
+        "target_peak_before_master": 0.085,
+        "gain": 0.08590907187805936
+      }
+    },
+    {
+      "id": "sfx-14",
+      "name": "14 · payment number",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-14",
+      "assetId": "sfx-quick-zoom-impact-772",
+      "start": 28.692584,
+      "offset": 0.359375,
+      "duration": 0.245,
+      "volume": 0.15101407244917692,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-14",
+        "cause": "payment_number",
+        "effect": "quick-zoom-impact-772.mp3",
+        "source_path": "sfx/quick-zoom-impact-772.mp3",
+        "source_crop_start": 0.359375,
+        "source_crop_end": 0.604375,
+        "source_peak_after_crop": 0.055,
+        "start": 28.692584,
+        "peak_at": 28.747584,
+        "picture_landing_at": 28.747584,
+        "target_peak_before_master": 0.135,
+        "gain": 0.15101407244917692
+      }
+    },
+    {
+      "id": "sfx-15",
+      "name": "15 · payment number",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-15",
+      "assetId": "sfx-quick-zoom-impact-772",
+      "start": 30.306667,
+      "offset": 0.359375,
+      "duration": 0.245,
+      "volume": 0.15101407244917692,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-15",
+        "cause": "payment_number",
+        "effect": "quick-zoom-impact-772.mp3",
+        "source_path": "sfx/quick-zoom-impact-772.mp3",
+        "source_crop_start": 0.359375,
+        "source_crop_end": 0.604375,
+        "source_peak_after_crop": 0.055,
+        "start": 30.306667,
+        "peak_at": 30.361667,
+        "picture_landing_at": 30.361667,
+        "target_peak_before_master": 0.135,
+        "gain": 0.15101407244917692
+      }
+    },
+    {
+      "id": "sfx-16",
+      "name": "16 · payment number",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-16",
+      "assetId": "sfx-quick-zoom-impact-772",
+      "start": 32.952292,
+      "offset": 0.359375,
+      "duration": 0.245,
+      "volume": 0.15101407244917692,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-16",
+        "cause": "payment_number",
+        "effect": "quick-zoom-impact-772.mp3",
+        "source_path": "sfx/quick-zoom-impact-772.mp3",
+        "source_crop_start": 0.359375,
+        "source_crop_end": 0.604375,
+        "source_peak_after_crop": 0.055,
+        "start": 32.952292,
+        "peak_at": 33.007292,
+        "picture_landing_at": 33.007292,
+        "target_peak_before_master": 0.135,
+        "gain": 0.15101407244917692
+      }
+    },
+    {
+      "id": "sfx-17",
+      "name": "17 · delivery number",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-17",
+      "assetId": "sfx-quick-zoom-impact-772",
+      "start": 34.881917,
+      "offset": 0.359375,
+      "duration": 0.245,
+      "volume": 0.15101407244917692,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-17",
+        "cause": "delivery_number",
+        "effect": "quick-zoom-impact-772.mp3",
+        "source_path": "sfx/quick-zoom-impact-772.mp3",
+        "source_crop_start": 0.359375,
+        "source_crop_end": 0.604375,
+        "source_peak_after_crop": 0.055,
+        "start": 34.881917,
+        "peak_at": 34.936917,
+        "picture_landing_at": 34.936917,
+        "target_peak_before_master": 0.135,
+        "gain": 0.15101407244917692
+      }
+    },
+    {
+      "id": "sfx-18",
+      "name": "18 · title entry",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-18",
+      "assetId": "sfx-quick-zoom-impact-772",
+      "start": 37.740917,
+      "offset": 0.359375,
+      "duration": 0.245,
+      "volume": 0.09508293450503731,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-18",
+        "cause": "title_entry",
+        "effect": "quick-zoom-impact-772.mp3",
+        "source_path": "sfx/quick-zoom-impact-772.mp3",
+        "source_crop_start": 0.359375,
+        "source_crop_end": 0.604375,
+        "source_peak_after_crop": 0.055,
+        "start": 37.740917,
+        "peak_at": 37.795917,
+        "picture_landing_at": 37.795917,
+        "target_peak_before_master": 0.085,
+        "gain": 0.09508293450503731
+      }
+    },
+    {
+      "id": "sfx-19",
+      "name": "19 · title entry",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-19",
+      "assetId": "sfx-fast-small-sweep-166",
+      "start": 39.721917,
+      "offset": 0.226333,
+      "duration": 0.29,
+      "volume": 0.08590907187805936,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-19",
+        "cause": "title_entry",
+        "effect": "fast-small-sweep-166.mp3",
+        "source_path": "sfx/fast-small-sweep-166.mp3",
+        "source_crop_start": 0.226333,
+        "source_crop_end": 0.516333,
+        "source_peak_after_crop": 0.07,
+        "start": 39.721917,
+        "peak_at": 39.791917,
+        "picture_landing_at": 39.791917,
+        "target_peak_before_master": 0.085,
+        "gain": 0.08590907187805936
+      }
+    },
+    {
+      "id": "sfx-20",
+      "name": "20 · smart control",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-20",
+      "assetId": "sfx-fast-small-sweep-166",
+      "start": 42.7995,
+      "offset": 0.226333,
+      "duration": 0.29,
+      "volume": 0.06569517261263363,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-20",
+        "cause": "smart_control",
+        "effect": "fast-small-sweep-166.mp3",
+        "source_path": "sfx/fast-small-sweep-166.mp3",
+        "source_crop_start": 0.226333,
+        "source_crop_end": 0.516333,
+        "source_peak_after_crop": 0.07,
+        "start": 42.7995,
+        "peak_at": 42.8695,
+        "picture_landing_at": 42.8695,
+        "target_peak_before_master": 0.065,
+        "gain": 0.06569517261263363
+      }
+    },
+    {
+      "id": "sfx-21",
+      "name": "21 · smart control",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-21",
+      "assetId": "sfx-fast-small-sweep-166",
+      "start": 46.161167,
+      "offset": 0.226333,
+      "duration": 0.29,
+      "volume": 0.06569517261263363,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-21",
+        "cause": "smart_control",
+        "effect": "fast-small-sweep-166.mp3",
+        "source_path": "sfx/fast-small-sweep-166.mp3",
+        "source_crop_start": 0.226333,
+        "source_crop_end": 0.516333,
+        "source_peak_after_crop": 0.07,
+        "start": 46.161167,
+        "peak_at": 46.231167,
+        "picture_landing_at": 46.231167,
+        "target_peak_before_master": 0.065,
+        "gain": 0.06569517261263363
+      }
+    },
+    {
+      "id": "sfx-22",
+      "name": "22 · title entry",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-22",
+      "assetId": "sfx-fast-whoosh-1490",
+      "start": 48.689584,
+      "offset": 0.532125,
+      "duration": 0.52,
+      "volume": 0.09506806397623112,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-22",
+        "cause": "title_entry",
+        "effect": "fast-whoosh-1490.mp3",
+        "source_path": "sfx/fast-whoosh-1490.mp3",
+        "source_crop_start": 0.532125,
+        "source_crop_end": 1.052125,
+        "source_peak_after_crop": 0.18,
+        "start": 48.689584,
+        "peak_at": 48.869584,
+        "picture_landing_at": 48.869584,
+        "target_peak_before_master": 0.085,
+        "gain": 0.09506806397623112
+      }
+    },
+    {
+      "id": "sfx-23",
+      "name": "23 · broll transition",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-23",
+      "assetId": "sfx-cinematic-whoosh-fast-1492",
+      "start": 50.584959,
+      "offset": 0.8095,
+      "duration": 0.524646,
+      "volume": 0.09492598930818737,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-23",
+        "cause": "broll_transition",
+        "effect": "cinematic-whoosh-fast-1492.mp3",
+        "source_path": "sfx/cinematic-whoosh-fast-1492.mp3",
+        "source_crop_start": 0.8095,
+        "source_crop_end": 1.334146,
+        "source_peak_after_crop": 0.28,
+        "start": 50.584959,
+        "peak_at": 50.864959,
+        "picture_landing_at": 50.864959,
+        "target_peak_before_master": 0.085,
+        "gain": 0.09492598930818737
+      }
+    },
+    {
+      "id": "sfx-24",
+      "name": "24 · broll transition",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-24",
+      "assetId": "sfx-quick-zoom-impact-772",
+      "start": 51.732292,
+      "offset": 0.359375,
+      "duration": 0.245,
+      "volume": 0.09508293450503731,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-24",
+        "cause": "broll_transition",
+        "effect": "quick-zoom-impact-772.mp3",
+        "source_path": "sfx/quick-zoom-impact-772.mp3",
+        "source_crop_start": 0.359375,
+        "source_crop_end": 0.604375,
+        "source_peak_after_crop": 0.055,
+        "start": 51.732292,
+        "peak_at": 51.787292,
+        "picture_landing_at": 51.787292,
+        "target_peak_before_master": 0.085,
+        "gain": 0.09508293450503731
+      }
+    },
+    {
+      "id": "sfx-25",
+      "name": "25 · title entry",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-25",
+      "assetId": "sfx-fast-small-sweep-166",
+      "start": 52.403917,
+      "offset": 0.226333,
+      "duration": 0.29,
+      "volume": 0.08590907187805936,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-25",
+        "cause": "title_entry",
+        "effect": "fast-small-sweep-166.mp3",
+        "source_path": "sfx/fast-small-sweep-166.mp3",
+        "source_crop_start": 0.226333,
+        "source_crop_end": 0.516333,
+        "source_peak_after_crop": 0.07,
+        "start": 52.403917,
+        "peak_at": 52.473917,
+        "picture_landing_at": 52.473917,
+        "target_peak_before_master": 0.085,
+        "gain": 0.08590907187805936
+      }
+    },
+    {
+      "id": "sfx-26",
+      "name": "26 · bonus number",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-26",
+      "assetId": "sfx-quick-zoom-impact-772",
+      "start": 54.275126,
+      "offset": 0.359375,
+      "duration": 0.245,
+      "volume": 0.15101407244917692,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-26",
+        "cause": "bonus_number",
+        "effect": "quick-zoom-impact-772.mp3",
+        "source_path": "sfx/quick-zoom-impact-772.mp3",
+        "source_crop_start": 0.359375,
+        "source_crop_end": 0.604375,
+        "source_peak_after_crop": 0.055,
+        "start": 54.275126,
+        "peak_at": 54.330126,
+        "picture_landing_at": 54.330126,
+        "target_peak_before_master": 0.135,
+        "gain": 0.15101407244917692
+      }
+    },
+    {
+      "id": "sfx-27",
+      "name": "27 · cta",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-27",
+      "assetId": "sfx-cinematic-whoosh-fast-1492",
+      "start": 57.7765,
+      "offset": 0.8095,
+      "duration": 0.524646,
+      "volume": 0.1340131613762645,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-27",
+        "cause": "cta",
+        "effect": "cinematic-whoosh-fast-1492.mp3",
+        "source_path": "sfx/cinematic-whoosh-fast-1492.mp3",
+        "source_crop_start": 0.8095,
+        "source_crop_end": 1.334146,
+        "source_peak_after_crop": 0.28,
+        "start": 57.7765,
+        "peak_at": 58.0565,
+        "picture_landing_at": 58.0565,
+        "target_peak_before_master": 0.12,
+        "gain": 0.1340131613762645
+      }
+    },
+    {
+      "id": "sfx-28",
+      "name": "28 · cta",
+      "kind": "sfx",
+      "sceneId": "legacy-doctor-28",
+      "assetId": "sfx-cinematic-whoosh-fast-1492",
+      "start": 61.283792,
+      "offset": 0.8095,
+      "duration": 0.524646,
+      "volume": 0.1340131613762645,
+      "fadeIn": 0.008,
+      "fadeOut": 0.018,
+      "muted": false,
+      "sourceRecipe": {
+        "shot": "legacy-doctor-28",
+        "cause": "cta",
+        "effect": "cinematic-whoosh-fast-1492.mp3",
+        "source_path": "sfx/cinematic-whoosh-fast-1492.mp3",
+        "source_crop_start": 0.8095,
+        "source_crop_end": 1.334146,
+        "source_peak_after_crop": 0.28,
+        "start": 61.283792,
+        "peak_at": 61.563792,
+        "picture_landing_at": 61.563792,
+        "target_peak_before_master": 0.12,
+        "gain": 0.1340131613762645
+      }
+    }
+  ],
+  "overlays": [
+    {
+      "id": "opening-role",
+      "type": "text",
+      "text": "DOCTOR · VISTA AL MAR",
+      "x": 108,
+      "y": 194,
+      "width": 864,
+      "fontSize": 72,
+      "fontFamily": "LegacyDisplay",
+      "color": "#F5F0E6",
+      "align": "left",
+      "animation": "none",
+      "start": 0,
+      "lineHeight": 1.02,
+      "opacity": 1,
+      "enabled": true,
+      "duration": 4
+    },
+    {
+      "id": "opening-price",
+      "type": "text",
+      "text": "$3.9–$4.9 MDP",
+      "x": 108,
+      "y": 285,
+      "width": 864,
+      "fontSize": 96,
+      "fontFamily": "LegacyDisplay",
+      "color": "#E2C98F",
+      "align": "left",
+      "animation": "none",
+      "start": 0,
+      "lineHeight": 1.02,
+      "opacity": 1,
+      "enabled": true,
+      "duration": 4
+    },
+    {
+      "id": "opening-meta",
+      "type": "text",
+      "text": "2 Y 3 RECÁMARAS · MXN",
+      "x": 108,
+      "y": 400,
+      "width": 864,
+      "fontSize": 33,
+      "fontFamily": "LegacyBody",
+      "color": "#F5F0E6",
+      "align": "left",
+      "animation": "none",
+      "start": 0,
+      "lineHeight": 1.02,
+      "opacity": 1,
+      "enabled": true,
+      "duration": 4
+    },
+    {
+      "id": "opening-rule",
+      "type": "line",
+      "x": 108,
+      "y": 455,
+      "width": 160,
+      "height": 7,
+      "color": "#C5A564",
+      "animation": "wipe",
+      "start": 0.08,
+      "duration": 3.92,
+      "enabled": true
+    }
+  ],
+  "comments": [],
+  "references": [],
+  "subtitleStyle": {
+    "fontFamily": "LegacyBold",
+    "fontSize": 68,
+    "color": "#F5F0E6",
+    "highlightColor": "#C5A564",
+    "background": "#1A2B4CCC",
+    "animation": "word",
+    "enabled": true
+  },
+  "source": {
+    "version": "V6-Legacy-Capital-Doctor",
+    "videoUrl": "https://drive.google.com/file/d/1PiQDnFxi_WBwPmQFj0KtZYy1QDKbFpfZ/view",
+    "kitUrl": "https://drive.google.com/drive/folders/1YexjMgwYteGijO3XoE6CrRNx3EZ3t7rJ",
+    "timelineSha256": "327b2425b3798383a138372ee6e1fd172554670800fe34f26ae73e243885e2e1",
+    "audioRecipe": {
+      "input_measurement": {
+        "input_i": "-18.04",
+        "input_tp": "-3.88",
+        "input_lra": "1.70",
+        "input_thresh": "-28.21",
+        "output_i": "-15.15",
+        "output_tp": "-1.20",
+        "output_lra": "1.70",
+        "output_thresh": "-25.27",
+        "normalization_type": "dynamic",
+        "target_offset": "0.15"
+      },
+      "filter": "loudnorm=I=-15:TP=-1.2:LRA=9:measured_I=-18.04:measured_TP=-3.88:measured_LRA=1.70:measured_thresh=-28.21:offset=0.15:linear=true,atrim=duration=64.04166666666667,apad=whole_dur=64.04166666666667",
+      "output_measurement": {
+        "input_i": "-14.98",
+        "input_tp": "-1.18",
+        "input_lra": "1.70",
+        "input_thresh": "-25.12",
+        "output_i": "-15.05",
+        "output_tp": "-1.20",
+        "output_lra": "1.70",
+        "output_thresh": "-25.15",
+        "normalization_type": "dynamic",
+        "target_offset": "0.05"
+      },
+      "target_lufs": -15,
+      "target_true_peak_dbtp": -1.2,
+      "stems": "pre-master PCM16 components; sum then apply shared mastering filter, do not play master together with stems"
+    },
+    "note": "Recomposición editable a partir de elementos V6; comparar el MP4 de referencia para el acabado original."
+  },
+  "constraints": {
+    "roofSkylights": 1,
+    "visibleBrand": "Legacy Capital",
+    "maxShotSeconds": 4,
+    "voiceRegenerationRequiredAfterScriptEdit": true
+  },
+  "createdAt": "2026-11-14T18:23:45Z",
+  "updatedAt": "2026-11-14T18:23:45Z"
+}

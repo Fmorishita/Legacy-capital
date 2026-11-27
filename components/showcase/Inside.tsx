@@ -36,7 +36,7 @@ export function InteriorTour({ t, num }: { t: ShowcaseCopy["interior"]; num?: nu
         title: t.title,
         lead: t.lead,
         frameLabel: t.title.replace(/\*/g, ""),
-        steps: t.rooms.map((r, k) => ({ kicker: String(k + 1).padStart(2, "0"), title: r.title, text: r.text, poster: r.image, alt: r.alt })),
+        steps: t.rooms.map((r, k) => ({ kicker: String(k + 1).padStart(2, "0"), title: r.title, text: r.text, poster: r.image, alt: r.alt, pos: r.pos })),
       }}
     />
   );

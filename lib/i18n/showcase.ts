@@ -133,7 +133,7 @@ export type ShowcaseCopy = {
     story: { planTitle: string; planText: string; roofTitle: string; roofText: string; frameLabel: string };
   };
   homesTeaser: { eyebrow: string; title: string; lead: string; cta: string; roofLine: string };
-  interior: { eyebrow: string; title: string; lead: string; rooms: { title: string; text: string; image: string; alt: string }[] };
+  interior: { eyebrow: string; title: string; lead: string; rooms: { title: string; text: string; image: string; alt: string; pos?: string }[] };
   equipment: {
     eyebrow: string;
     title: string;
@@ -242,7 +242,7 @@ const es: ShowcaseCopy = {
     lead: "Casas de un nivel con roof garden y vista al mar en preventa, en un clúster privado al norte de Ensenada. Te acompañamos de la primera llamada a la entrega de llaves.",
     moveIn: { text: "¿Necesitas estrenar ya?", cta: "Ver entrega inmediata" },
   },
-  band: ["Roof garden privado", "Vista al mar y montañas", "Acceso controlado", "Smart home incluido", "Alberca · Pickleball · Asadores", "Entrega 2028"],
+  band: ["Roof garden privado", "Vista al mar y montañas", "Acceso controlado", "Smart home incluido", "Alberca · Pickleball · Parque lineal", "Entrega 2028"],
   advisor: {
     eyebrow: "Tu asesor",
     title: "Hola, soy *Fran Morishita.* Te acompaño de principio a fin.",
@@ -268,7 +268,7 @@ const es: ShowcaseCopy = {
       { kicker: "07:00", title: "Despiertas sin prisa", text: "Luz natural, ventanales y minisplit en cada recámara.", video: `${V}/d1-despertar.mp4`, poster: `${V}/d1-despertar.jpg` },
       { kicker: "11:30", title: "La alberca, a pasos de casa", text: "Sin manejar ni salir del clúster: la alberca es parte de tus amenidades.", video: `${V}/d2-alberca.mp4`, poster: `${V}/d2-alberca.jpg` },
       { kicker: "17:00", title: "Pickleball con amigos", text: "Cancha propia dentro del clúster para jugar con tus vecinos.", video: `${V}/d3-pickleball.mp4`, poster: `${V}/d3-pickleball.jpg` },
-      { kicker: "19:00", title: "Asador en familia", text: "Asadores y mesas para reunirte sin salir del clúster.", video: `${V}/d4-asador.mp4`, poster: `${V}/d4-asador.jpg` },
+      { kicker: "19:00", title: "Asador en familia", text: "El asador está en el roof de tu casa: cocinas y recibes a tu gente sin salir de casa.", video: `${V}/d4-asador.mp4`, poster: `${V}/d4-asador.jpg` },
       {
         kicker: "20:00",
         title: "Atardecer en tu roof",
@@ -443,7 +443,7 @@ const es: ShowcaseCopy = {
     title: "Recorre tu casa, *espacio por espacio.*",
     lead: "Baja para recorrer cada espacio. Diseño funcional, luz natural y acabados listos para habitarse.",
     rooms: [
-      { title: "Sala-comedor", text: "Espacio abierto e iluminado, conectado con la cocina.", image: `${I}/in-sala.webp`, alt: "Sala-comedor con cocina integrada" },
+      { title: "Sala-comedor", text: "Espacio abierto e iluminado, conectado con la cocina.", image: `${I}/in-sala.webp`, alt: "Sala-comedor con cocina integrada", pos: "74% 50%" },
       { title: "Cocina", text: "Barra de granito, estufa con horno y campana desde la entrega.", image: `${I}/in-cocina.webp`, alt: "Cocina con barra de granito" },
       { title: "Recámara principal", text: "Clóset incluido y minisplit para cada temporada.", image: `${I}/in-recamara-principal.webp`, alt: "Recámara principal con clóset" },
       { title: "Recámara", text: "Clóset y minisplit también en la segunda recámara.", image: `${I}/in-recamara.webp`, alt: "Recámara secundaria con clóset" },
@@ -508,13 +508,12 @@ const es: ShowcaseCopy = {
   },
   amenities: {
     eyebrow: "Amenidades",
-    title: "Alberca, pickleball y asadores *a pasos de tu puerta.*",
+    title: "Alberca, pickleball y salón *a pasos de tu puerta.*",
     lead: "Doce amenidades dentro del clúster y cuatro más en el desarrollo, pensadas para usarse todos los días.",
     featured: [
       { title: "Alberca", text: "Para refrescarte sin salir del clúster.", image: `${I}/am-alberca.webp`, alt: "Amigos en la alberca del clúster" },
       { title: "Pickleball", text: "Cancha propia para jugar con vecinos y amigos.", image: `${I}/am-pickleball.webp`, alt: "Partido en la cancha de pickleball" },
-      { title: "Asadores", text: "Asadores y mesas al aire libre para reuniones.", image: `${I}/am-asadores.webp`, alt: "Familia en el área de asadores" },
-      { title: "Salón", text: "Salón de usos múltiples bajo la pérgola.", image: `${I}/am-salon.webp`, alt: "Amigos reunidos en el salón bajo la pérgola" },
+      { title: "Salón", text: "Salón de usos múltiples al aire libre, para reunirte con tus vecinos.", image: `${I}/am-salon.webp`, alt: "Amigos reunidos en el salón al aire libre" },
       { title: "Andadores", text: "Parque lineal y andadores para caminar.", image: `${I}/am-andadores.webp`, alt: "Pareja caminando por los andadores" },
     ],
     clusterTitle: "Dentro del clúster",
@@ -725,7 +724,7 @@ const en: ShowcaseCopy = {
     lead: "Single-story pre-sale homes with a roof garden and ocean views, in a private gated cluster in northern Ensenada. We guide you from the first call to the day you get your keys.",
     moveIn: { text: "Need to move in now?", cta: "See move-in-ready homes" },
   },
-  band: ["Private roof garden", "Ocean and mountain views", "Gated access", "Smart home included", "Pool · Pickleball · Grills", "Delivery 2028"],
+  band: ["Private roof garden", "Ocean and mountain views", "Gated access", "Smart home included", "Pool · Pickleball · Linear park", "Delivery 2028"],
   advisor: {
     eyebrow: "Your advisor",
     title: "Hi, I’m *Fran Morishita.* I’ll guide you every step.",
@@ -751,7 +750,7 @@ const en: ShowcaseCopy = {
       { kicker: "7:00 am", title: "Wake up slowly", text: "Natural light, big windows and mini-split A/C in every bedroom.", video: `${V}/d1-despertar.mp4`, poster: `${V}/d1-despertar.jpg` },
       { kicker: "11:30 am", title: "The pool, steps from home", text: "No driving, no leaving the cluster: the pool is one of your amenities.", video: `${V}/d2-alberca.mp4`, poster: `${V}/d2-alberca.jpg` },
       { kicker: "5:00 pm", title: "Pickleball with friends", text: "A court inside the cluster to play with your neighbors.", video: `${V}/d3-pickleball.mp4`, poster: `${V}/d3-pickleball.jpg` },
-      { kicker: "7:00 pm", title: "Family grill night", text: "Grills and tables for get-togethers inside the cluster.", video: `${V}/d4-asador.mp4`, poster: `${V}/d4-asador.jpg` },
+      { kicker: "7:00 pm", title: "Family grill night", text: "The grill is on your home’s roof: cook and host your people without leaving home.", video: `${V}/d4-asador.mp4`, poster: `${V}/d4-asador.jpg` },
       {
         kicker: "8:00 pm",
         title: "Sunset on your roof",
@@ -926,7 +925,7 @@ const en: ShowcaseCopy = {
     title: "Tour your home, *room by room.*",
     lead: "Scroll to walk through each room. Functional design, natural light and move-in-ready finishes.",
     rooms: [
-      { title: "Living-dining", text: "Open, bright space connected to the kitchen.", image: `${I}/in-sala.webp`, alt: "Living and dining room with open kitchen" },
+      { title: "Living-dining", text: "Open, bright space connected to the kitchen.", image: `${I}/in-sala.webp`, alt: "Living and dining room with open kitchen", pos: "74% 50%" },
       { title: "Kitchen", text: "Granite bar, stove with oven and range hood at delivery.", image: `${I}/in-cocina.webp`, alt: "Kitchen with granite bar" },
       { title: "Primary bedroom", text: "Built-in closet and mini-split A/C for every season.", image: `${I}/in-recamara-principal.webp`, alt: "Primary bedroom with closet" },
       { title: "Bedroom", text: "Closet and mini-split in the second bedroom too.", image: `${I}/in-recamara.webp`, alt: "Second bedroom with closet" },
@@ -986,13 +985,12 @@ const en: ShowcaseCopy = {
   },
   amenities: {
     eyebrow: "Amenities",
-    title: "Pool, pickleball and grills *steps from your door.*",
+    title: "Pool, pickleball and lounge *steps from your door.*",
     lead: "Twelve amenities inside the cluster and four more in the development, made for everyday use.",
     featured: [
       { title: "Pool", text: "Cool off without leaving the cluster.", image: `${I}/am-alberca.webp`, alt: "Friends at the cluster pool" },
       { title: "Pickleball", text: "Your own court to play with neighbors and friends.", image: `${I}/am-pickleball.webp`, alt: "Game on the pickleball court" },
-      { title: "Grills", text: "Outdoor grills and tables for get-togethers.", image: `${I}/am-asadores.webp`, alt: "Family at the grill area" },
-      { title: "Lounge", text: "Multipurpose lounge under the pergola.", image: `${I}/am-salon.webp`, alt: "Friends gathered in the lounge under the pergola" },
+      { title: "Lounge", text: "Open-air multipurpose lounge to get together with your neighbors.", image: `${I}/am-salon.webp`, alt: "Friends gathered in the open-air lounge" },
       { title: "Walking paths", text: "Linear park and walking paths.", image: `${I}/am-andadores.webp`, alt: "Couple walking along the paths" },
     ],
     clusterTitle: "Inside the cluster",

@@ -28,7 +28,7 @@ export type Interest =
   | "azur"
   | "teide";
 
-export type Perfil = "ensenada" | "california" | "mexicoamericano" | "monterrey" | "cdmx" | "guadalajara";
+export type Perfil = "tijuana" | "mexicali" | "california" | "cdmx" | "monterrey" | "guadalajara" | "ensenada" | "mexicoamericano";
 
 export type LeadDefaults = {
   interes?: Interest;

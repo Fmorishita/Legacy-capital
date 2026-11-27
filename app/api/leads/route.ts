@@ -46,7 +46,7 @@ const leadSchema = z.object({
     .optional()
     .transform((v) => (v && v.length <= 160 && z.email().safeParse(v).success ? v : undefined)),
   interes: z.enum(INTERESES).optional(),
-  perfil: z.enum(["ensenada", "california", "mexicoamericano", "monterrey", "cdmx", "guadalajara"]).optional(),
+  perfil: z.enum(["tijuana", "mexicali", "california", "cdmx", "monterrey", "guadalajara", "ensenada", "mexicoamericano"]).optional(),
   proyecto: z.enum(PROYECTOS).optional(),
   origen: z
     .string()

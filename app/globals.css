@@ -696,6 +696,48 @@
   opacity: 1;
   transform: none;
 }
+/* Fotos y planos dentro del marco */
+.story-fit {
+  position: absolute;
+  inset: 0;
+}
+.story-video[data-fit="contain"] {
+  background: #f4efe6;
+}
+.story-video[data-fit="contain"] .story-fit {
+  inset: 1.25rem;
+}
+.story-video > img {
+  transition: transform 1.2s var(--ease-out-expo);
+}
+.story-title {
+  color: #fff;
+}
+.story-text {
+  color: #b3c3cd;
+}
+.story[data-tone="sand"] .story-title {
+  color: var(--ink);
+}
+.story[data-tone="sand"] .story-text {
+  color: var(--ink-soft);
+}
+.story[data-tone="sand"] .story-kicker {
+  color: var(--color-gold-ink, #8a6a2f);
+}
+/* Escritorio: marco horizontal para fotos y planos */
+.story-body[data-frame="landscape"] {
+  grid-template-columns: minmax(300px, 0.8fr) 1.25fr;
+}
+.story-body[data-frame="landscape"] .story-stage {
+  height: auto;
+  top: max(110px, 16vh);
+}
+.story-body[data-frame="landscape"] .story-frame {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+}
 .story-bars {
   position: absolute;
   z-index: 2;
@@ -801,6 +843,39 @@
   }
   .story-kicker {
     font-size: 40px;
+  }
+  /* En celular las tarjetas siempre son de vidrio oscuro sobre la foto */
+  .story[data-tone="sand"] .story-title,
+  .story-title {
+    color: #fff;
+  }
+  .story[data-tone="sand"] .story-text,
+  .story-text {
+    color: #c9d4db;
+  }
+  .story[data-tone="sand"] .story-kicker {
+    color: #ddbb84;
+  }
+  .story-body[data-frame="landscape"] .story-frame {
+    aspect-ratio: auto;
+    height: 100%;
+  }
+  .story-body[data-frame="landscape"] .story-stage {
+    top: 0;
+    height: 100svh;
+  }
+  /* Planos: arriba, libres de la tarjeta que pasa por abajo */
+  /* Planos: en celular se muestran dentro de la tarjeta; el marco queda de fondo */
+  .story-video[data-fit="contain"] {
+    background: #0f2433;
+  }
+  .story-video[data-fit="contain"] .story-fit {
+    display: none;
+  }
+  .story-card .btn-ghost {
+    color: #fff;
+    border-color: rgb(255 255 255 / 0.4);
+    background: rgb(255 255 255 / 0.08);
   }
 }
 @media (prefers-reduced-motion: reduce) {

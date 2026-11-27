@@ -15,7 +15,7 @@ import { AdvisorIntro } from "@/components/showcase/AdvisorIntro";
 import { ScrollStory } from "@/components/showcase/ScrollStory";
 import { EnsenadaPlace, LocationPlace, Secure } from "@/components/showcase/Place";
 import { Homes } from "@/components/showcase/Homes";
-import { AmenitiesShowcase, Equipment, InteriorTour, RoofBanner } from "@/components/showcase/Inside";
+import { AmenitiesShowcase, Equipment, InteriorTour, RoofBanner, SmartHome } from "@/components/showcase/Inside";
 import { Appreciation, PaymentBridge } from "@/components/showcase/Numbers";
 import { Material } from "@/components/showcase/Material";
 import { Closing, Contact, FaqShowcase, MoveInTeaser } from "@/components/showcase/Closing";
@@ -112,16 +112,17 @@ export function Landing({ t, lang }: { t: Dict; lang: Lang }) {
         <EnsenadaPlace t={sc.ensenada} num={5} />
         <LocationPlace t={sc.location} num={6} origin={origin} />
         <Homes t={sc.homes} num={7} lang={lang} origin={origin} />
-        <Material doc="brochure" t={sc.material} form={t.form} num={8} lang={lang} privacyHref={privacyHref} origin={origin} />
+        <Material doc="brochure" t={sc.material} form={t.form} num={8} lang={lang} privacyHref={privacyHref} origin={origin} tone="plain" />
         <InteriorTour t={sc.interior} num={9} />
-        <Equipment t={sc.equipment} num={10} lang={lang} ui={sc.ui} />
-        <RoofBanner t={sc.roof} num={11} origin={origin} />
-        <ScrollStory id="camino" num={12} t={sc.path} waHref={waHref} origin={origin} />
-        <AmenitiesShowcase t={sc.amenities} num={13} />
-        <Appreciation t={sc.value} num={14} lang={lang} origin={origin} />
-        <Material doc="roi" t={sc.material} form={t.form} num={15} lang={lang} privacyHref={privacyHref} origin={origin} tone="plain" />
-        <PaymentBridge t={sc.pay} num={16} lang={lang} waMessage={waMessage} origin={origin} />
-        <Contact t={sc.contact} form={t.form} num={17} lang={lang} privacyHref={privacyHref} origin={origin} />
+        <Equipment t={sc.equipment} num={10} lang={lang} />
+        <SmartHome t={sc.smart} num={11} origin={origin} />
+        <RoofBanner t={sc.roof} num={12} origin={origin} />
+        <ScrollStory id="camino" num={13} t={sc.path} waHref={waHref} origin={origin} />
+        <AmenitiesShowcase t={sc.amenities} num={14} />
+        <Appreciation t={sc.value} num={15} lang={lang} origin={origin} />
+        <Material doc="roi" t={sc.material} form={t.form} num={16} lang={lang} privacyHref={privacyHref} origin={origin} tone="plain" />
+        <PaymentBridge t={sc.pay} num={17} lang={lang} waMessage={waMessage} origin={origin} />
+        <Contact t={sc.contact} form={t.form} num={18} lang={lang} privacyHref={privacyHref} origin={origin} />
         <MoveInTeaser t={sc.moveIn} href={href("vinedos", lang)} origin={origin} />
         <FaqShowcase t={sc.faq} />
         <Closing t={sc.closing} waMessage={waMessage} ui={sc.ui} origin={origin} />

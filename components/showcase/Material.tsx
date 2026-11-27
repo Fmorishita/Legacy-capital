@@ -82,7 +82,7 @@ export function Material({
                   </dl>
                 ) : (
                   <div className="relative mt-5 aspect-[16/8] overflow-hidden rounded-xl">
-                    <Image src="/media/img/aerea-atardecer.webp" alt={t.brochure.coverAlt} fill sizes="(min-width: 1024px) 40vw, 90vw" className="object-cover object-[50%_58%]" />
+                    <Image src="/img/facade-dusk.jpg" alt={t.brochure.coverAlt} fill sizes="(min-width: 1024px) 40vw, 90vw" className="object-cover object-[50%_60%]" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a1a2e]/80 via-transparent to-transparent" />
                     <p className="absolute bottom-3 left-4 font-caps text-sm font-semibold tracking-wide text-white">Legacy Capital · 2026</p>
                   </div>

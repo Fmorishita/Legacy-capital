@@ -1,130 +1,127 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback } from "react";
 import Image from "next/image";
-import { AnimatePresence, motion, useInView } from "motion/react";
-import { ArrowRight, Check, Armchair, CookingPot, Leaf, PersonSimpleWalk, SwimmingPool, TennisBall } from "@phosphor-icons/react";
+import {
+  ArrowRight,
+  Check,
+  CoatHanger,
+  CookingPot,
+  DeviceMobile,
+  Lightbulb,
+  LockKey,
+  Shower,
+  Snowflake,
+  Sparkle,
+  WifiHigh,
+} from "@phosphor-icons/react";
 import type { ShowcaseCopy } from "@/lib/i18n/showcase";
 import type { Lang } from "@/lib/site";
 import { Reveal } from "@/components/ui/Reveal";
 import { useLead } from "@/components/lead/LeadProvider";
-import { CountUp, Em, Eyebrow, LazyVideo } from "./primitives";
+import { CountUp, Em, Eyebrow } from "./primitives";
+import { ScrollStory } from "./ScrollStory";
 
-/** Recorre tu casa: lista de espacios y la foto del que eliges. */
+/** Recorre tu casa: cada espacio aparece al hacer scroll, sin tocar nada. */
 export function InteriorTour({ t, num }: { t: ShowcaseCopy["interior"]; num?: number }) {
-  const [i, setI] = useState(0);
-  const room = t.rooms[i];
   return (
-    <section id="interior" aria-labelledby="interior-title" className="section-sand py-24 md:py-36">
+    <ScrollStory
+      id="interior"
+      num={num}
+      origin="interior"
+      frame="landscape"
+      tone="sand"
+      t={{
+        eyebrow: t.eyebrow,
+        title: t.title,
+        lead: t.lead,
+        frameLabel: t.title.replace(/\*/g, ""),
+        steps: t.rooms.map((r, k) => ({ kicker: String(k + 1).padStart(2, "0"), title: r.title, text: r.text, poster: r.image, alt: r.alt })),
+      }}
+    />
+  );
+}
+
+const INTERIOR_ICONS = [CookingPot, CoatHanger, Snowflake, Shower];
+const SMART_ICONS = [LockKey, DeviceMobile, Lightbulb, WifiHigh];
+
+/** Equipamiento: el ahorro al frente y cada cosa incluida con su ícono. */
+export function Equipment({ t, num, lang }: { t: ShowcaseCopy["equipment"]; num?: number; lang: Lang }) {
+  const fmt = useCallback((n: number) => `$${Math.round(n).toLocaleString(lang === "en" ? "en-US" : "es-MX")}`, [lang]);
+  const groups = [
+    { title: t.interiorTitle, items: t.interior, icons: INTERIOR_ICONS },
+    { title: t.smartTitle, items: t.smart, icons: SMART_ICONS },
+  ];
+  return (
+    <section id="equipamiento" aria-labelledby="equipamiento-title" className="overflow-hidden py-24 md:py-36">
       <div className="container-x">
-        <Reveal className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-end lg:gap-16">
-          <div>
-            <Eyebrow num={num}>{t.eyebrow}</Eyebrow>
-            <h2 id="interior-title" className="display mt-5 text-[2.5rem] md:text-[3.6rem]">
-              <Em text={t.title} />
-            </h2>
-          </div>
-          <p className="lead">{t.lead}</p>
+        <Reveal className="max-w-[44rem]">
+          <Eyebrow num={num}>{t.eyebrow}</Eyebrow>
+          <h2 id="equipamiento-title" className="display mt-5 text-[2.5rem] md:text-[3.5rem]">
+            <Em text={t.title} />
+          </h2>
         </Reveal>
-        <div className="mt-12 grid items-center gap-8 lg:grid-cols-[1.25fr_0.75fr] lg:gap-14">
-          <div className="relative aspect-[3/2] overflow-hidden rounded-[22px] bg-bg shadow-[0_40px_90px_-50px_rgb(var(--shadow)/0.7)]">
-            <AnimatePresence initial={false}>
-              <motion.div
-                key={room.image}
-                initial={{ opacity: 0, scale: 1.04 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute inset-0"
-              >
-                <Image src={room.image} alt={room.alt} fill sizes="(min-width: 1024px) 60vw, 100vw" className="object-cover" />
-              </motion.div>
-            </AnimatePresence>
+
+        {/* El ahorro, grande y con la foto de la cocina equipada */}
+        <Reveal
+          delay={0.06}
+          className="relative mt-10 grid overflow-hidden rounded-[26px] bg-navy-900 text-cream-100 shadow-[0_40px_90px_-40px_rgb(3_8_18/0.8)] lg:grid-cols-[1fr_1.1fr]"
+        >
+          <div className="relative z-10 flex flex-col justify-center p-7 sm:p-10">
+            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-[#ddbb84]/40 bg-[#ddbb84]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#ddbb84]">
+              <Sparkle className="size-3.5" weight="fill" aria-hidden />
+              {t.eyebrow}
+            </span>
+            <p className="mt-5 text-sm uppercase tracking-[0.2em] text-cream-100/70">{t.upTo}</p>
+            <p className="display mt-1 text-[3.6rem] leading-none text-[#ddbb84] sm:text-[4.8rem]">
+              <CountUp value={t.amount} format={fmt} />
+              {t.unit && <small className="ml-2 font-sans text-base tracking-[0.08em]">{t.unit}</small>}
+            </p>
+            <p className="mt-3 max-w-[26ch] text-lg text-cream-100/90">
+              {t.amountNote}, <span className="text-[#ddbb84]">{t.savingsTag}</span>.
+            </p>
           </div>
-          <ol className="grid gap-1.5">
-            {t.rooms.map((r, k) => {
-              const on = k === i;
-              return (
-                <li key={r.title}>
-                  <button
-                    type="button"
-                    aria-pressed={on}
-                    onClick={() => setI(k)}
-                    className={`w-full rounded-2xl px-5 py-3.5 text-left transition ${on ? "bg-surface shadow-[0_20px_40px_-26px_rgb(var(--shadow)/0.7)]" : "hover:bg-surface/60"}`}
-                  >
-                    <span className="flex items-baseline gap-3">
-                      <span className="font-display text-sm italic text-gold-ink">{String(k + 1).padStart(2, "0")}</span>
-                      <span className={`font-display text-[1.3rem] ${on ? "text-ink" : "text-ink-soft"}`}>{r.title}</span>
-                    </span>
-                    {on && <span className="mt-1 block pl-8 text-[0.92rem] text-ink-soft">{r.text}</span>}
-                  </button>
-                </li>
-              );
-            })}
-          </ol>
+          <div className="relative min-h-[16rem] lg:min-h-[22rem]">
+            <Image src="/media/img/eq-cocinando.webp" alt={t.imageAlt} fill sizes="(min-width: 1024px) 55vw, 100vw" className="object-cover" />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgb(10_26_46)_0%,transparent_30%)] lg:bg-[linear-gradient(90deg,rgb(10_26_46)_0%,transparent_35%)]" />
+          </div>
+        </Reveal>
+
+        <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:gap-12">
+          {groups.map((g) => (
+            <div key={g.title}>
+              <Reveal>
+                <h3 className="font-display text-[1.6rem]">{g.title}</h3>
+              </Reveal>
+              <ul className="mt-5 grid grid-cols-2 gap-3">
+                {g.items.map((it, k) => {
+                  const Icon = g.icons[k] ?? Check;
+                  return (
+                    <Reveal
+                      as="li"
+                      key={it}
+                      delay={0.05 * k}
+                      className="group flex flex-col gap-3 rounded-2xl border border-line bg-surface p-4 transition-colors hover:border-gold-500/60 sm:p-5"
+                    >
+                      <span className="grid size-11 place-items-center rounded-full bg-gold-500/15 text-gold-ink transition-transform duration-500 group-hover:scale-110">
+                        <Icon className="size-6" weight="duotone" aria-hidden />
+                      </span>
+                      <span className="text-[0.95rem] leading-snug">{it}</span>
+                    </Reveal>
+                  );
+                })}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
 }
 
-/** Equipamiento: lo que viene incluido y el smart home en dos celulares con video. */
-export function Equipment({ t, num, lang, ui }: { t: ShowcaseCopy["equipment"]; num?: number; lang: Lang; ui: ShowcaseCopy["ui"] }) {
-  const fmt = useCallback((n: number) => `$${Math.round(n).toLocaleString(lang === "en" ? "en-US" : "es-MX")}`, [lang]);
-  return (
-    <section id="equipamiento" aria-labelledby="equipamiento-title" className="overflow-hidden py-24 md:py-36">
-      <div className="container-x grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
-        <div>
-          <Reveal>
-            <Eyebrow num={num}>{t.eyebrow}</Eyebrow>
-            <h2 id="equipamiento-title" className="display mt-5 text-[2.5rem] md:text-[3.5rem]">
-              <Em text={t.title} />
-            </h2>
-          </Reveal>
-          <Reveal delay={0.08} className="mt-8 inline-block rounded-2xl bg-navy-900 px-6 py-5 text-cream-100 shadow-[0_24px_50px_-24px_rgb(3_8_18/0.7)]">
-            <span className="text-xs uppercase tracking-[0.2em] text-[#ddbb84]">{t.upTo}</span>
-            <span className="mt-1 block font-display text-[2.6rem] leading-none">
-              <CountUp value={t.amount} format={fmt} /> {t.unit && <small className="font-sans text-base tracking-[0.08em] text-[#ddbb84]">{t.unit}</small>}
-            </span>
-            <span className="mt-2 block text-sm text-cream-100/75">{t.amountNote}</span>
-          </Reveal>
-          <div className="mt-9 grid gap-8 sm:grid-cols-2">
-            {[
-              [t.interiorTitle, t.interior],
-              [t.smartTitle, t.smart],
-            ].map(([title, items]) => (
-              <Reveal key={title as string}>
-                <h3 className="font-display text-[1.35rem]">{title as string}</h3>
-                <ul className="mt-3 grid gap-2.5">
-                  {(items as string[]).map((it) => (
-                    <li key={it} className="flex gap-2.5 text-[0.98rem] leading-snug text-ink-soft">
-                      <Check className="mt-0.5 size-4 shrink-0 text-gold-ink" weight="bold" aria-hidden />
-                      {it}
-                    </li>
-                  ))}
-                </ul>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-
-        <Reveal delay={0.1} className="relative mx-auto flex w-full max-w-[30rem] items-start justify-center gap-5 py-6">
-          {[
-            { src: "/media/video/celular.mp4", poster: "/media/video/celular.jpg", label: t.phoneA, cls: "" },
-            { src: "/media/video/cerradura.mp4", poster: "/media/video/cerradura.jpg", label: t.phoneB, cls: "mt-16" },
-          ].map((p) => (
-            <div
-              key={p.src}
-              className={`relative aspect-[9/19] w-[46%] overflow-hidden rounded-[2rem] border-[6px] border-[#0a1a2e] bg-[#0a1a2e] shadow-[0_40px_80px_-30px_rgb(3_8_18/0.7)] ${p.cls}`}
-            >
-              <LazyVideo src={p.src} poster={p.poster} label={p.label} className="absolute inset-0 h-full w-full object-cover" controls={{ play: ui.play, pause: ui.pause }} />
-              <span aria-hidden className="absolute left-1/2 top-2 h-1.5 w-12 -translate-x-1/2 rounded-full bg-black/60" />
-            </div>
-          ))}
-        </Reveal>
-      </div>
-    </section>
-  );
+/** Smart home: los dos videos como historia al hacer scroll, con lo que pasa en cada uno. */
+export function SmartHome({ t, num, origin }: { t: ShowcaseCopy["smart"]; num?: number; origin: string }) {
+  return <ScrollStory id="smart" num={num} t={t} origin={origin} />;
 }
 
 /** Roof garden: la terraza privada a todo lo ancho. */
@@ -165,85 +162,29 @@ export function RoofBanner({ t, num, origin }: { t: ShowcaseCopy["roof"]; num?: 
   );
 }
 
-const AMENITY_ICONS = [SwimmingPool, TennisBall, CookingPot, Armchair, PersonSimpleWalk];
-
-/** Amenidades: cinco destacadas que avanzan solas mientras se ven, y la lista completa. */
+/** Amenidades: cada una aparece al hacer scroll con su foto y su texto; abajo, la lista completa. */
 export function AmenitiesShowcase({ t, num }: { t: ShowcaseCopy["amenities"]; num?: number }) {
-  const [i, setI] = useState(0);
-  const [auto, setAuto] = useState(true);
-  const box = useRef<HTMLDivElement>(null);
-  const inView = useInView(box, { amount: 0.4 });
-  const item = t.featured[i];
-
-  useEffect(() => {
-    if (!auto || !inView) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const id = setInterval(() => setI((k) => (k + 1) % t.featured.length), 4200);
-    return () => clearInterval(id);
-  }, [auto, inView, t.featured.length]);
-
   return (
-    <section id="amenidades" aria-labelledby="amenidades-title" className="section-sand py-24 md:py-36">
-      <div className="container-x">
-        <Reveal className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-end lg:gap-16">
-          <div>
-            <Eyebrow num={num}>{t.eyebrow}</Eyebrow>
-            <h2 id="amenidades-title" className="display mt-5 text-[2.5rem] md:text-[3.6rem]">
-              <Em text={t.title} />
-            </h2>
-          </div>
-          <p className="lead">{t.lead}</p>
-        </Reveal>
-
-        <div ref={box} className="mt-12 grid items-center gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
-          <ul className="order-2 grid gap-1.5 lg:order-1">
-            {t.featured.map((f, k) => {
-              const Icon = AMENITY_ICONS[k] ?? Leaf;
-              const on = k === i;
-              return (
-                <li key={f.title}>
-                  <button
-                    type="button"
-                    aria-pressed={on}
-                    onClick={() => {
-                      setI(k);
-                      setAuto(false);
-                    }}
-                    className={`relative w-full overflow-hidden rounded-2xl px-5 py-4 text-left transition ${on ? "bg-surface shadow-[0_20px_40px_-26px_rgb(var(--shadow)/0.7)]" : "hover:bg-surface/60"}`}
-                  >
-                    {on && <span aria-hidden className="absolute inset-y-3 left-0 w-[3px] rounded-full bg-gold-500" />}
-                    <span className="flex items-center gap-3">
-                      <Icon className={`size-5 shrink-0 ${on ? "text-gold-ink" : "text-ink-soft"}`} weight="duotone" aria-hidden />
-                      <span className={`font-display text-[1.3rem] ${on ? "text-ink" : "text-ink-soft"}`}>{f.title}</span>
-                    </span>
-                    {on && <span className="mt-1 block pl-8 text-[0.92rem] text-ink-soft">{f.text}</span>}
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
-          <div className="relative order-1 aspect-[4/5] overflow-hidden rounded-[22px] shadow-[0_40px_90px_-50px_rgb(var(--shadow)/0.7)] sm:aspect-[5/4] lg:order-2 lg:aspect-[6/5]">
-            <AnimatePresence initial={false}>
-              <motion.div
-                key={item.image}
-                initial={{ opacity: 0, scale: 1.05 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute inset-0"
-              >
-                <Image src={item.image} alt={item.alt} fill sizes="(min-width: 1024px) 55vw, 100vw" className="object-cover" style={{ objectPosition: item.pos ?? "50% 50%" }} />
-              </motion.div>
-            </AnimatePresence>
-          </div>
-        </div>
-
-        <div className="mt-14 grid gap-10 md:grid-cols-[2fr_1fr]">
+    <ScrollStory
+      id="amenidades"
+      num={num}
+      origin="amenidades"
+      frame="landscape"
+      tone="sand"
+      t={{
+        eyebrow: t.eyebrow,
+        title: t.title,
+        lead: t.lead,
+        frameLabel: t.title.replace(/\*/g, ""),
+        steps: t.featured.map((f, k) => ({ kicker: String(k + 1).padStart(2, "0"), title: f.title, text: f.text, poster: f.image, alt: f.alt, pos: f.pos })),
+      }}
+      footer={
+        <div className="container-x grid gap-10 pb-24 pt-10 md:grid-cols-[2fr_1fr] lg:pt-0">
           {[
             [t.clusterTitle, t.cluster],
             [t.devTitle, t.dev],
           ].map(([title, items]) => (
-            <Reveal key={title as string}>
+            <div key={title as string}>
               <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-ink">{title as string}</h3>
               <ul className="mt-4 flex flex-wrap gap-2">
                 {(items as string[]).map((a) => (
@@ -252,10 +193,10 @@ export function AmenitiesShowcase({ t, num }: { t: ShowcaseCopy["amenities"]; nu
                   </li>
                 ))}
               </ul>
-            </Reveal>
+            </div>
           ))}
         </div>
-      </div>
-    </section>
+      }
+    />
   );
 }

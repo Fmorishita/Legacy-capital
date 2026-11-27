@@ -1,14 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight, Car, MapPin, MapTrifold, ShieldCheck, UsersThree, Wall } from "@phosphor-icons/react";
+import { ArrowRight, Car, MapTrifold, ShieldCheck, UsersThree, Wall } from "@phosphor-icons/react";
+import { waLink } from "@/lib/site";
+import { AreaMap } from "./AreaMap";
 import type { ShowcaseCopy } from "@/lib/i18n/showcase";
 import { trackEvent } from "@/lib/track";
 import { Reveal } from "@/components/ui/Reveal";
 import { useLead } from "@/components/lead/LeadProvider";
 import { CountUp, Em, Eyebrow, LazyVideo } from "./primitives";
 
-const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=El+Sauzal+de+Rodr%C3%ADguez%2C+Ensenada%2C+Baja+California";
 const POINT_ICONS = [ShieldCheck, Wall, Car, UsersThree];
 
 /** Acceso controlado: la caseta al atardecer y el video de un auto entrando. */
@@ -27,8 +28,20 @@ export function Secure({ t, num, ui }: { t: ShowcaseCopy["secure"]; num?: number
         </Reveal>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-[1.45fr_0.55fr]">
-          <Reveal className="relative min-h-[26rem] overflow-hidden rounded-[22px] lg:min-h-[34rem]">
-            <Image src="/media/img/caseta-atardecer.webp" alt={t.imageAlt} fill sizes="(min-width: 1024px) 60vw, 100vw" className="object-cover object-[50%_56%]" />
+          {/* Celular: solo el video de la llegada, a lo alto de la pantalla */}
+          <Reveal className="relative mx-auto aspect-[9/14] w-full max-w-[28rem] overflow-hidden rounded-[22px] lg:hidden">
+            <LazyVideo
+              src="/media/video/acceso.mp4"
+              poster="/media/video/acceso.jpg"
+              label={t.clipLabel}
+              className="absolute inset-0 h-full w-full object-cover"
+              controls={{ play: ui.play, pause: ui.pause }}
+            />
+            <span className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1.5 text-xs font-semibold text-[#16202f]">{t.clipTag}</span>
+          </Reveal>
+          {/* Escritorio: la caseta al atardecer con el video encima */}
+          <Reveal className="relative hidden min-h-[34rem] overflow-hidden rounded-[22px] lg:block">
+            <Image src="/media/img/caseta-atardecer.webp" alt={t.imageAlt} fill sizes="(min-width: 1024px) 60vw, 1px" className="object-cover object-[50%_56%]" />
             <div className="absolute bottom-4 left-4 aspect-[9/16] w-[36%] max-w-[11.5rem] overflow-hidden rounded-2xl border-2 border-white/85 shadow-[0_24px_50px_-20px_rgb(0_0_0/0.8)]">
               <LazyVideo
                 src="/media/video/acceso.mp4"
@@ -127,12 +140,8 @@ export function LocationPlace({ t, num, origin }: { t: ShowcaseCopy["location"];
           </h2>
         </Reveal>
         <div className="mt-12 grid items-start gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
-          <Reveal className="relative aspect-[4/3] overflow-hidden rounded-[22px] bg-[#0f2433]">
-            <Image src="/img/ensenada-map.jpg" alt={t.mapAlt} fill sizes="(min-width: 1024px) 55vw, 100vw" className="object-cover" />
-            <span className="absolute left-[30%] top-[24%] flex -translate-x-1/2 -translate-y-full flex-col items-center">
-              <span className="whitespace-nowrap rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-[#16202f] shadow-lg">{t.pin}</span>
-              <MapPin className="bob mt-1 size-8 text-[#ddbb84] drop-shadow-lg" weight="fill" aria-hidden />
-            </span>
+          <Reveal className="mx-auto w-full max-w-[30rem] overflow-hidden rounded-[22px] border border-white/10 bg-[#0f2433]">
+            <AreaMap t={t} />
           </Reveal>
           <Reveal delay={0.1}>
             <ul className="divide-y divide-white/10 border-y border-white/10">
@@ -149,11 +158,11 @@ export function LocationPlace({ t, num, origin }: { t: ShowcaseCopy["location"];
             <p className="mt-4 text-xs text-white/55">{t.note}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href={MAPS_URL}
+                href={waLink(t.mapsWa)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-glass"
-                onClick={() => trackEvent("maps_click", { origin })}
+                onClick={() => trackEvent("whatsapp_click", { origin: `${origin}-ubicacion-maps` })}
               >
                 <MapTrifold className="size-5" weight="duotone" aria-hidden />
                 {t.mapsCta}

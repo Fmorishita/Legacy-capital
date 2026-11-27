@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { WhatsappLogo, Phone, MapPin } from "@phosphor-icons/react/dist/ssr";
+import { WhatsappLogo, MapPin } from "@phosphor-icons/react/dist/ssr";
 import type { Dict } from "@/lib/i18n/es";
 import type { NavCopy } from "@/lib/i18n/types";
 import type { PortfolioCopy } from "@/lib/i18n/portfolio";
@@ -45,16 +45,6 @@ export function Footer({
                   className="inline-flex items-center gap-2 hover:text-gold-300"
                 >
                   <WhatsappLogo className="size-4" weight="fill" aria-hidden /> WhatsApp {site.advisor.phoneDisplay}
-                </TrackedLink>
-              </li>
-              <li>
-                <TrackedLink
-                  event="phone_click"
-                  origin="footer"
-                  href={site.advisor.phoneHref}
-                  className="inline-flex items-center gap-2 hover:text-gold-300"
-                >
-                  <Phone className="size-4" aria-hidden /> {site.advisor.phoneDisplay}
                 </TrackedLink>
               </li>
               <li className="inline-flex items-center gap-2 text-cream-100/80">

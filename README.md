@@ -30,6 +30,19 @@ Sitio de captación de leads de Legacy Capital Real Estate (Ensenada, B.C.) con 
 - Opcional: `LEAD_WEBHOOK_URL` envía cada lead a Make, Zapier, n8n o Slack.
 - Eventos de medición: `lead`, `whatsapp_click`, `lot_select`, etc. (Vercel Analytics, y Meta Pixel / GA4 si se configuran sus IDs). Nunca se envían nombre, teléfono ni correo a los píxeles.
 
+## Links por canal y analítica
+
+Cada canal usa su propio link corto; todos llegan a la portada con UTM (definidos en `next.config.ts`, `SHORT_LINKS`):
+
+| Canal | Link |
+| --- | --- |
+| Instagram de Legacy Capital | `legacycapitalmx.com/ig` |
+| Instagram personal de Fran | `legacycapitalmx.com/fran` |
+| Página de Facebook | `legacycapitalmx.com/fb` |
+| WhatsApp personal (perfil / estados) | `legacycapitalmx.com/wa` |
+
+La fuente se guarda con el lead (columnas `utm_*` en Supabase) y llega en el correo como **Fuente del tráfico**. Para ver visitas por canal y mapas de calor: Microsoft Clarity (`NEXT_PUBLIC_CLARITY_ID`) y Vercel Analytics.
+
 ## Capacitación de asesores (`/capacitacion`)
 
 Plataforma privada del Curso de Ventas Inmobiliarias: 14 módulos (0 a 13) más anexos. Se entra desde el enlace discreto "Acceso asesores" del menú y del pie de página. Todas sus rutas llevan `noindex` y exigen sesión, salvo la verificación pública de certificados (`/certificados/[folio]`).

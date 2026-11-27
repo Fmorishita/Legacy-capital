@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { AnimatePresence, motion } from "motion/react";
 import { ArrowRight, Check, WhatsappLogo } from "@phosphor-icons/react";
+import type { StoryStep } from "@/lib/i18n/showcase";
+import { ScrollStory } from "./ScrollStory";
 import type { ShowcaseCopy } from "@/lib/i18n/showcase";
 import { LIST_PRICE, USD_RATE, money, type Model } from "@/lib/money";
 import { waLink, type Lang } from "@/lib/site";
@@ -22,156 +22,105 @@ export function modelPrice(model: Model, lang: Lang) {
   return { main: money(mxn, "es"), unit: "MXN", sub: "" };
 }
 
-type View = "render" | "plan" | "roof";
-
-/** Los dos modelos: render, planta baja y planta del roof, precio de lista y lo que incluye. */
+/**
+ * Los dos modelos sin pestañas ni clics: al hacer scroll pasan fachada, planta baja y roof garden de
+ * 2 recámaras y luego de 3. En cada fachada, precio de lista, metros y botones para cotizar.
+ */
 export function Homes({ t, num, lang, origin }: { t: ShowcaseCopy["homes"]; num?: number; lang: Lang; origin: string }) {
   const { openLead } = useLead();
-  const [model, setModel] = useState<Model>("2R");
-  const [view, setView] = useState<View>("render");
-  const m = t.models[model];
-  const price = modelPrice(model, lang);
-  const src = view === "render" ? m.render : view === "plan" ? m.plan : m.roofPlan;
-  const alt = view === "render" ? m.renderAlt : view === "plan" ? m.planAlt : m.roofPlanAlt;
-  const waAvail =
-    lang === "en"
-      ? `Hi Fran, I'd like to know the availability of the ${m.tab} model with roof garden in Ensenada.`
-      : `Hola Fran, quiero conocer la disponibilidad del modelo de ${m.tab} con roof garden en Ensenada.`;
+  const steps: StoryStep[] = [];
+  const meta: { model: Model; kind: "render" | "plan" | "roof" }[] = [];
+  for (const model of MODELS) {
+    const m = t.models[model];
+    const price = modelPrice(model, lang);
+    steps.push({
+      kicker: model,
+      title: `${m.tab} ${m.sub}`,
+      text: `${t.from} ${price.main} ${price.unit}${price.sub ? ` · ${price.sub}` : ""}`,
+      poster: m.render,
+      alt: m.renderAlt,
+    });
+    meta.push({ model, kind: "render" });
+    steps.push({
+      kicker: model,
+      title: t.story.planTitle,
+      text: t.story.planText.replace("{built}", m.built),
+      poster: m.plan,
+      alt: m.planAlt,
+      fit: "contain",
+    });
+    meta.push({ model, kind: "plan" });
+    steps.push({
+      kicker: model,
+      title: t.story.roofTitle,
+      text: t.story.roofText.replace("{roof}", m.roof),
+      poster: m.roofPlan,
+      alt: m.roofPlanAlt,
+      fit: "contain",
+    });
+    meta.push({ model, kind: "roof" });
+  }
+
+  const extra = (k: number) => {
+    const { model, kind } = meta[k];
+    if (kind !== "render") return null;
+    const m = t.models[model];
+    const waAvail =
+      lang === "en"
+        ? `Hi Fran, I'd like to know the availability of the ${m.tab} model with roof garden in Ensenada.`
+        : `Hola Fran, quiero conocer la disponibilidad del modelo de ${m.tab} con roof garden en Ensenada.`;
+    return (
+      <div className="mt-4">
+        <dl className="grid grid-cols-3 gap-3 border-y border-white/15 py-3 lg:border-line">
+          {[
+            [m.total, t.totalLabel],
+            [m.built, t.builtLabel],
+            [m.roof, t.roofLabel],
+          ].map(([v, l]) => (
+            <div key={l}>
+              <dt className="sr-only">{l}</dt>
+              <dd>
+                <span className="story-title block font-display text-[1.35rem] leading-none md:text-[1.6rem]">{v}</span>
+                <span className="story-text mt-1 block text-[0.75rem] leading-snug">{l}</span>
+              </dd>
+            </div>
+          ))}
+        </dl>
+        <div className="mt-4 flex flex-wrap gap-2.5">
+          <button
+            type="button"
+            className="btn btn-gold btn-glow"
+            onClick={() => openLead({ kind: "model", origin: `${origin}-modelo-${model}`, interes: model, title: t.quoteTitle.replace("{model}", m.tab) })}
+          >
+            {t.quote}
+            <ArrowRight className="nudge size-4" weight="bold" aria-hidden />
+          </button>
+          <a
+            href={waLink(waAvail)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-ghost"
+            onClick={() => trackEvent("whatsapp_click", { origin: `${origin}-disponibilidad-${model}` })}
+          >
+            <WhatsappLogo className="size-5 text-[#25d366]" weight="fill" aria-hidden />
+            {t.availability}
+          </a>
+        </div>
+      </div>
+    );
+  };
 
   return (
-    <section id="casas" aria-labelledby="casas-title" className="py-24 md:py-36">
-      <div className="container-x">
-        <Reveal className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-end lg:gap-16">
-          <div>
-            <Eyebrow num={num}>{t.eyebrow}</Eyebrow>
-            <h2 id="casas-title" className="display mt-5 text-[2.5rem] md:text-[3.6rem]">
-              <Em text={t.title} />
-            </h2>
-          </div>
-          <p className="lead">{t.lead}</p>
-        </Reveal>
-
-        <div role="radiogroup" aria-label={t.eyebrow} className="mt-10 inline-flex rounded-full border border-line bg-surface p-1">
-          {MODELS.map((k) => (
-            <button
-              key={k}
-              type="button"
-              role="radio"
-              aria-checked={model === k}
-              onClick={() => {
-                setModel(k);
-                trackEvent("model_view", { model: k, origin });
-              }}
-              className={`rounded-full px-5 py-2.5 text-sm font-medium transition-colors ${
-                model === k ? "bg-ink text-bg shadow" : "text-ink-soft hover:text-ink"
-              }`}
-            >
-              {t.models[k].tab}
-            </button>
-          ))}
-        </div>
-
-        <div className="mt-8 grid items-start gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-14">
-          <div>
-            <div className="relative aspect-[16/11] overflow-hidden rounded-[22px] bg-[#f4efe6] shadow-[0_40px_90px_-50px_rgb(var(--shadow)/0.7)]">
-              <AnimatePresence mode="wait" initial={false}>
-                <motion.div
-                  key={src}
-                  initial={{ opacity: 0, scale: 1.02 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-                  className="absolute inset-0"
-                >
-                  <Image
-                    src={src}
-                    alt={alt}
-                    fill
-                    sizes="(min-width: 1024px) 60vw, 100vw"
-                    className={view === "render" ? "object-cover" : "object-contain p-4"}
-                  />
-                </motion.div>
-              </AnimatePresence>
-            </div>
-            <div className="mt-3 flex flex-wrap gap-2">
-              {(Object.keys(t.views) as View[]).map((v) => (
-                <button key={v} type="button" className="chip" aria-pressed={view === v} onClick={() => setView(v)}>
-                  {t.views[v]}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <span className="inline-flex rounded-full bg-gold-500/15 px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-gold-ink">
-              {t.badge}
-            </span>
-            <h3 className="display mt-4 text-[2.4rem] leading-none md:text-[2.9rem]">
-              {m.name} <em className="block text-[0.62em]">{m.sub}</em>
-            </h3>
-            <p className="mt-5 flex flex-wrap items-baseline gap-x-2">
-              <span className="text-sm text-ink-soft">{t.from}</span>
-              <span className="display text-[2.1rem] leading-none text-ink">{price.main}</span>
-              <span className="text-sm tracking-[0.08em] text-ink-soft">{price.unit}</span>
-              {price.sub && <span className="basis-full pt-1 text-sm text-ink-soft">{price.sub}</span>}
-            </p>
-            <dl className="mt-6 grid grid-cols-3 gap-3 border-y border-line py-5">
-              {[
-                [m.total, t.totalLabel],
-                [m.built, t.builtLabel],
-                [m.roof, t.roofLabel],
-              ].map(([v, l]) => (
-                <div key={l}>
-                  <dt className="sr-only">{l}</dt>
-                  <dd>
-                    <span className="block font-display text-[1.6rem] leading-none">{v}</span>
-                    <span className="mt-1.5 block text-[0.78rem] leading-snug text-ink-soft">{l}</span>
-                  </dd>
-                </div>
-              ))}
-            </dl>
-            <ul className="mt-6 grid gap-2.5">
-              {m.features.map((f) => (
-                <li key={f} className="flex gap-3 leading-snug">
-                  <span aria-hidden className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-gold-500 text-navy-900">
-                    <Check className="size-3" weight="bold" />
-                  </span>
-                  {f}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <button
-                type="button"
-                className="btn btn-gold btn-glow"
-                onClick={() =>
-                  openLead({
-                    kind: "model",
-                    origin: `${origin}-modelo-${model}`,
-                    interes: model,
-                    title: t.quoteTitle.replace("{model}", m.tab),
-                  })
-                }
-              >
-                {t.quote}
-                <ArrowRight className="nudge size-4" weight="bold" aria-hidden />
-              </button>
-              <a
-                href={waLink(waAvail)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-ghost"
-                onClick={() => trackEvent("whatsapp_click", { origin: `${origin}-disponibilidad-${model}` })}
-              >
-                <WhatsappLogo className="size-5 text-[#1f8f4e]" weight="fill" aria-hidden />
-                {t.availability}
-              </a>
-            </div>
-          </div>
-        </div>
-        <p className="mt-8 text-xs text-ink-soft">{t.note}</p>
-      </div>
-    </section>
+    <ScrollStory
+      id="casas"
+      num={num}
+      t={{ eyebrow: t.eyebrow, title: t.title, lead: t.lead, steps, frameLabel: t.story.frameLabel }}
+      origin={origin}
+      frame="landscape"
+      tone="sand"
+      extra={extra}
+      footer={<p className="container-x pb-16 pt-6 text-xs text-ink-soft lg:pt-0">{t.note}</p>}
+    />
   );
 }
 

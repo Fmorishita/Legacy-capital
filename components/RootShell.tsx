@@ -7,6 +7,8 @@ import type { Lang } from "@/lib/site";
 
 const PIXEL = process.env.NEXT_PUBLIC_META_PIXEL_ID;
 const GA = process.env.NEXT_PUBLIC_GA_ID;
+/** Microsoft Clarity: mapas de calor y grabaciones de sesión (gratis). Id público del proyecto. */
+const CLARITY = process.env.NEXT_PUBLIC_CLARITY_ID?.replace(/[^a-z0-9]/gi, "");
 
 /** html/body compartido por los layouts raíz de español e inglés. */
 export function RootShell({ lang, children }: { lang: Lang; children: React.ReactNode }) {
@@ -23,6 +25,11 @@ export function RootShell({ lang, children }: { lang: Lang; children: React.Reac
         {PIXEL && (
           <Script id="meta-pixel" strategy="afterInteractive">
             {`!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','${PIXEL}');fbq('track','PageView');`}
+          </Script>
+        )}
+        {CLARITY && (
+          <Script id="clarity" strategy="afterInteractive">
+            {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","${CLARITY}");`}
           </Script>
         )}
         {GA && (

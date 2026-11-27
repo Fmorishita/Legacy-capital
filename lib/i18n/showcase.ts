@@ -9,13 +9,23 @@ import type { Model } from "@/lib/money";
 const V = "/media/video";
 const I = "/media/img";
 
-export type StoryStep = { kicker: string; title: string; text: string; video: string; poster: string };
+/** Paso de una historia al hacer scroll: video (con póster) o foto; los planos van con fit "contain". */
+export type StoryStep = {
+  kicker: string;
+  title: string;
+  text: string;
+  video?: string;
+  poster: string;
+  alt?: string;
+  fit?: "cover" | "contain";
+  pos?: string;
+};
 export type StoryCopy = {
   eyebrow: string;
   title: string;
   lead: string;
   steps: StoryStep[];
-  cta: string;
+  cta?: string;
   ctaWa?: string;
   frameLabel: string;
 };
@@ -99,6 +109,9 @@ export type ShowcaseCopy = {
     tourCta: string;
     mapAlt: string;
     pin: string;
+    /** Mensaje de WhatsApp para pedir la ubicación exacta (no se publica la dirección) */
+    mapsWa: string;
+    map: { here: string; center: string; ocean: string; scenic: string; valleyRoad: string };
   };
   homes: {
     eyebrow: string;
@@ -116,9 +129,11 @@ export type ShowcaseCopy = {
     availability: string;
     quoteTitle: string;
     note: string;
+    /** Textos de la historia al hacer scroll: planta y roof de cada modelo ({built}, {roof} = m²) */
+    story: { planTitle: string; planText: string; roofTitle: string; roofText: string; frameLabel: string };
   };
   homesTeaser: { eyebrow: string; title: string; lead: string; cta: string; roofLine: string };
-  interior: { eyebrow: string; title: string; lead: string; rooms: { title: string; text: string; image: string; alt: string }[] };
+  interior: { eyebrow: string; title: string; lead: string; rooms: { title: string; text: string; image: string; alt: string; pos?: string }[] };
   equipment: {
     eyebrow: string;
     title: string;
@@ -132,7 +147,12 @@ export type ShowcaseCopy = {
     smart: string[];
     phoneA: string;
     phoneB: string;
+    /** Foto principal de la sección (texto alternativo) y sello de ahorro */
+    imageAlt: string;
+    savingsTag: string;
   };
+  /** Smart home: historia al hacer scroll con los dos videos */
+  smart: StoryCopy;
   roof: { eyebrow: string; title: string; stats: { value: string; label: string }[]; features: string[]; cta: string; imageAlt: string };
   amenities: {
     eyebrow: string;
@@ -177,6 +197,8 @@ export type ShowcaseCopy = {
     eyebrow: string;
     title: string;
     tabs: { roi: string; brochure: string };
+    /** Cada documento tiene su propia sección: el brochure arriba (casas) y el análisis junto a la inversión */
+    sections: Record<"roi" | "brochure", { eyebrow: string; title: string; formTitle: string; formNote: string }>;
     roi: { meta: string; title: string; kpis: { value: string; label: string }[]; rows: [string, string][]; disclaimer: string };
     brochure: { meta: string; title: string; pages: string; rows: [string, string][]; coverAlt: string };
     form: {
@@ -220,7 +242,7 @@ const es: ShowcaseCopy = {
     lead: "Casas de un nivel con roof garden y vista al mar en preventa, en un clúster privado al norte de Ensenada. Te acompañamos de la primera llamada a la entrega de llaves.",
     moveIn: { text: "¿Necesitas estrenar ya?", cta: "Ver entrega inmediata" },
   },
-  band: ["Roof garden privado", "Vista al mar y montañas", "Acceso controlado", "Smart home incluido", "Alberca · Pickleball · Asadores", "Entrega 2028"],
+  band: ["Roof garden privado", "Vista al mar y montañas", "Acceso controlado", "Smart home incluido", "Alberca · Pickleball · Parque lineal", "Entrega 2028"],
   advisor: {
     eyebrow: "Tu asesor",
     title: "Hola, soy *Fran Morishita.* Te acompaño de principio a fin.",
@@ -246,7 +268,7 @@ const es: ShowcaseCopy = {
       { kicker: "07:00", title: "Despiertas sin prisa", text: "Luz natural, ventanales y minisplit en cada recámara.", video: `${V}/d1-despertar.mp4`, poster: `${V}/d1-despertar.jpg` },
       { kicker: "11:30", title: "La alberca, a pasos de casa", text: "Sin manejar ni salir del clúster: la alberca es parte de tus amenidades.", video: `${V}/d2-alberca.mp4`, poster: `${V}/d2-alberca.jpg` },
       { kicker: "17:00", title: "Pickleball con amigos", text: "Cancha propia dentro del clúster para jugar con tus vecinos.", video: `${V}/d3-pickleball.mp4`, poster: `${V}/d3-pickleball.jpg` },
-      { kicker: "19:00", title: "Asador en familia", text: "Asadores y mesas para reunirte sin salir del clúster.", video: `${V}/d4-asador.mp4`, poster: `${V}/d4-asador.jpg` },
+      { kicker: "19:00", title: "Asador en familia", text: "El asador está en el roof de tu casa: cocinas y recibes a tu gente sin salir de casa.", video: `${V}/d4-asador.mp4`, poster: `${V}/d4-asador.jpg` },
       {
         kicker: "20:00",
         title: "Atardecer en tu roof",
@@ -334,10 +356,13 @@ const es: ShowcaseCopy = {
       { name: "Mexicali", dist: "250 km", time: "3 h" },
     ],
     note: "Tiempos aproximados en auto, sujetos a tráfico y condiciones de ruta.",
-    mapsCta: "Ver El Sauzal en Google Maps",
+    mapsCta: "Pedir la ubicación en Google Maps",
     tourCta: "Agendar recorrido",
-    mapAlt: "Vista aérea de la bahía de Ensenada y la zona norte",
+    mapAlt: "Mapa de la zona norte de Ensenada: la carretera escénica desde Tijuana, El Sauzal, Ensenada centro y el camino al Valle de Guadalupe",
     pin: "Zona norte · El Sauzal",
+    mapsWa:
+      "Hola Fran, vi tu página web. ¿Me compartes el link de Google Maps del proyecto de casas de un nivel en preventa con vista al mar en El Sauzal?",
+    map: { here: "Casas en preventa", center: "Ensenada centro", ocean: "Océano Pacífico", scenic: "Carretera escénica", valleyRoad: "Camino al Valle" },
   },
   homes: {
     eyebrow: "Residencias",
@@ -398,6 +423,13 @@ const es: ShowcaseCopy = {
     availability: "Disponibilidad",
     quoteTitle: "Cotiza el modelo de {model}",
     note: "Precios de lista de noviembre 2026 en MXN, sujetos a cambio y disponibilidad.",
+    story: {
+      planTitle: "Todo en un solo nivel",
+      planText: "{built} m² de construcción: recámaras con clóset, 2.5 baños, sala, comedor, cocina, patio trasero y cuarto de lavado.",
+      roofTitle: "Y arriba, tu roof garden",
+      roofText: "{roof} m² privados con medio baño, barra con tarja, asador y pérgola.",
+      frameLabel: "Fachada, planta baja y roof garden de cada modelo",
+    },
   },
   homesTeaser: {
     eyebrow: "Las casas",
@@ -409,9 +441,9 @@ const es: ShowcaseCopy = {
   interior: {
     eyebrow: "Por dentro",
     title: "Recorre tu casa, *espacio por espacio.*",
-    lead: "Elige un espacio para verlo. Diseño funcional, luz natural y acabados listos para habitarse.",
+    lead: "Baja para recorrer cada espacio. Diseño funcional, luz natural y acabados listos para habitarse.",
     rooms: [
-      { title: "Sala-comedor", text: "Espacio abierto e iluminado, conectado con la cocina.", image: `${I}/in-sala.webp`, alt: "Sala-comedor con cocina integrada" },
+      { title: "Sala-comedor", text: "Espacio abierto e iluminado, conectado con la cocina.", image: `${I}/in-sala.webp`, alt: "Sala-comedor con cocina integrada", pos: "74% 50%" },
       { title: "Cocina", text: "Barra de granito, estufa con horno y campana desde la entrega.", image: `${I}/in-cocina.webp`, alt: "Cocina con barra de granito" },
       { title: "Recámara principal", text: "Clóset incluido y minisplit para cada temporada.", image: `${I}/in-recamara-principal.webp`, alt: "Recámara principal con clóset" },
       { title: "Recámara", text: "Clóset y minisplit también en la segunda recámara.", image: `${I}/in-recamara.webp`, alt: "Recámara secundaria con clóset" },
@@ -437,6 +469,31 @@ const es: ShowcaseCopy = {
     smart: ["Cerradura digital", "Aire acondicionado desde la app", "Encendido y apagado de luces", "Conectividad inalámbrica y panel de control"],
     phoneA: "Video: controlas luces, clima y cerradura desde el celular",
     phoneB: "Video: una pareja llega a casa y abre con la cerradura digital",
+    imageAlt: "Pareja cocinando en la cocina equipada con barra de granito",
+    savingsTag: "que ya no tienes que gastar",
+  },
+  smart: {
+    eyebrow: "Smart home incluido",
+    title: "Tu casa responde *desde tu celular.*",
+    lead: "Cada casa se entrega con cerradura digital, clima y luces conectados a una app. Así se ve en el día a día.",
+    steps: [
+      {
+        kicker: "App",
+        title: "Clima, luces y cerradura en una sola app",
+        text: "Enciende el aire antes de llegar, apaga las luces que se quedaron prendidas y revisa la puerta, estés en la sala o en otra ciudad.",
+        video: `${V}/celular.mp4`,
+        poster: `${V}/celular.jpg`,
+      },
+      {
+        kicker: "Llegada",
+        title: "Llegas de viaje y entras sin buscar llaves",
+        text: "La cerradura digital abre con código o desde el celular. Ideal si la rentas: tus huéspedes entran sin entregarles llaves.",
+        video: `${V}/cerradura.mp4`,
+        poster: `${V}/cerradura.jpg`,
+      },
+    ],
+    cta: "Quiero ver la casa equipada",
+    frameLabel: "Videos del smart home: la app en el celular y la llegada con cerradura digital",
   },
   roof: {
     eyebrow: "Roof garden",
@@ -451,13 +508,12 @@ const es: ShowcaseCopy = {
   },
   amenities: {
     eyebrow: "Amenidades",
-    title: "Alberca, pickleball y asadores *a pasos de tu puerta.*",
+    title: "Alberca, pickleball y salón *a pasos de tu puerta.*",
     lead: "Doce amenidades dentro del clúster y cuatro más en el desarrollo, pensadas para usarse todos los días.",
     featured: [
-      { title: "Alberca", text: "Para refrescarte sin salir del clúster.", image: `${I}/alberca-pareja.webp`, alt: "Pareja en la alberca del clúster", pos: "50% 60%" },
+      { title: "Alberca", text: "Para refrescarte sin salir del clúster.", image: `${I}/am-alberca.webp`, alt: "Amigos en la alberca del clúster" },
       { title: "Pickleball", text: "Cancha propia para jugar con vecinos y amigos.", image: `${I}/am-pickleball.webp`, alt: "Partido en la cancha de pickleball" },
-      { title: "Asadores", text: "Asadores y mesas al aire libre para reuniones.", image: `${I}/am-asadores.webp`, alt: "Familia en el área de asadores" },
-      { title: "Salón", text: "Salón de usos múltiples bajo la pérgola.", image: `${I}/cena-pergola.webp`, alt: "Amigos cenando bajo la pérgola", pos: "50% 56%" },
+      { title: "Salón", text: "Salón de usos múltiples al aire libre, para reunirte con tus vecinos.", image: `${I}/am-salon.webp`, alt: "Amigos reunidos en el salón al aire libre" },
       { title: "Andadores", text: "Parque lineal y andadores para caminar.", image: `${I}/am-andadores.webp`, alt: "Pareja caminando por los andadores" },
     ],
     clusterTitle: "Dentro del clúster",
@@ -526,6 +582,20 @@ const es: ShowcaseCopy = {
     eyebrow: "Material exclusivo",
     title: "Brochure y análisis de rentabilidad, *para recibirlos por email o WhatsApp.*",
     tabs: { roi: "Análisis de rentabilidad", brochure: "Brochure noviembre 2026" },
+    sections: {
+      brochure: {
+        eyebrow: "Brochure noviembre 2026",
+        title: "Precios, plantas y amenidades, *en un solo documento.*",
+        formTitle: "Recibe el brochure",
+        formNote: "Fran te lo envía en PDF con la disponibilidad y la promoción de la semana.",
+      },
+      roi: {
+        eyebrow: "Análisis de rentabilidad",
+        title: "Los números de tu inversión, *antes de decidir.*",
+        formTitle: "Recibe el análisis de rentabilidad",
+        formNote: "Fran te lo envía en PDF y resuelve tus dudas sobre los números.",
+      },
+    },
     roi: {
       meta: "Renta vacacional · Ensenada · Noviembre 2026",
       title: "Análisis de rentabilidad",
@@ -654,7 +724,7 @@ const en: ShowcaseCopy = {
     lead: "Single-story pre-sale homes with a roof garden and ocean views, in a private gated cluster in northern Ensenada. We guide you from the first call to the day you get your keys.",
     moveIn: { text: "Need to move in now?", cta: "See move-in-ready homes" },
   },
-  band: ["Private roof garden", "Ocean and mountain views", "Gated access", "Smart home included", "Pool · Pickleball · Grills", "Delivery 2028"],
+  band: ["Private roof garden", "Ocean and mountain views", "Gated access", "Smart home included", "Pool · Pickleball · Linear park", "Delivery 2028"],
   advisor: {
     eyebrow: "Your advisor",
     title: "Hi, I’m *Fran Morishita.* I’ll guide you every step.",
@@ -680,7 +750,7 @@ const en: ShowcaseCopy = {
       { kicker: "7:00 am", title: "Wake up slowly", text: "Natural light, big windows and mini-split A/C in every bedroom.", video: `${V}/d1-despertar.mp4`, poster: `${V}/d1-despertar.jpg` },
       { kicker: "11:30 am", title: "The pool, steps from home", text: "No driving, no leaving the cluster: the pool is one of your amenities.", video: `${V}/d2-alberca.mp4`, poster: `${V}/d2-alberca.jpg` },
       { kicker: "5:00 pm", title: "Pickleball with friends", text: "A court inside the cluster to play with your neighbors.", video: `${V}/d3-pickleball.mp4`, poster: `${V}/d3-pickleball.jpg` },
-      { kicker: "7:00 pm", title: "Family grill night", text: "Grills and tables for get-togethers inside the cluster.", video: `${V}/d4-asador.mp4`, poster: `${V}/d4-asador.jpg` },
+      { kicker: "7:00 pm", title: "Family grill night", text: "The grill is on your home’s roof: cook and host your people without leaving home.", video: `${V}/d4-asador.mp4`, poster: `${V}/d4-asador.jpg` },
       {
         kicker: "8:00 pm",
         title: "Sunset on your roof",
@@ -768,10 +838,13 @@ const en: ShowcaseCopy = {
       { name: "Mexicali", dist: "155 mi", time: "3 h" },
     ],
     note: "Approximate drive times; traffic and border waits vary.",
-    mapsCta: "See El Sauzal on Google Maps",
+    mapsCta: "Get the Google Maps location",
     tourCta: "Book a tour",
-    mapAlt: "Aerial view of Ensenada bay and the northern area",
+    mapAlt: "Map of northern Ensenada: the scenic highway from Tijuana, El Sauzal, downtown Ensenada and the road to Valle de Guadalupe",
     pin: "Northern Ensenada · El Sauzal",
+    mapsWa:
+      "Hi Fran, I saw your website. Could you send me the Google Maps link for the single-level pre-sale homes with ocean views in El Sauzal?",
+    map: { here: "Pre-sale homes", center: "Downtown Ensenada", ocean: "Pacific Ocean", scenic: "Scenic highway", valleyRoad: "Road to the Valley" },
   },
   homes: {
     eyebrow: "Homes",
@@ -832,6 +905,13 @@ const en: ShowcaseCopy = {
     availability: "Availability",
     quoteTitle: "Get a quote for the {model} model",
     note: "November 2026 list prices. USD amounts are approximate at 18.5 MXN per USD; contracts are signed in Mexican pesos.",
+    story: {
+      planTitle: "Everything on one level",
+      planText: "{built} m² built: bedrooms with closets, 2.5 baths, living, dining, kitchen, backyard and laundry room.",
+      roofTitle: "And upstairs, your roof garden",
+      roofText: "{roof} m² of private space with a half bath, bar with sink, grill and pergola.",
+      frameLabel: "Facade, ground floor and roof garden of each model",
+    },
   },
   homesTeaser: {
     eyebrow: "The homes",
@@ -843,9 +923,9 @@ const en: ShowcaseCopy = {
   interior: {
     eyebrow: "Inside",
     title: "Tour your home, *room by room.*",
-    lead: "Pick a room to see it. Functional design, natural light and move-in-ready finishes.",
+    lead: "Scroll to walk through each room. Functional design, natural light and move-in-ready finishes.",
     rooms: [
-      { title: "Living-dining", text: "Open, bright space connected to the kitchen.", image: `${I}/in-sala.webp`, alt: "Living and dining room with open kitchen" },
+      { title: "Living-dining", text: "Open, bright space connected to the kitchen.", image: `${I}/in-sala.webp`, alt: "Living and dining room with open kitchen", pos: "74% 50%" },
       { title: "Kitchen", text: "Granite bar, stove with oven and range hood at delivery.", image: `${I}/in-cocina.webp`, alt: "Kitchen with granite bar" },
       { title: "Primary bedroom", text: "Built-in closet and mini-split A/C for every season.", image: `${I}/in-recamara-principal.webp`, alt: "Primary bedroom with closet" },
       { title: "Bedroom", text: "Closet and mini-split in the second bedroom too.", image: `${I}/in-recamara.webp`, alt: "Second bedroom with closet" },
@@ -866,6 +946,31 @@ const en: ShowcaseCopy = {
     smart: ["Digital door lock", "A/C controlled from the app", "Lights on and off from your phone", "Wireless connectivity and control panel"],
     phoneA: "Video: lights, climate and door lock controlled from a phone",
     phoneB: "Video: a couple arrives home and opens the digital lock",
+    imageAlt: "Couple cooking in the equipped kitchen with a granite bar",
+    savingsTag: "you no longer have to spend",
+  },
+  smart: {
+    eyebrow: "Smart home included",
+    title: "Your home answers *from your phone.*",
+    lead: "Every home is delivered with a digital lock, A/C and lights connected to an app. This is what it looks like day to day.",
+    steps: [
+      {
+        kicker: "App",
+        title: "A/C, lights and lock in one app",
+        text: "Turn on the A/C before you arrive, switch off the lights you left on and check the door, whether you are in the living room or in another city.",
+        video: `${V}/celular.mp4`,
+        poster: `${V}/celular.jpg`,
+      },
+      {
+        kicker: "Arrival",
+        title: "Back from a trip, in without looking for keys",
+        text: "The digital lock opens with a code or from your phone. Ideal if you rent it out: guests get in without a key handoff.",
+        video: `${V}/cerradura.mp4`,
+        poster: `${V}/cerradura.jpg`,
+      },
+    ],
+    cta: "I want to see the equipped home",
+    frameLabel: "Smart home videos: the app on the phone and arriving with the digital lock",
   },
   roof: {
     eyebrow: "Roof garden",
@@ -880,13 +985,12 @@ const en: ShowcaseCopy = {
   },
   amenities: {
     eyebrow: "Amenities",
-    title: "Pool, pickleball and grills *steps from your door.*",
+    title: "Pool, pickleball and lounge *steps from your door.*",
     lead: "Twelve amenities inside the cluster and four more in the development, made for everyday use.",
     featured: [
-      { title: "Pool", text: "Cool off without leaving the cluster.", image: `${I}/alberca-pareja.webp`, alt: "Couple at the cluster pool", pos: "50% 60%" },
+      { title: "Pool", text: "Cool off without leaving the cluster.", image: `${I}/am-alberca.webp`, alt: "Friends at the cluster pool" },
       { title: "Pickleball", text: "Your own court to play with neighbors and friends.", image: `${I}/am-pickleball.webp`, alt: "Game on the pickleball court" },
-      { title: "Grills", text: "Outdoor grills and tables for get-togethers.", image: `${I}/am-asadores.webp`, alt: "Family at the grill area" },
-      { title: "Lounge", text: "Multipurpose lounge under the pergola.", image: `${I}/cena-pergola.webp`, alt: "Friends having dinner under the pergola", pos: "50% 56%" },
+      { title: "Lounge", text: "Open-air multipurpose lounge to get together with your neighbors.", image: `${I}/am-salon.webp`, alt: "Friends gathered in the open-air lounge" },
       { title: "Walking paths", text: "Linear park and walking paths.", image: `${I}/am-andadores.webp`, alt: "Couple walking along the paths" },
     ],
     clusterTitle: "Inside the cluster",
@@ -955,6 +1059,20 @@ const en: ShowcaseCopy = {
     eyebrow: "Exclusive material",
     title: "Brochure and ROI analysis, *sent to your email or WhatsApp.*",
     tabs: { roi: "ROI analysis", brochure: "November 2026 brochure" },
+    sections: {
+      brochure: {
+        eyebrow: "November 2026 brochure",
+        title: "Prices, floor plans and amenities, *in one document.*",
+        formTitle: "Get the brochure",
+        formNote: "Fran sends you the PDF with this week’s availability and promotion.",
+      },
+      roi: {
+        eyebrow: "ROI analysis",
+        title: "The numbers behind your investment, *before you decide.*",
+        formTitle: "Get the ROI analysis",
+        formNote: "Fran sends you the PDF and answers your questions about the numbers.",
+      },
+    },
     roi: {
       meta: "Vacation rental · Ensenada · November 2026",
       title: "ROI analysis",

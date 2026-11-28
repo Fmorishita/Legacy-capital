@@ -1,0 +1,582 @@
+[
+{
+"text": "¿Trabajas",
+"start": 0.14,
+"end": 0.58
+},
+{
+"text": "en",
+"start": 0.62,
+"end": 0.68
+},
+{
+"text": "Estados",
+"start": 0.72,
+"end": 0.981
+},
+{
+"text": "Unidos",
+"start": 1.041,
+"end": 1.321
+},
+{
+"text": "y",
+"start": 1.441,
+"end": 1.481
+},
+{
+"text": "ganas",
+"start": 1.541,
+"end": 1.761
+},
+{
+"text": "en",
+"start": 1.801,
+"end": 1.861
+},
+{
+"text": "dólares?",
+"start": 1.881,
+"end": 2.241
+},
+{
+"text": "Tu",
+"start": 2.641,
+"end": 2.701
+},
+{
+"text": "casa",
+"start": 2.782,
+"end": 3.022
+},
+{
+"text": "con",
+"start": 3.062,
+"end": 3.182
+},
+{
+"text": "vista",
+"start": 3.202,
+"end": 3.422
+},
+{
+"text": "al",
+"start": 3.462,
+"end": 3.522
+},
+{
+"text": "mar",
+"start": 3.562,
+"end": 3.682
+},
+{
+"text": "en",
+"start": 3.782,
+"end": 3.862
+},
+{
+"text": "El",
+"start": 3.902,
+"end": 3.982
+},
+{
+"text": "Sauzal,",
+"start": 4.082,
+"end": 4.462
+},
+{
+"text": "Ensenada,",
+"start": 4.783,
+"end": 5.303
+},
+{
+"text": "desde",
+"start": 5.563,
+"end": 5.803
+},
+{
+"text": "$215,000",
+"start": 5.843,
+"end": 6.704
+},
+{
+"text": "dólares.",
+"start": 6.724,
+"end": 7.084
+},
+{
+"text": "A",
+"start": 7.644,
+"end": 7.664
+},
+{
+"text": "una",
+"start": 7.744,
+"end": 7.884
+},
+{
+"text": "hora",
+"start": 7.904,
+"end": 8.024
+},
+{
+"text": "de",
+"start": 8.064,
+"end": 8.124
+},
+{
+"text": "Tijuana",
+"start": 8.144,
+"end": 8.545
+},
+{
+"text": "y",
+"start": 8.685,
+"end": 8.705
+},
+{
+"text": "hora",
+"start": 8.785,
+"end": 8.945
+},
+{
+"text": "y",
+"start": 8.965,
+"end": 8.985
+},
+{
+"text": "media",
+"start": 9.045,
+"end": 9.325
+},
+{
+"text": "de",
+"start": 9.445,
+"end": 9.505
+},
+{
+"text": "la",
+"start": 9.565,
+"end": 9.625
+},
+{
+"text": "garita",
+"start": 9.665,
+"end": 9.965
+},
+{
+"text": "de",
+"start": 10.005,
+"end": 10.066
+},
+{
+"text": "San",
+"start": 10.146,
+"end": 10.286
+},
+{
+"text": "Ysidro.",
+"start": 10.346,
+"end": 10.686
+},
+{
+"text": "Casas",
+"start": 11.326,
+"end": 11.606
+},
+{
+"text": "de",
+"start": 11.626,
+"end": 11.686
+},
+{
+"text": "un",
+"start": 11.706,
+"end": 11.766
+},
+{
+"text": "nivel",
+"start": 11.806,
+"end": 12.027
+},
+{
+"text": "con",
+"start": 12.087,
+"end": 12.227
+},
+{
+"text": "roof",
+"start": 12.327,
+"end": 12.487
+},
+{
+"text": "garden",
+"start": 12.547,
+"end": 12.807
+},
+{
+"text": "privado",
+"start": 12.847,
+"end": 13.247
+},
+{
+"text": "y",
+"start": 13.507,
+"end": 13.527
+},
+{
+"text": "los",
+"start": 13.587,
+"end": 13.688
+},
+{
+"text": "mejores",
+"start": 13.748,
+"end": 14.128
+},
+{
+"text": "atardeceres",
+"start": 14.168,
+"end": 14.728
+},
+{
+"text": "del",
+"start": 14.768,
+"end": 14.888
+},
+{
+"text": "Pacífico.",
+"start": 14.928,
+"end": 15.408
+},
+{
+"text": "Dos",
+"start": 15.869,
+"end": 16.029
+},
+{
+"text": "recámaras",
+"start": 16.089,
+"end": 16.609
+},
+{
+"text": "desde",
+"start": 16.649,
+"end": 16.869
+},
+{
+"text": "$215,000",
+"start": 16.929,
+"end": 17.83
+},
+{
+"text": "dólares;",
+"start": 17.87,
+"end": 18.23
+},
+{
+"text": "tres",
+"start": 18.55,
+"end": 18.75
+},
+{
+"text": "recámaras",
+"start": 18.81,
+"end": 19.251
+},
+{
+"text": "desde",
+"start": 19.291,
+"end": 19.491
+},
+{
+"text": "$235,000.",
+"start": 19.531,
+"end": 20.691
+},
+{
+"text": "Separas",
+"start": 21.072,
+"end": 21.432
+},
+{
+"text": "con",
+"start": 21.472,
+"end": 21.592
+},
+{
+"text": "el",
+"start": 21.612,
+"end": 21.692
+},
+{
+"text": "10%,",
+"start": 21.752,
+"end": 22.452
+},
+{
+"text": "pagas",
+"start": 22.772,
+"end": 23.033
+},
+{
+"text": "otro",
+"start": 23.173,
+"end": 23.373
+},
+{
+"text": "10%",
+"start": 23.453,
+"end": 23.693
+},
+{
+"text": "en",
+"start": 23.753,
+"end": 23.813
+},
+{
+"text": "20",
+"start": 23.873,
+"end": 24.133
+},
+{
+"text": "mensualidades",
+"start": 24.173,
+"end": 24.814
+},
+{
+"text": "y",
+"start": 24.854,
+"end": 24.874
+},
+{
+"text": "el",
+"start": 24.914,
+"end": 24.994
+},
+{
+"text": "80%",
+"start": 25.034,
+"end": 25.814
+},
+{
+"text": "hasta",
+"start": 25.834,
+"end": 26.014
+},
+{
+"text": "la",
+"start": 26.054,
+"end": 26.114
+},
+{
+"text": "entrega",
+"start": 26.154,
+"end": 26.475
+},
+{
+"text": "en",
+"start": 26.615,
+"end": 26.695
+},
+{
+"text": "2028.",
+"start": 26.755,
+"end": 27.655
+},
+{
+"text": "Úsala",
+"start": 28.015,
+"end": 28.316
+},
+{
+"text": "tus",
+"start": 28.356,
+"end": 28.496
+},
+{
+"text": "fines",
+"start": 28.556,
+"end": 28.756
+},
+{
+"text": "de",
+"start": 28.776,
+"end": 28.836
+},
+{
+"text": "semana",
+"start": 28.876,
+"end": 29.196
+},
+{
+"text": "o",
+"start": 29.376,
+"end": 29.396
+},
+{
+"text": "réntala",
+"start": 29.516,
+"end": 29.836
+},
+{
+"text": "por",
+"start": 29.876,
+"end": 29.996
+},
+{
+"text": "temporadas.",
+"start": 30.036,
+"end": 30.517
+},
+{
+"text": "Y",
+"start": 30.837,
+"end": 30.857
+},
+{
+"text": "si",
+"start": 30.937,
+"end": 30.997
+},
+{
+"text": "reservas",
+"start": 31.077,
+"end": 31.437
+},
+{
+"text": "este",
+"start": 31.497,
+"end": 31.637
+},
+{
+"text": "mes,",
+"start": 31.677,
+"end": 31.837
+},
+{
+"text": "te",
+"start": 32.098,
+"end": 32.178
+},
+{
+"text": "llevas",
+"start": 32.198,
+"end": 32.438
+},
+{
+"text": "equipamiento",
+"start": 32.478,
+"end": 32.938
+},
+{
+"text": "incluido",
+"start": 32.958,
+"end": 33.318
+},
+{
+"text": "con",
+"start": 33.358,
+"end": 33.458
+},
+{
+"text": "valor",
+"start": 33.498,
+"end": 33.739
+},
+{
+"text": "de",
+"start": 33.759,
+"end": 33.839
+},
+{
+"text": "hasta",
+"start": 33.859,
+"end": 34.039
+},
+{
+"text": "$24,000",
+"start": 34.099,
+"end": 34.859
+},
+{
+"text": "dólares.",
+"start": 34.919,
+"end": 35.319
+},
+{
+"text": "Escríbeme",
+"start": 35.78,
+"end": 36.26
+},
+{
+"text": "por",
+"start": 36.34,
+"end": 36.52
+},
+{
+"text": "WhatsApp",
+"start": 36.62,
+"end": 37.06
+},
+{
+"text": "con",
+"start": 37.381,
+"end": 37.501
+},
+{
+"text": "el",
+"start": 37.541,
+"end": 37.621
+},
+{
+"text": "botón",
+"start": 37.641,
+"end": 37.901
+},
+{
+"text": "de",
+"start": 37.941,
+"end": 38.001
+},
+{
+"text": "abajo",
+"start": 38.021,
+"end": 38.301
+},
+{
+"text": "y",
+"start": 38.481,
+"end": 38.501
+},
+{
+"text": "agendamos",
+"start": 38.601,
+"end": 39.101
+},
+{
+"text": "tu",
+"start": 39.121,
+"end": 39.202
+},
+{
+"text": "visita,",
+"start": 39.222,
+"end": 39.582
+},
+{
+"text": "llamada",
+"start": 39.902,
+"end": 40.382
+},
+{
+"text": "o",
+"start": 40.582,
+"end": 40.602
+},
+{
+"text": "videollamada.",
+"start": 40.702,
+"end": 41.423
+}
+]

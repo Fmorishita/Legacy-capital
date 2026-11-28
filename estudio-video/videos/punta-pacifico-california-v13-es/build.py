@@ -60,7 +60,7 @@ CAPTOP = {'relax': 600, 'c13': 300}
 CAP_TOP = 1140  # subtítulos: termina en ~1245 px, arriba del 35 % inferior que tapa la interfaz de Reels
 LOGO_TOP = 1262  # logo apilado debajo de los subtítulos
 NOCAP = {'b09', 'c15'}
-LOGO_OFF = [(SA['b09'], DUR)]  # en el cierre el logo pasa al panel del CTA
+LOGO_OFF = [(SA['auto'], SB['auto']), (SA['b09'], DUR)]  # en el cierre el logo pasa al panel del CTA
 CT = 1345  # panel del CTA: debajo de la mano de Fran que apunta hacia abajo
 H = []; A = H.append
 A('''<!doctype html>

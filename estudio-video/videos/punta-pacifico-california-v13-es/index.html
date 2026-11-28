@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="es"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1080, height=1920" />
+<title>California v12 — Legacy Capital</title>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+@font-face{font-family:"PPCondensed";src:url("assets/fonts/OpenSans_Condensed_Bold.ttf") format("truetype");}
+@font-face{font-family:"PPText";src:url("assets/fonts/OpenSans_Semibold.ttf") format("truetype");}
+@font-face{font-family:"PPBold";src:url("assets/fonts/OpenSans_ExtraBold.ttf") format("truetype");}
+@font-face{font-family:"Cinzel";font-weight:700;src:url("assets/fonts/cinzel-latin-700-normal.woff2") format("woff2");}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#071D29}
+#root{position:relative;width:100%;height:100%;overflow:hidden;font-family:"PPText",sans-serif;color:#fff}
+.clip{position:absolute;inset:0}
+.vbg{width:1080px;height:1920px;object-fit:cover}
+.bg{overflow:hidden}.bg .pz,.bg .kb{position:absolute;inset:0}.bg img{width:100%;height:100%;object-fit:cover;display:block}
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,29,41,.6) 0%,rgba(7,29,41,.28) 24%,rgba(7,29,41,0) 38%,rgba(7,29,41,0) 50%,rgba(7,29,41,.45) 70%,rgba(7,29,41,.35) 100%)}
+.hl{position:absolute;left:100px;font-family:"PPCondensed",sans-serif;font-size:90px;line-height:1.1;letter-spacing:.01em;text-shadow:0 3px 12px rgba(0,0,0,.6);white-space:nowrap}
+.hl .l2{color:#FFD086}.hl .rule{width:150px;height:8px;background:#FFD086;margin-top:14px;border-radius:4px}
+.cap{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;padding:4px 22px 10px;border-radius:22px;background:rgba(7,29,41,.62);text-align:center;font-family:"PPBold",sans-serif;font-size:68px;line-height:1.15;text-shadow:0 3px 8px rgba(0,0,0,.65)}
+.cap .w{color:#fff;display:inline-block;margin:0 11px}
+#captions{z-index:7}#logo{z-index:8;pointer-events:none}
+#logo-in{position:absolute;left:0;right:0;top:1262px;display:flex;flex-direction:column;align-items:center;gap:6px}
+#logo-in img{width:78px;height:auto;display:block;filter:drop-shadow(0 2px 8px rgba(0,0,0,.7))}#logo-in span{font-family:"Cinzel",serif;font-weight:700;font-size:31px;letter-spacing:.16em;color:#fff;white-space:nowrap;text-shadow:0 2px 6px rgba(0,0,0,.9),0 0 12px rgba(0,0,0,.6)}
+#flash{position:absolute;inset:0;background:#FFF6E2;opacity:0;z-index:9;pointer-events:none}
+/* escena 1: gancho + ubicación y precio desde el primer cuadro */
+#lp{position:absolute;left:100px;right:100px;top:330px;height:240px;border-radius:30px;background:rgba(7,29,41,.82);border:3px solid #FFD086;box-shadow:0 12px 30px rgba(0,0,0,.45);text-align:center}
+#lp .a{position:absolute;left:0;right:0;top:16px;line-height:1.25;font-family:"PPBold";font-size:38px;letter-spacing:.04em;color:#fff;white-space:nowrap}
+#lp .a b{color:#FFD086;font-weight:400}#lp .a div{height:46px}
+#lp .b{position:absolute;left:0;right:0;top:114px;font-family:"PPCondensed";font-size:108px;line-height:1.1;white-space:nowrap}#lp .b small{font-size:52px;color:#FFD086;margin-left:12px}#lp .b em{font-style:normal;font-size:52px;color:#FFD086;margin-right:14px;letter-spacing:.06em}
+/* precios fijos */
+.pr{position:absolute;left:100px;top:300px;text-shadow:0 4px 14px rgba(0,0,0,.65)}
+.pr .a{font-family:"PPCondensed";font-size:72px;line-height:1.1;letter-spacing:.02em}.pr .a span{color:#FFD086}
+.pr .b{font-family:"PPCondensed";font-size:132px;line-height:1.1;margin-top:14px;white-space:nowrap}.pr .b small{font-size:58px;color:#FFD086;margin-left:14px}
+.chk{position:absolute;height:88px;border-radius:999px;background:#FFD086;color:#071D29;font-family:"PPBold";font-size:40px;display:flex;align-items:center;padding:0 32px;box-shadow:0 10px 24px rgba(0,0,0,.4);white-space:nowrap}
+/* animaciones (visibles desde el primer cuadro) */
+.mg{background:radial-gradient(ellipse 100% 70% at 50% 35%,#163B5E 0%,#0B2338 55%,#071D29 100%);overflow:hidden}
+.mg .eb{position:absolute;left:0;right:0;top:290px;text-align:center;font-family:"PPBold";font-size:32px;letter-spacing:.2em;color:#FFD086}
+.mg .tt{position:absolute;left:40px;right:40px;top:340px;text-align:center;font-family:"PPCondensed";font-size:92px;line-height:1.05;white-space:nowrap}
+.mg .ru{position:absolute;left:465px;top:448px;width:150px;height:8px;border-radius:4px;background:#FFD086}
+.grid{position:absolute;inset:-100px;background-image:linear-gradient(rgba(255,208,134,.06) 2px,transparent 2px),linear-gradient(90deg,rgba(255,208,134,.06) 2px,transparent 2px);background-size:90px 90px}
+#mapw{position:absolute;left:170px;top:476px;width:740px;height:601px;border-radius:28px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.5);border:4px solid #FFD086}
+#mapw img{width:100%;height:100%;display:block}
+#ring{position:absolute;left:396px;top:891px;width:80px;height:80px;border-radius:50%;border:8px solid #FFD086}
+.cr{position:absolute;width:70px;height:70px;margin:-35px 0 0 -35px;border-radius:50%;border:7px solid #E0A020;opacity:0}
+#mline{position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:visible}
+.row{position:absolute;top:1096px;width:284px;height:96px;border-radius:22px;background:rgba(255,251,243,.97);color:#0E2A4A;display:flex;align-items:center;padding:0 12px 0 24px;box-shadow:0 10px 26px rgba(0,0,0,.4)}
+.row .nm{flex:1;font-family:"PPBold";font-size:28px;line-height:1.05;white-space:nowrap}.row .nm small{display:block;font-family:"PPText";font-size:18px;color:#4A5568}
+.row{padding:0 8px 0 16px}.row .tm{height:56px;border-radius:999px;background:#0E2A4A;color:#FFD086;display:flex;align-items:center;padding:0 14px;font-family:"PPBold";font-size:30px;white-space:nowrap}
+#pbar{position:absolute;left:100px;right:100px;top:470px;height:90px;border-radius:24px;background:rgba(255,255,255,.08);border:3px solid rgba(255,208,134,.5);overflow:hidden;display:flex}
+#pbar div{height:100%}
+#pb1{width:10%;background:#FFD086}#pb2{width:10%;background:repeating-linear-gradient(90deg,#E7B54A 0 4px,#C99A2E 4px 8.5px)}#pb3{width:80%;background:linear-gradient(90deg,#2F6E9A,#1D4E74)}
+.pcard{position:absolute;left:100px;right:100px;height:156px;border-radius:30px;background:rgba(255,251,243,.97);color:#0E2A4A;display:flex;align-items:center;padding:0 34px;box-shadow:0 12px 30px rgba(0,0,0,.4)}
+.pcard .n{width:210px;font-family:"PPCondensed";font-size:104px;line-height:1;color:#0E2A4A}
+.dots{display:flex;gap:6px;margin-top:8px}.dots i{display:block;width:21px;height:21px;border-radius:50%;background:#E3D8C2}
+.pcard .tx{flex:1}.pcard .t{font-family:"PPBold";font-size:44px;line-height:1.1}.pcard .s{font-size:28px;line-height:1.3;color:#8A620C;font-family:"PPBold"}
+/* equipamiento y promo */
+#promo{position:absolute;left:100px;right:100px;top:830px;height:412px;border-radius:40px;background:radial-gradient(ellipse 80% 70% at 50% 45%,rgba(23,63,102,.96) 0%,rgba(7,29,41,.96) 80%);border:4px solid #FFD086;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.55)}
+#rays{position:absolute;left:-560px;top:-760px;width:2000px;height:2000px;border-radius:50%;background:repeating-conic-gradient(from 0deg,rgba(255,208,134,.15) 0deg 7deg,rgba(255,208,134,0) 7deg 20deg)}
+#promo .a{position:absolute;left:0;right:0;top:16px;line-height:1.1;text-align:center;font-family:"PPCondensed";font-size:50px;letter-spacing:.08em;color:#FFD086}
+#pn{position:absolute;left:0;right:0;top:98px;text-align:center;font-family:"PPCondensed";font-size:140px;line-height:1;text-shadow:0 0 30px rgba(255,208,134,.85),0 0 80px rgba(255,208,134,.4);white-space:nowrap}
+#pn small{font-size:64px;color:#FFD086;margin-left:14px}
+#promo .c{position:absolute;left:0;right:0;top:268px;line-height:1.1;text-align:center;font-family:"PPBold";font-size:40px}
+#promo .d{position:absolute;left:0;right:0;top:322px;text-align:center}#promo .d span{display:inline-block;background:#FFD086;color:#071D29;border-radius:999px;padding:6px 32px;font-family:"PPBold";font-size:34px}
+.pt{position:absolute;left:432px;top:160px;width:16px;height:16px;border-radius:50%;background:#FFD086;opacity:0}
+/* CTA (debajo de las caras y de las llaves) */
+#ctab{position:absolute;left:100px;right:100px;top:1345px;height:300px;border-radius:30px;background:rgba(7,29,41,.74)}
+#ctl{position:absolute;left:0;right:0;top:1363px;display:flex;align-items:center;justify-content:center;gap:12px}#ctl img{width:46px}#ctl span{font-family:"Cinzel",serif;font-weight:700;font-size:28px;letter-spacing:.16em;color:#fff}
+#cta-s{position:absolute;left:0;right:0;top:1419px;text-align:center;font-family:"PPCondensed";font-size:76px;line-height:1.05;text-shadow:0 3px 10px rgba(0,0,0,.85)}#cta-s span{color:#FFD086}
+#cta{position:absolute;left:130px;right:130px;top:1517px;height:104px;border-radius:999px;background:#1E9E4F;color:#fff;font-family:"PPBold";font-size:44px;display:flex;align-items:center;justify-content:center;gap:16px;box-shadow:0 12px 30px rgba(0,0,0,.45);white-space:nowrap}
+#arw{position:absolute;left:0;right:0;top:1645px;text-align:center;font-family:"PPBold";font-size:76px;line-height:1;color:#FFD086;text-shadow:0 3px 10px rgba(0,0,0,.8)}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="44.01" data-width="1080" data-height="1920">
+
+<div id="b03" class="clip bg" data-start="0" data-duration="2.721" data-track-index="0"><div class="pz"><div class="kb" data-layout-allow-overflow><img src="assets/img/laptop.jpg" alt="" /></div></div><div class="shade"></div>
+</div>
+<video id="aereo-v" class="clip vbg" src="assets/vid/aereo.mp4" data-start="2.721" data-duration="4.967" data-track-index="1" muted playsinline></video>
+<div id="aereo" class="clip bg" data-start="2.721" data-duration="4.967" data-track-index="0"><div class="pz"><div class="kb" data-layout-allow-overflow></div></div><div class="shade"></div>
+</div>
+<video id="relax-v" class="clip vbg" src="assets/vid/relax.mp4" data-start="12.496" data-duration="2.29" data-track-index="1" muted playsinline></video>
+<div id="relax" class="clip bg" data-start="12.496" data-duration="2.29" data-track-index="0"><div class="pz"><div class="kb" data-layout-allow-overflow></div></div><div class="shade"></div>
+<div class="hl" id="relax-hl" style="top:300px"><div class="l1">CASAS DE UN NIVEL</div><div class="l2">ROOFTOP PRIVADO</div><div class="rule"></div></div>
+</div>
+<video id="b02-v" class="clip vbg" src="assets/vid/b02.mp4" data-start="14.786" data-duration="3.34" data-track-index="1" muted playsinline></video>
+<div id="b02" class="clip bg" data-start="14.786" data-duration="3.34" data-track-index="0"><div class="pz"><div class="kb" data-layout-allow-overflow></div></div><div class="shade"></div>
+<div class="hl" id="b02-hl" style="top:300px"><div class="l1">CON VISTA</div><div class="l2">AL MAR</div><div class="rule"></div></div>
+</div>
+<video id="c07-v" class="clip vbg" src="assets/vid/c07.mp4" data-start="18.126" data-duration="2.963" data-track-index="1" muted playsinline></video>
+<div id="c07" class="clip bg" data-start="18.126" data-duration="2.963" data-track-index="0"><div class="pz"><div class="kb" data-layout-allow-overflow></div></div><div class="shade"></div>
+<div class="pr" id="pr1"><div class="a">2 RECÁMARAS <span>DESDE</span></div><div class="b">$215,000<small>USD</small></div></div>
+</div>
+<video id="c14-v" class="clip vbg" src="assets/vid/c14.mp4" data-start="21.089" data-duration="2.536" data-track-index="1" muted playsinline></video>
+<div id="c14" class="clip bg" data-start="21.089" data-duration="2.536" data-track-index="0"><div class="pz"><div class="kb" data-layout-allow-overflow></div></div><div class="shade"></div>
+<div class="pr" id="pr2"><div class="a">3 RECÁMARAS <span>DESDE</span></div><div class="b">$235,000<small>USD</small></div></div>
+</div>
+<div id="auto" class="clip bg" data-start="30.943" data-duration="1.55" data-track-index="0"><div class="pz"><div class="kb" data-layout-allow-overflow><img src="assets/img/auto.jpg" alt="" /></div></div><div class="shade"></div>
+<div class="hl" id="auto-hl" style="top:300px"><div class="l1">ÚSALA LOS</div><div class="l2">FINES DE SEMANA</div><div class="rule"></div></div>
+</div>
+<video id="c18-v" class="clip vbg" src="assets/vid/c18.mp4" data-start="32.493" data-duration="1.445" data-track-index="1" muted playsinline></video>
+<div id="c18" class="clip bg" data-start="32.493" data-duration="1.445" data-track-index="0"><div class="pz"><div class="kb" data-layout-allow-overflow></div></div><div class="shade"></div>
+<div class="hl" id="c18-hl" style="top:300px"><div class="l1">O RÉNTALA</div><div class="l2">POR TEMPORADAS</div><div class="rule"></div></div>
+</div>
+<video id="c13-v" class="clip vbg" src="assets/vid/c13.mp4" data-start="33.938" data-duration="1.816" data-track-index="1" muted playsinline></video>
+<div id="c13" class="clip bg" data-start="33.938" data-duration="1.816" data-track-index="0"><div class="pz"><div class="kb" data-layout-allow-overflow></div></div><div class="shade"></div>
+<div class="hl" id="c13-hl" style="top:950px"><div class="l1">RESERVA ESTE MES</div><div class="l2">EQUIPAMIENTO INCLUIDO</div><div class="rule"></div></div>
+</div>
+<div id="cocina" class="clip bg" data-start="35.754" data-duration="1.061" data-track-index="0"><div class="pz"><div class="kb" data-layout-allow-overflow><img src="assets/img/cocina.jpg" alt="" /></div></div><div class="shade"></div>
+<div class="chk" id="e1" style="left:80px;top:300px">✓ Cocina</div><div class="chk" id="e2" style="left:360px;top:300px">✓ Cuartos</div><div class="chk" id="e3" style="left:80px;top:408px">✓ Baño</div><div class="chk" id="e4" style="left:310px;top:408px">✓ Roof garden</div>
+</div>
+<video id="c15-v" class="clip vbg" src="assets/vid/c15.mp4" data-start="36.815" data-duration="2.202" data-track-index="1" muted playsinline></video>
+<div id="c15" class="clip bg" data-start="36.815" data-duration="2.202" data-track-index="0"><div class="pz"><div class="kb" data-layout-allow-overflow></div></div><div class="shade"></div>
+<div id="promo"><div id="rays" data-layout-allow-overflow></div><div class="a" id="pa">EQUIPAMIENTO INCLUIDO DE HASTA</div><div id="pn"><span id="pnv">$0</span><small>USD</small></div><div class="pt" id="pt0"></div><div class="pt" id="pt1"></div><div class="pt" id="pt2"></div><div class="pt" id="pt3"></div><div class="pt" id="pt4"></div><div class="pt" id="pt5"></div><div class="pt" id="pt6"></div><div class="pt" id="pt7"></div><div class="pt" id="pt8"></div><div class="pt" id="pt9"></div><div class="pt" id="pt10"></div><div class="pt" id="pt11"></div><div class="pt" id="pt12"></div><div class="pt" id="pt13"></div><div class="pt" id="pt14"></div><div class="pt" id="pt15"></div><div class="pt" id="pt16"></div><div class="pt" id="pt17"></div><div class="pt" id="pt18"></div><div class="pt" id="pt19"></div><div class="pt" id="pt20"></div><div class="pt" id="pt21"></div><div class="pt" id="pt22"></div><div class="pt" id="pt23"></div><div class="c" id="pcx">COCINA · CUARTOS · BAÑO · ROOF</div><div class="d" id="pd"><span>Al reservar tu casa este mes</span></div></div>
+</div>
+<video id="b09-v" class="clip vbg" src="assets/vid/b09.mp4" data-start="39.017" data-duration="4.993" data-track-index="1" muted playsinline></video>
+<div id="b09" class="clip bg" data-start="39.017" data-duration="4.993" data-track-index="0"><div class="pz"><div class="kb" data-layout-allow-overflow></div></div><div class="shade"></div>
+<div id="ctab"></div><div id="ctl"><img src="assets/crest.png" alt="" /><span>LEGACY CAPITAL</span></div><div id="cta-s">AGENDA TU VISITA <span>O LLAMADA</span></div><div id="cta"><span>WhatsApp +52 646 256 3006</span></div><div id="arw">↓</div>
+</div>
+<div id="lpw" class="clip" data-start="0" data-duration="2.721" data-track-index="3"><div id="lp"><div class="a"><div>CASA CON VISTA AL MAR</div><div><b>EL SAUZAL, ENSENADA</b></div></div><div class="b"><em>DESDE</em>$215,000<small>USD</small></div></div></div>
+<div id="mapa" class="clip mg" data-start="7.688" data-duration="4.808" data-track-index="0"><div class="grid" id="mgrid" data-layout-allow-overflow></div><div class="eb" id="m-eb">EL SAUZAL · ENSENADA</div><div class="tt" id="m-tt">A UN PASO <span style="color:#FFD086">DE CALIFORNIA</span></div><div class="ru" id="m-ru"></div>
+<div id="mapw"><img id="mapi" src="assets/img/mapa.png" alt="" /></div><div id="ring"></div>
+<svg id="mline"><line id="ml-tj" x1="447" y1="931" x2="398" y2="597" pathLength="1" stroke="#C9302C" stroke-width="7" stroke-linecap="round" stroke-dasharray="1 1" stroke-dashoffset="1"/><line id="ml-sy" x1="447" y1="931" x2="366" y2="540" pathLength="1" stroke="#C9302C" stroke-width="7" stroke-linecap="round" stroke-dasharray="1 1" stroke-dashoffset="1"/><line id="ml-mx" x1="447" y1="931" x2="777" y2="576" pathLength="1" stroke="#C9302C" stroke-width="7" stroke-linecap="round" stroke-dasharray="1 1" stroke-dashoffset="1"/></svg>
+<div class="cr" id="cr-tj" style="left:398px;top:597px"></div><div class="cr" id="cr-sy" style="left:366px;top:540px"></div><div class="cr" id="cr-mx" style="left:777px;top:576px"></div>
+<div class="row" id="mr0" style="left:100px"><div class="nm">Tijuana<small>aprox. en auto</small></div><div class="tm">1 h</div></div>
+<div class="row" id="mr1" style="left:398px"><div class="nm">San Ysidro<small>garita · aprox.</small></div><div class="tm">1 h 30</div></div>
+<div class="row" id="mr2" style="left:696px"><div class="nm">Mexicali<small>aprox. en auto</small></div><div class="tm">3 h</div></div></div>
+<div id="pagos" class="clip mg" data-start="23.625" data-duration="7.318" data-track-index="0"><div class="grid" data-layout-allow-overflow></div><div class="tt" id="p-tt" style="top:300px;font-size:84px">PLAN DE PAGOS <span style="color:#FFD086">FLEXIBLE</span></div><div class="ru" id="p-ru" style="top:402px"></div>
+<div id="pbar"><div id="pb1"></div><div id="pb2"></div><div id="pb3"></div></div>
+<div class="pcard" id="pc-a" style="top:590px"><div class="n">10%</div><div class="tx"><div class="t">de enganche</div><div class="s">Al separar tu casa</div></div></div>
+<div class="pcard" id="pc-b" style="top:766px"><div class="n">10%</div><div class="tx"><div class="t">en 20 meses</div><div class="s">Mensualidades durante la obra</div><div class="dots"><i id="d0"></i><i id="d1"></i><i id="d2"></i><i id="d3"></i><i id="d4"></i><i id="d5"></i><i id="d6"></i><i id="d7"></i><i id="d8"></i><i id="d9"></i><i id="d10"></i><i id="d11"></i><i id="d12"></i><i id="d13"></i><i id="d14"></i><i id="d15"></i><i id="d16"></i><i id="d17"></i><i id="d18"></i><i id="d19"></i></div></div></div>
+<div class="pcard" id="pc-c" style="top:942px"><div class="n">80%</div><div class="tx"><div class="t">contra entrega</div><div class="s">Entrega prevista en 2028</div></div></div></div>
+<div id="logo" class="clip" data-start="0" data-duration="44.01" data-track-index="4"><div id="logo-in"><img src="assets/crest.png" alt="" /><span>LEGACY CAPITAL</span></div></div>
+<div id="captions" class="clip" data-start="0" data-duration="44.01" data-track-index="5"></div>
+<div id="fx" class="clip" data-start="0" data-duration="44.01" data-track-index="7"><div id="flash"></div></div>
+<audio id="voz" src="assets/voz.wav" data-start="0" data-duration="43.66" data-track-index="8" data-volume="1"></audio>
+<audio id="musica" src="assets/musica.mp3" data-start="0" data-duration="44.01" data-track-index="9" data-volume="1" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0.058},{"t":43.46,"v":0.058},{"t":43.61,"v":0.0812},{"t":44.01,"v":0}]}]}'></audio>
+<audio id="sfx0" src="assets/sfx/syn-swish.mp3" data-start="2.601" data-duration="0.31" data-track-index="10" data-volume="0.22"></audio>
+<audio id="sfx1" src="assets/sfx/cinematic-whoosh-fast-1492.mp3" data-start="7.568" data-duration="1.38" data-track-index="11" data-volume="0.22"></audio>
+<audio id="sfx2" src="assets/sfx/fast-small-sweep-166.mp3" data-start="12.376" data-duration="0.8" data-track-index="12" data-volume="0.22"></audio>
+<audio id="sfx3" src="assets/sfx/syn-whoosh-up.mp3" data-start="14.666" data-duration="0.6" data-track-index="13" data-volume="0.22"></audio>
+<audio id="sfx4" src="assets/sfx/short-transition-sweep-175.mp3" data-start="18.006" data-duration="0.65" data-track-index="14" data-volume="0.22"></audio>
+<audio id="sfx5" src="assets/sfx/syn-whoosh-low.mp3" data-start="20.969" data-duration="0.83" data-track-index="15" data-volume="0.22"></audio>
+<audio id="sfx6" src="assets/sfx/cinematic-whoosh-fast-1492.mp3" data-start="23.505" data-duration="1.38" data-track-index="16" data-volume="0.22"></audio>
+<audio id="sfx7" src="assets/sfx/syn-whoosh-down.mp3" data-start="30.823" data-duration="0.62" data-track-index="17" data-volume="0.22"></audio>
+<audio id="sfx8" src="assets/sfx/fast-small-sweep-166.mp3" data-start="32.373" data-duration="0.8" data-track-index="18" data-volume="0.22"></audio>
+<audio id="sfx9" src="assets/sfx/syn-whoosh-up.mp3" data-start="33.818" data-duration="0.6" data-track-index="10" data-volume="0.22"></audio>
+<audio id="sfx10" src="assets/sfx/short-transition-sweep-175.mp3" data-start="35.634" data-duration="0.65" data-track-index="11" data-volume="0.22"></audio>
+<audio id="sfx11" src="assets/sfx/syn-whoosh-low.mp3" data-start="36.695" data-duration="0.83" data-track-index="12" data-volume="0.22"></audio>
+<audio id="sfx12" src="assets/sfx/cinematic-whoosh-fast-1492.mp3" data-start="38.897" data-duration="1.38" data-track-index="13" data-volume="0.22"></audio>
+<audio id="sfx13" src="assets/sfx/syn-boom.mp3" data-start="0.03" data-duration="0.94" data-track-index="14" data-volume="0.35"></audio>
+<audio id="sfx14" src="assets/sfx/syn-coin.mp3" data-start="6.162" data-duration="0.73" data-track-index="15" data-volume="0.3"></audio>
+<audio id="sfx15" src="assets/sfx/syn-pop.mp3" data-start="8.443" data-duration="0.2" data-track-index="16" data-volume="0.4"></audio>
+<audio id="sfx16" src="assets/sfx/syn-pop.mp3" data-start="10.524" data-duration="0.2" data-track-index="17" data-volume="0.4"></audio>
+<audio id="sfx17" src="assets/sfx/syn-pop.mp3" data-start="11.885" data-duration="0.2" data-track-index="18" data-volume="0.4"></audio>
+<audio id="sfx18" src="assets/sfx/syn-swish.mp3" data-start="8.393" data-duration="0.31" data-track-index="10" data-volume="0.18"></audio>
+<audio id="sfx19" src="assets/sfx/syn-swish.mp3" data-start="10.474" data-duration="0.31" data-track-index="11" data-volume="0.18"></audio>
+<audio id="sfx20" src="assets/sfx/syn-swish.mp3" data-start="11.835" data-duration="0.31" data-track-index="12" data-volume="0.18"></audio>
+<audio id="sfx21" src="assets/sfx/syn-shimmer.mp3" data-start="7.988" data-duration="0.94" data-track-index="13" data-volume="0.2"></audio>
+<audio id="sfx22" src="assets/sfx/syn-thud.mp3" data-start="18.206" data-duration="0.33" data-track-index="14" data-volume="0.35"></audio>
+<audio id="sfx23" src="assets/sfx/syn-chaching.mp3" data-start="19.608" data-duration="1.14" data-track-index="15" data-volume="0.3"></audio>
+<audio id="sfx24" src="assets/sfx/syn-thud.mp3" data-start="21.169" data-duration="0.33" data-track-index="16" data-volume="0.35"></audio>
+<audio id="sfx25" src="assets/sfx/syn-chaching.mp3" data-start="22.289" data-duration="1.14" data-track-index="17" data-volume="0.3"></audio>
+<audio id="sfx26" src="assets/sfx/syn-pop.mp3" data-start="24.53" data-duration="0.2" data-track-index="18" data-volume="0.35"></audio>
+<audio id="sfx27" src="assets/sfx/syn-coin.mp3" data-start="27.771" data-duration="0.73" data-track-index="10" data-volume="0.22"></audio>
+<audio id="sfx28" src="assets/sfx/syn-whoosh-up.mp3" data-start="27.941" data-duration="0.6" data-track-index="11" data-volume="0.3"></audio>
+<audio id="sfx29" src="assets/sfx/syn-thud.mp3" data-start="28.441" data-duration="0.33" data-track-index="12" data-volume="0.35"></audio>
+<audio id="sfx30" src="assets/sfx/syn-shimmer.mp3" data-start="29.832" data-duration="0.94" data-track-index="13" data-volume="0.18"></audio>
+<audio id="sfx31" src="assets/sfx/syn-pop.mp3" data-start="35.804" data-duration="0.2" data-track-index="14" data-volume="0.4"></audio>
+<audio id="sfx32" src="assets/sfx/syn-pop-hi.mp3" data-start="35.954" data-duration="0.18" data-track-index="15" data-volume="0.4"></audio>
+<audio id="sfx33" src="assets/sfx/syn-pop.mp3" data-start="36.104" data-duration="0.2" data-track-index="16" data-volume="0.4"></audio>
+<audio id="sfx34" src="assets/sfx/syn-pop-hi.mp3" data-start="36.254" data-duration="0.18" data-track-index="17" data-volume="0.4"></audio>
+<audio id="sfx35" src="assets/sfx/syn-riser.mp3" data-start="37.27" data-duration="1.04" data-track-index="18" data-volume="0.35"></audio>
+<audio id="sfx36" src="assets/sfx/syn-boom.mp3" data-start="38.27" data-duration="0.94" data-track-index="10" data-volume="0.5"></audio>
+<audio id="sfx37" src="assets/sfx/syn-chaching.mp3" data-start="38.29" data-duration="1.14" data-track-index="11" data-volume="0.35"></audio>
+<audio id="sfx38" src="assets/sfx/syn-shimmer.mp3" data-start="38.67" data-duration="0.94" data-track-index="12" data-volume="0.25"></audio>
+<audio id="sfx39" src="assets/sfx/syn-pop.mp3" data-start="40.056" data-duration="0.2" data-track-index="13" data-volume="0.35"></audio>
+<audio id="sfx40" src="assets/sfx/syn-pop-hi.mp3" data-start="40.796" data-duration="0.18" data-track-index="14" data-volume="0.3"></audio>
+<audio id="sfx41" src="assets/sfx/syn-pop.mp3" data-start="41.177" data-duration="0.2" data-track-index="15" data-volume="0.3"></audio>
+<audio id="sfx42" src="assets/sfx/syn-tick.mp3" data-start="26.771" data-duration="0.1" data-track-index="16" data-volume="0.13"></audio>
+<audio id="sfx43" src="assets/sfx/syn-tick.mp3" data-start="26.871" data-duration="0.1" data-track-index="17" data-volume="0.13"></audio>
+<audio id="sfx44" src="assets/sfx/syn-tick.mp3" data-start="26.971" data-duration="0.1" data-track-index="18" data-volume="0.13"></audio>
+<audio id="sfx45" src="assets/sfx/syn-tick.mp3" data-start="27.071" data-duration="0.1" data-track-index="10" data-volume="0.13"></audio>
+<audio id="sfx46" src="assets/sfx/syn-tick.mp3" data-start="27.171" data-duration="0.1" data-track-index="11" data-volume="0.13"></audio>
+<audio id="sfx47" src="assets/sfx/syn-tick.mp3" data-start="27.271" data-duration="0.1" data-track-index="12" data-volume="0.13"></audio>
+<audio id="sfx48" src="assets/sfx/syn-tick.mp3" data-start="27.371" data-duration="0.1" data-track-index="13" data-volume="0.13"></audio>
+<audio id="sfx49" src="assets/sfx/syn-tick.mp3" data-start="27.471" data-duration="0.1" data-track-index="14" data-volume="0.13"></audio>
+<audio id="sfx50" src="assets/sfx/syn-tick.mp3" data-start="27.571" data-duration="0.1" data-track-index="15" data-volume="0.13"></audio>
+<audio id="sfx51" src="assets/sfx/syn-tick.mp3" data-start="27.671" data-duration="0.1" data-track-index="16" data-volume="0.13"></audio>
+</div>
+<script>
+window.__timelines=window.__timelines||{};const tl=gsap.timeline({paused:true});
+const CAPS=[{"top": 1140, "s": 0, "end": 1.42, "w": [["¿Trabajas", 0.14, 0.6], ["en", 0.64, 0.7], ["Estados", 0.76, 1.02]]}, {"top": 1140, "s": 0, "end": 2.361, "w": [["Unidos", 1.08, 1.381], ["y", 1.521, 1.551], ["ganas", 1.621, 1.861], ["en", 1.881, 1.961]]}, {"top": 1140, "s": 0, "end": 2.721, "w": [["dólares?", 2.001, 2.361]]}, {"top": 1140, "s": 2.721, "end": 4.101, "w": [["Tu", 2.781, 2.861], ["casa", 2.941, 3.161], ["con", 3.221, 3.341], ["vista", 3.381, 3.601], ["al", 3.641, 3.701]]}, {"top": 1140, "s": 2.721, "end": 5.102, "w": [["mar", 3.742, 3.882], ["en", 4.002, 4.082], ["El", 4.122, 4.202], ["Sauzal,", 4.302, 4.702]]}, {"top": 1140, "s": 2.721, "end": 7.4830000000000005, "w": [["Ensenada,", 5.042, 5.582], ["desde", 5.882, 6.122], ["$215,000", 6.162, 7.083]]}, {"top": 1140, "s": 2.721, "end": 7.688, "w": [["dólares.", 7.103, 7.483]]}, {"top": 600, "s": 12.496, "end": 14.306000000000001, "w": [["Casas", 12.845, 13.185], ["de", 13.205, 13.265], ["un", 13.345, 13.425], ["nivel", 13.445, 13.706], ["con", 13.766, 13.906]]}, {"top": 600, "s": 12.496, "end": 14.786, "w": [["rooftop", 13.966, 14.346], ["privado", 14.406, 14.806]]}, {"top": 1140, "s": 14.786, "end": 16.256, "w": [["con", 14.846, 14.966], ["vista", 15.006, 15.246], ["al", 15.306, 15.366], ["mar", 15.406, 15.566], ["y", 15.826, 15.856]]}, {"top": 1140, "s": 14.786, "end": 17.607, "w": [["los", 15.906, 16.026], ["mejores", 16.086, 16.487], ["atardeceres", 16.547, 17.207]]}, {"top": 1140, "s": 14.786, "end": 18.126, "w": [["del", 17.227, 17.367], ["Pacífico.", 17.427, 17.947]]}, {"top": 1140, "s": 18.126, "end": 19.828, "w": [["Dos", 18.367, 18.547], ["recámaras", 18.628, 19.168], ["desde", 19.208, 19.428]]}, {"top": 1140, "s": 18.126, "end": 21.089, "w": [["$215,000", 19.508, 20.448], ["dólares;", 20.488, 20.868]]}, {"top": 1140, "s": 21.089, "end": 22.549, "w": [["tres", 21.149, 21.369], ["recámaras", 21.429, 21.889], ["desde", 21.929, 22.149]]}, {"top": 1140, "s": 21.089, "end": 23.625, "w": [["$235,000.", 22.189, 23.409]]}, {"top": 1140, "s": 30.943, "end": 32.493, "w": [["Úsala", 31.113, 31.433], ["tus", 31.493, 31.633], ["fines", 31.693, 31.913], ["de", 31.933, 31.993], ["semana", 32.033, 32.373]]}, {"top": 1140, "s": 32.493, "end": 33.938, "w": [["o", 32.553, 32.583], ["réntala", 32.693, 33.053], ["por", 33.093, 33.213], ["temporadas.", 33.253, 33.754]]}, {"top": 300, "s": 33.938, "end": 35.534, "w": [["Y", 34.094, 34.124], ["si", 34.174, 34.254], ["reservas", 34.334, 34.714], ["este", 34.774, 34.934], ["mes,", 34.954, 35.134]]}, {"top": 300, "s": 33.938, "end": 35.754, "w": [["te", 35.414, 35.474], ["llevas", 35.494, 35.774]]}, {"top": 1140, "s": 35.754, "end": 36.815, "w": [["equipamiento", 35.814, 36.295], ["incluido", 36.315, 36.695], ["con", 36.735, 36.855]]}];
+const host=document.getElementById("captions");
+CAPS.forEach((g,gi)=>{const line=document.createElement("div");line.className="cap";line.id="cap-"+gi;line.style.top=g.top+"px";line.style.opacity="0";
+g.w.forEach(([t],wi)=>{const s=document.createElement("span");s.className="w";s.id="cap-"+gi+"-"+wi;s.textContent=t;line.appendChild(s);});
+host.appendChild(line);const st=Math.max(g.s,g.w[0][1]-0.05);tl.set(line,{opacity:1},st);tl.fromTo(line,{scale:0.85},{scale:1,duration:0.12,ease:"back.out(3)"},st);
+g.w.forEach(([,t,e],wi)=>{const id="#cap-"+gi+"-"+wi;tl.to(id,{color:"#FFD086",scale:1.05,duration:0.07,ease:"power2.out"},Math.max(0,t-0.04));const nx=g.w[wi+1];if(nx)tl.to(id,{color:"#ffffff",scale:1,duration:0.07,ease:"none"},nx[1]-0.04);});
+const next=CAPS[gi+1];const end=next?Math.min(g.end,next.w[0][1]-0.05):g.end;tl.set(line,{opacity:0},end);});
+const pop=(s,t,o)=>tl.fromTo(s,{opacity:0,scale:0.4},Object.assign({opacity:1,scale:1,duration:0.24,ease:"back.out(2.6)"},o||{}),t);
+const bump=(s,t)=>tl.fromTo(s,{scale:1},{scale:1.08,duration:0.14,yoyo:true,repeat:1,ease:"sine.inOut",immediateRender:false},t);
+const fl=(t,o)=>tl.fromTo("#flash",{opacity:o||0.6},{opacity:0,duration:0.25,ease:"power2.out",immediateRender:false},t);
+const shake=(s,t)=>tl.fromTo(s,{x:0,y:0},{keyframes:[{x:-14,y:9},{x:12,y:-10},{x:-8,y:6},{x:6,y:-3},{x:0,y:0}],duration:0.32,ease:"none",immediateRender:false},t);
+tl.set("#flash",{opacity:0},0);
+tl.fromTo("#b03 .kb",{scale:1.0,transformOrigin:"45% 55%"},{scale:1.07,duration:2.721,ease:"none"},0);
+tl.fromTo("#relax-hl .l1",{opacity:0.001,y:30},{opacity:1,y:0,duration:0.18,ease:"power3.out"},12.496);tl.fromTo("#relax-hl .l2",{opacity:0.001,x:-50},{opacity:1,x:0,duration:0.2,ease:"power3.out"},13.916);tl.fromTo("#relax-hl .rule",{scaleX:0,transformOrigin:"0 50%"},{scaleX:1,duration:0.22},13.986);
+tl.fromTo("#b02-hl .l1",{opacity:0.001,y:30},{opacity:1,y:0,duration:0.18,ease:"power3.out"},14.786);tl.fromTo("#b02-hl .l2",{opacity:0.001,x:-50},{opacity:1,x:0,duration:0.2,ease:"power3.out"},15.356);tl.fromTo("#b02-hl .rule",{scaleX:0,transformOrigin:"0 50%"},{scaleX:1,duration:0.22},15.426);
+tl.fromTo("#auto .kb",{scale:1.0,transformOrigin:"50% 75%"},{scale:1.08,duration:1.55,ease:"none"},30.943);
+tl.fromTo("#auto-hl .l1",{opacity:0.001,y:30},{opacity:1,y:0,duration:0.18,ease:"power3.out"},30.943);tl.fromTo("#auto-hl .l2",{opacity:0.001,x:-50},{opacity:1,x:0,duration:0.2,ease:"power3.out"},31.643);tl.fromTo("#auto-hl .rule",{scaleX:0,transformOrigin:"0 50%"},{scaleX:1,duration:0.22},31.713);
+tl.fromTo("#c18-hl .l1",{opacity:0.001,y:30},{opacity:1,y:0,duration:0.18,ease:"power3.out"},32.493);tl.fromTo("#c18-hl .l2",{opacity:0.001,x:-50},{opacity:1,x:0,duration:0.2,ease:"power3.out"},32.643);tl.fromTo("#c18-hl .rule",{scaleX:0,transformOrigin:"0 50%"},{scaleX:1,duration:0.22},32.713);
+tl.fromTo("#c13-hl .l1",{opacity:0.001,y:30},{opacity:1,y:0,duration:0.18,ease:"power3.out"},33.938);tl.fromTo("#c13-hl .l2",{opacity:0.001,x:-50},{opacity:1,x:0,duration:0.2,ease:"power3.out"},34.018);tl.fromTo("#c13-hl .rule",{scaleX:0,transformOrigin:"0 50%"},{scaleX:1,duration:0.22},34.088);
+tl.fromTo("#cocina .kb",{scale:1.1,transformOrigin:"50% 45%"},{scale:1.03,duration:1.061,ease:"none"},35.754);
+fl(7.688);
+fl(23.625);
+fl(39.017);
+tl.to("#logo-in",{opacity:0,duration:0.15},39.017);
+const PTS=[[333, -8, 1.25], [411, 51, 0.97], [373, 121, 0.64], [226, 154, 0.69], [247, 290, 0.72], [137, 291, 1.55], [-6, 271, 1.58], [-83, 337, 0.89], [-142, 205, 0.91], [-255, 157, 1.18], [-336, 127, 1.15], [-294, 75, 0.81], [-394, -10, 0.91], [-384, -77, 0.9], [-379, -175, 0.84], [-289, -209, 1.48], [-167, -226, 1.58], [-130, -259, 1.36], [-28, -285, 0.64], [136, -314, 1.17], [208, -213, 1.3], [308, -208, 1.06], [456, -156, 1.07], [305, -50, 1.3]];
+// escena 1: gancho y ubicación/precio visibles desde el cuadro 0
+tl.fromTo("#lp",{y:24},{y:0,duration:0.4,ease:"power3.out"},0);bump("#lp .b",6.16);
+// mapa (completo desde el primer cuadro)
+tl.fromTo("#mgrid",{y:0},{y:90,duration:4.81,ease:"none"},7.688);
+tl.fromTo("#mapi",{scale:1.12,transformOrigin:"38% 70%"},{scale:1,duration:4.81,ease:"power1.out"},7.688);
+[0,1,2,3,4,5].forEach(i=>tl.fromTo("#ring",{scale:0.4,opacity:1},{scale:2.4,opacity:0,duration:0.55,ease:"power1.out",immediateRender:i===0},7.688+i*0.6));
+// cada ciudad se enciende con su palabra: línea desde el proyecto, anillo en el marcador y su tarjeta
+[["tj",0,8.443],["sy",1,10.524],["mx",2,11.885]].forEach(([k,i,t])=>{
+  tl.to("#ml-"+k,{strokeDashoffset:0,duration:0.35,ease:"power2.out"},t-0.05);
+  tl.fromTo("#cr-"+k,{scale:0.3,opacity:1},{scale:1,opacity:1,duration:0.25,ease:"back.out(3)",immediateRender:false},t);
+  tl.fromTo("#mr"+i,{scale:1},{scale:1.1,duration:0.14,yoyo:true,repeat:1,ease:"sine.inOut",immediateRender:false},t);
+  tl.to("#mr"+i+" .tm",{background:"#C99A2E",color:"#071D29",duration:0.15},t);});
+tl.set(".cr",{opacity:0},0);
+// precios fijos (sin contador)
+tl.fromTo("#pr1",{x:-40},{x:0,duration:0.3,ease:"power3.out"},18.126);bump("#pr1 .b",19.51);
+tl.fromTo("#pr2",{x:-40},{x:0,duration:0.3,ease:"power3.out"},21.089);bump("#pr2 .b",22.19);
+// pagos: tarjetas visibles desde el inicio; cada tramo de la barra se llena cuando la voz lo dice
+tl.fromTo("#pb1",{scaleX:0,transformOrigin:"0 50%"},{scaleX:1,duration:0.3,ease:"power3.out"},24.53);
+tl.fromTo("#pb2",{scaleX:0,transformOrigin:"0 50%"},{scaleX:1,duration:1.0,ease:"none"},26.771);
+for(let i=0;i<20;i++)tl.fromTo("#d"+i,{background:"#E3D8C2",scale:1},{background:"#C99A2E",scale:1.3,duration:0.05,immediateRender:false},26.771+i*0.05);
+tl.to(".dots i",{scale:1,duration:0.15},27.771);
+tl.fromTo("#pb3",{scaleX:0,transformOrigin:"0 50%"},{scaleX:1,duration:0.5,ease:"power3.out"},27.991);
+["#pc-a","#pc-b","#pc-c"].forEach((s,i)=>tl.fromTo(s,{x:-30},{x:0,duration:0.3,ease:"power3.out"},23.625+i*0.08));
+bump("#pc-a",24.53);bump("#pc-b",24.53);bump("#pc-c",27.991);tl.to("#pc-c .s",{color:"#0E2A4A",duration:0.15},29.832);
+// equipamiento: las cuatro áreas y el panel con el valor
+pop("#e1",35.803999999999995,{transformOrigin:"0 50%"});pop("#e2",35.954,{transformOrigin:"0 50%"});pop("#e3",36.104,{transformOrigin:"0 50%"});pop("#e4",36.254,{transformOrigin:"0 50%"});
+const P0=36.815,P1=38.27;
+tl.fromTo("#promo",{opacity:0.001,scale:0.8},{opacity:1,scale:1,duration:0.25,ease:"back.out(2)"},P0);
+tl.fromTo("#rays",{rotation:0},{rotation:60,duration:2.2,ease:"none"},P0);
+const pv={v:0};tl.fromTo(pv,{v:0},{v:24000,duration:Math.max(0.3,P1-P0-0.1),ease:"power2.in",onUpdate:()=>{document.getElementById("pnv").textContent="$"+Math.round(pv.v).toLocaleString("en-US");}},P0+0.05);
+tl.set("#pnv",{textContent:"$24,000"},P1);tl.fromTo("#pn",{scale:1.4},{scale:1,duration:0.4,ease:"elastic.out(1,0.45)",immediateRender:false},P1);
+fl(P1,0.6);shake("#c15 .pz",P1);shake("#promo",P1);
+PTS.forEach(([x,y,s],i)=>tl.fromTo("#pt"+i,{x:0,y:0,scale:s,opacity:1},{x:x,y:y,scale:0,opacity:0,duration:0.9,ease:"power3.out",immediateRender:false},P1));
+tl.set(".pt",{opacity:0},0);tl.to("#pn",{scale:1.06,duration:0.25,yoyo:true,repeat:3,ease:"sine.inOut"},P1+0.5);
+// CTA: WhatsApp con flecha hacia el botón
+tl.fromTo("#ctab",{opacity:0},{opacity:1,duration:0.2},40.01);tl.fromTo("#ctl",{opacity:0,y:-12},{opacity:1,y:0,duration:0.25},40.01);
+pop("#cta",40.01);tl.fromTo("#cta-s",{opacity:0,scale:1.2},{opacity:1,scale:1,duration:0.25,ease:"power3.out"},41.69);pop("#arw",41.13);
+tl.to("#cta",{scale:1.06,duration:0.2,ease:"sine.inOut",yoyo:true,repeat:1},40.75);
+tl.to("#cta",{scale:1.05,duration:0.36,ease:"sine.inOut",yoyo:true,repeat:3},41.99);tl.fromTo("#arw",{y:-6},{y:14,duration:0.36,yoyo:true,repeat:3,ease:"power1.inOut",immediateRender:false},41.43);
+tl.to({},{duration:44.01},0);window.__timelines["main"]=tl;
+</script></body></html>

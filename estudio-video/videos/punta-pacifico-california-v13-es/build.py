@@ -88,10 +88,10 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#071D29}
 #logo-in img{width:78px;height:auto;display:block;filter:drop-shadow(0 2px 8px rgba(0,0,0,.7))}#logo-in span{font-family:"Cinzel",serif;font-weight:700;font-size:31px;letter-spacing:.16em;color:#fff;white-space:nowrap;text-shadow:0 2px 6px rgba(0,0,0,.9),0 0 12px rgba(0,0,0,.6)}
 #flash{position:absolute;inset:0;background:#FFF6E2;opacity:0;z-index:9;pointer-events:none}
 /* escena 1: gancho + ubicación y precio desde el primer cuadro */
-#lp{position:absolute;left:100px;right:100px;top:330px;height:228px;border-radius:30px;background:rgba(7,29,41,.82);border:3px solid #FFD086;box-shadow:0 12px 30px rgba(0,0,0,.45);text-align:center}
+#lp{position:absolute;left:100px;right:100px;top:330px;height:240px;border-radius:30px;background:rgba(7,29,41,.82);border:3px solid #FFD086;box-shadow:0 12px 30px rgba(0,0,0,.45);text-align:center}
 #lp .a{position:absolute;left:0;right:0;top:16px;line-height:1.25;font-family:"PPBold";font-size:38px;letter-spacing:.04em;color:#fff;white-space:nowrap}
 #lp .a b{color:#FFD086;font-weight:400}#lp .a div{height:46px}
-#lp .b{position:absolute;left:0;right:0;top:100px;font-family:"PPCondensed";font-size:108px;line-height:1.1;white-space:nowrap}#lp .b small{font-size:52px;color:#FFD086;margin-left:12px}#lp .b em{font-style:normal;font-size:52px;color:#FFD086;margin-right:14px;letter-spacing:.06em}
+#lp .b{position:absolute;left:0;right:0;top:114px;font-family:"PPCondensed";font-size:108px;line-height:1.1;white-space:nowrap}#lp .b small{font-size:52px;color:#FFD086;margin-left:12px}#lp .b em{font-style:normal;font-size:52px;color:#FFD086;margin-right:14px;letter-spacing:.06em}
 /* precios fijos */
 .pr{position:absolute;left:100px;top:300px;text-shadow:0 4px 14px rgba(0,0,0,.65)}
 .pr .a{font-family:"PPCondensed";font-size:72px;line-height:1.1;letter-spacing:.02em}.pr .a span{color:#FFD086}

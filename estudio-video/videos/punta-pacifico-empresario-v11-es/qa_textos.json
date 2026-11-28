@@ -1,0 +1,419 @@
+{
+ "hits": [
+  {
+   "t": 44.5,
+   "shot": "e4",
+   "text": "e4-k2 «✓ Minisplits»",
+   "zona": "pérgola",
+   "area": 9620
+  },
+  {
+   "t": 44.5,
+   "shot": "e4",
+   "text": "e4-k3 «✓ Baños»",
+   "zona": "pérgola",
+   "area": 7214
+  },
+  {
+   "t": 51.9,
+   "shot": "s11",
+   "text": "cta-t «CONOCE MÁS»",
+   "zona": "cara",
+   "area": 272
+  }
+ ],
+ "safe": [
+  {
+   "t": 4,
+   "text": "l2 «CON VISTA AL MAR»",
+   "r": [
+    56,
+    375,
+    699,
+    492
+   ]
+  },
+  {
+   "t": 7.1,
+   "text": "l2 «Y PARA INVERTIR»",
+   "r": [
+    47,
+    370,
+    585,
+    479
+   ]
+  },
+  {
+   "t": 9,
+   "text": "m-tt «ENSENADA, BAJA CALIFORNIA»",
+   "r": [
+    26,
+    331,
+    1054,
+    453
+   ]
+  },
+  {
+   "t": 13.6,
+   "text": "l2 «UN NIVEL»",
+   "r": [
+    42,
+    410,
+    344,
+    519
+   ]
+  },
+  {
+   "t": 23.2,
+   "text": "l1 «RENTAS DE CORTA ESTANCIA»",
+   "r": [
+    80,
+    302,
+    1026,
+    427
+   ]
+  },
+  {
+   "t": 31.1,
+   "text": "pc-a «7%de engancheA la firma · ej.: $»",
+   "r": [
+    8,
+    662,
+    1072,
+    847
+   ]
+  },
+  {
+   "t": 31.2,
+   "text": "pc-a «9%de engancheA la firma · ej.: $»",
+   "r": [
+    57,
+    671,
+    1023,
+    838
+   ]
+  },
+  {
+   "t": 32.7,
+   "text": "pc-b «5%en 20 mensualidadesej.: 20 × $»",
+   "r": [
+    34,
+    847,
+    1046,
+    1022
+   ]
+  },
+  {
+   "t": 32.8,
+   "text": "pc-b «9%en 20 mensualidadesej.: 20 × $»",
+   "r": [
+    32,
+    846,
+    1048,
+    1023
+   ]
+  },
+  {
+   "t": 35.4,
+   "text": "pc-c «50%contra entregaAl recibir tu c»",
+   "r": [
+    15,
+    1023,
+    1065,
+    1206
+   ]
+  },
+  {
+   "t": 35.5,
+   "text": "pc-c «71%contra entregaAl recibir tu c»",
+   "r": [
+    45,
+    1029,
+    1035,
+    1200
+   ]
+  },
+  {
+   "t": 35.8,
+   "text": "pc-c «80%contra entregaAl recibir tu c»",
+   "r": [
+    62,
+    1033,
+    1012,
+    1198
+   ]
+  },
+  {
+   "t": 35.9,
+   "text": "pc-c «80%contra entregaAl recibir tu c»",
+   "r": [
+    58,
+    1038,
+    1008,
+    1203
+   ]
+  },
+  {
+   "t": 36,
+   "text": "pc-c «80%contra entregaAl recibir tu c»",
+   "r": [
+    68,
+    1031,
+    1018,
+    1196
+   ]
+  },
+  {
+   "t": 45.4,
+   "text": "promo «VALOR DE HASTA$0MXNEN EQUIPAMIEN»",
+   "r": [
+    48,
+    829,
+    1032,
+    1253
+   ]
+  },
+  {
+   "t": 45.5,
+   "text": "promo «VALOR DE HASTA$1MXNEN EQUIPAMIEN»",
+   "r": [
+    51,
+    830,
+    1029,
+    1252
+   ]
+  },
+  {
+   "t": 47.5,
+   "text": "promo «VALOR DE HASTA$450,000MXNEN EQUI»",
+   "r": [
+    55,
+    842,
+    1005,
+    1252
+   ]
+  },
+  {
+   "t": 47.6,
+   "text": "promo «VALOR DE HASTA$450,000MXNEN EQUI»",
+   "r": [
+    71,
+    831,
+    1021,
+    1241
+   ]
+  },
+  {
+   "t": 47.7,
+   "text": "promo «VALOR DE HASTA$450,000MXNEN EQUI»",
+   "r": [
+    69,
+    834,
+    1019,
+    1244
+   ]
+  },
+  {
+   "t": 48.8,
+   "text": "l1 «CONSTRUYE PATRIMONIO»",
+   "r": [
+    80,
+    304,
+    1022,
+    441
+   ]
+  },
+  {
+   "t": 51.9,
+   "text": "cta-t «CONOCE MÁS»",
+   "r": [
+    324,
+    264,
+    756,
+    379
+   ]
+  }
+ ],
+ "over": [
+  {
+   "t": 1.4,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5102
+  },
+  {
+   "t": 1.5,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5336
+  },
+  {
+   "t": 1.6,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5124
+  },
+  {
+   "t": 1.7,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5443
+  },
+  {
+   "t": 1.8,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5474
+  },
+  {
+   "t": 1.9,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.1,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.2,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.3,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.4,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.5,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.6,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.7,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.8,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.9,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 3,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 3.1,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 3.2,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 3.3,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 3.4,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 3.5,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 3.6,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 17,
+   "a": "prd1 «DESDE»",
+   "b": "prb1 «$2,337,000MXN»",
+   "area": 651
+  },
+  {
+   "t": 18.2,
+   "a": "prd2 «HASTA»",
+   "b": "prb2 «$1,609,000MXN»",
+   "area": 549
+  },
+  {
+   "t": 18.3,
+   "a": "prd2 «HASTA»",
+   "b": "prb2 «$2,820,000MXN»",
+   "area": 427
+  },
+  {
+   "t": 45.5,
+   "a": "q-eb «RESERVA ESTE MES»",
+   "b": "th0 «✓ Cocina equipada»",
+   "area": 221
+  },
+  {
+   "t": 45.6,
+   "a": "q-eb «RESERVA ESTE MES»",
+   "b": "th1 «✓ Clósets»",
+   "area": 1944
+  },
+  {
+   "t": 45.6,
+   "a": "q-eb «RESERVA ESTE MES»",
+   "b": "th2 «✓ Minisplits»",
+   "area": 91
+  },
+  {
+   "t": 45.7,
+   "a": "q-eb «RESERVA ESTE MES»",
+   "b": "th2 «✓ Minisplits»",
+   "area": 163
+  }
+ ]
+}

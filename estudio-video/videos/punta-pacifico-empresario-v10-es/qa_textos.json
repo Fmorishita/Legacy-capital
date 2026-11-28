@@ -1,0 +1,353 @@
+{
+ "hits": [],
+ "safe": [
+  {
+   "t": 4,
+   "text": "l2 «CON VISTA AL MAR»",
+   "r": [
+    56,
+    375,
+    699,
+    492
+   ]
+  },
+  {
+   "t": 7.1,
+   "text": "l2 «Y PARA INVERTIR»",
+   "r": [
+    44,
+    370,
+    582,
+    479
+   ]
+  },
+  {
+   "t": 9,
+   "text": "m-tt «ENSENADA, BAJA CALIFORNIA»",
+   "r": [
+    27,
+    331,
+    1053,
+    453
+   ]
+  },
+  {
+   "t": 13.5,
+   "text": "l2 «UN NIVEL»",
+   "r": [
+    38,
+    410,
+    339,
+    519
+   ]
+  },
+  {
+   "t": 26.7,
+   "text": "l2 «FLUJO DE CAPITAL»",
+   "r": [
+    25,
+    375,
+    625,
+    492
+   ]
+  },
+  {
+   "t": 31.1,
+   "text": "pc-a «7%de engancheA la firma · ej.: $»",
+   "r": [
+    8,
+    662,
+    1072,
+    847
+   ]
+  },
+  {
+   "t": 31.2,
+   "text": "pc-a «9%de engancheA la firma · ej.: $»",
+   "r": [
+    59,
+    671,
+    1021,
+    838
+   ]
+  },
+  {
+   "t": 32.7,
+   "text": "pc-b «6%en 20 mensualidadesej.: 20 × $»",
+   "r": [
+    30,
+    846,
+    1050,
+    1023
+   ]
+  },
+  {
+   "t": 32.8,
+   "text": "pc-b «9%en 20 mensualidadesej.: 20 × $»",
+   "r": [
+    34,
+    847,
+    1046,
+    1022
+   ]
+  },
+  {
+   "t": 35.4,
+   "text": "pc-c «51%contra entregaAl recibir tu c»",
+   "r": [
+    13,
+    1023,
+    1067,
+    1206
+   ]
+  },
+  {
+   "t": 35.5,
+   "text": "pc-c «72%contra entregaAl recibir tu c»",
+   "r": [
+    47,
+    1029,
+    1033,
+    1200
+   ]
+  },
+  {
+   "t": 35.8,
+   "text": "pc-c «80%contra entregaAl recibir tu c»",
+   "r": [
+    62,
+    1033,
+    1012,
+    1198
+   ]
+  },
+  {
+   "t": 35.9,
+   "text": "pc-c «80%contra entregaAl recibir tu c»",
+   "r": [
+    58,
+    1038,
+    1008,
+    1203
+   ]
+  },
+  {
+   "t": 36,
+   "text": "pc-c «80%contra entregaAl recibir tu c»",
+   "r": [
+    68,
+    1031,
+    1018,
+    1196
+   ]
+  },
+  {
+   "t": 44.2,
+   "text": "promo «VALOR DE HASTA$0MXNEN EQUIPAMIEN»",
+   "r": [
+    46,
+    828,
+    1034,
+    1254
+   ]
+  },
+  {
+   "t": 44.3,
+   "text": "promo «VALOR DE HASTA$2MXNEN EQUIPAMIEN»",
+   "r": [
+    52,
+    830,
+    1028,
+    1252
+   ]
+  },
+  {
+   "t": 46.2,
+   "text": "promo «VALOR DE HASTA$450,000MXNEN EQUI»",
+   "r": [
+    54,
+    843,
+    1004,
+    1253
+   ]
+  },
+  {
+   "t": 46.3,
+   "text": "promo «VALOR DE HASTA$450,000MXNEN EQUI»",
+   "r": [
+    70,
+    832,
+    1020,
+    1242
+   ]
+  },
+  {
+   "t": 46.4,
+   "text": "promo «VALOR DE HASTA$450,000MXNEN EQUI»",
+   "r": [
+    70,
+    834,
+    1020,
+    1244
+   ]
+  }
+ ],
+ "over": [
+  {
+   "t": 1.4,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5102
+  },
+  {
+   "t": 1.5,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5336
+  },
+  {
+   "t": 1.6,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5124
+  },
+  {
+   "t": 1.7,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5443
+  },
+  {
+   "t": 1.8,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5474
+  },
+  {
+   "t": 1.9,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.1,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.2,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.3,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.4,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.5,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.6,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.7,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.8,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 2.9,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 3,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 3.1,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 3.2,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 3.3,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 3.4,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 3.5,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 3.6,
+   "a": "a «DUEÑO O DIRECTOR»",
+   "b": "b «DE EMPRESA»",
+   "area": 5476
+  },
+  {
+   "t": 17,
+   "a": "prd1 «DESDE»",
+   "b": "prb1 «$2,342,000MXN»",
+   "area": 651
+  },
+  {
+   "t": 18.2,
+   "a": "prd2 «HASTA»",
+   "b": "prb2 «$1,612,000MXN»",
+   "area": 549
+  },
+  {
+   "t": 18.3,
+   "a": "prd2 «HASTA»",
+   "b": "prb2 «$2,825,000MXN»",
+   "area": 427
+  }
+ ]
+}

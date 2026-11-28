@@ -1,0 +1,1346 @@
+[
+  {
+    "text": "¿Trabajas",
+    "start": 0.01,
+    "end": 0.48,
+    "id": "w0"
+  },
+  {
+    "text": "en",
+    "start": 0.48,
+    "end": 0.59,
+    "id": "w1"
+  },
+  {
+    "text": "Estados",
+    "start": 0.59,
+    "end": 0.97,
+    "id": "w2"
+  },
+  {
+    "text": "Unidos?¿Ganas",
+    "start": 0.97,
+    "end": 1.8,
+    "id": "w3"
+  },
+  {
+    "text": "en",
+    "start": 1.83,
+    "end": 1.92,
+    "id": "w4"
+  },
+  {
+    "text": "dólares?¿Y",
+    "start": 1.92,
+    "end": 2.6,
+    "id": "w5"
+  },
+  {
+    "text": "si",
+    "start": 2.6,
+    "end": 2.73,
+    "id": "w6"
+  },
+  {
+    "text": "tu",
+    "start": 2.73,
+    "end": 2.8,
+    "id": "w7"
+  },
+  {
+    "text": "próxima",
+    "start": 2.8,
+    "end": 3.15,
+    "id": "w8"
+  },
+  {
+    "text": "casa",
+    "start": 3.15,
+    "end": 3.35,
+    "id": "w9"
+  },
+  {
+    "text": "de",
+    "start": 3.35,
+    "end": 3.41,
+    "id": "w10"
+  },
+  {
+    "text": "inversión",
+    "start": 3.45,
+    "end": 3.78,
+    "id": "w11"
+  },
+  {
+    "text": "y",
+    "start": 3.78,
+    "end": 4.04,
+    "id": "w12"
+  },
+  {
+    "text": "descanso",
+    "start": 4.04,
+    "end": 4.37,
+    "id": "w13"
+  },
+  {
+    "text": "estuviera",
+    "start": 4.38,
+    "end": 4.68,
+    "id": "w14"
+  },
+  {
+    "text": "en",
+    "start": 4.68,
+    "end": 4.95,
+    "id": "w15"
+  },
+  {
+    "text": "México?",
+    "start": 4.95,
+    "end": 5.3,
+    "id": "w16"
+  },
+  {
+    "text": "Conoce",
+    "start": 5.45,
+    "end": 5.6,
+    "id": "w17"
+  },
+  {
+    "text": "este",
+    "start": 5.6,
+    "end": 5.79,
+    "id": "w18"
+  },
+  {
+    "text": "nuevo",
+    "start": 5.79,
+    "end": 5.98,
+    "id": "w19"
+  },
+  {
+    "text": "proyecto",
+    "start": 6.07,
+    "end": 6.47,
+    "id": "w20"
+  },
+  {
+    "text": "residencial",
+    "start": 6.47,
+    "end": 7.02,
+    "id": "w21"
+  },
+  {
+    "text": "en",
+    "start": 7.02,
+    "end": 7.09,
+    "id": "w22"
+  },
+  {
+    "text": "Ensenada.",
+    "start": 7.13,
+    "end": 7.6,
+    "id": "w23"
+  },
+  {
+    "text": "Casas",
+    "start": 7.84,
+    "end": 7.93,
+    "id": "w24"
+  },
+  {
+    "text": "de",
+    "start": 7.93,
+    "end": 8.02,
+    "id": "w25"
+  },
+  {
+    "text": "un",
+    "start": 8.02,
+    "end": 8.09,
+    "id": "w26"
+  },
+  {
+    "text": "nivel",
+    "start": 8.14,
+    "end": 8.35,
+    "id": "w27"
+  },
+  {
+    "text": "con",
+    "start": 8.35,
+    "end": 8.49,
+    "id": "w28"
+  },
+  {
+    "text": "tu",
+    "start": 8.49,
+    "end": 8.58,
+    "id": "w29"
+  },
+  {
+    "text": "propio",
+    "start": 8.58,
+    "end": 8.87,
+    "id": "w30"
+  },
+  {
+    "text": "roof",
+    "start": 8.87,
+    "end": 8.93,
+    "id": "w31"
+  },
+  {
+    "text": "garden",
+    "start": 9.24,
+    "end": 9.4,
+    "id": "w32"
+  },
+  {
+    "text": "con",
+    "start": 9.4,
+    "end": 9.49,
+    "id": "w33"
+  },
+  {
+    "text": "vista",
+    "start": 9.53,
+    "end": 9.76,
+    "id": "w34"
+  },
+  {
+    "text": "al",
+    "start": 9.76,
+    "end": 9.85,
+    "id": "w35"
+  },
+  {
+    "text": "mar",
+    "start": 9.85,
+    "end": 9.88,
+    "id": "w36"
+  },
+  {
+    "text": "para",
+    "start": 9.99,
+    "end": 10.17,
+    "id": "w37"
+  },
+  {
+    "text": "vivir",
+    "start": 10.42,
+    "end": 10.5,
+    "id": "w38"
+  },
+  {
+    "text": "los",
+    "start": 10.5,
+    "end": 10.67,
+    "id": "w39"
+  },
+  {
+    "text": "mejores",
+    "start": 10.71,
+    "end": 11.26,
+    "id": "w40"
+  },
+  {
+    "text": "atardeceres.",
+    "start": 11.26,
+    "end": 12.2,
+    "id": "w41"
+  },
+  {
+    "text": "Ubicado",
+    "start": 12.21,
+    "end": 12.55,
+    "id": "w42"
+  },
+  {
+    "text": "en",
+    "start": 12.55,
+    "end": 12.65,
+    "id": "w43"
+  },
+  {
+    "text": "la",
+    "start": 12.65,
+    "end": 12.7,
+    "id": "w44"
+  },
+  {
+    "text": "carretera",
+    "start": 12.75,
+    "end": 13.22,
+    "id": "w45"
+  },
+  {
+    "text": "principal",
+    "start": 13.22,
+    "end": 13.43,
+    "id": "w46"
+  },
+  {
+    "text": "del",
+    "start": 13.75,
+    "end": 13.84,
+    "id": "w47"
+  },
+  {
+    "text": "Sausal,",
+    "start": 13.84,
+    "end": 14.26,
+    "id": "w48"
+  },
+  {
+    "text": "a",
+    "start": 14.26,
+    "end": 14.29,
+    "id": "w49"
+  },
+  {
+    "text": "solo",
+    "start": 14.29,
+    "end": 14.38,
+    "id": "w50"
+  },
+  {
+    "text": "una",
+    "start": 14.42,
+    "end": 14.46,
+    "id": "w51"
+  },
+  {
+    "text": "hora",
+    "start": 14.64,
+    "end": 14.65,
+    "id": "w52"
+  },
+  {
+    "text": "y",
+    "start": 14.65,
+    "end": 14.68,
+    "id": "w53"
+  },
+  {
+    "text": "media",
+    "start": 14.68,
+    "end": 14.92,
+    "id": "w54"
+  },
+  {
+    "text": "de",
+    "start": 14.92,
+    "end": 15,
+    "id": "w55"
+  },
+  {
+    "text": "la",
+    "start": 15,
+    "end": 15.08,
+    "id": "w56"
+  },
+  {
+    "text": "frontera",
+    "start": 15.12,
+    "end": 15.49,
+    "id": "w57"
+  },
+  {
+    "text": "con",
+    "start": 15.57,
+    "end": 15.64,
+    "id": "w58"
+  },
+  {
+    "text": "San",
+    "start": 15.7,
+    "end": 15.82,
+    "id": "w59"
+  },
+  {
+    "text": "Diego,",
+    "start": 15.82,
+    "end": 16.1,
+    "id": "w60"
+  },
+  {
+    "text": "a",
+    "start": 16.11,
+    "end": 16.15,
+    "id": "w61"
+  },
+  {
+    "text": "una",
+    "start": 16.15,
+    "end": 16.33,
+    "id": "w62"
+  },
+  {
+    "text": "hora",
+    "start": 16.33,
+    "end": 16.49,
+    "id": "w63"
+  },
+  {
+    "text": "de",
+    "start": 16.54,
+    "end": 16.6,
+    "id": "w64"
+  },
+  {
+    "text": "Tijuana,",
+    "start": 16.65,
+    "end": 17.1,
+    "id": "w65"
+  },
+  {
+    "text": "a",
+    "start": 17.1,
+    "end": 17.17,
+    "id": "w66"
+  },
+  {
+    "text": "tres",
+    "start": 17.17,
+    "end": 17.33,
+    "id": "w67"
+  },
+  {
+    "text": "horas",
+    "start": 17.64,
+    "end": 17.79,
+    "id": "w68"
+  },
+  {
+    "text": "de",
+    "start": 17.79,
+    "end": 17.89,
+    "id": "w69"
+  },
+  {
+    "text": "Mexicali.",
+    "start": 17.93,
+    "end": 18.5,
+    "id": "w70"
+  },
+  {
+    "text": "Casas",
+    "start": 18.65,
+    "end": 18.75,
+    "id": "w71"
+  },
+  {
+    "text": "de",
+    "start": 18.75,
+    "end": 18.85,
+    "id": "w72"
+  },
+  {
+    "text": "dos",
+    "start": 18.85,
+    "end": 18.99,
+    "id": "w73"
+  },
+  {
+    "text": "habitaciones",
+    "start": 18.99,
+    "end": 19.62,
+    "id": "w74"
+  },
+  {
+    "text": "desde",
+    "start": 19.62,
+    "end": 19.73,
+    "id": "w75"
+  },
+  {
+    "text": "$215,000",
+    "start": 19.93,
+    "end": 20.68,
+    "id": "w76"
+  },
+  {
+    "text": "y",
+    "start": 20.94,
+    "end": 21.06,
+    "id": "w77"
+  },
+  {
+    "text": "de",
+    "start": 21.06,
+    "end": 21.22,
+    "id": "w78"
+  },
+  {
+    "text": "tres",
+    "start": 21.22,
+    "end": 21.42,
+    "id": "w79"
+  },
+  {
+    "text": "habitaciones",
+    "start": 21.42,
+    "end": 22.13,
+    "id": "w80"
+  },
+  {
+    "text": "desde",
+    "start": 22.13,
+    "end": 22.43,
+    "id": "w81"
+  },
+  {
+    "text": "$235,000.",
+    "start": 22.43,
+    "end": 23.7,
+    "id": "w82"
+  },
+  {
+    "text": "Controla",
+    "start": 23.92,
+    "end": 24.09,
+    "id": "w83"
+  },
+  {
+    "text": "distancia",
+    "start": 24.14,
+    "end": 24.62,
+    "id": "w84"
+  },
+  {
+    "text": "con",
+    "start": 24.66,
+    "end": 24.79,
+    "id": "w85"
+  },
+  {
+    "text": "el",
+    "start": 24.79,
+    "end": 24.9,
+    "id": "w86"
+  },
+  {
+    "text": "sistema",
+    "start": 24.9,
+    "end": 25.27,
+    "id": "w87"
+  },
+  {
+    "text": "Smart",
+    "start": 25.28,
+    "end": 25.55,
+    "id": "w88"
+  },
+  {
+    "text": "Home,",
+    "start": 25.55,
+    "end": 25.8,
+    "id": "w89"
+  },
+  {
+    "text": "donde",
+    "start": 26.03,
+    "end": 26.08,
+    "id": "w90"
+  },
+  {
+    "text": "desde",
+    "start": 26.08,
+    "end": 26.36,
+    "id": "w91"
+  },
+  {
+    "text": "tu",
+    "start": 26.36,
+    "end": 26.47,
+    "id": "w92"
+  },
+  {
+    "text": "celular",
+    "start": 26.47,
+    "end": 26.86,
+    "id": "w93"
+  },
+  {
+    "text": "puedes",
+    "start": 26.86,
+    "end": 27.03,
+    "id": "w94"
+  },
+  {
+    "text": "prender",
+    "start": 27.34,
+    "end": 27.59,
+    "id": "w95"
+  },
+  {
+    "text": "o",
+    "start": 27.59,
+    "end": 27.64,
+    "id": "w96"
+  },
+  {
+    "text": "apagar",
+    "start": 27.64,
+    "end": 27.97,
+    "id": "w97"
+  },
+  {
+    "text": "luces,",
+    "start": 27.97,
+    "end": 28.35,
+    "id": "w98"
+  },
+  {
+    "text": "mini",
+    "start": 28.52,
+    "end": 28.57,
+    "id": "w99"
+  },
+  {
+    "text": "splits",
+    "start": 28.57,
+    "end": 28.89,
+    "id": "w100"
+  },
+  {
+    "text": "y",
+    "start": 28.89,
+    "end": 28.98,
+    "id": "w101"
+  },
+  {
+    "text": "cerradura",
+    "start": 28.98,
+    "end": 29.44,
+    "id": "w102"
+  },
+  {
+    "text": "de",
+    "start": 29.45,
+    "end": 29.56,
+    "id": "w103"
+  },
+  {
+    "text": "tu",
+    "start": 29.56,
+    "end": 29.67,
+    "id": "w104"
+  },
+  {
+    "text": "casa.",
+    "start": 29.67,
+    "end": 30.1,
+    "id": "w105"
+  },
+  {
+    "text": "Para",
+    "start": 30.33,
+    "end": 30.37,
+    "id": "w106"
+  },
+  {
+    "text": "renta,",
+    "start": 30.37,
+    "end": 30.78,
+    "id": "w107"
+  },
+  {
+    "text": "a",
+    "start": 30.87,
+    "end": 30.89,
+    "id": "w108"
+  },
+  {
+    "text": "corto",
+    "start": 30.89,
+    "end": 31.22,
+    "id": "w109"
+  },
+  {
+    "text": "plazo.",
+    "start": 31.22,
+    "end": 31.8,
+    "id": "w110"
+  },
+  {
+    "text": "Lo",
+    "start": 31.81,
+    "end": 31.89,
+    "id": "w111"
+  },
+  {
+    "text": "mejor",
+    "start": 32.03,
+    "end": 32.12,
+    "id": "w112"
+  },
+  {
+    "text": "es",
+    "start": 32.12,
+    "end": 32.19,
+    "id": "w113"
+  },
+  {
+    "text": "que",
+    "start": 32.24,
+    "end": 32.3,
+    "id": "w114"
+  },
+  {
+    "text": "puedes",
+    "start": 32.35,
+    "end": 32.62,
+    "id": "w115"
+  },
+  {
+    "text": "comenzar",
+    "start": 32.62,
+    "end": 32.98,
+    "id": "w116"
+  },
+  {
+    "text": "sin",
+    "start": 32.98,
+    "end": 33.03,
+    "id": "w117"
+  },
+  {
+    "text": "perder",
+    "start": 33.34,
+    "end": 33.39,
+    "id": "w118"
+  },
+  {
+    "text": "tu",
+    "start": 33.39,
+    "end": 33.48,
+    "id": "w119"
+  },
+  {
+    "text": "liquidez,",
+    "start": 33.48,
+    "end": 33.98,
+    "id": "w120"
+  },
+  {
+    "text": "con",
+    "start": 34.01,
+    "end": 34.06,
+    "id": "w121"
+  },
+  {
+    "text": "solo",
+    "start": 34.24,
+    "end": 34.4,
+    "id": "w122"
+  },
+  {
+    "text": "10%",
+    "start": 34.52,
+    "end": 34.76,
+    "id": "w123"
+  },
+  {
+    "text": "de",
+    "start": 34.81,
+    "end": 34.89,
+    "id": "w124"
+  },
+  {
+    "text": "enganche.",
+    "start": 34.95,
+    "end": 35.59,
+    "id": "w125"
+  },
+  {
+    "text": "Otro",
+    "start": 35.72,
+    "end": 35.83,
+    "id": "w126"
+  },
+  {
+    "text": "10%",
+    "start": 35.83,
+    "end": 36.24,
+    "id": "w127"
+  },
+  {
+    "text": "dividido",
+    "start": 36.24,
+    "end": 36.71,
+    "id": "w128"
+  },
+  {
+    "text": "en",
+    "start": 36.71,
+    "end": 36.83,
+    "id": "w129"
+  },
+  {
+    "text": "20",
+    "start": 36.83,
+    "end": 37.19,
+    "id": "w130"
+  },
+  {
+    "text": "mensualidades",
+    "start": 37.19,
+    "end": 37.78,
+    "id": "w131"
+  },
+  {
+    "text": "y",
+    "start": 38,
+    "end": 38.05,
+    "id": "w132"
+  },
+  {
+    "text": "el",
+    "start": 38.05,
+    "end": 38.16,
+    "id": "w133"
+  },
+  {
+    "text": "80%",
+    "start": 38.32,
+    "end": 38.56,
+    "id": "w134"
+  },
+  {
+    "text": "restante",
+    "start": 38.61,
+    "end": 39.02,
+    "id": "w135"
+  },
+  {
+    "text": "contra",
+    "start": 39.02,
+    "end": 39.37,
+    "id": "w136"
+  },
+  {
+    "text": "entrega.",
+    "start": 39.37,
+    "end": 40,
+    "id": "w137"
+  },
+  {
+    "text": "Prevista",
+    "start": 40.19,
+    "end": 40.5,
+    "id": "w138"
+  },
+  {
+    "text": "para",
+    "start": 40.5,
+    "end": 40.68,
+    "id": "w139"
+  },
+  {
+    "text": "mediados",
+    "start": 40.77,
+    "end": 41.23,
+    "id": "w140"
+  },
+  {
+    "text": "el",
+    "start": 41.23,
+    "end": 41.54,
+    "id": "w141"
+  },
+  {
+    "text": "2028.",
+    "start": 41.54,
+    "end": 42.2,
+    "id": "w142"
+  },
+  {
+    "text": "Una",
+    "start": 42.2,
+    "end": 42.43,
+    "id": "w143"
+  },
+  {
+    "text": "oportunidad",
+    "start": 42.43,
+    "end": 42.85,
+    "id": "w144"
+  },
+  {
+    "text": "para",
+    "start": 42.85,
+    "end": 43.03,
+    "id": "w145"
+  },
+  {
+    "text": "planar",
+    "start": 43.03,
+    "end": 43.3,
+    "id": "w146"
+  },
+  {
+    "text": "tu",
+    "start": 43.3,
+    "end": 43.39,
+    "id": "w147"
+  },
+  {
+    "text": "patrimonio",
+    "start": 43.39,
+    "end": 43.9,
+    "id": "w148"
+  },
+  {
+    "text": "sin",
+    "start": 43.9,
+    "end": 44.05,
+    "id": "w149"
+  },
+  {
+    "text": "desembolsar",
+    "start": 44.05,
+    "end": 44.57,
+    "id": "w150"
+  },
+  {
+    "text": "todo",
+    "start": 44.64,
+    "end": 44.8,
+    "id": "w151"
+  },
+  {
+    "text": "desde",
+    "start": 44.92,
+    "end": 45.05,
+    "id": "w152"
+  },
+  {
+    "text": "el",
+    "start": 45.05,
+    "end": 45.15,
+    "id": "w153"
+  },
+  {
+    "text": "principio",
+    "start": 45.15,
+    "end": 45.6,
+    "id": "w154"
+  },
+  {
+    "text": "y",
+    "start": 45.61,
+    "end": 45.67,
+    "id": "w155"
+  },
+  {
+    "text": "ganar",
+    "start": 45.83,
+    "end": 45.99,
+    "id": "w156"
+  },
+  {
+    "text": "plusvalía",
+    "start": 46.04,
+    "end": 46.65,
+    "id": "w157"
+  },
+  {
+    "text": "mientras",
+    "start": 46.65,
+    "end": 47.21,
+    "id": "w158"
+  },
+  {
+    "text": "pagas.",
+    "start": 47.21,
+    "end": 47.78,
+    "id": "w159"
+  },
+  {
+    "text": "Si",
+    "start": 47.87,
+    "end": 47.89,
+    "id": "w160"
+  },
+  {
+    "text": "reservas",
+    "start": 48.03,
+    "end": 48.3,
+    "id": "w161"
+  },
+  {
+    "text": "tu",
+    "start": 48.35,
+    "end": 48.46,
+    "id": "w162"
+  },
+  {
+    "text": "casa",
+    "start": 48.46,
+    "end": 48.68,
+    "id": "w163"
+  },
+  {
+    "text": "este",
+    "start": 48.68,
+    "end": 48.9,
+    "id": "w164"
+  },
+  {
+    "text": "mes,",
+    "start": 48.9,
+    "end": 49.08,
+    "id": "w165"
+  },
+  {
+    "text": "obtén",
+    "start": 49.34,
+    "end": 49.46,
+    "id": "w166"
+  },
+  {
+    "text": "tu",
+    "start": 49.46,
+    "end": 49.56,
+    "id": "w167"
+  },
+  {
+    "text": "casa",
+    "start": 49.56,
+    "end": 49.8,
+    "id": "w168"
+  },
+  {
+    "text": "con",
+    "start": 49.8,
+    "end": 49.92,
+    "id": "w169"
+  },
+  {
+    "text": "equipamiento",
+    "start": 49.92,
+    "end": 50.4,
+    "id": "w170"
+  },
+  {
+    "text": "incluido",
+    "start": 50.52,
+    "end": 50.68,
+    "id": "w171"
+  },
+  {
+    "text": "en",
+    "start": 50.72,
+    "end": 50.76,
+    "id": "w172"
+  },
+  {
+    "text": "cocina,",
+    "start": 50.81,
+    "end": 51.24,
+    "id": "w173"
+  },
+  {
+    "text": "cuartos",
+    "start": 51.37,
+    "end": 51.69,
+    "id": "w174"
+  },
+  {
+    "text": "y",
+    "start": 51.69,
+    "end": 51.74,
+    "id": "w175"
+  },
+  {
+    "text": "roof",
+    "start": 51.74,
+    "end": 51.97,
+    "id": "w176"
+  },
+  {
+    "text": "garden",
+    "start": 51.97,
+    "end": 52.31,
+    "id": "w177"
+  },
+  {
+    "text": "con",
+    "start": 52.31,
+    "end": 52.48,
+    "id": "w178"
+  },
+  {
+    "text": "valor",
+    "start": 52.48,
+    "end": 52.54,
+    "id": "w179"
+  },
+  {
+    "text": "de",
+    "start": 52.84,
+    "end": 52.87,
+    "id": "w180"
+  },
+  {
+    "text": "hasta",
+    "start": 52.87,
+    "end": 53.15,
+    "id": "w181"
+  },
+  {
+    "text": "$450,000.",
+    "start": 53.15,
+    "end": 54.59,
+    "id": "w182"
+  },
+  {
+    "text": "Imagina",
+    "start": 54.81,
+    "end": 54.97,
+    "id": "w183"
+  },
+  {
+    "text": "despertar",
+    "start": 54.97,
+    "end": 55.45,
+    "id": "w184"
+  },
+  {
+    "text": "en",
+    "start": 55.45,
+    "end": 55.51,
+    "id": "w185"
+  },
+  {
+    "text": "tu",
+    "start": 55.56,
+    "end": 55.67,
+    "id": "w186"
+  },
+  {
+    "text": "nueva",
+    "start": 55.67,
+    "end": 55.83,
+    "id": "w187"
+  },
+  {
+    "text": "casa,",
+    "start": 56.14,
+    "end": 56.3,
+    "id": "w188"
+  },
+  {
+    "text": "preparar",
+    "start": 56.3,
+    "end": 56.72,
+    "id": "w189"
+  },
+  {
+    "text": "una",
+    "start": 56.72,
+    "end": 56.78,
+    "id": "w190"
+  },
+  {
+    "text": "carne",
+    "start": 57.05,
+    "end": 57.14,
+    "id": "w191"
+  },
+  {
+    "text": "asada",
+    "start": 57.25,
+    "end": 57.41,
+    "id": "w192"
+  },
+  {
+    "text": "con",
+    "start": 57.41,
+    "end": 57.56,
+    "id": "w193"
+  },
+  {
+    "text": "tu",
+    "start": 57.57,
+    "end": 57.67,
+    "id": "w194"
+  },
+  {
+    "text": "familia",
+    "start": 57.67,
+    "end": 58.04,
+    "id": "w195"
+  },
+  {
+    "text": "y",
+    "start": 58.11,
+    "end": 58.15,
+    "id": "w196"
+  },
+  {
+    "text": "terminar",
+    "start": 58.33,
+    "end": 58.5,
+    "id": "w197"
+  },
+  {
+    "text": "el",
+    "start": 58.54,
+    "end": 58.6,
+    "id": "w198"
+  },
+  {
+    "text": "día",
+    "start": 58.65,
+    "end": 58.78,
+    "id": "w199"
+  },
+  {
+    "text": "viendo",
+    "start": 58.87,
+    "end": 59.08,
+    "id": "w200"
+  },
+  {
+    "text": "el",
+    "start": 59.08,
+    "end": 59.18,
+    "id": "w201"
+  },
+  {
+    "text": "atardecer",
+    "start": 59.18,
+    "end": 59.61,
+    "id": "w202"
+  },
+  {
+    "text": "del",
+    "start": 59.65,
+    "end": 59.76,
+    "id": "w203"
+  },
+  {
+    "text": "Océano",
+    "start": 59.76,
+    "end": 60.03,
+    "id": "w204"
+  },
+  {
+    "text": "Pacífico",
+    "start": 60.04,
+    "end": 60.5,
+    "id": "w205"
+  },
+  {
+    "text": "desde",
+    "start": 60.82,
+    "end": 60.84,
+    "id": "w206"
+  },
+  {
+    "text": "tu",
+    "start": 60.84,
+    "end": 60.97,
+    "id": "w207"
+  },
+  {
+    "text": "propio",
+    "start": 60.97,
+    "end": 61.38,
+    "id": "w208"
+  },
+  {
+    "text": "rooftop.",
+    "start": 61.38,
+    "end": 62.1,
+    "id": "w209"
+  },
+  {
+    "text": "Haz",
+    "start": 62.1,
+    "end": 62.33,
+    "id": "w210"
+  },
+  {
+    "text": "clic",
+    "start": 62.33,
+    "end": 62.4,
+    "id": "w211"
+  },
+  {
+    "text": "en",
+    "start": 62.4,
+    "end": 62.48,
+    "id": "w212"
+  },
+  {
+    "text": "el",
+    "start": 62.48,
+    "end": 62.56,
+    "id": "w213"
+  },
+  {
+    "text": "botón",
+    "start": 62.56,
+    "end": 62.77,
+    "id": "w214"
+  },
+  {
+    "text": "de",
+    "start": 62.77,
+    "end": 62.78,
+    "id": "w215"
+  },
+  {
+    "text": "abajo",
+    "start": 62.87,
+    "end": 63.07,
+    "id": "w216"
+  },
+  {
+    "text": "para",
+    "start": 63.07,
+    "end": 63.24,
+    "id": "w217"
+  },
+  {
+    "text": "recibir",
+    "start": 63.24,
+    "end": 63.34,
+    "id": "w218"
+  },
+  {
+    "text": "más",
+    "start": 63.64,
+    "end": 63.68,
+    "id": "w219"
+  },
+  {
+    "text": "información",
+    "start": 63.69,
+    "end": 64.17,
+    "id": "w220"
+  },
+  {
+    "text": "con",
+    "start": 64.17,
+    "end": 64.28,
+    "id": "w221"
+  },
+  {
+    "text": "Legacy",
+    "start": 64.3,
+    "end": 64.36,
+    "id": "w222"
+  },
+  {
+    "text": "Capital.",
+    "start": 64.82,
+    "end": 65.07,
+    "id": "w223"
+  }
+]

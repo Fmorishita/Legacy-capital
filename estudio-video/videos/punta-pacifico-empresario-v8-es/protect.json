@@ -1,0 +1,215 @@
+{
+ "_nota": "Zonas que ningún texto puede tapar, en píxeles de la foto ya recortada a 1080x1920. faces: detectadas con YuNet (OpenCV); objects: marcadas a mano.",
+ "a-empresario": {
+  "objects": [
+   [
+    287,
+    230,
+    344,
+    551,
+    "cara y mano"
+   ]
+  ]
+ },
+ "l-barandal": {
+  "objects": []
+ },
+ "n-brindis": {
+  "objects": [
+   [
+    402,
+    1022,
+    195,
+    207,
+    "copas"
+   ]
+  ]
+ },
+ "d-fachada": {
+  "objects": [
+   [
+    582,
+    265,
+    378,
+    849,
+    "entrada y puerta"
+   ],
+   [
+    377,
+    106,
+    716,
+    212,
+    "pérgola"
+   ]
+  ]
+ },
+ "i-roof-sofa": {
+  "objects": []
+ },
+ "k-familia": {
+  "objects": [
+   [
+    413,
+    434,
+    488,
+    138,
+    "pérgola"
+   ],
+   [
+    574,
+    566,
+    235,
+    300,
+    "puerta (parte alta)"
+   ]
+  ]
+ },
+ "j-llegada": {
+  "objects": [
+   [
+    413,
+    434,
+    488,
+    138,
+    "pérgola"
+   ],
+   [
+    574,
+    566,
+    235,
+    300,
+    "puerta (parte alta)"
+   ]
+  ]
+ },
+ "m-asesoria": {
+  "objects": [
+   [
+    712,
+    1217,
+    369,
+    241,
+    "tablet"
+   ]
+  ]
+ },
+ "b-firma": {
+  "objects": [
+   [
+    367,
+    1298,
+    517,
+    247,
+    "documento y firma"
+   ]
+  ]
+ },
+ "c-roof-vino": {
+  "objects": [
+   [
+    519,
+    871,
+    256,
+    156,
+    "copas"
+   ],
+   [
+    815,
+    1459,
+    265,
+    265,
+    "fogata"
+   ]
+  ]
+ },
+ "h-fran-cta": {
+  "objects": [
+   [
+    310,
+    1343,
+    551,
+    201,
+    "manos señalando"
+   ]
+  ]
+ },
+ "eq-closet": {
+  "objects": [
+   [
+    97,
+    615,
+    890,
+    720,
+    "clósets"
+   ]
+  ]
+ },
+ "eq-minisplit": {
+  "objects": [
+   [
+    864,
+    660,
+    165,
+    75,
+    "minisplit"
+   ],
+   [
+    595,
+    1122,
+    171,
+    246,
+    "celular"
+   ]
+  ]
+ },
+ "eq-bano": {
+  "objects": [
+   [
+    161,
+    1246,
+    222,
+    457,
+    "WC"
+   ],
+   [
+    494,
+    679,
+    586,
+    844,
+    "lavabo y espejo"
+   ],
+   [
+    95,
+    80,
+    350,
+    180,
+    "tragaluz"
+   ]
+  ]
+ },
+ "eq-roof": {
+  "objects": [
+   [
+    85,
+    512,
+    962,
+    193,
+    "pérgola"
+   ],
+   [
+    192,
+    916,
+    449,
+    215,
+    "cocineta"
+   ],
+   [
+    684,
+    1003,
+    342,
+    160,
+    "sala"
+   ]
+  ]
+ }
+}
